@@ -1,0 +1,29 @@
+# Keywords to track in Google results (weekly).
+# Group them however is useful; groups show as filters on the Rankings tab.
+# Search Console positions for these are shown even without a SERP provider.
+
+groups:
+  Visit:
+    - theodore roosevelt presidential library
+    - things to do in medora nd
+    - medora north dakota attractions
+    - things to do near theodore roosevelt national park
+    - museums in north dakota
+    - north dakota road trip
+    - medora nd hotels
+    - badlands north dakota
+  History:
+    - theodore roosevelt
+    - theodore roosevelt north dakota
+    - theodore roosevelt badlands
+    - elkhorn ranch
+    - maltese cross cabin
+    - theodore roosevelt conservation
+  Presidential libraries:
+    - presidential libraries
+    - newest presidential library
+    - presidential library road trip
+  Learning:
+    - theodore roosevelt quotes
+    - theodore roosevelt man in the arena
+    - theodore roosevelt podcast

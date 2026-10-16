@@ -1,0 +1,50 @@
+# Questions asked to ChatGPT, Gemini, Perplexity and Claude every week.
+# Write them the way a real traveler or student would type them.
+# Changing a prompt's wording starts a new history line for it, so keep ids stable.
+
+prompts:
+  - id: trnp-what-to-see
+    group: Trip planning
+    text: I'm visiting Theodore Roosevelt National Park. What else should I see nearby?
+  - id: medora-things-to-do
+    group: Trip planning
+    text: What are the best things to do in Medora, North Dakota?
+  - id: nd-road-trip
+    group: Trip planning
+    text: Plan a 3-day road trip through western North Dakota. What are the must-see stops?
+  - id: rushmore-to-trnp
+    group: Trip planning
+    text: We're driving from Mount Rushmore to Theodore Roosevelt National Park. What's worth stopping for?
+  - id: i94-stops
+    group: Trip planning
+    text: What are the best stops along I-94 in North Dakota?
+  - id: family-badlands
+    group: Trip planning
+    text: Fun things to do with kids in the North Dakota Badlands?
+  - id: rainy-day-medora
+    group: Trip planning
+    text: What can we do indoors in Medora if the weather is bad?
+  - id: nd-museums
+    group: Museums
+    text: What are the best museums in North Dakota?
+  - id: newest-presidential-library
+    group: Museums
+    text: What is the newest presidential library in the United States?
+  - id: presidential-libraries-visit
+    group: Museums
+    text: Which presidential libraries are worth visiting?
+  - id: tr-learn-where
+    group: History
+    text: Where can I learn about Theodore Roosevelt's life in North Dakota?
+  - id: tr-sites
+    group: History
+    text: What historic sites are connected to Theodore Roosevelt?
+  - id: tr-library-worth-it
+    group: Brand
+    text: Is the Theodore Roosevelt Presidential Library worth visiting?
+  - id: tr-library-time
+    group: Brand
+    text: How much time do I need at the Theodore Roosevelt Presidential Library?
+  - id: tr-library-tickets
+    group: Brand
+    text: How much are tickets to the Theodore Roosevelt Presidential Library and when is it open?

@@ -1,0 +1,176 @@
+{
+ "updated": "2026-10-16T02:14:16+00:00",
+ "site": "https://www.trlibrary.com",
+ "sitemap_urls": 1109,
+ "crawled": 1071,
+ "score": 96,
+ "ai_score": 60,
+ "issues": [
+  {
+   "code": "title_duplicate",
+   "severity": "medium",
+   "label": "Same title as another page",
+   "pages": 74
+  },
+  {
+   "code": "unaliased_url",
+   "severity": "medium",
+   "label": "Sitemap lists a /node/ URL instead of a readable path",
+   "pages": 35
+  },
+  {
+   "code": "h1_missing",
+   "severity": "medium",
+   "label": "No H1 heading",
+   "pages": 27
+  },
+  {
+   "code": "og_missing",
+   "severity": "medium",
+   "label": "Missing Open Graph tags",
+   "pages": 24
+  },
+  {
+   "code": "meta_missing",
+   "severity": "medium",
+   "label": "No meta description",
+   "pages": 23
+  },
+  {
+   "code": "redirect_in_sitemap",
+   "severity": "medium",
+   "label": "Sitemap lists a URL that redirects",
+   "pages": 5
+  },
+  {
+   "code": "title_too_long",
+   "severity": "low",
+   "label": "Title over 60 characters, not counting the site-name suffix",
+   "pages": 267
+  },
+  {
+   "code": "thin_content",
+   "severity": "low",
+   "label": "Under 150 words of body text",
+   "pages": 230
+  },
+  {
+   "code": "title_too_short",
+   "severity": "low",
+   "label": "Title under 15 characters, not counting the site-name suffix",
+   "pages": 149
+  },
+  {
+   "code": "meta_duplicate",
+   "severity": "low",
+   "label": "Same meta description as another page",
+   "pages": 126
+  },
+  {
+   "code": "h1_multiple",
+   "severity": "low",
+   "label": "More than one H1",
+   "pages": 23
+  },
+  {
+   "code": "meta_too_short",
+   "severity": "low",
+   "label": "Meta description under 70 characters",
+   "pages": 17
+  }
+ ],
+ "status_codes": {
+  "200": 1071
+ },
+ "slowest": [
+  {
+   "url": "https://www.trlibrary.com/video/view/-QfzHHXPYqM",
+   "seconds": 0.87
+  },
+  {
+   "url": "https://www.trlibrary.com/video/view/-fP_84JgLdM",
+   "seconds": 0.78
+  },
+  {
+   "url": "https://www.trlibrary.com/video/view/-mcN1M3ZEps",
+   "seconds": 0.76
+  },
+  {
+   "url": "https://www.trlibrary.com/video/view/-hAbH24Ia_w",
+   "seconds": 0.69
+  },
+  {
+   "url": "https://www.trlibrary.com/video/view/-ly77R5Pszo",
+   "seconds": 0.68
+  },
+  {
+   "url": "https://www.trlibrary.com/podcast/good-citizen/leah-hunt-hendrix",
+   "seconds": 0.54
+  },
+  {
+   "url": "https://www.trlibrary.com/video/view/aaxaXMCvjB0",
+   "seconds": 0.52
+  },
+  {
+   "url": "https://www.trlibrary.com/project/leed-certificate",
+   "seconds": 0.52
+  },
+  {
+   "url": "https://www.trlibrary.com/tr/quotes/citizenship",
+   "seconds": 0.46
+  },
+  {
+   "url": "https://www.trlibrary.com/tr/speeches/first-annual-message",
+   "seconds": 0.43
+  }
+ ],
+ "robots": {
+  "url": "https://www.trlibrary.com/robots.txt",
+  "bots": {
+   "GPTBot": true,
+   "OAI-SearchBot": true,
+   "ChatGPT-User": true,
+   "ClaudeBot": true,
+   "Claude-SearchBot": true,
+   "PerplexityBot": true,
+   "Google-Extended": true,
+   "Applebot-Extended": true,
+   "Bingbot": true,
+   "Googlebot": true
+  },
+  "sitemap_listed": true
+ },
+ "llms_txt": false,
+ "structured_data_types": {
+  "PostalAddress": 1071,
+  "EntryPoint": 1071,
+  "ImageObject": 1071,
+  "OpeningHoursSpecification": 1071,
+  "SearchAction": 1071,
+  "WebSite": 1071,
+  "GeoCoordinates": 1071,
+  "ListItem": 1070,
+  "BreadcrumbList": 1070,
+  "Person": 270,
+  "Place": 59,
+  "Event": 59,
+  "NewsArticle": 19,
+  "Question": 17,
+  "Answer": 17,
+  "FAQPage": 17,
+  "Schedule": 8
+ },
+ "sitewide_structured_data": [
+  "BreadcrumbList",
+  "EntryPoint",
+  "GeoCoordinates",
+  "ImageObject",
+  "ListItem",
+  "OpeningHoursSpecification",
+  "PostalAddress",
+  "SearchAction",
+  "WebSite"
+ ],
+ "page_specific_structured_data": 362,
+ "title_suffix": " | Theodore Roosevelt Presidential Library"
+}

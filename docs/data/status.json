@@ -1,0 +1,17 @@
+{
+ "audit": {
+  "state": "ok",
+  "message": "Crawled 1071 pages, health 96/100",
+  "updated": "2026-10-16T02:14:16+00:00"
+ },
+ "ranks": {
+  "state": "skipped",
+  "message": "Showing Search Console positions only. Add DATAFORSEO_LOGIN and DATAFORSEO_PASSWORD for live Google results.",
+  "updated": "2026-10-16T02:14:17+00:00"
+ },
+ "opportunities": {
+  "state": "skipped",
+  "message": "Waiting for Search Console data.",
+  "updated": "2026-10-16T02:14:17+00:00"
+ }
+}

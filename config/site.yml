@@ -1,0 +1,76 @@
+# Main settings for the TRPL SEO tool. Everything here is safe to commit:
+# API keys never go in this file. They live in GitHub Actions secrets
+# (see README.md -> "Turning on each data source").
+
+site:
+  name: Theodore Roosevelt Presidential Library
+  url: https://www.trlibrary.com
+  sitemap: https://www.trlibrary.com/sitemap.xml
+  # Search Console property. Use "sc-domain:trlibrary.com" for a Domain property,
+  # or "https://www.trlibrary.com/" for a URL-prefix property.
+  gsc_property: sc-domain:trlibrary.com
+
+# Ways people and AI tools refer to the Library. Used to decide whether an
+# AI answer or a search result "mentions" us. Case-insensitive.
+brand_terms:
+  - Theodore Roosevelt Presidential Library
+  - Roosevelt Presidential Library
+  - TR Presidential Library
+  - TR Library
+  - trlibrary.com
+
+# Search queries containing any of these count as "branded" in the dashboard.
+branded_query_terms:
+  - presidential library
+  - trlibrary
+  - tr library
+  - roosevelt library
+
+# Other places an answer might recommend instead of (or alongside) the Library.
+# Tracked in AI answers so we can see who shows up where.
+peer_entities:
+  Theodore Roosevelt National Park: [Theodore Roosevelt National Park, TRNP]
+  Medora Musical: [Medora Musical]
+  Painted Canyon: [Painted Canyon]
+  Elkhorn Ranch: [Elkhorn Ranch]
+  Maltese Cross Cabin: [Maltese Cross Cabin, Maltese Cross]
+  Chateau de Mores: [Chateau de Mores, Château de Morès]
+  Pitchfork Steak Fondue: [Pitchfork Steak Fondue]
+  Maah Daah Hey Trail: [Maah Daah Hey]
+  North Dakota Cowboy Hall of Fame: [Cowboy Hall of Fame]
+  Mount Rushmore: [Mount Rushmore]
+
+audit:
+  max_pages: 1500
+  workers: 6
+  timeout_seconds: 20
+  # URLs matching any of these regexes are skipped by the crawl.
+  exclude_patterns:
+    - "/video/playlist/"
+  user_agent: "TRPL-SEO-Audit/1.0 (+https://seo.labs.trlibrary.com)"
+  # Sitewide suffix Drupal adds to every <title>. Title length is judged without it.
+  title_suffix: " | Theodore Roosevelt Presidential Library"
+  # AI crawlers we want allowed in robots.txt
+  ai_bots: [GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, PerplexityBot, Google-Extended, Applebot-Extended, Bingbot, Googlebot]
+
+ranks:
+  # DataForSEO location + language. 2840 = United States.
+  location_code: 2840
+  language_code: en
+  depth: 30
+  # Refresh search volumes this often (days). Volume lookups are a separate, cheap call.
+  volume_refresh_days: 30
+
+ai_visibility:
+  # Model names change often. If a run reports "model not found", update the name here.
+  providers:
+    openai:     { model: gpt-5-mini }
+    gemini:     { model: gemini-2.5-flash }
+    perplexity: { model: sonar }
+    anthropic:  { model: claude-sonnet-5-5 }
+
+tips:
+  model: claude-sonnet-5-5
+  max_pages: 8
+  # Pages with fewer impressions than this (last 28 days) are not considered.
+  min_impressions: 50
