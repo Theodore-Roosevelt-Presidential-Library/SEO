@@ -1,12 +1,8 @@
 {
- "updated": "2026-10-19T12:47:09+00:00",
+ "updated": "2026-10-19T13:34:03+00:00",
  "last_run": [
   "gsc",
-  "audit",
-  "ranks",
-  "ai_visibility",
-  "opportunities",
-  "tips"
+  "opportunities"
  ],
  "failed": []
 }

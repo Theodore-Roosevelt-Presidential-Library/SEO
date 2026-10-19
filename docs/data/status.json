@@ -12,12 +12,12 @@
  "opportunities": {
   "state": "skipped",
   "message": "Waiting for Search Console data.",
-  "updated": "2026-10-19T12:47:09+00:00"
+  "updated": "2026-10-19T13:34:03+00:00"
  },
  "gsc": {
   "state": "skipped",
   "message": "Add the GSC_SERVICE_ACCOUNT_JSON secret to turn on Search Console data.",
-  "updated": "2026-10-19T12:45:24+00:00"
+  "updated": "2026-10-19T13:34:03+00:00"
  },
  "ai_visibility": {
   "state": "skipped",
