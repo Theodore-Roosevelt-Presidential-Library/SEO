@@ -84,15 +84,21 @@ def call_llm(provider: str, key: str, model: str, user: str, max_tokens: int = 4
         ok = r.status_code == 200
         if ok:
             text = "".join(b.get("text", "") for b in r.json().get("content", []) if b.get("type") == "text")
-    elif provider in ("openai", "perplexity"):
-        url = "https://api.openai.com/v1/chat/completions" if provider == "openai" else "https://api.perplexity.ai/chat/completions"
-        body = {"model": model, "messages": [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]}
-        if provider == "openai":
-            body["response_format"] = {"type": "json_object"}
-        r = sess.post(url, timeout=300, headers={"Authorization": f"Bearer {key}"}, json=body)
+    elif provider == "openai":
+        body = {"model": model, "messages": [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}],
+                "response_format": {"type": "json_object"}}
+        r = sess.post("https://api.openai.com/v1/chat/completions", timeout=300,
+                      headers={"Authorization": f"Bearer {key}"}, json=body)
         ok = r.status_code == 200
         if ok:
             text = r.json()["choices"][0]["message"]["content"]
+    elif provider == "perplexity":
+        try:
+            text = C.perplexity_agent(sess, key, user, model=model, instructions=SYSTEM, timeout=300)["text"]
+        except RuntimeError as e:
+            m = re.match(r"Perplexity (\d+)", str(e))
+            raise ProviderError(provider, int(m.group(1)) if m else 500, str(e)) from e
+        ok = True
     else:
         raise ValueError(f"Unknown provider {provider}")
     if not ok:

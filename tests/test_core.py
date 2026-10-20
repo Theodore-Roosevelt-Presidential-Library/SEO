@@ -246,3 +246,27 @@ def test_curate_uses_ai_filter():
     assert [k["keyword"] for k in st["keywords"]] == ["badlands museum hours"]
     assert st["keywords"][0]["group"] == "Auto: Visit"
     assert st["prompts"][0]["text"] == "What should I do near Medora, North Dakota?"
+
+
+def test_perplexity_agent_parsing():
+    sent = []
+
+    class R:
+        def __init__(self, code, data=None, text=""):
+            self.status_code, self._d, self.text = code, data, text
+        def json(self):
+            return self._d
+
+    class S:
+        def post(self, url, **kw):
+            sent.append((url, kw["json"]))
+            if url.endswith("/v1/responses"):
+                return R(404, text="not found")
+            return R(200, {"output": [
+                {"type": "search_results", "results": [{"url": "https://www.nps.gov/thro"}, {"url": "https://www.trlibrary.com/visit"}]},
+                {"type": "message", "content": [{"type": "output_text", "text": "Visit the Library [2].", "annotations": []}]}]})
+
+    out = C.perplexity_agent(S(), "k", "What to see near TRNP?", model="fast")
+    assert out["text"] == "Visit the Library [2]."
+    assert out["citations"] == ["https://www.nps.gov/thro", "https://www.trlibrary.com/visit"]
+    assert sent[-1][0].endswith("/v1/agent") and sent[-1][1] == {"input": "What to see near TRNP?", "preset": "fast"}

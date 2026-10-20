@@ -67,15 +67,9 @@ def ask_gemini(sess, key, model, prompt):
 
 
 def ask_perplexity(sess, key, model, prompt):
-    r = sess.post("https://api.perplexity.ai/chat/completions", timeout=180,
-                  headers={"Authorization": f"Bearer {key}"},
-                  json={"model": model, "messages": [{"role": "user", "content": prompt}]})
-    if r.status_code != 200:
-        raise RuntimeError(f"Perplexity {r.status_code}: {r.text[:200]}")
-    d = r.json()
-    text = d["choices"][0]["message"]["content"]
-    cites = d.get("citations") or [s.get("url") for s in d.get("search_results") or []]
-    return {"text": text, "citations": [c for c in cites if c]}
+    # Perplexity retired Sonar chat-completions; this uses the Agent API.
+    ans = C.perplexity_agent(sess, key, prompt, model=model, timeout=180)
+    return {"text": ans["text"], "citations": ans["citations"]}
 
 
 def ask_anthropic(sess, key, model, prompt):

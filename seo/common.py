@@ -167,3 +167,43 @@ def gemini_post(sess, key: str, model: str, body: dict, timeout: int = 240):
             log(f"Gemini model {model} retired; retrying with {m.group(1)}. Update config/site.yml.")
             r = sess.post(GEMINI_URL.format(model=m.group(1)), params={"key": key}, json=body, timeout=timeout)
     return r
+
+
+def perplexity_agent(sess, key: str, text: str, preset: str = "fast", model: str | None = None,
+                     instructions: str | None = None, timeout: int = 240) -> dict:
+    """Perplexity's Agent API (replaced Sonar / chat-completions). Returns
+    {"text": answer, "citations": [urls]}. Tries /v1/responses (named in
+    Perplexity's error message), then /v1/agent (named in their docs)."""
+    body: dict = {"input": text}
+    if model and model not in ("sonar", "sonar-pro", "fast"):
+        body["model"] = model      # e.g. "openai/gpt-5.6-luna" to pin a specific model
+    else:
+        body["preset"] = preset    # fast | low | medium | high | xhigh
+    if instructions:
+        body["instructions"] = instructions
+    headers = {"Authorization": f"Bearer {key}"}
+    r = None
+    for path in ("/v1/responses", "/v1/agent"):
+        r = sess.post(f"https://api.perplexity.ai{path}", json=body, headers=headers, timeout=timeout)
+        if r.status_code == 400 and instructions and "instructions" in r.text:
+            # older/stricter schema: fold the instructions into the input instead
+            body.pop("instructions", None)
+            body["input"] = f"{instructions}\n\n{text}"
+            r = sess.post(f"https://api.perplexity.ai{path}", json=body, headers=headers, timeout=timeout)
+        if r.status_code not in (404, 405):
+            break
+    if r.status_code != 200:
+        raise RuntimeError(f"Perplexity {r.status_code}: {r.text[:200]}")
+    d = r.json()
+    texts, cites = [], []
+    for item in d.get("output") or []:
+        if item.get("type") == "message":
+            for c in item.get("content") or []:
+                if c.get("type") == "output_text":
+                    texts.append(c.get("text", ""))
+                    cites += [a.get("url") for a in c.get("annotations") or [] if a.get("url")]
+        elif item.get("type") == "search_results":
+            cites += [x.get("url") for x in item.get("results") or [] if x.get("url")]
+    if not texts and d.get("output_text"):
+        texts.append(d["output_text"])
+    return {"text": "\n".join(texts), "citations": list(dict.fromkeys(c for c in cites if c)), "status_code": r.status_code}

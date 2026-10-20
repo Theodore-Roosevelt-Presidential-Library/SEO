@@ -66,7 +66,7 @@ ai_visibility:
   providers:
     openai:     { model: gpt-5-mini }
     gemini:     { model: gemini-3.8-flash }
-    perplexity: { model: sonar }
+    perplexity: { model: fast }       # Agent API preset (fast/low/medium/high), or a model id like openai/gpt-5.6-luna
     anthropic:  { model: claude-sonnet-5-5 }
 
 tips:
