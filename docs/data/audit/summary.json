@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20T04:42:58+00:00",
+ "updated": "2026-10-20T05:12:15+00:00",
  "site": "https://www.trlibrary.com",
  "sitemap_urls": 1112,
  "crawled": 1074,
@@ -84,44 +84,44 @@
  },
  "slowest": [
   {
-   "url": "https://www.trlibrary.com/tr/quotes/family",
-   "seconds": 2.12
+   "url": "https://www.trlibrary.com/video/view/Hfr1_zZTi_8",
+   "seconds": 2.21
   },
   {
-   "url": "https://www.trlibrary.com/video/view/cWKIpRcVppI",
-   "seconds": 0.57
+   "url": "https://www.trlibrary.com/video/view/YC1qwFurRV0",
+   "seconds": 0.61
   },
   {
-   "url": "https://www.trlibrary.com/event/24",
-   "seconds": 0.57
-  },
-  {
-   "url": "https://www.trlibrary.com/video/view/nemvsIJFoGs",
+   "url": "https://www.trlibrary.com/video/view/b_qkJUPuafU",
    "seconds": 0.54
   },
   {
-   "url": "https://www.trlibrary.com/calendar/special-event/artist-talk-room-david-hume-kennerly",
-   "seconds": 0.54
-  },
-  {
-   "url": "https://www.trlibrary.com/video/view/n4HLm_dLrkU",
-   "seconds": 0.52
-  },
-  {
-   "url": "https://www.trlibrary.com/tr/people",
-   "seconds": 0.52
-  },
-  {
-   "url": "https://www.trlibrary.com/video/view/CTHN22B1PUM",
+   "url": "https://www.trlibrary.com/video/view/s2lndF5ZZ60",
    "seconds": 0.5
   },
   {
-   "url": "https://www.trlibrary.com/tr/post-presidency/assassination-attempt",
-   "seconds": 0.46
+   "url": "https://www.trlibrary.com/video/view/dD83eHTH6t8",
+   "seconds": 0.49
   },
   {
-   "url": "https://www.trlibrary.com/visit/activities",
+   "url": "https://www.trlibrary.com/video/view/88J39-TLM7o",
    "seconds": 0.45
+  },
+  {
+   "url": "https://www.trlibrary.com/tr/badlands-timeline",
+   "seconds": 0.42
+  },
+  {
+   "url": "https://www.trlibrary.com/tr/books-and-writings/complete-list",
+   "seconds": 0.41
+  },
+  {
+   "url": "https://www.trlibrary.com/event/24",
+   "seconds": 0.38
+  },
+  {
+   "url": "https://www.trlibrary.com/video/view/e-9LOmU1JK0",
+   "seconds": 0.37
   }
  ],
  "robots": {
@@ -142,21 +142,21 @@
  },
  "llms_txt": false,
  "structured_data_types": {
-  "SearchAction": 1074,
-  "WebSite": 1074,
-  "OpeningHoursSpecification": 1074,
+  "EntryPoint": 1074,
   "PostalAddress": 1074,
+  "OpeningHoursSpecification": 1074,
   "GeoCoordinates": 1074,
   "ImageObject": 1074,
-  "EntryPoint": 1074,
-  "ListItem": 1073,
+  "SearchAction": 1074,
+  "WebSite": 1074,
   "BreadcrumbList": 1073,
+  "ListItem": 1073,
   "Person": 271,
   "Place": 59,
   "Event": 59,
   "NewsArticle": 19,
-  "Question": 17,
   "Answer": 17,
+  "Question": 17,
   "FAQPage": 17,
   "Schedule": 8
  },

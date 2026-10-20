@@ -1,0 +1,3487 @@
+{
+ "generated": "2026-10-20T05:25:10+00:00",
+ "site": "https://www.trlibrary.com",
+ "dashboard": "https://seo.labs.trlibrary.com",
+ "sources": {
+  "audit": {
+   "state": "ok",
+   "updated": "2026-10-20T05:12:15+00:00",
+   "message": "Crawled 1074 pages, health 96/100"
+  },
+  "ranks": {
+   "state": "ok",
+   "updated": "2026-10-20T05:14:53+00:00",
+   "message": "20 keywords checked"
+  },
+  "opportunities": {
+   "state": "ok",
+   "updated": "2026-10-20T05:22:20+00:00",
+   "message": "150 striking-distance queries, 60 low-CTR pages"
+  },
+  "gsc": {
+   "state": "ok",
+   "updated": "2026-10-20T05:10:45+00:00",
+   "message": "5000 queries, 1498 pages (2026-09-20 to 2026-10-17)"
+  },
+  "ai_visibility": {
+   "state": "error",
+   "updated": "2026-10-20T05:22:20+00:00",
+   "message": "28 answers from ChatGPT, Gemini, Perplexity; 17 failed: Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more info"
+  },
+  "tips": {
+   "state": "ok",
+   "updated": "2026-10-20T05:25:10+00:00",
+   "message": "Gemini wrote tips for 8 pages"
+  }
+ },
+ "house_rules": [
+  "Suggestions are drafts for the communications team; nothing is published automatically.",
+  "Never invent historical facts, dates, names, prices or hours. Use only what the page already says, or flag it for verification.",
+  "Never quote or paraphrase Theodore Roosevelt. Say 'consider a verified TR quote about X' instead.",
+  "Voice: friendly, plain, concrete (a knowledgeable park ranger, not a professor). Keep 'we/our/us' to a minimum.",
+  "No specific years in visitor copy; write seasons as months.",
+  "A Library visit takes about 3 1/2 hours. Never present a shorter visit as typical.",
+  "Nonpartisan: no current political figures or debates.",
+  "Page titles: the site appends ' | Theodore Roosevelt Presidential Library' automatically; suggest only the page-specific part, 60 characters or fewer.",
+  "Meta descriptions: 120-155 characters with a reason to click.",
+  "Website changes are made in Drupal Layout Builder by the TRPL team; bugs and features go to the developers (FiveJars)."
+ ],
+ "search": {
+  "period": {
+   "start": "2026-09-20",
+   "end": "2026-10-17"
+  },
+  "previous_period": {
+   "start": "2026-08-23",
+   "end": "2026-09-19"
+  },
+  "totals": {
+   "clicks": 49372,
+   "impressions": 2341943,
+   "ctr": 0.0211,
+   "position": 6.3
+  },
+  "previous_totals": {
+   "clicks": 68665,
+   "impressions": 2037166,
+   "ctr": 0.0337,
+   "position": 6.9
+  },
+  "branded_clicks": 20801,
+  "nonbranded_clicks": 9782,
+  "top_queries": [
+   {
+    "query": "theodore roosevelt presidential library",
+    "clicks": 8046,
+    "prev_clicks": 12492,
+    "impressions": 17210,
+    "ctr": 0.4675,
+    "position": 1.1,
+    "branded": true
+   },
+   {
+    "query": "teddy roosevelt presidential library",
+    "clicks": 2833,
+    "prev_clicks": 5482,
+    "impressions": 6646,
+    "ctr": 0.4263,
+    "position": 1.3,
+    "branded": true
+   },
+   {
+    "query": "teddy roosevelt library",
+    "clicks": 2453,
+    "prev_clicks": 3972,
+    "impressions": 7592,
+    "ctr": 0.3231,
+    "position": 1.5,
+    "branded": true
+   },
+   {
+    "query": "theodore roosevelt library",
+    "clicks": 1315,
+    "prev_clicks": 3259,
+    "impressions": 2701,
+    "ctr": 0.4869,
+    "position": 1.8,
+    "branded": true
+   },
+   {
+    "query": "roosevelt presidential library",
+    "clicks": 485,
+    "prev_clicks": 528,
+    "impressions": 1077,
+    "ctr": 0.4503,
+    "position": 1.4,
+    "branded": true
+   },
+   {
+    "query": "roosevelt library",
+    "clicks": 385,
+    "prev_clicks": 695,
+    "impressions": 2284,
+    "ctr": 0.1686,
+    "position": 3.6,
+    "branded": true
+   },
+   {
+    "query": "roosevelt library north dakota",
+    "clicks": 383,
+    "prev_clicks": 651,
+    "impressions": 827,
+    "ctr": 0.4631,
+    "position": 1.2,
+    "branded": true
+   },
+   {
+    "query": "presidential library medora",
+    "clicks": 281,
+    "prev_clicks": 708,
+    "impressions": 534,
+    "ctr": 0.5262,
+    "position": 1.0,
+    "branded": true
+   },
+   {
+    "query": "teddy roosevelt museum",
+    "clicks": 271,
+    "prev_clicks": 467,
+    "impressions": 1292,
+    "ctr": 0.2098,
+    "position": 1.8,
+    "branded": false
+   },
+   {
+    "query": "roosevelt library medora",
+    "clicks": 257,
+    "prev_clicks": 415,
+    "impressions": 477,
+    "ctr": 0.5388,
+    "position": 1.6,
+    "branded": true
+   },
+   {
+    "query": "tr presidential library",
+    "clicks": 220,
+    "prev_clicks": 385,
+    "impressions": 426,
+    "ctr": 0.5164,
+    "position": 1.0,
+    "branded": true
+   },
+   {
+    "query": "tr library",
+    "clicks": 205,
+    "prev_clicks": 359,
+    "impressions": 472,
+    "ctr": 0.4343,
+    "position": 1.8,
+    "branded": true
+   },
+   {
+    "query": "theodore roosevelt library north dakota",
+    "clicks": 159,
+    "prev_clicks": 320,
+    "impressions": 278,
+    "ctr": 0.5719,
+    "position": 1.2,
+    "branded": true
+   },
+   {
+    "query": "medora presidential library",
+    "clicks": 153,
+    "prev_clicks": 331,
+    "impressions": 292,
+    "ctr": 0.524,
+    "position": 1.0,
+    "branded": true
+   },
+   {
+    "query": "tr library medora",
+    "clicks": 152,
+    "prev_clicks": 312,
+    "impressions": 203,
+    "ctr": 0.7488,
+    "position": 1,
+    "branded": true
+   },
+   {
+    "query": "theodore roosevelt presidential library photos",
+    "clicks": 151,
+    "prev_clicks": 246,
+    "impressions": 1475,
+    "ctr": 0.1024,
+    "position": 1.9,
+    "branded": true
+   },
+   {
+    "query": "square deal",
+    "clicks": 150,
+    "prev_clicks": 95,
+    "impressions": 23579,
+    "ctr": 0.0064,
+    "position": 3.3,
+    "branded": false
+   },
+   {
+    "query": "roosevelt presidential library north dakota",
+    "clicks": 149,
+    "prev_clicks": 238,
+    "impressions": 269,
+    "ctr": 0.5539,
+    "position": 1.2,
+    "branded": true
+   },
+   {
+    "query": "teddy roosevelt quotes",
+    "clicks": 147,
+    "prev_clicks": 113,
+    "impressions": 2871,
+    "ctr": 0.0512,
+    "position": 2.9,
+    "branded": false
+   },
+   {
+    "query": "theodore roosevelt museum",
+    "clicks": 147,
+    "prev_clicks": 272,
+    "impressions": 595,
+    "ctr": 0.2471,
+    "position": 1.7,
+    "branded": false
+   },
+   {
+    "query": "theodore roosevelt national library",
+    "clicks": 145,
+    "prev_clicks": 304,
+    "impressions": 241,
+    "ctr": 0.6017,
+    "position": 2.7,
+    "branded": false
+   },
+   {
+    "query": "medora library",
+    "clicks": 143,
+    "prev_clicks": 363,
+    "impressions": 289,
+    "ctr": 0.4948,
+    "position": 2.3,
+    "branded": false
+   },
+   {
+    "query": "hilary hamm",
+    "clicks": 140,
+    "prev_clicks": 76,
+    "impressions": 648,
+    "ctr": 0.216,
+    "position": 1.0,
+    "branded": false
+   },
+   {
+    "query": "theodore roosevelt vi",
+    "clicks": 136,
+    "prev_clicks": 142,
+    "impressions": 555,
+    "ctr": 0.245,
+    "position": 4.0,
+    "branded": false
+   },
+   {
+    "query": "trpl",
+    "clicks": 122,
+    "prev_clicks": 120,
+    "impressions": 558,
+    "ctr": 0.2186,
+    "position": 2.8,
+    "branded": false
+   }
+  ],
+  "top_nonbranded_queries": [
+   {
+    "query": "brownsville affair",
+    "clicks": 2,
+    "impressions": 49263,
+    "position": 6.6
+   },
+   {
+    "query": "karl rove",
+    "clicks": 31,
+    "impressions": 45302,
+    "position": 9.9
+   },
+   {
+    "query": "theodore roosevelt",
+    "clicks": 90,
+    "impressions": 39353,
+    "position": 10.4
+   },
+   {
+    "query": "square deal",
+    "clicks": 150,
+    "impressions": 23579,
+    "position": 3.3
+   },
+   {
+    "query": "roosevelt corollary",
+    "clicks": 35,
+    "impressions": 19300,
+    "position": 5.6
+   },
+   {
+    "query": "chris murphy",
+    "clicks": 12,
+    "impressions": 18995,
+    "position": 11.4
+   },
+   {
+    "query": "alice roosevelt",
+    "clicks": 32,
+    "impressions": 17119,
+    "position": 9.5
+   },
+   {
+    "query": "jacob riis",
+    "clicks": 42,
+    "impressions": 15802,
+    "position": 11.0
+   },
+   {
+    "query": "bill kristol",
+    "clicks": 8,
+    "impressions": 14932,
+    "position": 11.8
+   },
+   {
+    "query": "teddy roosevelt",
+    "clicks": 46,
+    "impressions": 13617,
+    "position": 10.5
+   },
+   {
+    "query": "alice roosevelt longworth",
+    "clicks": 10,
+    "impressions": 12129,
+    "position": 9.4
+   },
+   {
+    "query": "roosevelt family",
+    "clicks": 23,
+    "impressions": 8985,
+    "position": 4.0
+   },
+   {
+    "query": "kermit roosevelt",
+    "clicks": 42,
+    "impressions": 8897,
+    "position": 6.6
+   },
+   {
+    "query": "alice hathaway lee roosevelt",
+    "clicks": 11,
+    "impressions": 6760,
+    "position": 5.7
+   },
+   {
+    "query": "theodore",
+    "clicks": 3,
+    "impressions": 6386,
+    "position": 11.9
+   },
+   {
+    "query": "mount rushmore presidents",
+    "clicks": 20,
+    "impressions": 6262,
+    "position": 4.7
+   },
+   {
+    "query": "theodore roosevelt jr.",
+    "clicks": 1,
+    "impressions": 6036,
+    "position": 11.1
+   },
+   {
+    "query": "meg whitman",
+    "clicks": 1,
+    "impressions": 5971,
+    "position": 11.4
+   },
+   {
+    "query": "theodore roosevelt jr",
+    "clicks": 1,
+    "impressions": 5733,
+    "position": 10.8
+   },
+   {
+    "query": "edith roosevelt",
+    "clicks": 12,
+    "impressions": 5235,
+    "position": 6.2
+   },
+   {
+    "query": "henry cabot lodge",
+    "clicks": 3,
+    "impressions": 5015,
+    "position": 7.1
+   },
+   {
+    "query": "bull moose party",
+    "clicks": 20,
+    "impressions": 4679,
+    "position": 6.5
+   },
+   {
+    "query": "theodore roosevelt national park",
+    "clicks": 12,
+    "impressions": 4373,
+    "position": 8.9
+   },
+   {
+    "query": "great white fleet",
+    "clicks": 11,
+    "impressions": 4213,
+    "position": 7.9
+   },
+   {
+    "query": "when was teddy roosevelt president",
+    "clicks": 17,
+    "impressions": 4199,
+    "position": 3.3
+   }
+  ],
+  "top_pages": [
+   {
+    "page": "https://www.trlibrary.com/",
+    "clicks": 10214,
+    "prev_clicks": 17349,
+    "impressions": 268811,
+    "ctr": 0.038,
+    "position": 8.2
+   },
+   {
+    "page": "https://www.trlibrary.com/tickets",
+    "clicks": 5890,
+    "prev_clicks": 10933,
+    "impressions": 79364,
+    "ctr": 0.0742,
+    "position": 3.1
+   },
+   {
+    "page": "https://www.trlibrary.com/tickets?utm_source=gbp&utm_medium=organic",
+    "clicks": 5614,
+    "prev_clicks": 16876,
+    "impressions": 26418,
+    "ctr": 0.2125,
+    "position": 3.3
+   },
+   {
+    "page": "https://www.trlibrary.com/?utm_source=gbp&utm_medium=organic",
+    "clicks": 3499,
+    "prev_clicks": 0,
+    "impressions": 18899,
+    "ctr": 0.1851,
+    "position": 3.5
+   },
+   {
+    "page": "https://www.trlibrary.com/visit",
+    "clicks": 2148,
+    "prev_clicks": 4995,
+    "impressions": 77230,
+    "ctr": 0.0278,
+    "position": 2.7
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/square-deal",
+    "clicks": 1139,
+    "prev_clicks": 585,
+    "impressions": 86353,
+    "ctr": 0.0132,
+    "position": 3.3
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/family/fdr-connection",
+    "clicks": 1086,
+    "prev_clicks": 511,
+    "impressions": 74450,
+    "ctr": 0.0146,
+    "position": 3.2
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/presidency/trust-busting",
+    "clicks": 858,
+    "prev_clicks": 377,
+    "impressions": 72573,
+    "ctr": 0.0118,
+    "position": 3.6
+   },
+   {
+    "page": "https://www.trlibrary.com/visit/directions",
+    "clicks": 853,
+    "prev_clicks": 1585,
+    "impressions": 65558,
+    "ctr": 0.013,
+    "position": 2.7
+   },
+   {
+    "page": "https://www.trlibrary.com/visit/hours",
+    "clicks": 795,
+    "prev_clicks": 1598,
+    "impressions": 63603,
+    "ctr": 0.0125,
+    "position": 2.6
+   },
+   {
+    "page": "https://www.trlibrary.com/bullet-speech",
+    "clicks": 772,
+    "prev_clicks": 749,
+    "impressions": 41445,
+    "ctr": 0.0186,
+    "position": 3.5
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/pre-presidency-political-accomplishments",
+    "clicks": 683,
+    "prev_clicks": 306,
+    "impressions": 49066,
+    "ctr": 0.0139,
+    "position": 5.4
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/quotes",
+    "clicks": 659,
+    "prev_clicks": 529,
+    "impressions": 32978,
+    "ctr": 0.02,
+    "position": 15.5
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/tr-mount-rushmore",
+    "clicks": 573,
+    "prev_clicks": 923,
+    "impressions": 98971,
+    "ctr": 0.0058,
+    "position": 5.1
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/presidency/square-deal",
+    "clicks": 448,
+    "prev_clicks": 95,
+    "impressions": 69410,
+    "ctr": 0.0065,
+    "position": 4.6
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/tr-shot",
+    "clicks": 372,
+    "prev_clicks": 385,
+    "impressions": 40670,
+    "ctr": 0.0091,
+    "position": 3.9
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/fake-quotes",
+    "clicks": 363,
+    "prev_clicks": 521,
+    "impressions": 20461,
+    "ctr": 0.0177,
+    "position": 7.0
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/tr-importance",
+    "clicks": 359,
+    "prev_clicks": 204,
+    "impressions": 38842,
+    "ctr": 0.0092,
+    "position": 5.1
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/speeches/man-in-the-arena",
+    "clicks": 337,
+    "prev_clicks": 211,
+    "impressions": 14631,
+    "ctr": 0.023,
+    "position": 5.4
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/people/jacob-riis",
+    "clicks": 327,
+    "prev_clicks": 140,
+    "impressions": 66693,
+    "ctr": 0.0049,
+    "position": 7.0
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/rise-to-power/san-juan-hill",
+    "clicks": 325,
+    "prev_clicks": 154,
+    "impressions": 27230,
+    "ctr": 0.0119,
+    "position": 3.8
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/presidency-timeline",
+    "clicks": 323,
+    "prev_clicks": 204,
+    "impressions": 57566,
+    "ctr": 0.0056,
+    "position": 4.7
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/family/family-tree",
+    "clicks": 308,
+    "prev_clicks": 156,
+    "impressions": 19649,
+    "ctr": 0.0157,
+    "position": 5.0
+   },
+   {
+    "page": "https://www.trlibrary.com/about/trustees/theodore-roosevelt-v",
+    "clicks": 289,
+    "prev_clicks": 299,
+    "impressions": 4572,
+    "ctr": 0.0632,
+    "position": 3.6
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/presidency/ten-facts",
+    "clicks": 256,
+    "prev_clicks": 86,
+    "impressions": 12076,
+    "ctr": 0.0212,
+    "position": 4.6
+   }
+  ]
+ },
+ "opportunities": {
+  "striking_distance": [
+   {
+    "query": "brownsville affair",
+    "page": "https://www.trlibrary.com/tr/presidency/brownsville",
+    "clicks": 2,
+    "impressions": 49263,
+    "ctr": 0.0,
+    "position": 6.6,
+    "est_extra_clicks": 5419
+   },
+   {
+    "query": "karl rove",
+    "page": "https://www.trlibrary.com/podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature",
+    "clicks": 31,
+    "impressions": 45298,
+    "ctr": 0.0007,
+    "position": 9.9,
+    "est_extra_clicks": 4951
+   },
+   {
+    "query": "theodore roosevelt",
+    "page": "https://www.trlibrary.com/",
+    "clicks": 29,
+    "impressions": 32019,
+    "ctr": 0.0009,
+    "position": 11.5,
+    "est_extra_clicks": 3493
+   },
+   {
+    "query": "roosevelt corollary",
+    "page": "https://www.trlibrary.com/tr/presidency/roosevelt-corollary",
+    "clicks": 35,
+    "impressions": 19300,
+    "ctr": 0.0018,
+    "position": 5.6,
+    "est_extra_clicks": 2088
+   },
+   {
+    "query": "chris murphy",
+    "page": "https://www.trlibrary.com/podcast/good-citizen/senator-chris-murphy",
+    "clicks": 12,
+    "impressions": 18995,
+    "ctr": 0.0006,
+    "position": 11.4,
+    "est_extra_clicks": 2078
+   },
+   {
+    "query": "alice roosevelt",
+    "page": "https://www.trlibrary.com/tr/people/alice-longworth",
+    "clicks": 32,
+    "impressions": 17098,
+    "ctr": 0.0019,
+    "position": 9.5,
+    "est_extra_clicks": 1848
+   },
+   {
+    "query": "jacob riis",
+    "page": "https://www.trlibrary.com/tr/people/jacob-riis",
+    "clicks": 42,
+    "impressions": 15796,
+    "ctr": 0.0027,
+    "position": 11.0,
+    "est_extra_clicks": 1695
+   },
+   {
+    "query": "bill kristol",
+    "page": "https://www.trlibrary.com/podcast/good-citizen/bill-kristol",
+    "clicks": 8,
+    "impressions": 14932,
+    "ctr": 0.0005,
+    "position": 11.8,
+    "est_extra_clicks": 1635
+   },
+   {
+    "query": "square deal",
+    "page": "https://www.trlibrary.com/tr/presidency/square-deal",
+    "clicks": 11,
+    "impressions": 13343,
+    "ctr": 0.0008,
+    "position": 5.7,
+    "est_extra_clicks": 1457
+   },
+   {
+    "query": "alice roosevelt longworth",
+    "page": "https://www.trlibrary.com/tr/people/alice-longworth",
+    "clicks": 10,
+    "impressions": 12110,
+    "ctr": 0.0008,
+    "position": 9.3,
+    "est_extra_clicks": 1322
+   },
+   {
+    "query": "teddy roosevelt",
+    "page": "https://www.trlibrary.com/",
+    "clicks": 17,
+    "impressions": 9695,
+    "ctr": 0.0018,
+    "position": 12.8,
+    "est_extra_clicks": 1049
+   },
+   {
+    "query": "alice hathaway lee roosevelt",
+    "page": "https://www.trlibrary.com/tr/new-york-politics/alice-lee",
+    "clicks": 11,
+    "impressions": 6735,
+    "ctr": 0.0016,
+    "position": 5.7,
+    "est_extra_clicks": 730
+   },
+   {
+    "query": "kermit roosevelt",
+    "page": "https://www.trlibrary.com/podcast/good-citizen/kermit-roosevelt-iii",
+    "clicks": 25,
+    "impressions": 6457,
+    "ctr": 0.0039,
+    "position": 7.1,
+    "est_extra_clicks": 685
+   },
+   {
+    "query": "mount rushmore presidents",
+    "page": "https://www.trlibrary.com/tr/tr-mount-rushmore",
+    "clicks": 20,
+    "impressions": 6245,
+    "ctr": 0.0032,
+    "position": 4.4,
+    "est_extra_clicks": 667
+   },
+   {
+    "query": "teddy roosevelt library",
+    "page": "https://www.trlibrary.com/video/view/Vf8ee-gccpc",
+    "clicks": 54,
+    "impressions": 6483,
+    "ctr": 0.0083,
+    "position": 5.6,
+    "est_extra_clicks": 659
+   }
+  ],
+  "low_ctr": [
+   {
+    "page": "https://www.trlibrary.com/tr/square-deal",
+    "clicks": 1139,
+    "impressions": 86353,
+    "ctr": 0.0132,
+    "position": 3.3,
+    "prev_clicks": 585,
+    "prev_impressions": 51596,
+    "prev_position": 3.5,
+    "expected_ctr": 0.11,
+    "est_extra_clicks": 8359
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/family/fdr-connection",
+    "clicks": 1086,
+    "impressions": 74450,
+    "ctr": 0.0146,
+    "position": 3.2,
+    "prev_clicks": 511,
+    "prev_impressions": 65897,
+    "prev_position": 4.3,
+    "expected_ctr": 0.11,
+    "est_extra_clicks": 7103
+   },
+   {
+    "page": "https://www.trlibrary.com/visit/directions",
+    "clicks": 853,
+    "impressions": 65558,
+    "ctr": 0.013,
+    "position": 2.7,
+    "prev_clicks": 1585,
+    "prev_impressions": 109893,
+    "prev_position": 2.6,
+    "expected_ctr": 0.11,
+    "est_extra_clicks": 6359
+   },
+   {
+    "page": "https://www.trlibrary.com/visit",
+    "clicks": 2148,
+    "impressions": 77230,
+    "ctr": 0.0278,
+    "position": 2.7,
+    "prev_clicks": 4995,
+    "prev_impressions": 128678,
+    "prev_position": 2.7,
+    "expected_ctr": 0.11,
+    "est_extra_clicks": 6348
+   },
+   {
+    "page": "https://www.trlibrary.com/visit/hours",
+    "clicks": 795,
+    "impressions": 63603,
+    "ctr": 0.0125,
+    "position": 2.6,
+    "prev_clicks": 1598,
+    "prev_impressions": 101961,
+    "prev_position": 2.5,
+    "expected_ctr": 0.11,
+    "est_extra_clicks": 6201
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/tr-mount-rushmore",
+    "clicks": 573,
+    "impressions": 98971,
+    "ctr": 0.0058,
+    "position": 5.1,
+    "prev_clicks": 923,
+    "prev_impressions": 151241,
+    "prev_position": 5.1,
+    "expected_ctr": 0.06,
+    "est_extra_clicks": 5364
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/presidency/trust-busting",
+    "clicks": 858,
+    "impressions": 72573,
+    "ctr": 0.0118,
+    "position": 3.6,
+    "prev_clicks": 377,
+    "prev_impressions": 35406,
+    "prev_position": 4.5,
+    "expected_ctr": 0.08,
+    "est_extra_clicks": 4949
+   },
+   {
+    "page": "https://www.trlibrary.com/project",
+    "clicks": 141,
+    "impressions": 28902,
+    "ctr": 0.0049,
+    "position": 2.0,
+    "prev_clicks": 332,
+    "prev_impressions": 59334,
+    "prev_position": 1.9,
+    "expected_ctr": 0.16,
+    "est_extra_clicks": 4483
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/presidency/roosevelt-corollary",
+    "clicks": 174,
+    "impressions": 101881,
+    "ctr": 0.0017,
+    "position": 5.5,
+    "prev_clicks": 63,
+    "prev_impressions": 49068,
+    "prev_position": 6.2,
+    "expected_ctr": 0.045,
+    "est_extra_clicks": 4411
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/presidency/square-deal",
+    "clicks": 448,
+    "impressions": 69410,
+    "ctr": 0.0065,
+    "position": 4.6,
+    "prev_clicks": 95,
+    "prev_impressions": 19856,
+    "prev_position": 6.2,
+    "expected_ctr": 0.06,
+    "est_extra_clicks": 3713
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/presidency-timeline",
+    "clicks": 323,
+    "impressions": 57566,
+    "ctr": 0.0056,
+    "position": 4.7,
+    "prev_clicks": 204,
+    "prev_impressions": 51354,
+    "prev_position": 5.6,
+    "expected_ctr": 0.06,
+    "est_extra_clicks": 3132
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/tr-shot",
+    "clicks": 372,
+    "impressions": 40670,
+    "ctr": 0.0091,
+    "position": 3.9,
+    "prev_clicks": 385,
+    "prev_impressions": 37022,
+    "prev_position": 4.5,
+    "expected_ctr": 0.08,
+    "est_extra_clicks": 2884
+   },
+   {
+    "page": "https://www.trlibrary.com/bullet-speech",
+    "clicks": 772,
+    "impressions": 41445,
+    "ctr": 0.0186,
+    "position": 3.5,
+    "prev_clicks": 749,
+    "prev_impressions": 37697,
+    "prev_position": 3.8,
+    "expected_ctr": 0.08,
+    "est_extra_clicks": 2545
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/presidency/brownsville",
+    "clicks": 27,
+    "impressions": 51337,
+    "ctr": 0.0005,
+    "position": 6.5,
+    "prev_clicks": 28,
+    "prev_impressions": 2057,
+    "prev_position": 5.4,
+    "expected_ctr": 0.045,
+    "est_extra_clicks": 2284
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/pre-presidency-political-accomplishments",
+    "clicks": 683,
+    "impressions": 49066,
+    "ctr": 0.0139,
+    "position": 5.4,
+    "prev_clicks": 306,
+    "prev_impressions": 32377,
+    "prev_position": 5.8,
+    "expected_ctr": 0.06,
+    "est_extra_clicks": 2262
+   }
+  ],
+  "missing_in_title": [
+   {
+    "query": "teddy roosevelt",
+    "page": "https://www.trlibrary.com/",
+    "clicks": 17,
+    "impressions": 9695,
+    "ctr": 0.0018,
+    "position": 12.8,
+    "title": "Theodore Roosevelt Presidential Library | Medora, North Dakota",
+    "missing_words": [
+     "teddy"
+    ]
+   },
+   {
+    "query": "when was teddy roosevelt president",
+    "page": "https://www.trlibrary.com/tr/presidency-timeline",
+    "clicks": 17,
+    "impressions": 4179,
+    "ctr": 0.0041,
+    "position": 3.1,
+    "title": "Timeline of TR’s Presidency | Theodore Roosevelt Presidential Library",
+    "missing_words": [
+     "was",
+     "teddy",
+     "president"
+    ]
+   },
+   {
+    "query": "carl rove",
+    "page": "https://www.trlibrary.com/podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature",
+    "clicks": 1,
+    "impressions": 2951,
+    "ctr": 0.0003,
+    "position": 9.7,
+    "title": "Karl Rove: Historic Redemption, the Hard Work of Politics, and the Essential Nature of Americans | Theodore Roosevelt Presidential Library",
+    "missing_words": [
+     "carl"
+    ]
+   },
+   {
+    "query": "when was theodore roosevelt president",
+    "page": "https://www.trlibrary.com/tr/presidency-timeline",
+    "clicks": 17,
+    "impressions": 2848,
+    "ctr": 0.006,
+    "position": 3.4,
+    "title": "Timeline of TR’s Presidency | Theodore Roosevelt Presidential Library",
+    "missing_words": [
+     "was",
+     "president"
+    ]
+   },
+   {
+    "query": "\"roosevelt\" \"the united states\" \"american\" \"latin america\" \"western hemisphere\" or \"interests and projecting influence globally.\" or \"it not just expanded u.s. territory but also its position\"",
+    "page": "https://www.trlibrary.com/tr/presidency/roosevelt-corollary",
+    "clicks": 0,
+    "impressions": 2313,
+    "ctr": 0,
+    "position": 6.9,
+    "title": "The Roosevelt Corollary: America as Hemispheric Policeman | Theodore Roosevelt Presidential Library",
+    "missing_words": [
+     "united",
+     "states",
+     "american",
+     "latin",
+     "western",
+     "hemisphere",
+     "interests",
+     "projecting",
+     "influence",
+     "globally",
+     "not",
+     "just",
+     "expanded",
+     "territory",
+     "but",
+     "also",
+     "its",
+     "position"
+    ]
+   },
+   {
+    "query": "hepburn act",
+    "page": "https://www.trlibrary.com/tr/presidency/railroad-regulation",
+    "clicks": 9,
+    "impressions": 2255,
+    "ctr": 0.004,
+    "position": 2.6,
+    "title": "Railroad Regulation: Federal Authority Over Private Enterprise | Theodore Roosevelt Presidential Library",
+    "missing_words": [
+     "hepburn",
+     "act"
+    ]
+   },
+   {
+    "query": "mt rushmore presidents",
+    "page": "https://www.trlibrary.com/tr/tr-mount-rushmore",
+    "clicks": 15,
+    "impressions": 1922,
+    "ctr": 0.0078,
+    "position": 4.5,
+    "title": "Why is Theodore Roosevelt on Mount Rushmore? | Theodore Roosevelt Presidential Library",
+    "missing_words": [
+     "mt",
+     "presidents"
+    ]
+   },
+   {
+    "query": "theodore's dining room medora",
+    "page": "https://www.trlibrary.com/visit/eat",
+    "clicks": 1,
+    "impressions": 1671,
+    "ctr": 0.0006,
+    "position": 3.6,
+    "title": "Dining | Theodore Roosevelt Presidential Library",
+    "missing_words": [
+     "theodore's",
+     "room",
+     "medora"
+    ]
+   },
+   {
+    "query": "when did teddy roosevelt die",
+    "page": "https://www.trlibrary.com/tr/timeline",
+    "clicks": 4,
+    "impressions": 1575,
+    "ctr": 0.0025,
+    "position": 4.9,
+    "title": "Timeline of TR’s Life | Theodore Roosevelt Presidential Library",
+    "missing_words": [
+     "did",
+     "teddy",
+     "die"
+    ]
+   },
+   {
+    "query": "who are the four presidents on mount rushmore",
+    "page": "https://www.trlibrary.com/tr/tr-mount-rushmore",
+    "clicks": 8,
+    "impressions": 1561,
+    "ctr": 0.0051,
+    "position": 5.7,
+    "title": "Why is Theodore Roosevelt on Mount Rushmore? | Theodore Roosevelt Presidential Library",
+    "missing_words": [
+     "four",
+     "presidents"
+    ]
+   },
+   {
+    "query": "what was theodore roosevelt known for",
+    "page": "https://www.trlibrary.com/tr/tr-importance",
+    "clicks": 5,
+    "impressions": 1537,
+    "ctr": 0.0033,
+    "position": 5.6,
+    "title": "Why is Theodore Roosevelt Important? | Theodore Roosevelt Presidential Library",
+    "missing_words": [
+     "was",
+     "known"
+    ]
+   },
+   {
+    "query": "teddy roosevelt museum",
+    "page": "https://www.trlibrary.com/",
+    "clicks": 146,
+    "impressions": 1281,
+    "ctr": 0.114,
+    "position": 2.1,
+    "title": "Theodore Roosevelt Presidential Library | Medora, North Dakota",
+    "missing_words": [
+     "teddy",
+     "museum"
+    ]
+   },
+   {
+    "query": "square deal definition us history",
+    "page": "https://www.trlibrary.com/tr/square-deal",
+    "clicks": 10,
+    "impressions": 1240,
+    "ctr": 0.0081,
+    "position": 1.8,
+    "title": "What was the Square Deal? | Theodore Roosevelt Presidential Library",
+    "missing_words": [
+     "definition",
+     "us",
+     "history"
+    ]
+   },
+   {
+    "query": "hotel 1883 medora nd",
+    "page": "https://www.trlibrary.com/visit/lodging",
+    "clicks": 14,
+    "impressions": 1167,
+    "ctr": 0.012,
+    "position": 7.8,
+    "title": "Lodging | Theodore Roosevelt Presidential Library",
+    "missing_words": [
+     "hotel",
+     "1883",
+     "medora",
+     "nd"
+    ]
+   },
+   {
+    "query": "mt rushmore",
+    "page": "https://www.trlibrary.com/tr/tr-mount-rushmore",
+    "clicks": 13,
+    "impressions": 1157,
+    "ctr": 0.0112,
+    "position": 2.4,
+    "title": "Why is Theodore Roosevelt on Mount Rushmore? | Theodore Roosevelt Presidential Library",
+    "missing_words": [
+     "mt"
+    ]
+   }
+  ],
+  "declining": [
+   {
+    "kind": "page",
+    "item": "https://www.trlibrary.com/tickets?utm_source=gbp&utm_medium=organic",
+    "clicks": 5614,
+    "prev_clicks": 16876,
+    "change": -0.667,
+    "position": 3.3,
+    "prev_position": 3.7
+   },
+   {
+    "kind": "page",
+    "item": "https://www.trlibrary.com/",
+    "clicks": 10214,
+    "prev_clicks": 17349,
+    "change": -0.411,
+    "position": 8.2,
+    "prev_position": 8.0
+   },
+   {
+    "kind": "page",
+    "item": "https://www.trlibrary.com/tickets",
+    "clicks": 5890,
+    "prev_clicks": 10933,
+    "change": -0.461,
+    "position": 3.1,
+    "prev_position": 2.6
+   },
+   {
+    "kind": "query",
+    "item": "theodore roosevelt presidential library",
+    "clicks": 8046,
+    "prev_clicks": 12492,
+    "change": -0.356,
+    "position": 1.1,
+    "prev_position": 1.0
+   },
+   {
+    "kind": "page",
+    "item": "https://www.trlibrary.com/visit",
+    "clicks": 2148,
+    "prev_clicks": 4995,
+    "change": -0.57,
+    "position": 2.7,
+    "prev_position": 2.7
+   },
+   {
+    "kind": "query",
+    "item": "teddy roosevelt presidential library",
+    "clicks": 2833,
+    "prev_clicks": 5482,
+    "change": -0.483,
+    "position": 1.3,
+    "prev_position": 1.2
+   },
+   {
+    "kind": "query",
+    "item": "theodore roosevelt library",
+    "clicks": 1315,
+    "prev_clicks": 3259,
+    "change": -0.597,
+    "position": 1.8,
+    "prev_position": 1.2
+   },
+   {
+    "kind": "query",
+    "item": "teddy roosevelt library",
+    "clicks": 2453,
+    "prev_clicks": 3972,
+    "change": -0.382,
+    "position": 1.5,
+    "prev_position": 1.2
+   },
+   {
+    "kind": "page",
+    "item": "https://www.trlibrary.com/visit/hours",
+    "clicks": 795,
+    "prev_clicks": 1598,
+    "change": -0.503,
+    "position": 2.6,
+    "prev_position": 2.5
+   },
+   {
+    "kind": "page",
+    "item": "https://www.trlibrary.com/visit/directions",
+    "clicks": 853,
+    "prev_clicks": 1585,
+    "change": -0.462,
+    "position": 2.7,
+    "prev_position": 2.6
+   },
+   {
+    "kind": "query",
+    "item": "presidential library medora",
+    "clicks": 281,
+    "prev_clicks": 708,
+    "change": -0.603,
+    "position": 1.0,
+    "prev_position": 1.2
+   },
+   {
+    "kind": "page",
+    "item": "https://www.trlibrary.com/tr/tr-mount-rushmore",
+    "clicks": 573,
+    "prev_clicks": 923,
+    "change": -0.379,
+    "position": 5.1,
+    "prev_position": 5.1
+   },
+   {
+    "kind": "query",
+    "item": "roosevelt library",
+    "clicks": 385,
+    "prev_clicks": 695,
+    "change": -0.446,
+    "position": 3.6,
+    "prev_position": 2.3
+   },
+   {
+    "kind": "query",
+    "item": "roosevelt library north dakota",
+    "clicks": 383,
+    "prev_clicks": 651,
+    "change": -0.412,
+    "position": 1.2,
+    "prev_position": 1.2
+   },
+   {
+    "kind": "query",
+    "item": "medora library",
+    "clicks": 143,
+    "prev_clicks": 363,
+    "change": -0.606,
+    "position": 2.3,
+    "prev_position": 1.6
+   }
+  ],
+  "cannibalization": [
+   {
+    "query": "square deal",
+    "impressions": 36344,
+    "pages": [
+     {
+      "page": "https://www.trlibrary.com/tr/square-deal",
+      "impressions": 23001,
+      "position": 3.9
+     },
+     {
+      "page": "https://www.trlibrary.com/tr/presidency/square-deal",
+      "impressions": 13343,
+      "position": 5.7
+     }
+    ]
+   },
+   {
+    "query": "kermit roosevelt",
+    "impressions": 10729,
+    "pages": [
+     {
+      "page": "https://www.trlibrary.com/podcast/good-citizen/kermit-roosevelt-iii",
+      "impressions": 6457,
+      "position": 7.1
+     },
+     {
+      "page": "https://www.trlibrary.com/about/trustees/kermit-roosevelt",
+      "impressions": 4272,
+      "position": 7.3
+     }
+    ]
+   },
+   {
+    "query": "roosevelt family",
+    "impressions": 8913,
+    "pages": [
+     {
+      "page": "https://www.trlibrary.com/tr/family/family-tree",
+      "impressions": 5342,
+      "position": 3.2
+     },
+     {
+      "page": "https://www.trlibrary.com/tr/family",
+      "impressions": 3489,
+      "position": 4.7
+     },
+     {
+      "page": "https://www.trlibrary.com/tr/family/fdr-connection",
+      "impressions": 82,
+      "position": 1.7
+     }
+    ]
+   },
+   {
+    "query": "teddy roosevelt museum",
+    "impressions": 5343,
+    "pages": [
+     {
+      "page": "https://www.trlibrary.com/",
+      "impressions": 1281,
+      "position": 2.1
+     },
+     {
+      "page": "https://www.trlibrary.com/tickets",
+      "impressions": 1272,
+      "position": 2.6
+     },
+     {
+      "page": "https://www.trlibrary.com/visit",
+      "impressions": 1242,
+      "position": 2.7
+     },
+     {
+      "page": "https://www.trlibrary.com/video/view/Vf8ee-gccpc",
+      "impressions": 866,
+      "position": 5.5
+     }
+    ]
+   },
+   {
+    "query": "what was a square deal",
+    "impressions": 4435,
+    "pages": [
+     {
+      "page": "https://www.trlibrary.com/tr/square-deal",
+      "impressions": 3089,
+      "position": 1.3
+     },
+     {
+      "page": "https://www.trlibrary.com/tr/presidency/square-deal",
+      "impressions": 1346,
+      "position": 7.5
+     }
+    ]
+   },
+   {
+    "query": "the square deal",
+    "impressions": 3388,
+    "pages": [
+     {
+      "page": "https://www.trlibrary.com/tr/square-deal",
+      "impressions": 1964,
+      "position": 1.9
+     },
+     {
+      "page": "https://www.trlibrary.com/tr/presidency/square-deal",
+      "impressions": 1424,
+      "position": 5.8
+     }
+    ]
+   },
+   {
+    "query": "theodore roosevelt museum",
+    "impressions": 2707,
+    "pages": [
+     {
+      "page": "https://www.trlibrary.com/",
+      "impressions": 590,
+      "position": 2.1
+     },
+     {
+      "page": "https://www.trlibrary.com/tickets",
+      "impressions": 586,
+      "position": 2.4
+     },
+     {
+      "page": "https://www.trlibrary.com/visit",
+      "impressions": 544,
+      "position": 2.5
+     },
+     {
+      "page": "https://www.trlibrary.com/video/view/Vf8ee-gccpc",
+      "impressions": 224,
+      "position": 4.4
+     }
+    ]
+   },
+   {
+    "query": "man in the arena",
+    "impressions": 2674,
+    "pages": [
+     {
+      "page": "https://www.trlibrary.com/tr/speeches/man-in-the-arena",
+      "impressions": 1813,
+      "position": 1.1
+     },
+     {
+      "page": "https://www.trlibrary.com/tr/post-presidency/man-in-the-arena",
+      "impressions": 861,
+      "position": 9.5
+     }
+    ]
+   },
+   {
+    "query": "theodore roosevelt children",
+    "impressions": 2673,
+    "pages": [
+     {
+      "page": "https://www.trlibrary.com/tr/family/children",
+      "impressions": 2071,
+      "position": 4.6
+     },
+     {
+      "page": "https://www.trlibrary.com/tr/kids-timeline",
+      "impressions": 602,
+      "position": 4.4
+     }
+    ]
+   },
+   {
+    "query": "what was the square deal",
+    "impressions": 2534,
+    "pages": [
+     {
+      "page": "https://www.trlibrary.com/tr/square-deal",
+      "impressions": 1774,
+      "position": 1.4
+     },
+     {
+      "page": "https://www.trlibrary.com/tr/presidency/square-deal",
+      "impressions": 760,
+      "position": 4.5
+     }
+    ]
+   },
+   {
+    "query": "teddy roosevelt shot",
+    "impressions": 2098,
+    "pages": [
+     {
+      "page": "https://www.trlibrary.com/tr/tr-shot",
+      "impressions": 1393,
+      "position": 2.2
+     },
+     {
+      "page": "https://www.trlibrary.com/bullet-speech",
+      "impressions": 705,
+      "position": 5.0
+     }
+    ]
+   },
+   {
+    "query": "teddy roosevelt museum north dakota",
+    "impressions": 1471,
+    "pages": [
+     {
+      "page": "https://www.trlibrary.com/",
+      "impressions": 419,
+      "position": 1.9
+     },
+     {
+      "page": "https://www.trlibrary.com/visit",
+      "impressions": 413,
+      "position": 2.0
+     },
+     {
+      "page": "https://www.trlibrary.com/tickets",
+      "impressions": 407,
+      "position": 2.0
+     },
+     {
+      "page": "https://www.trlibrary.com/tickets?utm_source=gbp&utm_medium=organic",
+      "impressions": 95,
+      "position": 1.1
+     }
+    ]
+   },
+   {
+    "query": "what did theodore roosevelt do",
+    "impressions": 1464,
+    "pages": [
+     {
+      "page": "https://www.trlibrary.com/tr/pre-presidency-political-accomplishments",
+      "impressions": 757,
+      "position": 8.1
+     },
+     {
+      "page": "https://www.trlibrary.com/tr/tr-importance",
+      "impressions": 707,
+      "position": 5.6
+     }
+    ]
+   },
+   {
+    "query": "teddy roosevelt assassination attempt",
+    "impressions": 1462,
+    "pages": [
+     {
+      "page": "https://www.trlibrary.com/bullet-speech",
+      "impressions": 819,
+      "position": 2.2
+     },
+     {
+      "page": "https://www.trlibrary.com/tr/tr-shot",
+      "impressions": 643,
+      "position": 4.2
+     }
+    ]
+   },
+   {
+    "query": "medora presidential library",
+    "impressions": 1445,
+    "pages": [
+     {
+      "page": "https://www.trlibrary.com/",
+      "impressions": 291,
+      "position": 1.5
+     },
+     {
+      "page": "https://www.trlibrary.com/tickets",
+      "impressions": 290,
+      "position": 1.8
+     },
+     {
+      "page": "https://www.trlibrary.com/visit",
+      "impressions": 290,
+      "position": 1.7
+     },
+     {
+      "page": "https://www.trlibrary.com/visit/hours",
+      "impressions": 283,
+      "position": 1.9
+     }
+    ]
+   }
+  ],
+  "note": "Estimated extra clicks use a rough industry click-through curve. Treat them as a way to rank opportunities, not a forecast."
+ },
+ "rankings": {
+  "updated": "2026-10-20T05:14:53+00:00",
+  "source": "dataforseo+gsc",
+  "keywords": [
+   {
+    "keyword": "theodore roosevelt presidential library",
+    "group": "Visit",
+    "volume": 74000,
+    "gsc_position": 1.1,
+    "google_rank": 5,
+    "ai_overview": true,
+    "ai_overview_cites_us": false,
+    "ranking_above_us": [
+     "fdrlibrary.org",
+     "visitdickinson.com",
+     "youtube.com"
+    ]
+   },
+   {
+    "keyword": "things to do in medora nd",
+    "group": "Visit",
+    "volume": 1600,
+    "gsc_position": 2.3,
+    "google_rank": null,
+    "ai_overview": true,
+    "ai_overview_cites_us": false,
+    "ranking_above_us": [
+     "wanderfilledlife.com",
+     "atlasobscura.com",
+     "medora.com"
+    ]
+   },
+   {
+    "keyword": "medora north dakota attractions",
+    "group": "Visit",
+    "volume": 1600,
+    "gsc_position": null,
+    "google_rank": null,
+    "ai_overview": false,
+    "ai_overview_cites_us": false,
+    "ranking_above_us": [
+     "medora.com",
+     "facebook.com",
+     "expedia.com"
+    ]
+   },
+   {
+    "keyword": "things to do near theodore roosevelt national park",
+    "group": "Visit",
+    "volume": 50,
+    "gsc_position": null,
+    "google_rank": null,
+    "ai_overview": true,
+    "ai_overview_cites_us": false,
+    "ranking_above_us": [
+     "youtube.com",
+     "seenbyamy.com",
+     "tripsavvy.com"
+    ]
+   },
+   {
+    "keyword": "museums in north dakota",
+    "group": "Visit",
+    "volume": 320,
+    "gsc_position": 8.1,
+    "google_rank": null,
+    "ai_overview": false,
+    "ai_overview_cites_us": false,
+    "ranking_above_us": [
+     "en.wikipedia.org",
+     "statemuseum.nd.gov",
+     "tripadvisor.com"
+    ]
+   },
+   {
+    "keyword": "north dakota road trip",
+    "group": "Visit",
+    "volume": 140,
+    "gsc_position": null,
+    "google_rank": 5,
+    "ai_overview": true,
+    "ai_overview_cites_us": true,
+    "ranking_above_us": [
+     "ndtourism.com",
+     "afar.com",
+     "dangtravelers.com"
+    ]
+   },
+   {
+    "keyword": "medora nd hotels",
+    "group": "Visit",
+    "volume": 8100,
+    "gsc_position": 7.8,
+    "google_rank": null,
+    "ai_overview": true,
+    "ai_overview_cites_us": true,
+    "ranking_above_us": [
+     "medora.com",
+     "facebook.com",
+     "reservations.com"
+    ]
+   },
+   {
+    "keyword": "badlands north dakota",
+    "group": "Visit",
+    "volume": 5400,
+    "gsc_position": 1.5,
+    "google_rank": null,
+    "ai_overview": true,
+    "ai_overview_cites_us": false,
+    "ranking_above_us": [
+     "nps.gov",
+     "dmr.nd.gov",
+     "ndtourism.com"
+    ]
+   },
+   {
+    "keyword": "theodore roosevelt",
+    "group": "History",
+    "volume": 246000,
+    "gsc_position": 10.4,
+    "google_rank": 16,
+    "ai_overview": false,
+    "ai_overview_cites_us": false,
+    "ranking_above_us": [
+     "en.wikipedia.org",
+     "theodoreroosevelt.org",
+     "trumpwhitehouse.archives.gov"
+    ]
+   },
+   {
+    "keyword": "theodore roosevelt north dakota",
+    "group": "History",
+    "volume": 320,
+    "gsc_position": null,
+    "google_rank": 1,
+    "ai_overview": false,
+    "ai_overview_cites_us": false,
+    "ranking_above_us": []
+   },
+   {
+    "keyword": "theodore roosevelt badlands",
+    "group": "History",
+    "volume": 140,
+    "gsc_position": 4.9,
+    "google_rank": 1,
+    "ai_overview": true,
+    "ai_overview_cites_us": true,
+    "ranking_above_us": []
+   },
+   {
+    "keyword": "elkhorn ranch",
+    "group": "History",
+    "volume": 2900,
+    "gsc_position": 9.4,
+    "google_rank": null,
+    "ai_overview": false,
+    "ai_overview_cites_us": false,
+    "ranking_above_us": [
+     "instagram.com",
+     "elkhornranch.com",
+     "nps.gov"
+    ]
+   },
+   {
+    "keyword": "maltese cross cabin",
+    "group": "History",
+    "volume": 720,
+    "gsc_position": null,
+    "google_rank": 22,
+    "ai_overview": false,
+    "ai_overview_cites_us": false,
+    "ranking_above_us": [
+     "youtube.com",
+     "theodorerooseveltcenter.org",
+     "facebook.com"
+    ]
+   },
+   {
+    "keyword": "theodore roosevelt conservation",
+    "group": "History",
+    "volume": 590,
+    "gsc_position": null,
+    "google_rank": null,
+    "ai_overview": true,
+    "ai_overview_cites_us": false,
+    "ranking_above_us": [
+     "trcp.org",
+     "trcp.org",
+     "voicesofdemocracy.umd.edu"
+    ]
+   },
+   {
+    "keyword": "presidential libraries",
+    "group": "Presidential libraries",
+    "volume": 14800,
+    "gsc_position": 5.0,
+    "google_rank": null,
+    "ai_overview": true,
+    "ai_overview_cites_us": false,
+    "ranking_above_us": [
+     "obamalibrary.gov",
+     "georgewbushlibrary.gov",
+     "eisenhowerlibrary.gov"
+    ]
+   },
+   {
+    "keyword": "newest presidential library",
+    "group": "Presidential libraries",
+    "volume": null,
+    "gsc_position": 1.6,
+    "google_rank": 12,
+    "ai_overview": true,
+    "ai_overview_cites_us": false,
+    "ranking_above_us": [
+     "cbsnews.com",
+     "facebook.com",
+     "knsiradio.com"
+    ]
+   },
+   {
+    "keyword": "presidential library road trip",
+    "group": "Presidential libraries",
+    "volume": null,
+    "gsc_position": null,
+    "google_rank": 1,
+    "ai_overview": true,
+    "ai_overview_cites_us": false,
+    "ranking_above_us": []
+   },
+   {
+    "keyword": "theodore roosevelt quotes",
+    "group": "Learning",
+    "volume": 6600,
+    "gsc_position": 3.1,
+    "google_rank": 3,
+    "ai_overview": true,
+    "ai_overview_cites_us": true,
+    "ranking_above_us": [
+     "goodreads.com",
+     "theodoreroosevelt.org"
+    ]
+   },
+   {
+    "keyword": "theodore roosevelt man in the arena",
+    "group": "Learning",
+    "volume": 2400,
+    "gsc_position": 5.7,
+    "google_rank": null,
+    "ai_overview": true,
+    "ai_overview_cites_us": false,
+    "ranking_above_us": [
+     "worldfuturefund.org",
+     "nickmurphyfoundation.org",
+     "mensaforkids.org"
+    ]
+   },
+   {
+    "keyword": "theodore roosevelt podcast",
+    "group": "Learning",
+    "volume": 10,
+    "gsc_position": null,
+    "google_rank": 1,
+    "ai_overview": true,
+    "ai_overview_cites_us": true,
+    "ranking_above_us": []
+   }
+  ]
+ },
+ "ai_visibility": {
+  "updated": "2026-10-20T05:22:20+00:00",
+  "engines": {
+   "ChatGPT": {
+    "model": "gpt-5-mini",
+    "mention_rate": 0.667,
+    "cite_rate": 0.6
+   },
+   "Gemini": {
+    "model": "gemini-3.8-flash",
+    "mention_rate": 0.462,
+    "cite_rate": 0.231
+   },
+   "Perplexity": {
+    "model": "sonar",
+    "mention_rate": null,
+    "cite_rate": null
+   }
+  },
+  "by_question": [
+   {
+    "id": "trnp-what-to-see",
+    "group": "Trip planning",
+    "question": "I'm visiting Theodore Roosevelt National Park. What else should I see nearby?",
+    "answers": [
+     {
+      "engine": "ChatGPT",
+      "mentioned": true,
+      "cited_trlibrary": true,
+      "position_among_attractions": 4,
+      "also_mentioned": [
+       "Chateau de Mores",
+       "Medora Musical",
+       "Painted Canyon",
+       "Maltese Cross Cabin",
+       "Elkhorn Ranch",
+       "Maah Daah Hey Trail"
+      ],
+      "how_described": "([trlibrary.com](https://www.trlibrary.com/visit/national-park/geology?utm_source=openai)) … ([trlibrary.com](https://www.trlibrary.com/visit/itineraries/enchanted-highway?utm_source=openai))",
+      "sources": [
+       "home.nps.gov",
+       "nps.gov",
+       "trlibrary.com",
+       "visitwatfordcity.com",
+       "visitawatfordcity.com",
+       "gofossilhunting.com"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "medora-things-to-do",
+    "group": "Trip planning",
+    "question": "What are the best things to do in Medora, North Dakota?",
+    "answers": [
+     {
+      "engine": "ChatGPT",
+      "mentioned": true,
+      "cited_trlibrary": true,
+      "position_among_attractions": 3,
+      "also_mentioned": [
+       "Medora Musical",
+       "Theodore Roosevelt National Park",
+       "Chateau de Mores",
+       "Maah Daah Hey Trail",
+       "North Dakota Cowboy Hall of Fame"
+      ],
+      "how_described": "3) Visit the new Theodore Roosevelt Presidential Library (opened July 4, 2026) — museum exhibits and programs about TR and the Badlands. … ([trlibrary.com](https://www.trlibrary.com/about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026?utm_source=openai))",
+      "sources": [
+       "medora.com",
+       "nps.gov",
+       "trlibrary.com",
+       "history.nd.gov",
+       "ndtourism.com",
+       "northdakotacowboy.org"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "nd-road-trip",
+    "group": "Trip planning",
+    "question": "Plan a 3-day road trip through western North Dakota. What are the must-see stops?",
+    "answers": [
+     {
+      "engine": "ChatGPT",
+      "mentioned": true,
+      "cited_trlibrary": true,
+      "position_among_attractions": 4,
+      "also_mentioned": [
+       "Theodore Roosevelt National Park",
+       "Medora Musical",
+       "Maah Daah Hey Trail",
+       "Painted Canyon",
+       "Maltese Cross Cabin",
+       "Chateau de Mores",
+       "Elkhorn Ranch"
+      ],
+      "how_described": "- The new Theodore Roosevelt Presidential Library (on a butte above Medora) opened in 2026 and is a major draw; plan ~3–4 hours for a visit and buy timed tickets in summer. … ([trlibrary.com](https://www.trlibrary.com/visit?utm_source=openai))",
+      "sources": [
+       "nps.gov",
+       "trlibrary.com",
+       "home.nps.gov",
+       "ndtourism.com",
+       "medora.com",
+       "watfordcityrvpark.com"
+      ]
+     },
+     {
+      "engine": "Gemini",
+      "mentioned": false,
+      "cited_trlibrary": false,
+      "position_among_attractions": null,
+      "also_mentioned": [
+       "Painted Canyon",
+       "Theodore Roosevelt National Park",
+       "Pitchfork Steak Fondue",
+       "Medora Musical",
+       "Chateau de Mores",
+       "Maltese Cross Cabin"
+      ],
+      "how_described": null,
+      "sources": []
+     }
+    ]
+   },
+   {
+    "id": "rushmore-to-trnp",
+    "group": "Trip planning",
+    "question": "We're driving from Mount Rushmore to Theodore Roosevelt National Park. What's worth stopping for?",
+    "answers": [
+     {
+      "engine": "ChatGPT",
+      "mentioned": true,
+      "cited_trlibrary": false,
+      "position_among_attractions": 6,
+      "also_mentioned": [
+       "Mount Rushmore",
+       "Theodore Roosevelt National Park",
+       "Painted Canyon",
+       "Chateau de Mores",
+       "Medora Musical"
+      ],
+      "how_described": "8) Medora / TRNP South Unit area — if you’re going to the South Unit, Medora is the gateway town: the South Unit scenic loop (Wind Canyon, Boicourt Overlook), Chateau de Mores historic site, the Burning Hills Amphitheater (Medora Musical in summer), and the new Theodore Roosevelt Presidential Library in Medora (opened July 4, 2026).",
+      "sources": [
+       "travelsouthdakota.com",
+       "crazyhorsememorial.org",
+       "home.nps.gov",
+       "nps.gov",
+       "walldrug.com",
+       "traveldatalab.com"
+      ]
+     },
+     {
+      "engine": "Gemini",
+      "mentioned": false,
+      "cited_trlibrary": false,
+      "position_among_attractions": null,
+      "also_mentioned": [
+       "Mount Rushmore",
+       "Theodore Roosevelt National Park",
+       "Chateau de Mores",
+       "Medora Musical"
+      ],
+      "how_described": null,
+      "sources": []
+     }
+    ]
+   },
+   {
+    "id": "i94-stops",
+    "group": "Trip planning",
+    "question": "What are the best stops along I-94 in North Dakota?",
+    "answers": [
+     {
+      "engine": "ChatGPT",
+      "mentioned": false,
+      "cited_trlibrary": false,
+      "position_among_attractions": null,
+      "also_mentioned": [
+       "Theodore Roosevelt National Park",
+       "Painted Canyon",
+       "Chateau de Mores",
+       "Medora Musical"
+      ],
+      "how_described": null,
+      "sources": [
+       "home.nps.gov",
+       "ndtourism.com",
+       "dickinsongov.com",
+       "roadsideamerica.com",
+       "parkrec.nd.gov",
+       "google.com"
+      ]
+     },
+     {
+      "engine": "Gemini",
+      "mentioned": false,
+      "cited_trlibrary": false,
+      "position_among_attractions": null,
+      "also_mentioned": [
+       "Theodore Roosevelt National Park",
+       "Painted Canyon",
+       "Chateau de Mores",
+       "Medora Musical",
+       "Pitchfork Steak Fondue"
+      ],
+      "how_described": null,
+      "sources": []
+     }
+    ]
+   },
+   {
+    "id": "family-badlands",
+    "group": "Trip planning",
+    "question": "Fun things to do with kids in the North Dakota Badlands?",
+    "answers": [
+     {
+      "engine": "ChatGPT",
+      "mentioned": true,
+      "cited_trlibrary": true,
+      "position_among_attractions": 5,
+      "also_mentioned": [
+       "Theodore Roosevelt National Park",
+       "Painted Canyon",
+       "Medora Musical",
+       "Chateau de Mores",
+       "Maah Daah Hey Trail",
+       "Elkhorn Ranch"
+      ],
+      "how_described": "- Theodore Roosevelt Presidential Library (Medora) — immersive, interactive exhibits aimed at families and children (opened in 2026). … ([trlibrary.com](https://www.trlibrary.com/visit?utm_source=openai))",
+      "sources": [
+       "nps.gov",
+       "govinfo.gov",
+       "medora.com",
+       "trlibrary.com",
+       "ndtourism.com",
+       "wonderfulmuseums.com"
+      ]
+     },
+     {
+      "engine": "Gemini",
+      "mentioned": false,
+      "cited_trlibrary": false,
+      "position_among_attractions": null,
+      "also_mentioned": [
+       "Theodore Roosevelt National Park",
+       "Maltese Cross Cabin",
+       "Painted Canyon",
+       "North Dakota Cowboy Hall of Fame",
+       "Medora Musical",
+       "Pitchfork Steak Fondue"
+      ],
+      "how_described": null,
+      "sources": []
+     }
+    ]
+   },
+   {
+    "id": "rainy-day-medora",
+    "group": "Trip planning",
+    "question": "What can we do indoors in Medora if the weather is bad?",
+    "answers": [
+     {
+      "engine": "ChatGPT",
+      "mentioned": true,
+      "cited_trlibrary": true,
+      "position_among_attractions": 1,
+      "also_mentioned": [
+       "Chateau de Mores",
+       "North Dakota Cowboy Hall of Fame",
+       "Theodore Roosevelt National Park",
+       "Maltese Cross Cabin",
+       "Pitchfork Steak Fondue",
+       "Medora Musical"
+      ],
+      "how_described": "- Theodore Roosevelt Presidential Library — a new, indoor museum and interpretive center with exhibits about TR’s life and the Badlands. … ([trlibrary.com](https://www.trlibrary.com/?utm_source=openai))",
+      "sources": [
+       "trlibrary.com",
+       "history.nd.gov",
+       "northdakotacowboy.org",
+       "ndtourism.com",
+       "home.nps.gov",
+       "medora.com"
+      ]
+     },
+     {
+      "engine": "Gemini",
+      "mentioned": false,
+      "cited_trlibrary": false,
+      "position_among_attractions": null,
+      "also_mentioned": [
+       "North Dakota Cowboy Hall of Fame",
+       "Chateau de Mores",
+       "Theodore Roosevelt National Park"
+      ],
+      "how_described": null,
+      "sources": [
+       "carltonautstraveltips.com",
+       "medorand.org",
+       "expedia.com",
+       "heatherscompass.com",
+       "medora.com",
+       "wanderlog.com"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "nd-museums",
+    "group": "Museums",
+    "question": "What are the best museums in North Dakota?",
+    "answers": [
+     {
+      "engine": "ChatGPT",
+      "mentioned": false,
+      "cited_trlibrary": false,
+      "position_among_attractions": null,
+      "also_mentioned": [],
+      "how_described": null,
+      "sources": [
+       "history.nd.gov",
+       "plainsart.org",
+       "bonanzaville.org",
+       "ndmoa.com",
+       "ndtourism.com",
+       "parkrec.nd.gov"
+      ]
+     },
+     {
+      "engine": "Gemini",
+      "mentioned": false,
+      "cited_trlibrary": false,
+      "position_among_attractions": null,
+      "also_mentioned": [
+       "Theodore Roosevelt National Park"
+      ],
+      "how_described": null,
+      "sources": []
+     }
+    ]
+   },
+   {
+    "id": "newest-presidential-library",
+    "group": "Museums",
+    "question": "What is the newest presidential library in the United States?",
+    "answers": [
+     {
+      "engine": "ChatGPT",
+      "mentioned": true,
+      "cited_trlibrary": true,
+      "position_among_attractions": 1,
+      "also_mentioned": [],
+      "how_described": "- Most recently established / newly built: the Theodore Roosevelt Presidential Library in Medora, North Dakota, opened July 4, 2026. … ([trlibrary.com](https://www.trlibrary.com/about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026?utm_source=openai))",
+      "sources": [
+       "hoover.archives.gov",
+       "trlibrary.com",
+       "en.wikipedia.org"
+      ]
+     },
+     {
+      "engine": "Gemini",
+      "mentioned": true,
+      "cited_trlibrary": false,
+      "position_among_attractions": 1,
+      "also_mentioned": [],
+      "how_described": "Newest Presidential Library Overall: **Theodore Roosevelt Presidential Library**",
+      "sources": [
+       "wikipedia.org",
+       "cnn.com",
+       "fastcompany.com",
+       "cbsnews.com",
+       "obama.org",
+       "youtube.com"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "presidential-libraries-visit",
+    "group": "Museums",
+    "question": "Which presidential libraries are worth visiting?",
+    "answers": [
+     {
+      "engine": "ChatGPT",
+      "mentioned": false,
+      "cited_trlibrary": false,
+      "position_among_attractions": null,
+      "also_mentioned": [],
+      "how_described": null,
+      "sources": []
+     },
+     {
+      "engine": "Gemini",
+      "mentioned": true,
+      "cited_trlibrary": false,
+      "position_among_attractions": 1,
+      "also_mentioned": [],
+      "how_described": "Roosevelt Presidential Library and Museum *(Hyde Park, New York)*",
+      "sources": []
+     }
+    ]
+   },
+   {
+    "id": "tr-learn-where",
+    "group": "History",
+    "question": "Where can I learn about Theodore Roosevelt's life in North Dakota?",
+    "answers": [
+     {
+      "engine": "ChatGPT",
+      "mentioned": false,
+      "cited_trlibrary": false,
+      "position_among_attractions": null,
+      "also_mentioned": [
+       "Theodore Roosevelt National Park",
+       "Elkhorn Ranch",
+       "Maltese Cross Cabin"
+      ],
+      "how_described": null,
+      "sources": [
+       "nps.gov",
+       "home.nps.gov",
+       "medora.com",
+       "theodorerooseveltcenter.org",
+       "history.nd.gov",
+       "ndtourism.com"
+      ]
+     },
+     {
+      "engine": "Gemini",
+      "mentioned": true,
+      "cited_trlibrary": false,
+      "position_among_attractions": 6,
+      "also_mentioned": [
+       "Theodore Roosevelt National Park",
+       "Maltese Cross Cabin",
+       "Elkhorn Ranch",
+       "Chateau de Mores",
+       "Medora Musical"
+      ],
+      "how_described": "* **Theodore Roosevelt Presidential Library (Medora, ND)**",
+      "sources": [
+       "nd.gov",
+       "ndtourism.com"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "tr-sites",
+    "group": "History",
+    "question": "What historic sites are connected to Theodore Roosevelt?",
+    "answers": [
+     {
+      "engine": "ChatGPT",
+      "mentioned": false,
+      "cited_trlibrary": false,
+      "position_among_attractions": null,
+      "also_mentioned": [
+       "Theodore Roosevelt National Park",
+       "Maltese Cross Cabin",
+       "Elkhorn Ranch",
+       "Mount Rushmore"
+      ],
+      "how_described": null,
+      "sources": []
+     },
+     {
+      "engine": "Gemini",
+      "mentioned": false,
+      "cited_trlibrary": false,
+      "position_among_attractions": null,
+      "also_mentioned": [
+       "Theodore Roosevelt National Park",
+       "Elkhorn Ranch",
+       "Maltese Cross Cabin",
+       "Mount Rushmore"
+      ],
+      "how_described": null,
+      "sources": []
+     }
+    ]
+   },
+   {
+    "id": "tr-library-worth-it",
+    "group": "Brand",
+    "question": "Is the Theodore Roosevelt Presidential Library worth visiting?",
+    "answers": [
+     {
+      "engine": "ChatGPT",
+      "mentioned": true,
+      "cited_trlibrary": true,
+      "position_among_attractions": 1,
+      "also_mentioned": [
+       "Theodore Roosevelt National Park"
+      ],
+      "how_described": "Short answer: Yes — for most people visiting the Badlands, the Theodore Roosevelt Presidential Library in Medora is worth a stop. … ([trlibrary.com](https://www.trlibrary.com/visit/exhibits?utm_source=openai))",
+      "sources": [
+       "trlibrary.com",
+       "tripadvisor.com"
+      ]
+     },
+     {
+      "engine": "Gemini",
+      "mentioned": true,
+      "cited_trlibrary": true,
+      "position_among_attractions": 1,
+      "also_mentioned": [
+       "Theodore Roosevelt National Park",
+       "Elkhorn Ranch",
+       "Chateau de Mores",
+       "Medora Musical"
+      ],
+      "how_described": "**Yes, the Theodore Roosevelt Presidential Library is well worth visiting**, especially if you are interested in American history, presidential legacy, conservation, or innovative architecture.",
+      "sources": [
+       "nd.gov",
+       "ndtourism.com",
+       "trlibrary.com",
+       "visitdickinson.com",
+       "cnn.com"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "tr-library-time",
+    "group": "Brand",
+    "question": "How much time do I need at the Theodore Roosevelt Presidential Library?",
+    "answers": [
+     {
+      "engine": "ChatGPT",
+      "mentioned": true,
+      "cited_trlibrary": true,
+      "position_among_attractions": 1,
+      "also_mentioned": [
+       "Theodore Roosevelt National Park"
+      ],
+      "how_described": "([trlibrary.com](https://www.trlibrary.com/visit?utm_source=openai)) … ([trlibrary.com](https://www.trlibrary.com/visit?utm_source=openai))",
+      "sources": [
+       "trlibrary.com"
+      ]
+     },
+     {
+      "engine": "Gemini",
+      "mentioned": true,
+      "cited_trlibrary": true,
+      "position_among_attractions": 1,
+      "also_mentioned": [
+       "Theodore Roosevelt National Park"
+      ],
+      "how_described": "For a complete visit to the **Theodore Roosevelt Presidential Library** in Medora, North Dakota, you should plan to spend **about 4.5 to 5.5 hours**.",
+      "sources": [
+       "peacegardenalmanac.com",
+       "visitdickinson.com",
+       "trlibrary.com",
+       "ndtourism.com",
+       "themidwestmillennial.com"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "tr-library-tickets",
+    "group": "Brand",
+    "question": "How much are tickets to the Theodore Roosevelt Presidential Library and when is it open?",
+    "answers": [
+     {
+      "engine": "ChatGPT",
+      "mentioned": true,
+      "cited_trlibrary": true,
+      "position_among_attractions": 1,
+      "also_mentioned": [],
+      "how_described": "([trlibrary.com](https://www.trlibrary.com/tickets?utm_source=openai)) … ([trlibrary.com](https://www.trlibrary.com/visit/hours))",
+      "sources": [
+       "trlibrary.com"
+      ]
+     },
+     {
+      "engine": "Gemini",
+      "mentioned": true,
+      "cited_trlibrary": true,
+      "position_among_attractions": 1,
+      "also_mentioned": [],
+      "how_described": "The **Theodore Roosevelt Presidential Library** in Medora, North Dakota, operates year-round with seasonal hours and uses timed-entry ticketing.",
+      "sources": [
+       "trlibrary.com",
+       "peacegardenalmanac.com"
+      ]
+     }
+    ]
+   }
+  ],
+  "top_cited_domains": [
+   [
+    "trlibrary.com",
+    12
+   ],
+   [
+    "ndtourism.com",
+    10
+   ],
+   [
+    "home.nps.gov",
+    8
+   ],
+   [
+    "nps.gov",
+    6
+   ],
+   [
+    "medora.com",
+    6
+   ],
+   [
+    "history.nd.gov",
+    4
+   ],
+   [
+    "en.wikipedia.org",
+    3
+   ],
+   [
+    "visitwatfordcity.com",
+    2
+   ],
+   [
+    "northdakotacowboy.org",
+    2
+   ],
+   [
+    "parkrec.nd.gov",
+    2
+   ],
+   [
+    "cnn.com",
+    2
+   ],
+   [
+    "nd.gov",
+    2
+   ],
+   [
+    "visitdickinson.com",
+    2
+   ],
+   [
+    "peacegardenalmanac.com",
+    2
+   ],
+   [
+    "visitawatfordcity.com",
+    1
+   ]
+  ],
+  "errors": [
+   "gemini: Gemini 429: { \"error\": { \"code\": 429, \"message\": \"You exceeded your current quota, please check your plan and billing details. For more info",
+   "perplexity: Perplexity 403: {\"error\":{\"message\":\"Sonar is now the Agent API. Use /v1/responses instead of /chat/completions. Migrate here: https://docs.",
+   "perplexity: Perplexity 403: {\"error\":{\"message\":\"Sonar is now the Agent API. Use /v1/responses instead of /v1/sonar. Migrate here: https://docs.perplexi"
+  ]
+ },
+ "audit": {
+  "updated": "2026-10-20T05:12:15+00:00",
+  "crawled": 1074,
+  "sitemap_urls": 1112,
+  "health_score": 96,
+  "ai_readiness_score": 60,
+  "llms_txt_on_trlibrary": false,
+  "ai_crawlers_allowed": {
+   "GPTBot": true,
+   "OAI-SearchBot": true,
+   "ChatGPT-User": true,
+   "ClaudeBot": true,
+   "Claude-SearchBot": true,
+   "PerplexityBot": true,
+   "Google-Extended": true,
+   "Applebot-Extended": true,
+   "Bingbot": true,
+   "Googlebot": true
+  },
+  "sitewide_structured_data": [
+   "BreadcrumbList",
+   "EntryPoint",
+   "GeoCoordinates",
+   "ImageObject",
+   "ListItem",
+   "OpeningHoursSpecification",
+   "PostalAddress",
+   "SearchAction",
+   "WebSite"
+  ],
+  "pages_with_page_specific_structured_data": 363,
+  "issues": [
+   {
+    "code": "title_duplicate",
+    "severity": "medium",
+    "label": "Same title as another page",
+    "pages": 74,
+    "examples": [
+     "https://www.trlibrary.com/calendar/special-event/gallery-david-hume-kennerly",
+     "https://www.trlibrary.com/calendar/special-event/artist-talk-room-david-hume-kennerly",
+     "https://www.trlibrary.com/calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf",
+     "https://www.trlibrary.com/calendar/special-event/book-signing-and-meet-greet-kennerly-balkowitsch-and-ziemendorf",
+     "https://www.trlibrary.com/visit/exhibits/kennerly",
+     "https://www.trlibrary.com/node/240",
+     "https://www.trlibrary.com/node/241",
+     "https://www.trlibrary.com/node/244",
+     "https://www.trlibrary.com/node/245",
+     "https://www.trlibrary.com/node/249"
+    ]
+   },
+   {
+    "code": "unaliased_url",
+    "severity": "medium",
+    "label": "Sitemap lists a /node/ URL instead of a readable path",
+    "pages": 35,
+    "examples": [
+     "https://www.trlibrary.com/node/240",
+     "https://www.trlibrary.com/node/241",
+     "https://www.trlibrary.com/node/244",
+     "https://www.trlibrary.com/node/245",
+     "https://www.trlibrary.com/node/249",
+     "https://www.trlibrary.com/node/350",
+     "https://www.trlibrary.com/node/236",
+     "https://www.trlibrary.com/node/237",
+     "https://www.trlibrary.com/node/238",
+     "https://www.trlibrary.com/node/239"
+    ]
+   },
+   {
+    "code": "h1_missing",
+    "severity": "medium",
+    "label": "No H1 heading",
+    "pages": 27,
+    "examples": [
+     "https://www.trlibrary.com/project/how-the-library-works",
+     "https://www.trlibrary.com/privacy",
+     "https://www.trlibrary.com/newsletter",
+     "https://www.trlibrary.com/privacy/cookies",
+     "https://www.trlibrary.com/visit/planner",
+     "https://www.trlibrary.com/visit/maps/campus",
+     "https://www.trlibrary.com/about/reports/2024-annual-report",
+     "https://www.trlibrary.com/private-events/spaces",
+     "https://www.trlibrary.com/private-events/catering",
+     "https://www.trlibrary.com/visit/itineraries/roosevelt-triangle"
+    ]
+   },
+   {
+    "code": "og_missing",
+    "severity": "medium",
+    "label": "Missing Open Graph tags",
+    "pages": 24,
+    "examples": [
+     "https://www.trlibrary.com/calendar/special-event/gallery-david-hume-kennerly",
+     "https://www.trlibrary.com/calendar/special-event/artist-talk-room-david-hume-kennerly",
+     "https://www.trlibrary.com/calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf",
+     "https://www.trlibrary.com/calendar/special-event/book-signing-and-meet-greet-kennerly-balkowitsch-and-ziemendorf",
+     "https://www.trlibrary.com/project/how-the-library-works",
+     "https://www.trlibrary.com/visit/exhibits/kennerly",
+     "https://www.trlibrary.com/video/view/-QfzHHXPYqM",
+     "https://www.trlibrary.com/video/view/5-mP3KQw-Pw",
+     "https://www.trlibrary.com/video/view/bDk45YjSBQc",
+     "https://www.trlibrary.com/video/view/HJxLVmaKb10"
+    ]
+   },
+   {
+    "code": "meta_missing",
+    "severity": "medium",
+    "label": "No meta description",
+    "pages": 23,
+    "examples": [
+     "https://www.trlibrary.com/calendar/special-event/gallery-david-hume-kennerly",
+     "https://www.trlibrary.com/calendar/special-event/artist-talk-room-david-hume-kennerly",
+     "https://www.trlibrary.com/calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf",
+     "https://www.trlibrary.com/calendar/special-event/book-signing-and-meet-greet-kennerly-balkowitsch-and-ziemendorf",
+     "https://www.trlibrary.com/project/how-the-library-works",
+     "https://www.trlibrary.com/visit/exhibits/kennerly",
+     "https://www.trlibrary.com/video/view/-QfzHHXPYqM",
+     "https://www.trlibrary.com/video/view/5-mP3KQw-Pw",
+     "https://www.trlibrary.com/video/view/bDk45YjSBQc",
+     "https://www.trlibrary.com/video/view/HJxLVmaKb10"
+    ]
+   },
+   {
+    "code": "redirect_in_sitemap",
+    "severity": "medium",
+    "label": "Sitemap lists a URL that redirects",
+    "pages": 5,
+    "examples": [
+     "https://www.trlibrary.com/calendar/special-event/gallery-david-hume-kennerly",
+     "https://www.trlibrary.com/calendar/special-event/artist-talk-room-david-hume-kennerly",
+     "https://www.trlibrary.com/calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf",
+     "https://www.trlibrary.com/calendar/special-event/book-signing-and-meet-greet-kennerly-balkowitsch-and-ziemendorf",
+     "https://www.trlibrary.com/event/24"
+    ]
+   },
+   {
+    "code": "title_too_long",
+    "severity": "low",
+    "label": "Title over 60 characters, not counting the site-name suffix",
+    "pages": 267,
+    "examples": [
+     "https://www.trlibrary.com/node/240",
+     "https://www.trlibrary.com/node/241",
+     "https://www.trlibrary.com/node/244",
+     "https://www.trlibrary.com/node/245",
+     "https://www.trlibrary.com/node/249",
+     "https://www.trlibrary.com/node/350",
+     "https://www.trlibrary.com/video/view/-QfzHHXPYqM",
+     "https://www.trlibrary.com/video/view/5-mP3KQw-Pw",
+     "https://www.trlibrary.com/video/view/bDk45YjSBQc",
+     "https://www.trlibrary.com/video/view/-udCxePoWgE"
+    ]
+   },
+   {
+    "code": "thin_content",
+    "severity": "low",
+    "label": "Under 150 words of body text",
+    "pages": 230,
+    "examples": [
+     "https://www.trlibrary.com/project/how-the-library-works",
+     "https://www.trlibrary.com/node/240",
+     "https://www.trlibrary.com/node/241",
+     "https://www.trlibrary.com/node/244",
+     "https://www.trlibrary.com/node/245",
+     "https://www.trlibrary.com/node/249",
+     "https://www.trlibrary.com/node/350",
+     "https://www.trlibrary.com/video/view/HJxLVmaKb10",
+     "https://www.trlibrary.com/video/view/wWpgaDB_uDI",
+     "https://www.trlibrary.com/node/236"
+    ]
+   },
+   {
+    "code": "title_too_short",
+    "severity": "low",
+    "label": "Title under 15 characters, not counting the site-name suffix",
+    "pages": 149,
+    "examples": [
+     "https://www.trlibrary.com/video/view/Y3jQTzNVVFY",
+     "https://www.trlibrary.com/video/view/YJ_qzszUZUA",
+     "https://www.trlibrary.com/privacy",
+     "https://www.trlibrary.com/newsletter",
+     "https://www.trlibrary.com/node/30",
+     "https://www.trlibrary.com/privacy/cookies",
+     "https://www.trlibrary.com/visit/planner",
+     "https://www.trlibrary.com/visit/maps/campus",
+     "https://www.trlibrary.com/node/25",
+     "https://www.trlibrary.com/visit/accessibility"
+    ]
+   },
+   {
+    "code": "meta_duplicate",
+    "severity": "low",
+    "label": "Same meta description as another page",
+    "pages": 126,
+    "examples": [
+     "https://www.trlibrary.com/event/24",
+     "https://www.trlibrary.com/video/view/Y3jQTzNVVFY",
+     "https://www.trlibrary.com/video/view/YJ_qzszUZUA",
+     "https://www.trlibrary.com/video/view/-udCxePoWgE",
+     "https://www.trlibrary.com/video/view/1ftA6rWo1NA",
+     "https://www.trlibrary.com/video/view/2RDLAWCZOSc",
+     "https://www.trlibrary.com/video/view/B16CkDO7gsw",
+     "https://www.trlibrary.com/video/view/CRJyRfk7ll4",
+     "https://www.trlibrary.com/video/view/g_bLZyruHAw",
+     "https://www.trlibrary.com/video/view/MHKc_3BMejQ"
+    ]
+   },
+   {
+    "code": "h1_multiple",
+    "severity": "low",
+    "label": "More than one H1",
+    "pages": 23,
+    "examples": [
+     "https://www.trlibrary.com/support/matching-gifts",
+     "https://www.trlibrary.com/project",
+     "https://www.trlibrary.com/about/careers",
+     "https://www.trlibrary.com/bullet-speech",
+     "https://www.trlibrary.com/about/mission",
+     "https://www.trlibrary.com/about/foundation",
+     "https://www.trlibrary.com/impact",
+     "https://www.trlibrary.com/tr/post-presidency/man-in-the-arena",
+     "https://www.trlibrary.com/support/heritage-society",
+     "https://www.trlibrary.com/project/sustainability"
+    ]
+   },
+   {
+    "code": "meta_too_short",
+    "severity": "low",
+    "label": "Meta description under 70 characters",
+    "pages": 17,
+    "examples": [
+     "https://www.trlibrary.com/video/view/Y3jQTzNVVFY",
+     "https://www.trlibrary.com/video/view/YJ_qzszUZUA",
+     "https://www.trlibrary.com/video/view/Lk8bs9ilpLI",
+     "https://www.trlibrary.com/video/view/0NiRkijqLGw",
+     "https://www.trlibrary.com/video/view/NoLhSWhiCpA",
+     "https://www.trlibrary.com/video/view/Oxn6SpWQzgw",
+     "https://www.trlibrary.com/video/view/BDcEYopmVyU",
+     "https://www.trlibrary.com/video/view/caM39tk-WIo",
+     "https://www.trlibrary.com/video/view/GHM7Y66lCBk",
+     "https://www.trlibrary.com/video/view/rtIlEH7mr_g"
+    ]
+   }
+  ],
+  "weakest_pages": [
+   {
+    "url": "https://www.trlibrary.com/calendar/special-event/gallery-david-hume-kennerly",
+    "score": 60,
+    "issues": [
+     "redirect_in_sitemap",
+     "meta_missing",
+     "og_missing",
+     "title_duplicate"
+    ],
+    "title": "In the Room: Sixty Years on the Front Lines of History | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/calendar/special-event/artist-talk-room-david-hume-kennerly",
+    "score": 60,
+    "issues": [
+     "redirect_in_sitemap",
+     "meta_missing",
+     "og_missing",
+     "title_duplicate"
+    ],
+    "title": "In the Room: Sixty Years on the Front Lines of History | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf",
+    "score": 60,
+    "issues": [
+     "redirect_in_sitemap",
+     "meta_missing",
+     "og_missing",
+     "title_duplicate"
+    ],
+    "title": "In the Room: Sixty Years on the Front Lines of History | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/calendar/special-event/book-signing-and-meet-greet-kennerly-balkowitsch-and-ziemendorf",
+    "score": 60,
+    "issues": [
+     "redirect_in_sitemap",
+     "meta_missing",
+     "og_missing",
+     "title_duplicate"
+    ],
+    "title": "In the Room: Sixty Years on the Front Lines of History | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/project/how-the-library-works",
+    "score": 67,
+    "issues": [
+     "meta_missing",
+     "h1_missing",
+     "og_missing",
+     "thin_content"
+    ],
+    "title": "How the Library Works | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/visit/exhibits/kennerly",
+    "score": 70,
+    "issues": [
+     "meta_missing",
+     "og_missing",
+     "title_duplicate"
+    ],
+    "title": "In the Room: Sixty Years on the Front Lines of History | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/node/240",
+    "score": 74,
+    "issues": [
+     "unaliased_url",
+     "title_too_long",
+     "thin_content",
+     "title_duplicate"
+    ],
+    "title": "Curator Talk: Honoring the Military Service of Theodore Roosevelt's Sons | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/node/241",
+    "score": 74,
+    "issues": [
+     "unaliased_url",
+     "title_too_long",
+     "thin_content",
+     "title_duplicate"
+    ],
+    "title": "Curator Talk: Top 10 Documents from Theodore Roosevelt's Presidency | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/node/244",
+    "score": 74,
+    "issues": [
+     "unaliased_url",
+     "title_too_long",
+     "thin_content",
+     "title_duplicate"
+    ],
+    "title": "Book Talk: Jean Flahive's Teddy Roosevelt, Millie, and the Elegant Ride with Phil Morse | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/node/245",
+    "score": 74,
+    "issues": [
+     "unaliased_url",
+     "title_too_long",
+     "thin_content",
+     "title_duplicate"
+    ],
+    "title": "Book Talk: Michael Patrick Cullinane and Michael Sacopulos's Birding with TR | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/node/249",
+    "score": 74,
+    "issues": [
+     "unaliased_url",
+     "title_too_long",
+     "thin_content",
+     "title_duplicate"
+    ],
+    "title": "Book Talk: Nancy Churnin's A Teddy Bear for Emily—and President Roosevelt, Too | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/node/350",
+    "score": 74,
+    "issues": [
+     "unaliased_url",
+     "title_too_long",
+     "thin_content",
+     "title_duplicate"
+    ],
+    "title": "Virtual Talk: Bill Bleyer Presents \"Robert B. Roosevelt: The Black Sheep Roosevelt\" | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/video/view/-QfzHHXPYqM",
+    "score": 77,
+    "issues": [
+     "title_too_long",
+     "meta_missing",
+     "og_missing"
+    ],
+    "title": "Vice President J.D. Vance lands in Dickinson and motorcade to Theodore Roosevelt Library site | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/video/view/5-mP3KQw-Pw",
+    "score": 77,
+    "issues": [
+     "title_too_long",
+     "meta_missing",
+     "og_missing"
+    ],
+    "title": "Teddy Roosevelt Presidential Library Medora North Dakota video #2481 | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/video/view/bDk45YjSBQc",
+    "score": 77,
+    "issues": [
+     "title_too_long",
+     "meta_missing",
+     "og_missing"
+    ],
+    "title": "Medora's Theodore Roosevelt, Joe Wiegand, Entertains Thousands Each Year | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/video/view/HJxLVmaKb10",
+    "score": 77,
+    "issues": [
+     "meta_missing",
+     "og_missing",
+     "thin_content"
+    ],
+    "title": "Eyes on the Stars - 1776 Drones Over the Badlands | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/video/view/wWpgaDB_uDI",
+    "score": 77,
+    "issues": [
+     "meta_missing",
+     "og_missing",
+     "thin_content"
+    ],
+    "title": "Theodore Roosevelt Was a Feminist | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/event/24",
+    "score": 77,
+    "issues": [
+     "redirect_in_sitemap",
+     "title_duplicate",
+     "meta_duplicate"
+    ],
+    "title": "Theodore Roosevelt Convention (#TeddyCon) | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/node/236",
+    "score": 77,
+    "issues": [
+     "unaliased_url",
+     "thin_content",
+     "title_duplicate"
+    ],
+    "title": "Taste of History: Camping Edition | Theodore Roosevelt Presidential Library"
+   },
+   {
+    "url": "https://www.trlibrary.com/node/237",
+    "score": 77,
+    "issues": [
+     "unaliased_url",
+     "thin_content",
+     "title_duplicate"
+    ],
+    "title": "Taste of History: Holiday Edition | Theodore Roosevelt Presidential Library"
+   }
+  ]
+ },
+ "recommendations": {
+  "updated": "2026-10-20T05:22:20+00:00",
+  "written_by": "Gemini (gemini-3.8-flash)",
+  "ai_brief": {
+   "headline": "ChatGPT reliably mentions and cites the Library on broad Medora and badlands queries, while Gemini overlooks it outside direct searches and invents inflated visit lengths.",
+   "how_described": "Engines describe the Library as a new, indoor museum on a butte above Medora with interactive exhibits on TR's life, conservation, Badlands history, and architecture. ChatGPT repeatedly claims the Library opened on July 4, 2026, while Gemini suggests a visit requires 4.5 to 5.5 hours.",
+   "gaps": [
+    {
+     "theme": "Corridor travel along I-94 and Black Hills to Badlands driving routes",
+     "who_shows_up_instead": "Theodore Roosevelt National Park, Painted Canyon, Chateau de Mores, Medora Musical, Pitchfork Steak Fondue",
+     "prompt_ids": [
+      "i94-stops",
+      "rushmore-to-trnp"
+     ]
+    },
+    {
+     "theme": "Statewide museum roundups and broader presidential library itineraries",
+     "who_shows_up_instead": "State Historical Society sites, Plains Art Museum, Bonanzaville, and the Franklin D. Roosevelt Library in Hyde Park",
+     "prompt_ids": [
+      "nd-museums",
+      "presidential-libraries-visit"
+     ]
+    },
+    {
+     "theme": "Theodore Roosevelt biographical and historical site searches",
+     "who_shows_up_instead": "Maltese Cross Cabin, Elkhorn Ranch, Theodore Roosevelt National Park, Mount Rushmore",
+     "prompt_ids": [
+      "tr-learn-where",
+      "tr-sites"
+     ]
+    }
+   ],
+   "actions": [
+    {
+     "action": "Add an I-94 corridor driving guide showing Medora as the primary western North Dakota anchor stop.",
+     "why": "Both engines completely omit the Library from I-94 travel recommendations, pulling instead from generic road-trip and state tourism directories.",
+     "effort": "medium",
+     "where": "trlibrary.com/visit/itineraries"
+    },
+    {
+     "action": "Publish a dedicated visit duration guide stating clearly that a standard experience takes about 3 1/2 hours.",
+     "why": "Gemini reports an inflated dwell time of 4.5 to 5.5 hours citing third-party travel blogs, while ChatGPT cites a 3 to 4 hour estimate.",
+     "effort": "low",
+     "where": "trlibrary.com/visit"
+    },
+    {
+     "action": "Build a connected-sites resource detailing TR's Badlands footprint alongside Maltese Cross Cabin and Elkhorn Ranch.",
+     "why": "Search engines currently favor National Park Service pages and do not connect TR biographical questions to the Library.",
+     "effort": "medium",
+     "where": "trlibrary.com"
+    },
+    {
+     "action": "Ensure Wikipedia, North Dakota Tourism, and local chamber listings clearly represent the museum experience and operational details.",
+     "why": "Gemini relies heavily on ndtourism.com, nd.gov, and regional travel blogs rather than directly citing trlibrary.com.",
+     "effort": "high",
+     "where": "ndtourism.com and Wikipedia"
+    }
+   ],
+   "inaccuracies": [
+    {
+     "engine": "ChatGPT",
+     "claim": "Library opened July 4, 2026.",
+     "correction_source": "trlibrary.com/about/press"
+    },
+    {
+     "engine": "Gemini",
+     "claim": "Visitors should plan to spend about 4.5 to 5.5 hours for a complete visit.",
+     "correction_source": "trlibrary.com/visit"
+    }
+   ],
+   "written_by": "Gemini (gemini-3.8-flash)"
+  },
+  "pages": [
+   {
+    "page": "https://www.trlibrary.com/tr/square-deal",
+    "summary": "This page captures over 25,000 monthly impressions for core definition queries but loses clicks due to a cut-off meta description and the absence of a direct, snippet-ready definition at the top of the page.",
+    "title": {
+     "suggested": "Square Deal: Definition and Roosevelt's Three Cs",
+     "why": "Front-loads the top high-volume search term 'Square Deal' and targets the strong 'definition' query intent while keeping well under 60 characters."
+    },
+    "meta_description": {
+     "suggested": "Explore Theodore Roosevelt's Square Deal: the Three Cs of corporate regulation, consumer protection, and conservation. Read the full history here.",
+     "why": "Replaces the current cut-off text with an engaging 146-character summary that defines the topic and gives searchers a clear reason to click."
+    },
+    "content_additions": [
+     {
+      "for_query": "square deal definition",
+      "suggestion": "Add a highlighted callout box directly below the main heading with a plain-language summary answering 'What was the Square Deal?' before moving into historical background.",
+      "draft": "The Square Deal was Theodore Roosevelt's domestic policy as president. Built on fairness for workers, businesses, and citizens, historians summarize it through the Three Cs: corporate regulation, consumer protection, and conservation of natural resources."
+     },
+     {
+      "for_query": "Which presidential libraries are worth visiting?",
+      "suggestion": "Add a closing section linking Roosevelt's policy legacy to the physical Library experience in Medora, keeping to the standard visit duration.",
+      "draft": "Plan about 3 1/2 hours to explore Roosevelt's conservation legacy and presidential policies in person at the Library in Medora, North Dakota."
+     },
+     {
+      "for_query": "what did the square deal do",
+      "suggestion": "Add bulleted takeaways beneath 'The Three C's of the Square Deal' detailing the specific acts mentioned on the page (corporate regulation through the anthracite coal settlement and the Hepburn Act, consumer protection through the Meat Inspection Act and Pure Food and Drug Act, and conservation).",
+      "draft": "Corporate Regulation: Settled the anthracite coal strike and passed the Hepburn Act to oversee railroad rates.\nConsumer Protection: Passed the Meat Inspection Act and Pure Food and Drug Act on June 30, 1906.\nConservation: Protected public lands so every citizen could experience the outdoors."
+     }
+    ],
+    "ai_readiness": [
+     {
+      "suggestion": "Replace the incomplete modern political reference in 'THE SQUARE DEAL TODAY' with nonpartisan historical legacy context.",
+      "why": "The section currently trails off mid-sentence and cites modern political figures, violating nonpartisan guidelines and confusing AI summarizers that crawl for definitive policy explanations."
+     },
+     {
+      "suggestion": "Add FAQPage structured data addressing 'What was the Square Deal?' and 'What are the Three Cs of the Square Deal?'",
+      "why": "Search engines and AI overview engines frequently extract structured Q&A pairs for high-volume historical definition queries."
+     }
+    ],
+    "technical": [
+     {
+      "suggestion": "Add FAQPage schema markup to complement the existing BreadcrumbList and Person schemas.",
+      "why": "Enables rich snippets in Google search results for common educational searches such as 'what is the square deal'."
+     },
+     {
+      "suggestion": "Fix the truncated final sentence under 'THE SQUARE DEAL TODAY'.",
+      "why": "Broken HTML or incomplete copy creates a poor reading experience and signals low editorial quality to search crawlers."
+     }
+    ],
+    "needs_verification": [
+     "Verify that the Three Cs formulation (corporate regulation, consumer protection, conservation of natural resources) aligns with the Library's preferred interpretive language.",
+     "Verify that June 30, 1906, is the accurate signing date for both the Meat Inspection Act and the Pure Food and Drug Act as stated in the text.",
+     "Verify whether the unfinished Barack Obama quote in 'THE SQUARE DEAL TODAY' should be removed completely under the Library's nonpartisan policy."
+    ],
+    "checks": []
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/tr-mount-rushmore",
+    "summary": "This page captures thousands of searches for who is carved on Mount Rushmore, but buries the direct answer in body copy and misses a prime chance to route Black Hills road-trippers north to Medora.",
+    "title": {
+     "suggested": "Mount Rushmore Presidents: Why Theodore Roosevelt Is Carved",
+     "why": "Front-loads the high-volume query 'Mount Rushmore presidents' while staying under 60 characters and keeping the core topic focused on Roosevelt."
+    },
+    "meta_description": {
+     "suggested": "Find out which four presidents stand on Mount Rushmore and why sculptor Gutzon Borglum chose to carve Theodore Roosevelt into the Black Hills granite.",
+     "why": "At 150 characters, it answers the search intent immediately and offers a clear reason to click."
+    },
+    "content_additions": [
+     {
+      "for_query": "what presidents are on mount rushmore",
+      "suggestion": "Add a quick-reference list right beneath the introduction breaking out the four presidents and Borglum's stated theme for each. This captures featured snippets for 'who is on mount rushmore'.",
+      "draft": "The four presidents carved on Mount Rushmore represent four chapters of the American story: George Washington for the founding of the nation; Thomas Jefferson for westward growth; Abraham Lincoln for preserving the Union; and Theodore Roosevelt for modern expansion and conservation."
+     },
+     {
+      "for_query": "We're driving from Mount Rushmore to Theodore Roosevelt National Park. What's worth stopping for?",
+      "suggestion": "Add a short travel-connection section before the resources list showing how a trip to Mount Rushmore connects naturally to the Library in Medora.",
+      "draft": "Many travelers visiting Mount Rushmore continue north toward the badlands where Theodore Roosevelt ranched. When passing through Medora, plan about 3 1/2 hours to explore the Theodore Roosevelt Presidential Library and discover the landscapes that shaped his conservation ideas."
+     }
+    ],
+    "ai_readiness": [
+     {
+      "suggestion": "Structure the four presidents and their symbolic meanings using concise definition lists or bulleted key-value pairs.",
+      "why": "AI engines extract list items cleanly when responding to 'who are the four presidents on mount rushmore' queries."
+     },
+     {
+      "suggestion": "Add a clear heading: 'Why Did Gutzon Borglum Choose Theodore Roosevelt?'",
+      "why": "Direct question-and-answer headings align with the prompt patterns AI answer engines use to synthesize citations."
+     }
+    ],
+    "technical": [
+     {
+      "suggestion": "Add FAQPage structured data covering 'Who are the four presidents on Mount Rushmore?' and 'Why is Theodore Roosevelt on Mount Rushmore?'.",
+      "why": "The page currently lacks FAQ schema, which can trigger rich snippets in Google search results for high-volume questions."
+     },
+     {
+      "suggestion": "Ensure the primary H1 clearly includes both 'Mount Rushmore' and 'Presidents'.",
+      "why": "Strengthens relevance for broad informational queries that currently average between positions 3 and 5."
+     }
+    ],
+    "needs_verification": [
+     "Verify that linking the route from Mount Rushmore north to Medora aligns with planned regional tourism partnership messaging."
+    ],
+    "checks": []
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/presidency/brownsville",
+    "summary": "This page captures nearly 50,000 monthly impressions for 'brownsville affair' and ranks number one for Roosevelt's presidential missteps, but yields almost no clicks because the title exceeds search display limits, the meta description lacks an incentive to read, and the text abruptly cuts off mid-sentence before explaining the 66-year correction promised in the headline.",
+    "title": {
+     "suggested": "The Brownsville Affair: Roosevelt and the 25th Infantry",
+     "why": "Puts the primary high-impression query first, pairs Roosevelt with the 25th Infantry, and stays well under the 60-character ceiling."
+    },
+    "meta_description": {
+     "suggested": "Explore the 1906 Brownsville Affair, where Theodore Roosevelt dismissed 167 Black soldiers without trial, and see how this historic injustice unfolded.",
+     "why": "Fits the 120-155 character range, includes the high-volume search term, and provides a compelling reason to click."
+    },
+    "content_additions": [
+     {
+      "for_query": "brownsville affair",
+      "suggestion": "Finish the truncated narrative. The page currently ends mid-sentence in the section on Senator Foraker and never explains how the injustice was corrected, leaving readers without the core answer promised in the H1 title.",
+      "draft": "Roosevelt maintained his stance throughout his presidency, but the struggle over Special Orders No. 266 did not end in the Senate. Removing the stigma inflicted on the men of the 25th Infantry took decades of effort before the government finally corrected the official record."
+     },
+     {
+      "for_query": "bad things teddy roosevelt did",
+      "suggestion": "Add a clear interpretive summary box near the top that directly addresses Roosevelt's abuse of executive authority and collective punishment.",
+      "draft": "Roosevelt's decision to discharge 167 soldiers without a court-martial remains one of the most questioned actions of his presidency. Dismissing decorated service members without individual proof or hearings denied them the standard protections of military law and stripped away their earned pensions."
+     }
+    ],
+    "ai_readiness": [
+     {
+      "suggestion": "Add a concise 'At a Glance' fact table near the top with the post location, regiment involved, order number, number of men discharged, and lack of hearings.",
+      "why": "AI engines extracting answers for queries like 'what was the brownsville affair' look for structured key facts rather than narrative text."
+     },
+     {
+      "suggestion": "Restore and complete the missing conclusion describing the correction of the record.",
+      "why": "AI crawlers parsing this page encounter an abrupt cutoff mid-sentence, which signals incomplete content and causes answer engines to favor alternative historical sources."
+     }
+    ],
+    "technical": [
+     {
+      "suggestion": "Implement Article structured data and remove physical facility schema like OpeningHoursSpecification and GeoCoordinates from this educational history page.",
+      "why": "Educational history articles need Article markup to define the topic, while facility-level schema belongs on visitor planning pages."
+     },
+     {
+      "suggestion": "Fix the CMS body-text truncation bug that cuts off the final paragraph after 'trying to cover it'.",
+      "why": "Incomplete sentences harm user trust, increase bounce rates, and cause search quality algorithms to classify the page as broken or low quality."
+     }
+    ],
+    "needs_verification": [
+     "Verify whether the drafted summary of the decades-long correction accurately reflects the specific administrative and legislative steps taken to clear the 25th Infantry soldiers' records.",
+     "Verify that Special Orders No. 266 directly stripped pensions from all pension-eligible soldiers among the 167 discharged."
+    ],
+    "checks": [
+     "Suggestion contains a year: check it against the page and the no-years rule"
+    ]
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/presidency/roosevelt-corollary",
+    "summary": "Demote secondary H1 tags to establish a clean heading hierarchy, complete the truncated concluding sentence, and add an upfront direct-answer summary contrasting the Roosevelt Corollary with the Monroe Doctrine to capture high-volume definition queries.",
+    "title": {
+     "suggested": "Roosevelt Corollary to the Monroe Doctrine Explained",
+     "why": "At 52 characters, it places the highest-volume search terms first, removes the redundant brand suffix, and directly matches user queries like 'roosevelt corollary to the monroe doctrine'."
+    },
+    "meta_description": {
+     "suggested": "Why did Theodore Roosevelt expand the Monroe Doctrine? Explore how the Roosevelt Corollary reshaped foreign policy and sparked enduring debate.",
+     "why": "At 144 characters, it stays strictly within the 120-155 character limit, highlights the key historical tension, and gives readers a clear reason to click."
+    },
+    "content_additions": [
+     {
+      "for_query": "monroe doctrine vs roosevelt corollary",
+      "suggestion": "Add a clear comparison callout right below 'The Corollary Takes Shape' clearly distinguishing the 1823 doctrine from the 1904 corollary.",
+      "draft": "Monroe Doctrine vs. Roosevelt Corollary: The Monroe Doctrine warned European empires to stay out of the Western Hemisphere. The Roosevelt Corollary went a step further: it declared that the United States could step in directly to maintain order and manage debt crises before foreign powers had a reason to act."
+     },
+     {
+      "for_query": "roosevelt corollary impact",
+      "suggestion": "Repair the final paragraph under 'Justifications and Criticisms', which currently cuts off mid-sentence after 'all ostensibly'.",
+      "draft": "Critics argued this policy set a precedent that justified recurring interventions across the hemisphere for decades to follow."
+     }
+    ],
+    "ai_readiness": [
+     {
+      "suggestion": "Place a two-sentence definition callout box directly beneath the main heading defining the Roosevelt Corollary, its date, and its core mechanism.",
+      "why": "AI answer engines and search snippets look for concise, self-contained definitions to answer queries like 'what was the roosevelt corollary' and 'what was the purpose of the roosevelt corollary'."
+     },
+     {
+      "suggestion": "Add an FAQ section with structured FAQPage schema addressing differences between the Monroe Doctrine and Roosevelt Corollary, and how customs receivership functioned in the Dominican Republic.",
+      "why": "Search engines parse question-and-answer pairs cleanly for generative AI overviews and conversational queries."
+     }
+    ],
+    "technical": [
+     {
+      "suggestion": "Change '# The Monroe Doctrine Reconsidered' from an H1 tag to an H2 tag, leaving only a single H1 on the page.",
+      "why": "The audit flagged multiple H1 tags; preserving a single top-level heading clarifies document structure for search crawlers."
+     },
+     {
+      "suggestion": "Add Article schema (specifically Article or ScholarlyArticle) and clean up mismatched local business schemas such as OpeningHoursSpecification on an educational history page.",
+      "why": "This is an informational history article, so Article structured data helps search engines classify the editorial content correctly."
+     }
+    ],
+    "needs_verification": [
+     "Verify the wording and context used to complete the truncated final sentence regarding 20th-century interventions."
+    ],
+    "checks": []
+   },
+   {
+    "page": "https://www.trlibrary.com/tr/family/fdr-connection",
+    "summary": "This page ranks on page one for high-volume family connection queries between TR and FDR, but it lacks a direct, concise answer box at the top and cuts off mid-sentence under the final heading.",
+    "title": {
+     "suggested": "Were FDR and Theodore Roosevelt Related? Family Connection",
+     "why": "Front-loads the exact question searchers ask most often while keeping TR and FDR visible in search results within 58 characters."
+    },
+    "meta_description": {
+     "suggested": "Theodore Roosevelt and FDR were fifth cousins, joined by Eleanor Roosevelt. See how the Oyster Bay and Hyde Park branches shaped two American presidents.",
+     "why": "Answers the core question immediately, mentions Eleanor Roosevelt, stays within the 120-155 character limit (154 characters), and gives a clear reason to click."
+    },
+    "content_additions": [
+     {
+      "for_query": "is fdr related to teddy roosevelt",
+      "suggestion": "Add a clear quick-answer callout box directly under the main title before diving into the ancestry narrative.",
+      "draft": "Theodore Roosevelt and Franklin Delano Roosevelt were fifth cousins, sharing a common ancestor in Nicholas Roosevelt. The connection became much closer on March 17, 1905, when Franklin married Theodore's niece, Eleanor Roosevelt, and President Theodore Roosevelt walked her down the aisle."
+     },
+     {
+      "for_query": "Which presidential libraries are worth visiting?",
+      "suggestion": "Add a closing section comparing the two presidential libraries and estates (Hyde Park and Medora) to help visitors planning presidential history trips.",
+      "draft": "Roosevelt family history spans from the Hudson Valley to the western frontier. Visitors can explore Franklin D. Roosevelt's home and library in Hyde Park, New York, and discover Theodore Roosevelt's story in Medora, North Dakota, where the rugged Badlands shaped his outlook. Plan about 3 1/2 hours to explore the Library in Medora."
+     }
+    ],
+    "ai_readiness": [
+     {
+      "suggestion": "Format the relationship breakdown as a concise Q&A block using structured heading tags (H2: 'How closely were Theodore and Franklin Roosevelt related?').",
+      "why": "AI answer engines look for clear, direct answers immediately following conversational question headers."
+     },
+     {
+      "suggestion": "Complete the truncated section '# Policy Parallels and Differences' that currently ends mid-sentence.",
+      "why": "Broken copy signals poor content quality to crawlers and causes AI summaries to cut off or hallucinate endings."
+     }
+    ],
+    "technical": [
+     {
+      "suggestion": "Add FAQPage structured data to the page containing the core questions: how TR and FDR were related, how Eleanor Roosevelt was related to both, and how the Oyster Bay and Hyde Park branches split.",
+      "why": "Matches search intent for the dozens of relationship queries and increases rich snippet eligibility on search engine result pages."
+     },
+     {
+      "suggestion": "Remove irrelevant global Schema types from this article page (such as OpeningHoursSpecification and PostalAddress, unless wrapped specifically in a publisher Organization entity).",
+      "why": "Keeps the page's primary schema clean and focused on Article and Person entities without confusing search crawlers."
+     }
+    ],
+    "needs_verification": [
+     "Verify whether the unfinished draft text under 'Policy Parallels and Differences' was published live by accident and locate the intended concluding sentences from approved text.",
+     "Check that Nicholas Roosevelt is verified as the shared ancestor six generations back before highlighting in a summary box."
+    ],
+    "checks": []
+   },
+   {
+    "page": "https://www.trlibrary.com/visit/directions",
+    "summary": "Expand the empty 'Getting Around Town' section and weave in driving routes from key road trip corridors like Mount Rushmore and I-94 while establishing the standard 3 1/2-hour visit duration.",
+    "title": {
+     "suggested": "Directions to Medora: Driving Routes & Airports",
+     "why": "Replaces the single-word title 'Directions' (which failed the 15-character minimum) with high-intent keywords that signal road routes and flight options before the automatic site suffix is added."
+    },
+    "meta_description": {
+     "suggested": "Plan your trip to Medora, North Dakota. Find driving routes off I-94, nearest airports, RV parks, and travel tips to map out your 3 1/2-hour visit.",
+     "why": "Keeps within the 120-155 character limit (147 characters), clarifies location, sets visit length expectations, and gives travelers clear reasons to click."
+    },
+    "content_additions": [
+     {
+      "for_query": "What are the best stops along I-94 in North Dakota?",
+      "suggestion": "Clarify how much time road-trippers along I-94 should budget when exiting into Medora.",
+      "draft": "Taking I-94 across North Dakota? Medora sits right along the interstate at Exits 24 and 27. Plan for at least 3 1/2 hours at the Library to explore the galleries, walk the rooftop paths, and take in views across the Badlands before heading back out."
+     },
+     {
+      "for_query": "We're driving from Mount Rushmore to Theodore Roosevelt National Park. What's worth stopping for?",
+      "suggestion": "Add route context under the US-85 driving directions for travelers connecting the Black Hills and Badlands.",
+      "draft": "Heading north from the Black Hills or Mount Rushmore? Follow US-85 north through western South Dakota straight toward I-94. Turn west onto I-94 at Belfield and take Exit 27 directly into Medora. Set aside at least 3 1/2 hours for your Library visit before heading into Theodore Roosevelt National Park."
+     },
+     {
+      "for_query": "Getting around Medora",
+      "suggestion": "Add copy below the empty '# Getting Around Town' heading to clarify navigation between Medora and the Library bluff.",
+      "draft": "Downtown Medora is compact and pedestrian-friendly, with shops, dining, and historic sites close together. The Library sits on the bluffs just above town. You can drive up Chateau Road to on-site vehicle and RV parking, or use the walking trails connecting the campus directly to the heart of Medora."
+     }
+    ],
+    "ai_readiness": [
+     {
+      "suggestion": "Add an FAQ section with schema markup covering airport distances, driving times, and visit durations.",
+      "why": "AI engines answering trip-planning questions pull heavily from structured Q&A pairs that state explicit drive times and typical visit durations."
+     },
+     {
+      "suggestion": "Populate the empty '# Getting Around Town' heading or remove it from the page DOM.",
+      "why": "Empty heading tags signal low-quality or incomplete content to search engine scrapers and conversational AI indexers."
+     }
+    ],
+    "technical": [
+     {
+      "suggestion": "Review and update the 'We have you covered with our on-site Tesla destination chargers' line under the EV section.",
+      "why": "Aligns on-page copy with the brand rule to minimize first-person pronouns ('we', 'our') while keeping charging specifications clear."
+     }
+    ],
+    "needs_verification": [
+     "Confirm whether walking trails directly connect downtown Medora to the Library campus on Chateau Road without requiring road walking."
+    ],
+    "checks": []
+   },
+   {
+    "page": "https://www.trlibrary.com/visit",
+    "summary": "Optimize the page to answer road-trip planning queries along I-94 and capture 'museum' searches by clearly outlining indoor galleries, visit duration, and highway access.",
+    "title": {
+     "suggested": "Plan Your Visit: Hours, Tickets & Directions",
+     "why": "Stays under 60 characters, puts the primary user actions first, and leaves room for the site-wide suffix."
+    },
+    "meta_description": {
+     "suggested": "Plan your visit to the Theodore Roosevelt Presidential Library in Medora, North Dakota. Reserve timed tickets, check hours, and map your Badlands trip.",
+     "why": "At 153 characters, this directly invites road-trippers and park visitors with a clear reason to click and reserve tickets in advance."
+    },
+    "content_additions": [
+     {
+      "for_query": "What are the best stops along I-94 in North Dakota?",
+      "suggestion": "Add a quick-reference highway banner under Directions highlighting the Library as a prime Interstate 94 travel stop between Bismarck and eastern Montana.",
+      "draft": "Just off Interstate 94 at Exit 24 or Exit 27, the Library is an easy stop whether you are crossing western North Dakota or touring the Badlands. Set aside about three and a half hours to explore the indoor galleries, plus extra time for the boardwalk loop."
+     },
+     {
+      "for_query": "What can we do indoors in Medora if the weather is bad?",
+      "suggestion": "Clarify within the Exhibits overview that the permanent exhibition is a full indoor experience suitable for any weather.",
+      "draft": "Rain, summer heat, or winter winds: the permanent exhibition offers a full indoor experience across eight narrative chapters. Plan for about three and a half hours inside the galleries before heading outdoors to the trails."
+     }
+    ],
+    "ai_readiness": [
+     {
+      "suggestion": "Add a structured 'At a Glance' bulleted section near the top summarizing: Location (Medora, ND off I-94), Time Needed (3 1/2 hours indoors, 1 hour outdoors), Setting (Badlands & restored prairie), and Ticket Requirements.",
+      "why": "AI engines pull structured key facts to answer itinerary questions such as driving stops between Mount Rushmore and Theodore Roosevelt National Park."
+     },
+     {
+      "suggestion": "Integrate natural language phrases for 'museum' into headings or body text (e.g., 'Museum Galleries & Exhibition Spaces').",
+      "why": "Search engines and AI answer engines field thousands of queries for 'Teddy Roosevelt museum' and 'museums in North Dakota' that may overlook a presidential library."
+     }
+    ],
+    "technical": [
+     {
+      "suggestion": "Repair the truncated sentence under Scenic Drives at the bottom of the page ('Wind through the Bad').",
+      "why": "Cut-off text looks unpolished to visitors and creates incomplete content blocks for search crawlers."
+     },
+     {
+      "suggestion": "Add TouristAttraction and Museum structured data types alongside the existing BreadcrumbList and OpeningHoursSpecification schema.",
+      "why": "Helps search engines classify the site as an open cultural attraction and museum, not solely a research library."
+     },
+     {
+      "suggestion": "Remove the specific calendar year from the David Hume Kennerly exhibition header to avoid stale copy once the exhibition cycle shifts.",
+      "why": "Aligns with the site rule against hardcoding calendar years into evergreen visitor copy."
+     }
+    ],
+    "needs_verification": [
+     "Check that the recommended driving routes from I-94 Exit 24 and Exit 27 direct travelers accurately to Chateau Road without seasonal road closures.",
+     "Confirm scheduling and display dates for the David Hume Kennerly photography exhibition before modifying the header text."
+    ],
+    "checks": []
+   },
+   {
+    "page": "https://www.trlibrary.com/visit/hours",
+    "summary": "The page title is critically short, and key practical details like the recommended 3 1/2-hour visit duration are missing alongside the 90-minute cutoff entry time.",
+    "title": {
+     "suggested": "Hours and Daily Schedule in Medora, ND",
+     "why": "Expands the 5-character title to include high-volume search terms ('hours', 'Medora, ND') while staying well under the 60-character limit."
+    },
+    "meta_description": {
+     "suggested": "Check seasonal opening hours for the Museum, store, and dining in Medora, North Dakota. Plan about 3 1/2 hours for your visit and book timed tickets.",
+     "why": "At 150 characters, this meets length requirements, states location, sets realistic visit expectations (3 1/2 hours), and provides a clear call to action."
+    },
+    "content_additions": [
+     {
+      "for_query": "theodore roosevelt presidential library tickets",
+      "suggestion": "Add recommended visit duration under the 'Additional Details' section directly above 'Last timed entry'.",
+      "draft": "Plan about 3 1/2 hours to take in the exhibits, store, and grounds. The last timed entry begins 90 minutes before closing."
+     },
+     {
+      "for_query": "What can we do indoors in Medora if the weather is bad?",
+      "suggestion": "Clarify indoor access under the 'Hours changes' or 'Additional Details' section so travelers looking for bad-weather activities see that the Museum galleries, restaurant, and shop operate indoors.",
+      "draft": "Looking for indoor activities in Medora during bad weather? The Museum galleries, Retail Store, and dining spaces operate year-round."
+     }
+    ],
+    "ai_readiness": [
+     {
+      "suggestion": "Format seasonal schedules into distinct HTML definition lists or clean markdown tables with specific opening and closing times for the Museum, Retail Store, and Salt + Scoria Restaurant.",
+      "why": "AI answer engines extracting direct answers for queries like 'Is the Roosevelt library open on Sundays?' parse explicit table or DL structures far more reliably than scattered headings."
+     }
+    ],
+    "technical": [
+     {
+      "suggestion": "Populate the OpeningHoursSpecification schema with distinct opens/closes times and valid dayOfWeek values for each sub-facility (Museum, Retail Store, Salt + Scoria Restaurant).",
+      "why": "Search engines require granular OpeningHoursSpecification properties to display the 'Open now' badge and real-time operational status in search results."
+     }
+    ],
+    "needs_verification": [
+     "Verify whether the 3 1/2-hour recommended visit length should be highlighted alongside ticketing guidelines on this page.",
+     "Verify whether the Retail Store and Salt + Scoria Restaurant share identical operating hours with the main Museum during all seasons."
+    ],
+    "checks": []
+   }
+  ]
+ },
+ "raw_files": {
+  "https://seo.labs.trlibrary.com/data/status.json": "Which data sources are on, last run time, errors",
+  "https://seo.labs.trlibrary.com/data/gsc/summary.json": "Search Console totals, last 28 days vs prior 28",
+  "https://seo.labs.trlibrary.com/data/gsc/daily.json": "Clicks/impressions/CTR/position per day (~16 months)",
+  "https://seo.labs.trlibrary.com/data/gsc/queries.json": "Every search query (last 28 days) with prior-period clicks",
+  "https://seo.labs.trlibrary.com/data/gsc/pages.json": "Every page with search traffic (last 28 days)",
+  "https://seo.labs.trlibrary.com/data/gsc/query_pages.json": "Query x page pairs, top 10,000 by impressions",
+  "https://seo.labs.trlibrary.com/data/opportunities.json": "Ranked opportunity lists (striking distance, low CTR, missing-in-title, declining, cannibalization)",
+  "https://seo.labs.trlibrary.com/data/ranks/latest.json": "Tracked keywords: Search Console position, live Google rank, AI Overview presence",
+  "https://seo.labs.trlibrary.com/data/ai/latest.json": "Full AI-assistant answers to the weekly travel/history questions, with citations",
+  "https://seo.labs.trlibrary.com/data/ai/history.json": "Weekly AI mention and citation rates",
+  "https://seo.labs.trlibrary.com/data/audit/summary.json": "Site audit: health score, issue counts, robots.txt AI-crawler access, structured data",
+  "https://seo.labs.trlibrary.com/data/audit/pages.json": "Per-page audit: title, meta, H1, canonical, OG tags, word count, issues",
+  "https://seo.labs.trlibrary.com/data/tips.json": "AI-drafted page recommendations and the AI-visibility brief"
+ }
+}

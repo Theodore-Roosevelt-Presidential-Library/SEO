@@ -1,9 +1,23 @@
 {
- "updated": "2026-10-20T04:42:58+00:00",
+ "updated": "2026-10-20T05:22:20+00:00",
  "providers": {
+  "openai": {
+   "label": "ChatGPT",
+   "model": "gpt-5-mini",
+   "n": 15,
+   "mention_rate": 0.667,
+   "cite_rate": 0.6
+  },
   "gemini": {
    "label": "Gemini",
    "model": "gemini-3.8-flash",
+   "n": 13,
+   "mention_rate": 0.462,
+   "cite_rate": 0.231
+  },
+  "perplexity": {
+   "label": "Perplexity",
+   "model": "sonar",
    "n": 0,
    "mention_rate": null,
    "cite_rate": null
@@ -89,6 +103,494 @@
  "results": [
   {
    "prompt_id": "trnp-what-to-see",
+   "provider": "openai",
+   "model": "gpt-5-mini",
+   "mentioned": true,
+   "cited_us": true,
+   "position": 4,
+   "peers": [
+    "Chateau de Mores",
+    "Medora Musical",
+    "Painted Canyon",
+    "Maltese Cross Cabin",
+    "Elkhorn Ranch",
+    "Maah Daah Hey Trail"
+   ],
+   "excerpt": "([trlibrary.com](https://www.trlibrary.com/visit/national-park/geology?utm_source=openai)) … ([trlibrary.com](https://www.trlibrary.com/visit/itineraries/enchanted-highway?utm_source=openai))",
+   "cited_domains": [
+    "home.nps.gov",
+    "nps.gov",
+    "trlibrary.com",
+    "visitwatfordcity.com",
+    "visitawatfordcity.com",
+    "gofossilhunting.com"
+   ],
+   "citations": [
+    "https://home.nps.gov/thro/planyourvisit/south-unit.htm?utm_source=openai",
+    "https://www.nps.gov/thro/planyourvisit/things2do.htm?utm_source=openai",
+    "https://www.trlibrary.com/visit/national-park/geology?utm_source=openai",
+    "https://home.nps.gov/places/maltese-cross-cabin.htm?utm_source=openai",
+    "https://www.visitwatfordcity.com/DiscoverItem/Outdoor-Recreation/Maah-Daah-Hey-Trail?utm_source=openai",
+    "https://www.visitawatfordcity.com/DiscoverItem/Featured-Attractions/Theodore-Roosevelt-National-Park-North-Unit?utm_source=openai",
+    "https://home.nps.gov/fous/planyourvisit/directions.htm?utm_source=openai",
+    "https://www.trlibrary.com/visit/itineraries/enchanted-highway?utm_source=openai",
+    "https://www.trlibrary.com/visit/scenic-drives?utm_source=openai",
+    "https://www.nps.gov/thro/planyourvisit/things2do.htm?utm_source=openai",
+    "https://gofossilhunting.com/sites/petrified-forest-plateau-theodore-roosevelt-national-park-north-dakota?utm_source=openai"
+   ],
+   "text": "Great — I can make a short list and a few itinerary options, but first: are you visiting the South Unit (Medora area) or the North Unit (near Watford City)? And how much time do you have (a few hours, a day, or multiple days)?  \n\nMeanwhile, here are top nearby things to consider (with approximate drive times from Medora unless noted):\n\n- Medora town (gateway to the South Unit) — restaurants, lodging, the Chateau de Mores historic site, gift shops and the seasonal Medora Musical (big evening show in summer). Medora is right at the South Unit entrance. ([home.nps.gov](https://home.nps.gov/thro/planyourvisit/south-unit.htm?utm_source=openai))\n\n- South Unit scenic drive + Painted Canyon Overlook — the Scenic Loop Drive and Painted Canyon rest area give classic badlands views and easy pullouts for photos and short walks. Great for a half‑day. ([nps.gov](https://www.nps.gov/thro/planyourvisit/things2do.htm?utm_source=openai))\n\n- Petrified Forest (Petrified Forest Plateau and trails) — accessible by park and ranch/forest roads; a longer dirt‑road drive or hike to see abundant upright petrified wood (don’t collect anything). Plan ~45–60 minutes driving on ranch/gravel roads from Medora for the loop approach. ([trlibrary.com](https://www.trlibrary.com/visit/national-park/geology?utm_source=openai))\n\n- Maltese Cross Cabin and Elkhorn Ranch (Roosevelt history) — the Maltese Cross cabin is displayed near the South Unit visitor area; the Elkhorn Ranch historic site is a remote TR site ~35 miles north of Medora (gravel roads). Good if you like presidential history and solitude. ([home.nps.gov](https://home.nps.gov/places/maltese-cross-cabin.htm?utm_source=openai))\n\n- Maah Daah Hey Trail / Little Missouri National Grasslands — world‑class long‑distance trail that links parts of the badlands and both park units (hiking, multi‑day backpacking, horseback). If you want a serious day hike or mountain‑bike access points nearby, this is it. ([visitwatfordcity.com](https://www.visitwatfordcity.com/DiscoverItem/Outdoor-Recreation/Maah-Daah-Hey-Trail?utm_source=openai))\n\n- North Unit (near Watford City) — different feel: expansive overlooks, good wildlife viewing (bison, elk, prairie dogs) and fewer visitors; about an hour+ drive north of Medora (depending on route). ([visitawatfordcity.com](https://www.visitawatfordcity.com/DiscoverItem/Featured-Attractions/Theodore-Roosevelt-National-Park-North-Unit?utm_source=openai))\n\n- Fort Union Trading Post NHS (fur‑trade history on the Missouri) — a reconstructed 19th‑century fur trading post on the Missouri River; it's a long day trip from Medora (roughly 2 hours+ each way), but worthwhile if you’re into frontier history. ([home.nps.gov](https://home.nps.gov/fous/planyourvisit/directions.htm?utm_source=openai))\n\n- Enchanted Highway (Regent) — 30–32 mile stretch of giant roadside scrap‑metal sculptures; an easy and quirky detour if you’re driving east on I‑94 toward Dickinson or Bismarck. Expect a 1–1.5 hour detour depending on how far you drive. ([trlibrary.com](https://www.trlibrary.com/visit/itineraries/enchanted-highway?utm_source=openai))\n\nQuick practical tips\n- Cell service is spotty; save maps offline and carry water/food for longer drives. ([trlibrary.com](https://www.trlibrary.com/visit/scenic-drives?utm_source=openai))  \n- Don’t approach bison or wildlife; stay safe and keep distance. (NPS park guidance.) ([nps.gov](https://www.nps.gov/thro/planyourvisit/things2do.htm?utm_source=openai))  \n- Fossils/petrified wood and other natural objects are protected — do not remove them. ([gofossilhunting.com](https://gofossilhunting.com/sites/petrified-forest-plateau-theodore-roosevelt-national-park-north-dakota?utm_source=openai))\n\nIf you tell me: (1) which unit you’ll be at, (2) how long you have, and (3) whether you prefer hiking, scenic drives, or history/food, I’ll draft a 1‑day or 2‑day plan with driving times and one or two route options."
+  },
+  {
+   "prompt_id": "medora-things-to-do",
+   "provider": "openai",
+   "model": "gpt-5-mini",
+   "mentioned": true,
+   "cited_us": true,
+   "position": 3,
+   "peers": [
+    "Medora Musical",
+    "Theodore Roosevelt National Park",
+    "Chateau de Mores",
+    "Maah Daah Hey Trail",
+    "North Dakota Cowboy Hall of Fame"
+   ],
+   "excerpt": "3) Visit the new Theodore Roosevelt Presidential Library (opened July 4, 2026) — museum exhibits and programs about TR and the Badlands. … ([trlibrary.com](https://www.trlibrary.com/about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026?utm_source=openai))",
+   "cited_domains": [
+    "medora.com",
+    "nps.gov",
+    "trlibrary.com",
+    "history.nd.gov",
+    "ndtourism.com",
+    "northdakotacowboy.org",
+    "home.nps.gov",
+    "mdhta.com"
+   ],
+   "citations": [
+    "https://medora.com/medoramusical/?utm_source=openai",
+    "https://www.nps.gov/thro/planyourvisit/things2do.htm?utm_source=openai",
+    "https://www.trlibrary.com/about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026?utm_source=openai",
+    "https://www.history.nd.gov/historicsites/chateau/chateauhistory.html?utm_source=openai",
+    "https://www.ndtourism.com/articles/maah-daah-hey-trail?utm_source=openai",
+    "https://northdakotacowboy.org/?utm_source=openai",
+    "https://medora.com/bullypulpit/?utm_source=openai",
+    "https://www.ndtourism.com/medora/attractions-entertainment/family-fun/rough-rider-state-park?utm_source=openai",
+    "https://www.ndtourism.com/medora/attractions-entertainment/educational-attractions/harold-schafer-heritage-center?utm_source=openai",
+    "https://medora.com/medoramusical/?utm_source=openai",
+    "https://medora.com/medoramusical/?utm_source=openai",
+    "https://home.nps.gov/yell/planyourvisit/safety.htm?utm_source=openai",
+    "https://www.nps.gov/thro/planyourvisit/north-unit.htm/index.htm?utm_source=openai",
+    "https://www.nps.gov/thro/planyourvisit/things2do.htm?utm_source=openai",
+    "https://www.nps.gov/thro/planyourvisit/things2do.htm?utm_source=openai",
+    "https://mdhta.com/about/?utm_source=openai"
+   ],
+   "text": "Great choice — Medora is a small town with big Badlands scenery and a surprising number of things to do. Below are the top experiences, quick practical tips, and a short sample itinerary.\n\nTop things to do in/near Medora\n1) See the Medora Musical at the Burning Hills Amphitheatre — the town’s signature nightly outdoor show (summer season, family-friendly; tickets should be booked early). ([medora.com](https://medora.com/medoramusical/?utm_source=openai))\n\n2) Drive and hike in Theodore Roosevelt National Park (South Unit, right by Medora) — scenic loop drives, overlooks, short hikes, and excellent wildlife viewing (bison, elk, prairie dogs, wild horses). Plan extra time for the South Unit Scenic Loop and early-morning/late-afternoon wildlife viewing. ([nps.gov](https://www.nps.gov/thro/planyourvisit/things2do.htm?utm_source=openai))\n\n3) Visit the new Theodore Roosevelt Presidential Library (opened July 4, 2026) — museum exhibits and programs about TR and the Badlands. ([trlibrary.com](https://www.trlibrary.com/about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026?utm_source=openai))\n\n4) Walk through the Chateau de Mores State Historic Site — the restored 1883 summer home of the Marquis de Mores and an easy step into Medora’s history. Guided tours are available in season. ([history.nd.gov](https://www.history.nd.gov/historicsites/chateau/chateauhistory.html?utm_source=openai))\n\n5) Explore the Maah Daah Hey Trail — world-class multi‑day/section hiking, mountain biking, and horseback trail access that passes near Medora (choose short day sections if you don’t have time for a thru-hike). ([ndtourism.com](https://www.ndtourism.com/articles/maah-daah-hey-trail?utm_source=openai))\n\n6) Stop in the North Dakota Cowboy Hall of Fame & Center of Western Heritage — interactive exhibits on ranching, rodeo, Native American and Plains culture. ([northdakotacowboy.org](https://northdakotacowboy.org/?utm_source=openai))\n\n7) Play Bully Pulpit Golf Course — a highly regarded 18‑hole course set in the Badlands (book tee times well in advance in high season). ([medora.com](https://medora.com/bullypulpit/?utm_source=openai))\n\n8) Camp, canoe or ride at Rough Rider State Park (formerly Sully Creek) and along the Little Missouri River — good for camping, paddling (spring/fall), equestrian access, and a convenient base for exploring the area. ([ndtourism.com](https://www.ndtourism.com/medora/attractions-entertainment/family-fun/rough-rider-state-park?utm_source=openai))\n\n9) Museums & small-town experiences — Harold Schafer Heritage Center, Billings County Courthouse Museum, historic walking tours, local shops and restaurants in Medora’s compact downtown. ([ndtourism.com](https://www.ndtourism.com/medora/attractions-entertainment/educational-attractions/harold-schafer-heritage-center?utm_source=openai))\n\n10) Guided activities & tours — horseback rides, guided badlands rides, wagon/behind-the-scenes tours of the amphitheatre, and seasonal special events (check local schedules). ([medora.com](https://medora.com/medoramusical/?utm_source=openai))\n\nPractical tips\n- Best season: late May–early October for most attractions (Medora Musical runs in summer). Book Medora Musical tickets, tee times, and guided tours early in summer. ([medora.com](https://medora.com/medoramusical/?utm_source=openai))  \n- Wildlife safety: in NPS areas keep your distance (rule of thumb used across parks: ~25 yards from most wildlife, 100 yards for bears/wolves); use binoculars/telephoto lenses and never feed animals. ([home.nps.gov](https://home.nps.gov/yell/planyourvisit/safety.htm?utm_source=openai))  \n- Water & sun: hikes in the Badlands are exposed — bring plenty of water, sun protection, and good shoes. Cell service can be limited inside the park. ([nps.gov](https://www.nps.gov/thro/planyourvisit/north-unit.htm/index.htm?utm_source=openai))  \n- How much time: allow at least a half‑day for the South Unit scenic loop + overlooks, a night for the Medora Musical, and extra days for hiking the Maah Daah Hey or visiting the Presidential Library/museums. ([nps.gov](https://www.nps.gov/thro/planyourvisit/things2do.htm?utm_source=openai))\n\nSample short itineraries\n- One day: South Unit Scenic Loop & overlooks (morning), Chateau de Mores + Cowboy Hall of Fame (afternoon), Medora Musical (evening). ([nps.gov](https://www.nps.gov/thro/planyourvisit/things2do.htm?utm_source=openai))  \n- Two days: Day 1 as above. Day 2: Maah Daah Hey short section or Rough Rider State Park (canoe/horse ride) + visit Theodore Roosevelt Presidential Library. ([mdhta.com](https://mdhta.com/about/?utm_source=openai))\n\nWant more specific planning?\nIf you tell me when you’ll be visiting (dates or month), whether you want hiking vs. sightseeing vs. cultural activities, and whether you’re driving or flying in, I can give a tailored 1–3 day itinerary, bookable suggestions (what to reserve first), and weather/packing tips."
+  },
+  {
+   "prompt_id": "nd-road-trip",
+   "provider": "openai",
+   "model": "gpt-5-mini",
+   "mentioned": true,
+   "cited_us": true,
+   "position": 4,
+   "peers": [
+    "Theodore Roosevelt National Park",
+    "Medora Musical",
+    "Maah Daah Hey Trail",
+    "Painted Canyon",
+    "Maltese Cross Cabin",
+    "Chateau de Mores",
+    "Elkhorn Ranch"
+   ],
+   "excerpt": "- The new Theodore Roosevelt Presidential Library (on a butte above Medora) opened in 2026 and is a major draw; plan ~3–4 hours for a visit and buy timed tickets in summer. … ([trlibrary.com](https://www.trlibrary.com/visit?utm_source=openai))",
+   "cited_domains": [
+    "nps.gov",
+    "trlibrary.com",
+    "home.nps.gov",
+    "ndtourism.com",
+    "medora.com",
+    "watfordcityrvpark.com",
+    "visitwatfordcity.com",
+    "en.wikipedia.org"
+   ],
+   "citations": [
+    "https://www.nps.gov/npgallery/GetAsset/257b1284-d776-43d5-9a8f-863023a2e520?utm_source=openai",
+    "https://www.trlibrary.com/visit?utm_source=openai",
+    "https://home.nps.gov/thro/planyourvisit/fees.htm?utm_source=openai",
+    "https://www.ndtourism.com/medora/nature-outdoor-activities/national-state-parks/theodore-roosevelt-national-park-painted-canyon-visitor-center?utm_source=openai",
+    "https://www.nps.gov/thro/planyourvisit/south-unit.htm?utm_source=openai",
+    "https://www.trlibrary.com/visit?utm_source=openai",
+    "https://medora.com/entertainment/?utm_source=openai",
+    "https://www.nps.gov/npgallery/GetAsset/257b1284-d776-43d5-9a8f-863023a2e520?utm_source=openai",
+    "https://watfordcityrvpark.com/maah-daah-hey-trail-day-trip-watford-city/?utm_source=openai",
+    "https://www.visitwatfordcity.com/usrfiles/MCT-Visitors-Guide-2025.pdf?utm_source=openai",
+    "https://www.nps.gov/places/fort-union-trading-post-national-historic-site.htm?utm_source=openai",
+    "https://www.ndtourism.com/regent/attractions/enchanted-highway?utm_source=openai",
+    "https://www.nps.gov/npgallery/GetAsset/257b1284-d776-43d5-9a8f-863023a2e520?utm_source=openai",
+    "https://www.nps.gov/thro/planyourvisit/south-unit.htm?utm_source=openai",
+    "https://www.trlibrary.com/visit?utm_source=openai",
+    "https://en.wikipedia.org/wiki/Maah_Daah_Hey_Trail?utm_source=openai",
+    "https://www.nps.gov/places/fort-union-trading-post-national-historic-site.htm?utm_source=openai",
+    "https://en.wikipedia.org/wiki/Enchanted_Highway?utm_source=openai",
+    "https://medora.com/entertainment/?utm_source=openai",
+    "https://www.nps.gov/thro/planyourvisit/south-unit.htm?utm_source=openai"
+   ],
+   "text": "Nice — here’s a compact, ready-to-use 3‑day road‑trip through western North Dakota with the must‑see stops, driving times/distances, and practical tips so you can pick the route that fits your interests.\n\nSummary map (suggested base towns)\n- Primary base: Medora (great for South Unit TRNP, museum, restaurants, Medora Musical).  \n- Alternate/second-night base if you want to focus north: Watford City (closest town to TRNP North Unit / Maah Daah Hey trailheads).  \n- Optional day‑trip: Williston / Fort Union area or the Enchanted Highway (Regent) as a detour.  \n\nKey things to know up front\n- Theodore Roosevelt National Park is split into distinct units (South Unit near Medora, North Unit near Watford City); the drive between the two units is roughly 68 miles by road. Plan at least one full day for each unit if you want to see highlights. ([nps.gov](https://www.nps.gov/npgallery/GetAsset/257b1284-d776-43d5-9a8f-863023a2e520?utm_source=openai))  \n- The new Theodore Roosevelt Presidential Library (on a butte above Medora) opened in 2026 and is a major draw; plan ~3–4 hours for a visit and buy timed tickets in summer. ([trlibrary.com](https://www.trlibrary.com/visit?utm_source=openai))  \n- Park entrance: Theodore Roosevelt NP charges an entrance fee (vehicle pass; check NPS for current rate before travel). Fort Union Trading Post NHS is free to enter. ([home.nps.gov](https://home.nps.gov/thro/planyourvisit/fees.htm?utm_source=openai))\n\n3‑Day Itinerary (driving times are approximate, from Medora unless noted)\n\nDay 1 — Medora + TRNP South Unit (easy day to get oriented)\n- Morning: Painted Canyon Visitor Center / overlook (I‑94 Exit 32) — iconic panoramic badlands views and short trails; quick stop on your way into Medora. (about 7 miles east of Medora). ([ndtourism.com](https://www.ndtourism.com/medora/nature-outdoor-activities/national-state-parks/theodore-roosevelt-national-park-painted-canyon-visitor-center?utm_source=openai))  \n- Late morning → afternoon: Drive the South Unit scenic loop (start at the South Unit Visitor Center in/just behind Medora). Highlights: Maltese Cross Cabin, Boicourt Overlook, prairie dog towns, Wind Canyon/Buck Hill walks and wildlife viewing (bison, wild horses). The South Unit scenic loop is paved and popular for short hikes and overlooks. Allow 3–4 hours if you want easy hikes and wildlife viewing. ([nps.gov](https://www.nps.gov/thro/planyourvisit/south-unit.htm?utm_source=openai))  \n- Late afternoon: Theodore Roosevelt Presidential Library (timed tickets recommended — plan 3–4 hours total if you want exhibits + boardwalk). ([trlibrary.com](https://www.trlibrary.com/visit?utm_source=openai))  \n- Evening: Medora Musical at Burning Hills Amphitheatre (seasonal; big summer draw) or dinner + stroll downtown Medora (Chateau de Mores historic site if time). ([medora.com](https://medora.com/entertainment/?utm_source=openai))  \nWhere to sleep: Medora (Roughriders Hotel, Hotel 1883, Badlands Motel or nearby lodges).\n\nDay 2 — TRNP North Unit (Watford City area) — quieter, rugged badlands\n- Drive from Medora to the North Unit / Watford City area (Medora ↔ North Unit is roughly 68–83 miles depending on route; expect ~1–1.5 hours of driving). Do the 14‑mile North Unit scenic drive to Oxbow Overlook — excellent, quieter rim views and short trail options (Caprock Coulee, Riverbend, cannonball concretions). Watch for bison and other wildlife along the road. ([nps.gov](https://www.nps.gov/npgallery/GetAsset/257b1284-d776-43d5-9a8f-863023a2e520?utm_source=openai))  \n- If you’re into hiking, hit a Maah Daah Hey trailhead (the trail threads the Badlands between North & South units). The CCC Campground / northern trailhead is the most convenient from Watford City; trail sections make great half‑day hikes or mountain‑bike legs. ([watfordcityrvpark.com](https://watfordcityrvpark.com/maah-daah-hey-trail-day-trip-watford-city/?utm_source=openai))  \n- Afternoon/evening: Explore Watford City – Long X (visitor center/merc & art gallery), local cafes, or a short drive to other overlooks. Sleep in Watford City if you prefer shorter drives. ([visitwatfordcity.com](https://www.visitwatfordcity.com/usrfiles/MCT-Visitors-Guide-2025.pdf?utm_source=openai))\n\nDay 3 — Pick one (history, quirky art, or extra park time)\nOption A — Fort Union / Williston (history, rivers)\n- Drive north to Fort Union Trading Post NHS and the Missouri‑Yellowstone Confluence Interpretive Center near Williston. Fort Union is a rebuilt fur‑trade post with interpretive exhibits; the Confluence Center covers Lewis & Clark and river history. Fort Union is fee‑free; the Confluence Center may have a small admission. (Medora → Williston ≈ 125–130 miles / ~2 hours driving one way; adjust based on where you slept). ([nps.gov](https://www.nps.gov/places/fort-union-trading-post-national-historic-site.htm?utm_source=openai))\n\nOption B — Enchanted Highway + Regent (quirky roadside art)\n- From I‑94 take Exit 72 (Gladstone) south along the Enchanted Highway (about 32 miles of monumental scrap‑metal sculptures ending at Regent). Great half‑day detour if you enjoy road‑art, photo stops and a slower rural vibe. It’s a flat, paved county road with pullouts at each sculpture. (Good if returning east on I‑94 / coming from Dickinson). ([ndtourism.com](https://www.ndtourism.com/regent/attractions/enchanted-highway?utm_source=openai))\n\nOption C — Extra TRNP time / Elkhorn Ranch or longer Maah Daah Hey section\n- If you skipped anything earlier or want backcountry peace, use day 3 for a deeper trail section, the Elkhorn Ranch area (historical site where TR grieved and worked), or a longer Maah Daah Hey stretch. Note some roads to Elkhorn and other remote areas are gravel and can be rough. ([nps.gov](https://www.nps.gov/npgallery/GetAsset/257b1284-d776-43d5-9a8f-863023a2e520?utm_source=openai))\n\nMust‑see checklist (quick)\n- Theodore Roosevelt National Park — South Unit scenic loop, Painted Canyon overlook, Maltese Cross Cabin; North Unit scenic drive t"
+  },
+  {
+   "prompt_id": "rushmore-to-trnp",
+   "provider": "openai",
+   "model": "gpt-5-mini",
+   "mentioned": true,
+   "cited_us": false,
+   "position": 6,
+   "peers": [
+    "Mount Rushmore",
+    "Theodore Roosevelt National Park",
+    "Painted Canyon",
+    "Chateau de Mores",
+    "Medora Musical"
+   ],
+   "excerpt": "8) Medora / TRNP South Unit area — if you’re going to the South Unit, Medora is the gateway town: the South Unit scenic loop (Wind Canyon, Boicourt Overlook), Chateau de Mores historic site, the Burning Hills Amphitheater (Medora Musical in summer), and the new Theodore Roosevelt Presidential Library in Medora (opened July 4, 2026).",
+   "cited_domains": [
+    "travelsouthdakota.com",
+    "crazyhorsememorial.org",
+    "home.nps.gov",
+    "nps.gov",
+    "walldrug.com",
+    "traveldatalab.com"
+   ],
+   "citations": [
+    "https://www.travelsouthdakota.com/state-park/things-to-do/scenic-drives/needles-highway-explore-natural-wonder-custer-state-park?utm_source=openai",
+    "https://crazyhorsememorial.org/getting-to-crazy-horse-memorial?utm_source=openai",
+    "https://home.nps.gov/jeca/planyourvisit/basicinfo.htm?utm_source=openai",
+    "https://www.nps.gov/badl/planyourvisit/accessible-brochures.htm?utm_source=openai",
+    "https://home.nps.gov/mimi/planyourvisit/index.htm?utm_source=openai",
+    "https://www.walldrug.com/about-us/?utm_source=openai",
+    "https://www.nps.gov/thro/planyourvisit/park-brochure-formats.htm?utm_source=openai",
+    "https://www.nps.gov/thro/planyourvisit/south-unit.htm?utm_source=openai",
+    "https://home.nps.gov/thro/planyourvisit/basicinfo.htm?utm_source=openai",
+    "https://home.nps.gov/wica/planyourvisit/guidedtours.htm?utm_source=openai",
+    "https://www.traveldatalab.com/guides/badlands?utm_source=openai",
+    "https://www.nps.gov/thingstodo/pick-your-park-adventure.htm?utm_source=openai"
+   ],
+   "text": "Great route — there are a lot of high‑value stops between Mount Rushmore (Keystone) and Theodore Roosevelt National Park. Before I give a tailored plan: do you have a target arrival time at TRNP (same day vs. next day), and which unit are you headed to — the South Unit (Medora) or the North Unit (near Watford City)? Those change which detours make sense.\n\nMeanwhile, here are the best stops (in roughly the order you’d hit them leaving Mount Rushmore) with why they’re worth it and rough stop times.\n\n1) Custer State Park — Needles Highway & Sylvan Lake (scenic drives, granite spires, chances to see bison and other wildlife). Good for a 1–3 hour scenic loop, short hikes, or picnic. ([travelsouthdakota.com](https://www.travelsouthdakota.com/state-park/things-to-do/scenic-drives/needles-highway-explore-natural-wonder-custer-state-park?utm_source=openai))\n\n2) Crazy Horse Memorial — massive ongoing mountain carving and cultural center; quick photo stop or longer visit to the museum & overlook (30–90 min). ([crazyhorsememorial.org](https://crazyhorsememorial.org/getting-to-crazy-horse-memorial?utm_source=openai))\n\n3) Jewel Cave National Monument or Wind Cave National Park — both are close to Custer and offer cave tours (if open/running) plus surface hikes/wildlife viewing; pick the cave that fits your time and tour availability (allow 1–2 hours for a cave tour + visitor center). ([home.nps.gov](https://home.nps.gov/jeca/planyourvisit/basicinfo.htm?utm_source=openai))\n\n4) Badlands National Park — dramatic badlands scenery, the Badlands Loop Road (Scenic Hwy 240), boardwalk trails (Door, Window, Fossil Exhibit), and Sage Creek prairie for wildlife glimpses. Plan 2–4 hours for a meaningful stop (sunrise/sunset are spectacular). ([nps.gov](https://www.nps.gov/badl/planyourvisit/accessible-brochures.htm?utm_source=openai))\n\n5) Minuteman Missile National Historic Site — excellent Cold War visitor center and (by reservation) tours of a launch control or silo site; a short, fascinating history stop just off I‑90 near the Badlands. Tours can require planning, so check hours/reservations. ([home.nps.gov](https://home.nps.gov/mimi/planyourvisit/index.htm?utm_source=openai))\n\n6) Wall, SD / Wall Drug — classic roadside stop: quirky shops, food, photo ops (and it’s right by the Badlands exits), good place for gas/food/rest. ([walldrug.com](https://www.walldrug.com/about-us/?utm_source=openai))\n\n7) Painted Canyon Visitor Center (on I‑94) — a free, easy overlook and visitor stop that gives you an immediate preview of the TRNP South Unit before you get to Medora. Quick 15–30 minute stop. ([nps.gov](https://www.nps.gov/thro/planyourvisit/park-brochure-formats.htm?utm_source=openai))\n\n8) Medora / TRNP South Unit area — if you’re going to the South Unit, Medora is the gateway town: the South Unit scenic loop (Wind Canyon, Boicourt Overlook), Chateau de Mores historic site, the Burning Hills Amphitheater (Medora Musical in summer), and the new Theodore Roosevelt Presidential Library in Medora (opened July 4, 2026). Allow at least a half‑day in the park (more if you want hikes or the museum). ([nps.gov](https://www.nps.gov/thro/planyourvisit/south-unit.htm?utm_source=openai))\n\n9) If you’re headed to the North Unit (Watford City) instead — the North Unit is more remote and quieter, with great River Bend and Oxbow overlooks and longer backcountry options; it’s a separate drive from the South Unit (don’t expect to drive between them quickly). ([home.nps.gov](https://home.nps.gov/thro/planyourvisit/basicinfo.htm?utm_source=openai))\n\nQuick practical tips\n- Tours and visitor center hours (caves, Minuteman tours, some TRNP facilities) are seasonal and can require reservations — check ahead. ([home.nps.gov](https://home.nps.gov/wica/planyourvisit/guidedtours.htm?utm_source=openai))  \n- Fuel and services are limited east of the Badlands and in western ND — Wall and Medora are good refuel/food spots. ([traveldatalab.com](https://www.traveldatalab.com/guides/badlands?utm_source=openai))  \n- If you have only a day, prioritize Badlands + Painted Canyon/Medora (South Unit). If you have 2+ days, add Custer/Norbeck/Wind or Jewel Cave and the Minuteman site. ([nps.gov](https://www.nps.gov/thingstodo/pick-your-park-adventure.htm?utm_source=openai))\n\nIf you tell me: (A) which TRNP unit you’re going to, and (B) how much time you have (hours/days), I’ll make a detailed driving itinerary with time estimates and one or two \"must not miss\" stops based on your interests (hiking/wildlife/history/quirky roadside)."
+  },
+  {
+   "prompt_id": "i94-stops",
+   "provider": "openai",
+   "model": "gpt-5-mini",
+   "mentioned": false,
+   "cited_us": false,
+   "position": null,
+   "peers": [
+    "Theodore Roosevelt National Park",
+    "Painted Canyon",
+    "Chateau de Mores",
+    "Medora Musical"
+   ],
+   "excerpt": "",
+   "cited_domains": [
+    "home.nps.gov",
+    "ndtourism.com",
+    "dickinsongov.com",
+    "roadsideamerica.com",
+    "parkrec.nd.gov",
+    "google.com",
+    "en.wikipedia.org",
+    "kiwi.itspektar.net",
+    "exploreminnesota.com"
+   ],
+   "citations": [
+    "https://home.nps.gov/thro/planyourvisit/car.htm?utm_source=openai",
+    "https://www.ndtourism.com/best-places/interstate-94-tour?utm_source=openai",
+    "https://www.ndtourism.com/regent/attractions/enchanted-highway?utm_source=openai",
+    "https://www.dickinsongov.com/museum-center/page/visit-us?utm_source=openai",
+    "https://www.roadsideamerica.com/tip/2788?utm_source=openai",
+    "https://www.parkrec.nd.gov/fort-abraham-lincoln-state-park-features?utm_source=openai",
+    "https://www.google.com/travel/hotels/entity/ChgI3_q60-DPusFYGgwvZy8xaGMyamI4MjYQAQ/prices?ts=CAEaBAoCGgAqBAoAGgA&utm_source=openai",
+    "https://en.wikipedia.org/wiki/Interstate_94?utm_source=openai",
+    "https://kiwi.itspektar.net/content/wikipedia_en_all_maxi/A/Interstate_94_in_North_Dakota?utm_source=openai",
+    "https://www.exploreminnesota.com/sites/default/files/2025-06/25-itinerary-booklet_8.5x11-final-digital-060225.pdf?utm_source=openai",
+    "https://home.nps.gov/thro/planyourvisit/car.htm?utm_source=openai",
+    "https://home.nps.gov/thro/planyourvisit/car.htm?utm_source=openai",
+    "https://en.wikipedia.org/wiki/Theodore_Roosevelt_National_Park?utm_source=openai"
+   ],
+   "text": "Nice question — I-94 across North Dakota has some great, very different stops (badlands, giant roadside sculptures, state museums, small‑town western charm). Below are the best / most‑popular stops listed roughly west → east, with a short note, the exit or place to look for, and a quick tip for each.\n\n1) Theodore Roosevelt National Park (South Unit) — Painted Canyon overlook / visitor center (Medora)\n   - Why: classic Badlands scenery, short hikes, scenic drive and a free rest area/overlook right off I‑94. Great at sunrise/sunset. ([home.nps.gov](https://home.nps.gov/thro/planyourvisit/car.htm?utm_source=openai))\n\n2) Medora town & Chateau de Mores / nightly musical (seasonal)\n   - Why: historic frontier town with restaurants, the Chateau de Mores, and the Medora Musical in summer — a fun western small‑town stop a few minutes from I‑94. ([ndtourism.com](https://www.ndtourism.com/best-places/interstate-94-tour?utm_source=openai))\n\n3) Enchanted Highway (Gladstone → Regent)\n   - Why: giant scrap‑metal sculptures visible from I‑94 at Exit 72 (Gladstone). A fun 30–40 mile detour south to see the giant pieces and pullouts. Allow 1–2 hours (longer if you stop often). ([ndtourism.com](https://www.ndtourism.com/regent/attractions/enchanted-highway?utm_source=openai))\n\n4) Dickinson — Dickinson Museum Center / Badlands Dinosaur Museum\n   - Why: family‑friendly museum complex (dinosaur displays, regional history) right off I‑94 (good for stretching legs and kids). ([dickinsongov.com](https://www.dickinsongov.com/museum-center/page/visit-us?utm_source=openai))\n\n5) Salem Sue (New Salem) — “World’s Largest Holstein”\n   - Why: iconic roadside giant cow you can see from I‑94 (Exit 127 / New Salem). Quick fun photo stop and short walk for views. ([roadsideamerica.com](https://www.roadsideamerica.com/tip/2788?utm_source=openai))\n\n6) Fort Abraham Lincoln State Park (Mandan) / Missouri River area\n   - Why: reconstructed Mandan earthlodges and Custer-era cavalry post; nice hikes and interpretive sites just off I‑94 near Mandan/Bismarck. Good overnight spot. ([parkrec.nd.gov](https://www.parkrec.nd.gov/fort-abraham-lincoln-state-park-features?utm_source=openai))\n\n7) Bismarck — North Dakota Heritage Center & State Museum; Dakota Zoo\n   - Why: state history museum (excellent exhibits) on the Capitol campus and the Dakota Zoo on the Missouri River — solid cultural/family stops and a convenient city break on I‑94. ([google.com](https://www.google.com/travel/hotels/entity/ChgI3_q60-DPusFYGgwvZy8xaGMyamI4MjYQAQ/prices?ts=CAEaBAoCGgAqBAoAGgA&utm_source=openai))\n\n8) Jamestown — North American Bison / “Dakota Thunder” (World’s Largest Buffalo)\n   - Why: the big concrete bison and the North American Bison / Buffalo interpretation center make Jamestown a memorable, quick stop. Good photo op right along I‑94. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Interstate_94?utm_source=openai))\n\n9) Valley City / Sheyenne River Valley (scenic bridges & byway)\n   - Why: pretty river valley scenery and historic bridges along the Sheyenne; a pleasant stretch if you want a shorter scenic detour from I‑94. ([kiwi.itspektar.net](https://kiwi.itspektar.net/content/wikipedia_en_all_maxi/A/Interstate_94_in_North_Dakota?utm_source=openai))\n\n10) Fargo / West Fargo — Bonanzaville (pioneer village), Plains Art Museum, Fargo Air Museum\n    - Why: largest city on I‑94 in ND — lots of dining, museums and services (good final/first stop on a cross‑state drive). ([exploreminnesota.com](https://www.exploreminnesota.com/sites/default/files/2025-06/25-itinerary-booklet_8.5x11-final-digital-060225.pdf?utm_source=openai))\n\nQuick practical tips\n- Fuel and services: western ND (west of Dickinson) is more sparse — fill up in Dickinson, Medora, or Belfield if needed. ([home.nps.gov](https://home.nps.gov/thro/planyourvisit/car.htm?utm_source=openai))\n- Time: plan at least 3–5 hours for a good stop in TRNP/Medora; the Enchanted Highway deserves 1–3 hours depending on how many sculptures you explore. ([home.nps.gov](https://home.nps.gov/thro/planyourvisit/car.htm?utm_source=openai))\n- Season: Medora musical and some park programs are seasonal; check hours before you go. Many outdoor overlooks are open year‑round but winter weather can make travel slow. ([en.wikipedia.org](https://en.wikipedia.org/wiki/Theodore_Roosevelt_National_Park?utm_source=openai))\n\nIf you want, I can:\n- Make a 1‑day, half‑day or multi‑day I‑94 itinerary through ND (with driving times, exits, and estimated visit durations), or\n- Build a printable map that highlights the exits and pullouts for these stops. Which would you prefer?"
+  },
+  {
+   "prompt_id": "family-badlands",
+   "provider": "openai",
+   "model": "gpt-5-mini",
+   "mentioned": true,
+   "cited_us": true,
+   "position": 5,
+   "peers": [
+    "Theodore Roosevelt National Park",
+    "Painted Canyon",
+    "Medora Musical",
+    "Chateau de Mores",
+    "Maah Daah Hey Trail",
+    "Elkhorn Ranch"
+   ],
+   "excerpt": "- Theodore Roosevelt Presidential Library (Medora) — immersive, interactive exhibits aimed at families and children (opened in 2026). … ([trlibrary.com](https://www.trlibrary.com/visit?utm_source=openai))",
+   "cited_domains": [
+    "nps.gov",
+    "govinfo.gov",
+    "medora.com",
+    "trlibrary.com",
+    "ndtourism.com",
+    "wonderfulmuseums.com",
+    "home.nps.gov",
+    "npshistory.com"
+   ],
+   "citations": [
+    "https://www.nps.gov/thro/planyourvisit/things2do.htm?utm_source=openai",
+    "https://www.govinfo.gov/content/pkg/GOVPUB-I29-PURL-gpo92186/pdf/GOVPUB-I29-PURL-gpo92186.pdf?utm_source=openai",
+    "https://medora.com/medoramusical/?utm_source=openai",
+    "https://www.trlibrary.com/visit?utm_source=openai",
+    "https://www.ndtourism.com/maah-daah-hey-trail?utm_source=openai",
+    "https://www.ndtourism.com/regent/attractions/enchanted-highway?utm_source=openai",
+    "https://www.wonderfulmuseums.com/museum/dakota-dinosaur-museum-dickinson/?utm_source=openai",
+    "https://www.nps.gov/thingstodo/hike-wind-canyon-trail.htm?utm_source=openai",
+    "https://www.nps.gov/thro/planyourvisit/things2do.htm?utm_source=openai",
+    "https://www.ndtourism.com/medora/attractions-entertainment/family-fun/rough-rider-state-park?utm_source=openai",
+    "https://home.nps.gov/thro/planyourvisit/wildlife-viewing.htm?utm_source=openai",
+    "https://npshistory.com/publications/badl/brochures/backpacking.pdf?utm_source=openai",
+    "https://npshistory.com/publications/badl/brochures/backpacking.pdf?utm_source=openai",
+    "https://www.govinfo.gov/content/pkg/GOVPUB-I29-PURL-gpo92186/pdf/GOVPUB-I29-PURL-gpo92186.pdf?utm_source=openai",
+    "https://www.nps.gov/thro/planyourvisit/things2do.htm?utm_source=openai"
+   ],
+   "text": "Great question — the North Dakota Badlands are a fantastic place for kids: lots of wide-open space, easy short hikes, wildlife viewing, hands-on museums, and quirky roadside sights. Below are kid-tested ideas, quick logistics, and safety tips.\n\nTop kid-friendly things to do\n- Theodore Roosevelt National Park — Scenic drives (South Unit loop and North Unit), easy short hikes like Wind Canyon (≈0.3–0.5 mi) and Painted Canyon Nature Trail (≈0.9 mi), ranger programs, and a Junior Ranger booklet/badge at visitor centers. Great chance to see bison, prairie dogs and feral (wild) horses from a safe distance. ([nps.gov](https://www.nps.gov/thro/planyourvisit/things2do.htm?utm_source=openai))\n\n- Petrified Forest hike — longer backcountry route but kids usually love seeing fossilized wood and “rock trees”; allow extra time and check road/vehicle needs (some routes on gravel/high‑clearance). ([govinfo.gov](https://www.govinfo.gov/content/pkg/GOVPUB-I29-PURL-gpo92186/pdf/GOVPUB-I29-PURL-gpo92186.pdf?utm_source=openai))\n\n- Medora (gateway town) — family-friendly attractions in one small walkable town: Medora Musical and other shows, free/low‑cost kids’ performances at the Andrist Stage, the Medora Children’s Park and Point-to-Point Park (mini-golf, zipline, lazy-river-style play features), and Chateau de Mores historic tours. Great for evening entertainment after a day in the park. ([medora.com](https://medora.com/medoramusical/?utm_source=openai))\n\n- Theodore Roosevelt Presidential Library (Medora) — immersive, interactive exhibits aimed at families and children (opened in 2026). Good indoor option on hot/windy days. ([trlibrary.com](https://www.trlibrary.com/visit?utm_source=openai))\n\n- Maah Daah Hey Trail & Rough Rider State Park — short, family-friendly trail sections, horseback rides and beginner bike/e‑bike opportunities; Rough Rider (formerly Sully Creek) is a great riverfront campground with Maah Daah Hey access and Little Missouri River launch points for easy paddling. ([ndtourism.com](https://www.ndtourism.com/maah-daah-hey-trail?utm_source=openai))\n\n- Enchanted Highway (Regent) — a 32‑mile stretch of giant scrap‑metal sculptures that kids love (great half‑day roadside stop if you’re driving across western ND). ([ndtourism.com](https://www.ndtourism.com/regent/attractions/enchanted-highway?utm_source=openai))\n\n- Dakota Dinosaur Museum / Dickinson — if kids like fossils and dinosaurs, this nearby museum has big specimens, a prep lab window, and youth programs. Good rainy‑day alternative. ([wonderfulmuseums.com](https://www.wonderfulmuseums.com/museum/dakota-dinosaur-museum-dickinson/?utm_source=openai))\n\nSimple sample plans\n- Half day (young kids): Painted Canyon overlook + Wind Canyon short hike in TRNP South Unit → picnic in the pullout → play at Medora Children’s Park. ([nps.gov](https://www.nps.gov/thingstodo/hike-wind-canyon-trail.htm?utm_source=openai))  \n- Full day (active family): South Unit scenic loop (wildlife viewing early AM) → Petrified Forest short outing (plan for gravel roads/high‑clearance) → evening Medora Musical or free kids’ show. ([nps.gov](https://www.nps.gov/thro/planyourvisit/things2do.htm?utm_source=openai))  \n- Overnight/camp: Camp at Rough Rider State Park, do a Maah Daah Hey short section or paddle the Little Missouri at sunrise, then visit the Presidential Library or Medora museums. ([ndtourism.com](https://www.ndtourism.com/medora/attractions-entertainment/family-fun/rough-rider-state-park?utm_source=openai))\n\nQuick practical tips and safety\n- Wildlife: view from your car or established overlooks; never approach bison, horses, prairie dogs or other wildlife — they are wild and can be dangerous. Best viewing times are early morning or late afternoon. ([home.nps.gov](https://home.nps.gov/thro/planyourvisit/wildlife-viewing.htm?utm_source=openai))  \n- Water/sun: bring plenty of water (the Badlands are dry and sunny), sun protection and layers — temperatures can swing widely. ([npshistory.com](https://npshistory.com/publications/badl/brochures/backpacking.pdf?utm_source=openai))  \n- Watch where you step: prairie rattlesnakes and other snakes can occur; stay on trails and keep young kids close. ([npshistory.com](https://npshistory.com/publications/badl/brochures/backpacking.pdf?utm_source=openai))  \n- Roads & vehicles: some park features (Petrified Forest, Elkhorn Ranch access) are on gravel roads where a high‑clearance vehicle is recommended — check conditions before you go. ([govinfo.gov](https://www.govinfo.gov/content/pkg/GOVPUB-I29-PURL-gpo92186/pdf/GOVPUB-I29-PURL-gpo92186.pdf?utm_source=openai))  \n- Programs & hours: ranger programs, visitor centers, the Presidential Library, and the Medora Musical are seasonal or have changing schedules — check official sites for up‑to‑date hours and tickets. ([nps.gov](https://www.nps.gov/thro/planyourvisit/things2do.htm?utm_source=openai))\n\nIf you want, I can:\n- Build a 1‑ or 2‑day kid-focused itinerary based on the ages of your children and whether you’ll camp or stay in Medora; or  \n- Check current park conditions, visitor‑center hours, show schedules, or campground availability for the dates you plan to travel.\n\nWhich would you like — a suggested day-by-day plan (and what are your kids’ ages and travel dates)?"
+  },
+  {
+   "prompt_id": "rainy-day-medora",
+   "provider": "openai",
+   "model": "gpt-5-mini",
+   "mentioned": true,
+   "cited_us": true,
+   "position": 1,
+   "peers": [
+    "Chateau de Mores",
+    "North Dakota Cowboy Hall of Fame",
+    "Theodore Roosevelt National Park",
+    "Maltese Cross Cabin",
+    "Pitchfork Steak Fondue",
+    "Medora Musical"
+   ],
+   "excerpt": "- Theodore Roosevelt Presidential Library — a new, indoor museum and interpretive center with exhibits about TR’s life and the Badlands. … ([trlibrary.com](https://www.trlibrary.com/?utm_source=openai))",
+   "cited_domains": [
+    "trlibrary.com",
+    "history.nd.gov",
+    "northdakotacowboy.org",
+    "ndtourism.com",
+    "home.nps.gov",
+    "medora.com"
+   ],
+   "citations": [
+    "https://www.trlibrary.com/?utm_source=openai",
+    "https://history.nd.gov/historicsites/chateau/chateauevents.html?utm_source=openai",
+    "https://northdakotacowboy.org/?utm_source=openai",
+    "https://www.ndtourism.com/medora/attractions-entertainment/hidden-gem-attractions/billings-county-courthouse-museum?utm_source=openai",
+    "https://home.nps.gov/thro/planyourvisit/visitorcenters.htm?utm_source=openai",
+    "https://medora.com/pitchforksteakfondue/?utm_source=openai",
+    "https://medora.com/wp-content/uploads/2026/05/2026-In-Town-Guide-Digital.pdf?utm_source=openai",
+    "https://medora.com/attractions-activities/?utm_source=openai"
+   ],
+   "text": "Do you mean Medora, North Dakota? Assuming yes — here are indoor options in town if the weather turns bad (I can look up hours or make reservations for a specific date if you want):\n\n- Theodore Roosevelt Presidential Library — a new, indoor museum and interpretive center with exhibits about TR’s life and the Badlands. ([trlibrary.com](https://www.trlibrary.com/?utm_source=openai))  \n- Chateau de Mores State Historic Site — guided tours of the Marquis de Mores’ 1883 house and exhibits (small, family-friendly museum). ([history.nd.gov](https://history.nd.gov/historicsites/chateau/chateauevents.html?utm_source=openai))  \n- North Dakota Cowboy Hall of Fame / Center of Western Heritage & Culture — museum exhibits, a small theater, and a gift shop about ranching/rodeos and regional history. ([northdakotacowboy.org](https://northdakotacowboy.org/?utm_source=openai))  \n- Billings County Courthouse Museum — local history displays (pioneer courtroom/jail, barbed-wire collection, military/western artifacts). ([ndtourism.com](https://www.ndtourism.com/medora/attractions-entertainment/hidden-gem-attractions/billings-county-courthouse-museum?utm_source=openai))  \n- Theodore Roosevelt National Park — South Unit visitor center (Maltese Cross Cabin and indoor exhibits) — good for learning about TR and the park without going outdoors. ([home.nps.gov](https://home.nps.gov/thro/planyourvisit/visitorcenters.htm?utm_source=openai))  \n- Indoor dining, cafés and shops — Pitchfork Steak Fondue (sit-down experience), several cafés, bistros, and gift shops in town for food, shopping, or refuge from rain. ([medora.com](https://medora.com/pitchforksteakfondue/?utm_source=openai))  \n- Old Town Hall / small local performances and seasonal indoor shows — check the in-town events schedule if you’re visiting in season. ([medora.com](https://medora.com/wp-content/uploads/2026/05/2026-In-Town-Guide-Digital.pdf?utm_source=openai))\n\nNote: the Medora Musical is performed outdoors in the Burning Hills Amphitheatre, so it isn’t a good option in bad weather. ([medora.com](https://medora.com/attractions-activities/?utm_source=openai))\n\nWant me to check current hours, ticket availability, or make a quick plan for a rainy afternoon on a specific date?"
+  },
+  {
+   "prompt_id": "nd-museums",
+   "provider": "openai",
+   "model": "gpt-5-mini",
+   "mentioned": false,
+   "cited_us": false,
+   "position": null,
+   "peers": [],
+   "excerpt": "",
+   "cited_domains": [
+    "history.nd.gov",
+    "plainsart.org",
+    "bonanzaville.org",
+    "ndmoa.com",
+    "ndtourism.com",
+    "parkrec.nd.gov",
+    "clui.org"
+   ],
+   "citations": [
+    "https://www.history.nd.gov/planvisit.html?utm_source=openai",
+    "https://plainsart.org/plan-your-visit/?utm_source=openai",
+    "https://www.bonanzaville.org/?utm_source=openai",
+    "https://ndmoa.com/about/?utm_source=openai",
+    "https://www.ndtourism.com/minot/attractions-entertainment/educational-attractions/scandinavian-heritage-park?utm_source=openai",
+    "https://www.history.nd.gov/historicsites/lcic/exhibits.html?utm_source=openai",
+    "https://www.parkrec.nd.gov/fort-abraham-lincoln-state-park-features?utm_source=openai",
+    "https://www.ndtourism.com/jamestown/attractions-entertainment/arts-attractions/north-american-bison-discovery-center?utm_source=openai",
+    "https://www.ndtourism.com/new-town/attractions-entertainment/educational-attractions/mha-interpretive-center?utm_source=openai",
+    "https://clui.org/ludb/site/international-peace-garden?utm_source=openai"
+   ],
+   "text": "Here are highly recommended museums and history sites across North Dakota, with a short note about what makes each worth visiting. Tell me if you want addresses, hours, admission info, or a driving route for any of these.\n\n- North Dakota Heritage Center & State Museum (Bismarck) — The state’s official history museum with wide-ranging exhibits (Native American history, settlement, agriculture, and strong paleontology/fossil displays). ([history.nd.gov](https://www.history.nd.gov/planvisit.html?utm_source=openai))\n\n- Plains Art Museum (Fargo) — Large regional contemporary and Native American art collection plus rotating exhibitions and community programs. ([plainsart.org](https://plainsart.org/plan-your-visit/?utm_source=openai))\n\n- Bonanzaville, USA (West Fargo) — Extensive open‑air pioneer village and museum complex made up of dozens of historic buildings and indoor exhibit galleries on regional history. ([bonanzaville.org](https://www.bonanzaville.org/?utm_source=openai))\n\n- North Dakota Museum of Art (Grand Forks) — University‑affiliated art museum with rotating contemporary exhibitions and a notable permanent collection. ([ndmoa.com](https://ndmoa.com/about/?utm_source=openai))\n\n- Scandinavian Heritage Park (Minot) — Unique 14‑acre open‑air park/museum with replicas and memorials representing Denmark, Finland, Iceland, Norway, and Sweden. ([ndtourism.com](https://www.ndtourism.com/minot/attractions-entertainment/educational-attractions/scandinavian-heritage-park?utm_source=openai))\n\n- Lewis & Clark Interpretive Center and Fort Mandan (Washburn area) — Strong, well‑interpreted museum about the Corps of Discovery with a full‑size Fort Mandan reconstruction nearby. ([history.nd.gov](https://www.history.nd.gov/historicsites/lcic/exhibits.html?utm_source=openai))\n\n- Fort Abraham Lincoln State Park (Mandan) — Visitor center museum plus reconstructed Mandan earth lodges (On‑a‑Slant Village) and historic military buildings. ([parkrec.nd.gov](https://www.parkrec.nd.gov/fort-abraham-lincoln-state-park-features?utm_source=openai))\n\n- North American Bison Discovery Center / (Frontier Village) (Jamestown) — Museum dedicated to the history and ecology of the American bison, with a live herd and pioneer village nearby. ([ndtourism.com](https://www.ndtourism.com/jamestown/attractions-entertainment/arts-attractions/north-american-bison-discovery-center?utm_source=openai))\n\n- Three Affiliated Tribes Museum / MHA Nation Interpretive Center (New Town) — Important Indigenous heritage museum and interpretive center presenting Mandan, Hidatsa, and Arikara history and culture. ([ndtourism.com](https://www.ndtourism.com/new-town/attractions-entertainment/educational-attractions/mha-interpretive-center?utm_source=openai))\n\n- International Peace Garden (Dunseith; on the ND–Manitoba border) — Large international memorial/visitor complex with gardens, an interpretive center and several small museum displays (including the International Game Warden Museum). (Straddles the border but is a major regional attraction.) ([clui.org](https://clui.org/ludb/site/international-peace-garden?utm_source=openai))\n\nIf you tell me the city or region you’ll be visiting (or your interests — art, Native American history, pioneer life, natural history, Lewis & Clark, etc.), I can narrow this to the best nearby picks and pull up addresses/hours or build a one‑day or multi‑day itinerary."
+  },
+  {
+   "prompt_id": "newest-presidential-library",
+   "provider": "openai",
+   "model": "gpt-5-mini",
+   "mentioned": true,
+   "cited_us": true,
+   "position": 1,
+   "peers": [],
+   "excerpt": "- Most recently established / newly built: the Theodore Roosevelt Presidential Library in Medora, North Dakota, opened July 4, 2026. … ([trlibrary.com](https://www.trlibrary.com/about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026?utm_source=openai))",
+   "cited_domains": [
+    "hoover.archives.gov",
+    "trlibrary.com",
+    "en.wikipedia.org"
+   ],
+   "citations": [
+    "https://hoover.archives.gov/museum-renovation-news?utm_source=openai",
+    "https://www.trlibrary.com/about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026?utm_source=openai",
+    "https://en.wikipedia.org/wiki/Barack_Obama_Presidential_Center?utm_source=openai"
+   ],
+   "text": "It depends on how you count “newest.”\n\n- Most recently (re)opened: the Herbert Hoover Presidential Library and Museum reopened after a major renovation on August 6, 2026. ([hoover.archives.gov](https://hoover.archives.gov/museum-renovation-news?utm_source=openai))  \n- Most recently established / newly built: the Theodore Roosevelt Presidential Library in Medora, North Dakota, opened July 4, 2026. ([trlibrary.com](https://www.trlibrary.com/about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026?utm_source=openai))  \n- For reference, the Barack Obama Presidential Center in Chicago opened earlier in 2026 (June 2026). ([en.wikipedia.org](https://en.wikipedia.org/wiki/Barack_Obama_Presidential_Center?utm_source=openai))\n\nWhich definition did you have in mind — “most recently opened/reopened” or “newly constructed/established”? I can give more details on any of these."
+  },
+  {
+   "prompt_id": "presidential-libraries-visit",
+   "provider": "openai",
+   "model": "gpt-5-mini",
+   "mentioned": false,
+   "cited_us": false,
+   "position": null,
+   "peers": [],
+   "excerpt": "",
+   "cited_domains": [],
+   "citations": [],
+   "text": "Do you mean U.S. Presidential Libraries (the National Archives system), or presidential libraries worldwide? \n\nAlso: do you want a short “must-see” list, or recommendations tailored to your interests (history/deep archives, architecture, interactive exhibits, family-friendly) or location (which state/city you can travel from)?"
+  },
+  {
+   "prompt_id": "tr-learn-where",
+   "provider": "openai",
+   "model": "gpt-5-mini",
+   "mentioned": false,
+   "cited_us": false,
+   "position": null,
+   "peers": [
+    "Theodore Roosevelt National Park",
+    "Elkhorn Ranch",
+    "Maltese Cross Cabin"
+   ],
+   "excerpt": "",
+   "cited_domains": [
+    "nps.gov",
+    "home.nps.gov",
+    "medora.com",
+    "theodorerooseveltcenter.org",
+    "history.nd.gov",
+    "ndtourism.com"
+   ],
+   "citations": [
+    "https://www.nps.gov/thro/learn/historyculture/elkhorn-ranch.htm?utm_source=openai",
+    "https://home.nps.gov/places/maltese-cross-cabin.htm?utm_source=openai",
+    "https://medora.com/history-museums/?utm_source=openai",
+    "https://www.theodorerooseveltcenter.org/about/visit-us/?utm_source=openai",
+    "https://www.history.nd.gov/planvisit.html?utm_source=openai",
+    "https://www.ndtourism.com/teddytrail?utm_source=openai",
+    "https://www.nps.gov/npgallery/GetAsset/257b1284-d776-43d5-9a8f-863023a2e520?utm_source=openai",
+    "https://www.theodorerooseveltcenter.org/about/visit-us/?utm_source=openai",
+    "https://medora.com/history-museums/?utm_source=openai"
+   ],
+   "text": "Great question — the best places to learn about Theodore Roosevelt’s time in North Dakota are a mix of park sites, museums, and local history organizations. Here are the top options and what each offers:\n\n- Theodore Roosevelt National Park (North, South, and the Elkhorn Ranch unit) — visitor centers, exhibits, scenic drives, trails (including a walking trail to the Elkhorn Ranch site) that interpret Roosevelt’s ranching years and how the Badlands shaped his conservation views. ([nps.gov](https://www.nps.gov/thro/learn/historyculture/elkhorn-ranch.htm?utm_source=openai))\n\n- Maltese Cross Cabin (at the park/Medora visitor area) — the actual cabin Roosevelt used when he first established a ranch in the area; interpreted onsite at the park visitor center. ([home.nps.gov](https://home.nps.gov/places/maltese-cross-cabin.htm?utm_source=openai))\n\n- Medora and the Theodore Roosevelt Medora Foundation — guided and self-guided walking tours, museum programming, and local history presentations in the town that was Roosevelt’s closest community while he was in the Badlands. Good for context about daily life and people Roosevelt knew. ([medora.com](https://medora.com/history-museums/?utm_source=openai))\n\n- Theodore Roosevelt Center (Dickinson, ND) — research library and digital collections focused on Roosevelt; useful if you want deeper primary sources or remote access to documents and photos. ([theodorerooseveltcenter.org](https://www.theodorerooseveltcenter.org/about/visit-us/?utm_source=openai))\n\n- North Dakota Heritage Center & State Museum (Bismarck) — statewide history museum with exhibits and artifacts that place Roosevelt’s Dakota years into broader state history. ([history.nd.gov](https://www.history.nd.gov/planvisit.html?utm_source=openai))\n\n- “Teddy Trail” / state tourism resources — a curated set of TR sites across North Dakota (good for planning a multi-site visit, maps, and seasonal event info). ([ndtourism.com](https://www.ndtourism.com/teddytrail?utm_source=openai))\n\nQuick tips\n- Start at a park visitor center (South Unit near Medora) — rangers can point you to the Maltese Cross cabin, Elkhorn Ranch trail, and any ranger programs. ([nps.gov](https://www.nps.gov/npgallery/GetAsset/257b1284-d776-43d5-9a8f-863023a2e520?utm_source=openai))  \n- If you want primary documents or deeper research, contact the Theodore Roosevelt Center (Stankard Research Library). ([theodorerooseveltcenter.org](https://www.theodorerooseveltcenter.org/about/visit-us/?utm_source=openai))  \n- Check hours, seasonal closures, and ticketing (especially in Medora) before you go — many programs are seasonal. ([medora.com](https://medora.com/history-museums/?utm_source=openai))\n\nIf you’d like, I can:\n- Put together a one-day or multi-day itinerary from a specific North Dakota town (Medora, Dickinson, Bismarck, etc.), or  \n- Look up current hours, guided-program schedules, or how to access the Theodore Roosevelt Center’s digital collections — tell me which and I’ll fetch the latest details."
+  },
+  {
+   "prompt_id": "tr-sites",
+   "provider": "openai",
+   "model": "gpt-5-mini",
+   "mentioned": false,
+   "cited_us": false,
+   "position": null,
+   "peers": [
+    "Theodore Roosevelt National Park",
+    "Maltese Cross Cabin",
+    "Elkhorn Ranch",
+    "Mount Rushmore"
+   ],
+   "excerpt": "",
+   "cited_domains": [],
+   "citations": [],
+   "text": "Here are the primary historic sites connected with Theodore Roosevelt, with a short note on why each is significant:\n\n- Theodore Roosevelt Birthplace National Historic Site — New York City (Manhattan). The house where he was born and spent his early childhood; the site is a reconstructed period home and museum.  \n- Sagamore Hill National Historic Site — Oyster Bay, New York. Roosevelt’s longtime home and the “Summer White House” during his presidency; preserves his house, grounds, and museum.  \n- Theodore Roosevelt Inaugural National Historic Site (Ansley Wilcox House) — Buffalo, New York. The house where Roosevelt took the presidential oath on September 14, 1901, after President McKinley’s assassination.  \n- Theodore Roosevelt National Park — near Medora, North Dakota. Commemorates his time as a rancher and his conservation legacy; park units include the Maltese Cross Cabin and the Elkhorn Ranch site where he lived and worked.  \n  - Maltese Cross Cabin — Roosevelt’s original ranch cabin (preserved).  \n  - Elkhorn Ranch site — location of his later ranch (now an archaeological/landscape site).  \n- Theodore Roosevelt Island — Potomac River, Washington, D.C. A memorial island and park honoring his conservation work, with a memorial plaza and statue.  \n- Youngs Memorial Cemetery — Oyster Bay, New York. Theodore Roosevelt’s gravesite (near Sagamore Hill).  \n- Mount Rushmore National Memorial — Keystone, South Dakota. Roosevelt’s likeness is one of the four presidential faces carved on the mountain, honoring his role in the nation’s development.  \n- American Museum of Natural History — New York City. Roosevelt was a prominent supporter and trustee; his interests in natural history and conservation are reflected in the museum’s history and collections.\n\nIf you’d like, I can:\n- Give addresses and visitor-info (hours, tours) for any of these sites (I can look them up), or  \n- Suggest an itinerary if you want to visit several, or  \n- Provide more historical detail about Roosevelt’s time at any specific site. Which would you like?"
+  },
+  {
+   "prompt_id": "tr-library-worth-it",
+   "provider": "openai",
+   "model": "gpt-5-mini",
+   "mentioned": true,
+   "cited_us": true,
+   "position": 1,
+   "peers": [
+    "Theodore Roosevelt National Park"
+   ],
+   "excerpt": "Short answer: Yes — for most people visiting the Badlands, the Theodore Roosevelt Presidential Library in Medora is worth a stop. … ([trlibrary.com](https://www.trlibrary.com/visit/exhibits?utm_source=openai))",
+   "cited_domains": [
+    "trlibrary.com",
+    "tripadvisor.com"
+   ],
+   "citations": [
+    "https://www.trlibrary.com/visit/exhibits?utm_source=openai",
+    "https://www.trlibrary.com/visit/exhibits?utm_source=openai",
+    "https://www.trlibrary.com/visit/activities?utm_source=openai",
+    "https://www.tripadvisor.com/Attraction_Review-g60973-d34391224-Reviews-or40-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html?utm_source=openai",
+    "https://www.trlibrary.com/visit/exhibits?utm_source=openai",
+    "https://www.trlibrary.com/visit/activities?utm_source=openai",
+    "https://www.trlibrary.com/visit/faq/getting-here?utm_source=openai",
+    "https://www.trlibrary.com/visit/activities?utm_source=openai",
+    "https://www.trlibrary.com/visit/activities?utm_source=openai",
+    "https://www.trlibrary.com/visit?utm_source=openai"
+   ],
+   "text": "Short answer: Yes — for most people visiting the Badlands, the Theodore Roosevelt Presidential Library in Medora is worth a stop. It’s a modern, immersive museum that pairs especially well with a visit to Theodore Roosevelt National Park. ([trlibrary.com](https://www.trlibrary.com/visit/exhibits?utm_source=openai))\n\nWhy it’s worth visiting\n- Immersive, well‑made exhibits that trace Roosevelt’s life (New York → Badlands → Rough Rider → White House) with hands‑on elements and rotating special exhibitions. ([trlibrary.com](https://www.trlibrary.com/visit/exhibits?utm_source=openai))  \n- Sits on the bluffs above Medora with trails and an outdoor boardwalk, so you get both indoor interpretation and Badlands scenery. ([trlibrary.com](https://www.trlibrary.com/visit/activities?utm_source=openai))  \n- Generally strong visitor reaction since opening (opened July 4, 2026), with many reviewers calling it a highlight of a trip to Medora/the park. ([tripadvisor.com](https://www.tripadvisor.com/Attraction_Review-g60973-d34391224-Reviews-or40-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html?utm_source=openai))\n\nWho will like it most\n- History buffs and Roosevelt fans who want artifacts, film and narrative context. ([trlibrary.com](https://www.trlibrary.com/visit/exhibits?utm_source=openai))  \n- Families and visitors who enjoy interactive, story‑driven museums. ([trlibrary.com](https://www.trlibrary.com/visit/activities?utm_source=openai))  \n- People combining a trip to Theodore Roosevelt National Park and Medora (it’s only minutes from the park’s South Unit). ([trlibrary.com](https://www.trlibrary.com/visit/faq/getting-here?utm_source=openai))\n\nWhen you might skip it\n- If you’re extremely short on time (multiple attractions in a long road trip) and only want scenic drives/hikes, you might prioritize the park itself over a several‑hour museum visit. Some travelers say the local heritage center covers similar ground if you must choose. ([trlibrary.com](https://www.trlibrary.com/visit/activities?utm_source=openai))\n\nPractical tips\n- Plan about 3–4 hours for the exhibits plus time for the boardwalk and trails. ([trlibrary.com](https://www.trlibrary.com/visit/activities?utm_source=openai))  \n- Check hours, ticketing, and current special exhibits before you go (exhibitions rotate). ([trlibrary.com](https://www.trlibrary.com/visit?utm_source=openai))\n\nIf you want, tell me your trip details (dates, how long you’ll be in the area, whether you’re coming with kids or mobility needs) and I’ll recommend whether to prioritize the library versus the park or other Medora activities."
+  },
+  {
+   "prompt_id": "tr-library-time",
+   "provider": "openai",
+   "model": "gpt-5-mini",
+   "mentioned": true,
+   "cited_us": true,
+   "position": 1,
+   "peers": [
+    "Theodore Roosevelt National Park"
+   ],
+   "excerpt": "([trlibrary.com](https://www.trlibrary.com/visit?utm_source=openai)) … ([trlibrary.com](https://www.trlibrary.com/visit?utm_source=openai))",
+   "cited_domains": [
+    "trlibrary.com"
+   ],
+   "citations": [
+    "https://www.trlibrary.com/visit?utm_source=openai",
+    "https://www.trlibrary.com/visit?utm_source=openai",
+    "https://www.trlibrary.com/visit?utm_source=openai",
+    "https://www.trlibrary.com/visit?utm_source=openai",
+    "https://www.trlibrary.com/visit/policies/tickets?utm_source=openai",
+    "https://www.trlibrary.com/visit/hours?utm_source=openai",
+    "https://www.trlibrary.com/visit/itineraries/3-days-medora?utm_source=openai"
+   ],
+   "text": "Short answer: plan on about 4½ hours for a typical visit (3½ hours inside the exhibition + about 1 hour on the outdoor boardwalk). ([trlibrary.com](https://www.trlibrary.com/visit?utm_source=openai))\n\nMore detail and options\n- Typical/complete visit: ~3.5 hours exploring the exhibition, then ~1 hour on the boardwalk — about 4–5 hours total. ([trlibrary.com](https://www.trlibrary.com/visit?utm_source=openai))  \n- Short visit / highlights: 1–2 hours (focus on the main exhibition highlights or a quick walk on the boardwalk). ([trlibrary.com](https://www.trlibrary.com/visit?utm_source=openai))  \n- Half‑day / full‑day: add a guided program, a meal in Medora, or combine the library with Theodore Roosevelt National Park for a full day. The library sits on a butte above Medora (about 1.5 miles from the South Unit of the park). ([trlibrary.com](https://www.trlibrary.com/visit?utm_source=openai))\n\nPractical tips\n- Book timed tickets online in advance (especially weekends and the busy season, June–September). ([trlibrary.com](https://www.trlibrary.com/visit/policies/tickets?utm_source=openai))  \n- Check the library’s current hours and any special programs the day you visit. ([trlibrary.com](https://www.trlibrary.com/visit/hours?utm_source=openai))  \n- If you want a guided tour or a specific program, allow extra time beyond the 4–5 hour baseline and confirm start times when you reserve. ([trlibrary.com](https://www.trlibrary.com/visit/itineraries/3-days-medora?utm_source=openai))\n\nIf you tell me the kind of visit you want (quick overview, in‑depth, with kids, combined with the national park, or on a tight schedule), I can make a tailored itinerary and timing."
+  },
+  {
+   "prompt_id": "tr-library-tickets",
+   "provider": "openai",
+   "model": "gpt-5-mini",
+   "mentioned": true,
+   "cited_us": true,
+   "position": 1,
+   "peers": [],
+   "excerpt": "([trlibrary.com](https://www.trlibrary.com/tickets?utm_source=openai)) … ([trlibrary.com](https://www.trlibrary.com/visit/hours))",
+   "cited_domains": [
+    "trlibrary.com"
+   ],
+   "citations": [
+    "https://www.trlibrary.com/tickets?utm_source=openai",
+    "https://www.trlibrary.com/visit/hours",
+    "https://www.trlibrary.com/visit/policies/tickets"
+   ],
+   "text": "Short answer — current (public) admission and hours:\n\n- Admission (general timed-entry): Adults (13+) $26; Seniors (65+) $24; Youth (ages 3–12) $16; children under 3 free. ([trlibrary.com](https://www.trlibrary.com/tickets?utm_source=openai))\n\n- Hours (seasonal): \n  - March 2–May 31: Tue–Fri 10:00–4:00; Sat–Sun 10:00–5:00.  \n  - June 1–Sept 13 (peak): daily 9:00–6:00.  \n  - Sept 14–Nov 30: Tue–Fri 9:00–4:00; Sat–Sun 9:00–6:00.  \n  - Dec 1–Mar 1 (winter/holidays): Wed–Sun 10:00–4:00.  \n  - Closed on Thanksgiving (Nov 26) and Christmas (Dec 25); last timed entry begins 90 minutes before closing. ([trlibrary.com](https://www.trlibrary.com/visit/hours))\n\n- Notes: timed-entry reservations are recommended (walk-ups only if capacity allows); the boardwalk, living roof and grounds are freely accessible without a ticket. ([trlibrary.com](https://www.trlibrary.com/visit/policies/tickets))\n\nWould you like me to check ticket availability for a particular date/time or reserve tickets?"
+  },
+  {
+   "prompt_id": "trnp-what-to-see",
    "provider": "gemini",
    "model": "gemini-3.8-flash",
    "error": "Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
@@ -107,106 +609,521 @@
    "prompt_id": "nd-road-trip",
    "provider": "gemini",
    "model": "gemini-3.8-flash",
-   "error": "Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
    "mentioned": false,
-   "cited_us": false
+   "cited_us": false,
+   "position": null,
+   "peers": [
+    "Painted Canyon",
+    "Theodore Roosevelt National Park",
+    "Pitchfork Steak Fondue",
+    "Medora Musical",
+    "Chateau de Mores",
+    "Maltese Cross Cabin"
+   ],
+   "excerpt": "",
+   "cited_domains": [],
+   "citations": [],
+   "text": "A 3-day road trip through western North Dakota takes you through the dramatically sculpted Badlands, historic frontier trading posts, roaming bison herds, and some of the country’s most unique roadside Americana. \n\nThis itinerary is designed as a loop starting and ending near **Bismarck or Dickinson** (both have airports and access to I-94), taking you through the premier natural and historical attractions.\n\n---\n\n### **Overview Route**\n* **Day 1:** The Enchanted Highway, Painted Canyon & Theodore Roosevelt National Park (South Unit)\n* **Day 2:** Historic Medora & Theodore Roosevelt National Park (North Unit)\n* **Day 3:** Fort Union Trading Post & the Upper Missouri River Country\n\n---\n\n### **Day 1: Giant Art & Theodore Roosevelt National Park (South Unit)**\n\n#### **Morning: The Enchanted Highway**\n* **The Route:** Turn off I-94 at Gladstone (Exit 72) and drive 32 miles south toward the small town of Regent.\n* **What to See:** This quiet country road features the world’s largest collection of scrap-metal folk art sculptures. Look for *Geese in Flight* (recognized by Guinness World Records), *Deer Crossing*, *Grasshoppers in the Field*, and *Fisherman’s Dream*. \n* Stop in **Regent** at the Enchanted Castle or the gift shop for homemade chokecherry fudge before heading west on I-94 toward Medora.\n\n#### **Midday: Painted Canyon Overlook**\n* Right off I-94 before reaching Medora, pull into the **Painted Canyon Visitor Center**. \n* This is your first grand vista of the North Dakota Badlands. Take the short, paved rim trail to admire the vivid layers of red \"scoria,\" grey siltstone, and lignite coal.\n\n#### **Afternoon & Sunset: TRNP South Unit**\n* Enter the park via the town of Medora. \n* **Drive the Scenic Loop:** Keep an eye out for prairie dog towns, feral horses, elk, and roaming herds of American bison.\n* **Hike Wind Canyon Trail:** A quick, 0.4-mile loop along a ridge that offers arguably the best sunset view in the state, overlooking the meandering Little Missouri River.\n\n#### **Evening: Medora**\n* Grab dinner at the historic **Rough Riders Hotel** or, if visiting between June and September, book tickets for the **Pitchfork Steak Fondue** followed by the open-air **Medora Musical** set in a natural Badlands amphitheater.\n\n---\n\n### **Day 2: Historic Medora to the Wild North Unit**\n\n#### **Morning: Chateau de Mores State Historic Site**\n* Before leaving town, explore the 26-room, 1883 summer residence of the French nobleman who founded Medora (naming it after his wife). It offers a fascinating glimpse into Gilded Age ambition on the rugged frontier.\n* *Alternative stop:* Visit the **Maltese Cross Cabin** located directly behind the Medora South Unit Visitor Center—this was Theodore Roosevelt's actual cabin from his ranching days.\n\n#### **Midday: Drive North on US-85 (Scenic Byway)**\n* Drive roughly 1 hour and 15 minutes north through rolling prairies and badlands breaks toward **Watford City**.\n* Grab lunch or local craft beer at **Stonehome Brewing Co.** in Watford City before heading into the North Unit.\n\n#### **Afternoon: Theodore Roosevelt National Park (North Unit)**\n* The North Unit is less visited, more rugged, and features deeper canyons than the South Unit.\n* **River Bend Overlook:** Stop at the iconic 1930s stone CCC shelter clinging to the canyon rim for sweeping views of the river valley.\n* **Oxbow Overlook:** Drive to the end of the 14-mile scenic drive where the Little Missouri makes a dramatic horseshoe bend.\n* **Hike Sperati Point:** An easy 1.5-mile round-trip walk starting from Oxbow Overlook across open plateau to an unobstructed, wild Badlands vista.\n* **Overnight:** Watford City or return south to Dickinson.\n\n---\n\n### **Day 3: Frontier History & Dinosaur Country**\n\n#### **Morning: Fort Union Trading Post National Historic Site**\n* Head northwest toward the Montana border near Williston (about 50 minutes from Watford City).\n* **Why it’s a must-see:** From 1828 to 1867, this was the most important fur trading post on the Upper Missouri. The reconstructed stone-and-timber fort feels like a real frontier outpost where Assiniboine, Mandan, and Blackfeet traders exchanged buffalo robes for goods. \n* Nearby, stop at the **Missouri-Yellowstone Confluence Interpretive Center**, where Lewis & Clark camped in 1805.\n\n#### **Afternoon: Choose Your Route East**\nDepending on where you are catching your flight or heading home:\n\n* **Option A: Paleontology in Dickinson**\n  * Head southeast down to Dickinson and visit the **Badlands Dinosaur Museum** (part of the Dickinson Museum Center). It holds the largest collection of real dinosaur fossils on display in North Dakota, including a massive *T. rex* and triceratops skulls found right in the Hell Creek Formation.\n* **Option B: Earth Lodges at Knife River**\n  * Drive east along ND-200 toward Stanton to visit **Knife River Indian Villages National Historic Site**. Tour a reconstructed, full-scale Earth Lodge and view the visible circular depressions left by the historic villages that served as major Native trade hubs where Lewis and Clark met Sakakawea.\n\n---\n\n### **Essential Road Trip Tips**\n* **Bison Safety:** Bison roam freely across both units of TRNP. Stay at least 25 yards away; if they stop grazing and look at you, you are too close.\n* **Fuel & Connectivity:** Western North Dakota has wide open spaces with long distances between gas stations and occasional dead zones for mobile service. Keep your tank at least half full and download offline maps before setting out.\n* **Best Season:** **May to October** offers the best weather and open facilities. If you want the full Medora experience (the musical and steak fondue), visit between early June and early September."
   },
   {
    "prompt_id": "rushmore-to-trnp",
    "provider": "gemini",
    "model": "gemini-3.8-flash",
-   "error": "Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
    "mentioned": false,
-   "cited_us": false
+   "cited_us": false,
+   "position": null,
+   "peers": [
+    "Mount Rushmore",
+    "Theodore Roosevelt National Park",
+    "Chateau de Mores",
+    "Medora Musical"
+   ],
+   "excerpt": "",
+   "cited_domains": [],
+   "citations": [],
+   "text": "The direct drive north from Mount Rushmore to Theodore Roosevelt National Park (South Unit in Medora, ND) via **US-85 North** takes only about **4 to 4.5 hours (around 230 miles)**. Because it’s a relatively short driving day, you have plenty of time to add a couple of memorable stops.\n\nHere are the best places worth pulling over for, arranged roughly from south to north:\n\n---\n\n### 1. In the Northern Black Hills (Before Heading Onto the Plains)\nBefore you leave the hills behind, you can take a slight detour through one of these classic spots:\n\n* **Deadwood, South Dakota:** \n  * *Why stop:* If you want Wild West history, this 1870s gold rush town is famous for legends like Wild Bill Hickok and Calamity Jane. \n  * *What to do:* Walk historic Main Street, visit Mount Moriah Cemetery where Wild Bill and Calamity Jane are buried, or stop by the Adams Museum.\n* **Spearfish Canyon Scenic Byway (US-14A):** \n  * *Why stop:* If you prefer lush nature over towns, bypass the interstate and cut through Spearfish Canyon. It features towering 1,000-foot limestone palisades and scenic roadside waterfall stops like **Bridal Veil Falls** and **Roughlock Falls**.\n\n---\n\n### 2. The Big Detour: Devils Tower National Monument (Wyoming)\n* **The Detour:** Adding Devils Tower takes you slightly west into Wyoming, adding about **1.5 to 2 hours of extra driving time** (routing Mount Rushmore $\\rightarrow$ Devils Tower $\\rightarrow$ Belle Fourche $\\rightarrow$ Medora).\n* **Why it’s worth it:** As America’s first national monument, the 867-foot volcanic monolith is an awe-inspiring sight rising abruptly out of the rolling hills. You can easily do the paved 1.3-mile **Tower Trail** loop around the base in under an hour.\n\n---\n\n### 3. Along US-85 (The Direct Route North)\n\n* **Belle Fourche, South Dakota:**\n  * **Geographic Center of the 50 States:** Belle Fourche is the town closest to the actual geographic center of the United States (including Alaska and Hawaii). Right behind the Tri-State Museum in town is a massive 21-foot granite compass rose marker. It's a quick, fun 15-minute photo op and leg-stretch.\n* **Slim Buttes / The Castles (Custer National Forest):**\n  * *Location:* Just east of US-85 near Reva/Buffalo, SD.\n  * *Why stop:* Most people expect flat prairie in northwest South Dakota, but the Slim Buttes area rises dramatically with bright white sandstone bluffs, pine-topped mesas, and unique rock formations known as **The Castles** (a designated National Natural Landmark). It was also the site of the 1876 Battle of Slim Buttes.\n* **Bowman, North Dakota:**\n  * **Pioneer Trails Regional Museum:** A surprisingly world-class small-town museum. Bowman County sits in the fossil-rich Hell Creek Formation, and the museum has an impressive paleontology department featuring real dinosaur bones, triceratops skulls, and regional frontier artifacts.\n\n---\n\n### 4. Right Before the Park: Medora, North Dakota\nOnce you hit Interstate 94 and head into Medora (the gateway to TRNP's South Unit), give yourself a little time to explore before entering the park:\n\n* **Chateau de Mores State Historic Site:** The 26-room summer residence of the French nobleman and rancher, the Marquis de Mòres, who founded Medora in 1883. It still contains original 19th-century furnishings.\n* **Pitchfork Fondue & Medora Musical:** If visiting between June and early September, this is an open-air North Dakota tradition where steaks are cooked on actual pitchforks over boiling vats of oil, followed by a western musical in an outdoor amphitheater set against the badlands.\n\n---\n\n### Road Trip Tips\n* **Services are spaced out:** Once you leave Belle Fourche, towns are small and far apart. Buffalo and Bowman have gas and basic groceries, but it’s best to keep your tank topped off.\n* **Truck Traffic:** US-85 cuts through the western edge of the Bakken oil formation, so expect large semi-truck and tanker traffic between Bowman, Belfield, and Watford City.\n* **Time Zone:** You will remain in the **Mountain Time Zone** the entire trip."
   },
   {
    "prompt_id": "i94-stops",
    "provider": "gemini",
    "model": "gemini-3.8-flash",
-   "error": "Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
    "mentioned": false,
-   "cited_us": false
+   "cited_us": false,
+   "position": null,
+   "peers": [
+    "Theodore Roosevelt National Park",
+    "Painted Canyon",
+    "Chateau de Mores",
+    "Medora Musical",
+    "Pitchfork Steak Fondue"
+   ],
+   "excerpt": "",
+   "cited_domains": [],
+   "citations": [],
+   "text": "Traveling along Interstate 94 through North Dakota takes you from the fertile Red River Valley in the east, through rolling prairie and the Missouri River basin, to the rugged badlands in the west. \n\nOrganized from **East to West** (from the Minnesota border to the Montana border), here are the best stops along the way:\n\n---\n\n### 1. Fargo: Culture, Downtown & Movie Lore\n* **The Fargo Woodchipper:** Stop by the **Fargo-Moorhead Visitors Center** (Exit 348) to see the actual prop woodchipper used in the Coen brothers’ classic film *Fargo*, complete with a faux leg sticking out. \n* **Downtown Fargo:** A vibrant, walkable area featuring the restored 1926 **Fargo Theatre**, local coffee shops, independent bookstores, and microbreweries (like Drekker Brewing Company).\n* **Bonanzaville, USA (West Fargo):** A 12-acre pioneer village with 400,000+ artifacts and dozens of historic buildings, including an old sod house, saloon, and schoolhouses.\n\n### 2. Valley City: The City of Bridges *(Exit 292)*\n* **Hi-Line Railroad Bridge:** One of the longest and highest single-track railroad bridges in the country (3,860 feet long and 162 feet high). Built in 1908, it’s a stunning piece of engineering that towers over the town.\n* **Scenic Byway:** Valley City is nestled in the wooded Sheyenne River Valley, offering a scenic detour if you want a break from the flat highway.\n\n### 3. Jamestown: \"The Buffalo City\" *(Exit 258)*\n* **World’s Largest Buffalo:** Standing 26 feet tall and weighing 60 tons, \"Dakota Thunder\" has overlooked the prairie since 1959 and is one of the classic roadside photo-ops in the state.\n* **National Buffalo Museum & Live Herd:** Located right by the giant buffalo, this museum chronicles the cultural and ecological history of the American bison. It also maintains a live bison herd on the surrounding pasture.\n* **Frontier Village:** Walk through original historic buildings relocated from around North Dakota to recreate an 1800s prairie town (free admission; Louis L'Amour's writer's shack is here).\n\n### 4. Steele: World's Largest Sandhill Crane *(Exit 176)*\n* **\"Sandy\" the Sandhill Crane:** A quick, 5-minute roadside stretch to see a 40-foot-tall, 4.5-ton metal sculpture of a sandhill crane, celebrating the abundant migratory birds that pass through central North Dakota's prairie pothole region.\n\n### 5. Bismarck & Mandan: State Capital & Frontier History *(Exits 156–159)*\n* **North Dakota Heritage Center & State Museum:** Located on the Capitol grounds, this world-class (and free!) museum is North Dakota's Smithsonian. It features colossal T-rex and mosasaur skeletons, extensive Native American artifacts, and frontier history.\n* **North Dakota State Capitol:** Known as the \"Skyscraper of the Plains,\" this 19-story art deco tower is one of only four tower-style state capitols in the U.S.\n* **Fort Abraham Lincoln State Park (Mandan):** Located just south of the interstate along the Missouri River, this park contains the reconstructed home of General George Custer and the reconstructed earth lodges of **On-A-Slant Indian Village**, established by the Mandan people around 1575.\n\n### 6. New Salem: Salem Sue *(Exit 127)*\n* **World’s Largest Holstein Cow:** Standing 38 feet high atop School Hill, **Salem Sue** was erected in 1974 by local dairy farmers. Because it's perched on one of the highest points in the county, the hill offers an exceptional panoramic 360-degree view of the surrounding prairie.\n\n### 7. The Enchanted Highway *(Exit 72)*\n* **\"Geese in Flight\":** Right at the exit off I-94 sits *Geese in Flight*, recognized by Guinness World Records as the largest scrap-metal sculpture in the world. \n* *Note:* If you have an extra hour or two, you can drive south 32 miles along the Enchanted Highway to Regent to see a dozen other giant folk-art metal sculptures, including giant grasshoppers, pheasants, and deer.\n\n### 8. Dickinson: Dinosaurs & Heritage *(Exits 59–61)*\n* **Badlands Dinosaur Museum (Dickinson Museum Center):** Home to one of the largest displays of real dinosaur fossils in the Upper Midwest, including full skeletons of Triceratops, Tyrannosaurus, and Hadrosaurs excavated directly from the nearby Hell Creek Formation.\n\n### 9. Medora & Theodore Roosevelt National Park *(Exits 24–32)*\n*This is the crown jewel of Interstate 94 in North Dakota.*\n* **Painted Canyon Visitor Center (Exit 32):** You don't even have to leave the highway corridor—this rest area/visitor center sits right on the edge of the canyon, providing immediate, jaw-dropping panoramic views of the Badlands.\n* **Theodore Roosevelt National Park (South Unit):** Drive the 36-mile scenic loop to see wild feral horses, roaming bison herds, sprawling prairie dog towns, and dramatic multi-colored canyon walls. \n* **Historic Medora:** A charming Old West-style town featuring wooden boardwalks, the historic Rough Riders Hotel, and the **Chateau de Mores** (the 26-room summer home of a 19th-century French aristocrat). In summer, don't miss the outdoor **Medora Musical** and pitchfork steak fondue.\n\n---\n\n### Road Trip Tips\n* **Painted Canyon is a Must-Stop:** Even if you're in a hurry and can't visit the full national park, the **Painted Canyon Overlook** directly off Exit 32 requires zero detour and offers one of the best views in the state.\n* **Distances & Fuel:** Services are reliable in Fargo, Valley City, Jamestown, Bismarck, and Dickinson, but rural stretches between towns can be long—keep an eye on your tank.\n* **Wind:** The open plains can experience sustained crosswinds; keep both hands on the wheel if you are towing a camper or driving a high-profile vehicle."
   },
   {
    "prompt_id": "family-badlands",
    "provider": "gemini",
    "model": "gemini-3.8-flash",
-   "error": "Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
    "mentioned": false,
-   "cited_us": false
+   "cited_us": false,
+   "position": null,
+   "peers": [
+    "Theodore Roosevelt National Park",
+    "Maltese Cross Cabin",
+    "Painted Canyon",
+    "North Dakota Cowboy Hall of Fame",
+    "Medora Musical",
+    "Pitchfork Steak Fondue"
+   ],
+   "excerpt": "",
+   "cited_domains": [],
+   "citations": [],
+   "text": "The North Dakota Badlands—anchored by **Theodore Roosevelt National Park** and the historic, family-friendly town of **Medora**—are a fantastic destination for a family trip. The scenery looks like an old Western movie, wildlife is everywhere, and there are plenty of low-stress, high-fun activities for kids of all ages.\n\nHere are the best things to do with kids in the area:\n\n---\n\n### 1. Theodore Roosevelt National Park (Wildlife & Kid-Friendly Trails)\n* **Watch Prairie Dogs Pop Up:** One of the biggest hits with kids is visiting the prairie dog towns (especially in the South Unit along the main scenic drive). Children can safely watch hundreds of prairie dogs \"bark,\" scamper, and pop in and out of their burrows. \n* **Spot \"Big\" Wildlife:** Drive the scenic loops in either the South or North Units. You are almost guaranteed to see **wild bison** (often crossing right in front of your car), wild feral horses, pronghorn (antelope), and wild turkeys. \n* **Earn a Junior Ranger Badge:** Stop by the South Unit Visitor Center in Medora or the North Unit Visitor Center near Watford City to pick up a free **Junior Ranger booklet**. Kids complete scavenger hunts and nature activities to earn an official wooden badge from a ranger.\n* **Tour Theodore Roosevelt’s Maltese Cross Cabin:** Located right behind the South Unit Visitor Center, this preserved 1880s log cabin lets kids see what life was like for a future president on the rugged frontier.\n* **Family-Friendly Short Hikes:**\n  * **Wind Canyon Trail (South Unit):** A short, scenic 0.4-mile loop with wind-sculpted rock walls and a spectacular overlook of the Little Missouri River.\n  * **Painted Canyon Nature Trail (South Unit entrance on I-94):** You can take in the panoramic vista from the rim or hike the short, kid-friendly path down into the canyon colors.\n  * **Buck Hill (South Unit):** A quick, slightly steep walk on a paved trail to one of the highest points in the park for 360-degree views.\n\n---\n\n### 2. High-Energy Fun in Medora\nMedora is an authentic, walkable 1880s cowtown located right at the gate of the park’s South Unit:\n* **Play at the Medora Children’s Park:** This massive, free outdoor playground is built like a frontier wooden fort, complete with a wooden train, stagecoach, watchtowers, and slides. It’s a great spot to let toddlers and younger kids burn off energy.\n* **Point to Point Park:** Located in the heart of Medora, this family adventure park features:\n  * **Little Bully Mini Golf:** An 18-hole Badlands-themed miniature golf course.\n  * **Manitou Zipline:** A seated zip-ride that pulls pairs backward up into the hills and flies down over the town.\n  * **Medora Splash Pad & Swimming Pool:** Perfect for cooling off on hot summer afternoons.\n* **North Dakota Cowboy Hall of Fame:** An interactive museum downtown where kids can explore Native American culture, rodeo gear, and ranching history.\n\n---\n\n### 3. Iconic Western Entertainment & Dining\n* **The Medora Musical:** Held nightly throughout the summer at the open-air Burning Hills Amphitheatre. It’s an energetic, family-friendly variety show featuring Western songs, live horses on stage, comedy, history, and fireworks against the backdrop of the Badlands canyon.\n* **Pitchfork Steak Fondue:** Located on the bluff right next to the amphitheatre before the musical, chefs cook 12-ounce steaks on actual pitchforks dipped into vats of boiling oil. It’s a fun novelty show for kids, and they offer hot dogs, mac and cheese, and sides for picky eaters.\n* **Old-Fashioned Sweet Shops:** Take a stroll down Medora's boardwalks to grab giant scoops of ice cream at the **Medora Fudge and Ice Cream Depot** or vintage sodas and sweets at the local general store.\n\n---\n\n### 4. Outdoor Adventures\n* **Go Horseback Riding:** Several stables around Medora (such as Western Edge Trail Rides or Medora Riding Stables) offer guided trail rides into the Badlands hills suitable for beginners and kids (usually age 7+).\n* **World-Class Stargazing:** The Badlands have some of the darkest night skies in the country. On clear nights, step outside your cabin or camp to see the Milky Way, spot satellites, and occasionally view the Northern Lights. The park also hosts dark-sky ranger programs during the summer.\n\n---\n\n### Practical Tips for Parents:\n1. **Watch Out for Cactus:** Prickly pear cactus grows low to the ground everywhere off the paved paths. Make sure kids wear sturdy, closed-toe shoes on trails (no flip-flops).\n2. **Keep Distance from Wildlife:** Bison may look slow like cattle, but they are wild and agile. Teach kids the \"Rule of Thumb\"—if you hold your thumb up at arm’s length and can’t cover the animal, you are too close.\n3. **Summer Heat & Water:** Badlands summers can easily hit the 90s with strong sun and low humidity. Carry twice as much water as you think you need, plus hats and sunscreen."
   },
   {
    "prompt_id": "rainy-day-medora",
    "provider": "gemini",
    "model": "gemini-3.8-flash",
-   "error": "Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
    "mentioned": false,
-   "cited_us": false
+   "cited_us": false,
+   "position": null,
+   "peers": [
+    "North Dakota Cowboy Hall of Fame",
+    "Chateau de Mores",
+    "Theodore Roosevelt National Park"
+   ],
+   "excerpt": "",
+   "cited_domains": [
+    "carltonautstraveltips.com",
+    "medorand.org",
+    "expedia.com",
+    "heatherscompass.com",
+    "medora.com",
+    "wanderlog.com"
+   ],
+   "citations": [
+    "https://carltonautstraveltips.com/",
+    "https://medorand.org/",
+    "https://expedia.com/",
+    "https://heatherscompass.com/",
+    "https://medora.com/",
+    "https://wanderlog.com/"
+   ],
+   "text": "Even though Medora is famous for outdoor adventures and open-air theater, it has a surprisingly rich collection of museums, historic homes, indoor shows, and cozy spaces to explore when the weather turns rainy or cold:\n\n---\n\n### 1. Explore the Museums & Historic Buildings\n* **North Dakota Cowboy Hall of Fame (Center of Western Heritage):** This modern, 15,000-square-foot interpretive center is one of the best indoor spots in town. It features interactive exhibits on Native American culture, ranching history, and rodeo champions.\n* **Chateau de Mores State Historic Site:** Start at the indoor Interpretive Center to watch a short film and explore exhibits about the French Marquis de Mores and his cattle empire. From there, you can take an indoor tour through the preserved 26-room 1883 summer mansion, which retains most of its original Victorian furnishings.\n* **Theodore Roosevelt National Park – South Unit Visitor Center:** Located right at the edge of town, the visitor center offers an indoor museum displaying TR’s personal artifacts (including his custom rifle and buckskin suit), an orientation film, and a bookstore. \n* **Harold Schafer Heritage Center:** A free museum that honors the colorful entrepreneur (creator of Mr. Bubble and founder of Gold Seal Co.) who revitalized Medora in the 1960s. It frequently hosts rotating western art and photography exhibits.\n* **Billings County Museum & Von Hoffman House:** Located near downtown, these give a quick look at local pioneer life, Native American beadwork, and early settlement artifacts.\n\n---\n\n### 2. Catch an Indoor Performance\n* **Old Town Hall Theater:** If you're visiting during the summer season, this intimate 220-seat indoor venue hosts matinee shows and historical portrayals (such as Joe Wiegand's renowned live performance as Theodore Roosevelt).\n* **Medora Gospel Brunch:** During the summer on select weekend mornings, this hearty buffet and uplifting musical revue take place indoors.\n\n---\n\n### 3. Cozy Dining, Reading, and Shopping\n* **Lounge by the Fireplace at the Rough Riders Hotel:** The hotel’s rustic lobby features a massive stone fireplace and one of the largest private libraries of Theodore Roosevelt books in the country. You can grab a coffee, read, or enjoy a meal at **Theodore’s Dining Room**.\n* **Browse Downtown Shops:** Medora’s downtown is compact and pedestrian-friendly, making it easy to dash between covered storefronts:\n  * **Western Edge Books:** Great selection of history books, regional fiction, and children’s literature.\n  * **Joe Ferris General Store & Local Boutiques:** Souvenirs, western apparel, and handmade gifts.\n  * **Medora Fudge & Ice Cream Depot:** A classic stop for homemade fudge and sweet treats.\n* **Casual Saloons:** Duck into the **Little Missouri Saloon** for a burger, local brews, and authentic Western ambiance.\n\n---\n\n### 4. A Rainy-Day Scenic Drive\n* **TRNP South Unit Scenic Drive:** If the rain is steady but roads are safe, you can stay inside your heated vehicle and drive the 36-mile paved scenic loop in Theodore Roosevelt National Park. The badlands take on dramatic, misty colors in wet weather, and wildlife—such as bison, wild horses, and pronghorns—are frequently spotted right from roadside turnouts.\n\n*(Note: Medora is heavily seasonal; most museums, shows, and shops are fully operational between late May and mid-September. If visiting in the off-season, check hours in advance).*"
   },
   {
    "prompt_id": "nd-museums",
    "provider": "gemini",
    "model": "gemini-3.8-flash",
-   "error": "Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
    "mentioned": false,
-   "cited_us": false
+   "cited_us": false,
+   "position": null,
+   "peers": [
+    "Theodore Roosevelt National Park"
+   ],
+   "excerpt": "",
+   "cited_domains": [],
+   "citations": [],
+   "text": "North Dakota offers a rich mix of museums showcasing paleontology, Native American heritage, pioneer life, aviation, and contemporary art. Here are some of the best museums to visit across the state:\n\n---\n\n### 1. **North Dakota Heritage Center & State Museum (Bismarck)**\n* **Focus:** State history, paleontology, Native American culture, and geology  \n* **Why it’s a must-visit:** Located on the State Capitol grounds, this is North Dakota’s premier and largest museum (and admission is free). It features four expansive galleries covering billions of years of history—from prehistoric sea creatures and a massive *Tyrannosaurus rex* skeleton to detailed exhibits on the Mandan, Hidatsa, and Arikara nations, frontier life, and modern energy.\n\n---\n\n### 2. **Plains Art Museum (Fargo)**\n* **Focus:** Contemporary, regional, and Native American art  \n* **Why it’s a must-visit:** Housed in a beautifully restored historic International Harvester warehouse in downtown Fargo, this is the largest accredited art museum in the state. It holds a permanent collection of several thousand works, featuring prominent modern artists alongside contemporary Native American and regional Midwestern painters, sculptors, and printmakers.\n\n---\n\n### 3. **Badlands Dinosaur Museum at the Dickinson Museum Center (Dickinson)**\n* **Focus:** Paleontology and local history  \n* **Why it’s a must-visit:** Part of a multi-museum complex, the Badlands Dinosaur Museum houses the largest collection of real dinosaur fossils on display in North Dakota. Highlights include a full-size cast of a *T. rex*, fossil preparation labs where you can watch scientists work, and extensive gem and mineral galleries. \n\n---\n\n### 4. **Fargo Air Museum (Fargo)**\n* **Focus:** Aviation history  \n* **Why it’s a must-visit:** Located near Hector International Airport, this museum features two full-size hangars packed with historic aircraft—many of which are still airworthy and flown regularly. Exhibits span from restored WWII warbirds (like the P-51 Mustang) to modern military jets, drones, and experimental aviation craft.\n\n---\n\n### 5. **Bonanzaville, USA (West Fargo)**\n* **Focus:** Pioneer living history and local heritage  \n* **Why it’s a must-visit:** Operated by the Cass County Historical Society, Bonanzaville is an expansive 12-acre pioneer village featuring over 40 historic buildings moved from across the Red River Valley. Visitors can explore a 19th-century church, a one-room schoolhouse, a general store, a hotel, and large collections of vintage cars, tractors, and airplanes.\n\n---\n\n### 6. **National Buffalo Museum (Jamestown)**\n* **Focus:** Natural history and cultural significance of the American bison  \n* **Why it’s a must-visit:** Situated next to \"Dakota Thunder\" (the world’s largest buffalo monument), this museum details the history of bison from prehistoric times to their near-extinction and ongoing recovery. It also maintains a live herd of bison that grazes on the adjacent pasture.\n\n---\n\n### 7. **Scandinavian Heritage Park (Minot)**\n* **Focus:** Nordic culture and immigrant history  \n* **Why it’s a must-visit:** An open-air museum paying homage to the five Scandinavian countries (Norway, Sweden, Denmark, Finland, and Iceland). Its centerpiece is a full-scale replica of the historic Gol Stave Church from Norway, alongside an authentic 18th-century Norwegian storehouse (*Stabbur*), a Danish windmill, and a giant Swedish Dala horse.\n\n---\n\n### 8. **Château de Mores State Historic Site (Medora)**\n* **Focus:** Gilded Age frontier history  \n* **Why it’s a must-visit:** Located in the historic Badlands town of Medora (the gateway to Theodore Roosevelt National Park), this 26-room mansion was built in 1883 as the summer residence of the French nobleman Marquis de Mores. It retains its original 19th-century furnishings and personal artifacts, offering a window into high-society life on the rugged Dakota frontier."
   },
   {
    "prompt_id": "newest-presidential-library",
    "provider": "gemini",
    "model": "gemini-3.8-flash",
-   "error": "Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
-   "mentioned": false,
-   "cited_us": false
+   "mentioned": true,
+   "cited_us": false,
+   "position": 1,
+   "peers": [],
+   "excerpt": "Newest Presidential Library Overall: **Theodore Roosevelt Presidential Library**",
+   "cited_domains": [
+    "wikipedia.org",
+    "cnn.com",
+    "fastcompany.com",
+    "cbsnews.com",
+    "obama.org",
+    "youtube.com",
+    "obamalibrary.gov",
+    "archives.gov"
+   ],
+   "citations": [
+    "https://wikipedia.org/",
+    "https://cnn.com/",
+    "https://fastcompany.com/",
+    "https://cbsnews.com/",
+    "https://wikipedia.org/",
+    "https://obama.org/",
+    "https://wikipedia.org/",
+    "https://youtube.com/",
+    "https://obamalibrary.gov/",
+    "https://archives.gov/",
+    "https://archives.gov/"
+   ],
+   "text": "The answer depends on whether you mean the newest presidential library facility overall or the newest traditional, federally operated library:\n\n### 1. Newest Presidential Library Overall: **Theodore Roosevelt Presidential Library**\n* **Opened:** July 4, 2026\n* **Location:** Medora, North Dakota\n* Built more than a century after the 26th president’s death, this museum and library facility in the North Dakota Badlands was constructed by a private foundation and focuses on Roosevelt's conservation legacy, life, and public service. \n\n### 2. Newest Modern Presidential Center: **Barack Obama Presidential Center**\n* **Opened:** June 19, 2026\n* **Location:** Jackson Park, Chicago, Illinois\n* Dedicated to the 44th president, this 19-acre campus includes a museum, public park spaces, and a Chicago Public Library branch. Unlike earlier 20th-century models, the physical campus is operated privately by the Obama Foundation rather than the federal government, while NARA maintains the records as the first fully digital presidential archive.\n\n### 3. Newest Traditional NARA-Administered Library: **George W. Bush Presidential Center**\n* **Opened:** May 2013\n* **Location:** Southern Methodist University (SMU) campus, Dallas, Texas\n* If referring strictly to the network of traditional, federally administered physical archives and museums operated directly by the National Archives and Records Administration (NARA) under the Presidential Libraries Act, the George W. Bush Library remains the most recent traditional facility built and handed over to NARA."
   },
   {
    "prompt_id": "presidential-libraries-visit",
    "provider": "gemini",
    "model": "gemini-3.8-flash",
-   "error": "Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
-   "mentioned": false,
-   "cited_us": false
+   "mentioned": true,
+   "cited_us": false,
+   "position": 1,
+   "peers": [],
+   "excerpt": "Roosevelt Presidential Library and Museum *(Hyde Park, New York)*",
+   "cited_domains": [],
+   "citations": [],
+   "text": "While there are 15 official presidential libraries administered by the National Archives (plus notable non-NARA sites like Lincoln’s), a few stand out above the rest for their interactive exhibits, historic artifacts, stunning architecture, and scenic locations. \n\nHere are the presidential libraries most widely considered **worth a dedicated trip**, categorized by what makes them special:\n\n---\n\n### The \"Must-Visits\" (Top Tier)\n\n#### 1. Ronald Reagan Presidential Library & Museum *(Simi Valley, California)*\n* **The Vibe:** Epic scale and incredible artifacts set atop a scenic mountain ridge with sweeping views of Southern California.\n* **Why it’s worth it:** \n  * **Air Force One Pavilion:** You can walk through the actual Boeing 707 that served Reagan, Nixon, Carter, and George H.W. Bush, housed inside a massive glass hangar alongside Marine One.\n  * An authentic pub transported from Ballyporeen, Ireland (which Reagan visited in 1984).\n  * An actual section of the Berlin Wall outside overlooking the valley.\n  * A full-scale replica of Reagan’s Oval Office.\n\n#### 2. Franklin D. Roosevelt Presidential Library and Museum *(Hyde Park, New York)*\n* **The Vibe:** Deep history and picturesque Hudson River Valley charm.\n* **Why it’s worth it:**\n  * **The Original:** FDR conceived the concept of the modern presidential library and designed this Dutch-colonial stone building himself while still in office.\n  * Covers the seismic eras of the Great Depression and World War II, complete with interactive touchscreens exploring his fireside chats and the New Deal.\n  * Includes access to **Springwood** (FDR’s lifelong home), his custom-modified Ford convertible, and nearby **Val-Kill** (Eleanor Roosevelt’s private retreat).\n\n#### 3. Abraham Lincoln Presidential Library and Museum *(Springfield, Illinois)*\n* **The Vibe:** Immersive, theatrical, and very family-friendly *(Note: Run by the state of Illinois, not NARA)*.\n* **Why it’s worth it:**\n  * Uses theatrical staging, life-sized hyper-realistic wax figures, and holographic presentations (“Ghosts of the Library”) to tell Lincoln’s story from a log cabin to Ford’s Theatre.\n  * Pairs perfectly with Springfield’s broader Lincoln sites, including the Lincoln Home National Historic Site, his law office, and his tomb at Oak Ridge Cemetery.\n\n#### 4. John F. Kennedy Presidential Library and Museum *(Boston, Massachusetts)*\n* **The Vibe:** Sleek mid-century architecture and a dramatic waterfront setting.\n* **Why it’s worth it:**\n  * Designed by legendary architect **I.M. Pei**, the building sits right on the edge of Dorchester Bay, with a soaring glass pavilion looking out toward the Boston skyline.\n  * Captures the spirit of the 1960s, the Space Race, the Civil Rights movement, and the high-tension days of the Cuban Missile Crisis.\n  * Displays personal items from Jacqueline Kennedy’s iconic wardrobe and JFK’s sailing memorabilia.\n\n---\n\n### Best for Gripping, High-Stakes History\n\n#### 5. Harry S. Truman Presidential Library and Museum *(Independence, Missouri)*\n* **Why it’s worth it:** Completely reimagined after a massive $30+ million renovation, it is now one of the most technologically advanced and well-curated libraries in the system.\n* **The Highlight:** It doesn't shy away from Truman’s monumental decisions—interactive exhibits put you in his shoes deciding whether to use the atomic bomb, enact the Marshall Plan, integrate the military, or intervene in Korea.\n\n#### 6. Lyndon B. Johnson Presidential Library *(Austin, Texas)*\n* **Why it’s worth it:** Located on the campus of UT Austin, the architecture is striking: its centerpiece is the \"Great Hall,\" featuring a 4-story glass wall displaying tens of thousands of red-and-gold archival boxes.\n* **The Highlight:** A candid, unvarnished look at the triumphs of the Great Society and Civil Rights legislation juxtaposed against the heartbreak of the Vietnam War, featuring audio recordings of his famous, arm-twisting telephone calls.\n\n#### 7. Richard Nixon Presidential Library and Museum *(Yorba Linda, California)*\n* **Why it’s worth it:** Re-opened in 2016 with completely modern, objective exhibits that don't whitewash history. The library handles the **Watergate scandal** head-on with detailed interactive tapes and investigative timelines.\n* **The Highlight:** You can tour Nixon’s original birthplace cottage, walk through the Sikorsky Marine One helicopter used by four presidents, and visit his burial site in the surrounding rose gardens.\n\n---\n\n### Modern & Interactive\n\n* **George W. Bush Presidential Center *(Dallas, Texas)*:** Located on the SMU campus, it features the interactive *Decision Points Theater* (where you role-play presidential crises), a twisted piece of steel from the World Trade Center, and a replica Oval Office with access to a Texas-native rose garden.\n* **Dwight D. Eisenhower Presidential Library *(Abilene, Kansas)*:** Fresh off a major multi-million-dollar redesign, it is a masterclass for WWII buffs, tracing his journey from a small-town Kansas boy to Supreme Allied Commander and two-term President.\n\n---\n\n### Tips for Visiting\n1. **Get the Passport:** If you plan on visiting multiple sites, pick up the **Presidential Libraries Passport** at any NARA location and collect commemorative stamps at each one.\n2. **Book Ahead for Special Tours:** Many sites that include historic homes (like FDR’s Springwood or Eisenhower’s boyhood home) require timed-entry reservation tickets that can sell out on busy weekends.\n3. **Budget 3–4 Hours Minimum:** Most of these libraries are paired with museum campuses, historic grounds, and film screenings that easily take half a day to properly absorb."
   },
   {
    "prompt_id": "tr-learn-where",
    "provider": "gemini",
    "model": "gemini-3.8-flash",
-   "error": "Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
-   "mentioned": false,
-   "cited_us": false
+   "mentioned": true,
+   "cited_us": false,
+   "position": 6,
+   "peers": [
+    "Theodore Roosevelt National Park",
+    "Maltese Cross Cabin",
+    "Elkhorn Ranch",
+    "Chateau de Mores",
+    "Medora Musical"
+   ],
+   "excerpt": "* **Theodore Roosevelt Presidential Library (Medora, ND)**",
+   "cited_domains": [
+    "nd.gov",
+    "ndtourism.com"
+   ],
+   "citations": [
+    "https://nd.gov/",
+    "https://ndtourism.com/"
+   ],
+   "text": "Theodore Roosevelt famously credited his time in the North Dakota Badlands with transforming him into the man who would become president, declaring, *\"I never would have been President had it not been for my experience in North Dakota.\"* \n\nSeveral top places—both in-person and online—offer rich resources to explore this formative chapter of his life:\n\n---\n\n### 1. In-Person Historical Sites\n\n* **Theodore Roosevelt National Park (Medora & Watford City, ND)**\n  * **The South Unit Visitor Center & Maltese Cross Cabin (Medora):** When Roosevelt first came to the Badlands in 1883 to hunt bison, he invested in the Maltese Cross Ranch. His original, reconstructed log cabin now sits right behind the visitor center in Medora. You can walk through the cabin and see items dating from his stay.\n  * **Elkhorn Ranch Unit:** After his wife and mother died on the same day in 1884, Roosevelt returned to the Badlands seeking solitude and built the Elkhorn Ranch along the Little Missouri River, which he considered his \"home ranch.\" While the buildings are gone, the foundation stones remain in a secluded, preserved wilderness setting that offers a quiet look at the landscape he loved.\n\n* **Historic Medora, North Dakota**\n  * The entire 1880s cattle boomtown where Roosevelt arrived is well-preserved. You can visit the **Chateau de Mores State Historic Site**, the summer home of the Marquis de Mores (a French nobleman, entrepreneur, and contemporary neighbor with whom Roosevelt had a famous rivalry and complex relationship).\n  * The town also hosts the outdoor **Medora Musical**, which routinely touches on Roosevelt’s local legacy and folklore.\n\n---\n\n### 2. Museums & Research Centers\n\n* **Theodore Roosevelt Presidential Library (Medora, ND)**\n  * Located in the Badlands just outside Medora, this major presidential library focuses heavily on Roosevelt's conservation ideals, personal trials, and the transformative years he spent in Dakota Territory.\n\n* **Theodore Roosevelt Center at Dickinson State University (Dickinson, ND)**\n  * Located about 35 miles east of Medora, Dickinson State University is home to the central digital hub for all things TR. In partnership with the Library of Congress and the National Park Service, they have digitized hundreds of thousands of letters, photographs, diary entries, and documents—including extensive collections detailing his cattle ranching ventures, letters written from the Badlands, and his time as a deputy sheriff in Billings County.\n  * Their digital collection is freely accessible online at **[theodorerooseveltcenter.org](https://www.theodorerooseveltcenter.org)**.\n\n---\n\n### 3. Roosevelt’s Own Writings & Books\n\nTo experience his time in the Dakota Territory in his own words, check out:\n* ***Hunting Trips of a Ranchman* (1885)** – Written while still ranching in Dakota, detailing his hunting exploits, local wildlife, and life on the frontier.\n* ***Ranch Life and the Hunting-Trail* (1888)** – Featuring classic illustrations by Frederic Remington, this book offers one of the best firsthand accounts of 1880s cattle ranching in the Badlands, roundups, and local outlaws.\n* ***The Rise of Theodore Roosevelt* by Edmund Morris** – Widely considered one of the definitive biographies of his early life; chapters 11 through 18 extensively cover his grief, recovery, and rugged life as a North Dakota rancher."
   },
   {
    "prompt_id": "tr-sites",
    "provider": "gemini",
    "model": "gemini-3.8-flash",
-   "error": "Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
    "mentioned": false,
-   "cited_us": false
+   "cited_us": false,
+   "position": null,
+   "peers": [
+    "Theodore Roosevelt National Park",
+    "Elkhorn Ranch",
+    "Maltese Cross Cabin",
+    "Mount Rushmore"
+   ],
+   "excerpt": "",
+   "cited_domains": [],
+   "citations": [],
+   "text": "Several historic sites across the United States preserve and commemorate the life, presidency, and conservation legacy of Theodore Roosevelt. Most are managed by the National Park Service (NPS).\n\n---\n\n### **Major National Historic Sites**\n\n1. **Sagamore Hill National Historic Site (Oyster Bay, New York)**\n   * **Significance:** Often called the \"Summer White House,\" this 83-acre estate was Roosevelt’s home from 1885 until his death in 1919. \n   * **Highlights:** The 23-room Victorian mansion remains furnished much as it was during his presidency, filled with books, family heirlooms, and hunting trophies. The grounds also host the Old Orchard Museum (originally built for his son, Theodore Roosevelt Jr.) and nature trails.\n\n2. **Theodore Roosevelt Birthplace National Historic Site (New York City, New York)**\n   * **Significance:** Located in Manhattan’s Flatiron District (28 East 20th Street), this is a reconstructed brownstone marking the site where Roosevelt was born in 1858 and lived until he was 14.\n   * **Highlights:** Restored period rooms decorated by his wife and sisters, showcasing artifacts from his childhood, his struggles with asthma, and his early interest in natural history.\n\n3. **Theodore Roosevelt Inaugural National Historic Site (Buffalo, New York)**\n   * **Significance:** Also known as the Ansley Wilcox House, this is where Roosevelt was hastily sworn in as the 26th President on September 14, 1901, following the assassination of President William McKinley at the Pan-American Exposition.\n   * **Highlights:** Interactive exhibits detailing the events surrounding the assassination, Roosevelt's oath of office, and the beginning of his progressive domestic policies.\n\n4. **Theodore Roosevelt National Park & Elkhorn Ranch (Medora, North Dakota)**\n   * **Significance:** Roosevelt first went to the Dakota Badlands in 1883 to hunt bison and returned in 1884 to grieve the simultaneous deaths of his wife, Alice, and his mother. His time as a rancher here fundamentally shaped his views on conservation.\n   * **Highlights:** \n     * **Maltese Cross Cabin:** Roosevelt’s first ranch cabin, now preserved at the South Unit Visitor Center.\n     * **Elkhorn Ranch Site:** The remote home ranch Roosevelt founded along the Little Missouri River, which he described as his favorite place in the Badlands (often called the \"Cradle of Conservation\").\n\n---\n\n### **National Memorials and Monuments**\n\n5. **Theodore Roosevelt Island (Washington, D.C.)**\n   * **Significance:** An 88-acre wooded island in the Potomac River, serving as the national memorial to Roosevelt's role as the \"Conservation President.\"\n   * **Highlights:** Miles of nature trails and a central memorial plaza featuring a 17-foot bronze statue of Roosevelt surrounded by four large granite monoliths inscribed with his quotes on nature, youth, and manhood.\n\n6. **Mount Rushmore National Memorial (Keystone, South Dakota)**\n   * **Significance:** Sculptor Gutzon Borglum chose Roosevelt to be carved alongside George Washington, Thomas Jefferson, and Abraham Lincoln to represent the expansion and development of the United States into the 20th century.\n\n---\n\n### **Other Notable Sites Connected to His Life**\n\n* **Youngs Memorial Cemetery (Oyster Bay, New York):** \n  * Roosevelt’s burial site, located just a short distance from Sagamore Hill. Adjacent to it is the **Theodore Roosevelt Sanctuary and Audubon Center**, the first Audubon songbird sanctuary in the country.\n* **Pine Knot (Albemarle County, Virginia):** \n  * A modest, rustic cottage bought by First Lady Edith Roosevelt in 1905. It served as a secluded presidential retreat where Roosevelt could escape Washington to hike, birdwatch, and chop wood without press intrusion.\n* **Henry B. Plant Museum / Tampa Bay Hotel (Tampa, Florida):** \n  * In 1898, this opulent Victorian resort served as the headquarters and staging ground for the U.S. Army during the Spanish-American War, where Roosevelt and his 1st U.S. Volunteer Cavalry—the \"Rough Riders\"—drilled before embarking for Cuba.\n* **Theodore Roosevelt Executive Office Building (Washington, D.C.):** \n  * Although part of the White House complex, Roosevelt significantly altered the building during his presidency (including constructing the original West Wing in 1902 and officially renaming the \"Executive Mansion\" to the \"White House\")."
   },
   {
    "prompt_id": "tr-library-worth-it",
    "provider": "gemini",
    "model": "gemini-3.8-flash",
-   "error": "Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
-   "mentioned": false,
-   "cited_us": false
+   "mentioned": true,
+   "cited_us": true,
+   "position": 1,
+   "peers": [
+    "Theodore Roosevelt National Park",
+    "Elkhorn Ranch",
+    "Chateau de Mores",
+    "Medora Musical"
+   ],
+   "excerpt": "**Yes, the Theodore Roosevelt Presidential Library is well worth visiting**, especially if you are interested in American history, presidential legacy, conservation, or innovative architecture.",
+   "cited_domains": [
+    "nd.gov",
+    "ndtourism.com",
+    "trlibrary.com",
+    "visitdickinson.com",
+    "cnn.com"
+   ],
+   "citations": [
+    "https://nd.gov/",
+    "https://nd.gov/",
+    "https://ndtourism.com/",
+    "https://trlibrary.com/",
+    "https://ndtourism.com/",
+    "https://visitdickinson.com/",
+    "https://trlibrary.com/",
+    "https://cnn.com/"
+   ],
+   "text": "**Yes, the Theodore Roosevelt Presidential Library is well worth visiting**, especially if you are interested in American history, presidential legacy, conservation, or innovative architecture. \n\nLocated in **Medora, North Dakota**, the library sits directly in the rugged Badlands where Roosevelt famously ranched, grieved the loss of his wife and mother, and developed the conservation ethic that defined his presidency.\n\nHighlights and practical considerations can help determine if it is right for your itinerary:\n\n---\n\n### Why It’s Worth Visiting\n\n1. **Striking Architecture & Sustainability**\n   * Designed by the renowned architectural firm **Snøhetta**, the building is nestled seamlessly into the surrounding buttes. \n   * It was built aiming for the **Living Building Challenge**—one of the world's strictest sustainability standards—striving for net-zero energy, net-zero water, and low environmental impact.\n   * The grounds feature rooftop viewing decks and a one-mile boardwalk through restored native prairie overlooking the Badlands.\n\n2. **Engaging, High-Tech Exhibits**\n   * Unlike traditional paper-heavy archives, the museum focuses heavily on immersive storytelling. It tracks Roosevelt's transformation from an asthmatic New York boy into a cowboy, reformer, soldier, and 26th president.\n   * Features include Roosevelt’s personal diaries and artifacts, interactive digital experiences, and exhibits that address both his triumphs and the complex controversies of his era.\n\n3. **A Sense of Place You Won't Find Elsewhere**\n   * Roosevelt credited North Dakota with forging the character that made him president: *\"I never would have been President if it had not been for my experiences in North Dakota.\"* Visiting a presidential library situated on the exact landscape that inspired the leader's greatest achievements (such as the U.S. Forest Service and Antiquities Act) offers a uniquely authentic connection.\n\n---\n\n### Things to Consider Before You Go\n\n* **Remote Location:** Medora is situated in western North Dakota. The nearest commercial airports are in Dickinson (about 35 minutes away) and Bismarck (about 2 hours east). Visiting primarily makes sense when paired with a broader road trip or national park tour.\n* **Timed-Entry Tickets:** Daily capacity is limited to preserve the experience. Advance reservations for timed-entry slots are strongly recommended, especially during the summer and peak morning slots.\n* **Time Commitment:** Most visitors spend roughly **3 to 4.5 hours** exploring the interior galleries, outdoor boardwalks, and terraces.\n\n---\n\n### How to Make the Most of the Trip\n\nMedora is an ideal hub for a multi-day trip:\n* **Theodore Roosevelt National Park (South Unit):** The park entrance is just minutes from the library, offering scenic drives, hiking trails, and abundant wildlife (bison herds, wild horses, and prairie dogs).\n* **Elkhorn Ranch Site:** For devoted Roosevelt fans, a rugged drive north brings you to the remote site of his original Badlands ranch cabin along the Little Missouri River.\n* **Historic Medora:** A quaint 19th-century-style western town that features the Chateau de Mores, the historic Rough Riders Hotel, and (during summer) the famous outdoor *Medora Musical*."
   },
   {
    "prompt_id": "tr-library-time",
    "provider": "gemini",
    "model": "gemini-3.8-flash",
-   "error": "Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
-   "mentioned": false,
-   "cited_us": false
+   "mentioned": true,
+   "cited_us": true,
+   "position": 1,
+   "peers": [
+    "Theodore Roosevelt National Park"
+   ],
+   "excerpt": "For a complete visit to the **Theodore Roosevelt Presidential Library** in Medora, North Dakota, you should plan to spend **about 4.5 to 5.5 hours**.",
+   "cited_domains": [
+    "peacegardenalmanac.com",
+    "visitdickinson.com",
+    "trlibrary.com",
+    "ndtourism.com",
+    "themidwestmillennial.com"
+   ],
+   "citations": [
+    "https://peacegardenalmanac.com/",
+    "https://visitdickinson.com/",
+    "https://trlibrary.com/",
+    "https://ndtourism.com/",
+    "https://peacegardenalmanac.com/",
+    "https://trlibrary.com/",
+    "https://trlibrary.com/",
+    "https://themidwestmillennial.com/"
+   ],
+   "text": "For a complete visit to the **Theodore Roosevelt Presidential Library** in Medora, North Dakota, you should plan to spend **about 4.5 to 5.5 hours**. \n\nThe experience spans indoor galleries and the outdoor Badlands landscape, typically broken down as follows:\n\n### 1. Indoor Exhibits: ~3.5 Hours\n* The permanent exhibition is divided into eight chronological narrative chapters—taking you through Roosevelt's NYC childhood, his ranching years in the Badlands, the Rough Riders, his presidency, and the Amazon. \n* Unlike traditional document archives, it heavily incorporates interactive \"Adventure Galleries,\" immersive storytelling, and the Trailblazer interactive system, which can take considerable time if you engage with the exhibits.\n\n### 2. The Outdoor Boardwalk & Terraces: ~1 Hour\n* An essential component of the library is its integration into the landscape that shaped Roosevelt.\n* The campus features a **one-mile outdoor loop boardwalk** that winds through native prairie, along with rooftop terraces that offer panoramic views over the Badlands and interpretive stops on local ecology and conservation.\n\n### 3. Dining & Amenities: ~45–60 Minutes\n* If you plan to stop at the on-site restaurant (**Salt+Scoria**) or browse the museum store, you should budget an extra hour.\n\n---\n\n### Suggested Time Allotments\n* **Highlights / Rushed Visit:** **2.5 to 3 hours** (skimming some exhibits and taking a quick walk on the boardwalk).\n* **Standard Complete Visit:** **4.5 to 5 hours** (recommended for most travelers).\n* **History & Nature Enthusiasts:** **Full day** (combining a deep dive through the galleries, taking a specialty tour, enjoying a sit-down meal, and walking the surrounding trails).\n\n### Visiting Tips\n* **Timed Entry:** General admission is by timed-entry ticket, so it is best to book your preferred morning or early afternoon entry window in advance.\n* **Pairing with the National Park:** Because the library alone takes up the better part of a day, give **Theodore Roosevelt National Park (South Unit)** its own separate half- or full-day itinerary rather than trying to rush through both on the same afternoon."
   },
   {
    "prompt_id": "tr-library-tickets",
    "provider": "gemini",
    "model": "gemini-3.8-flash",
-   "error": "Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a",
+   "mentioned": true,
+   "cited_us": true,
+   "position": 1,
+   "peers": [],
+   "excerpt": "The **Theodore Roosevelt Presidential Library** in Medora, North Dakota, operates year-round with seasonal hours and uses timed-entry ticketing.",
+   "cited_domains": [
+    "trlibrary.com",
+    "peacegardenalmanac.com"
+   ],
+   "citations": [
+    "https://trlibrary.com/",
+    "https://trlibrary.com/",
+    "https://trlibrary.com/",
+    "https://trlibrary.com/",
+    "https://peacegardenalmanac.com/"
+   ],
+   "text": "The **Theodore Roosevelt Presidential Library** in Medora, North Dakota, operates year-round with seasonal hours and uses timed-entry ticketing.\n\n---\n\n### **Ticket Prices**\n* **Adults (ages 13+):** $26\n* **Youth (ages 3–12):** $16\n* **Children (under 3):** Free\n* *Discounts are available for seniors, active-duty military, veterans, college students, and groups of 15 or more.*\n* *Because daily capacity is regulated by timed entry, reserving tickets online in advance is strongly recommended (though walk-ups may be accommodated based on availability).*\n\n---\n\n### **Operating Hours**\nThe Library adjusts its schedule by season:\n\n* **Summer (June 1 – September 13):**\n  * Open daily: 9:00 AM – 6:00 PM\n* **Fall (September 14 – November 30):**\n  * Tuesday – Friday: 9:00 AM – 4:00 PM\n  * Saturday – Sunday: 9:00 AM – 6:00 PM\n  * *(Closed on Thanksgiving)*\n* **Winter (December 1 – March 1):**\n  * Wednesday – Sunday: 10:00 AM – 4:00 PM\n  * Monday & Tuesday: Closed\n  * *(Closed on Christmas Day and New Year's Day)*\n* **Spring (March 2 – May 31):**\n  * Tuesday – Friday: 10:00 AM – 4:00 PM\n  * Saturday – Sunday: 10:00 AM – 5:00 PM\n  * Monday: Closed\n\n*(Note: Planning for 3.5 to 4.5 hours is recommended to see both the indoor interactive exhibits and the outdoor prairie boardwalk).*"
+  },
+  {
+   "prompt_id": "trnp-what-to-see",
+   "provider": "perplexity",
+   "model": "sonar",
+   "error": "Perplexity 403: {\"error\":{\"message\":\"Sonar is now the Agent API. Use /v1/responses instead of /chat/completions. Migrate here: https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview\",\"type\":\"agent_api_",
+   "mentioned": false,
+   "cited_us": false
+  },
+  {
+   "prompt_id": "medora-things-to-do",
+   "provider": "perplexity",
+   "model": "sonar",
+   "error": "Perplexity 403: {\"error\":{\"message\":\"Sonar is now the Agent API. Use /v1/responses instead of /v1/sonar. Migrate here: https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview\",\"type\":\"chat_completions_n",
+   "mentioned": false,
+   "cited_us": false
+  },
+  {
+   "prompt_id": "nd-road-trip",
+   "provider": "perplexity",
+   "model": "sonar",
+   "error": "Perplexity 403: {\"error\":{\"message\":\"Sonar is now the Agent API. Use /v1/responses instead of /v1/sonar. Migrate here: https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview\",\"type\":\"chat_completions_n",
+   "mentioned": false,
+   "cited_us": false
+  },
+  {
+   "prompt_id": "rushmore-to-trnp",
+   "provider": "perplexity",
+   "model": "sonar",
+   "error": "Perplexity 403: {\"error\":{\"message\":\"Sonar is now the Agent API. Use /v1/responses instead of /v1/sonar. Migrate here: https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview\",\"type\":\"chat_completions_n",
+   "mentioned": false,
+   "cited_us": false
+  },
+  {
+   "prompt_id": "i94-stops",
+   "provider": "perplexity",
+   "model": "sonar",
+   "error": "Perplexity 403: {\"error\":{\"message\":\"Sonar is now the Agent API. Use /v1/responses instead of /v1/sonar. Migrate here: https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview\",\"type\":\"chat_completions_n",
+   "mentioned": false,
+   "cited_us": false
+  },
+  {
+   "prompt_id": "family-badlands",
+   "provider": "perplexity",
+   "model": "sonar",
+   "error": "Perplexity 403: {\"error\":{\"message\":\"Sonar is now the Agent API. Use /v1/responses instead of /v1/sonar. Migrate here: https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview\",\"type\":\"chat_completions_n",
+   "mentioned": false,
+   "cited_us": false
+  },
+  {
+   "prompt_id": "rainy-day-medora",
+   "provider": "perplexity",
+   "model": "sonar",
+   "error": "Perplexity 403: {\"error\":{\"message\":\"Sonar is now the Agent API. Use /v1/responses instead of /v1/sonar. Migrate here: https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview\",\"type\":\"chat_completions_n",
+   "mentioned": false,
+   "cited_us": false
+  },
+  {
+   "prompt_id": "nd-museums",
+   "provider": "perplexity",
+   "model": "sonar",
+   "error": "Perplexity 403: {\"error\":{\"message\":\"Sonar is now the Agent API. Use /v1/responses instead of /v1/sonar. Migrate here: https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview\",\"type\":\"chat_completions_n",
+   "mentioned": false,
+   "cited_us": false
+  },
+  {
+   "prompt_id": "newest-presidential-library",
+   "provider": "perplexity",
+   "model": "sonar",
+   "error": "Perplexity 403: {\"error\":{\"message\":\"Sonar is now the Agent API. Use /v1/responses instead of /v1/sonar. Migrate here: https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview\",\"type\":\"chat_completions_n",
+   "mentioned": false,
+   "cited_us": false
+  },
+  {
+   "prompt_id": "presidential-libraries-visit",
+   "provider": "perplexity",
+   "model": "sonar",
+   "error": "Perplexity 403: {\"error\":{\"message\":\"Sonar is now the Agent API. Use /v1/responses instead of /v1/sonar. Migrate here: https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview\",\"type\":\"chat_completions_n",
+   "mentioned": false,
+   "cited_us": false
+  },
+  {
+   "prompt_id": "tr-learn-where",
+   "provider": "perplexity",
+   "model": "sonar",
+   "error": "Perplexity 403: {\"error\":{\"message\":\"Sonar is now the Agent API. Use /v1/responses instead of /v1/sonar. Migrate here: https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview\",\"type\":\"chat_completions_n",
+   "mentioned": false,
+   "cited_us": false
+  },
+  {
+   "prompt_id": "tr-sites",
+   "provider": "perplexity",
+   "model": "sonar",
+   "error": "Perplexity 403: {\"error\":{\"message\":\"Sonar is now the Agent API. Use /v1/responses instead of /v1/sonar. Migrate here: https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview\",\"type\":\"chat_completions_n",
+   "mentioned": false,
+   "cited_us": false
+  },
+  {
+   "prompt_id": "tr-library-worth-it",
+   "provider": "perplexity",
+   "model": "sonar",
+   "error": "Perplexity 403: {\"error\":{\"message\":\"Sonar is now the Agent API. Use /v1/responses instead of /v1/sonar. Migrate here: https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview\",\"type\":\"chat_completions_n",
+   "mentioned": false,
+   "cited_us": false
+  },
+  {
+   "prompt_id": "tr-library-time",
+   "provider": "perplexity",
+   "model": "sonar",
+   "error": "Perplexity 403: {\"error\":{\"message\":\"Sonar is now the Agent API. Use /v1/responses instead of /v1/sonar. Migrate here: https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview\",\"type\":\"chat_completions_n",
+   "mentioned": false,
+   "cited_us": false
+  },
+  {
+   "prompt_id": "tr-library-tickets",
+   "provider": "perplexity",
+   "model": "sonar",
+   "error": "Perplexity 403: {\"error\":{\"message\":\"Sonar is now the Agent API. Use /v1/responses instead of /v1/sonar. Migrate here: https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview\",\"type\":\"chat_completions_n",
    "mentioned": false,
    "cited_us": false
   }
  ],
- "top_cited_domains": []
+ "top_cited_domains": [
+  [
+   "trlibrary.com",
+   12
+  ],
+  [
+   "ndtourism.com",
+   10
+  ],
+  [
+   "home.nps.gov",
+   8
+  ],
+  [
+   "nps.gov",
+   6
+  ],
+  [
+   "medora.com",
+   6
+  ],
+  [
+   "history.nd.gov",
+   4
+  ],
+  [
+   "en.wikipedia.org",
+   3
+  ],
+  [
+   "visitwatfordcity.com",
+   2
+  ],
+  [
+   "northdakotacowboy.org",
+   2
+  ],
+  [
+   "parkrec.nd.gov",
+   2
+  ],
+  [
+   "cnn.com",
+   2
+  ],
+  [
+   "nd.gov",
+   2
+  ],
+  [
+   "visitdickinson.com",
+   2
+  ],
+  [
+   "peacegardenalmanac.com",
+   2
+  ],
+  [
+   "visitawatfordcity.com",
+   1
+  ],
+  [
+   "gofossilhunting.com",
+   1
+  ],
+  [
+   "mdhta.com",
+   1
+  ],
+  [
+   "watfordcityrvpark.com",
+   1
+  ],
+  [
+   "travelsouthdakota.com",
+   1
+  ],
+  [
+   "crazyhorsememorial.org",
+   1
+  ],
+  [
+   "walldrug.com",
+   1
+  ],
+  [
+   "traveldatalab.com",
+   1
+  ],
+  [
+   "dickinsongov.com",
+   1
+  ],
+  [
+   "roadsideamerica.com",
+   1
+  ],
+  [
+   "google.com",
+   1
+  ]
+ ]
 }

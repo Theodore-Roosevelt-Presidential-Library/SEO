@@ -1,147 +1,1328 @@
 {
- "updated": "2026-10-20T04:42:58+00:00",
- "source": "gsc",
+ "updated": "2026-10-20T05:14:53+00:00",
+ "source": "dataforseo+gsc",
  "keywords": [
   {
    "keyword": "theodore roosevelt presidential library",
    "group": "Visit",
-   "volume": null,
+   "volume": 74000,
    "gsc": {
     "position": 1.1,
     "clicks": 8046,
     "impressions": 17210
    },
-   "serp": null
+   "serp": {
+    "rank": 5,
+    "url": "https://www.trlibrary.com/video/playlist/PL-sck-PjBiFdoe8bWA8DpPKPpD3O001Qz",
+    "top": [
+     {
+      "rank": 1,
+      "domain": "fdrlibrary.org",
+      "url": "https://www.fdrlibrary.org/",
+      "title": "FDR Presidential Library & Museum: Home"
+     },
+     {
+      "rank": 2,
+      "domain": "visitdickinson.com",
+      "url": "https://www.visitdickinson.com/business/theodore-roosevelt-presidential-library---opening-2026",
+      "title": "Theodore Roosevelt Presidential Library - Opening 2026"
+     },
+     {
+      "rank": 3,
+      "domain": "youtube.com",
+      "url": "https://www.youtube.com/watch?v=gFlYlWqzRNo",
+      "title": "Theodore Roosevelt Presidential Library opens 107 years after ..."
+     },
+     {
+      "rank": 4,
+      "domain": "ap.org",
+      "url": "https://www.ap.org/news-highlights/spotlights/2025/theodore-roosevelt-library-takes-calculated-risk-with-remote-north-dakota-site/",
+      "title": "Theodore Roosevelt library takes 'calculated risk' with remote ..."
+     },
+     {
+      "rank": 5,
+      "domain": "trlibrary.com",
+      "url": "https://www.trlibrary.com/video/playlist/PL-sck-PjBiFdoe8bWA8DpPKPpD3O001Qz",
+      "title": "About the Library"
+     },
+     {
+      "rank": 6,
+      "domain": "instagram.com",
+      "url": "https://www.instagram.com/trlibrary/?hl=en",
+      "title": "TR Presidential Library (@trlibrary)"
+     },
+     {
+      "rank": 7,
+      "domain": "foxchattanooga.com",
+      "url": "https://foxchattanooga.com/news/nation-world/photos-a-look-inside-the-theodore-roosevelt-presidential-library-opening-july-4th-trump-dedication-national-park-medora-north-dakota-living-certified-carbon-neutral-energy-carbon-water-waste-ai-displays-holograms",
+      "title": "A look inside the Theodore Roosevelt Presidential Library ..."
+     },
+     {
+      "rank": 8,
+      "domain": "jlgarchitects.com",
+      "url": "https://jlgarchitects.com/theodorerooseveltpresidentiallibrary/",
+      "title": "The Story of the Theodore Roosevelt Presidential Library"
+     },
+     {
+      "rank": 9,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/SecretaryBurgum/videos/the-countdown-is-on-in-days-the-theodore-roosevelt-presidential-library-opens-in/1044351828067494/",
+      "title": "Theodore Roosevelt Presidential Library Opens in Medora ..."
+     },
+     {
+      "rank": 10,
+      "domain": "trlibrary.com",
+      "url": "https://www.trlibrary.com/video/playlist/PL-sck-PjBiFckfWxGlaKx64hnfB5lsXra",
+      "title": "Theodore Roosevelt Center at Dickinson State University"
+     }
+    ],
+    "features": [
+     "ai_overview",
+     "google_reviews",
+     "knowledge_graph",
+     "paid",
+     "people_also_ask",
+     "related_searches",
+     "short_videos",
+     "video"
+    ],
+    "ai_overview": true,
+    "ai_overview_cites_us": false,
+    "ai_overview_sources": []
+   }
   },
   {
    "keyword": "things to do in medora nd",
    "group": "Visit",
-   "volume": null,
+   "volume": 1600,
    "gsc": {
     "position": 2.3,
     "clicks": 7,
     "impressions": 20
    },
-   "serp": null
+   "serp": {
+    "rank": null,
+    "url": null,
+    "top": [
+     {
+      "rank": 1,
+      "domain": "wanderfilledlife.com",
+      "url": "https://wanderfilledlife.com/things-to-do-medora-nd/",
+      "title": "Things to Do in Medora, ND"
+     },
+     {
+      "rank": 2,
+      "domain": "atlasobscura.com",
+      "url": "https://www.atlasobscura.com/things-to-do/medora-north-dakota",
+      "title": "Cool and Unusual Things to Do in Medora"
+     },
+     {
+      "rank": 3,
+      "domain": "medora.com",
+      "url": "https://medora.com/signup/",
+      "title": "Exploration Guide"
+     },
+     {
+      "rank": 4,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/groups/1790172214831676/posts/2034602640388631/",
+      "title": "How to Spend a Day in Medora, North Dakota"
+     },
+     {
+      "rank": 5,
+      "domain": "youtube.com",
+      "url": "https://www.youtube.com/watch?v=28tht9HxlbY",
+      "title": "Medora North Dakota Travel Guide | What to Do, Food & ..."
+     },
+     {
+      "rank": 6,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/groups/15908242749/posts/10161517151922750/?tl=hi_IN",
+      "title": "Things to do in Medora, North Dakota with kids?"
+     },
+     {
+      "rank": 7,
+      "domain": "travelwithsara.com",
+      "url": "https://travelwithsara.com/2022/09/29/the-best-things-to-do-in-medora-north-dakota/",
+      "title": "The Best Things To Do In Medora, North Dakota"
+     },
+     {
+      "rank": 8,
+      "domain": "medora.com",
+      "url": "https://medora.com/two-day-getaway/",
+      "title": "Two-Day Getaway in Medora, North Dakota"
+     },
+     {
+      "rank": 9,
+      "domain": "discovermedora.com",
+      "url": "https://discovermedora.com/experience-medora/",
+      "title": "Medora Convention & Visitors Bureau"
+     },
+     {
+      "rank": 10,
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Attractions-g60973-Activities-c56-Medora_North_Dakota.html",
+      "title": "THE BEST Fun Things to Do in Medora (Updated 2026)"
+     }
+    ],
+    "features": [
+     "ai_overview",
+     "people_also_ask",
+     "related_searches",
+     "top_sights"
+    ],
+    "ai_overview": true,
+    "ai_overview_cites_us": false,
+    "ai_overview_sources": [
+     "facebook.com",
+     "heatherscompass.com",
+     "instagram.com",
+     "medora.com",
+     "ndtourism.com",
+     "tripadvisor.com",
+     "vacationmedora.com"
+    ]
+   }
   },
   {
    "keyword": "medora north dakota attractions",
    "group": "Visit",
-   "volume": null,
+   "volume": 1600,
    "gsc": null,
-   "serp": null
+   "serp": {
+    "rank": null,
+    "url": null,
+    "top": [
+     {
+      "rank": 1,
+      "domain": "medora.com",
+      "url": "https://medora.com/theodorerooseveltnationalpark/",
+      "title": "Theodore Roosevelt National Park | Medora, North Dakota"
+     },
+     {
+      "rank": 2,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/HiddenSpringsJava/videos/medora-north-dakota-is-worth-the-trip-a-national-park-an-old-west-town-a-nightly/1434381761311201/",
+      "title": "Medora, North Dakota is worth the trip. A national park, an Old ..."
+     },
+     {
+      "rank": 3,
+      "domain": "expedia.com",
+      "url": "https://www.expedia.com/Medora.dx132151",
+      "title": "2026 Travel Guide for Medora, North Dakota"
+     },
+     {
+      "rank": 4,
+      "domain": "medora.com",
+      "url": "https://medora.com/signup/",
+      "title": "Exploration Guide"
+     },
+     {
+      "rank": 5,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/groups/15908242749/posts/10162904758717750/",
+      "title": "What else to do in Medora, ND besides TR library and ..."
+     },
+     {
+      "rank": 6,
+      "domain": "wanderlog.com",
+      "url": "https://wanderlog.com/list/geoCategory/1771938/fun-things-to-do-in-medora-fun-attractions-and-activities",
+      "title": "Fun things to do in Medora: 13 fun attractions and activities"
+     },
+     {
+      "rank": 7,
+      "domain": "medora.com",
+      "url": "https://medora.com/your-nd-roadtrip/",
+      "title": "Your ND Road Trip | Medora, North Dakota"
+     },
+     {
+      "rank": 8,
+      "domain": "discovermedora.com",
+      "url": "https://discovermedora.com/things-to-do/museums-history/",
+      "title": "Museums & History Archives - Medora Convention & Visitors ..."
+     },
+     {
+      "rank": 9,
+      "domain": "discovermedora.com",
+      "url": "https://discovermedora.com/things-to-do/museums-history/",
+      "title": "Museums & History Archives - Medora Convention & Visitors ..."
+     },
+     {
+      "rank": 10,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/MedoraND/posts/spend-memorial-day-weekend-exploring-theodore-roosevelt-national-park-the-maah-d/10158383787276963/",
+      "title": "Explore Medora ND on Memorial Day weekend"
+     }
+    ],
+    "features": [
+     "people_also_ask",
+     "perspectives",
+     "related_searches",
+     "top_sights",
+     "video"
+    ],
+    "ai_overview": false,
+    "ai_overview_cites_us": false,
+    "ai_overview_sources": []
+   }
   },
   {
    "keyword": "things to do near theodore roosevelt national park",
    "group": "Visit",
-   "volume": null,
+   "volume": 50,
    "gsc": null,
-   "serp": null
+   "serp": {
+    "rank": null,
+    "url": null,
+    "top": [
+     {
+      "rank": 1,
+      "domain": "youtube.com",
+      "url": "https://www.youtube.com/watch?v=bLIOhi5sBk0",
+      "title": "Things to do in Theodore Roosevelt National Park? (Explore ..."
+     },
+     {
+      "rank": 2,
+      "domain": "seenbyamy.com",
+      "url": "https://www.seenbyamy.com/things-to-do-in-theodore-roosevelt-national-park/",
+      "title": "The Best Things To Do In Theodore Roosevelt National Park"
+     },
+     {
+      "rank": 3,
+      "domain": "tripsavvy.com",
+      "url": "https://www.tripsavvy.com/theodore-roosevelt-national-park-north-dakota-3362245",
+      "title": "A Guide to North Dakota's Theodore Roosevelt National Park"
+     },
+     {
+      "rank": 4,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/groups/15908242749/posts/10162249484452750/",
+      "title": "I need to go to North Dakota!!! What to do there?"
+     },
+     {
+      "rank": 5,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/groups/National.Park.Service/posts/10158853225230832/",
+      "title": "What to see in Theodore Roosevelt and Badlands National ..."
+     },
+     {
+      "rank": 6,
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Attractions-g143052-Activities-c57-Theodore_Roosevelt_National_Park_North_Dakota.html",
+      "title": "Nature & Parks in Theodore Roosevelt National Park"
+     },
+     {
+      "rank": 7,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/groups/15908242749/posts/10162908183597750/?tl=hi_IN",
+      "title": "What else to see and do in North Dakota besides Theodore ..."
+     },
+     {
+      "rank": 8,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/groups/715752460659011/posts/829086239325632/",
+      "title": "Any recommendations for places to visit in North Dakota?"
+     },
+     {
+      "rank": 9,
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/ShowTopic-g143052-i8958-k13542132-Must_sees-Theodore_Roosevelt_National_Park_North_Dakota.html",
+      "title": "Must-sees - Theodore Roosevelt National Park Forum"
+     },
+     {
+      "rank": 10,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/groups/15908242749/posts/10161129973967750/",
+      "title": "Driving from Custer to Theodore Roosevelt State Park ..."
+     }
+    ],
+    "features": [
+     "ai_overview",
+     "people_also_ask",
+     "related_searches",
+     "top_sights"
+    ],
+    "ai_overview": true,
+    "ai_overview_cites_us": false,
+    "ai_overview_sources": [
+     "facebook.com",
+     "instagram.com",
+     "komoot.com",
+     "medora.com",
+     "ndtourism.com",
+     "nps.gov",
+     "tripadvisor.com",
+     "vacationmedora.com",
+     "youtube.com"
+    ]
+   }
   },
   {
    "keyword": "museums in north dakota",
    "group": "Visit",
-   "volume": null,
+   "volume": 320,
    "gsc": {
     "position": 8.1,
     "clicks": 1,
     "impressions": 7
    },
-   "serp": null
+   "serp": {
+    "rank": null,
+    "url": null,
+    "top": [
+     {
+      "rank": 1,
+      "domain": "en.wikipedia.org",
+      "url": "https://en.wikipedia.org/wiki/List_of_museums_in_North_Dakota",
+      "title": "List of museums in North Dakota"
+     },
+     {
+      "rank": 2,
+      "domain": "statemuseum.nd.gov",
+      "url": "https://statemuseum.nd.gov/",
+      "title": "| North Dakota Heritage Center & State Museum"
+     },
+     {
+      "rank": 3,
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Attractions-g28955-Activities-c49-North_Dakota.html",
+      "title": "Museums in North Dakota"
+     },
+     {
+      "rank": 4,
+      "domain": "dickinsongov.com",
+      "url": "https://www.dickinsongov.com/museum-center",
+      "title": "Museum Center | Dickinson ND"
+     },
+     {
+      "rank": 5,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/ndmuseum/",
+      "title": "North Dakota Heritage Center & State Museum"
+     },
+     {
+      "rank": 6,
+      "domain": "ndtourism.com",
+      "url": "https://www.ndtourism.com/best-places/14-north-dakota-museums-stir-your-senses",
+      "title": "North Dakota Museums to Stir Your Senses"
+     },
+     {
+      "rank": 7,
+      "domain": "ndmoa.com",
+      "url": "https://ndmoa.com/",
+      "title": "North Dakota Museum of Art"
+     },
+     {
+      "rank": 8,
+      "domain": "reddit.com",
+      "url": "https://www.reddit.com/r/northdakota/comments/1kvdroy/museumslocal_history_sites_along_i94/",
+      "title": "Museums/Local history sites along I-94 : r/northdakota"
+     },
+     {
+      "rank": 9,
+      "domain": "kxnet.com",
+      "url": "https://www.kxnet.com/news/state-news/highest-rated-museums-in-north-dakota-by-visitors/",
+      "title": "Highest-rated museums in North Dakota by visitors"
+     },
+     {
+      "rank": 10,
+      "domain": "history.nd.gov",
+      "url": "https://www.history.nd.gov/",
+      "title": "Welcome to the State Historical Society of North Dakota"
+     }
+    ],
+    "features": [
+     "images",
+     "local_pack",
+     "people_also_ask",
+     "related_searches"
+    ],
+    "ai_overview": false,
+    "ai_overview_cites_us": false,
+    "ai_overview_sources": []
+   }
   },
   {
    "keyword": "north dakota road trip",
    "group": "Visit",
-   "volume": null,
+   "volume": 140,
    "gsc": null,
-   "serp": null
+   "serp": {
+    "rank": 5,
+    "url": "https://www.trlibrary.com/visit/itineraries/4-days-north-dakota",
+    "top": [
+     {
+      "rank": 1,
+      "domain": "ndtourism.com",
+      "url": "https://www.ndtourism.com/legendaryroadtripnd",
+      "title": "Legendary Road Trips in North Dakota"
+     },
+     {
+      "rank": 2,
+      "domain": "afar.com",
+      "url": "https://www.afar.com/magazine/north-dakota-road-trip",
+      "title": "6-Day Road Trip Itinerary in North Dakota"
+     },
+     {
+      "rank": 3,
+      "domain": "dangtravelers.com",
+      "url": "https://www.dangtravelers.com/best-attractions-north-dakota-road-trip/",
+      "title": "Best Attractions on an Epic North Dakota Road Trip"
+     },
+     {
+      "rank": 4,
+      "domain": "allfiftyclub.com",
+      "url": "https://allfiftyclub.com/i-94-north-dakota-summer-road-trip/",
+      "title": "I-94 North Dakota Summer Road Trip"
+     },
+     {
+      "rank": 5,
+      "domain": "trlibrary.com",
+      "url": "https://www.trlibrary.com/visit/itineraries/4-days-north-dakota",
+      "title": "4-Day North Dakota Road Trip Itinerary"
+     },
+     {
+      "rank": 6,
+      "domain": "303magazine.com",
+      "url": "https://303magazine.com/2024/07/road-trip-through-north-dakota/",
+      "title": "Your Guide to a Fun and Funky Road Trip Through North ..."
+     },
+     {
+      "rank": 7,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/themidwestguide/videos/i-think-north-dakota-might-be-one-of-the-most-underrated-road-trips-in-the-midwe/959490430516925/",
+      "title": "I think North Dakota might be one of the most underrated road ..."
+     },
+     {
+      "rank": 8,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/groups/15908242749/posts/10163160563392750/",
+      "title": "Completing 42 states: North Dakota road trip highlights"
+     },
+     {
+      "rank": 9,
+      "domain": "travelsouthdakota.com",
+      "url": "https://www.travelsouthdakota.com/trip-ideas/my-epic-9-day-road-trip-south-dakota",
+      "title": "My Epic 9-Day Road Trip in South Dakota"
+     },
+     {
+      "rank": 10,
+      "domain": "youtube.com",
+      "url": "https://www.youtube.com/watch?v=6J6QJ6HB4wY",
+      "title": "Road trip across North Dakota: Theodore Roosevelt National ..."
+     }
+    ],
+    "features": [
+     "ai_overview",
+     "images",
+     "people_also_ask",
+     "perspectives",
+     "related_searches"
+    ],
+    "ai_overview": true,
+    "ai_overview_cites_us": true,
+    "ai_overview_sources": [
+     "303magazine.com",
+     "afar.com",
+     "allfiftyclub.com",
+     "dangtravelers.com",
+     "facebook.com",
+     "ndtourism.com",
+     "reddit.com",
+     "trlibrary.com",
+     "youtube.com"
+    ]
+   }
   },
   {
    "keyword": "medora nd hotels",
    "group": "Visit",
-   "volume": null,
+   "volume": 8100,
    "gsc": {
     "position": 7.8,
     "clicks": 1,
     "impressions": 735
    },
-   "serp": null
+   "serp": {
+    "rank": null,
+    "url": null,
+    "top": [
+     {
+      "rank": 1,
+      "domain": "medora.com",
+      "url": "https://medora.com/book/",
+      "title": "Book Your Medora, ND Vacation"
+     },
+     {
+      "rank": 2,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/groups/15908242749/posts/10160773150437750/",
+      "title": "Any suggestions for places to stay near Medora, North ..."
+     },
+     {
+      "rank": 3,
+      "domain": "reservations.com",
+      "url": "https://www.reservations.com/Hotels/medora-north-dakota",
+      "title": "Top 20 best hotels in Medora, North Dakota"
+     },
+     {
+      "rank": 4,
+      "domain": "hotel-scoop.com",
+      "url": "https://www.hotel-scoop.com/badlands-motel-where-to-stay-in-medora-nd/",
+      "title": "Badlands Motel: Where to Stay in Medora, ND"
+     },
+     {
+      "rank": 5,
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Hotel_Review-g60973-d144779-Reviews-Rough_Riders_Hotel-Medora_North_Dakota.html",
+      "title": "ROUGH RIDERS HOTEL - Updated 2026 Reviews ..."
+     },
+     {
+      "rank": 6,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/MedoraND/posts/medoras-newest-lodging-option-features-a-one-of-a-kind-blend-of-history-and-luxu/1152670183568296/",
+      "title": "Medora's historic Ferris Inn luxury lodging"
+     },
+     {
+      "rank": 7,
+      "domain": "cntraveler.com",
+      "url": "https://www.cntraveler.com/hotels/united-states/medora/rough-riders-hotel",
+      "title": "Rough Riders Hotel, Medora, North Dakota, United States"
+     },
+     {
+      "rank": 8,
+      "domain": "expedia.com",
+      "url": "https://www.expedia.com/Medora-Hotels-Bar-Hotel.0-0-d132151-tBarHotel.Travel-Guide-Filter-Hotels",
+      "title": "The Best Hotels with Bars in Medora, ND from $185 in 2026"
+     },
+     {
+      "rank": 9,
+      "domain": "medorachamber.org",
+      "url": "https://medorachamber.org/wpbdp_category/lodging-camping/",
+      "title": "Lodging & Camping Archives"
+     },
+     {
+      "rank": 10,
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/ShowTopic-g60973-i2510-k15376775-Where_to_stay-Medora_North_Dakota.html",
+      "title": "Where to stay - Medora Forum"
+     }
+    ],
+    "features": [
+     "ai_overview",
+     "hotels_pack",
+     "people_also_ask",
+     "related_searches"
+    ],
+    "ai_overview": true,
+    "ai_overview_cites_us": true,
+    "ai_overview_sources": [
+     "google.com",
+     "medora.com",
+     "trlibrary.com",
+     "wyndhamhotels.com"
+    ]
+   }
   },
   {
    "keyword": "badlands north dakota",
    "group": "Visit",
-   "volume": null,
+   "volume": 5400,
    "gsc": {
     "position": 1.5,
     "clicks": 0,
     "impressions": 2
    },
-   "serp": null
+   "serp": {
+    "rank": null,
+    "url": null,
+    "top": [
+     {
+      "rank": 1,
+      "domain": "nps.gov",
+      "url": "https://www.nps.gov/thro/learn/kidsyouth/whatarebadlands.htm",
+      "title": "What Are the Badlands? - National Park Service"
+     },
+     {
+      "rank": 2,
+      "domain": "dmr.nd.gov",
+      "url": "https://www.dmr.nd.gov/dmr/ndgs/badlands",
+      "title": "North Dakota's Badlands"
+     },
+     {
+      "rank": 3,
+      "domain": "ndtourism.com",
+      "url": "https://www.ndtourism.com/trnp",
+      "title": "Theodore Roosevelt National Park"
+     },
+     {
+      "rank": 4,
+      "domain": "npca.org",
+      "url": "https://www.npca.org/articles/2758-an-insider-s-guide-to-badlands-beyond",
+      "title": "An Insider's Guide to Badlands & Beyond"
+     },
+     {
+      "rank": 5,
+      "domain": "en.wikipedia.org",
+      "url": "https://en.wikipedia.org/wiki/Badlands",
+      "title": "Badlands"
+     },
+     {
+      "rank": 6,
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Attraction_Review-g60973-d8735133-Reviews-Badlands_Overlook-Medora_North_Dakota.html",
+      "title": "Badlands Overlook - All You SHOULD Know Before Going ..."
+     },
+     {
+      "rank": 7,
+      "domain": "withoutapath.com",
+      "url": "https://www.withoutapath.com/badlands-theodore-roosevelt-national-park/",
+      "title": "Badlands North Dakota Theodore Roosevelt National Park"
+     },
+     {
+      "rank": 8,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/groups/15908242749/posts/10161004390427750/",
+      "title": "Are the Badlands a must-see when traveling to North ..."
+     },
+     {
+      "rank": 9,
+      "domain": "nps.gov",
+      "url": "https://www.nps.gov/thro/",
+      "title": "Theodore Roosevelt National Park - North Dakota"
+     },
+     {
+      "rank": 10,
+      "domain": "stock.adobe.com",
+      "url": "https://stock.adobe.com/search?k=north+dakota+badlands",
+      "title": "North Dakota Badlands Images – Browse 4352 ..."
+     }
+    ],
+    "features": [
+     "ai_overview",
+     "google_reviews",
+     "images",
+     "knowledge_graph",
+     "people_also_ask",
+     "related_searches",
+     "video"
+    ],
+    "ai_overview": true,
+    "ai_overview_cites_us": false,
+    "ai_overview_sources": [
+     "dmr.nd.gov",
+     "ndtourism.com",
+     "nps.gov",
+     "travelsouthdakota.com",
+     "tripadvisor.com",
+     "withoutapath.com",
+     "youtube.com"
+    ]
+   }
   },
   {
    "keyword": "theodore roosevelt",
    "group": "History",
-   "volume": null,
+   "volume": 246000,
    "gsc": {
     "position": 10.4,
     "clicks": 90,
     "impressions": 39353
    },
-   "serp": null
+   "serp": {
+    "rank": 16,
+    "url": "https://www.trlibrary.com/tr/timeline",
+    "top": [
+     {
+      "rank": 1,
+      "domain": "en.wikipedia.org",
+      "url": "https://en.wikipedia.org/wiki/Theodore_Roosevelt",
+      "title": "Theodore Roosevelt"
+     },
+     {
+      "rank": 2,
+      "domain": "theodoreroosevelt.org",
+      "url": "https://www.theodoreroosevelt.org/content.aspx?page_id=22&club_id=991271&module_id=339332",
+      "title": "Brief Biography"
+     },
+     {
+      "rank": 3,
+      "domain": "trumpwhitehouse.archives.gov",
+      "url": "https://trumpwhitehouse.archives.gov/about-the-white-house/presidents/theodore-roosevelt/",
+      "title": "Theodore Roosevelt – The White House"
+     },
+     {
+      "rank": 4,
+      "domain": "millercenter.org",
+      "url": "https://millercenter.org/president/roosevelt",
+      "title": "Theodore Roosevelt"
+     },
+     {
+      "rank": 5,
+      "domain": "nps.gov",
+      "url": "https://www.nps.gov/thri/theodorerooseveltbio.htm?fullweb=1",
+      "title": "The Life of Theodore Roosevelt"
+     },
+     {
+      "rank": 6,
+      "domain": "whitehousehistory.org",
+      "url": "https://www.whitehousehistory.org/bios/theodore-roosevelt",
+      "title": "Theodore Roosevelt"
+     },
+     {
+      "rank": 7,
+      "domain": "britannica.com",
+      "url": "https://www.britannica.com/biography/Theodore-Roosevelt",
+      "title": "Theodore Roosevelt | Biography, Presidency, National ..."
+     },
+     {
+      "rank": 8,
+      "domain": "history.com",
+      "url": "https://www.history.com/articles/theodore-roosevelt",
+      "title": "Theodore Roosevelt - Facts, Presidency & Death"
+     },
+     {
+      "rank": 9,
+      "domain": "humanitiestexas.org",
+      "url": "https://www.humanitiestexas.org/education/presidents-vision/theodore-roosevelt",
+      "title": "Theodore Roosevelt"
+     },
+     {
+      "rank": 10,
+      "domain": "si.edu",
+      "url": "https://www.si.edu/spotlight/theodore-roosevelt",
+      "title": "Theodore Roosevelt: Adventurer, Conservationist, Reformer"
+     }
+    ],
+    "features": [
+     "carousel",
+     "images",
+     "knowledge_graph",
+     "people_also_ask",
+     "related_searches"
+    ],
+    "ai_overview": false,
+    "ai_overview_cites_us": false,
+    "ai_overview_sources": []
+   }
   },
   {
    "keyword": "theodore roosevelt north dakota",
    "group": "History",
-   "volume": null,
+   "volume": 320,
    "gsc": null,
-   "serp": null
+   "serp": {
+    "rank": 1,
+    "url": "https://www.trlibrary.com/tr/homes-and-places/tr-national-park",
+    "top": [
+     {
+      "rank": 1,
+      "domain": "trlibrary.com",
+      "url": "https://www.trlibrary.com/tr/homes-and-places/tr-national-park",
+      "title": "Theodore Roosevelt National Park"
+     },
+     {
+      "rank": 2,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/TRPresidentialLibrary/posts/how-did-the-north-dakota-badlands-shape-the-leader-theodore-roosevelt-becamerobb/1165777129109129/",
+      "title": "How North Dakota Badlands shaped Theodore Roosevelt's ..."
+     },
+     {
+      "rank": 3,
+      "domain": "truenorthmapco.com",
+      "url": "https://truenorthmapco.com/pages/theodore-roosevelt-national-park?srsltid=AU7gw4UI9vvz-uRfja_sX0rfpHhOI6QL98gs73Oh1mg2qEif3FHhvxLr",
+      "title": "Theodore Roosevelt National Park Visitor Info"
+     },
+     {
+      "rank": 4,
+      "domain": "treehugger.com",
+      "url": "https://www.treehugger.com/theodore-roosevelt-national-park-facts-5193595",
+      "title": "11 Curious Theodore Roosevelt National Park Facts"
+     },
+     {
+      "rank": 5,
+      "domain": "nps.gov",
+      "url": "https://www.nps.gov/thro/learn/historyculture/theodore-roosevelt.htm",
+      "title": "Theodore Roosevelt"
+     },
+     {
+      "rank": 6,
+      "domain": "youtube.com",
+      "url": "https://www.youtube.com/watch?v=fUHudQJDZwc",
+      "title": "Chasing History: Theodore Roosevelt in North Dakota"
+     },
+     {
+      "rank": 7,
+      "domain": "greatamericanwest.co.nz",
+      "url": "https://greatamericanwest.co.nz/teddy-roosevelt-loved-north-dakota/",
+      "title": "Why Teddy Roosevelt Fell in Love With North Dakota"
+     },
+     {
+      "rank": 8,
+      "domain": "theodorerooseveltcenter.org",
+      "url": "https://www.theodorerooseveltcenter.org/subject/north-dakota/",
+      "title": "North Dakota"
+     },
+     {
+      "rank": 9,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/VisitUSAParks/posts/have-you-ever-thought-of-visiting-theodore-roosevelt-national-park-former-us-pre/2942263339151659/",
+      "title": "Explore Theodore Roosevelt National Park in North Dakota"
+     },
+     {
+      "rank": 10,
+      "domain": "nationalparksplanner.com",
+      "url": "https://www.nationalparksplanner.com/theodore-roosevelt",
+      "title": "Theodore Roosevelt | Nationalparksplanner"
+     }
+    ],
+    "features": [
+     "google_reviews",
+     "images",
+     "knowledge_graph",
+     "people_also_ask",
+     "product_considerations"
+    ],
+    "ai_overview": false,
+    "ai_overview_cites_us": false,
+    "ai_overview_sources": []
+   }
   },
   {
    "keyword": "theodore roosevelt badlands",
    "group": "History",
-   "volume": null,
+   "volume": 140,
    "gsc": {
     "position": 4.9,
     "clicks": 5,
     "impressions": 44
    },
-   "serp": null
+   "serp": {
+    "rank": 1,
+    "url": "https://www.trlibrary.com/tr/badlands-timeline",
+    "top": [
+     {
+      "rank": 1,
+      "domain": "trlibrary.com",
+      "url": "https://www.trlibrary.com/tr/badlands-timeline",
+      "title": "Timeline of TR in the Badlands"
+     },
+     {
+      "rank": 2,
+      "domain": "nps.gov",
+      "url": "https://www.nps.gov/thro/",
+      "title": "Theodore Roosevelt National Park - North Dakota"
+     },
+     {
+      "rank": 3,
+      "domain": "ndtourism.com",
+      "url": "https://www.ndtourism.com/theodore-roosevelt-man-legend",
+      "title": "Theodore Roosevelt: The Man, The Legend"
+     },
+     {
+      "rank": 4,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/USInterior/posts/sometimes-a-place-can-change-a-life-for-theodore-roosevelt-that-place-was-the-ba/1440463758113878/",
+      "title": "U.S. Department of the Interior"
+     },
+     {
+      "rank": 5,
+      "domain": "theodorerooseveltcenter.org",
+      "url": "https://www.theodorerooseveltcenter.org/timelines/roosevelt-in-the-badlands/",
+      "title": "Theodore Roosevelt in the Badlands of Dakota Territory"
+     },
+     {
+      "rank": 6,
+      "domain": "en.wikipedia.org",
+      "url": "https://en.wikipedia.org/wiki/Theodore_Roosevelt_National_Park",
+      "title": "Theodore Roosevelt National Park"
+     },
+     {
+      "rank": 7,
+      "domain": "nationalparks.org",
+      "url": "https://www.nationalparks.org/explore/parks/theodore-roosevelt-national-park",
+      "title": "Theodore Roosevelt National Park"
+     },
+     {
+      "rank": 8,
+      "domain": "smithsonianassociates.org",
+      "url": "https://smithsonianassociates.org/ticketing/programs/north-dakota",
+      "title": "Theodore Roosevelt's North Dakota: Badlands, Bison, and ..."
+     },
+     {
+      "rank": 9,
+      "domain": "travelwithjanice.com",
+      "url": "http://www.travelwithjanice.com/blog/2019/9/23/exploring-the-dakotas-wind-cave-badlands-and-teddy-roosevelt-national-parks",
+      "title": "Badlands,Theodore Roosevelt and Wind Cave National ..."
+     },
+     {
+      "rank": 10,
+      "domain": "savingplaces.org",
+      "url": "https://savingplaces.org/stories/roosevelts-retreat-at-elkhorn-ranch",
+      "title": "Roosevelt's Retreat at Elkhorn Ranch in North Dakota"
+     }
+    ],
+    "features": [
+     "ai_overview",
+     "images",
+     "people_also_ask",
+     "related_searches"
+    ],
+    "ai_overview": true,
+    "ai_overview_cites_us": true,
+    "ai_overview_sources": [
+     "en.wikipedia.org",
+     "facebook.com",
+     "google.com",
+     "medora.com",
+     "nationalparks.org",
+     "ndtourism.com",
+     "nps.gov",
+     "smithsonianassociates.org",
+     "trlibrary.com"
+    ]
+   }
   },
   {
    "keyword": "elkhorn ranch",
    "group": "History",
-   "volume": null,
+   "volume": 2900,
    "gsc": {
     "position": 9.4,
     "clicks": 5,
     "impressions": 602
    },
-   "serp": null
+   "serp": {
+    "rank": null,
+    "url": null,
+    "top": [
+     {
+      "rank": 1,
+      "domain": "instagram.com",
+      "url": "https://www.instagram.com/elkhornranchmontana/?hl=en",
+      "title": "Elkhorn Ranch Montana (@elkhornranchmontana)"
+     },
+     {
+      "rank": 2,
+      "domain": "elkhornranch.com",
+      "url": "https://elkhornranch.com/meet-the-horses-of-elkhorn-ranch-a-day-in-their-life/",
+      "title": "MEET THE HORSES OF ELKHORN RANCH: A DAY IN THEIR ..."
+     },
+     {
+      "rank": 3,
+      "domain": "nps.gov",
+      "url": "https://www.nps.gov/thro/learn/photosmultimedia/elkhorn-videos.htm?fullweb=1",
+      "title": "Elkhorn Ranch Multimedia - Theodore Roosevelt ..."
+     },
+     {
+      "rank": 4,
+      "domain": "yelp.com",
+      "url": "https://www.yelp.com/biz/elkhorn-ranch-gallatin-gateway",
+      "title": "ELKHORN RANCH - Updated October 2026 - 25 Photos"
+     },
+     {
+      "rank": 5,
+      "domain": "visitdickinson.com",
+      "url": "https://www.visitdickinson.com/business/theodore-roosevelt-elkhorn-ranch",
+      "title": "Theodore Roosevelt Elkhorn Ranch - Medora, ND"
+     },
+     {
+      "rank": 6,
+      "domain": "ndtourism.com",
+      "url": "https://www.ndtourism.com/medora/nature-outdoor-activities/biking-mountain-biking/elkhorn-campground",
+      "title": "Elkhorn Campground"
+     },
+     {
+      "rank": 7,
+      "domain": "visityellowstonecountry.com",
+      "url": "https://visityellowstonecountry.com/listing/elkhorn-ranch/6650",
+      "title": "Elkhorn Ranch"
+     },
+     {
+      "rank": 8,
+      "domain": "alltrails.com",
+      "url": "https://www.alltrails.com/trail/us/north-dakota/elkhorn-ranch-unit-trail",
+      "title": "Elkhorn Ranch Unit Trail, North Dakota - 95 Reviews, Map"
+     },
+     {
+      "rank": 9,
+      "domain": "jeffersonhour.com",
+      "url": "https://jeffersonhour.com/blog/nationalmonument",
+      "title": "The Elkhorn Ranch: If Not a National Monument, What?"
+     },
+     {
+      "rank": 10,
+      "domain": "theelkhornranch.com",
+      "url": "http://www.theelkhornranch.com/the-ranch.html",
+      "title": "THE ELKHORN RANCH"
+     }
+    ],
+    "features": [
+     "images",
+     "local_pack",
+     "people_also_ask"
+    ],
+    "ai_overview": false,
+    "ai_overview_cites_us": false,
+    "ai_overview_sources": []
+   }
   },
   {
    "keyword": "maltese cross cabin",
    "group": "History",
-   "volume": null,
+   "volume": 720,
    "gsc": null,
-   "serp": null
+   "serp": {
+    "rank": 22,
+    "url": "https://www.trlibrary.com/visit/itineraries/trs-badlands",
+    "top": [
+     {
+      "rank": 1,
+      "domain": "youtube.com",
+      "url": "https://www.youtube.com/watch?v=X5m-XVjICLE",
+      "title": "Maltese Cross Cabin in Theodore Roosevelt National Park"
+     },
+     {
+      "rank": 2,
+      "domain": "theodorerooseveltcenter.org",
+      "url": "https://www.theodorerooseveltcenter.org/subject/maltese-cross-ranch-cabin-n-d/page/3/",
+      "title": "Maltese Cross Ranch Cabin (N.D.)"
+     },
+     {
+      "rank": 3,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/groups/2030822207183428/posts/2317315855200727/",
+      "title": "Maltese Cross Cabin - Medora ND Theodore Roosevelt ..."
+     },
+     {
+      "rank": 4,
+      "domain": "nps.gov",
+      "url": "https://www.nps.gov/media/photo/gallery-item.htm?id=020623CB-155D-4519-3E07EED3F66C1F69&gid=0269A9CD-155D-4519-3E71E6BA81D4A67E",
+      "title": "Gallery Item Display"
+     },
+     {
+      "rank": 5,
+      "domain": "encirclephotos.com",
+      "url": "https://www.encirclephotos.com/image/roosevelts-maltese-cross-ranch-cabin-at-theodore-roosevelt-national-park-north-dakota/",
+      "title": "Roosevelt's Maltese Cross Ranch Cabin at Theodore ..."
+     },
+     {
+      "rank": 6,
+      "domain": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/LocationPhotoDirectLink-g60973-d1911641-i282851438-Theodore_Roosevelt_National_Park-Medora_North_Dakota.html",
+      "title": "Theodore Roosevelt National Park - Maltese Cross Cabin"
+     },
+     {
+      "rank": 7,
+      "domain": "theodorerooseveltcenter.org",
+      "url": "https://www.theodorerooseveltcenter.org/digital-library/o293629/",
+      "title": "Pamphlet about the Roosevelt cabin"
+     },
+     {
+      "rank": 8,
+      "domain": "terragalleria.com",
+      "url": "https://www.terragalleria.com/parks/np-image.thro8707.html",
+      "title": "Picture/Photo: Roosevelt's Maltese Cross Cabin, afternoon. ..."
+     },
+     {
+      "rank": 9,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/groups/2030822207183428/posts/3918343348431295/",
+      "title": "Theodore Roosevelt's Maltese Ranch cabin history in ..."
+     },
+     {
+      "rank": 10,
+      "domain": "expedia.com",
+      "url": "https://www.expedia.com/Medora-Hotels-Maltese-Ranch-Cabin-Near-Medora-Attractions.h34839654.Hotel-Information",
+      "title": "'Maltese Ranch Cabin' Near Medora Attractions!"
+     }
+    ],
+    "features": [
+     "discussions_and_forums",
+     "google_reviews",
+     "images",
+     "knowledge_graph",
+     "people_also_ask",
+     "related_searches",
+     "short_videos"
+    ],
+    "ai_overview": false,
+    "ai_overview_cites_us": false,
+    "ai_overview_sources": []
+   }
   },
   {
    "keyword": "theodore roosevelt conservation",
    "group": "History",
-   "volume": null,
+   "volume": 590,
    "gsc": null,
-   "serp": null
+   "serp": {
+    "rank": null,
+    "url": null,
+    "top": [
+     {
+      "rank": 1,
+      "domain": "trcp.org",
+      "url": "https://www.trcp.org/2021/09/03/theodore-roosevelts-legacy-relevance-conservation-today/",
+      "title": "Theodore Roosevelt's Legacy and its Relevance to ..."
+     },
+     {
+      "rank": 2,
+      "domain": "trcp.org",
+      "url": "https://www.trcp.org/what/habitat-and-clean-water/",
+      "title": "Habitat & Clean Water"
+     },
+     {
+      "rank": 3,
+      "domain": "voicesofdemocracy.umd.edu",
+      "url": "https://voicesofdemocracy.umd.edu/theodore-roosevelt-conservation-as-a-national-duty-speech-text/",
+      "title": "Theodore Roosevelt, \"Conservation as a National Duty ..."
+     },
+     {
+      "rank": 4,
+      "domain": "trcp.org",
+      "url": "https://www.trcp.org/public-land-access/",
+      "title": "Public Land Access"
+     },
+     {
+      "rank": 5,
+      "domain": "instagram.com",
+      "url": "https://www.instagram.com/thetrcp/?hl=en",
+      "title": "TRCP (@thetrcp) • Instagram photos and videos"
+     },
+     {
+      "rank": 6,
+      "domain": "pbslearningmedia.org",
+      "url": "https://www.pbslearningmedia.org/resource/theodore-roosevelt-conservationist-president/ken-burns-the-national-parks-video-gallery/",
+      "title": "Theodore Roosevelt: The Conservationist President"
+     },
+     {
+      "rank": 7,
+      "domain": "theodoreroosevelt.org",
+      "url": "https://www.theodoreroosevelt.org/content.aspx?page_id=22&club_id=991271&module_id=758694",
+      "title": "TRA Conservation"
+     },
+     {
+      "rank": 8,
+      "domain": "conservationhistory.org",
+      "url": "https://conservationhistory.org/conservation-heroes/theodore-roosevelt-2/",
+      "title": "Theodore Roosevelt - Conservation History"
+     },
+     {
+      "rank": 9,
+      "domain": "trcp.org",
+      "url": "https://www.trcp.org/2010/09/19/our-favorite/",
+      "title": "Our favorite"
+     },
+     {
+      "rank": 10,
+      "domain": "trcp.org",
+      "url": "https://www.trcp.org/2020/07/01/what-it-means-to-wake-the-woods/",
+      "title": "What it Means to “Wake the Woods”"
+     }
+    ],
+    "features": [
+     "ai_overview",
+     "knowledge_graph",
+     "people_also_ask",
+     "related_searches"
+    ],
+    "ai_overview": true,
+    "ai_overview_cites_us": false,
+    "ai_overview_sources": [
+     "fws.gov",
+     "nps.gov",
+     "theodoreroosevelt.org",
+     "trcp.org",
+     "youtube.com"
+    ]
+   }
   },
   {
    "keyword": "presidential libraries",
    "group": "Presidential libraries",
-   "volume": null,
+   "volume": 14800,
    "gsc": {
     "position": 5.0,
     "clicks": 8,
     "impressions": 133
    },
-   "serp": null
+   "serp": {
+    "rank": null,
+    "url": null,
+    "top": [
+     {
+      "rank": 1,
+      "domain": "obamalibrary.gov",
+      "url": "https://www.obamalibrary.gov/about-us",
+      "title": "About Us | Barack Obama Presidential Library"
+     },
+     {
+      "rank": 2,
+      "domain": "georgewbushlibrary.gov",
+      "url": "https://www.georgewbushlibrary.gov/get-involved/about-us/presidential-libraries",
+      "title": "NARA & Presidential Libraries"
+     },
+     {
+      "rank": 3,
+      "domain": "eisenhowerlibrary.gov",
+      "url": "https://www.eisenhowerlibrary.gov/about-us/what-presidential-library",
+      "title": "What is a Presidential Library?"
+     },
+     {
+      "rank": 4,
+      "domain": "library.law.unc.edu",
+      "url": "https://library.law.unc.edu/2021/03/the-curious-case-of-presidential-libraries/",
+      "title": "The Curious Case of Presidential Libraries"
+     },
+     {
+      "rank": 5,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/usnationalarchives/videos/its-museumweek-and-were-highlighting-the-presidential-librariesthe-national-arch/440408941957169/",
+      "title": "It's #MuseumWeek and we're highlighting the Presidential ..."
+     },
+     {
+      "rank": 6,
+      "domain": "library.loras.edu",
+      "url": "https://library.loras.edu/presidential/libraries",
+      "title": "Presidential Libraries, Museums, Monuments and Historic ..."
+     },
+     {
+      "rank": 7,
+      "domain": "clintonlibrary.gov",
+      "url": "https://www.clintonlibrary.gov/home",
+      "title": "Homepage | William J. Clinton Presidential Library and Museum"
+     },
+     {
+      "rank": 8,
+      "domain": "hoover.archives.gov",
+      "url": "https://hoover.archives.gov/about-us/nara-presidential-libraries",
+      "title": "NARA and the Presidential Libraries"
+     },
+     {
+      "rank": 9,
+      "domain": "eisenhowerlibrary.gov",
+      "url": "https://www.eisenhowerlibrary.gov/about-us/what-presidential-library",
+      "title": "What is a Presidential Library?"
+     },
+     {
+      "rank": 10,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/usnationalarchives/videos/its-museumweek-and-were-highlighting-the-presidential-librariesthe-national-arch/440408941957169/",
+      "title": "It's #MuseumWeek and we're highlighting the Presidential ..."
+     }
+    ],
+    "features": [
+     "ai_overview",
+     "images",
+     "local_pack",
+     "people_also_ask",
+     "related_searches"
+    ],
+    "ai_overview": true,
+    "ai_overview_cites_us": false,
+    "ai_overview_sources": []
+   }
   },
   {
    "keyword": "newest presidential library",
@@ -152,43 +1333,426 @@
     "clicks": 8,
     "impressions": 39
    },
-   "serp": null
+   "serp": {
+    "rank": 12,
+    "url": "https://www.trlibrary.com/video/view/Slt11aQy9H4",
+    "top": [
+     {
+      "rank": 1,
+      "domain": "cbsnews.com",
+      "url": "https://www.cbsnews.com/news/theodore-roosevelt-presidential-library-opening-in-north-dakota-badlands/",
+      "title": "Theodore Roosevelt Presidential Library opening in North ..."
+     },
+     {
+      "rank": 2,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/TRPresidentialLibrary/videos/ten-days-ago-the-theodore-roosevelt-presidential-library-officially-opened-since/1735344054322694/",
+      "title": "Ten days ago, the Theodore Roosevelt Presidential Library ..."
+     },
+     {
+      "rank": 3,
+      "domain": "knsiradio.com",
+      "url": "https://knsiradio.com/2026/05/29/the-controversies-surrounding-the-new-theodore-roosevelt-presidential-library/",
+      "title": "The controversies surrounding the new Theodore ..."
+     },
+     {
+      "rank": 4,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/abcnews4/posts/the-theodore-roosevelt-presidential-library-is-officially-opening-to-visitors-in/1487928173377310/",
+      "title": "The Theodore Roosevelt Presidential Library is officially ..."
+     },
+     {
+      "rank": 5,
+      "domain": "simple.wikipedia.org",
+      "url": "https://simple.wikipedia.org/wiki/Theodore_Roosevelt_Presidential_Library",
+      "title": "Theodore Roosevelt Presidential Library"
+     },
+     {
+      "rank": 6,
+      "domain": "cowboysindians.com",
+      "url": "https://www.cowboysindians.com/2026/06/inside-the-new-theodore-roosevelt-presidential-library/",
+      "title": "Inside The New Theodore Roosevelt Presidential Library"
+     },
+     {
+      "rank": 7,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/TRPresidentialLibrary/videos/%EF%B8%8F-building-history-theodore-roosevelt-presidential-library-progress-in-2024-take/580855151542702/",
+      "title": "Theodore Roosevelt Presidential Library Progress in 2024 ..."
+     },
+     {
+      "rank": 8,
+      "domain": "foxbaltimore.com",
+      "url": "https://foxbaltimore.com/news/nation-world/photos-a-look-inside-the-theodore-roosevelt-presidential-library-opening-july-4th-trump-dedication-national-park-medora-north-dakota-living-certified-carbon-neutral-energy-carbon-water-waste-ai-displays-holograms",
+      "title": "A look inside the Theodore Roosevelt Presidential Library ..."
+     },
+     {
+      "rank": 9,
+      "domain": "foxbaltimore.com",
+      "url": "https://foxbaltimore.com/news/nation-world/photos-a-look-inside-the-theodore-roosevelt-presidential-library-opening-july-4th-trump-dedication-national-park-medora-north-dakota-living-certified-carbon-neutral-energy-carbon-water-waste-ai-displays-holograms",
+      "title": "A look inside the Theodore Roosevelt Presidential Library ..."
+     },
+     {
+      "rank": 10,
+      "domain": "youtube.com",
+      "url": "https://www.youtube.com/watch?v=nw28bCFGMow&xstg=CAMSBhUDze3xHw%3D%3D",
+      "title": "Taking a look inside the Theodore Roosevelt Presidential ..."
+     }
+    ],
+    "features": [
+     "ai_overview",
+     "images",
+     "people_also_ask",
+     "related_searches",
+     "video"
+    ],
+    "ai_overview": true,
+    "ai_overview_cites_us": false,
+    "ai_overview_sources": []
+   }
   },
   {
    "keyword": "presidential library road trip",
    "group": "Presidential libraries",
    "volume": null,
    "gsc": null,
-   "serp": null
+   "serp": {
+    "rank": 1,
+    "url": "https://www.trlibrary.com/visit/tours",
+    "top": [
+     {
+      "rank": 1,
+      "domain": "trlibrary.com",
+      "url": "https://www.trlibrary.com/visit/tours",
+      "title": "Tours"
+     },
+     {
+      "rank": 2,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/BenjaminHarrisonPresidentialSite/posts/%EF%B8%8F-summer-travel-plans-add-a-presidential-twistbefore-you-pack-your-bags-join-us-/1591885522609278/",
+      "title": "Presidential road trips with Bill Clevlen at the Benjamin ..."
+     },
+     {
+      "rank": 3,
+      "domain": "youtube.com",
+      "url": "https://www.youtube.com/watch?v=XYHH7Qx1d1o",
+      "title": "Touring our nation's presidential libraries"
+     },
+     {
+      "rank": 4,
+      "domain": "hobbiesonabudget.com",
+      "url": "https://hobbiesonabudget.com/presidential-libraries-around-the-us/",
+      "title": "Presidential Libraries around the US"
+     },
+     {
+      "rank": 5,
+      "domain": "springfieldherald.news",
+      "url": "https://springfieldherald.news/lincoln-presidential-library-welcomes-author-of-presidential-road-trips-p30430-103.htm",
+      "title": "Lincoln Presidential Library welcomes author of ' ..."
+     },
+     {
+      "rank": 6,
+      "domain": "reddit.com",
+      "url": "https://www.reddit.com/r/travel/comments/1ts7wa6/have_any_of_you_been_to_a_presidential_library/",
+      "title": "Have any of you been to a presidential library? : r/travel"
+     },
+     {
+      "rank": 7,
+      "domain": "roadtrippers.com",
+      "url": "https://roadtrippers.com/voices/presidential-libraries-state-capitals-road-trip/",
+      "title": "A 57-day road trip to presidential sites, state capitol ..."
+     },
+     {
+      "rank": 8,
+      "domain": "facebook.com",
+      "url": "https://www.facebook.com/travelbybridgetllc/posts/our-second-route-66-group-at-the-abraham-lincoln-presidential-library-museum-thu/1084624567665125/",
+      "title": "Abraham Lincoln Presidential Library group tour"
+     },
+     {
+      "rank": 9,
+      "domain": "reddit.com",
+      "url": "https://www.reddit.com/r/Millennials/comments/1ua3m5g/us_millennials_did_you_visit_any_presidential/",
+      "title": "Did you visit any Presidential Libraries on family road trips?"
+     },
+     {
+      "rank": 10,
+      "domain": "roadscholar.org",
+      "url": "https://www.roadscholar.org/find-an-adventure/14491/The-Best-of-California-The-Reagan-Library-to-the-Channel-Islands/itinerary/",
+      "title": "The Reagan Library to the Channel Islands"
+     }
+    ],
+    "features": [
+     "ai_overview",
+     "images",
+     "people_also_ask",
+     "related_searches",
+     "video"
+    ],
+    "ai_overview": true,
+    "ai_overview_cites_us": false,
+    "ai_overview_sources": []
+   }
   },
   {
    "keyword": "theodore roosevelt quotes",
    "group": "Learning",
-   "volume": null,
+   "volume": 6600,
    "gsc": {
     "position": 3.1,
     "clicks": 116,
     "impressions": 2718
    },
-   "serp": null
+   "serp": {
+    "rank": 3,
+    "url": "https://www.trlibrary.com/tr/quotes",
+    "top": [
+     {
+      "rank": 1,
+      "domain": "goodreads.com",
+      "url": "https://www.goodreads.com/author/quotes/44567.Theodore_Roosevelt",
+      "title": "Theodore Roosevelt Quotes - Goodreads"
+     },
+     {
+      "rank": 2,
+      "domain": "theodoreroosevelt.org",
+      "url": "https://www.theodoreroosevelt.org/content.aspx?page_id=22&club_id=991271&module_id=339333",
+      "title": "Quotations from the speeches and other works of Theodore ..."
+     },
+     {
+      "rank": 3,
+      "domain": "trlibrary.com",
+      "url": "https://www.trlibrary.com/tr/quotes",
+      "title": "Theodore Roosevelt Quotes"
+     },
+     {
+      "rank": 4,
+      "domain": "compassclassroom.com",
+      "url": "https://compassclassroom.com/blog/quotes-from-teddy-roosevelt/",
+      "title": "10 Famous Quotes from Theodore Roosevelt"
+     },
+     {
+      "rank": 5,
+      "domain": "theodorerooseveltcenter.org",
+      "url": "https://www.theodorerooseveltcenter.org/quotes/",
+      "title": "Quotes Archive"
+     },
+     {
+      "rank": 6,
+      "domain": "audible.com",
+      "url": "https://www.audible.com/blog/quotes-theodore-roosevelt?srsltid=AU7gw4U015hE1mQzrw7xTeNuZ30aO3H3gaXTJdSX1uGwVMXtD-M3pzfe",
+      "title": "100+ Theodore Roosevelt Quotes on Civics, Courage ..."
+     },
+     {
+      "rank": 7,
+      "domain": "brainyquote.com",
+      "url": "https://www.brainyquote.com/authors/theodore-roosevelt-quotes",
+      "title": "82 Theodore Roosevelt Quotes"
+     },
+     {
+      "rank": 8,
+      "domain": "nps.gov",
+      "url": "https://www.nps.gov/thro/learn/historyculture/theodore-roosevelt-quotes.htm",
+      "title": "Theodore Roosevelt Quotes"
+     },
+     {
+      "rank": 9,
+      "domain": "knowol.com",
+      "url": "https://www.knowol.com/information/quotes/teddy-roosevelt-motivation-quotes/",
+      "title": "9 Motivational Quotes From “Teddy”, Theodore Roosevelt"
+     },
+     {
+      "rank": 10,
+      "domain": "bestwriting.com",
+      "url": "https://bestwriting.com/teddy-roosevelt-quotes",
+      "title": "50 Encouraging Teddy Roosevelt Quotes"
+     }
+    ],
+    "features": [
+     "ai_overview",
+     "images",
+     "people_also_ask",
+     "related_searches"
+    ],
+    "ai_overview": true,
+    "ai_overview_cites_us": true,
+    "ai_overview_sources": [
+     "facebook.com",
+     "theodoreroosevelt.org",
+     "trlibrary.com",
+     "youtube.com"
+    ]
+   }
   },
   {
    "keyword": "theodore roosevelt man in the arena",
    "group": "Learning",
-   "volume": null,
+   "volume": 2400,
    "gsc": {
     "position": 5.7,
     "clicks": 11,
     "impressions": 373
    },
-   "serp": null
+   "serp": {
+    "rank": null,
+    "url": null,
+    "top": [
+     {
+      "rank": 1,
+      "domain": "worldfuturefund.org",
+      "url": "https://www.worldfuturefund.org/Documents/maninarena.htm",
+      "title": "Man in the Arena Speech - Theodore Roosevelt 1910"
+     },
+     {
+      "rank": 2,
+      "domain": "nickmurphyfoundation.org",
+      "url": "https://www.nickmurphyfoundation.org/the-man-in-the-arena",
+      "title": "The Man in the Arena — Nicholas J. Murphy Foundation"
+     },
+     {
+      "rank": 3,
+      "domain": "mensaforkids.org",
+      "url": "https://www.mensaforkids.org/read/a-year-of-living-poetically/roosevelt-the-man-in-the-arena/",
+      "title": "The Man in the Arena"
+     },
+     {
+      "rank": 4,
+      "domain": "trcp.org",
+      "url": "https://www.trcp.org/2011/01/18/it-is-not-the-critic-who-counts/",
+      "title": "It Is Not the Critic Who Counts"
+     },
+     {
+      "rank": 5,
+      "domain": "fs.blog",
+      "url": "https://fs.blog/the-man-in-the-arena/",
+      "title": "In The Arena: Citizenship In A Republic"
+     },
+     {
+      "rank": 6,
+      "domain": "theodorerooseveltcenter.org",
+      "url": "https://www.theodorerooseveltcenter.org/digital-library/o307754/",
+      "title": "The Man in the Arena: Theodore Roosevelt, Junior"
+     },
+     {
+      "rank": 7,
+      "domain": "theodoreroosevelt.org",
+      "url": "https://www.theodoreroosevelt.org/content.aspx?page_id=22&club_id=991271&module_id=339335",
+      "title": "Speeches"
+     },
+     {
+      "rank": 8,
+      "domain": "marshallbahr.com",
+      "url": "https://www.marshallbahr.com/blog/the-man-in-the-arena",
+      "title": "The Man in the Arena"
+     },
+     {
+      "rank": 9,
+      "domain": "wvjc.edu",
+      "url": "https://www.wvjc.edu/the-man-in-the-arena-finding-the-strength-to-succeed/",
+      "title": "The Man In The Arena: Finding The Strength To Succeed"
+     },
+     {
+      "rank": 10,
+      "domain": "medonegroup.com",
+      "url": "https://www.medonegroup.com/medonetoone/73/man-in-the-arena",
+      "title": "Man in the Arena"
+     }
+    ],
+    "features": [
+     "ai_overview",
+     "images",
+     "knowledge_graph",
+     "people_also_ask",
+     "video"
+    ],
+    "ai_overview": true,
+    "ai_overview_cites_us": false,
+    "ai_overview_sources": []
+   }
   },
   {
    "keyword": "theodore roosevelt podcast",
    "group": "Learning",
-   "volume": null,
+   "volume": 10,
    "gsc": null,
-   "serp": null
+   "serp": {
+    "rank": 1,
+    "url": "https://www.trlibrary.com/podcast/good-citizen/welcome-to-good-citizen-with-ted-roosevelt-v",
+    "top": [
+     {
+      "rank": 1,
+      "domain": "trlibrary.com",
+      "url": "https://www.trlibrary.com/podcast/good-citizen/welcome-to-good-citizen-with-ted-roosevelt-v",
+      "title": "Welcome to Good Citizen with Ted Roosevelt V!"
+     },
+     {
+      "rank": 2,
+      "domain": "podcasts.apple.com",
+      "url": "https://podcasts.apple.com/gb/podcast/theodore-roosevelt-president-of-action-and-adventure/id1155392992?i=1000722422284",
+      "title": "Theodore Roosevelt: President of Action and Adventure"
+     },
+     {
+      "rank": 3,
+      "domain": "youtube.com",
+      "url": "https://www.youtube.com/watch?v=Z1391cR7z9w",
+      "title": "Professor Greg Jackson | 2 Complicated 4 History | Podcast"
+     },
+     {
+      "rank": 4,
+      "domain": "podcasts.apple.com",
+      "url": "https://podcasts.apple.com/us/podcast/episode-15-ted-roosevelt-part-3-the-man-in-the-arena/id1038514498?i=1000379080490",
+      "title": "EPISODE 15 Ted Roosevelt (Part… - History on Fire"
+     },
+     {
+      "rank": 5,
+      "domain": "youtube.com",
+      "url": "https://www.youtube.com/watch?v=CFdwSVqiewo",
+      "title": "This Week in the West: Theodore Roosevelt"
+     },
+     {
+      "rank": 6,
+      "domain": "open.spotify.com",
+      "url": "https://open.spotify.com/episode/3G885rH5gP7s7QQ9WNcCul",
+      "title": "Theodore Roosevelt: That Damn Cowboy"
+     },
+     {
+      "rank": 7,
+      "domain": "artofmanliness.com",
+      "url": "https://www.artofmanliness.com/culture/history/podcast-414-theodore-roosevelt-writer-and-reader/",
+      "title": "Podcast #414: Theodore Roosevelt, Writer and Reader"
+     },
+     {
+      "rank": 8,
+      "domain": "talkaboutteddy.com",
+      "url": "https://www.talkaboutteddy.com/support/",
+      "title": "Donate"
+     },
+     {
+      "rank": 9,
+      "domain": "youtube.com",
+      "url": "https://www.youtube.com/watch?v=HRDh4Bmpvfs&vl=en",
+      "title": "#1659 Theodore Roosevelt in Grand Canyon Country"
+     },
+     {
+      "rank": 10,
+      "domain": "talkaboutteddy.com",
+      "url": "https://www.talkaboutteddy.com/support/",
+      "title": "Donate"
+     }
+    ],
+    "features": [
+     "ai_overview",
+     "people_also_ask",
+     "video"
+    ],
+    "ai_overview": true,
+    "ai_overview_cites_us": true,
+    "ai_overview_sources": [
+     "open.spotify.com",
+     "podcasts.apple.com",
+     "talkaboutteddy.com",
+     "teddyrooseveltsamerica.com",
+     "trlibrary.com"
+    ]
+   }
   }
  ]
 }

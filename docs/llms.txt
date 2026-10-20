@@ -1,0 +1,44 @@
+# TRPL Search & AI Visibility
+
+> How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built 2026-10-20T05:25:10+00:00.
+
+The dashboard at https://seo.labs.trlibrary.com/ is rendered with JavaScript. AI tools should read the digest below instead.
+
+## Start here
+- [Digest (Markdown)](https://seo.labs.trlibrary.com/digest.md): one-page ranked briefing: search totals, top opportunities, tracked keywords, AI-assistant answers, audit issues, drafted recommendations, and house rules for suggesting copy
+- [Digest (JSON)](https://seo.labs.trlibrary.com/data/digest.json): the same content as structured data
+
+## Snapshot
+- Google: 49,372 clicks, avg position 6.3 (28 days to 2026-10-17)
+- Site audit: health 96/100, AI readiness 60/100
+- AI assistants mentioning the Library: ChatGPT 67%, Gemini 46%
+
+## Raw data
+- [status.json](https://seo.labs.trlibrary.com/data/status.json): Which data sources are on, last run time, errors
+- [gsc/summary.json](https://seo.labs.trlibrary.com/data/gsc/summary.json): Search Console totals, last 28 days vs prior 28
+- [gsc/daily.json](https://seo.labs.trlibrary.com/data/gsc/daily.json): Clicks/impressions/CTR/position per day (~16 months)
+- [gsc/queries.json](https://seo.labs.trlibrary.com/data/gsc/queries.json): Every search query (last 28 days) with prior-period clicks
+- [gsc/pages.json](https://seo.labs.trlibrary.com/data/gsc/pages.json): Every page with search traffic (last 28 days)
+- [gsc/query_pages.json](https://seo.labs.trlibrary.com/data/gsc/query_pages.json): Query x page pairs, top 10,000 by impressions
+- [opportunities.json](https://seo.labs.trlibrary.com/data/opportunities.json): Ranked opportunity lists (striking distance, low CTR, missing-in-title, declining, cannibalization)
+- [ranks/latest.json](https://seo.labs.trlibrary.com/data/ranks/latest.json): Tracked keywords: Search Console position, live Google rank, AI Overview presence
+- [ai/latest.json](https://seo.labs.trlibrary.com/data/ai/latest.json): Full AI-assistant answers to the weekly travel/history questions, with citations
+- [ai/history.json](https://seo.labs.trlibrary.com/data/ai/history.json): Weekly AI mention and citation rates
+- [audit/summary.json](https://seo.labs.trlibrary.com/data/audit/summary.json): Site audit: health score, issue counts, robots.txt AI-crawler access, structured data
+- [audit/pages.json](https://seo.labs.trlibrary.com/data/audit/pages.json): Per-page audit: title, meta, H1, canonical, OG tags, word count, issues
+- [tips.json](https://seo.labs.trlibrary.com/data/tips.json): AI-drafted page recommendations and the AI-visibility brief
+
+## House rules for suggesting changes
+- Suggestions are drafts for the communications team; nothing is published automatically.
+- Never invent historical facts, dates, names, prices or hours. Use only what the page already says, or flag it for verification.
+- Never quote or paraphrase Theodore Roosevelt. Say 'consider a verified TR quote about X' instead.
+- Voice: friendly, plain, concrete (a knowledgeable park ranger, not a professor). Keep 'we/our/us' to a minimum.
+- No specific years in visitor copy; write seasons as months.
+- A Library visit takes about 3 1/2 hours. Never present a shorter visit as typical.
+- Nonpartisan: no current political figures or debates.
+- Page titles: the site appends ' | Theodore Roosevelt Presidential Library' automatically; suggest only the page-specific part, 60 characters or fewer.
+- Meta descriptions: 120-155 characters with a reason to click.
+- Website changes are made in Drupal Layout Builder by the TRPL team; bugs and features go to the developers (FiveJars).
+
+## Optional
+- [Source code and configuration](https://github.com/Theodore-Roosevelt-Presidential-Library/SEO): tracked keywords in config/keywords.yml, AI questions in config/ai_prompts.yml
