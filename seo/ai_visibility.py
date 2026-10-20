@@ -52,9 +52,7 @@ def ask_openai(sess, key, model, prompt):
 
 
 def ask_gemini(sess, key, model, prompt):
-    r = sess.post(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
-                  params={"key": key}, timeout=180,
-                  json={"contents": [{"parts": [{"text": prompt}]}], "tools": [{"google_search": {}}]})
+    r = C.gemini_post(sess, key, model, {"contents": [{"parts": [{"text": prompt}]}], "tools": [{"google_search": {}}]}, timeout=180)
     if r.status_code != 200:
         raise RuntimeError(f"Gemini {r.status_code}: {r.text[:200]}")
     cand = (r.json().get("candidates") or [{}])[0]

@@ -143,3 +143,18 @@ of on or the to what when where which who why with you your best top things
 
 def content_words(text: str) -> list[str]:
     return [w for w in re.findall(r"[a-z0-9']+", text.lower()) if w not in STOPWORDS and len(w) > 1]
+
+
+GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+
+
+def gemini_post(sess, key: str, model: str, body: dict, timeout: int = 240):
+    """POST to Gemini. If Google says the model is retired and names a
+    replacement ("...use models/NAME..."), retry once with that model."""
+    r = sess.post(GEMINI_URL.format(model=model), params={"key": key}, json=body, timeout=timeout)
+    if r.status_code == 404:
+        m = re.search(r"use models/([\w.\-]+)", r.text)
+        if m and m.group(1) != model:
+            log(f"Gemini model {model} retired; retrying with {m.group(1)}. Update config/site.yml.")
+            r = sess.post(GEMINI_URL.format(model=m.group(1)), params={"key": key}, json=body, timeout=timeout)
+    return r

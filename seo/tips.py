@@ -1,12 +1,13 @@
-"""Claude-written recommendations.
+"""AI-written recommendations (works with Gemini, Claude, ChatGPT or Perplexity).
 
-1. Page tips: for the pages with the most upside, Claude reads the live page,
+1. Page tips: for the pages with the most upside, the model reads the live page,
    its Search Console queries and its audit issues, and suggests a new title,
    meta description, content additions and AI-readiness fixes in TRPL voice.
-2. AI visibility brief: Claude reads the latest AI-answer results and lists
+2. AI visibility brief: the model reads the latest AI-answer results and lists
    the highest-value actions to get the Library recommended more often.
 
-Needs ANTHROPIC_API_KEY. Everything it writes is a DRAFT for human review;
+Uses the first available key in tips.prefer (config/site.yml): GEMINI_API_KEY,
+ANTHROPIC_API_KEY, OPENAI_API_KEY or PERPLEXITY_API_KEY. Everything it writes is a DRAFT for human review;
 anything touching history is flagged for verification and nothing is
 published automatically.
 
@@ -57,16 +58,59 @@ AI_SCHEMA = """{
 }"""
 
 
-def call_claude(key: str, model: str, user: str, max_tokens: int = 2500) -> dict:
+KEYS = {"gemini": "GEMINI_API_KEY", "anthropic": "ANTHROPIC_API_KEY",
+        "openai": "OPENAI_API_KEY", "perplexity": "PERPLEXITY_API_KEY"}
+LABELS = {"gemini": "Gemini", "anthropic": "Claude", "openai": "ChatGPT", "perplexity": "Perplexity"}
+
+
+def call_llm(provider: str, key: str, model: str, user: str, max_tokens: int = 4000) -> dict:
+    """Send the house-rules system prompt + a brief to whichever model is configured; return parsed JSON."""
     sess = C.session()
-    r = sess.post("https://api.anthropic.com/v1/messages", timeout=240,
-                  headers={"x-api-key": key, "anthropic-version": "2023-06-01"},
-                  json={"model": model, "max_tokens": max_tokens, "system": SYSTEM,
-                        "messages": [{"role": "user", "content": user}]})
-    if r.status_code != 200:
-        raise RuntimeError(f"Claude {r.status_code}: {r.text[:200]}")
-    text = "".join(b.get("text", "") for b in r.json().get("content", []) if b.get("type") == "text")
+    if provider == "gemini":
+        r = C.gemini_post(sess, key, model, {
+            "systemInstruction": {"parts": [{"text": SYSTEM}]},
+            "contents": [{"role": "user", "parts": [{"text": user}]}],
+            # no maxOutputTokens: Gemini's thinking tokens count against it and can truncate the JSON
+            "generationConfig": {"responseMimeType": "application/json", "temperature": 0.4}}, timeout=300)
+        ok = r.status_code == 200
+        if ok:
+            cand = (r.json().get("candidates") or [{}])[0]
+            text = "".join(p.get("text", "") for p in (cand.get("content") or {}).get("parts", []) if not p.get("thought"))
+    elif provider == "anthropic":
+        r = sess.post("https://api.anthropic.com/v1/messages", timeout=300,
+                      headers={"x-api-key": key, "anthropic-version": "2023-06-01"},
+                      json={"model": model, "max_tokens": max_tokens, "system": SYSTEM,
+                            "messages": [{"role": "user", "content": user}]})
+        ok = r.status_code == 200
+        if ok:
+            text = "".join(b.get("text", "") for b in r.json().get("content", []) if b.get("type") == "text")
+    elif provider in ("openai", "perplexity"):
+        url = "https://api.openai.com/v1/chat/completions" if provider == "openai" else "https://api.perplexity.ai/chat/completions"
+        body = {"model": model, "messages": [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]}
+        if provider == "openai":
+            body["response_format"] = {"type": "json_object"}
+        r = sess.post(url, timeout=300, headers={"Authorization": f"Bearer {key}"}, json=body)
+        ok = r.status_code == 200
+        if ok:
+            text = r.json()["choices"][0]["message"]["content"]
+    else:
+        raise ValueError(f"Unknown provider {provider}")
+    if not ok:
+        raise RuntimeError(f"{LABELS[provider]} {r.status_code}: {r.text[:200]}")
     return parse_json(text)
+
+
+def choose_provider(cfg: dict) -> tuple[str, str, str] | None:
+    """First provider in tips.prefer that has a key. Returns (provider, key, model)."""
+    tcfg = cfg.get("tips", {})
+    vis_models = cfg.get("ai_visibility", {}).get("providers", {})
+    for p in tcfg.get("prefer", ["gemini", "anthropic", "openai", "perplexity"]):
+        key = C.env(KEYS.get(p, ""))
+        if key:
+            model = (tcfg.get("models") or {}).get(p) or (vis_models.get(p) or {}).get("model")
+            if model:
+                return p, key, model
+    return None
 
 
 def parse_json(text: str) -> dict:
@@ -180,16 +224,17 @@ Write a brief for the communications team. Return JSON in exactly this shape:
 
 def run() -> None:
     cfg = C.config()
-    key = C.env("ANTHROPIC_API_KEY")
-    if not key:
-        C.set_status("tips", "skipped", "Add the ANTHROPIC_API_KEY secret to turn on written recommendations.")
+    choice = choose_provider(cfg)
+    if not choice:
+        C.set_status("tips", "skipped", "Add any one of GEMINI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY or PERPLEXITY_API_KEY to turn on written recommendations.")
         return
-    model = cfg.get("tips", {}).get("model", "claude-sonnet-5-5")
-    out = {"updated": C.now_iso(), "model": model, "pages": [], "ai_brief": None, "errors": []}
+    provider, key, model = choice
+    out = {"updated": C.now_iso(), "provider": provider, "provider_label": LABELS[provider], "model": model,
+           "pages": [], "ai_brief": None, "errors": []}
 
     for url in pick_pages(cfg):
         try:
-            t = validate(call_claude(key, model, page_brief(url, cfg)))
+            t = validate(call_llm(provider, key, model, page_brief(url, cfg)))
             out["pages"].append({"page": url, **t})
         except Exception as e:  # noqa: BLE001
             out["errors"].append(f"{url}: {e}"[:300])
@@ -197,7 +242,7 @@ def run() -> None:
     brief = ai_brief()
     if brief:
         try:
-            out["ai_brief"] = call_claude(key, model, brief, max_tokens=3000)
+            out["ai_brief"] = call_llm(provider, key, model, brief)
         except Exception as e:  # noqa: BLE001
             out["errors"].append(f"AI brief: {e}"[:300])
 
@@ -206,7 +251,7 @@ def run() -> None:
         C.set_status("tips", "error", out["errors"][0])
         raise C.JobError("tips failed")
     C.set_status("tips", "error" if out["errors"] else "ok",
-                 f"Tips for {len(out['pages'])} pages" + (f"; {len(out['errors'])} failed" if out["errors"] else ""))
+                 f"{LABELS[provider]} wrote tips for {len(out['pages'])} pages" + (f"; {len(out['errors'])} failed" if out["errors"] else ""))
 
 
 if __name__ == "__main__":

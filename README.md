@@ -10,7 +10,7 @@ A SEMrush-style dashboard built for one site, trlibrary.com. GitHub Actions coll
 | Rankings | Tracked keywords: Search Console position, live Google rank, AI Overview presence and whether it cites us, who ranks above us, monthly volume | Search Console + DataForSEO | DataForSEO optional |
 | AI Visibility | Weekly answers from ChatGPT, Gemini, Perplexity and Claude to real travel and history questions: mentioned or not, rank among nearby attractions, sources cited | Each AI's API | Yes, any one |
 | Site Audit | Crawls every sitemap URL for titles, descriptions, H1s, canonicals, Open Graph, alt text, thin pages, redirects, `/node/` URLs, AI-crawler access in robots.txt, llms.txt and structured data | trlibrary.com itself | No |
-| Recommendations | Claude's drafts of new titles, meta descriptions and content additions for the highest-upside pages, plus a weekly brief on AI visibility | Anthropic API | Yes |
+| Recommendations | AI-drafted new titles, meta descriptions and content additions for the highest-upside pages, plus a weekly brief on AI visibility | Gemini, Claude, ChatGPT or Perplexity | Yes, any one |
 | Setup | Whether each source is on, when it last ran, and any error | – | – |
 
 **Schedule:**
@@ -75,7 +75,7 @@ If your Google organization does allow key creation, a JSON key pasted into the 
 
 Fifteen questions across four assistants is 60 calls a week. Model names live in `config/site.yml`. If the Setup tab reports "model not found", update the name there.
 
-**Recommendations** (`ANTHROPIC_API_KEY`) uses the same key as Claude above.
+**Recommendations** need no extra key. They use whichever AI key you've added, Gemini first by default. Change the order with `tips.prefer` in `config/site.yml`.
 
 ### 4. First run
 Go to **Actions → Weekly refresh → Run workflow**. It takes about five minutes. The dashboard updates once the commit lands.
@@ -91,7 +91,7 @@ All tracking is controlled by three files in `config/`. Edit them on GitHub; the
   - model names
 
 ## Editorial guardrails
-Recommendations are drafts, and nothing is published automatically. The instructions Claude receives (`seo/tips.py`) require it to:
+Recommendations are drafts, and nothing is published automatically. Whichever model writes them gets the same instructions (`seo/tips.py`), which require it to:
 - write in house voice, with minimal "we/our"
 - keep years out of visitor copy
 - keep the 3½-hour visit standard

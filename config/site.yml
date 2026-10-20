@@ -65,12 +65,17 @@ ai_visibility:
   # Model names change often. If a run reports "model not found", update the name here.
   providers:
     openai:     { model: gpt-5-mini }
-    gemini:     { model: gemini-2.5-flash }
+    gemini:     { model: gemini-3.8-flash }
     perplexity: { model: sonar }
     anthropic:  { model: claude-sonnet-5-5 }
 
 tips:
-  model: claude-sonnet-5-5
+  # Which AI writes the recommendations: the first one in this list that has a key.
+  # Reorder to change the preference. Works with just one key.
+  prefer: [gemini, anthropic, openai, perplexity]
+  # Optional per-provider model for writing tips. If a provider isn't listed here,
+  # the model from ai_visibility above is used.
+  models: {}
   max_pages: 8
   # Pages with fewer impressions than this (last 28 days) are not considered.
   min_impressions: 50

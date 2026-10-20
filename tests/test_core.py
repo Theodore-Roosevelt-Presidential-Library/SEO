@@ -102,3 +102,52 @@ def test_upsert_history():
     C.upsert_history("t/h.json", {"date": "2026-01-01", "v": 2})
     h = C.upsert_history("t/h.json", {"date": "2026-01-08", "v": 3})
     assert [r["v"] for r in h] == [2, 3]
+
+
+def test_tips_provider_choice(monkeypatch):
+    for k in ("GEMINI_API_KEY", "ANTHROPIC_API_KEY", "OPENAI_API_KEY", "PERPLEXITY_API_KEY"):
+        monkeypatch.delenv(k, raising=False)
+    cfg = C.config()
+    assert tips.choose_provider(cfg) is None
+    monkeypatch.setenv("GEMINI_API_KEY", "g")
+    assert tips.choose_provider(cfg) == ("gemini", "g", cfg["ai_visibility"]["providers"]["gemini"]["model"])
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "a")
+    assert tips.choose_provider(cfg)[0] == "gemini"  # preference order wins
+    monkeypatch.delenv("GEMINI_API_KEY")
+    assert tips.choose_provider(cfg)[:2] == ("anthropic", "a")
+
+
+def test_gemini_call_shape(monkeypatch):
+    sent = {}
+
+    class R:
+        status_code = 200
+        def json(self):
+            return {"candidates": [{"content": {"parts": [{"text": "thinking...", "thought": True}, {"text": '{"summary": "ok"}'}]}}]}
+
+    class S:
+        def post(self, url, **kw):
+            sent.update(url=url, **kw)
+            return R()
+
+    monkeypatch.setattr(C, "session", lambda *a, **k: S())
+    assert tips.call_llm("gemini", "k", "gemini-2.5-pro", "brief") == {"summary": "ok"}
+    assert "systemInstruction" in sent["json"] and sent["params"] == {"key": "k"}
+
+
+def test_gemini_retired_model_retry():
+    calls = []
+
+    class R:
+        def __init__(self, code, text=""):
+            self.status_code, self.text = code, text
+
+    class S:
+        def post(self, url, **kw):
+            calls.append(url)
+            if "old-model" in url:
+                return R(404, '{"error": {"message": "no longer available. Please update your code to use models/new-model-2 for"}}')
+            return R(200)
+
+    r = C.gemini_post(S(), "k", "old-model", {})
+    assert r.status_code == 200 and "new-model-2" in calls[-1] and len(calls) == 2

@@ -371,8 +371,8 @@
 
     tips() {
       const t = D.tips;
-      if (!t) return [empty("No recommendations yet.", "Add the ANTHROPIC_API_KEY secret. Recommendations are written weekly.")];
-      const out = [el("p", { class: "warn-box" }, `Drafts written by Claude (${t.model}) on ${date(t.updated)}. Review before using: check every historical claim and never publish a TR quote that hasn't been verified.`)];
+      if (!t) return [empty("No recommendations yet.", "Add any AI key (Gemini, Claude, ChatGPT or Perplexity). Recommendations are written weekly.")];
+      const out = [el("p", { class: "warn-box" }, `Drafts written by ${t.provider_label || "AI"} (${t.model}) on ${date(t.updated)}. Review before using: check every historical claim and never publish a TR quote that hasn't been verified.`)];
       const b = t.ai_brief;
       if (b) {
         out.push(el("h2", {}, "Getting recommended by AI assistants"), el("div", { class: "card tip" },
@@ -402,8 +402,8 @@
     },
 
     setup() {
-      const names = { gsc: "Search Console", audit: "Site audit", ranks: "Rank tracking", ai_visibility: "AI visibility", opportunities: "Opportunities", tips: "Claude recommendations" };
-      const secrets = { gsc: "Variables GCP_WIF_PROVIDER + GCP_SERVICE_ACCOUNT (or secret GSC_SERVICE_ACCOUNT_JSON)", audit: "none needed", ranks: "DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD", ai_visibility: "OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY, ANTHROPIC_API_KEY (any)", opportunities: "none needed", tips: "ANTHROPIC_API_KEY" };
+      const names = { gsc: "Search Console", audit: "Site audit", ranks: "Rank tracking", ai_visibility: "AI visibility", opportunities: "Opportunities", tips: "AI recommendations" };
+      const secrets = { gsc: "Variables GCP_WIF_PROVIDER + GCP_SERVICE_ACCOUNT (or secret GSC_SERVICE_ACCOUNT_JSON)", audit: "none needed", ranks: "DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD", ai_visibility: "OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY, ANTHROPIC_API_KEY (any)", opportunities: "none needed", tips: "Any one of GEMINI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY, PERPLEXITY_API_KEY (order set in config/site.yml)" };
       const st = D.status || {};
       return [
         el("p", { class: "lead" }, "Each source turns on when its key is added as a GitHub Actions secret on the SEO repo. Instructions are in the repo README."),
