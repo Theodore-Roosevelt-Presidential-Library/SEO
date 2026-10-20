@@ -159,3 +159,32 @@ def test_digest_builds_without_data(tmp_path, monkeypatch):
     digest.run()
     assert (tmp_path / "llms.txt").read_text().startswith("# TRPL Search & AI Visibility")
     assert "## Raw data" in (tmp_path / "digest.md").read_text()
+
+
+def test_tips_fallback(monkeypatch):
+    calls = []
+
+    def fake(provider, key, model, user, max_tokens=4000):
+        calls.append(provider)
+        if provider == "gemini":
+            raise tips.ProviderError("gemini", 429, "Gemini 429: quota")
+        return {"summary": "ok"}
+
+    monkeypatch.setattr(tips, "call_llm", fake)
+    w = tips.Writer([("gemini", "g", "gm"), ("anthropic", "a", "am")])
+    assert w.call("x")[1] == "anthropic"
+    assert w.call("y")[1] == "anthropic"
+    assert calls == ["gemini", "anthropic", "anthropic"]  # Gemini dropped after first failure
+    assert w.dropped == ["Gemini (429)"]
+
+
+def test_tips_no_fallback_on_bad_json(monkeypatch):
+    def fake(provider, *a, **k):
+        raise ValueError("No JSON in model reply")
+    monkeypatch.setattr(tips, "call_llm", fake)
+    w = tips.Writer([("gemini", "g", "gm"), ("anthropic", "a", "am")])
+    try:
+        w.call("x")
+    except ValueError:
+        pass
+    assert len(w.queue) == 2  # a bad reply doesn't drop the provider

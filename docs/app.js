@@ -372,7 +372,7 @@
     tips() {
       const t = D.tips;
       if (!t) return [empty("No recommendations yet.", "Add any AI key (Gemini, Claude, ChatGPT or Perplexity). Recommendations are written weekly.")];
-      const out = [el("p", { class: "warn-box" }, `Drafts written by ${t.provider_label || "AI"} (${t.model}) on ${date(t.updated)}. Review before using: check every historical claim and never publish a TR quote that hasn't been verified.`)];
+      const out = [el("p", { class: "warn-box" }, `Drafts written by ${t.provider_label || "AI"} (${t.model}) on ${date(t.updated)}.${(t.fallbacks || []).length ? ` Skipped this week: ${t.fallbacks.join(", ")}.` : ""} Review before using: check every historical claim and never publish a TR quote that hasn't been verified.`)];
       const b = t.ai_brief;
       if (b) {
         out.push(el("h2", {}, "Getting recommended by AI assistants"), el("div", { class: "card tip" },
@@ -388,7 +388,7 @@
         const sug = (label, o) => (o && o.suggested ? el("div", {}, el("div", { class: "small muted" }, `${label} (${o.suggested.length} characters)`), el("div", { class: "suggest" }, o.suggested), el("div", { class: "small muted" }, o.why)) : null);
         const list = (title, arr, f) => ((arr || []).length ? el("div", {}, el("h3", { style: "margin-top:.75rem" }, title), el("ul", { class: "clean" }, ...arr.map(f))) : null);
         out.push(el("div", { class: "card tip" },
-          el("h3", {}, link(p.page)), el("p", {}, p.summary || ""),
+          el("h3", {}, link(p.page)), p.written_by ? el("p", { class: "small muted" }, `Written by ${p.written_by}`) : null, el("p", {}, p.summary || ""),
           (p.checks || []).length ? el("p", { class: "warn-box small" }, p.checks.join(" · ")) : null,
           sug("Suggested title", p.title), sug("Suggested meta description", p.meta_description),
           list("Content to add", p.content_additions, (c) => el("li", {}, c.for_query ? el("strong", {}, `“${c.for_query}”: `) : null, c.suggestion, c.draft ? el("div", { class: "suggest small" }, c.draft) : null)),

@@ -96,21 +96,67 @@ def call_llm(provider: str, key: str, model: str, user: str, max_tokens: int = 4
     else:
         raise ValueError(f"Unknown provider {provider}")
     if not ok:
-        raise RuntimeError(f"{LABELS[provider]} {r.status_code}: {r.text[:200]}")
+        raise ProviderError(provider, r.status_code, f"{LABELS[provider]} {r.status_code}: {r.text[:200]}")
     return parse_json(text)
 
 
-def choose_provider(cfg: dict) -> tuple[str, str, str] | None:
-    """First provider in tips.prefer that has a key. Returns (provider, key, model)."""
+class ProviderError(RuntimeError):
+    def __init__(self, provider: str, status: int, msg: str):
+        super().__init__(msg)
+        self.provider, self.status = provider, status
+
+
+# Statuses that mean "this provider can't serve us right now" (bad key, no credit,
+# quota, retired model, outage), so the run should move on to the next provider.
+# Anything else (e.g. a reply that isn't valid JSON) only fails that one page.
+FALLBACK_STATUSES = {401, 402, 403, 404, 429, 500, 502, 503, 529}
+
+
+def available_providers(cfg: dict) -> list[tuple[str, str, str]]:
+    """Every provider in tips.prefer that has a key, in order: (provider, key, model)."""
     tcfg = cfg.get("tips", {})
     vis_models = cfg.get("ai_visibility", {}).get("providers", {})
+    out = []
     for p in tcfg.get("prefer", ["gemini", "anthropic", "openai", "perplexity"]):
         key = C.env(KEYS.get(p, ""))
-        if key:
-            model = (tcfg.get("models") or {}).get(p) or (vis_models.get(p) or {}).get("model")
-            if model:
-                return p, key, model
-    return None
+        model = (tcfg.get("models") or {}).get(p) or (vis_models.get(p) or {}).get("model")
+        if key and model:
+            out.append((p, key, model))
+    return out
+
+
+def choose_provider(cfg: dict) -> tuple[str, str, str] | None:
+    """First provider in tips.prefer that has a key."""
+    av = available_providers(cfg)
+    return av[0] if av else None
+
+
+class Writer:
+    """Calls the preferred provider; if it's out of credit, rate-limited or down,
+    drops it for the rest of the run and moves to the next one in tips.prefer."""
+
+    def __init__(self, providers: list[tuple[str, str, str]]):
+        self.queue = list(providers)
+        self.dropped: list[str] = []
+        self.used: list[str] = []
+
+    def call(self, user: str) -> tuple[dict, str, str]:
+        last = None
+        while self.queue:
+            provider, key, model = self.queue[0]
+            try:
+                result = call_llm(provider, key, model, user)
+                if provider not in self.used:
+                    self.used.append(provider)
+                return result, provider, model
+            except ProviderError as e:
+                if e.status not in FALLBACK_STATUSES:
+                    raise
+                last = e
+                C.log(f"{LABELS[provider]} unavailable ({e.status}); trying the next provider")
+                self.dropped.append(f"{LABELS[provider]} ({e.status})")
+                self.queue.pop(0)
+        raise last or RuntimeError("No AI provider available")
 
 
 def parse_json(text: str) -> dict:
@@ -224,34 +270,42 @@ Write a brief for the communications team. Return JSON in exactly this shape:
 
 def run() -> None:
     cfg = C.config()
-    choice = choose_provider(cfg)
-    if not choice:
+    providers = available_providers(cfg)
+    if not providers:
         C.set_status("tips", "skipped", "Add any one of GEMINI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY or PERPLEXITY_API_KEY to turn on written recommendations.")
         return
-    provider, key, model = choice
-    out = {"updated": C.now_iso(), "provider": provider, "provider_label": LABELS[provider], "model": model,
-           "pages": [], "ai_brief": None, "errors": []}
+    w = Writer(providers)
+    out = {"updated": C.now_iso(), "pages": [], "ai_brief": None, "errors": []}
 
     for url in pick_pages(cfg):
         try:
-            t = validate(call_llm(provider, key, model, page_brief(url, cfg)))
-            out["pages"].append({"page": url, **t})
+            t, prov, model = w.call(page_brief(url, cfg))
+            out["pages"].append({"page": url, "written_by": f"{LABELS[prov]} ({model})", **validate(t)})
         except Exception as e:  # noqa: BLE001
             out["errors"].append(f"{url}: {e}"[:300])
 
     brief = ai_brief()
     if brief:
         try:
-            out["ai_brief"] = call_llm(provider, key, model, brief)
+            out["ai_brief"], prov, model = w.call(brief)
+            out["ai_brief"]["written_by"] = f"{LABELS[prov]} ({model})"
         except Exception as e:  # noqa: BLE001
             out["errors"].append(f"AI brief: {e}"[:300])
 
+    used = w.used or [providers[0][0]]
+    first = next(p for p in providers if p[0] == used[0])
+    out.update(provider=used[0], provider_label=" + ".join(LABELS[p] for p in used),
+               model=", ".join(m for p, _, m in providers if p in used) or first[2],
+               fallbacks=w.dropped)
+
     C.write_json("tips.json", out)
+    note = f"; skipped {', '.join(w.dropped)}" if w.dropped else ""
     if out["errors"] and not out["pages"]:
-        C.set_status("tips", "error", out["errors"][0])
+        C.set_status("tips", "error", out["errors"][0] + note)
         raise C.JobError("tips failed")
     C.set_status("tips", "error" if out["errors"] else "ok",
-                 f"{LABELS[provider]} wrote tips for {len(out['pages'])} pages" + (f"; {len(out['errors'])} failed" if out["errors"] else ""))
+                 f"{out['provider_label']} wrote tips for {len(out['pages'])} pages{note}"
+                 + (f"; {len(out['errors'])} failed" if out["errors"] else ""))
 
 
 if __name__ == "__main__":

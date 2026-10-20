@@ -71,6 +71,7 @@ ai_visibility:
 
 tips:
   # Which AI writes the recommendations: the first one in this list that has a key.
+  # If it's out of credit, rate-limited or down, the run moves to the next one.
   # Reorder to change the preference. Works with just one key.
   prefer: [gemini, anthropic, openai, perplexity]
   # Optional per-provider model for writing tips. If a provider isn't listed here,
