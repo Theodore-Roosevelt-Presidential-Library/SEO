@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-16T02:14:16+00:00",
+ "updated": "2026-10-19T12:47:09+00:00",
  "site": "https://www.trlibrary.com",
- "sitemap_urls": 1109,
- "crawled": 1071,
+ "sitemap_urls": 1112,
+ "crawled": 1074,
  "score": 96,
  "ai_score": 60,
  "issues": [
@@ -77,51 +77,57 @@
    "severity": "low",
    "label": "Meta description under 70 characters",
    "pages": 17
+  },
+  {
+   "code": "slow",
+   "severity": "low",
+   "label": "Took over 3 seconds to respond",
+   "pages": 2
   }
  ],
  "status_codes": {
-  "200": 1071
+  "200": 1074
  },
  "slowest": [
   {
-   "url": "https://www.trlibrary.com/video/view/-QfzHHXPYqM",
-   "seconds": 0.87
+   "url": "https://www.trlibrary.com/video/view/9os3vftUa2M",
+   "seconds": 5.23
   },
   {
-   "url": "https://www.trlibrary.com/video/view/-fP_84JgLdM",
-   "seconds": 0.78
+   "url": "https://www.trlibrary.com/video/view/7zPnNxh5S-0",
+   "seconds": 3.15
   },
   {
-   "url": "https://www.trlibrary.com/video/view/-mcN1M3ZEps",
-   "seconds": 0.76
+   "url": "https://www.trlibrary.com/video/view/jKQoYEPX860",
+   "seconds": 2.96
   },
   {
-   "url": "https://www.trlibrary.com/video/view/-hAbH24Ia_w",
-   "seconds": 0.69
+   "url": "https://www.trlibrary.com/video/view/crDc7G_VLuQ",
+   "seconds": 2.93
   },
   {
-   "url": "https://www.trlibrary.com/video/view/-ly77R5Pszo",
-   "seconds": 0.68
+   "url": "https://www.trlibrary.com/video/view/lvKgI12sOvQ",
+   "seconds": 2.75
   },
   {
-   "url": "https://www.trlibrary.com/podcast/good-citizen/leah-hunt-hendrix",
-   "seconds": 0.54
+   "url": "https://www.trlibrary.com/video/view/ituU4YcPzLA",
+   "seconds": 2.66
   },
   {
-   "url": "https://www.trlibrary.com/video/view/aaxaXMCvjB0",
-   "seconds": 0.52
+   "url": "https://www.trlibrary.com/video/view/zaKNv9vCtLA",
+   "seconds": 2.62
   },
   {
-   "url": "https://www.trlibrary.com/project/leed-certificate",
-   "seconds": 0.52
+   "url": "https://www.trlibrary.com/video/view/2LuyRNg_7Zs",
+   "seconds": 2.6
   },
   {
-   "url": "https://www.trlibrary.com/tr/quotes/citizenship",
-   "seconds": 0.46
+   "url": "https://www.trlibrary.com/video/view/keuIKAkGqVs",
+   "seconds": 2.6
   },
   {
-   "url": "https://www.trlibrary.com/tr/speeches/first-annual-message",
-   "seconds": 0.43
+   "url": "https://www.trlibrary.com/video/view/38eoqKxRCMM",
+   "seconds": 2.58
   }
  ],
  "robots": {
@@ -142,22 +148,22 @@
  },
  "llms_txt": false,
  "structured_data_types": {
-  "PostalAddress": 1071,
-  "EntryPoint": 1071,
-  "ImageObject": 1071,
-  "OpeningHoursSpecification": 1071,
-  "SearchAction": 1071,
-  "WebSite": 1071,
-  "GeoCoordinates": 1071,
-  "ListItem": 1070,
-  "BreadcrumbList": 1070,
-  "Person": 270,
-  "Place": 59,
+  "SearchAction": 1074,
+  "EntryPoint": 1074,
+  "GeoCoordinates": 1074,
+  "OpeningHoursSpecification": 1074,
+  "ImageObject": 1074,
+  "PostalAddress": 1074,
+  "WebSite": 1074,
+  "BreadcrumbList": 1073,
+  "ListItem": 1073,
+  "Person": 271,
   "Event": 59,
+  "Place": 59,
   "NewsArticle": 19,
-  "Question": 17,
   "Answer": 17,
   "FAQPage": 17,
+  "Question": 17,
   "Schedule": 8
  },
  "sitewide_structured_data": [
@@ -171,6 +177,6 @@
   "SearchAction",
   "WebSite"
  ],
- "page_specific_structured_data": 362,
+ "page_specific_structured_data": 363,
  "title_suffix": " | Theodore Roosevelt Presidential Library"
 }
