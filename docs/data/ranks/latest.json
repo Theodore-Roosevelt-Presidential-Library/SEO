@@ -1,19 +1,27 @@
 {
- "updated": "2026-10-19T12:47:09+00:00",
+ "updated": "2026-10-20T04:36:48+00:00",
  "source": "gsc",
  "keywords": [
   {
    "keyword": "theodore roosevelt presidential library",
    "group": "Visit",
    "volume": null,
-   "gsc": null,
+   "gsc": {
+    "position": 1.1,
+    "clicks": 8046,
+    "impressions": 17210
+   },
    "serp": null
   },
   {
    "keyword": "things to do in medora nd",
    "group": "Visit",
    "volume": null,
-   "gsc": null,
+   "gsc": {
+    "position": 2.3,
+    "clicks": 7,
+    "impressions": 20
+   },
    "serp": null
   },
   {
@@ -34,7 +42,11 @@
    "keyword": "museums in north dakota",
    "group": "Visit",
    "volume": null,
-   "gsc": null,
+   "gsc": {
+    "position": 8.1,
+    "clicks": 1,
+    "impressions": 7
+   },
    "serp": null
   },
   {
@@ -48,21 +60,33 @@
    "keyword": "medora nd hotels",
    "group": "Visit",
    "volume": null,
-   "gsc": null,
+   "gsc": {
+    "position": 7.8,
+    "clicks": 1,
+    "impressions": 735
+   },
    "serp": null
   },
   {
    "keyword": "badlands north dakota",
    "group": "Visit",
    "volume": null,
-   "gsc": null,
+   "gsc": {
+    "position": 1.5,
+    "clicks": 0,
+    "impressions": 2
+   },
    "serp": null
   },
   {
    "keyword": "theodore roosevelt",
    "group": "History",
    "volume": null,
-   "gsc": null,
+   "gsc": {
+    "position": 10.4,
+    "clicks": 90,
+    "impressions": 39353
+   },
    "serp": null
   },
   {
@@ -76,14 +100,22 @@
    "keyword": "theodore roosevelt badlands",
    "group": "History",
    "volume": null,
-   "gsc": null,
+   "gsc": {
+    "position": 4.9,
+    "clicks": 5,
+    "impressions": 44
+   },
    "serp": null
   },
   {
    "keyword": "elkhorn ranch",
    "group": "History",
    "volume": null,
-   "gsc": null,
+   "gsc": {
+    "position": 9.4,
+    "clicks": 5,
+    "impressions": 602
+   },
    "serp": null
   },
   {
@@ -104,14 +136,22 @@
    "keyword": "presidential libraries",
    "group": "Presidential libraries",
    "volume": null,
-   "gsc": null,
+   "gsc": {
+    "position": 5.0,
+    "clicks": 8,
+    "impressions": 133
+   },
    "serp": null
   },
   {
    "keyword": "newest presidential library",
    "group": "Presidential libraries",
    "volume": null,
-   "gsc": null,
+   "gsc": {
+    "position": 1.6,
+    "clicks": 8,
+    "impressions": 39
+   },
    "serp": null
   },
   {
@@ -125,14 +165,22 @@
    "keyword": "theodore roosevelt quotes",
    "group": "Learning",
    "volume": null,
-   "gsc": null,
+   "gsc": {
+    "position": 3.1,
+    "clicks": 116,
+    "impressions": 2718
+   },
    "serp": null
   },
   {
    "keyword": "theodore roosevelt man in the arena",
    "group": "Learning",
    "volume": null,
-   "gsc": null,
+   "gsc": {
+    "position": 5.7,
+    "clicks": 11,
+    "impressions": 373
+   },
    "serp": null
   },
   {

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T12:47:09+00:00",
+ "updated": "2026-10-20T04:36:48+00:00",
  "site": "https://www.trlibrary.com",
  "sitemap_urls": 1112,
  "crawled": 1074,
@@ -77,12 +77,6 @@
    "severity": "low",
    "label": "Meta description under 70 characters",
    "pages": 17
-  },
-  {
-   "code": "slow",
-   "severity": "low",
-   "label": "Took over 3 seconds to respond",
-   "pages": 2
   }
  ],
  "status_codes": {
@@ -90,44 +84,44 @@
  },
  "slowest": [
   {
-   "url": "https://www.trlibrary.com/video/view/9os3vftUa2M",
-   "seconds": 5.23
+   "url": "https://www.trlibrary.com/video/view/-udCxePoWgE",
+   "seconds": 0.34
   },
   {
-   "url": "https://www.trlibrary.com/video/view/7zPnNxh5S-0",
-   "seconds": 3.15
+   "url": "https://www.trlibrary.com/video/view/WtudRvSwG3w",
+   "seconds": 0.32
   },
   {
-   "url": "https://www.trlibrary.com/video/view/jKQoYEPX860",
-   "seconds": 2.96
+   "url": "https://www.trlibrary.com/tr/presidency/race",
+   "seconds": 0.31
   },
   {
-   "url": "https://www.trlibrary.com/video/view/crDc7G_VLuQ",
-   "seconds": 2.93
+   "url": "https://www.trlibrary.com/video/view/qPq4zlJTdyM",
+   "seconds": 0.3
   },
   {
-   "url": "https://www.trlibrary.com/video/view/lvKgI12sOvQ",
-   "seconds": 2.75
+   "url": "https://www.trlibrary.com/video/view/sVxuv_VO03Y",
+   "seconds": 0.29
   },
   {
-   "url": "https://www.trlibrary.com/video/view/ituU4YcPzLA",
-   "seconds": 2.66
+   "url": "https://www.trlibrary.com/video/view/-QfzHHXPYqM",
+   "seconds": 0.25
   },
   {
-   "url": "https://www.trlibrary.com/video/view/zaKNv9vCtLA",
-   "seconds": 2.62
+   "url": "https://www.trlibrary.com/visit/roosevelt-in-medora",
+   "seconds": 0.22
   },
   {
-   "url": "https://www.trlibrary.com/video/view/2LuyRNg_7Zs",
-   "seconds": 2.6
+   "url": "https://www.trlibrary.com/node/247",
+   "seconds": 0.21
   },
   {
-   "url": "https://www.trlibrary.com/video/view/keuIKAkGqVs",
-   "seconds": 2.6
+   "url": "https://www.trlibrary.com/visit/itineraries/4-days-north-dakota/print",
+   "seconds": 0.21
   },
   {
-   "url": "https://www.trlibrary.com/video/view/38eoqKxRCMM",
-   "seconds": 2.58
+   "url": "https://www.trlibrary.com/video/view/-mcN1M3ZEps",
+   "seconds": 0.2
   }
  ],
  "robots": {
@@ -149,21 +143,21 @@
  "llms_txt": false,
  "structured_data_types": {
   "SearchAction": 1074,
-  "EntryPoint": 1074,
-  "GeoCoordinates": 1074,
-  "OpeningHoursSpecification": 1074,
-  "ImageObject": 1074,
   "PostalAddress": 1074,
+  "GeoCoordinates": 1074,
   "WebSite": 1074,
-  "BreadcrumbList": 1073,
+  "EntryPoint": 1074,
+  "ImageObject": 1074,
+  "OpeningHoursSpecification": 1074,
   "ListItem": 1073,
+  "BreadcrumbList": 1073,
   "Person": 271,
   "Event": 59,
   "Place": 59,
   "NewsArticle": 19,
   "Answer": 17,
-  "FAQPage": 17,
   "Question": 17,
+  "FAQPage": 17,
   "Schedule": 8
  },
  "sitewide_structured_data": [

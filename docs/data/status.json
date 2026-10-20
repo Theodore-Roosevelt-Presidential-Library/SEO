@@ -2,31 +2,31 @@
  "audit": {
   "state": "ok",
   "message": "Crawled 1074 pages, health 96/100",
-  "updated": "2026-10-19T12:47:09+00:00"
+  "updated": "2026-10-20T04:36:48+00:00"
  },
  "ranks": {
   "state": "skipped",
   "message": "Showing Search Console positions only. Add DATAFORSEO_LOGIN and DATAFORSEO_PASSWORD for live Google results.",
-  "updated": "2026-10-19T12:47:09+00:00"
+  "updated": "2026-10-20T04:36:48+00:00"
  },
  "opportunities": {
   "state": "ok",
   "message": "150 striking-distance queries, 60 low-CTR pages",
-  "updated": "2026-10-20T04:26:51+00:00"
+  "updated": "2026-10-20T04:36:48+00:00"
  },
  "gsc": {
   "state": "ok",
   "message": "5000 queries, 1498 pages (2026-09-20 to 2026-10-17)",
-  "updated": "2026-10-20T04:26:50+00:00"
+  "updated": "2026-10-20T04:35:29+00:00"
  },
  "ai_visibility": {
-  "state": "skipped",
-  "message": "Add any of OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY or ANTHROPIC_API_KEY to start tracking AI answers.",
-  "updated": "2026-10-19T12:47:09+00:00"
+  "state": "error",
+  "message": "Gemini 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features a",
+  "updated": "2026-10-20T04:36:48+00:00"
  },
  "tips": {
   "state": "skipped",
   "message": "Add the ANTHROPIC_API_KEY secret to turn on written recommendations.",
-  "updated": "2026-10-19T12:47:09+00:00"
+  "updated": "2026-10-20T04:36:48+00:00"
  }
 }
