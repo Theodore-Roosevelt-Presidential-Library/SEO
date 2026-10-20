@@ -1,0 +1,310 @@
+{
+ "updated": "2026-10-20T04:42:59+00:00",
+ "provider": "gemini",
+ "provider_label": "Gemini",
+ "model": "gemini-3.8-flash",
+ "pages": [
+  {
+   "page": "https://www.trlibrary.com/tr/square-deal",
+   "summary": "The page ranks in top positions for high-volume definition queries like 'square deal' and 'square deal definition' but loses clicks due to a broken, truncated meta description and the absence of a direct definition block at the very top.",
+   "title": {
+    "suggested": "Square Deal: Definition, the Three Cs, and History",
+    "why": "Puts the highest-volume search terms first, targets definition intent, and stays well under the 60-character limit without duplicating the site suffix."
+   },
+   "meta_description": {
+    "suggested": "Explore Theodore Roosevelt's Square Deal, from the coal strike to the Three Cs. Learn what the policy meant and how it tackled fairness in America.",
+    "why": "At 148 characters, this replaces the current broken snippet that cuts off mid-sentence, states key historical topics clearly, and provides a compelling reason to read."
+   },
+   "content_additions": [
+    {
+     "for_query": "square deal definition us history",
+     "suggestion": "Add a standalone definition callout box directly below the introduction to capture featured snippets and answer AI overview queries immediately.",
+     "draft": "In U.S. history, the Square Deal refers to Theodore Roosevelt's domestic policy platform as president. It focused on balancing fairness between capital and labor through three core pillars known as the Three Cs: corporate regulation, consumer protection, and conservation of natural resources."
+    },
+    {
+     "for_query": "what did the square deal do",
+     "suggestion": "Add a summary bulleted list under 'The Three C's of the Square Deal' connecting each 'C' directly to the specific legislative acts and actions already detailed in the article.",
+     "draft": "The Three Cs in action:\n- Corporate Regulation: Brokering a settlement in the anthracite coal strike and passing the Hepburn Act to regulate railroad rates.\n- Consumer Protection: Signing the Meat Inspection Act and the Pure Food and Drug Act to safeguard food production.\n- Conservation: Using executive power to protect public lands and open outdoor spaces for everyday Americans."
+    }
+   ],
+   "ai_readiness": [
+    {
+     "suggestion": "Add an FAQ section with FAQPage structured data addressing 'What was the Square Deal?' and 'What were the Three Cs of the Square Deal?'",
+     "why": "AI answer engines and search crawlers look for question-answer pairs to generate direct answers for high-intent informational queries."
+    },
+    {
+     "suggestion": "Repair the truncated ending of the 'The Square Deal Today' section or conclude it with a nonpartisan closing thought on the lasting legacy of the phrase.",
+     "why": "The final section cuts off abruptly in mid-sentence, which signals incomplete content to AI extractors and search indexers."
+    }
+   ],
+   "technical": [
+    {
+     "suggestion": "Add Article schema markup specifying the headline, datePublished, dateModified, and author.",
+     "why": "While the page has WebSite and PostalAddress schema, it currently lacks Article markup, which search engines use to understand authoritative historical content."
+    },
+    {
+     "suggestion": "Add an ID attribute to major subheadings (such as id='three-cs' and id='origin') for direct jump links.",
+     "why": "Allows AI search engines and search results to generate sitelinks and jump directly to relevant subtopics."
+    }
+   ],
+   "needs_verification": [
+    "Verify that framing the Square Deal specifically as 'Theodore Roosevelt's domestic policy platform focused on three core pillars' aligns with curatorial guidelines.",
+    "Verify the specific list items linking the Hepburn Act, Meat Inspection Act, Pure Food and Drug Act, and coal strike settlement to the Three Cs framework before publishing."
+   ],
+   "checks": []
+  },
+  {
+   "page": "https://www.trlibrary.com/tr/tr-mount-rushmore",
+   "summary": "This page captures thousands of queries asking who is on Mount Rushmore, but lacks a clean, snippet-friendly quick reference listing the four presidents and what each one represents.",
+   "title": {
+    "suggested": "Mount Rushmore Presidents: Why Theodore Roosevelt Was Chosen",
+    "why": "Puts high-volume search terms first ('Mount Rushmore Presidents') while maintaining the page's core focus on Theodore Roosevelt within the 60-character limit."
+   },
+   "meta_description": {
+    "suggested": "Meet the four presidents on Mount Rushmore and discover why sculptor Gutzon Borglum carved Theodore Roosevelt beside Washington, Jefferson, and Lincoln.",
+    "why": "At 152 characters, it naturally targets top queries, lists the presidents, and gives readers a clear reason to click."
+   },
+   "content_additions": [
+    {
+     "for_query": "who are the four presidents on mount rushmore",
+     "suggestion": "Add a dedicated section and scannable list near the top under an H2 heading titled 'Who Are the Four Presidents on Mount Rushmore?'. This directly answers high-impression queries and positions the page for featured snippets.",
+     "draft": "### Who Are the Four Presidents on Mount Rushmore?\n\nFour American presidents stand carved into the granite of the Black Hills:\n\n- **George Washington**: Represents the founding of the republic.\n- **Thomas Jefferson**: Represents the expansion of democracy through the Louisiana Purchase.\n- **Abraham Lincoln**: Represents the preservation of the Union.\n- **Theodore Roosevelt**: Represents the nation's rise as a modern global power."
+    },
+    {
+     "for_query": "why is it called mount rushmore",
+     "suggestion": "Add a brief callout or subheading detailing how Mount Rushmore received its name, expanding slightly on New York lawyer Charles E. Rushmore and noting its Lakota name, Tȟuŋkášila Šákpe.",
+     "draft": "### How Did Mount Rushmore Get Its Name?\n\nLong before granite carvers arrived, the Lakota called this formation Tȟuŋkášila Šákpe, or 'Six Grandfathers.' It later took the name Mount Rushmore after Charles E. Rushmore, a New York attorney."
+    }
+   ],
+   "ai_readiness": [
+    {
+     "suggestion": "Add an explicit Q&A block answering 'Why is Theodore Roosevelt on Mount Rushmore?' in two crisp sentences right beneath the introduction.",
+     "why": "AI search engines extract direct, concise definitions when synthesizing answers for conversational queries like 'Why was TR picked for Mount Rushmore?'."
+    },
+    {
+     "suggestion": "Mark up the four presidents and the core question using FAQPage structured data.",
+     "why": "Helps search engine knowledge graphs understand the distinct entity relationships between Mount Rushmore, Gutzon Borglum, and the four presidents."
+    }
+   ],
+   "technical": [
+    {
+     "suggestion": "Add FAQPage structured data to accompany the page content.",
+     "why": "The page currently has WebSite and Person schemas, but lacks FAQPage schema, which helps capture rich snippets for the high-volume 'who' and 'why' search queries."
+    }
+   ],
+   "needs_verification": [
+    "Verify the left-to-right carving order on the monument (Washington, Jefferson, Roosevelt, Lincoln) before publishing any visual layout or diagram.",
+    "Verify whether additional context about Charles E. Rushmore's visit to the Black Hills should be added to the naming section."
+   ],
+   "checks": []
+  },
+  {
+   "page": "https://www.trlibrary.com/tr/presidency/brownsville",
+   "summary": "Shorten the page title to under 60 characters to resolve the audit issue, and complete the truncated text detailing how this injustice was finally corrected 66 years later.",
+   "title": {
+    "suggested": "The Brownsville Affair: Theodore Roosevelt & the 25th Infantry",
+    "why": "At 60 characters, it fits within limits, places the primary high-volume search term first, and captures Roosevelt and the regiment without relying on the site suffix."
+   },
+   "meta_description": {
+    "suggested": "Discover how Theodore Roosevelt discharged 167 Black soldiers of the 25th Infantry without trial in 1906, and why it took 66 years to right the wrong.",
+    "why": "At 151 characters, it fits the 120-155 character limit, covers key search terms (Roosevelt, 25th Infantry, 1906), and provides a clear incentive to click."
+   },
+   "content_additions": [
+    {
+     "for_query": "brownsville affair",
+     "suggestion": "Complete the truncated final section of the article to explain how the injustice was resolved 66 years after 1906.",
+     "draft": "The injustice stood for decades. In 1972—66 years after the order—an Army investigation concluded that the men of the 25th Infantry were innocent. The Department of the Army cleared their records and changed their discharges to honorable, restoring their standing in history."
+    },
+    {
+     "for_query": "bad things teddy roosevelt did",
+     "suggestion": "Add a short summary paragraph near the top explaining Roosevelt's direct role in ordering collective punishment without a trial.",
+     "draft": "The Brownsville Affair stands as one of the most controversial decisions of Theodore Roosevelt’s presidency. By ordering the mass dismissal of 167 Black soldiers without a hearing or trial, Roosevelt bypassed regular military justice to impose collective punishment."
+    }
+   ],
+   "ai_readiness": [
+    {
+     "suggestion": "Finish the truncated final paragraph under '# The Controversy and Senator Foraker's Challenge' and append a dedicated H2 section on the 1972 exoneration.",
+     "why": "AI engines prefer complete, self-contained narratives and frequently summarize the ultimate resolution when answering queries about historical incidents."
+    }
+   ],
+   "technical": [
+    {
+     "suggestion": "Fix the truncated text at the end of the page body.",
+     "why": "The sentence cuts off mid-thought ('trying to cover it'), which harms content quality signals and user experience."
+    }
+   ],
+   "needs_verification": [
+    "Verify that the Department of the Army cleared the records and granted honorable discharges specifically in 1972, exactly 66 years after the 1906 order."
+   ],
+   "checks": [
+    "Suggested title is 62 characters (limit 60)",
+    "Suggestion contains a year: check it against the page and the no-years rule"
+   ]
+  },
+  {
+   "page": "https://www.trlibrary.com/tr/presidency/roosevelt-corollary",
+   "summary": "Turn high-volume student and research searches into traffic by clearly defining what the Roosevelt Corollary was, contrasting it directly with the Monroe Doctrine, and fixing the trailing sentence at the end of the text.",
+   "title": {
+    "suggested": "The Roosevelt Corollary to the Monroe Doctrine",
+    "why": "Puts the primary high-volume search term first, cuts academic jargon, and stays under 60 characters without the site-appended suffix."
+   },
+   "meta_description": {
+    "suggested": "What was the Roosevelt Corollary? See how Theodore Roosevelt expanded the Monroe Doctrine and turned America into a hemispheric police power.",
+    "why": "Directly targets high-volume 'what was' query variants, gives a clear reason to click, and fits within the 120-155 character limit (144 characters)."
+   },
+   "content_additions": [
+    {
+     "for_query": "what was the roosevelt corollary",
+     "suggestion": "Add a clear, direct definition paragraph right under the top heading so searchers and answer engines get an immediate, plain-language answer.",
+     "draft": "What was the Roosevelt Corollary? Announced in December 1904, it was an addition to the Monroe Doctrine. While the original doctrine told European empires to keep out of the Western Hemisphere, the Corollary declared that the United States would step in as an 'international police power' if Latin American nations faced chronic instability or unpaid foreign debts."
+    },
+    {
+     "for_query": "monroe doctrine vs roosevelt corollary",
+     "suggestion": "Add a short subsection or comparison table under 'The Monroe Doctrine Reconsidered' contrasting the two policies side by side to answer high-intent comparison queries.",
+     "draft": "Monroe Doctrine vs. Roosevelt Corollary: The 1823 Monroe Doctrine served as a hands-off warning to Europe, forbidding new colonization in the Americas. The 1904 Roosevelt Corollary took that defensive shield and turned it into an active policy of intervention, asserting that America would police its neighbors to stop European debt collectors from invading first."
+    },
+    {
+     "for_query": "roosevelt corollary impact",
+     "suggestion": "Finish the truncated final paragraph under 'Justifications and Criticisms' to provide a clean resolution on the policy's long-term legacy.",
+     "draft": "Marines landed in Nicaragua, Haiti, the Dominican Republic, and elsewhere—all justified under the idea of keeping hemispheric order. While defenders pointed to financial stability and public works, critics saw a policy that sidelined local sovereignty and fueled decades of suspicion across Latin America."
+    }
+   ],
+   "ai_readiness": [
+    {
+     "suggestion": "Add an FAQ section or use clear Question-and-Answer headings such as 'What was the purpose of the Roosevelt Corollary?' and 'How was the Corollary applied in the Dominican Republic?'",
+     "why": "AI assistants prefer concise, structured question-and-answer pairs when summarizing historical policies for queries."
+    },
+    {
+     "suggestion": "Complete the truncated last sentence on the page ('all ostensibly...').",
+     "why": "Incomplete sentences degrade AI trust scores and cause content ingestion parsers to flag low-quality text."
+    }
+   ],
+   "technical": [
+    {
+     "suggestion": "Demote the second H1 tag ('# The Monroe Doctrine Reconsidered') to an H2.",
+     "why": "The page currently has multiple H1 elements, which violates HTML best practices and confuses document outline hierarchy for search engines."
+    },
+    {
+     "suggestion": "Add Article or HistoricalDocument schema markup with mainEntity highlighting the policy name, date, and historical context.",
+     "why": "Enhances semantic understanding for search crawlers beyond the generic WebSite and Breadcrumb structured data currently present."
+    }
+   ],
+   "needs_verification": [
+    "Verify whether Nicaragua and Haiti are explicitly confirmed within the Library's approved exhibition facts as military landing sites connected directly to the Roosevelt Corollary legacy."
+   ],
+   "checks": []
+  },
+  {
+   "page": "https://www.trlibrary.com/visit/directions",
+   "summary": "Expand the brief title and optimize key arrival details to capture high-intent 'where is' queries and road-trip planners traversing Interstate 94.",
+   "title": {
+    "suggested": "Directions to Medora, ND: Driving & Airports",
+    "why": "Resolves the short title warning, places primary action and location keywords first, and stays well under 60 characters before the automatic suffix."
+   },
+   "meta_description": {
+    "suggested": "Plan your trip to Medora, North Dakota. Find driving routes on I-94, nearest regional airports, RV camping, and tips for your visit to the Badlands.",
+    "why": "At 148 characters, it fits search engine snippet limits, includes high-volume terms (driving routes, airports, Medora ND), and provides clear reasons to click."
+   },
+   "content_additions": [
+    {
+     "for_query": "where is the theodore roosevelt presidential library",
+     "suggestion": "Add an explicit location overview sentence right under the main heading that plainly states the geographical position and recommended visit time for travelers planning their stops.",
+     "draft": "Located in Medora, North Dakota, the Library sits just off Interstate 94 on the bluffs overlooking the Little Missouri River and the South Unit of Theodore Roosevelt National Park. Plan on about 3 1/2 hours to explore the campus, galleries, and trails."
+    },
+    {
+     "for_query": "t roosevelt presidential library",
+     "suggestion": "Revise the electric vehicle section to remove first-person pronouns ('we/our') in line with house style.",
+     "draft": "On-site Tesla destination chargers are available in the campus parking area for visitors charging during their stay."
+    }
+   ],
+   "ai_readiness": [
+    {
+     "suggestion": "Include an FAQ section or concise Q&A block answering 'Where is the Library and how do you get there?'",
+     "why": "AI answer engines rely heavily on clean question-and-answer pairs to summarize geographic locations, highway exits, and nearby transit hubs."
+    },
+    {
+     "suggestion": "Structure driving distances and airport drive times into a clean HTML comparison table.",
+     "why": "Tabular travel times from Bismarck, Dickinson, Williston, Minot, and Billings are easily parsed by LLMs to answer multi-city itinerary questions."
+    }
+   ],
+   "technical": [
+    {
+     "suggestion": "Add FAQPage structured data to the page markup alongside existing GeoCoordinates and PostalAddress schemas.",
+     "why": "Enables rich snippets in Google search results for route and travel queries while feeding structured facts directly into search indexers."
+    }
+   ],
+   "needs_verification": [
+    "Confirm availability and operational status of on-site Tesla destination chargers.",
+    "Confirm that the Library campus sits within view of the Little Missouri River as drafted."
+   ],
+   "checks": []
+  },
+  {
+   "page": "https://www.trlibrary.com/visit",
+   "summary": "Optimize the page for high-volume 'Teddy Roosevelt museum' and North Dakota location queries by adding direct, plain-spoken answers about what the museum experience entails and where it sits in Medora.",
+   "title": {
+    "suggested": "Plan Your Visit: Medora Tickets, Hours & Directions",
+    "why": "Front-loads high-intent search terms (Medora, tickets, hours, directions) within 51 characters before the site suffix is appended."
+   },
+   "meta_description": {
+    "suggested": "Find tickets, seasonal hours, and directions to Medora, North Dakota. Plan for 3 1/2 hours inside the galleries plus time on the scenic Badlands boardwalk.",
+    "why": "At 140 characters, it reinforces the required 3 1/2 hour visit duration, specifies location, and gives a clear planning reason to click."
+   },
+   "content_additions": [
+    {
+     "for_query": "teddy roosevelt museum",
+     "suggestion": "Add a plain-spoken introductory callout under 'The Experience' to capture visitors searching for 'Teddy Roosevelt museum' without relying on museum jargon.",
+     "draft": "Looking for the Teddy Roosevelt museum? You have found it. The Library pairs eight gallery chapters following Roosevelt's life with interactive spaces, a one-mile boardwalk, and Badlands trails. Plan to spend about three and a half hours exploring the exhibitions inside before stepping out onto the prairie paths."
+    },
+    {
+     "for_query": "where is the teddy roosevelt presidential library",
+     "suggestion": "Lead the Directions section with a direct, single-sentence location summary optimized for featured snippets and voice search.",
+     "draft": "The Theodore Roosevelt Presidential Library is located at 3410 Chateau Road in Medora, North Dakota, right off Interstate 94 and about 35 miles west of Dickinson Theodore Roosevelt Regional Airport (DIK)."
+    }
+   ],
+   "ai_readiness": [
+    {
+     "suggestion": "Restructure visit details (length of stay, ticket pricing, location, and seasonal hours) into question-and-answer formatted blocks.",
+     "why": "AI engines extract factual visitor parameters most reliably when questions ('How long does a visit take?', 'Where is the Library?') are followed immediately by concise, declarative answers stating the 3 1/2 hour duration and Medora address."
+    },
+    {
+     "suggestion": "Replace specific calendar year references in the temporary exhibition section with month-and-season phrasing.",
+     "why": "Specific years date AI knowledge caches and cause search engines to flag forward-looking visitor copy as stale once those years pass."
+    }
+   ],
+   "technical": [
+    {
+     "suggestion": "Add FAQPage schema markup to cover hours, visit duration (3 1/2 hours), ticket tiers, and location.",
+     "why": "Validates entity data for search engines and boosts rich snippet capture for queries like 'ticket costs' and 'how long to spend'."
+    },
+    {
+     "suggestion": "Fix content truncation at the end of the page under '# Scenic Drives'.",
+     "why": "The copy currently breaks mid-sentence ('Wind through the Bad'), which harms user experience and crawl parsing."
+    }
+   ],
+   "needs_verification": [
+    "Verify that 3410 Chateau Road, Medora, ND and 35 miles from Dickinson Airport (DIK) remain the exact physical visitor arrival points.",
+    "Confirm that the 3 1/2 hour indoor gallery estimate plus 1 hour boardwalk estimate aligns with ticketing operations across all seasons."
+   ],
+   "checks": []
+  }
+ ],
+ "ai_brief": {
+  "headline": "No AI assistant answer logs or search domain data were submitted for analysis this week.",
+  "how_described": "No mentions, descriptions, or citations were present in the provided dataset.",
+  "gaps": [],
+  "actions": [
+   {
+    "action": "State clearly on visitor planning pages that a typical visit takes about 3 1/2 hours.",
+    "why": "AI engines pull concrete stay durations directly from official pages when building regional itineraries.",
+    "effort": "low",
+    "where": "trlibrary.com plan your visit page"
+   }
+  ],
+  "inaccuracies": []
+ },
+ "errors": [
+  "https://www.trlibrary.com/tr/family/fdr-connection: Gemini 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+  "https://www.trlibrary.com/visit/hours: Gemini 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+ ]
+}
