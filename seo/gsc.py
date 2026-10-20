@@ -121,10 +121,10 @@ def run() -> None:
         daily.sort(key=lambda r: r["date"])
         C.write_json("gsc/daily.json", daily)
 
-        q_cur = g.query(start, end, ["query"], limit=5000)
-        q_prev = g.query(p_start, p_end, ["query"], limit=5000)
-        pg_cur = g.query(start, end, ["page"], limit=5000)
-        pg_prev = g.query(p_start, p_end, ["page"], limit=5000)
+        q_cur = g.query(start, end, ["query"], limit=25000)
+        q_prev = g.query(p_start, p_end, ["query"], limit=25000)
+        pg_cur = g.query(start, end, ["page"], limit=25000)
+        pg_prev = g.query(p_start, p_end, ["page"], limit=25000)
         qp = g.query(start, end, ["query", "page"], limit=10000)
         dev = g.query(start, end, ["device"])
 
@@ -149,7 +149,11 @@ def run() -> None:
             "previous_totals": _totals(prev_days),
             "branded_clicks": sum(r["clicks"] for r in q_rows if r["branded"]),
             "nonbranded_clicks": sum(r["clicks"] for r in q_rows if not r["branded"]),
+            # Clicks Google doesn't attribute to any search term (privacy-filtered rare
+            # searches, plus anything beyond the row limit).
+            "unattributed_clicks": max(0, _totals(cur_days)["clicks"] - sum(r["clicks"] for r in q_rows)),
             "query_count": len(q_cur),
+            "query_list_capped": len(q_cur) >= 25000,
             "page_count": len(pg_cur),
         }
         C.write_json("gsc/summary.json", summary)

@@ -76,6 +76,7 @@ def build() -> dict:
             "period": gs["period"], "previous_period": gs["previous"],
             "totals": cur, "previous_totals": prev,
             "branded_clicks": gs.get("branded_clicks"), "nonbranded_clicks": gs.get("nonbranded_clicks"),
+            "unattributed_clicks": gs.get("unattributed_clicks"),
             "top_queries": [{"query": q["query"], "clicks": q["clicks"], "prev_clicks": q.get("prev_clicks"),
                              "impressions": q["impressions"], "ctr": q["ctr"], "position": q["position"],
                              "branded": q.get("branded")}
@@ -193,7 +194,7 @@ def to_markdown(d: dict) -> str:
               f"{s['period']['start']} to {s['period']['end']} vs the prior 28 days: "
               f"**{t['clicks']:,} clicks** (prior {p['clicks']:,}), {t['impressions']:,} impressions (prior {p['impressions']:,}), "
               f"CTR {t['ctr']:.1%} (prior {p['ctr']:.1%}), average position {t['position']} (prior {p['position']}). "
-              f"Branded clicks {s.get('branded_clicks')}, non-branded {s.get('nonbranded_clicks')}.\n",
+              f"Branded clicks {s.get('branded_clicks')}, non-branded {s.get('nonbranded_clicks')}, search term hidden by Google {s.get('unattributed_clicks', 'n/a')}.\n",
               "### Top non-branded searches (people who didn't search our name)",
               _table(s["top_nonbranded_queries"], [("query", "Search"), ("clicks", "Clicks"), ("impressions", "Impr."), ("position", "Pos.")]),
               "### Top pages",

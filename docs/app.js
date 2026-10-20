@@ -139,7 +139,7 @@
           kpi("Impressions", num(c.impressions), delta(c.impressions, p.impressions)),
           kpi("Click-through rate", pct(c.ctr), delta(c.ctr, p.ctr)),
           kpi("Average position", pos(c.position), delta(c.position, p.position, { invert: true, asPct: false })),
-          kpi("Non-branded clicks", num(s.nonbranded_clicks), `${pct(s.nonbranded_clicks / Math.max(1, s.nonbranded_clicks + s.branded_clicks), 0)} of query clicks: people who didn't search our name`),
+          kpi("Non-branded clicks", num(s.nonbranded_clicks), `${pct(s.nonbranded_clicks / Math.max(1, s.nonbranded_clicks + s.branded_clicks), 0)} of clicks with a known search: people who didn't search our name${s.unattributed_clicks ? `. Google hides the search for another ${num(s.unattributed_clicks)}.` : ""}`),
         ));
       } else {
         out.push(empty("Search Console isn't connected yet.", "See the Setup tab."));
