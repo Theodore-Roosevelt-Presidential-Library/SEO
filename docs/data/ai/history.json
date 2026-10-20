@@ -2,12 +2,22 @@
  {
   "date": "2026-10-20",
   "overall": {
-   "n": 0,
-   "mention_rate": null,
-   "cite_rate": null
+   "n": 28,
+   "mention_rate": 0.571,
+   "cite_rate": 0.429
   },
   "providers": {
+   "openai": {
+    "n": 15,
+    "mention_rate": 0.667,
+    "cite_rate": 0.6
+   },
    "gemini": {
+    "n": 13,
+    "mention_rate": 0.462,
+    "cite_rate": 0.231
+   },
+   "perplexity": {
     "n": 0,
     "mention_rate": null,
     "cite_rate": null
@@ -15,49 +25,79 @@
   },
   "prompts": {
    "trnp-what-to-see": {
-    "gemini": false
+    "openai": true,
+    "gemini": false,
+    "perplexity": false
    },
    "medora-things-to-do": {
-    "gemini": false
+    "openai": true,
+    "gemini": false,
+    "perplexity": false
    },
    "nd-road-trip": {
-    "gemini": false
+    "openai": true,
+    "gemini": false,
+    "perplexity": false
    },
    "rushmore-to-trnp": {
-    "gemini": false
+    "openai": true,
+    "gemini": false,
+    "perplexity": false
    },
    "i94-stops": {
-    "gemini": false
+    "openai": false,
+    "gemini": false,
+    "perplexity": false
    },
    "family-badlands": {
-    "gemini": false
+    "openai": true,
+    "gemini": false,
+    "perplexity": false
    },
    "rainy-day-medora": {
-    "gemini": false
+    "openai": true,
+    "gemini": false,
+    "perplexity": false
    },
    "nd-museums": {
-    "gemini": false
+    "openai": false,
+    "gemini": false,
+    "perplexity": false
    },
    "newest-presidential-library": {
-    "gemini": false
+    "openai": true,
+    "gemini": true,
+    "perplexity": false
    },
    "presidential-libraries-visit": {
-    "gemini": false
+    "openai": false,
+    "gemini": true,
+    "perplexity": false
    },
    "tr-learn-where": {
-    "gemini": false
+    "openai": false,
+    "gemini": true,
+    "perplexity": false
    },
    "tr-sites": {
-    "gemini": false
+    "openai": false,
+    "gemini": false,
+    "perplexity": false
    },
    "tr-library-worth-it": {
-    "gemini": false
+    "openai": true,
+    "gemini": true,
+    "perplexity": false
    },
    "tr-library-time": {
-    "gemini": false
+    "openai": true,
+    "gemini": true,
+    "perplexity": false
    },
    "tr-library-tickets": {
-    "gemini": false
+    "openai": true,
+    "gemini": true,
+    "perplexity": false
    }
   }
  }
