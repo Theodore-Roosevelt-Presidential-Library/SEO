@@ -1,0 +1,64 @@
+[
+ {
+  "date": "2026-10-20",
+  "overall": {
+   "n": 0,
+   "mention_rate": null,
+   "cite_rate": null
+  },
+  "providers": {
+   "gemini": {
+    "n": 0,
+    "mention_rate": null,
+    "cite_rate": null
+   }
+  },
+  "prompts": {
+   "trnp-what-to-see": {
+    "gemini": false
+   },
+   "medora-things-to-do": {
+    "gemini": false
+   },
+   "nd-road-trip": {
+    "gemini": false
+   },
+   "rushmore-to-trnp": {
+    "gemini": false
+   },
+   "i94-stops": {
+    "gemini": false
+   },
+   "family-badlands": {
+    "gemini": false
+   },
+   "rainy-day-medora": {
+    "gemini": false
+   },
+   "nd-museums": {
+    "gemini": false
+   },
+   "newest-presidential-library": {
+    "gemini": false
+   },
+   "presidential-libraries-visit": {
+    "gemini": false
+   },
+   "tr-learn-where": {
+    "gemini": false
+   },
+   "tr-sites": {
+    "gemini": false
+   },
+   "tr-library-worth-it": {
+    "gemini": false
+   },
+   "tr-library-time": {
+    "gemini": false
+   },
+   "tr-library-tickets": {
+    "gemini": false
+   }
+  }
+ }
+]

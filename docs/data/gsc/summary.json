@@ -1,0 +1,28 @@
+{
+ "property": "sc-domain:trlibrary.com",
+ "updated": "2026-10-20T04:35:29+00:00",
+ "period": {
+  "start": "2026-09-20",
+  "end": "2026-10-17"
+ },
+ "previous": {
+  "start": "2026-08-23",
+  "end": "2026-09-19"
+ },
+ "current_totals": {
+  "clicks": 49372,
+  "impressions": 2341943,
+  "ctr": 0.0211,
+  "position": 6.3
+ },
+ "previous_totals": {
+  "clicks": 68665,
+  "impressions": 2037166,
+  "ctr": 0.0337,
+  "position": 6.9
+ },
+ "branded_clicks": 20801,
+ "nonbranded_clicks": 9782,
+ "query_count": 5000,
+ "page_count": 1498
+}
