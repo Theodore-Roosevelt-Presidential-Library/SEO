@@ -125,7 +125,7 @@ def run() -> None:
         q_prev = g.query(p_start, p_end, ["query"], limit=5000)
         pg_cur = g.query(start, end, ["page"], limit=5000)
         pg_prev = g.query(p_start, p_end, ["page"], limit=5000)
-        qp = g.query(start, end, ["query", "page"], limit=25000)
+        qp = g.query(start, end, ["query", "page"], limit=10000)
         dev = g.query(start, end, ["device"])
 
         cur_days = [r for r in daily if start.isoformat() <= r["date"] <= end.isoformat()]

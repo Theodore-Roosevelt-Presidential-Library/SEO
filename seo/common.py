@@ -63,7 +63,10 @@ def write_json(rel: str, obj) -> Path:
     p = data_path(rel)
     tmp = p.with_suffix(p.suffix + ".tmp")
     with open(tmp, "w", encoding="utf-8") as fh:
-        json.dump(obj, fh, indent=1, ensure_ascii=False, sort_keys=False)
+        # Big files are written compactly to keep daily commits (and the repo) small.
+        big = isinstance(obj, list) and len(obj) > 500
+        json.dump(obj, fh, ensure_ascii=False, indent=None if big else 1,
+                  separators=(",", ":") if big else None)
         fh.write("\n")
     tmp.replace(p)
     return p
