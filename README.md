@@ -88,6 +88,27 @@ The dashboard is drawn with JavaScript, so AI assistants that fetch it see an em
 
 To use it, tell Claude (or any assistant): "Read https://seo.labs.trlibrary.com/llms.txt and tell me the five best ways to improve our SEO this week."
 
+## Self-managing tracking
+Each week the tool adds promising keywords and AI questions on its own, and retires ones that are done. Your files `config/keywords.yml` and `config/ai_prompts.yml` are never changed.
+
+- **Adding keywords:** searches where trlibrary.com ranks 4–30 with real demand (300+ impressions in 28 days, two or more words, non-branded). They're ranked by how many extra clicks a top-3 spot would bring, with a boost for rising searches.
+- **Adding AI questions:** question-style Google searches ("what was the square deal", "things to do near medora"). If any AI key is set, the AI rewrites each one the way a traveler or student would ask an assistant.
+- **AI filter:** when any AI key is set, candidates are screened against the goals in `config/tracking.yml`, so off-mission searches such as podcast guests' names are dropped. Without a key, only the rules and the exclude list apply.
+- **Retiring:**
+  - A keyword **graduates** after four weekly checks in the top 3.
+  - A keyword is **retired** when its searches dry up.
+  - A question **graduates** once every assistant has mentioned the Library four weeks running.
+  - Retired items can't come back for 12 weeks.
+- **Caps** (all in `config/tracking.yml`):
+  - At most 25 discovered keywords and 8 discovered questions at once.
+  - At most 5 new keywords and 2 new questions a week.
+- **Your controls:**
+  - To keep an item for good, copy it into `keywords.yml` or `ai_prompts.yml`.
+  - To block an item or a pattern, add it under `exclude` in `tracking.yml`.
+- **Where to see it:** every change and its reason is listed under "What the system changed" on the Rankings and AI Visibility tabs, and in `digest.md`.
+
+Added keywords raise DataForSEO costs by about half a cent per keyword per week, so 25 discovered keywords add about $0.55 a month.
+
 ## Changing what's tracked
 All tracking is controlled by three files in `config/`. Edit them on GitHub; the next run picks up the changes.
 - `config/keywords.yml`: the searches tracked on the Rankings tab, in groups.

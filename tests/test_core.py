@@ -188,3 +188,61 @@ def test_tips_no_fallback_on_bad_json(monkeypatch):
     except ValueError:
         pass
     assert len(w.queue) == 2  # a bad reply doesn't drop the provider
+
+
+def _q(query, impressions, position, ctr=0.005, prev=None):
+    return {"query": query, "impressions": impressions, "position": position, "ctr": ctr, "clicks": 1,
+            "prev_impressions": prev or impressions}
+
+
+def test_curate_adds_caps_and_retires(monkeypatch):
+    from seo import curate
+    cfg = C.config()
+    tcfg = {"keywords": {"max_auto": 3, "add_per_week": 2, "min_impressions": 100, "positions": [4, 30], "min_words": 2,
+                         "min_weeks": 0, "graduate_top3_weeks": 2, "fade_impressions": 50, "cooldown_weeks": 12},
+            "ai_prompts": {"max_auto": 2, "add_per_week": 1, "min_impressions": 100, "graduate_weeks": 2},
+            "exclude": ["karl rove"], "goals": ""}
+    queries = [_q("karl rove podcast", 9000, 9), _q("badlands museum hours", 800, 8), _q("medora winter things", 600, 12),
+               _q("how long is the scenic loop drive", 500, 6), _q("theodore", 5000, 10), _q("tr library tickets", 900, 7)]
+    st = curate.curate({"keywords": [], "prompts": [], "log": []}, cfg, tcfg, queries, [], [], ai_filter=lambda *a: None)
+    kws = [k["keyword"] for k in st["keywords"]]
+    assert "karl rove podcast" not in kws          # excluded
+    assert "theodore" not in kws                   # one word
+    assert "tr library tickets" not in kws         # branded
+    assert len(kws) == 2                            # add_per_week cap
+    assert [p["text"] for p in st["prompts"]] == ["How long is the scenic loop drive?"]
+
+    # a second run the same week adds nothing more
+    st = curate.curate(st, cfg, tcfg, queries, [], [], ai_filter=lambda *a: None)
+    assert len(st["keywords"]) == 2 and len(st["prompts"]) == 1
+
+    # graduation: two weekly checks in the top 3; fading: impressions dry up
+    won, faded = st["keywords"][0]["keyword"], st["keywords"][1]["keyword"]
+    hist = [{"gsc": {won: 2.5}}, {"gsc": {won: 1.8}}]
+    q2 = [_q(won, 900, 2), _q(faded, 10, 15)]
+    st = curate.curate(st, cfg, tcfg, q2, hist, [], ai_filter=lambda *a: None)
+    status = {k["keyword"]: k["status"] for k in st["keywords"]}
+    assert status[won] == "graduated" and status[faded] == "retired"
+
+    # cooldown: a retired keyword isn't re-added even if it qualifies again
+    for e in st["log"]:
+        e["date"] = "2000-01-01"   # pretend the adds were long ago so the weekly cap resets
+    st = curate.curate(st, cfg, tcfg, [_q(faded, 900, 9)], [], [], ai_filter=lambda *a: None)
+    assert sum(1 for k in st["keywords"] if k["keyword"] == faded) == 1
+
+
+def test_curate_uses_ai_filter():
+    from seo import curate
+    tcfg = {"keywords": {"add_per_week": 5, "min_impressions": 100, "min_words": 2},
+            "ai_prompts": {"add_per_week": 2, "min_impressions": 100}, "exclude": [], "goals": "g"}
+    queries = [_q("badlands museum hours", 800, 8), _q("random celebrity news", 900, 9), _q("what to do near medora", 700, 7)]
+
+    def fake(cands, goals, want_prompts):
+        if want_prompts:
+            return [{"query": "what to do near medora", "question": "What should I do near Medora, North Dakota?", "group": "Trip planning"}]
+        return [{"query": "badlands museum hours", "group": "Visit", "why": "visit intent"}]
+
+    st = curate.curate({"keywords": [], "prompts": [], "log": []}, C.config(), tcfg, queries, [], [], ai_filter=fake)
+    assert [k["keyword"] for k in st["keywords"]] == ["badlands museum hours"]
+    assert st["keywords"][0]["group"] == "Auto: Visit"
+    assert st["prompts"][0]["text"] == "What should I do near Medora, North Dakota?"

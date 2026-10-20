@@ -1,0 +1,44 @@
+# Rules for what the system adds to and retires from tracking on its own.
+# Your hand-picked lists (keywords.yml, ai_prompts.yml) are never changed.
+# Discovered items live in docs/data/tracking.json and show on the dashboard
+# with an "auto" tag.
+#   To KEEP a discovered item permanently, copy it into keywords.yml / ai_prompts.yml.
+#   To BLOCK one (or a pattern), add it under exclude below.
+
+keywords:
+  max_auto: 25            # most discovered keywords tracked at once
+  add_per_week: 5         # most new ones added in a single week
+  min_impressions: 300    # last 28 days, for a search to be considered
+  positions: [4, 30]      # only searches we rank for, but not yet in the top 3
+  min_words: 2            # skip one-word searches like "theodore"
+  min_weeks: 4            # tracked at least this long before it can retire
+  graduate_top3_weeks: 4  # retire as "won" after this many weekly checks in the top 3
+  fade_impressions: 75    # retire as "faded" if 28-day impressions drop below this
+  cooldown_weeks: 12      # a retired keyword can't be re-added for this long
+
+ai_prompts:
+  max_auto: 8
+  add_per_week: 2
+  min_impressions: 150    # the Google search the question came from
+  graduate_weeks: 4       # retire as "won" after every assistant mentions us this many weeks running
+  cooldown_weeks: 12
+
+# Never add searches/questions matching these (case-insensitive regular expressions).
+# Example: podcast guest names bring traffic but aren't worth tracking.
+exclude:
+  - "\\bkarl rove\\b"
+  - "\\bchris murphy\\b"
+  - "\\bbill kristol\\b"
+  - "\\bmeg whitman\\b"
+  - "\\bjobs?\\b|\\bcareers?\\b|\\bhiring\\b"
+  - "\\blogin\\b|\\bpassword\\b"
+
+# What the Library wants to be found for. Used by the AI filter (when any AI key
+# is set) to judge whether a discovered search is worth tracking.
+goals: >
+  Drive visits to the Theodore Roosevelt Presidential Library in Medora, North Dakota
+  (trip planning, things to do near Theodore Roosevelt National Park, North Dakota travel,
+  presidential libraries and museums); be the go-to source on Theodore Roosevelt's life,
+  presidency, family, conservation legacy and time in the Badlands; and civic education.
+  Not worth tracking: names of podcast guests or modern public figures, unrelated people
+  who share a name, navigational searches for other organizations.

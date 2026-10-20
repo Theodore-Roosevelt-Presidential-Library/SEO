@@ -145,6 +145,11 @@ def run() -> None:
         C.set_status("ai_visibility", "skipped", "Add any of OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY or ANTHROPIC_API_KEY to start tracking AI answers.")
         return
     prompts = C.load_yaml("ai_prompts.yml").get("prompts", [])
+    # plus questions the system discovered from Google searches (seo/curate.py)
+    from .curate import active_prompts
+    ids = {p["id"] for p in prompts}
+    prompts += [{"id": p["id"], "group": f"Auto: {p.get('group', 'Discovered')}", "text": p["text"], "auto": True}
+                for p in active_prompts() if p["id"] not in ids]
     brand_re = C.brand_regex(cfg.get("brand_terms", []))
     peers = cfg.get("peer_entities", {})
     our = C.domain_of(cfg["site"]["url"])

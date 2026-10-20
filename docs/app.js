@@ -10,7 +10,7 @@
     ranks: "data/ranks/latest.json", rankHist: "data/ranks/history.json",
     ai: "data/ai/latest.json", aiHist: "data/ai/history.json",
     audit: "data/audit/summary.json", auditPages: "data/audit/pages.json", auditHist: "data/audit/history.json",
-    tips: "data/tips.json",
+    tips: "data/tips.json", tracking: "data/tracking.json",
   };
   const D = {};
   const charts = [];
@@ -124,6 +124,23 @@
     wrap.append(tools, el("div", { class: "table-wrap" }, el("table", {}, el("thead", {}, el("tr", {}, ...ths)), tbody)), more);
     draw();
     return wrap;
+  }
+
+  // What the system added/retired on its own (seo/curate.py)
+  function trackingLog() {
+    const t = D.tracking;
+    if (!t || !(t.log || []).length) return [];
+    const active = (t.keywords || []).filter((k) => k.status === "active").length;
+    const activeQ = (t.prompts || []).filter((p) => p.status === "active").length;
+    return [
+      el("h2", {}, "What the system changed"),
+      el("p", { class: "lead" }, `Each week the system adds promising searches and AI questions from Search Console, and retires ones that have been won or have faded. It's tracking ${active} discovered keywords and ${activeQ} discovered questions now, within the caps in config/tracking.yml. To keep one for good, copy it into keywords.yml or ai_prompts.yml. To block one, add it to the exclude list.`),
+      el("div", { class: "card" }, table([
+        { key: "date", label: "Date" },
+        { key: "action", label: "Change", render: (e) => el("span", { class: `pill ${e.action === "added" ? "ok" : e.action === "graduated" ? "" : "skipped"}` }, e.action) },
+        { key: "kind", label: "Type" }, { key: "item", label: "Keyword / question" }, { key: "reason", label: "Why" },
+      ], t.log, { limit: 20, sort: ["date", -1] })),
+    ];
   }
 
   // ---------- views ----------
@@ -247,7 +264,8 @@
       const live = r.source.includes("dataforseo");
       const groups = [...new Set(r.keywords.map((k) => k.group))];
       const cols = [
-        { key: "keyword", label: "Search" }, { key: "group", label: "Group" },
+        { key: "keyword", label: "Search", render: (k) => (k.auto ? el("span", {}, k.keyword, " ", el("span", { class: "pill", title: "Added automatically. See 'What the system changed' below." }, "auto")) : k.keyword) },
+        { key: "group", label: "Group" },
         { key: "volume", label: "Monthly searches", num: true, fmt: num },
         { key: "gsc", label: "Search Console pos.", num: true, render: (k) => pos(k.gsc && k.gsc.position), sortVal: (k) => k.gsc && k.gsc.position },
       ];
@@ -266,6 +284,7 @@
         const kws = r.keywords.filter((k) => k.serp && k.serp.rank).sort((a, b) => (b.volume || 0) - (a.volume || 0)).slice(0, 5).map((k) => k.keyword);
         out.push(el("h2", {}, "Rank over time"), el("div", { class: "card" }, lineChart(kws.map((k) => ({ label: k, data: h.map((x) => (x.serp || {})[k] ?? null) })), h.map((x) => x.date), { yReverse: true })));
       }
+      out.push(...trackingLog());
       return out;
     },
 
@@ -289,7 +308,7 @@
       for (const g of groups) {
         tb.append(el("tr", {}, el("th", { colspan: provs.length + 1, scope: "colgroup" }, g)));
         for (const p of a.prompts.filter((x) => x.group === g)) {
-          tb.append(el("tr", {}, el("td", {}, p.text), ...provs.map((pv) => {
+          tb.append(el("tr", {}, el("td", {}, p.text, p.auto ? el("span", {}, " ", el("span", { class: "pill", title: "Added automatically from a Google search" }, "auto")) : null), ...provs.map((pv) => {
             const r = a.results.find((x) => x.prompt_id === p.id && x.provider === pv);
             if (!r) return el("td", { class: "cell" }, "–");
             const cls = r.error ? "err" : r.cited_us ? "cite" : r.mentioned ? "yes" : "no";
@@ -325,6 +344,7 @@
             { key: "bar", label: "", render: (r) => el("div", { class: "bar", style: "min-width:120px" }, el("span", { style: `width:${(100 * r.n) / max}%` })) },
           ], a.top_cited_domains.map(([d, n]) => ({ d, n })), { search: false, limit: 25, sort: ["n", -1] })));
       }
+      out.push(...trackingLog());
       return out;
     },
 
@@ -402,8 +422,8 @@
     },
 
     setup() {
-      const names = { gsc: "Search Console", audit: "Site audit", ranks: "Rank tracking", ai_visibility: "AI visibility", opportunities: "Opportunities", tips: "AI recommendations", digest: "AI-readable digest (llms.txt)" };
-      const secrets = { gsc: "Variables GCP_WIF_PROVIDER + GCP_SERVICE_ACCOUNT (or secret GSC_SERVICE_ACCOUNT_JSON)", audit: "none needed", ranks: "DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD", ai_visibility: "OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY, ANTHROPIC_API_KEY (any)", opportunities: "none needed", digest: "none needed", tips: "Any one of GEMINI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY, PERPLEXITY_API_KEY (order set in config/site.yml)" };
+      const names = { gsc: "Search Console", audit: "Site audit", ranks: "Rank tracking", ai_visibility: "AI visibility", opportunities: "Opportunities", curate: "Keyword & question discovery", tips: "AI recommendations", digest: "AI-readable digest (llms.txt)" };
+      const secrets = { gsc: "Variables GCP_WIF_PROVIDER + GCP_SERVICE_ACCOUNT (or secret GSC_SERVICE_ACCOUNT_JSON)", audit: "none needed", ranks: "DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD", ai_visibility: "OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY, ANTHROPIC_API_KEY (any)", opportunities: "none needed", curate: "none (an AI key improves the filtering); rules in config/tracking.yml", digest: "none needed", tips: "Any one of GEMINI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY, PERPLEXITY_API_KEY (order set in config/site.yml)" };
       const st = D.status || {};
       return [
         el("p", { class: "lead" }, "Each source turns on when its key is added as a GitHub Actions secret on the SEO repo. Instructions are in the repo README."),

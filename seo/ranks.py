@@ -29,6 +29,12 @@ def tracked_keywords() -> list[dict]:
             if k and k not in seen:
                 seen.add(k)
                 out.append({"keyword": k, "group": g})
+    # plus keywords the system discovered (see seo/curate.py, config/tracking.yml)
+    from .curate import active_keywords
+    for k in active_keywords():
+        if k["keyword"] not in seen:
+            seen.add(k["keyword"])
+            out.append({"keyword": k["keyword"], "group": k.get("group", "Auto: Discovered"), "auto": True})
     return out
 
 

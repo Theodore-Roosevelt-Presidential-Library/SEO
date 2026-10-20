@@ -43,6 +43,7 @@ RAW_FILES = {
     "audit/summary.json": "Site audit: health score, issue counts, robots.txt AI-crawler access, structured data",
     "audit/pages.json": "Per-page audit: title, meta, H1, canonical, OG tags, word count, issues",
     "tips.json": "AI-drafted page recommendations and the AI-visibility brief",
+    "tracking.json": "Keywords and AI questions the system discovered, graduated or retired, with reasons",
 }
 
 
@@ -61,6 +62,7 @@ def build() -> dict:
     audit = C.read_json("audit/summary.json")
     apages = C.read_json("audit/pages.json", []) or []
     tips = C.read_json("tips.json")
+    tracking = C.read_json("tracking.json")
 
     d: dict = {
         "generated": C.now_iso(),
@@ -148,6 +150,16 @@ def build() -> dict:
             "pages": [{k: p.get(k) for k in ("page", "summary", "title", "meta_description", "content_additions",
                                               "ai_readiness", "technical", "needs_verification", "checks")}
                       for p in tips.get("pages", [])],
+        }
+
+    if tracking:
+        d["tracking"] = {
+            "discovered_keywords": [{"keyword": k["keyword"], "group": k.get("group"), "added": k["added"], "reason": k.get("reason")}
+                                    for k in tracking.get("keywords", []) if k.get("status") == "active"],
+            "discovered_questions": [{"question": p["text"], "added": p["added"], "reason": p.get("reason")}
+                                     for p in tracking.get("prompts", []) if p.get("status") == "active"],
+            "recent_changes": tracking.get("log", [])[:15],
+            "how_to_change": "Rules and caps: config/tracking.yml. Keep an item permanently by copying it into config/keywords.yml or config/ai_prompts.yml; block it via tracking.yml exclude.",
         }
 
     d["raw_files"] = {f"{BASE}/data/{k}": v for k, v in RAW_FILES.items()}
@@ -280,6 +292,11 @@ def to_markdown(d: dict) -> str:
             if p.get("needs_verification"):
                 L.append(f"- Verify: {'; '.join(p['needs_verification'])}")
             L.append("")
+
+    tr = d.get("tracking")
+    if tr and tr["recent_changes"]:
+        L += ["## Tracking changes made automatically", tr["how_to_change"] + "\n",
+              _table(tr["recent_changes"], [("date", "Date"), ("action", "Change"), ("kind", "Type"), ("item", "Item"), ("reason", "Why")])]
 
     L += ["## Raw data", "All JSON, refreshed daily (Search Console) and weekly (everything else):\n"]
     L += [f"- {u}: {desc}" for u, desc in d["raw_files"].items()]
