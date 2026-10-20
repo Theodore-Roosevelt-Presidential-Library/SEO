@@ -12,12 +12,12 @@
  "opportunities": {
   "state": "skipped",
   "message": "Waiting for Search Console data.",
-  "updated": "2026-10-20T04:15:22+00:00"
+  "updated": "2026-10-20T04:22:02+00:00"
  },
  "gsc": {
-  "state": "skipped",
-  "message": "Set up Google sign-in (Workload Identity Federation, see README) to turn on Search Console data.",
-  "updated": "2026-10-20T04:15:22+00:00"
+  "state": "error",
+  "message": "Search Console API 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"User does not have sufficient permission for site 'sc-domain:trlibrary.com'. See also: https://support.google.com/webmasters/answer/2451999.\",\n    \"errors\": [\n      {\n        \"message\": \"User does not have sufficient permission for site 'sc-domain:trli",
+  "updated": "2026-10-20T04:22:02+00:00"
  },
  "ai_visibility": {
   "state": "skipped",
