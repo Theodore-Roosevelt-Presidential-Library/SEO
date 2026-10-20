@@ -21,6 +21,12 @@ Each source switches on as soon as its secret exists. If a source has no key, it
 
 ## One-time setup
 
+### 0. Install the workflows
+Move the three files in `setup/workflows/` into `.github/workflows/`, then delete the empty `setup/` folder. From the repo folder, run:
+```bash
+mkdir -p .github/workflows && git mv -f setup/workflows/*.yml .github/workflows/ 2>/dev/null || mv setup/workflows/*.yml .github/workflows/
+```
+
 ### 1. Turn on Pages
 Go to **Settings → Pages**. Set Source to **Deploy from a branch**, Branch to `main`, and folder to `/docs`. The custom domain `seo.labs.trlibrary.com` comes from `docs/CNAME`. The wildcard `*.labs.trlibrary.com` DNS already points at the org's Pages, so no DNS change is needed. Tick **Enforce HTTPS** once the certificate is issued.
 
@@ -30,13 +36,34 @@ Go to **Settings → Actions → General → Workflow permissions** and select *
 ### 3. Add secrets
 Add these under **Settings → Secrets and variables → Actions → New repository secret**. Each one is optional, so add them in any order.
 
-**Google Search Console** (`GSC_SERVICE_ACCOUNT_JSON`). This is the most valuable one, and it's free.
-1. In Google Cloud Console, pick or create a project and enable the **Google Search Console API**.
-2. Under **IAM & Admin → Service accounts**, create a service account. No roles are needed.
-3. On that account, go to **Keys → Add key → JSON** and download the file.
-4. In Search Console, open the trlibrary.com property. Go to **Settings → Users and permissions → Add user**, paste the service account's email address, and choose **Restricted** permission.
-5. Paste the entire contents of the JSON file as the secret value.
+**Google Search Console** (free, and the most valuable source). GitHub signs in to Google with a short-lived token (Workload Identity Federation), so no key file is ever created. That matters because TRPL's Google Cloud organization blocks service account keys (`iam.disableServiceAccountKeyCreation`), which is Google's secure default.
+
+1. In Google Cloud Console, pick the project and enable two APIs: **Google Search Console API** and **IAM Service Account Credentials API**.
+2. Under **IAM & Admin → Service accounts**, create a service account (for example, `seo-dashboard`). No roles are needed. Copy its email address.
+3. In Search Console, open the trlibrary.com property. Go to **Settings → Users and permissions → Add user**, paste the service account's email address, and choose **Restricted**.
+4. Open Cloud Shell (the `>_` icon in the Cloud Console) and run the commands below, filling in your project ID. They only allow GitHub Actions runs from this repo to use the service account.
+   ```bash
+   PROJECT_ID=your-project-id
+   SA=seo-dashboard@$PROJECT_ID.iam.gserviceaccount.com
+   REPO=Theodore-Roosevelt-Presidential-Library/SEO
+   PROJECT_NUMBER=$(gcloud projects describe $PROJECT_ID --format='value(projectNumber)')
+
+   gcloud iam workload-identity-pools create github --project=$PROJECT_ID --location=global --display-name="GitHub Actions"
+   gcloud iam workload-identity-pools providers create-oidc github-repos --project=$PROJECT_ID --location=global \
+     --workload-identity-pool=github --issuer-uri=https://token.actions.githubusercontent.com \
+     --attribute-mapping="google.subject=assertion.sub,attribute.repository=assertion.repository" \
+     --attribute-condition="assertion.repository=='$REPO'"
+   gcloud iam service-accounts add-iam-policy-binding $SA --project=$PROJECT_ID \
+     --role=roles/iam.workloadIdentityUser \
+     --member="principalSet://iam.googleapis.com/projects/$PROJECT_NUMBER/locations/global/workloadIdentityPools/github/attribute.repository/$REPO"
+
+   echo "GCP_WIF_PROVIDER = projects/$PROJECT_NUMBER/locations/global/workloadIdentityPools/github/providers/github-repos"
+   echo "GCP_SERVICE_ACCOUNT = $SA"
+   ```
+5. In the repo, go to **Settings → Secrets and variables → Actions → Variables** (the Variables tab, not Secrets). Add `GCP_WIF_PROVIDER` and `GCP_SERVICE_ACCOUNT` with the two values the last commands printed. These aren't secret.
 6. Check `gsc_property` in `config/site.yml`. Use `sc-domain:trlibrary.com` for a Domain property, or `https://www.trlibrary.com/` for a URL-prefix property.
+
+If your Google organization does allow key creation, a JSON key pasted into the secret `GSC_SERVICE_ACCOUNT_JSON` also works. Workload Identity Federation is the safer option.
 
 **DataForSEO** (`DATAFORSEO_LOGIN`, `DATAFORSEO_PASSWORD`). This adds live Google ranks, AI Overview tracking and search volumes. It's pay-as-you-go: sign up at dataforseo.com and copy the API login and password from the dashboard. At about 20 keywords a week this should cost a few dollars a month, but check their current pricing.
 
@@ -87,7 +114,8 @@ They hold no personal data. Google already withholds rare searches from Search C
 pip install -r requirements.txt pytest
 python -m pytest -q tests
 python -m seo.run audit                 # no keys needed
-GSC_SERVICE_ACCOUNT_JSON="$(cat key.json)" python -m seo.run gsc opportunities
+gcloud auth application-default login --scopes=https://www.googleapis.com/auth/webmasters.readonly,https://www.googleapis.com/auth/cloud-platform
+GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/application_default_credentials.json python -m seo.run gsc opportunities
 python -m http.server -d docs 8000      # then open http://localhost:8000
 ```
 Job names: `gsc`, `audit`, `ranks`, `ai_visibility`, `opportunities`, `tips`, or the bundles `daily` and `weekly`.

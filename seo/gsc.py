@@ -1,7 +1,10 @@
 """Google Search Console collector.
 
-Needs secret GSC_SERVICE_ACCOUNT_JSON (the whole JSON key of a Google Cloud
-service account that has been added as a user on the Search Console property).
+Signs in as a Google Cloud service account that is a user on the Search
+Console property. Preferred: keyless Workload Identity Federation (repo
+variables GCP_WIF_PROVIDER + GCP_SERVICE_ACCOUNT; the workflow's auth step
+sets GOOGLE_APPLICATION_CREDENTIALS). Fallback: a JSON key in the secret
+GSC_SERVICE_ACCOUNT_JSON, for Google orgs that allow key creation.
 
 Writes:
   gsc/daily.json        clicks/impressions/ctr/position per day (~16 months)
@@ -24,12 +27,17 @@ API = "https://searchconsole.googleapis.com/webmasters/v3/sites/{site}/searchAna
 LAG_DAYS = 3  # Search Console data settles after ~2-3 days
 
 
-def _token(sa_json: str) -> str:
-    from google.oauth2 import service_account
+def _token(sa_json: str | None) -> str:
+    """Key file if one was supplied; otherwise Application Default Credentials,
+    which is what keyless Workload Identity Federation sets up in Actions."""
+    import google.auth
     import google.auth.transport.requests as gtr
+    from google.oauth2 import service_account
 
-    info = json.loads(sa_json)
-    creds = service_account.Credentials.from_service_account_info(info, scopes=[SCOPE])
+    if sa_json:
+        creds = service_account.Credentials.from_service_account_info(json.loads(sa_json), scopes=[SCOPE])
+    else:
+        creds, _ = google.auth.default(scopes=[SCOPE])
     creds.refresh(gtr.Request())
     return creds.token
 
@@ -98,8 +106,8 @@ def _merge_prev(cur: list[dict], prev: list[dict], key: str) -> list[dict]:
 def run() -> None:
     cfg = C.config()
     sa = C.env("GSC_SERVICE_ACCOUNT_JSON")
-    if not sa:
-        C.set_status("gsc", "skipped", "Add the GSC_SERVICE_ACCOUNT_JSON secret to turn on Search Console data.")
+    if not sa and not C.env("GOOGLE_APPLICATION_CREDENTIALS"):
+        C.set_status("gsc", "skipped", "Set up Google sign-in (Workload Identity Federation, see README) to turn on Search Console data.")
         return
     prop = cfg["site"]["gsc_property"]
     try:
