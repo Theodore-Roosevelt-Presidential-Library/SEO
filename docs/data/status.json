@@ -12,12 +12,12 @@
  "opportunities": {
   "state": "skipped",
   "message": "Waiting for Search Console data.",
-  "updated": "2026-10-19T13:34:03+00:00"
+  "updated": "2026-10-20T04:15:22+00:00"
  },
  "gsc": {
   "state": "skipped",
-  "message": "Add the GSC_SERVICE_ACCOUNT_JSON secret to turn on Search Console data.",
-  "updated": "2026-10-19T13:34:03+00:00"
+  "message": "Set up Google sign-in (Workload Identity Federation, see README) to turn on Search Console data.",
+  "updated": "2026-10-20T04:15:22+00:00"
  },
  "ai_visibility": {
   "state": "skipped",
