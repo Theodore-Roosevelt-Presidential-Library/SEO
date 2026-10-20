@@ -1,5 +1,5 @@
 # trlibrary.com search & AI visibility digest
-Generated 2026-10-20T05:25:10+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
+Generated 2026-10-20T13:31:26+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
 
 ## How to use this
 Read top to bottom: the biggest, cheapest wins come first in each section. When you suggest copy, follow these house rules:
@@ -20,13 +20,14 @@ Read top to bottom: the biggest, cheapest wins come first in each section. When 
 |---|---|---|---|
 | audit | ok | 2026-10-20T05:12:15+00:00 | Crawled 1074 pages, health 96/100 |
 | ranks | ok | 2026-10-20T05:14:53+00:00 | 20 keywords checked |
-| opportunities | ok | 2026-10-20T05:22:20+00:00 | 150 striking-distance queries, 60 low-CTR pages |
-| gsc | ok | 2026-10-20T05:10:45+00:00 | 5000 queries, 1498 pages (2026-09-20 to 2026-10-17) |
+| opportunities | ok | 2026-10-20T13:31:26+00:00 | 150 striking-distance queries, 60 low-CTR pages |
+| gsc | ok | 2026-10-20T13:31:26+00:00 | 24720 queries, 1498 pages (2026-09-20 to 2026-10-17) |
 | ai_visibility | error | 2026-10-20T05:22:20+00:00 | 28 answers from ChatGPT, Gemini, Perplexity; 17 failed: Gemini 429: {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more info |
 | tips | ok | 2026-10-20T05:25:10+00:00 | Gemini wrote tips for 8 pages |
+| digest | ok | 2026-10-20T05:25:10+00:00 | llms.txt, digest.md and digest.json rebuilt |
 
 ## Google Search (Search Console)
-2026-09-20 to 2026-10-17 vs the prior 28 days: **49,372 clicks** (prior 68,665), 2,341,943 impressions (prior 2,037,166), CTR 2.1% (prior 3.4%), average position 6.3 (prior 6.9). Branded clicks 20801, non-branded 9782.
+2026-09-20 to 2026-10-17 vs the prior 28 days: **49,372 clicks** (prior 68,665), 2,341,943 impressions (prior 2,037,166), CTR 2.1% (prior 3.4%), average position 6.3 (prior 6.9). Branded clicks 20801, non-branded 9782, search term hidden by Google 18789.
 
 ### Top non-branded searches (people who didn't search our name)
 | Search | Clicks | Impr. | Pos. |
@@ -49,13 +50,13 @@ Read top to bottom: the biggest, cheapest wins come first in each section. When 
 | mount rushmore presidents | 20 | 6262 | 4.7 |
 | theodore roosevelt jr. | 1 | 6036 | 11.1 |
 | meg whitman | 1 | 5971 | 11.4 |
+| tr | 0 | 5893 | 9.2 |
 | theodore roosevelt jr | 1 | 5733 | 10.8 |
 | edith roosevelt | 12 | 5235 | 6.2 |
 | henry cabot lodge | 3 | 5015 | 7.1 |
 | bull moose party | 20 | 4679 | 6.5 |
 | theodore roosevelt national park | 12 | 4373 | 8.9 |
 | great white fleet | 11 | 4213 | 7.9 |
-| when was teddy roosevelt president | 17 | 4199 | 3.3 |
 
 ### Top pages
 | Page | Clicks | Prior | Impr. | Pos. |
@@ -360,3 +361,4 @@ All JSON, refreshed daily (Search Console) and weekly (everything else):
 - https://seo.labs.trlibrary.com/data/audit/summary.json: Site audit: health score, issue counts, robots.txt AI-crawler access, structured data
 - https://seo.labs.trlibrary.com/data/audit/pages.json: Per-page audit: title, meta, H1, canonical, OG tags, word count, issues
 - https://seo.labs.trlibrary.com/data/tips.json: AI-drafted page recommendations and the AI-visibility brief
+- https://seo.labs.trlibrary.com/data/tracking.json: Keywords and AI questions the system discovered, graduated or retired, with reasons

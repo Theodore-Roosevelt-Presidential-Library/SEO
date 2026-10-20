@@ -1,6 +1,6 @@
 # TRPL Search & AI Visibility
 
-> How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built 2026-10-20T05:25:10+00:00.
+> How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built 2026-10-20T13:31:26+00:00.
 
 The dashboard at https://seo.labs.trlibrary.com/ is rendered with JavaScript. AI tools should read the digest below instead.
 
@@ -27,6 +27,7 @@ The dashboard at https://seo.labs.trlibrary.com/ is rendered with JavaScript. AI
 - [audit/summary.json](https://seo.labs.trlibrary.com/data/audit/summary.json): Site audit: health score, issue counts, robots.txt AI-crawler access, structured data
 - [audit/pages.json](https://seo.labs.trlibrary.com/data/audit/pages.json): Per-page audit: title, meta, H1, canonical, OG tags, word count, issues
 - [tips.json](https://seo.labs.trlibrary.com/data/tips.json): AI-drafted page recommendations and the AI-visibility brief
+- [tracking.json](https://seo.labs.trlibrary.com/data/tracking.json): Keywords and AI questions the system discovered, graduated or retired, with reasons
 
 ## House rules for suggesting changes
 - Suggestions are drafts for the communications team; nothing is published automatically.

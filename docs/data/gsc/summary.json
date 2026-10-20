@@ -1,6 +1,6 @@
 {
  "property": "sc-domain:trlibrary.com",
- "updated": "2026-10-20T05:10:45+00:00",
+ "updated": "2026-10-20T13:31:26+00:00",
  "period": {
   "start": "2026-09-20",
   "end": "2026-10-17"
@@ -23,6 +23,8 @@
  },
  "branded_clicks": 20801,
  "nonbranded_clicks": 9782,
- "query_count": 5000,
+ "unattributed_clicks": 18789,
+ "query_count": 24720,
+ "query_list_capped": false,
  "page_count": 1498
 }
