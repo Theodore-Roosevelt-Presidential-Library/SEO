@@ -80,6 +80,14 @@ Fifteen questions across four assistants is 60 calls a week. Model names live in
 ### 4. First run
 Go to **Actions → Weekly refresh → Run workflow**. It takes about five minutes. The dashboard updates once the commit lands.
 
+## For AI tools (llms.txt)
+The dashboard is drawn with JavaScript, so AI assistants that fetch it see an empty page. Every run also writes plain-text versions:
+- **https://seo.labs.trlibrary.com/llms.txt**: the entry point. It says what's here, gives a snapshot, links every data file, and lists the house rules for suggesting copy.
+- **https://seo.labs.trlibrary.com/digest.md**: a one-page ranked briefing (about 25 KB) that an AI tool can read in a single fetch.
+- **https://seo.labs.trlibrary.com/data/digest.json**: the same content as structured data, for scripts.
+
+To use it, tell Claude (or any assistant): "Read https://seo.labs.trlibrary.com/llms.txt and tell me the five best ways to improve our SEO this week."
+
 ## Changing what's tracked
 All tracking is controlled by three files in `config/`. Edit them on GitHub; the next run picks up the changes.
 - `config/keywords.yml`: the searches tracked on the Rankings tab, in groups.

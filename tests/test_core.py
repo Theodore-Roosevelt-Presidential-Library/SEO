@@ -151,3 +151,11 @@ def test_gemini_retired_model_retry():
 
     r = C.gemini_post(S(), "k", "old-model", {})
     assert r.status_code == 200 and "new-model-2" in calls[-1] and len(calls) == 2
+
+
+def test_digest_builds_without_data(tmp_path, monkeypatch):
+    from seo import digest
+    monkeypatch.setattr(C, "DATA_DIR", tmp_path / "data")
+    digest.run()
+    assert (tmp_path / "llms.txt").read_text().startswith("# TRPL Search & AI Visibility")
+    assert "## Raw data" in (tmp_path / "digest.md").read_text()

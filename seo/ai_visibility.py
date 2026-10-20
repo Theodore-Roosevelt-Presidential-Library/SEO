@@ -149,8 +149,16 @@ def run() -> None:
     peers = cfg.get("peer_entities", {})
     our = C.domain_of(cfg["site"]["url"])
 
+    # At most two calls in flight per engine, so free-tier rate limits aren't tripped.
+    import threading
+    gates = {p: threading.Semaphore(2) for p in active}
+
     def job(args):
         prov, p = args
+        with gates[prov]:
+            return _job(prov, p)
+
+    def _job(prov, p):
         sess = C.session()
         model = pcfg[prov]["model"]
         try:

@@ -402,8 +402,8 @@
     },
 
     setup() {
-      const names = { gsc: "Search Console", audit: "Site audit", ranks: "Rank tracking", ai_visibility: "AI visibility", opportunities: "Opportunities", tips: "AI recommendations" };
-      const secrets = { gsc: "Variables GCP_WIF_PROVIDER + GCP_SERVICE_ACCOUNT (or secret GSC_SERVICE_ACCOUNT_JSON)", audit: "none needed", ranks: "DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD", ai_visibility: "OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY, ANTHROPIC_API_KEY (any)", opportunities: "none needed", tips: "Any one of GEMINI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY, PERPLEXITY_API_KEY (order set in config/site.yml)" };
+      const names = { gsc: "Search Console", audit: "Site audit", ranks: "Rank tracking", ai_visibility: "AI visibility", opportunities: "Opportunities", tips: "AI recommendations", digest: "AI-readable digest (llms.txt)" };
+      const secrets = { gsc: "Variables GCP_WIF_PROVIDER + GCP_SERVICE_ACCOUNT (or secret GSC_SERVICE_ACCOUNT_JSON)", audit: "none needed", ranks: "DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD", ai_visibility: "OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY, ANTHROPIC_API_KEY (any)", opportunities: "none needed", digest: "none needed", tips: "Any one of GEMINI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY, PERPLEXITY_API_KEY (order set in config/site.yml)" };
       const st = D.status || {};
       return [
         el("p", { class: "lead" }, "Each source turns on when its key is added as a GitHub Actions secret on the SEO repo. Instructions are in the repo README."),

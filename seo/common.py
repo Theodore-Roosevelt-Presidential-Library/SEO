@@ -151,7 +151,16 @@ GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:ge
 def gemini_post(sess, key: str, model: str, body: dict, timeout: int = 240):
     """POST to Gemini. If Google says the model is retired and names a
     replacement ("...use models/NAME..."), retry once with that model."""
-    r = sess.post(GEMINI_URL.format(model=model), params={"key": key}, json=body, timeout=timeout)
+    import time
+    for attempt in range(4):
+        r = sess.post(GEMINI_URL.format(model=model), params={"key": key}, json=body, timeout=timeout)
+        if r.status_code not in (429, 503) or attempt == 3:
+            break
+        # Rate limited: wait as long as Google asks (retryDelay "NNs"), else back off.
+        m = re.search(r'"retryDelay":\s*"(\d+)', r.text)
+        wait = min(int(m.group(1)) + 2, 90) if m else 20 * (attempt + 1)
+        log(f"Gemini {r.status_code}; waiting {wait}s before retrying")
+        time.sleep(wait)
     if r.status_code == 404:
         m = re.search(r"use models/([\w.\-]+)", r.text)
         if m and m.group(1) != model:
