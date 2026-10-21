@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20T13:31:26+00:00",
+ "generated": "2026-10-21T13:30:00+00:00",
  "site": "https://www.trlibrary.com",
  "dashboard": "https://seo.labs.trlibrary.com",
  "sources": {
@@ -15,13 +15,13 @@
   },
   "opportunities": {
    "state": "ok",
-   "updated": "2026-10-20T13:31:26+00:00",
+   "updated": "2026-10-21T13:30:00+00:00",
    "message": "150 striking-distance queries, 60 low-CTR pages"
   },
   "gsc": {
    "state": "ok",
-   "updated": "2026-10-20T13:31:26+00:00",
-   "message": "24720 queries, 1498 pages (2026-09-20 to 2026-10-17)"
+   "updated": "2026-10-21T13:30:00+00:00",
+   "message": "24600 queries, 1498 pages (2026-09-21 to 2026-10-18)"
   },
   "ai_visibility": {
    "state": "error",
@@ -35,7 +35,7 @@
   },
   "digest": {
    "state": "ok",
-   "updated": "2026-10-20T05:25:10+00:00",
+   "updated": "2026-10-20T13:31:26+00:00",
    "message": "llms.txt, digest.md and digest.json rebuilt"
   }
  },
@@ -53,251 +53,251 @@
  ],
  "search": {
   "period": {
-   "start": "2026-09-20",
-   "end": "2026-10-17"
+   "start": "2026-09-21",
+   "end": "2026-10-18"
   },
   "previous_period": {
-   "start": "2026-08-23",
-   "end": "2026-09-19"
+   "start": "2026-08-24",
+   "end": "2026-09-20"
   },
   "totals": {
-   "clicks": 49372,
-   "impressions": 2341943,
-   "ctr": 0.0211,
+   "clicks": 48705,
+   "impressions": 2338666,
+   "ctr": 0.0208,
    "position": 6.3
   },
   "previous_totals": {
-   "clicks": 68665,
-   "impressions": 2037166,
-   "ctr": 0.0337,
-   "position": 6.9
+   "clicks": 67211,
+   "impressions": 2026049,
+   "ctr": 0.0332,
+   "position": 7.0
   },
-  "branded_clicks": 20801,
-  "nonbranded_clicks": 9782,
-  "unattributed_clicks": 18789,
+  "branded_clicks": 20342,
+  "nonbranded_clicks": 9662,
+  "unattributed_clicks": 18701,
   "top_queries": [
    {
     "query": "theodore roosevelt presidential library",
-    "clicks": 8046,
-    "prev_clicks": 12492,
-    "impressions": 17210,
-    "ctr": 0.4675,
+    "clicks": 7911,
+    "prev_clicks": 12128,
+    "impressions": 16939,
+    "ctr": 0.467,
     "position": 1.1,
     "branded": true
    },
    {
     "query": "teddy roosevelt presidential library",
-    "clicks": 2833,
-    "prev_clicks": 5482,
-    "impressions": 6646,
-    "ctr": 0.4263,
+    "clicks": 2748,
+    "prev_clicks": 5360,
+    "impressions": 6487,
+    "ctr": 0.4236,
     "position": 1.3,
     "branded": true
    },
    {
     "query": "teddy roosevelt library",
-    "clicks": 2453,
-    "prev_clicks": 3972,
-    "impressions": 7592,
-    "ctr": 0.3231,
-    "position": 1.5,
+    "clicks": 2408,
+    "prev_clicks": 3955,
+    "impressions": 7484,
+    "ctr": 0.3218,
+    "position": 1.6,
     "branded": true
    },
    {
     "query": "theodore roosevelt library",
-    "clicks": 1315,
-    "prev_clicks": 3259,
-    "impressions": 2701,
-    "ctr": 0.4869,
+    "clicks": 1280,
+    "prev_clicks": 3165,
+    "impressions": 2628,
+    "ctr": 0.4871,
     "position": 1.8,
     "branded": true
    },
    {
     "query": "roosevelt presidential library",
-    "clicks": 485,
-    "prev_clicks": 528,
+    "clicks": 481,
+    "prev_clicks": 517,
     "impressions": 1077,
-    "ctr": 0.4503,
-    "position": 1.4,
+    "ctr": 0.4466,
+    "position": 1.6,
     "branded": true
    },
    {
     "query": "roosevelt library",
-    "clicks": 385,
-    "prev_clicks": 695,
-    "impressions": 2284,
-    "ctr": 0.1686,
+    "clicks": 379,
+    "prev_clicks": 670,
+    "impressions": 2273,
+    "ctr": 0.1667,
     "position": 3.6,
     "branded": true
    },
    {
     "query": "roosevelt library north dakota",
-    "clicks": 383,
-    "prev_clicks": 651,
-    "impressions": 827,
-    "ctr": 0.4631,
+    "clicks": 377,
+    "prev_clicks": 634,
+    "impressions": 809,
+    "ctr": 0.466,
     "position": 1.2,
     "branded": true
    },
    {
     "query": "presidential library medora",
-    "clicks": 281,
-    "prev_clicks": 708,
-    "impressions": 534,
-    "ctr": 0.5262,
+    "clicks": 279,
+    "prev_clicks": 698,
+    "impressions": 538,
+    "ctr": 0.5186,
     "position": 1.0,
     "branded": true
    },
    {
     "query": "teddy roosevelt museum",
-    "clicks": 271,
-    "prev_clicks": 467,
-    "impressions": 1292,
-    "ctr": 0.2098,
+    "clicks": 269,
+    "prev_clicks": 459,
+    "impressions": 1266,
+    "ctr": 0.2125,
     "position": 1.8,
     "branded": false
    },
    {
     "query": "roosevelt library medora",
-    "clicks": 257,
+    "clicks": 252,
     "prev_clicks": 415,
-    "impressions": 477,
-    "ctr": 0.5388,
-    "position": 1.6,
+    "impressions": 468,
+    "ctr": 0.5385,
+    "position": 1.7,
     "branded": true
    },
    {
     "query": "tr presidential library",
-    "clicks": 220,
-    "prev_clicks": 385,
-    "impressions": 426,
-    "ctr": 0.5164,
+    "clicks": 213,
+    "prev_clicks": 383,
+    "impressions": 419,
+    "ctr": 0.5084,
     "position": 1.0,
     "branded": true
    },
    {
     "query": "tr library",
-    "clicks": 205,
-    "prev_clicks": 359,
-    "impressions": 472,
-    "ctr": 0.4343,
+    "clicks": 203,
+    "prev_clicks": 353,
+    "impressions": 477,
+    "ctr": 0.4256,
     "position": 1.8,
     "branded": true
    },
    {
-    "query": "theodore roosevelt library north dakota",
-    "clicks": 159,
-    "prev_clicks": 320,
-    "impressions": 278,
-    "ctr": 0.5719,
+    "query": "roosevelt presidential library north dakota",
+    "clicks": 152,
+    "prev_clicks": 232,
+    "impressions": 270,
+    "ctr": 0.563,
     "position": 1.2,
     "branded": true
    },
    {
     "query": "medora presidential library",
-    "clicks": 153,
-    "prev_clicks": 331,
-    "impressions": 292,
-    "ctr": 0.524,
-    "position": 1.0,
-    "branded": true
-   },
-   {
-    "query": "tr library medora",
-    "clicks": 152,
-    "prev_clicks": 312,
-    "impressions": 203,
-    "ctr": 0.7488,
-    "position": 1,
-    "branded": true
-   },
-   {
-    "query": "theodore roosevelt presidential library photos",
-    "clicks": 151,
-    "prev_clicks": 246,
-    "impressions": 1475,
-    "ctr": 0.1024,
-    "position": 1.9,
+    "clicks": 150,
+    "prev_clicks": 323,
+    "impressions": 288,
+    "ctr": 0.5208,
+    "position": 1.1,
     "branded": true
    },
    {
     "query": "square deal",
-    "clicks": 150,
-    "prev_clicks": 95,
-    "impressions": 23579,
-    "ctr": 0.0064,
+    "clicks": 148,
+    "prev_clicks": 99,
+    "impressions": 25816,
+    "ctr": 0.0057,
     "position": 3.3,
     "branded": false
    },
    {
-    "query": "roosevelt presidential library north dakota",
-    "clicks": 149,
-    "prev_clicks": 238,
-    "impressions": 269,
-    "ctr": 0.5539,
+    "query": "theodore roosevelt presidential library photos",
+    "clicks": 148,
+    "prev_clicks": 239,
+    "impressions": 1452,
+    "ctr": 0.1019,
+    "position": 1.9,
+    "branded": true
+   },
+   {
+    "query": "tr library medora",
+    "clicks": 147,
+    "prev_clicks": 308,
+    "impressions": 198,
+    "ctr": 0.7424,
+    "position": 1,
+    "branded": true
+   },
+   {
+    "query": "theodore roosevelt museum",
+    "clicks": 145,
+    "prev_clicks": 266,
+    "impressions": 592,
+    "ctr": 0.2449,
+    "position": 1.7,
+    "branded": false
+   },
+   {
+    "query": "theodore roosevelt library north dakota",
+    "clicks": 144,
+    "prev_clicks": 309,
+    "impressions": 258,
+    "ctr": 0.5581,
     "position": 1.2,
     "branded": true
    },
    {
     "query": "teddy roosevelt quotes",
-    "clicks": 147,
-    "prev_clicks": 113,
-    "impressions": 2871,
-    "ctr": 0.0512,
-    "position": 2.9,
+    "clicks": 143,
+    "prev_clicks": 117,
+    "impressions": 2842,
+    "ctr": 0.0503,
+    "position": 3.0,
     "branded": false
    },
    {
-    "query": "theodore roosevelt museum",
-    "clicks": 147,
-    "prev_clicks": 272,
-    "impressions": 595,
-    "ctr": 0.2471,
-    "position": 1.7,
+    "query": "hilary hamm",
+    "clicks": 143,
+    "prev_clicks": 75,
+    "impressions": 652,
+    "ctr": 0.2193,
+    "position": 1.0,
     "branded": false
    },
    {
     "query": "theodore roosevelt national library",
-    "clicks": 145,
-    "prev_clicks": 304,
-    "impressions": 241,
-    "ctr": 0.6017,
+    "clicks": 142,
+    "prev_clicks": 301,
+    "impressions": 232,
+    "ctr": 0.6121,
     "position": 2.7,
     "branded": false
    },
    {
     "query": "medora library",
-    "clicks": 143,
-    "prev_clicks": 363,
-    "impressions": 289,
-    "ctr": 0.4948,
-    "position": 2.3,
-    "branded": false
-   },
-   {
-    "query": "hilary hamm",
     "clicks": 140,
-    "prev_clicks": 76,
-    "impressions": 648,
-    "ctr": 0.216,
-    "position": 1.0,
+    "prev_clicks": 350,
+    "impressions": 283,
+    "ctr": 0.4947,
+    "position": 2.4,
     "branded": false
    },
    {
     "query": "theodore roosevelt vi",
-    "clicks": 136,
-    "prev_clicks": 142,
-    "impressions": 555,
-    "ctr": 0.245,
-    "position": 4.0,
+    "clicks": 131,
+    "prev_clicks": 138,
+    "impressions": 534,
+    "ctr": 0.2453,
+    "position": 4.1,
     "branded": false
    },
    {
     "query": "trpl",
     "clicks": 122,
-    "prev_clicks": 120,
-    "impressions": 558,
-    "ctr": 0.2186,
+    "prev_clicks": 118,
+    "impressions": 563,
+    "ctr": 0.2167,
     "position": 2.8,
     "branded": false
    }
@@ -306,353 +306,353 @@
    {
     "query": "brownsville affair",
     "clicks": 2,
-    "impressions": 49263,
-    "position": 6.6
+    "impressions": 54359,
+    "position": 6.5
    },
    {
     "query": "karl rove",
-    "clicks": 31,
-    "impressions": 45302,
+    "clicks": 27,
+    "impressions": 42366,
     "position": 9.9
    },
    {
     "query": "theodore roosevelt",
-    "clicks": 90,
-    "impressions": 39353,
+    "clicks": 86,
+    "impressions": 38610,
     "position": 10.4
    },
    {
     "query": "square deal",
-    "clicks": 150,
-    "impressions": 23579,
+    "clicks": 148,
+    "impressions": 25816,
     "position": 3.3
    },
    {
     "query": "roosevelt corollary",
-    "clicks": 35,
-    "impressions": 19300,
+    "clicks": 36,
+    "impressions": 19456,
     "position": 5.6
    },
    {
     "query": "chris murphy",
-    "clicks": 12,
-    "impressions": 18995,
+    "clicks": 11,
+    "impressions": 18069,
     "position": 11.4
+   },
+   {
+    "query": "jacob riis",
+    "clicks": 41,
+    "impressions": 15803,
+    "position": 11.0
    },
    {
     "query": "alice roosevelt",
     "clicks": 32,
-    "impressions": 17119,
-    "position": 9.5
-   },
-   {
-    "query": "jacob riis",
-    "clicks": 42,
-    "impressions": 15802,
-    "position": 11.0
+    "impressions": 15156,
+    "position": 9.4
    },
    {
     "query": "bill kristol",
     "clicks": 8,
-    "impressions": 14932,
-    "position": 11.8
+    "impressions": 15134,
+    "position": 11.9
    },
    {
     "query": "teddy roosevelt",
     "clicks": 46,
-    "impressions": 13617,
+    "impressions": 13476,
     "position": 10.5
    },
    {
     "query": "alice roosevelt longworth",
     "clicks": 10,
-    "impressions": 12129,
-    "position": 9.4
+    "impressions": 11287,
+    "position": 9.2
    },
    {
     "query": "roosevelt family",
-    "clicks": 23,
-    "impressions": 8985,
+    "clicks": 24,
+    "impressions": 9052,
     "position": 4.0
    },
    {
     "query": "kermit roosevelt",
-    "clicks": 42,
-    "impressions": 8897,
+    "clicks": 46,
+    "impressions": 8797,
     "position": 6.6
    },
    {
     "query": "alice hathaway lee roosevelt",
-    "clicks": 11,
-    "impressions": 6760,
+    "clicks": 10,
+    "impressions": 6655,
     "position": 5.7
    },
    {
     "query": "theodore",
     "clicks": 3,
-    "impressions": 6386,
+    "impressions": 6302,
     "position": 11.9
    },
    {
     "query": "mount rushmore presidents",
-    "clicks": 20,
-    "impressions": 6262,
+    "clicks": 21,
+    "impressions": 6251,
     "position": 4.7
-   },
-   {
-    "query": "theodore roosevelt jr.",
-    "clicks": 1,
-    "impressions": 6036,
-    "position": 11.1
    },
    {
     "query": "meg whitman",
     "clicks": 1,
-    "impressions": 5971,
-    "position": 11.4
+    "impressions": 6022,
+    "position": 11.5
    },
    {
     "query": "tr",
     "clicks": 0,
-    "impressions": 5893,
+    "impressions": 5889,
     "position": 9.2
+   },
+   {
+    "query": "theodore roosevelt jr.",
+    "clicks": 1,
+    "impressions": 5730,
+    "position": 11.2
    },
    {
     "query": "theodore roosevelt jr",
     "clicks": 1,
-    "impressions": 5733,
-    "position": 10.8
+    "impressions": 5290,
+    "position": 10.9
    },
    {
     "query": "edith roosevelt",
     "clicks": 12,
-    "impressions": 5235,
+    "impressions": 5253,
     "position": 6.2
    },
    {
     "query": "henry cabot lodge",
     "clicks": 3,
-    "impressions": 5015,
+    "impressions": 5048,
     "position": 7.1
    },
    {
     "query": "bull moose party",
-    "clicks": 20,
-    "impressions": 4679,
-    "position": 6.5
+    "clicks": 22,
+    "impressions": 4844,
+    "position": 6.4
    },
    {
     "query": "theodore roosevelt national park",
-    "clicks": 12,
-    "impressions": 4373,
-    "position": 8.9
+    "clicks": 13,
+    "impressions": 4426,
+    "position": 9.1
    },
    {
     "query": "great white fleet",
     "clicks": 11,
-    "impressions": 4213,
+    "impressions": 4241,
     "position": 7.9
    }
   ],
   "top_pages": [
    {
     "page": "https://www.trlibrary.com/",
-    "clicks": 10214,
-    "prev_clicks": 17349,
-    "impressions": 268811,
-    "ctr": 0.038,
+    "clicks": 10039,
+    "prev_clicks": 16898,
+    "impressions": 265586,
+    "ctr": 0.0378,
     "position": 8.2
    },
    {
     "page": "https://www.trlibrary.com/tickets",
-    "clicks": 5890,
-    "prev_clicks": 10933,
-    "impressions": 79364,
-    "ctr": 0.0742,
-    "position": 3.1
+    "clicks": 5708,
+    "prev_clicks": 10744,
+    "impressions": 78053,
+    "ctr": 0.0731,
+    "position": 3.2
    },
    {
     "page": "https://www.trlibrary.com/tickets?utm_source=gbp&utm_medium=organic",
-    "clicks": 5614,
-    "prev_clicks": 16876,
-    "impressions": 26418,
-    "ctr": 0.2125,
-    "position": 3.3
+    "clicks": 5193,
+    "prev_clicks": 16558,
+    "impressions": 24352,
+    "ctr": 0.2132,
+    "position": 3.4
    },
    {
     "page": "https://www.trlibrary.com/?utm_source=gbp&utm_medium=organic",
-    "clicks": 3499,
+    "clicks": 3743,
     "prev_clicks": 0,
-    "impressions": 18899,
-    "ctr": 0.1851,
+    "impressions": 20343,
+    "ctr": 0.184,
     "position": 3.5
    },
    {
     "page": "https://www.trlibrary.com/visit",
-    "clicks": 2148,
-    "prev_clicks": 4995,
-    "impressions": 77230,
-    "ctr": 0.0278,
+    "clicks": 2068,
+    "prev_clicks": 4843,
+    "impressions": 75744,
+    "ctr": 0.0273,
     "position": 2.7
    },
    {
     "page": "https://www.trlibrary.com/tr/square-deal",
-    "clicks": 1139,
-    "prev_clicks": 585,
-    "impressions": 86353,
-    "ctr": 0.0132,
+    "clicks": 1138,
+    "prev_clicks": 597,
+    "impressions": 88336,
+    "ctr": 0.0129,
     "position": 3.3
    },
    {
     "page": "https://www.trlibrary.com/tr/family/fdr-connection",
-    "clicks": 1086,
-    "prev_clicks": 511,
-    "impressions": 74450,
+    "clicks": 1088,
+    "prev_clicks": 533,
+    "impressions": 74659,
     "ctr": 0.0146,
     "position": 3.2
    },
    {
     "page": "https://www.trlibrary.com/tr/presidency/trust-busting",
     "clicks": 858,
-    "prev_clicks": 377,
-    "impressions": 72573,
+    "prev_clicks": 385,
+    "impressions": 72686,
     "ctr": 0.0118,
     "position": 3.6
    },
    {
     "page": "https://www.trlibrary.com/visit/directions",
-    "clicks": 853,
-    "prev_clicks": 1585,
-    "impressions": 65558,
+    "clicks": 837,
+    "prev_clicks": 1518,
+    "impressions": 64161,
     "ctr": 0.013,
     "position": 2.7
    },
    {
     "page": "https://www.trlibrary.com/visit/hours",
-    "clicks": 795,
-    "prev_clicks": 1598,
-    "impressions": 63603,
-    "ctr": 0.0125,
-    "position": 2.6
+    "clicks": 775,
+    "prev_clicks": 1578,
+    "impressions": 62342,
+    "ctr": 0.0124,
+    "position": 2.7
    },
    {
     "page": "https://www.trlibrary.com/bullet-speech",
-    "clicks": 772,
-    "prev_clicks": 749,
-    "impressions": 41445,
+    "clicks": 768,
+    "prev_clicks": 737,
+    "impressions": 41323,
     "ctr": 0.0186,
     "position": 3.5
    },
    {
     "page": "https://www.trlibrary.com/tr/pre-presidency-political-accomplishments",
-    "clicks": 683,
-    "prev_clicks": 306,
-    "impressions": 49066,
+    "clicks": 684,
+    "prev_clicks": 311,
+    "impressions": 49047,
     "ctr": 0.0139,
     "position": 5.4
    },
    {
     "page": "https://www.trlibrary.com/tr/quotes",
-    "clicks": 659,
-    "prev_clicks": 529,
-    "impressions": 32978,
-    "ctr": 0.02,
-    "position": 15.5
+    "clicks": 649,
+    "prev_clicks": 547,
+    "impressions": 32044,
+    "ctr": 0.0203,
+    "position": 14.3
    },
    {
     "page": "https://www.trlibrary.com/tr/tr-mount-rushmore",
-    "clicks": 573,
-    "prev_clicks": 923,
-    "impressions": 98971,
-    "ctr": 0.0058,
+    "clicks": 552,
+    "prev_clicks": 917,
+    "impressions": 97436,
+    "ctr": 0.0057,
     "position": 5.1
    },
    {
     "page": "https://www.trlibrary.com/tr/presidency/square-deal",
-    "clicks": 448,
+    "clicks": 452,
     "prev_clicks": 95,
-    "impressions": 69410,
-    "ctr": 0.0065,
+    "impressions": 70643,
+    "ctr": 0.0064,
     "position": 4.6
    },
    {
     "page": "https://www.trlibrary.com/tr/tr-shot",
-    "clicks": 372,
-    "prev_clicks": 385,
-    "impressions": 40670,
+    "clicks": 370,
+    "prev_clicks": 367,
+    "impressions": 40571,
     "ctr": 0.0091,
-    "position": 3.9
+    "position": 4.0
    },
    {
     "page": "https://www.trlibrary.com/tr/fake-quotes",
-    "clicks": 363,
-    "prev_clicks": 521,
-    "impressions": 20461,
+    "clicks": 357,
+    "prev_clicks": 518,
+    "impressions": 20210,
     "ctr": 0.0177,
-    "position": 7.0
+    "position": 7.1
    },
    {
     "page": "https://www.trlibrary.com/tr/tr-importance",
-    "clicks": 359,
-    "prev_clicks": 204,
-    "impressions": 38842,
-    "ctr": 0.0092,
-    "position": 5.1
+    "clicks": 353,
+    "prev_clicks": 211,
+    "impressions": 38840,
+    "ctr": 0.0091,
+    "position": 5.2
    },
    {
     "page": "https://www.trlibrary.com/tr/speeches/man-in-the-arena",
-    "clicks": 337,
-    "prev_clicks": 211,
-    "impressions": 14631,
-    "ctr": 0.023,
+    "clicks": 338,
+    "prev_clicks": 215,
+    "impressions": 14759,
+    "ctr": 0.0229,
     "position": 5.4
    },
    {
+    "page": "https://www.trlibrary.com/tr/rise-to-power/san-juan-hill",
+    "clicks": 332,
+    "prev_clicks": 154,
+    "impressions": 27226,
+    "ctr": 0.0122,
+    "position": 3.8
+   },
+   {
     "page": "https://www.trlibrary.com/tr/people/jacob-riis",
-    "clicks": 327,
-    "prev_clicks": 140,
-    "impressions": 66693,
+    "clicks": 331,
+    "prev_clicks": 144,
+    "impressions": 66979,
     "ctr": 0.0049,
     "position": 7.0
    },
    {
-    "page": "https://www.trlibrary.com/tr/rise-to-power/san-juan-hill",
-    "clicks": 325,
-    "prev_clicks": 154,
-    "impressions": 27230,
-    "ctr": 0.0119,
-    "position": 3.8
-   },
-   {
     "page": "https://www.trlibrary.com/tr/presidency-timeline",
-    "clicks": 323,
-    "prev_clicks": 204,
-    "impressions": 57566,
-    "ctr": 0.0056,
-    "position": 4.7
+    "clicks": 317,
+    "prev_clicks": 207,
+    "impressions": 57337,
+    "ctr": 0.0055,
+    "position": 4.8
    },
    {
     "page": "https://www.trlibrary.com/tr/family/family-tree",
-    "clicks": 308,
-    "prev_clicks": 156,
-    "impressions": 19649,
+    "clicks": 314,
+    "prev_clicks": 161,
+    "impressions": 19980,
     "ctr": 0.0157,
     "position": 5.0
    },
    {
     "page": "https://www.trlibrary.com/about/trustees/theodore-roosevelt-v",
-    "clicks": 289,
-    "prev_clicks": 299,
-    "impressions": 4572,
-    "ctr": 0.0632,
+    "clicks": 284,
+    "prev_clicks": 289,
+    "impressions": 4512,
+    "ctr": 0.0629,
     "position": 3.6
    },
    {
     "page": "https://www.trlibrary.com/tr/presidency/ten-facts",
-    "clicks": 256,
+    "clicks": 260,
     "prev_clicks": 86,
-    "impressions": 12076,
-    "ctr": 0.0212,
+    "impressions": 12132,
+    "ctr": 0.0214,
     "position": 4.6
    }
   ]
@@ -663,328 +663,328 @@
     "query": "brownsville affair",
     "page": "https://www.trlibrary.com/tr/presidency/brownsville",
     "clicks": 2,
-    "impressions": 49263,
+    "impressions": 54359,
     "ctr": 0.0,
-    "position": 6.6,
-    "est_extra_clicks": 5419
+    "position": 6.5,
+    "est_extra_clicks": 5979
    },
    {
     "query": "karl rove",
     "page": "https://www.trlibrary.com/podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature",
-    "clicks": 31,
-    "impressions": 45298,
-    "ctr": 0.0007,
+    "clicks": 27,
+    "impressions": 42362,
+    "ctr": 0.0006,
     "position": 9.9,
-    "est_extra_clicks": 4951
+    "est_extra_clicks": 4634
    },
    {
     "query": "theodore roosevelt",
     "page": "https://www.trlibrary.com/",
-    "clicks": 29,
-    "impressions": 32019,
+    "clicks": 27,
+    "impressions": 31253,
     "ctr": 0.0009,
     "position": 11.5,
-    "est_extra_clicks": 3493
+    "est_extra_clicks": 3410
    },
    {
     "query": "roosevelt corollary",
     "page": "https://www.trlibrary.com/tr/presidency/roosevelt-corollary",
-    "clicks": 35,
-    "impressions": 19300,
-    "ctr": 0.0018,
+    "clicks": 36,
+    "impressions": 19456,
+    "ctr": 0.0019,
     "position": 5.6,
-    "est_extra_clicks": 2088
+    "est_extra_clicks": 2103
    },
    {
     "query": "chris murphy",
     "page": "https://www.trlibrary.com/podcast/good-citizen/senator-chris-murphy",
-    "clicks": 12,
-    "impressions": 18995,
+    "clicks": 11,
+    "impressions": 18069,
     "ctr": 0.0006,
     "position": 11.4,
-    "est_extra_clicks": 2078
-   },
-   {
-    "query": "alice roosevelt",
-    "page": "https://www.trlibrary.com/tr/people/alice-longworth",
-    "clicks": 32,
-    "impressions": 17098,
-    "ctr": 0.0019,
-    "position": 9.5,
-    "est_extra_clicks": 1848
+    "est_extra_clicks": 1977
    },
    {
     "query": "jacob riis",
     "page": "https://www.trlibrary.com/tr/people/jacob-riis",
-    "clicks": 42,
-    "impressions": 15796,
-    "ctr": 0.0027,
+    "clicks": 41,
+    "impressions": 15797,
+    "ctr": 0.0026,
     "position": 11.0,
-    "est_extra_clicks": 1695
+    "est_extra_clicks": 1697
    },
    {
     "query": "bill kristol",
     "page": "https://www.trlibrary.com/podcast/good-citizen/bill-kristol",
     "clicks": 8,
-    "impressions": 14932,
+    "impressions": 15134,
     "ctr": 0.0005,
-    "position": 11.8,
-    "est_extra_clicks": 1635
+    "position": 11.9,
+    "est_extra_clicks": 1657
+   },
+   {
+    "query": "alice roosevelt",
+    "page": "https://www.trlibrary.com/tr/people/alice-longworth",
+    "clicks": 32,
+    "impressions": 15135,
+    "ctr": 0.0021,
+    "position": 9.4,
+    "est_extra_clicks": 1633
    },
    {
     "query": "square deal",
     "page": "https://www.trlibrary.com/tr/presidency/square-deal",
     "clicks": 11,
-    "impressions": 13343,
+    "impressions": 14245,
     "ctr": 0.0008,
     "position": 5.7,
-    "est_extra_clicks": 1457
+    "est_extra_clicks": 1556
    },
    {
     "query": "alice roosevelt longworth",
     "page": "https://www.trlibrary.com/tr/people/alice-longworth",
     "clicks": 10,
-    "impressions": 12110,
-    "ctr": 0.0008,
-    "position": 9.3,
-    "est_extra_clicks": 1322
+    "impressions": 11268,
+    "ctr": 0.0009,
+    "position": 9.2,
+    "est_extra_clicks": 1229
    },
    {
     "query": "teddy roosevelt",
     "page": "https://www.trlibrary.com/",
-    "clicks": 17,
-    "impressions": 9695,
-    "ctr": 0.0018,
-    "position": 12.8,
-    "est_extra_clicks": 1049
+    "clicks": 16,
+    "impressions": 9540,
+    "ctr": 0.0017,
+    "position": 12.7,
+    "est_extra_clicks": 1033
    },
    {
     "query": "alice hathaway lee roosevelt",
     "page": "https://www.trlibrary.com/tr/new-york-politics/alice-lee",
-    "clicks": 11,
-    "impressions": 6735,
-    "ctr": 0.0016,
+    "clicks": 10,
+    "impressions": 6630,
+    "ctr": 0.0015,
     "position": 5.7,
-    "est_extra_clicks": 730
+    "est_extra_clicks": 719
    },
    {
     "query": "kermit roosevelt",
     "page": "https://www.trlibrary.com/podcast/good-citizen/kermit-roosevelt-iii",
-    "clicks": 25,
-    "impressions": 6457,
-    "ctr": 0.0039,
+    "clicks": 29,
+    "impressions": 6418,
+    "ctr": 0.0045,
     "position": 7.1,
-    "est_extra_clicks": 685
+    "est_extra_clicks": 677
    },
    {
     "query": "mount rushmore presidents",
     "page": "https://www.trlibrary.com/tr/tr-mount-rushmore",
-    "clicks": 20,
-    "impressions": 6245,
-    "ctr": 0.0032,
-    "position": 4.4,
-    "est_extra_clicks": 667
+    "clicks": 21,
+    "impressions": 6233,
+    "ctr": 0.0034,
+    "position": 4.5,
+    "est_extra_clicks": 664
    },
    {
-    "query": "teddy roosevelt library",
-    "page": "https://www.trlibrary.com/video/view/Vf8ee-gccpc",
-    "clicks": 54,
-    "impressions": 6483,
-    "ctr": 0.0083,
-    "position": 5.6,
-    "est_extra_clicks": 659
+    "query": "meg whitman",
+    "page": "https://www.trlibrary.com/podcast/good-citizen/meg-whitman",
+    "clicks": 1,
+    "impressions": 6022,
+    "ctr": 0.0002,
+    "position": 11.5,
+    "est_extra_clicks": 661
    }
   ],
   "low_ctr": [
    {
     "page": "https://www.trlibrary.com/tr/square-deal",
-    "clicks": 1139,
-    "impressions": 86353,
-    "ctr": 0.0132,
+    "clicks": 1138,
+    "impressions": 88336,
+    "ctr": 0.0129,
     "position": 3.3,
-    "prev_clicks": 585,
-    "prev_impressions": 51596,
+    "prev_clicks": 597,
+    "prev_impressions": 52004,
     "prev_position": 3.5,
     "expected_ctr": 0.11,
-    "est_extra_clicks": 8359
+    "est_extra_clicks": 8577
    },
    {
     "page": "https://www.trlibrary.com/tr/family/fdr-connection",
-    "clicks": 1086,
-    "impressions": 74450,
+    "clicks": 1088,
+    "impressions": 74659,
     "ctr": 0.0146,
     "position": 3.2,
-    "prev_clicks": 511,
-    "prev_impressions": 65897,
+    "prev_clicks": 533,
+    "prev_impressions": 65917,
     "prev_position": 4.3,
     "expected_ctr": 0.11,
-    "est_extra_clicks": 7103
-   },
-   {
-    "page": "https://www.trlibrary.com/visit/directions",
-    "clicks": 853,
-    "impressions": 65558,
-    "ctr": 0.013,
-    "position": 2.7,
-    "prev_clicks": 1585,
-    "prev_impressions": 109893,
-    "prev_position": 2.6,
-    "expected_ctr": 0.11,
-    "est_extra_clicks": 6359
+    "est_extra_clicks": 7122
    },
    {
     "page": "https://www.trlibrary.com/visit",
-    "clicks": 2148,
-    "impressions": 77230,
-    "ctr": 0.0278,
+    "clicks": 2068,
+    "impressions": 75744,
+    "ctr": 0.0273,
     "position": 2.7,
-    "prev_clicks": 4995,
-    "prev_impressions": 128678,
+    "prev_clicks": 4843,
+    "prev_impressions": 125213,
     "prev_position": 2.7,
     "expected_ctr": 0.11,
-    "est_extra_clicks": 6348
+    "est_extra_clicks": 6264
+   },
+   {
+    "page": "https://www.trlibrary.com/visit/directions",
+    "clicks": 837,
+    "impressions": 64161,
+    "ctr": 0.013,
+    "position": 2.7,
+    "prev_clicks": 1518,
+    "prev_impressions": 107109,
+    "prev_position": 2.6,
+    "expected_ctr": 0.11,
+    "est_extra_clicks": 6224
    },
    {
     "page": "https://www.trlibrary.com/visit/hours",
-    "clicks": 795,
-    "impressions": 63603,
-    "ctr": 0.0125,
-    "position": 2.6,
-    "prev_clicks": 1598,
-    "prev_impressions": 101961,
+    "clicks": 775,
+    "impressions": 62342,
+    "ctr": 0.0124,
+    "position": 2.7,
+    "prev_clicks": 1578,
+    "prev_impressions": 99545,
     "prev_position": 2.5,
     "expected_ctr": 0.11,
-    "est_extra_clicks": 6201
+    "est_extra_clicks": 6085
    },
    {
     "page": "https://www.trlibrary.com/tr/tr-mount-rushmore",
-    "clicks": 573,
-    "impressions": 98971,
-    "ctr": 0.0058,
+    "clicks": 552,
+    "impressions": 97436,
+    "ctr": 0.0057,
     "position": 5.1,
-    "prev_clicks": 923,
-    "prev_impressions": 151241,
+    "prev_clicks": 917,
+    "prev_impressions": 149236,
     "prev_position": 5.1,
     "expected_ctr": 0.06,
-    "est_extra_clicks": 5364
+    "est_extra_clicks": 5291
    },
    {
     "page": "https://www.trlibrary.com/tr/presidency/trust-busting",
     "clicks": 858,
-    "impressions": 72573,
+    "impressions": 72686,
     "ctr": 0.0118,
     "position": 3.6,
-    "prev_clicks": 377,
-    "prev_impressions": 35406,
+    "prev_clicks": 385,
+    "prev_impressions": 35869,
     "prev_position": 4.5,
     "expected_ctr": 0.08,
-    "est_extra_clicks": 4949
-   },
-   {
-    "page": "https://www.trlibrary.com/project",
-    "clicks": 141,
-    "impressions": 28902,
-    "ctr": 0.0049,
-    "position": 2.0,
-    "prev_clicks": 332,
-    "prev_impressions": 59334,
-    "prev_position": 1.9,
-    "expected_ctr": 0.16,
-    "est_extra_clicks": 4483
+    "est_extra_clicks": 4957
    },
    {
     "page": "https://www.trlibrary.com/tr/presidency/roosevelt-corollary",
-    "clicks": 174,
-    "impressions": 101881,
+    "clicks": 178,
+    "impressions": 102105,
     "ctr": 0.0017,
     "position": 5.5,
     "prev_clicks": 63,
-    "prev_impressions": 49068,
+    "prev_impressions": 49814,
     "prev_position": 6.2,
     "expected_ctr": 0.045,
-    "est_extra_clicks": 4411
+    "est_extra_clicks": 4421
+   },
+   {
+    "page": "https://www.trlibrary.com/project",
+    "clicks": 144,
+    "impressions": 28373,
+    "ctr": 0.0051,
+    "position": 2.0,
+    "prev_clicks": 325,
+    "prev_impressions": 57613,
+    "prev_position": 1.9,
+    "expected_ctr": 0.16,
+    "est_extra_clicks": 4395
    },
    {
     "page": "https://www.trlibrary.com/tr/presidency/square-deal",
-    "clicks": 448,
-    "impressions": 69410,
-    "ctr": 0.0065,
+    "clicks": 452,
+    "impressions": 70643,
+    "ctr": 0.0064,
     "position": 4.6,
     "prev_clicks": 95,
-    "prev_impressions": 19856,
-    "prev_position": 6.2,
+    "prev_impressions": 20144,
+    "prev_position": 6.1,
     "expected_ctr": 0.06,
-    "est_extra_clicks": 3713
+    "est_extra_clicks": 3786
    },
    {
     "page": "https://www.trlibrary.com/tr/presidency-timeline",
-    "clicks": 323,
-    "impressions": 57566,
-    "ctr": 0.0056,
-    "position": 4.7,
-    "prev_clicks": 204,
-    "prev_impressions": 51354,
+    "clicks": 317,
+    "impressions": 57337,
+    "ctr": 0.0055,
+    "position": 4.8,
+    "prev_clicks": 207,
+    "prev_impressions": 51179,
     "prev_position": 5.6,
     "expected_ctr": 0.06,
-    "est_extra_clicks": 3132
+    "est_extra_clicks": 3125
    },
    {
     "page": "https://www.trlibrary.com/tr/tr-shot",
-    "clicks": 372,
-    "impressions": 40670,
+    "clicks": 370,
+    "impressions": 40571,
     "ctr": 0.0091,
-    "position": 3.9,
-    "prev_clicks": 385,
-    "prev_impressions": 37022,
+    "position": 4.0,
+    "prev_clicks": 367,
+    "prev_impressions": 36695,
     "prev_position": 4.5,
     "expected_ctr": 0.08,
-    "est_extra_clicks": 2884
+    "est_extra_clicks": 2876
    },
    {
     "page": "https://www.trlibrary.com/bullet-speech",
-    "clicks": 772,
-    "impressions": 41445,
+    "clicks": 768,
+    "impressions": 41323,
     "ctr": 0.0186,
     "position": 3.5,
-    "prev_clicks": 749,
-    "prev_impressions": 37697,
+    "prev_clicks": 737,
+    "prev_impressions": 37380,
     "prev_position": 3.8,
     "expected_ctr": 0.08,
-    "est_extra_clicks": 2545
+    "est_extra_clicks": 2537
    },
    {
     "page": "https://www.trlibrary.com/tr/presidency/brownsville",
-    "clicks": 27,
-    "impressions": 51337,
+    "clicks": 26,
+    "impressions": 56436,
     "ctr": 0.0005,
-    "position": 6.5,
-    "prev_clicks": 28,
-    "prev_impressions": 2057,
-    "prev_position": 5.4,
+    "position": 6.4,
+    "prev_clicks": 27,
+    "prev_impressions": 2061,
+    "prev_position": 5.5,
     "expected_ctr": 0.045,
-    "est_extra_clicks": 2284
+    "est_extra_clicks": 2511
    },
    {
     "page": "https://www.trlibrary.com/tr/pre-presidency-political-accomplishments",
-    "clicks": 683,
-    "impressions": 49066,
+    "clicks": 684,
+    "impressions": 49047,
     "ctr": 0.0139,
     "position": 5.4,
-    "prev_clicks": 306,
-    "prev_impressions": 32377,
+    "prev_clicks": 311,
+    "prev_impressions": 32590,
     "prev_position": 5.8,
     "expected_ctr": 0.06,
-    "est_extra_clicks": 2262
+    "est_extra_clicks": 2261
    }
   ],
   "missing_in_title": [
    {
     "query": "teddy roosevelt",
     "page": "https://www.trlibrary.com/",
-    "clicks": 17,
-    "impressions": 9695,
-    "ctr": 0.0018,
-    "position": 12.8,
+    "clicks": 16,
+    "impressions": 9540,
+    "ctr": 0.0017,
+    "position": 12.7,
     "title": "Theodore Roosevelt Presidential Library | Medora, North Dakota",
     "missing_words": [
      "teddy"
@@ -993,9 +993,9 @@
    {
     "query": "when was teddy roosevelt president",
     "page": "https://www.trlibrary.com/tr/presidency-timeline",
-    "clicks": 17,
-    "impressions": 4179,
-    "ctr": 0.0041,
+    "clicks": 20,
+    "impressions": 4159,
+    "ctr": 0.0048,
     "position": 3.1,
     "title": "Timeline of TR’s Presidency | Theodore Roosevelt Presidential Library",
     "missing_words": [
@@ -1005,23 +1005,11 @@
     ]
    },
    {
-    "query": "carl rove",
-    "page": "https://www.trlibrary.com/podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature",
-    "clicks": 1,
-    "impressions": 2951,
-    "ctr": 0.0003,
-    "position": 9.7,
-    "title": "Karl Rove: Historic Redemption, the Hard Work of Politics, and the Essential Nature of Americans | Theodore Roosevelt Presidential Library",
-    "missing_words": [
-     "carl"
-    ]
-   },
-   {
     "query": "when was theodore roosevelt president",
     "page": "https://www.trlibrary.com/tr/presidency-timeline",
-    "clicks": 17,
-    "impressions": 2848,
-    "ctr": 0.006,
+    "clicks": 16,
+    "impressions": 2845,
+    "ctr": 0.0056,
     "position": 3.4,
     "title": "Timeline of TR’s Presidency | Theodore Roosevelt Presidential Library",
     "missing_words": [
@@ -1030,10 +1018,35 @@
     ]
    },
    {
+    "query": "carl rove",
+    "page": "https://www.trlibrary.com/podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature",
+    "clicks": 1,
+    "impressions": 2733,
+    "ctr": 0.0004,
+    "position": 9.7,
+    "title": "Karl Rove: Historic Redemption, the Hard Work of Politics, and the Essential Nature of Americans | Theodore Roosevelt Presidential Library",
+    "missing_words": [
+     "carl"
+    ]
+   },
+   {
+    "query": "hepburn act",
+    "page": "https://www.trlibrary.com/tr/presidency/railroad-regulation",
+    "clicks": 9,
+    "impressions": 2293,
+    "ctr": 0.0039,
+    "position": 2.6,
+    "title": "Railroad Regulation: Federal Authority Over Private Enterprise | Theodore Roosevelt Presidential Library",
+    "missing_words": [
+     "hepburn",
+     "act"
+    ]
+   },
+   {
     "query": "\"roosevelt\" \"the united states\" \"american\" \"latin america\" \"western hemisphere\" or \"interests and projecting influence globally.\" or \"it not just expanded u.s. territory but also its position\"",
     "page": "https://www.trlibrary.com/tr/presidency/roosevelt-corollary",
     "clicks": 0,
-    "impressions": 2313,
+    "impressions": 2089,
     "ctr": 0,
     "position": 6.9,
     "title": "The Roosevelt Corollary: America as Hemispheric Policeman | Theodore Roosevelt Presidential Library",
@@ -1059,25 +1072,12 @@
     ]
    },
    {
-    "query": "hepburn act",
-    "page": "https://www.trlibrary.com/tr/presidency/railroad-regulation",
-    "clicks": 9,
-    "impressions": 2255,
-    "ctr": 0.004,
-    "position": 2.6,
-    "title": "Railroad Regulation: Federal Authority Over Private Enterprise | Theodore Roosevelt Presidential Library",
-    "missing_words": [
-     "hepburn",
-     "act"
-    ]
-   },
-   {
     "query": "mt rushmore presidents",
     "page": "https://www.trlibrary.com/tr/tr-mount-rushmore",
     "clicks": 15,
-    "impressions": 1922,
-    "ctr": 0.0078,
-    "position": 4.5,
+    "impressions": 1949,
+    "ctr": 0.0077,
+    "position": 4.6,
     "title": "Why is Theodore Roosevelt on Mount Rushmore? | Theodore Roosevelt Presidential Library",
     "missing_words": [
      "mt",
@@ -1088,9 +1088,9 @@
     "query": "theodore's dining room medora",
     "page": "https://www.trlibrary.com/visit/eat",
     "clicks": 1,
-    "impressions": 1671,
+    "impressions": 1626,
     "ctr": 0.0006,
-    "position": 3.6,
+    "position": 3.5,
     "title": "Dining | Theodore Roosevelt Presidential Library",
     "missing_words": [
      "theodore's",
@@ -1101,9 +1101,9 @@
    {
     "query": "when did teddy roosevelt die",
     "page": "https://www.trlibrary.com/tr/timeline",
-    "clicks": 4,
-    "impressions": 1575,
-    "ctr": 0.0025,
+    "clicks": 3,
+    "impressions": 1558,
+    "ctr": 0.0019,
     "position": 4.9,
     "title": "Timeline of TR’s Life | Theodore Roosevelt Presidential Library",
     "missing_words": [
@@ -1115,9 +1115,9 @@
    {
     "query": "who are the four presidents on mount rushmore",
     "page": "https://www.trlibrary.com/tr/tr-mount-rushmore",
-    "clicks": 8,
-    "impressions": 1561,
-    "ctr": 0.0051,
+    "clicks": 7,
+    "impressions": 1540,
+    "ctr": 0.0045,
     "position": 5.7,
     "title": "Why is Theodore Roosevelt on Mount Rushmore? | Theodore Roosevelt Presidential Library",
     "missing_words": [
@@ -1129,7 +1129,7 @@
     "query": "what was theodore roosevelt known for",
     "page": "https://www.trlibrary.com/tr/tr-importance",
     "clicks": 5,
-    "impressions": 1537,
+    "impressions": 1503,
     "ctr": 0.0033,
     "position": 5.6,
     "title": "Why is Theodore Roosevelt Important? | Theodore Roosevelt Presidential Library",
@@ -1141,9 +1141,9 @@
    {
     "query": "teddy roosevelt museum",
     "page": "https://www.trlibrary.com/",
-    "clicks": 146,
-    "impressions": 1281,
-    "ctr": 0.114,
+    "clicks": 152,
+    "impressions": 1256,
+    "ctr": 0.121,
     "position": 2.1,
     "title": "Theodore Roosevelt Presidential Library | Medora, North Dakota",
     "missing_words": [
@@ -1155,7 +1155,7 @@
     "query": "square deal definition us history",
     "page": "https://www.trlibrary.com/tr/square-deal",
     "clicks": 10,
-    "impressions": 1240,
+    "impressions": 1241,
     "ctr": 0.0081,
     "position": 1.8,
     "title": "What was the Square Deal? | Theodore Roosevelt Presidential Library",
@@ -1166,12 +1166,25 @@
     ]
    },
    {
+    "query": "when did theodore roosevelt die",
+    "page": "https://www.trlibrary.com/tr/timeline",
+    "clicks": 1,
+    "impressions": 1237,
+    "ctr": 0.0008,
+    "position": 5.0,
+    "title": "Timeline of TR’s Life | Theodore Roosevelt Presidential Library",
+    "missing_words": [
+     "did",
+     "die"
+    ]
+   },
+   {
     "query": "hotel 1883 medora nd",
     "page": "https://www.trlibrary.com/visit/lodging",
-    "clicks": 14,
-    "impressions": 1167,
-    "ctr": 0.012,
-    "position": 7.8,
+    "clicks": 13,
+    "impressions": 1151,
+    "ctr": 0.0113,
+    "position": 7.9,
     "title": "Lodging | Theodore Roosevelt Presidential Library",
     "missing_words": [
      "hotel",
@@ -1179,202 +1192,190 @@
      "medora",
      "nd"
     ]
-   },
-   {
-    "query": "mt rushmore",
-    "page": "https://www.trlibrary.com/tr/tr-mount-rushmore",
-    "clicks": 13,
-    "impressions": 1157,
-    "ctr": 0.0112,
-    "position": 2.4,
-    "title": "Why is Theodore Roosevelt on Mount Rushmore? | Theodore Roosevelt Presidential Library",
-    "missing_words": [
-     "mt"
-    ]
    }
   ],
   "declining": [
    {
     "kind": "page",
     "item": "https://www.trlibrary.com/tickets?utm_source=gbp&utm_medium=organic",
-    "clicks": 5614,
-    "prev_clicks": 16876,
-    "change": -0.667,
-    "position": 3.3,
+    "clicks": 5193,
+    "prev_clicks": 16558,
+    "change": -0.686,
+    "position": 3.4,
     "prev_position": 3.7
    },
    {
     "kind": "page",
     "item": "https://www.trlibrary.com/",
-    "clicks": 10214,
-    "prev_clicks": 17349,
-    "change": -0.411,
+    "clicks": 10039,
+    "prev_clicks": 16898,
+    "change": -0.406,
     "position": 8.2,
-    "prev_position": 8.0
+    "prev_position": 8.1
    },
    {
     "kind": "page",
     "item": "https://www.trlibrary.com/tickets",
-    "clicks": 5890,
-    "prev_clicks": 10933,
-    "change": -0.461,
-    "position": 3.1,
+    "clicks": 5708,
+    "prev_clicks": 10744,
+    "change": -0.469,
+    "position": 3.2,
     "prev_position": 2.6
    },
    {
     "kind": "query",
     "item": "theodore roosevelt presidential library",
-    "clicks": 8046,
-    "prev_clicks": 12492,
-    "change": -0.356,
+    "clicks": 7911,
+    "prev_clicks": 12128,
+    "change": -0.348,
     "position": 1.1,
     "prev_position": 1.0
    },
    {
     "kind": "page",
     "item": "https://www.trlibrary.com/visit",
-    "clicks": 2148,
-    "prev_clicks": 4995,
-    "change": -0.57,
+    "clicks": 2068,
+    "prev_clicks": 4843,
+    "change": -0.573,
     "position": 2.7,
     "prev_position": 2.7
    },
    {
     "kind": "query",
     "item": "teddy roosevelt presidential library",
-    "clicks": 2833,
-    "prev_clicks": 5482,
-    "change": -0.483,
+    "clicks": 2748,
+    "prev_clicks": 5360,
+    "change": -0.487,
     "position": 1.3,
     "prev_position": 1.2
    },
    {
     "kind": "query",
     "item": "theodore roosevelt library",
-    "clicks": 1315,
-    "prev_clicks": 3259,
-    "change": -0.597,
+    "clicks": 1280,
+    "prev_clicks": 3165,
+    "change": -0.596,
     "position": 1.8,
     "prev_position": 1.2
    },
    {
     "kind": "query",
     "item": "teddy roosevelt library",
-    "clicks": 2453,
-    "prev_clicks": 3972,
-    "change": -0.382,
-    "position": 1.5,
+    "clicks": 2408,
+    "prev_clicks": 3955,
+    "change": -0.391,
+    "position": 1.6,
     "prev_position": 1.2
    },
    {
     "kind": "page",
     "item": "https://www.trlibrary.com/visit/hours",
-    "clicks": 795,
-    "prev_clicks": 1598,
-    "change": -0.503,
-    "position": 2.6,
+    "clicks": 775,
+    "prev_clicks": 1578,
+    "change": -0.509,
+    "position": 2.7,
     "prev_position": 2.5
    },
    {
     "kind": "page",
     "item": "https://www.trlibrary.com/visit/directions",
-    "clicks": 853,
-    "prev_clicks": 1585,
-    "change": -0.462,
+    "clicks": 837,
+    "prev_clicks": 1518,
+    "change": -0.449,
     "position": 2.7,
     "prev_position": 2.6
    },
    {
     "kind": "query",
     "item": "presidential library medora",
-    "clicks": 281,
-    "prev_clicks": 708,
-    "change": -0.603,
+    "clicks": 279,
+    "prev_clicks": 698,
+    "change": -0.6,
     "position": 1.0,
     "prev_position": 1.2
    },
    {
     "kind": "page",
     "item": "https://www.trlibrary.com/tr/tr-mount-rushmore",
-    "clicks": 573,
-    "prev_clicks": 923,
-    "change": -0.379,
+    "clicks": 552,
+    "prev_clicks": 917,
+    "change": -0.398,
     "position": 5.1,
     "prev_position": 5.1
    },
    {
     "kind": "query",
     "item": "roosevelt library",
-    "clicks": 385,
-    "prev_clicks": 695,
-    "change": -0.446,
+    "clicks": 379,
+    "prev_clicks": 670,
+    "change": -0.434,
     "position": 3.6,
     "prev_position": 2.3
    },
    {
     "kind": "query",
     "item": "roosevelt library north dakota",
-    "clicks": 383,
-    "prev_clicks": 651,
-    "change": -0.412,
+    "clicks": 377,
+    "prev_clicks": 634,
+    "change": -0.405,
     "position": 1.2,
     "prev_position": 1.2
    },
    {
-    "kind": "query",
-    "item": "medora library",
-    "clicks": 143,
-    "prev_clicks": 363,
-    "change": -0.606,
-    "position": 2.3,
-    "prev_position": 1.6
+    "kind": "page",
+    "item": "https://www.trlibrary.com/visit/eat",
+    "clicks": 244,
+    "prev_clicks": 460,
+    "change": -0.47,
+    "position": 6.3,
+    "prev_position": 6.7
    }
   ],
   "cannibalization": [
    {
     "query": "square deal",
-    "impressions": 36344,
+    "impressions": 39197,
     "pages": [
      {
       "page": "https://www.trlibrary.com/tr/square-deal",
-      "impressions": 23001,
-      "position": 3.9
+      "impressions": 24952,
+      "position": 3.8
      },
      {
       "page": "https://www.trlibrary.com/tr/presidency/square-deal",
-      "impressions": 13343,
+      "impressions": 14245,
       "position": 5.7
      }
     ]
    },
    {
     "query": "kermit roosevelt",
-    "impressions": 10729,
+    "impressions": 10601,
     "pages": [
      {
       "page": "https://www.trlibrary.com/podcast/good-citizen/kermit-roosevelt-iii",
-      "impressions": 6457,
+      "impressions": 6418,
       "position": 7.1
      },
      {
       "page": "https://www.trlibrary.com/about/trustees/kermit-roosevelt",
-      "impressions": 4272,
-      "position": 7.3
+      "impressions": 4183,
+      "position": 7.2
      }
     ]
    },
    {
     "query": "roosevelt family",
-    "impressions": 8913,
+    "impressions": 8989,
     "pages": [
      {
       "page": "https://www.trlibrary.com/tr/family/family-tree",
-      "impressions": 5342,
-      "position": 3.2
+      "impressions": 5421,
+      "position": 3.1
      },
      {
       "page": "https://www.trlibrary.com/tr/family",
-      "impressions": 3489,
+      "impressions": 3486,
       "position": 4.7
      },
      {
@@ -1386,197 +1387,171 @@
    },
    {
     "query": "teddy roosevelt museum",
-    "impressions": 5343,
+    "impressions": 5170,
     "pages": [
      {
       "page": "https://www.trlibrary.com/",
-      "impressions": 1281,
+      "impressions": 1256,
       "position": 2.1
      },
      {
       "page": "https://www.trlibrary.com/tickets",
-      "impressions": 1272,
+      "impressions": 1249,
       "position": 2.6
      },
      {
       "page": "https://www.trlibrary.com/visit",
-      "impressions": 1242,
+      "impressions": 1217,
       "position": 2.7
      },
      {
       "page": "https://www.trlibrary.com/video/view/Vf8ee-gccpc",
-      "impressions": 866,
+      "impressions": 836,
       "position": 5.5
      }
     ]
    },
    {
     "query": "what was a square deal",
-    "impressions": 4435,
+    "impressions": 4297,
     "pages": [
      {
       "page": "https://www.trlibrary.com/tr/square-deal",
-      "impressions": 3089,
+      "impressions": 2979,
       "position": 1.3
      },
      {
       "page": "https://www.trlibrary.com/tr/presidency/square-deal",
-      "impressions": 1346,
-      "position": 7.5
+      "impressions": 1318,
+      "position": 7.6
      }
     ]
    },
    {
     "query": "the square deal",
-    "impressions": 3388,
+    "impressions": 3417,
     "pages": [
      {
       "page": "https://www.trlibrary.com/tr/square-deal",
-      "impressions": 1964,
+      "impressions": 1977,
       "position": 1.9
      },
      {
       "page": "https://www.trlibrary.com/tr/presidency/square-deal",
-      "impressions": 1424,
+      "impressions": 1440,
       "position": 5.8
      }
     ]
    },
    {
-    "query": "theodore roosevelt museum",
-    "impressions": 2707,
-    "pages": [
-     {
-      "page": "https://www.trlibrary.com/",
-      "impressions": 590,
-      "position": 2.1
-     },
-     {
-      "page": "https://www.trlibrary.com/tickets",
-      "impressions": 586,
-      "position": 2.4
-     },
-     {
-      "page": "https://www.trlibrary.com/visit",
-      "impressions": 544,
-      "position": 2.5
-     },
-     {
-      "page": "https://www.trlibrary.com/video/view/Vf8ee-gccpc",
-      "impressions": 224,
-      "position": 4.4
-     }
-    ]
-   },
-   {
     "query": "man in the arena",
-    "impressions": 2674,
+    "impressions": 2700,
     "pages": [
      {
       "page": "https://www.trlibrary.com/tr/speeches/man-in-the-arena",
-      "impressions": 1813,
+      "impressions": 1835,
       "position": 1.1
      },
      {
       "page": "https://www.trlibrary.com/tr/post-presidency/man-in-the-arena",
-      "impressions": 861,
+      "impressions": 865,
       "position": 9.5
      }
     ]
    },
    {
     "query": "theodore roosevelt children",
-    "impressions": 2673,
+    "impressions": 2652,
     "pages": [
      {
       "page": "https://www.trlibrary.com/tr/family/children",
-      "impressions": 2071,
-      "position": 4.6
+      "impressions": 2059,
+      "position": 4.5
      },
      {
       "page": "https://www.trlibrary.com/tr/kids-timeline",
-      "impressions": 602,
-      "position": 4.4
-     }
-    ]
-   },
-   {
-    "query": "what was the square deal",
-    "impressions": 2534,
-    "pages": [
-     {
-      "page": "https://www.trlibrary.com/tr/square-deal",
-      "impressions": 1774,
-      "position": 1.4
-     },
-     {
-      "page": "https://www.trlibrary.com/tr/presidency/square-deal",
-      "impressions": 760,
-      "position": 4.5
-     }
-    ]
-   },
-   {
-    "query": "teddy roosevelt shot",
-    "impressions": 2098,
-    "pages": [
-     {
-      "page": "https://www.trlibrary.com/tr/tr-shot",
-      "impressions": 1393,
-      "position": 2.2
-     },
-     {
-      "page": "https://www.trlibrary.com/bullet-speech",
-      "impressions": 705,
+      "impressions": 593,
       "position": 5.0
      }
     ]
    },
    {
-    "query": "teddy roosevelt museum north dakota",
-    "impressions": 1471,
+    "query": "what was the square deal",
+    "impressions": 2528,
+    "pages": [
+     {
+      "page": "https://www.trlibrary.com/tr/square-deal",
+      "impressions": 1772,
+      "position": 1.4
+     },
+     {
+      "page": "https://www.trlibrary.com/tr/presidency/square-deal",
+      "impressions": 756,
+      "position": 4.5
+     }
+    ]
+   },
+   {
+    "query": "theodore roosevelt museum",
+    "impressions": 2439,
     "pages": [
      {
       "page": "https://www.trlibrary.com/",
-      "impressions": 419,
-      "position": 1.9
-     },
-     {
-      "page": "https://www.trlibrary.com/visit",
-      "impressions": 413,
-      "position": 2.0
+      "impressions": 586,
+      "position": 2.1
      },
      {
       "page": "https://www.trlibrary.com/tickets",
-      "impressions": 407,
-      "position": 2.0
+      "impressions": 582,
+      "position": 2.4
      },
      {
-      "page": "https://www.trlibrary.com/tickets?utm_source=gbp&utm_medium=organic",
-      "impressions": 95,
-      "position": 1.1
+      "page": "https://www.trlibrary.com/visit",
+      "impressions": 542,
+      "position": 2.5
+     },
+     {
+      "page": "https://www.trlibrary.com/visit/hours",
+      "impressions": 215,
+      "position": 3.0
+     }
+    ]
+   },
+   {
+    "query": "teddy roosevelt shot",
+    "impressions": 2060,
+    "pages": [
+     {
+      "page": "https://www.trlibrary.com/tr/tr-shot",
+      "impressions": 1375,
+      "position": 2.2
+     },
+     {
+      "page": "https://www.trlibrary.com/bullet-speech",
+      "impressions": 685,
+      "position": 5.2
      }
     ]
    },
    {
     "query": "what did theodore roosevelt do",
-    "impressions": 1464,
+    "impressions": 1469,
     "pages": [
      {
       "page": "https://www.trlibrary.com/tr/pre-presidency-political-accomplishments",
-      "impressions": 757,
+      "impressions": 760,
       "position": 8.1
      },
      {
       "page": "https://www.trlibrary.com/tr/tr-importance",
-      "impressions": 707,
-      "position": 5.6
+      "impressions": 709,
+      "position": 5.5
      }
     ]
    },
    {
     "query": "teddy roosevelt assassination attempt",
-    "impressions": 1462,
+    "impressions": 1460,
     "pages": [
      {
       "page": "https://www.trlibrary.com/bullet-speech",
@@ -1585,34 +1560,50 @@
      },
      {
       "page": "https://www.trlibrary.com/tr/tr-shot",
-      "impressions": 643,
-      "position": 4.2
+      "impressions": 641,
+      "position": 4.3
      }
     ]
    },
    {
-    "query": "medora presidential library",
-    "impressions": 1445,
+    "query": "teddy roosevelt museum north dakota",
+    "impressions": 1441,
     "pages": [
      {
       "page": "https://www.trlibrary.com/",
-      "impressions": 291,
-      "position": 1.5
-     },
-     {
-      "page": "https://www.trlibrary.com/tickets",
-      "impressions": 290,
-      "position": 1.8
+      "impressions": 400,
+      "position": 1.9
      },
      {
       "page": "https://www.trlibrary.com/visit",
-      "impressions": 290,
-      "position": 1.7
+      "impressions": 394,
+      "position": 1.9
      },
      {
-      "page": "https://www.trlibrary.com/visit/hours",
-      "impressions": 283,
-      "position": 1.9
+      "page": "https://www.trlibrary.com/tickets",
+      "impressions": 391,
+      "position": 2
+     },
+     {
+      "page": "https://www.trlibrary.com/tickets?utm_source=gbp&utm_medium=organic",
+      "impressions": 86,
+      "position": 1.1
+     }
+    ]
+   },
+   {
+    "query": "was teddy roosevelt shot",
+    "impressions": 1394,
+    "pages": [
+     {
+      "page": "https://www.trlibrary.com/tr/tr-shot",
+      "impressions": 705,
+      "position": 2.2
+     },
+     {
+      "page": "https://www.trlibrary.com/bullet-speech",
+      "impressions": 689,
+      "position": 2.3
      }
     ]
    }
