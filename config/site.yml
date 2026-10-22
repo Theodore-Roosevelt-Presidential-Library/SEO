@@ -80,3 +80,30 @@ tips:
   max_pages: 8
   # Pages with fewer impressions than this (last 28 days) are not considered.
   min_impressions: 50
+
+# Visitor Experience tab: how easy the /visit pages are to use (weekly).
+ux:
+  section: /visit                # every sitemap URL under this path is checked
+  skip_patterns: ["/print$"]
+  # Pages the AI reads as a first-time visitor, checking each task below.
+  key_pages: [/visit, /visit/hours, /visit/directions, /visit/faq/tickets, /visit/tickets/plan-ahead,
+              /visit/accessibility, /visit/eat, /visit/faq, /visit/lodging, /visit/groups, /visit/maps]
+  tasks:
+    hours: When is the Library open?
+    price: How much are tickets?
+    buy: Where do I buy tickets?
+    directions: How do I get there, and where do I park?
+    visit_length: How long should I plan to spend?
+    accessibility: Is the Library accessible for wheelchairs and strollers?
+    food: Can I get food or coffee there?
+  # Without a PAGESPEED_API_KEY, Google's free quota only covers the key pages.
+  pagespeed_workers: 3
+  ticket_link_pattern: "access\\.trlibrary\\.com|/tickets\\b"
+
+# Checkout tab: ticket-store completion rates from GA4 (rates only, never counts).
+checkout:
+  store_host: access.trlibrary.com
+  site_host: www.trlibrary.com
+  ticket_page_prefix: /tickets
+  steps: [view_item, add_to_cart, begin_checkout, add_payment_info, purchase]
+  min_users_for_rate: 30          # below this, a rate is shown as "low volume"

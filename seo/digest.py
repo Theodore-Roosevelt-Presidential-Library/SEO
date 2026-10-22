@@ -43,6 +43,8 @@ RAW_FILES = {
     "audit/summary.json": "Site audit: health score, issue counts, robots.txt AI-crawler access, structured data",
     "audit/pages.json": "Per-page audit: title, meta, H1, canonical, OG tags, word count, issues",
     "tips.json": "AI-drafted page recommendations and the AI-visibility brief",
+    "ux/latest.json": "Visitor experience on /visit pages: PageSpeed, accessibility, readability, AI task checks, conflicting facts, GA4/Clarity behaviour",
+    "checkout/latest.json": "Ticket-store checkout completion rates from GA4 (rates only)",
     "tracking.json": "Keywords and AI questions the system discovered, graduated or retired, with reasons",
 }
 
@@ -63,6 +65,8 @@ def build() -> dict:
     apages = C.read_json("audit/pages.json", []) or []
     tips = C.read_json("tips.json")
     tracking = C.read_json("tracking.json")
+    uxd = C.read_json("ux/latest.json")
+    co = C.read_json("checkout/latest.json")
 
     d: dict = {
         "generated": C.now_iso(),
@@ -161,6 +165,27 @@ def build() -> dict:
             "recent_changes": tracking.get("log", [])[:15],
             "how_to_change": "Rules and caps: config/tracking.yml. Keep an item permanently by copying it into config/keywords.yml or config/ai_prompts.yml; block it via tracking.yml exclude.",
         }
+
+    if uxd:
+        d["visitor_experience"] = {
+            "updated": uxd.get("updated"), "section": uxd.get("section"), "summary": uxd.get("summary"),
+            "conflicts": uxd.get("conflicts", []),
+            "task_checks": [{"page": p["path"], "findability": p["task_check"].get("findability"),
+                             "biggest_fix": p["task_check"].get("biggest_fix"),
+                             "missing_or_buried": [k for k, v in p["task_check"]["tasks"].items() if v["status"] in ("missing", "buried")]}
+                            for p in uxd.get("pages", []) if p.get("task_check")],
+            "slowest_pages": [{"page": p["path"], "speed": p["pagespeed"]["performance"], "lcp_s": p["pagespeed"].get("lcp_s")}
+                              for p in sorted((p for p in uxd.get("pages", []) if (p.get("pagespeed") or {}).get("performance") is not None),
+                                              key=lambda p: p["pagespeed"]["performance"])[:8]],
+            "accessibility_problems": sorted({f for p in uxd.get("pages", []) for f in (p.get("pagespeed") or {}).get("a11y_failures", [])})[:12],
+            "hardest_to_read": [{"page": p["path"], "grade": p["readability"]["grade_level"]}
+                                for p in sorted((p for p in uxd.get("pages", []) if (p.get("readability") or {}).get("grade_level")),
+                                                key=lambda p: -p["readability"]["grade_level"])[:8]],
+        }
+    if co:
+        d["checkout"] = {"updated": co.get("updated"), "note": co.get("note"), "current": co.get("current"),
+                         "previous": {k: co.get("previous", {}).get(k) for k in ("checkout_completion", "store_conversion")},
+                         "by_device": co.get("by_device"), "ticket_page_to_store": co.get("ticket_page_to_store")}
 
     d["raw_files"] = {f"{BASE}/data/{k}": v for k, v in RAW_FILES.items()}
     return d
@@ -292,6 +317,30 @@ def to_markdown(d: dict) -> str:
             if p.get("needs_verification"):
                 L.append(f"- Verify: {'; '.join(p['needs_verification'])}")
             L.append("")
+
+    vx = d.get("visitor_experience")
+    if vx:
+        sm = vx.get("summary") or {}
+        L += [f"## Visitor experience ({vx['section']} pages)",
+              f"Findability {sm.get('findability')}/100, mobile speed {sm.get('performance')}/100, accessibility {sm.get('accessibility')}/100, "
+              f"average reading grade {sm.get('grade_level')}, {sm.get('conflicts', 0)} facts that disagree between pages.\n"]
+        if vx["conflicts"]:
+            L += ["### Pages that contradict each other", _table(vx["conflicts"], [("fact", "Fact"), ("pages", "Pages"), ("detail", "What disagrees")])]
+        if vx["task_checks"]:
+            L += ["### Can a first-time visitor find what they need?",
+                  _table(vx["task_checks"], [("page", "Page"), ("findability", "Score"), ("missing_or_buried", "Missing or buried"), ("biggest_fix", "Biggest fix")])]
+        if vx["slowest_pages"]:
+            L += ["### Slowest pages on mobile", _table(vx["slowest_pages"], [("page", "Page"), ("speed", "Speed /100"), ("lcp_s", "Load (s)")])]
+        if vx["accessibility_problems"]:
+            L += ["### Accessibility problems found", "\n".join(f"- {a}" for a in vx["accessibility_problems"]) + "\n"]
+    ck = d.get("checkout")
+    if ck:
+        c = ck["current"] or {}
+        f = lambda v: "–" if v is None else v if isinstance(v, str) else f"{v:.0%}"
+        L += ["## Ticket checkout (GA4, rates only)",
+              f"Checkout completion {f(c.get('checkout_completion'))} (prior {f(ck['previous'].get('checkout_completion'))}); "
+              f"store visitors who buy {f(c.get('store_conversion'))} (prior {f(ck['previous'].get('store_conversion'))}); "
+              f"ticket page to store {f(ck.get('ticket_page_to_store'))}. Steps the store doesn't report: {', '.join(c.get('missing_steps') or []) or 'none'}.\n"]
 
     tr = d.get("tracking")
     if tr and tr["recent_changes"]:

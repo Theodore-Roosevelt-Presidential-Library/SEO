@@ -109,6 +109,31 @@ Each week the tool adds promising keywords and AI questions on its own, and reti
 
 Added keywords raise DataForSEO costs by about half a cent per keyword per week, so 25 discovered keywords add about $0.55 a month.
 
+## Visitor Experience and Checkout tabs
+
+**Visitor Experience** checks every page under `/visit` once a week:
+- **Speed and accessibility:** Google PageSpeed scores on a phone, real-visitor load times where Chrome has enough data, and the specific accessibility checks that fail.
+- **Reading level:** grade level (aim for 8) and how far down the first ticket link sits.
+- **Visitor tasks:** on the key pages, an AI (any configured key) reads the page as a first-time visitor and checks whether it answers the basics: hours, price, where to buy, directions and parking, visit length, accessibility, food. Each is marked found near the top, buried, linked, or missing.
+- **Contradictions:** it collects the facts each page states and flags pages that disagree, such as different hours.
+
+Key pages and tasks are set in `config/site.yml` under `ux`.
+
+**Checkout** measures the ticket store (`access.trlibrary.com`, run by ACME) from GA4: how many store visitors add tickets, start checkout and buy. Only **rates** are published, never visitor or order counts or revenue. Rates based on fewer than 30 people show as "low volume". If the store doesn't report a step to GA4, the tab lists it so it can be raised with ACME.
+
+### Setup
+1. **PageSpeed (`PAGESPEED_API_KEY`, required):** Google's keyless quota is shared and usually used up.
+   - In Google Cloud Console (project `civic-depth-505307-c4`), enable the **PageSpeed Insights API**.
+   - Go to **APIs & Services → Credentials → Create credentials → API key**, and restrict the key to the PageSpeed Insights API.
+   - Add it as the secret `PAGESPEED_API_KEY`.
+2. **GA4 (`GA4_PROPERTY_ID` variable):**
+   - In Google Cloud, enable the **Google Analytics Data API**.
+   - In GA4, go to **Admin → Property access management**, add `seo-dashboard@civic-depth-505307-c4.iam.gserviceaccount.com` as a **Viewer**.
+   - Copy the numeric **Property ID** from **Admin → Property details** and add it as the repo **variable** `GA4_PROPERTY_ID`.
+
+   This turns on the Checkout tab and the engagement columns on Visitor Experience.
+3. **Microsoft Clarity (`CLARITY_API_TOKEN`, optional):** in Clarity, open the trlibrary.com project and go to **Settings → Data Export → Generate new API token**. Add it as the secret `CLARITY_API_TOKEN`. This adds rage clicks, dead clicks and scroll depth for the last three days, which is all Clarity's API provides.
+
 ## Changing what's tracked
 All tracking is controlled by three files in `config/`. Edit them on GitHub; the next run picks up the changes.
 - `config/keywords.yml`: the searches tracked on the Rankings tab, in groups.

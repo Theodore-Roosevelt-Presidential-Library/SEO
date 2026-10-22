@@ -28,18 +28,10 @@ LAG_DAYS = 3  # Search Console data settles after ~2-3 days
 
 
 def _token(sa_json: str | None) -> str:
-    """Key file if one was supplied; otherwise Application Default Credentials,
-    which is what keyless Workload Identity Federation sets up in Actions."""
-    import google.auth
-    import google.auth.transport.requests as gtr
-    from google.oauth2 import service_account
-
-    if sa_json:
-        creds = service_account.Credentials.from_service_account_info(json.loads(sa_json), scopes=[SCOPE])
-    else:
-        creds, _ = google.auth.default(scopes=[SCOPE])
-    creds.refresh(gtr.Request())
-    return creds.token
+    tok = C.google_token([SCOPE])
+    if not tok:
+        raise RuntimeError("No Google sign-in configured")
+    return tok
 
 
 class GSC:

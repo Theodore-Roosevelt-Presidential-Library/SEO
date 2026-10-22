@@ -11,6 +11,7 @@
     ai: "data/ai/latest.json", aiHist: "data/ai/history.json",
     audit: "data/audit/summary.json", auditPages: "data/audit/pages.json", auditHist: "data/audit/history.json",
     tips: "data/tips.json", tracking: "data/tracking.json",
+    ux: "data/ux/latest.json", uxHist: "data/ux/history.json", checkout: "data/checkout/latest.json",
   };
   const D = {};
   const charts = [];
@@ -389,6 +390,90 @@
       return out;
     },
 
+    ux() {
+      const u = D.ux;
+      if (!u) return [empty("The visitor-experience check hasn't run yet.", "It runs weekly. Add a PAGESPEED_API_KEY for speed and accessibility scores; any AI key turns on the task checks.")];
+      const s = u.summary || {};
+      const scoreTxt = (v) => (v == null ? "–" : `${v}/100`);
+      const out = [el("p", { class: "lead" }, `${s.pages} pages under ${u.section}, checked ${date(u.updated)} on a phone-sized screen. ${u.sources.pagespeed === "all pages" ? "" : "PageSpeed covered " + u.sources.pagespeed + ". "}`)];
+      out.push(el("div", { class: "grid kpis" },
+        kpi("Can visitors find answers?", scoreTxt(s.findability), u.checked_by ? `Key pages read by ${u.checked_by} as a first-time visitor` : "Add any AI key to turn on"),
+        kpi("Mobile speed", scoreTxt(s.performance), s.origin_field ? `Real visitors: ${s.origin_field.toLowerCase()} overall` : "Google PageSpeed, mobile"),
+        kpi("Accessibility", scoreTxt(s.accessibility), "Google Lighthouse checks"),
+        kpi("Reading level", s.grade_level == null ? "–" : `Grade ${s.grade_level}`, s.hard_to_read == null ? "Aim for grade 8" : `${s.hard_to_read} pages above grade 10; aim for 8`),
+        kpi("Facts that disagree", num(s.conflicts), "Hours, prices or visit length differ between pages"),
+      ));
+      if ((u.conflicts || []).length) {
+        out.push(el("h2", {}, "Pages that contradict each other"), el("p", { class: "lead" }, "Visitors and AI assistants both lose trust when pages disagree. Fix these first."),
+          el("div", { class: "card" }, table([{ key: "fact", label: "Fact" }, { key: "pages", label: "Pages", render: (c) => (c.pages || []).join(", ") }, { key: "detail", label: "What disagrees" }], u.conflicts, { search: false })));
+      }
+      const keyed = u.pages.filter((p) => p.task_check);
+      if (keyed.length) {
+        const ids = Object.keys(u.tasks);
+        const sym = { top: ["✓", "yes", "Answered near the top"], buried: ["↓", "err", "Answered, but buried"], linked: ["→", "cite", "Linked from here"], missing: ["✕", "no", "Missing"], not_relevant: ["·", "no", "Not expected here"] };
+        const tb = el("tbody", {}, ...keyed.map((p) => el("tr", {},
+          el("td", {}, link(p.url, p.path), p.task_check.biggest_fix ? el("div", { class: "small muted" }, p.task_check.biggest_fix) : null),
+          el("td", { class: "num" }, p.task_check.findability ?? "–"),
+          ...ids.map((id) => { const t = p.task_check.tasks[id] || { status: "missing" }; const [g, c, lbl] = sym[t.status] || sym.missing;
+            return el("td", { class: "cell", title: `${lbl}${t.note ? ": " + t.note : ""}` }, el("span", { class: `dot ${c}` }, g)); }))));
+        out.push(el("h2", {}, "Can a first-time visitor find what they need?"),
+          el("div", { class: "legend" }, ...Object.values(sym).slice(0, 4).map(([g, c, l]) => el("span", {}, el("span", { class: `dot ${c}` }, g), " ", l))),
+          el("div", { class: "card table-wrap" }, el("table", { class: "matrix" },
+            el("thead", {}, el("tr", {}, el("th", {}, "Page"), el("th", { class: "num" }, "Score"), ...ids.map((id) => el("th", { class: "num", title: u.tasks[id] }, id.replace("_", " "))))), tb)),
+          el("p", { class: "small muted" }, "Hover a dot for the reviewer's note."));
+      }
+      const fmtS = (v) => (v == null ? "–" : `${v}s`);
+      out.push(el("h2", {}, "Every /visit page"), el("div", { class: "card" }, table([
+        { key: "path", label: "Page", render: (p) => link(p.url, p.path), cls: "url" },
+        { key: "perf", label: "Speed", num: true, render: (p) => (p.pagespeed || {}).performance ?? "–", sortVal: (p) => (p.pagespeed || {}).performance },
+        { key: "a11y", label: "Access.", num: true, render: (p) => (p.pagespeed || {}).accessibility ?? "–", sortVal: (p) => (p.pagespeed || {}).accessibility },
+        { key: "lcp", label: "Load (LCP)", num: true, render: (p) => fmtS((p.pagespeed || {}).lcp_s), sortVal: (p) => (p.pagespeed || {}).lcp_s },
+        { key: "grade", label: "Grade", num: true, render: (p) => (p.readability || {}).grade_level ?? "–", sortVal: (p) => (p.readability || {}).grade_level },
+        { key: "tl", label: "Words to ticket link", num: true, render: (p) => { const w = (p.readability || {}).words_before_ticket_link; return w == null ? "none" : w; }, sortVal: (p) => { const w = (p.readability || {}).words_before_ticket_link; return w == null ? 99999 : w; } },
+        { key: "eng", label: "Engaged", num: true, render: (p) => (p.ga4 ? pct(p.ga4.engagement_rate, 0) : "–"), sortVal: (p) => (p.ga4 || {}).engagement_rate },
+        { key: "time", label: "Avg time", num: true, render: (p) => (p.ga4 ? fmtS(p.ga4.avg_engagement_s) : "–"), sortVal: (p) => (p.ga4 || {}).avg_engagement_s },
+        { key: "rage", label: "Rage / dead clicks", num: true, render: (p) => (p.clarity ? `${p.clarity.rage_clicks ?? "–"}% / ${p.clarity.dead_clicks ?? "–"}%` : "–"), sortVal: (p) => ((p.clarity || {}).rage_clicks || 0) + ((p.clarity || {}).dead_clicks || 0) },
+        { key: "fails", label: "Accessibility problems", render: (p) => ((p.pagespeed || {}).a11y_failures || []).join("; ") || "–" },
+      ], u.pages, { sort: ["path", 1], limit: 100 })),
+      el("p", { class: "small muted" }, "Speed and accessibility are Google Lighthouse scores on a phone (0–100). Grade is the US school reading level. \"Words to ticket link\" counts how much a visitor reads before the first ticket link in the page body. \"Engaged\" and \"Avg time\" come from GA4 (28 days); rage and dead clicks are the share of Clarity sessions with them (last 3 days)."));
+      if ((u.errors || []).length) out.push(el("details", {}, el("summary", {}, `${u.errors.length} problems during the run`), el("ul", { class: "clean small" }, ...u.errors.map((e) => el("li", {}, e)))));
+      return out;
+    },
+
+    checkout() {
+      const c = D.checkout;
+      if (!c) return [empty("Checkout tracking isn't running yet.", "Add the repo variable GA4_PROPERTY_ID and give the Google service account Viewer access in GA4 (see Setup).")];
+      const fmt = (v) => (v == null ? "–" : typeof v === "string" ? v : pct(v, 0));
+      const cur = c.current, prev = c.previous;
+      const out = [el("p", { class: "lead" }, `How many people who reach the ticket store (${c.store}) complete each step, ${c.period}. ${c.note}`)];
+      const pp = (a, b) => (typeof a === "number" && typeof b === "number" ? el("span", { class: `delta ${a >= b ? "up" : "down"}` }, `${a >= b ? "+" : ""}${((a - b) * 100).toFixed(1)} pts vs prior 28 days`) : el("span", { class: "muted" }, "no comparison"));
+      out.push(el("div", { class: "grid kpis" },
+        kpi("Checkout completion", fmt(cur.checkout_completion), pp(cur.checkout_completion, prev.checkout_completion)),
+        kpi("Store visitors who buy", fmt(cur.store_conversion), pp(cur.store_conversion, prev.store_conversion)),
+        kpi("Ticket page → store", fmt(c.ticket_page_to_store), "trlibrary.com/tickets visitors who open the store (approximate)"),
+      ));
+      if ((cur.missing_steps || []).length) out.push(el("p", { class: "warn-box small", style: "margin-top:1rem" }, `Not reported to GA4 by the ticket store: ${cur.missing_steps.map((s) => c.labels[s] || s).join(", ")}. Ask ACME to turn on GA4 ecommerce events for those steps to see where people drop off.`));
+      const steps = ["store_visit", ...cur.tracked_steps];
+      const max = 1;
+      out.push(el("h2", {}, "Where people drop off"), el("div", { class: "card" }, el("table", {}, el("tbody", {},
+        ...steps.map((st, i) => {
+          const r = st === "store_visit" ? 1 : cur.of_store_visitors[st];
+          const step = i ? cur.step_to_step[`${steps[i - 1]}->${st}`] : null;
+          return el("tr", {}, el("td", {}, c.labels[st] || st),
+            el("td", { style: "width:45%" }, el("div", { class: "bar" }, el("span", { style: `width:${typeof r === "number" ? (100 * r) / max : 0}%` }))),
+            el("td", { class: "num" }, fmt(r)), el("td", { class: "num small muted" }, i ? `${fmt(step)} of previous step` : "everyone"));
+        })))));
+      const devs = Object.keys(c.by_device || {});
+      if (devs.length) out.push(el("h2", {}, "By device"), el("div", { class: "card" }, table([
+        { key: "d", label: "Device" }, { key: "cc", label: "Checkout completion", num: true, render: (r) => fmt(r.cc) }, { key: "sc", label: "Store visitors who buy", num: true, render: (r) => fmt(r.sc) },
+      ], devs.map((dv) => ({ d: dv, cc: c.by_device[dv].checkout_completion, sc: c.by_device[dv].store_conversion })), { search: false })));
+      const wk = (c.weekly || []).filter((w) => typeof w.checkout_completion === "number");
+      if (wk.length > 1) out.push(el("h2", {}, "Weekly trend"), el("div", { class: "card" }, lineChart([
+        { label: "Checkout completion", data: wk.map((w) => w.checkout_completion) }, { label: "Store visitors who buy", data: wk.map((w) => (typeof w.store_conversion === "number" ? w.store_conversion : null)) }],
+        wk.map((w) => `Wk ${String(w.week).slice(4)}`), { pctAxis: true })));
+      return out;
+    },
+
     tips() {
       const t = D.tips;
       if (!t) return [empty("No recommendations yet.", "Add any AI key (Gemini, Claude, ChatGPT or Perplexity). Recommendations are written weekly.")];
@@ -422,8 +507,8 @@
     },
 
     setup() {
-      const names = { gsc: "Search Console", audit: "Site audit", ranks: "Rank tracking", ai_visibility: "AI visibility", opportunities: "Opportunities", curate: "Keyword & question discovery", tips: "AI recommendations", digest: "AI-readable digest (llms.txt)" };
-      const secrets = { gsc: "Variables GCP_WIF_PROVIDER + GCP_SERVICE_ACCOUNT (or secret GSC_SERVICE_ACCOUNT_JSON)", audit: "none needed", ranks: "DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD", ai_visibility: "OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY, ANTHROPIC_API_KEY (any)", opportunities: "none needed", curate: "none (an AI key improves the filtering); rules in config/tracking.yml", digest: "none needed", tips: "Any one of GEMINI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY, PERPLEXITY_API_KEY (order set in config/site.yml)" };
+      const names = { gsc: "Search Console", audit: "Site audit", ranks: "Rank tracking", ai_visibility: "AI visibility", opportunities: "Opportunities", curate: "Keyword & question discovery", ux: "Visitor experience (/visit)", checkout: "Ticket checkout (GA4)", tips: "AI recommendations", digest: "AI-readable digest (llms.txt)" };
+      const secrets = { gsc: "Variables GCP_WIF_PROVIDER + GCP_SERVICE_ACCOUNT (or secret GSC_SERVICE_ACCOUNT_JSON)", audit: "none needed", ranks: "DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD", ai_visibility: "OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY, ANTHROPIC_API_KEY (any)", opportunities: "none needed", curate: "none (an AI key improves the filtering); rules in config/tracking.yml", ux: "PAGESPEED_API_KEY (needed); any AI key for task checks; optional GA4_PROPERTY_ID variable and CLARITY_API_TOKEN", checkout: "Variable GA4_PROPERTY_ID + Google sign-in (service account as GA4 Viewer)", digest: "none needed", tips: "Any one of GEMINI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY, PERPLEXITY_API_KEY (order set in config/site.yml)" };
       const st = D.status || {};
       return [
         el("p", { class: "lead" }, "Each source turns on when its key is added as a GitHub Actions secret on the SEO repo. Instructions are in the repo README."),

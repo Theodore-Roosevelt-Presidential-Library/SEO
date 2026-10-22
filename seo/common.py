@@ -207,3 +207,74 @@ def perplexity_agent(sess, key: str, text: str, preset: str = "fast", model: str
     if not texts and d.get("output_text"):
         texts.append(d["output_text"])
     return {"text": "\n".join(texts), "citations": list(dict.fromkeys(c for c in cites if c)), "status_code": r.status_code}
+
+
+# ---------- Google sign-in shared by Search Console and GA4 ----------
+
+def google_token(scopes: list[str]) -> str | None:
+    """Short-lived Google access token from the keyless Workload Identity
+    Federation sign-in (or a JSON key in GSC_SERVICE_ACCOUNT_JSON). None if
+    neither is set up."""
+    import json as _json
+    sa = env("GSC_SERVICE_ACCOUNT_JSON")
+    if not sa and not env("GOOGLE_APPLICATION_CREDENTIALS"):
+        return None
+    import google.auth
+    import google.auth.transport.requests as gtr
+    from google.oauth2 import service_account
+    if sa:
+        creds = service_account.Credentials.from_service_account_info(_json.loads(sa), scopes=scopes)
+    else:
+        creds, _ = google.auth.default(scopes=scopes)
+    creds.refresh(gtr.Request())
+    return creds.token
+
+
+class GA4:
+    """Minimal Google Analytics 4 Data API client (runReport)."""
+    SCOPE = "https://www.googleapis.com/auth/analytics.readonly"
+
+    def __init__(self, property_id: str, token: str):
+        self.url = f"https://analyticsdata.googleapis.com/v1beta/properties/{property_id}:runReport"
+        self.s = session()
+        self.s.headers["Authorization"] = f"Bearer {token}"
+
+    @classmethod
+    def from_env(cls) -> "GA4 | None":
+        pid = env("GA4_PROPERTY_ID")
+        if not pid:
+            return None
+        tok = google_token([cls.SCOPE])
+        return cls(pid.replace("properties/", ""), tok) if tok else None
+
+    def report(self, dims: list[str], metrics: list[str], start: str = "28daysAgo", end: str = "yesterday",
+               dim_filter: dict | None = None, limit: int = 10000) -> list[dict]:
+        body = {"dimensions": [{"name": d} for d in dims], "metrics": [{"name": m} for m in metrics],
+                "dateRanges": [{"startDate": start, "endDate": end}], "limit": limit}
+        if dim_filter:
+            body["dimensionFilter"] = dim_filter
+        r = self.s.post(self.url, json=body, timeout=60)
+        if r.status_code != 200:
+            raise RuntimeError(f"GA4 API {r.status_code}: {r.text[:300]}")
+        out = []
+        for row in r.json().get("rows", []) or []:
+            rec = {d: v["value"] for d, v in zip(dims, row.get("dimensionValues", []))}
+            for m, v in zip(metrics, row.get("metricValues", [])):
+                try:
+                    rec[m] = float(v["value"])
+                except (TypeError, ValueError):
+                    rec[m] = None
+            out.append(rec)
+        return out
+
+
+def ga4_filter(field: str, value: str, match: str = "EXACT") -> dict:
+    return {"filter": {"fieldName": field, "stringFilter": {"matchType": match, "value": value}}}
+
+
+def ga4_and(*filters: dict) -> dict:
+    return {"andGroup": {"expressions": list(filters)}}
+
+
+def ga4_in(field: str, values: list[str]) -> dict:
+    return {"filter": {"fieldName": field, "inListFilter": {"values": values}}}

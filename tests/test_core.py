@@ -1,3 +1,4 @@
+import json
 import os
 import tempfile
 
@@ -270,3 +271,40 @@ def test_perplexity_agent_parsing():
     assert out["text"] == "Visit the Library [2]."
     assert out["citations"] == ["https://www.nps.gov/thro", "https://www.trlibrary.com/visit"]
     assert sent[-1][0].endswith("/v1/agent") and sent[-1][1] == {"input": "What to see near TRNP?", "preset": "fast"}
+
+
+def test_ux_readability_and_task_check():
+    import re as _re
+    from seo import ux
+    html = """<html><body><header><a href="/tickets">Tickets</a></header><main><h1>Hours</h1>
+    <p>The Library is open daily. Plan to spend about three and a half hours.</p>
+    <ul><li>Monday to Friday 9 to 5</li><li>Weekends 9 to 6</li></ul>
+    <p><a href="https://access.trlibrary.com/orders/613">Buy tickets</a></p></main></body></html>"""
+    rd = ux.readability(html, "https://www.trlibrary.com/visit/hours", _re.compile(r"access\.trlibrary\.com|/tickets\b"))
+    assert rd["words_before_ticket_link"] is not None and rd["words_before_ticket_link"] > 10   # header link ignored
+    assert rd["grade_level"] < 8 and ux.reading_label(rd["grade_level"]) == "easy"
+    assert "# Hours" in rd["text"]
+
+    class W:
+        def call(self, user):
+            assert "When is the Library open?" in user and "Buy tickets -> https://access" in user
+            return ({"tasks": {"hours": {"status": "top", "note": "first line"}, "price": {"status": "linked"},
+                               "food": {"status": "not_relevant"}},
+                     "facts": {"hours": "Monday to Friday 9 to 5"}, "biggest_fix": "Add prices."}, "gemini", "m")
+
+    tc = ux.task_check(W(), "u", rd, {"hours": "When is the Library open?", "price": "How much?", "food": "Food?", "buy": "Buy?"})
+    assert tc["tasks"]["buy"]["status"] == "missing"            # not returned -> missing
+    assert tc["findability"] == round(100 * (1 + 0.75 + 0) / 3)  # not_relevant excluded
+
+
+def test_checkout_rates_never_expose_counts():
+    from seo import checkout
+    counts = {"store_visit": 1000, "add_to_cart": 400, "begin_checkout": 300, "purchase": 240}
+    r = checkout.rates(counts, ["view_item", "add_to_cart", "begin_checkout", "add_payment_info", "purchase"], 30)
+    assert r["checkout_completion"] == 0.8 and r["store_conversion"] == 0.24
+    assert r["missing_steps"] == ["view_item", "add_payment_info"]
+    flat = json.dumps(r)
+    for n in ("1000", "400", "300", "240"):
+        assert n not in flat                                      # no raw counts in public output
+    small = checkout.rates({"store_visit": 12, "begin_checkout": 5, "purchase": 4}, ["begin_checkout", "purchase"], 30)
+    assert small["checkout_completion"] == "low volume" and small["store_conversion"] == "low volume"

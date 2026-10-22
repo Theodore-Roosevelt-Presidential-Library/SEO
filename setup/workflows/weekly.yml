@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       jobs:
-        description: "Jobs to run (weekly, or any of: gsc audit ranks ai_visibility opportunities tips)"
+        description: "Jobs to run (weekly, or any of: gsc audit curate ranks ai_visibility opportunities ux checkout tips digest)"
         default: weekly
         required: false
 
@@ -46,6 +46,9 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GA4_PROPERTY_ID: ${{ vars.GA4_PROPERTY_ID }}
+          PAGESPEED_API_KEY: ${{ secrets.PAGESPEED_API_KEY }}
+          CLARITY_API_TOKEN: ${{ secrets.CLARITY_API_TOKEN }}
           JOBS: ${{ github.event.inputs.jobs || 'weekly' }}
         run: python -m seo.run $JOBS || echo "JOB_FAILED=1" >> "$GITHUB_ENV"
 
