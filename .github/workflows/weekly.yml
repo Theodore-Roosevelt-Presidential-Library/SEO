@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       jobs:
-        description: "Jobs to run (weekly, or any of: gsc audit curate ranks ai_visibility opportunities ux checkout tips digest)"
+        description: "Jobs to run (weekly, or any of: gsc audit curate ranks ai_visibility opportunities ux links schema checkout tips digest)"
         default: weekly
         required: false
 

@@ -9,7 +9,7 @@ from __future__ import annotations
 import sys
 import traceback
 
-from . import ai_visibility, audit, checkout, common as C, curate, digest, gsc, links, opportunities, ranks, tips, ux
+from . import ai_visibility, audit, checkout, common as C, curate, digest, gsc, links, opportunities, ranks, schema, tips, ux
 
 JOBS = {
     "gsc": gsc.run,
@@ -21,12 +21,13 @@ JOBS = {
     "tips": tips.run,
     "ux": ux.run,
     "links": links.run,
+    "schema": schema.run,
     "checkout": checkout.run,
     "digest": digest.run,
 }
 PLANS = {
     "daily": ["gsc", "opportunities", "checkout", "digest"],
-    "weekly": ["gsc", "audit", "curate", "ranks", "ai_visibility", "opportunities", "ux", "links", "checkout", "tips", "digest"],
+    "weekly": ["gsc", "audit", "curate", "ranks", "ai_visibility", "opportunities", "ux", "links", "schema", "checkout", "tips", "digest"],
 }
 
 

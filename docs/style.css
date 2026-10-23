@@ -116,3 +116,14 @@ ul.clean { padding-left: 1.1rem; margin: .25rem 0; }
 }
 
 mark { background: color-mix(in srgb, var(--accent) 30%, transparent); color: inherit; padding: 0 .15em; border-radius: 3px; }
+
+/* Structured Data tab */
+.card.finding, .card.group { margin-bottom: .75rem; }
+.card.finding .row { display: flex; align-items: center; gap: .4rem; flex-wrap: wrap; }
+.card.group > summary { cursor: pointer; list-style: none; }
+.card.group > summary::-webkit-details-marker { display: none; }
+.card.group > summary .bar { margin-top: .45rem; max-width: 320px; }
+.card.group[open] > summary { margin-bottom: .5rem; }
+.code-wrap { position: relative; margin: .4rem 0; }
+.code-wrap > button { position: absolute; top: .4rem; right: .4rem; }
+pre.code { background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: .75rem; overflow: auto; max-height: 360px; font-size: .78rem; line-height: 1.45; white-space: pre; margin: 0; }

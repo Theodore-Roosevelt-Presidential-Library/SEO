@@ -12,6 +12,7 @@
     audit: "data/audit/summary.json", auditPages: "data/audit/pages.json", auditHist: "data/audit/history.json",
     tips: "data/tips.json", tracking: "data/tracking.json",
     ux: "data/ux/latest.json", uxHist: "data/ux/history.json", checkout: "data/checkout/latest.json", links: "data/links.json",
+    schema: "data/schema.json",
   };
   const D = {};
   const charts = [];
@@ -491,6 +492,61 @@
       return out;
     },
 
+    schema() {
+      const S = D.schema;
+      if (!S) return [empty("The structured data check hasn't run yet.", "It runs weekly; no keys needed.")];
+      const s = S.summary || {};
+      const pageLink = (p) => link("https://www.trlibrary.com" + p, p);
+      const sev = (v) => el("span", { class: `pill ${v === "high" ? "high" : v === "medium" ? "medium" : "low"}` }, v);
+      const code = (obj) => {
+        const txt = `<script type="application/ld+json">\n${JSON.stringify(obj, null, 2)}\n</` + "script>";
+        const btn = el("button", { class: "small", onclick: () => { navigator.clipboard && navigator.clipboard.writeText(txt).then(() => { btn.textContent = "Copied"; setTimeout(() => (btn.textContent = "Copy"), 1500); }); } }, "Copy");
+        return el("div", { class: "code-wrap" }, btn, el("pre", { class: "code" }, txt));
+      };
+      const out = [el("p", { class: "lead" }, `Structured data is a hidden label on each page (schema.org JSON-LD) that tells Google and AI assistants exactly what the page is: an event with a date, a podcast episode, an FAQ, an article about Theodore Roosevelt. Checked ${date(S.generated)} across ${num(s.pages_read)} pages.`)];
+      out.push(el("div", { class: "grid kpis" },
+        kpi("Content pages with their own markup", s.coverage_pct == null ? "–" : s.coverage_pct + "%", `${num(s.typed_pages_done)} of ${num(s.typed_pages)} pages that should carry one`),
+        kpi("Sitewide issues", num(s.sitewide_issues), `${num(s.high)} high priority`),
+        kpi("FAQ answers marked up", num(s.faq_questions), `on ${num(s.faq_pages)} pages`),
+        kpi("llms.txt on trlibrary.com", s.llms_txt ? "Yes" : "No", s.llms_txt ? "AI tools have a guide to the site" : "Draft ready below"),
+      ));
+      out.push(el("h2", {}, "Sitewide markup"),
+        el("p", { class: "lead" }, "Every page carries one block describing the Library. AI tools lean on it heavily, so errors here repeat everywhere."));
+      for (const f of S.sitewide || []) {
+        out.push(el("div", { class: "card finding" },
+          el("div", { class: "row" }, sev(f.severity), el("strong", {}, " " + f.title)),
+          el("p", { class: "small" }, f.detail),
+          el("p", { class: "small" }, el("strong", {}, "Fix: "), f.fix),
+          f.examples ? el("details", {}, el("summary", { class: "small" }, "Examples"), el("ul", { class: "clean small" }, ...f.examples.map((u) => el("li", {}, u.startsWith("http") ? link(u, u) : pageLink(u))))) : null,
+          f.file ? el("p", { class: "small" }, el("a", { href: f.file, target: "_blank", rel: "noopener" }, "Open the draft llms.txt"), " (built from the sitemap; review before publishing)") : null,
+          f.snippet ? el("details", {}, el("summary", { class: "small" }, "Markup to add"), code(f.snippet)) : null));
+      }
+      out.push(el("h2", {}, "By content type"),
+        el("p", { class: "lead" }, "Each content type is one Drupal template, so one change fixes every page of that type. Biggest gaps first. Example markup is built from a real page; anything starting “TODO:” comes from the page's own fields and must never be guessed."));
+      for (const g of S.groups || []) {
+        const done = g.pages ? g.done / g.pages : 0;
+        const status = g.missing === 0 && !g.incomplete ? el("span", { class: "pill ok" }, "done")
+          : g.missing === 0 ? el("span", { class: "pill medium" }, `${g.incomplete} incomplete`)
+          : el("span", { class: "pill high" }, `${g.missing} missing`);
+        const gaps = Object.entries(g.property_gaps || {});
+        out.push(el("details", { class: "card group" + (g.missing ? " open-hint" : "") },
+          el("summary", {}, el("strong", {}, g.label), " ", status,
+            el("span", { class: "muted small" }, ` ${g.schema_type} · ${num(g.done)}/${num(g.pages)} pages`),
+            el("div", { class: "bar" }, el("span", { style: `width:${Math.round(done * 100)}%` }))),
+          el("p", { class: "small" }, g.why),
+          el("p", { class: "small" }, el("strong", {}, "Fix: "), g.drupal),
+          gaps.length ? el("p", { class: "small" }, el("strong", {}, "Has markup but missing: "), gaps.map(([k, n]) => `${k} (${n} pages)`).join(", ")) : null,
+          g.example ? el("div", {}, el("p", { class: "small muted" }, "Example from ", pageLink(g.example.path)), code(g.example.jsonld)) : null,
+          el("details", {}, el("summary", { class: "small" }, `All ${g.pages} pages`),
+            table([
+              { key: "path", label: "Page", cls: "url", render: (r) => el("span", {}, pageLink(r.path), el("div", { class: "small muted" }, r.title)) },
+              { key: "done", label: "Status", render: (r) => r.done ? (r.missing_props ? el("span", { class: "pill medium" }, "missing " + r.missing_props.join(", ")) : el("span", { class: "pill ok" }, "has markup")) : el("span", { class: "pill high" }, "none"), sortVal: (r) => (r.done ? 1 : 0) - (r.missing_props ? 0.5 : 0) },
+              { key: "has", label: "Types on page", render: (r) => el("span", { class: "small" }, (r.has || []).join(", ") || "–") },
+              g.key === "faq" ? { key: "questions", label: "Questions", num: true, render: (r) => r.jsonld ? el("details", {}, el("summary", {}, String(r.questions)), code(r.jsonld)) : String(r.questions) } : null,
+            ].filter(Boolean), g.items, { limit: 25, sort: ["done", 1] }))));
+      }
+      return out;
+    },
     links() {
       const L = D.links;
       if (!L) return [empty("The internal-links check hasn't run yet.", "It runs weekly; no keys needed.")];
@@ -603,8 +659,8 @@
     },
 
     setup() {
-      const names = { gsc: "Search Console", audit: "Site audit", ranks: "Rank tracking", ai_visibility: "AI visibility", opportunities: "Opportunities", curate: "Keyword & question discovery", ux: "Visitor experience (/visit)", links: "Internal links & redirects", checkout: "Ticket checkout (GA4)", tips: "AI recommendations", digest: "AI-readable digest (llms.txt)" };
-      const secrets = { gsc: "Variables GCP_WIF_PROVIDER + GCP_SERVICE_ACCOUNT (or secret GSC_SERVICE_ACCOUNT_JSON)", audit: "none needed", ranks: "DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD", ai_visibility: "OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY, ANTHROPIC_API_KEY (any)", opportunities: "none needed", curate: "none (an AI key improves the filtering); rules in config/tracking.yml", ux: "PAGESPEED_API_KEY (needed); any AI key for task checks; optional GA4_PROPERTY_ID variable and CLARITY_API_TOKEN (the website's Clarity project)", links: "none needed (reads the LinkChecker's results.json for outside links)", checkout: "Variable GA4_PROPERTY_ID + Google sign-in (service account as GA4 Viewer); optional CLARITY_STORE_API_TOKEN for store frustration signals", digest: "none needed", tips: "Any one of GEMINI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY, PERPLEXITY_API_KEY (order set in config/site.yml)" };
+      const names = { gsc: "Search Console", audit: "Site audit", ranks: "Rank tracking", ai_visibility: "AI visibility", opportunities: "Opportunities", curate: "Keyword & question discovery", ux: "Visitor experience (/visit)", links: "Internal links & redirects", schema: "Structured data (schema.org)", checkout: "Ticket checkout (GA4)", tips: "AI recommendations", digest: "AI-readable digest (llms.txt)" };
+      const secrets = { gsc: "Variables GCP_WIF_PROVIDER + GCP_SERVICE_ACCOUNT (or secret GSC_SERVICE_ACCOUNT_JSON)", audit: "none needed", ranks: "DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD", ai_visibility: "OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY, ANTHROPIC_API_KEY (any)", opportunities: "none needed", curate: "none (an AI key improves the filtering); rules in config/tracking.yml", ux: "PAGESPEED_API_KEY (needed); any AI key for task checks; optional GA4_PROPERTY_ID variable and CLARITY_API_TOKEN (the website's Clarity project)", links: "none needed (reads the LinkChecker's results.json for outside links)", schema: "none needed", checkout: "Variable GA4_PROPERTY_ID + Google sign-in (service account as GA4 Viewer); optional CLARITY_STORE_API_TOKEN for store frustration signals", digest: "none needed", tips: "Any one of GEMINI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY, PERPLEXITY_API_KEY (order set in config/site.yml)" };
       const st = D.status || {};
       return [
         el("p", { class: "lead" }, "Each source turns on when its key is added as a GitHub Actions secret on the SEO repo. Instructions are in the repo README."),

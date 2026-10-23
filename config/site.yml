@@ -118,3 +118,17 @@ links:
   # External broken links come from the LinkChecker tool; internal links are checked here every week.
   linkchecker_results: https://links.labs.trlibrary.com/results.json
   video_pattern: "^/video/"            # pages whose outside links come from YouTube descriptions (low priority)
+
+# Structured Data tab (weekly): schema.org markup that helps search engines and AI tools.
+structured_data:
+  skip_patterns: ["/print$", "/quiz/", "/search"]
+  podcast_name: Good Citizen
+  podcast_path: /podcast/good-citizen
+  # Wikipedia/Wikidata entries that identify the Library and TR to machines.
+  entities:
+    library:
+      wikipedia: https://en.wikipedia.org/wiki/Theodore_Roosevelt_Presidential_Library
+      wikidata: https://www.wikidata.org/wiki/Q104858042
+    tr:
+      wikipedia: https://en.wikipedia.org/wiki/Theodore_Roosevelt
+      wikidata: https://www.wikidata.org/wiki/Q33866

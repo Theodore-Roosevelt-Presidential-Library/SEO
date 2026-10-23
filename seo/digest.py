@@ -47,6 +47,8 @@ RAW_FILES = {
     "checkout/latest.json": "Ticket-store checkout completion rates from GA4 (rates only)",
     "links.json": "Internal links: broken internal links with proposed 301 redirects, links to add, orphan pages, duplicate topics, related unlinked pages, broken outside links",
     "redirects.csv": "Proposed 301 redirects in Drupal Redirect import format (source,destination,language,status_code,confidence)",
+    "schema.json": "Structured data: schema.org coverage by content type, missing properties, sitewide markup issues, ready-to-paste JSON-LD",
+    "site-llms.txt": "Draft llms.txt for www.trlibrary.com, built from the sitemap (for review before publishing)",
     "tracking.json": "Keywords and AI questions the system discovered, graduated or retired, with reasons",
 }
 
@@ -70,6 +72,7 @@ def build() -> dict:
     uxd = C.read_json("ux/latest.json")
     co = C.read_json("checkout/latest.json")
     lk = C.read_json("links.json")
+    sc = C.read_json("schema.json")
 
     d: dict = {
         "generated": C.now_iso(),
@@ -201,6 +204,22 @@ def build() -> dict:
             "external_broken": [{k: r[k] for k in ("url", "status", "kind", "sources", "from_video_pages")}
                                 for r in (lk.get("external") or {}).get("external", []) if r["kind"] == "broken"][:40],
             "linkchecker_scan": (lk.get("external") or {}).get("generated_at"),
+        }
+    if sc:
+        d["structured_data"] = {
+            "updated": sc.get("generated"), "summary": sc.get("summary"),
+            "how_to_fix": "Most fixes are one change to a Drupal template per content type (ask FiveJars); the JSON-LD examples "
+                          "are built from a real page. Values starting 'TODO:' must be filled from the page's own fields, never guessed.",
+            "sitewide_issues": [{k: f.get(k) for k in ("severity", "title", "detail", "fix", "snippet") if f.get(k) is not None}
+                                for f in sc.get("sitewide", [])],
+            "content_types": [{"content_type": g["label"], "schema_type": g["schema_type"], "pages": g["pages"],
+                               "with_markup": g["done"], "missing": g["missing"], "incomplete": g.get("incomplete", 0),
+                               "missing_properties": g.get("property_gaps") or {}, "why": g["why"], "drupal_fix": g["drupal"],
+                               "example_page": (g.get("example") or {}).get("path"),
+                               "example_jsonld": (g.get("example") or {}).get("jsonld"),
+                               "pages_missing": [i["path"] for i in g["items"] if not i["done"]][:25]}
+                              for g in sc.get("groups", [])],
+            "llms_txt_draft": f"{BASE}/data/site-llms.txt",
         }
     if co:
         d["checkout"] = {"updated": co.get("updated"), "note": co.get("note"), "current": co.get("current"),
@@ -372,6 +391,19 @@ def to_markdown(d: dict) -> str:
               "### Broken links to other websites (fix on the page; /video/ ones come from YouTube descriptions)",
               _table(il["external_broken"], [("url", "Link"), ("status", "Status"), ("sources", "On pages"), ("from_video_pages", "Video page")])]
 
+    sd = d.get("structured_data")
+    if sd:
+        sm = sd["summary"] or {}
+        L += ["## Structured data (schema.org) for search engines and AI tools",
+              f"{sm.get('typed_pages_done')} of {sm.get('typed_pages')} content pages carry their own markup ({sm.get('coverage_pct')}%); "
+              f"{sm.get('sitewide_issues')} sitewide issues ({sm.get('high')} high). llms.txt on trlibrary.com: {'yes' if sm.get('llms_txt') else 'no'} "
+              f"(draft: {sd['llms_txt_draft']}).\n", sd["how_to_fix"] + "\n",
+              "### Sitewide issues",
+              _table(sd["sitewide_issues"], [("severity", "Severity"), ("title", "Issue"), ("fix", "Fix")]),
+              "### By content type (biggest gaps first)",
+              _table(sd["content_types"], [("content_type", "Content type"), ("schema_type", "Should carry"), ("pages", "Pages"),
+                                           ("with_markup", "Has it"), ("incomplete", "Incomplete"), ("drupal_fix", "Fix")])]
+
     ck = d.get("checkout")
     if ck:
         c = ck["current"] or {}
@@ -413,6 +445,11 @@ def llms_txt(d: dict) -> str:
         sm = il["summary"]
         snap.append(f"- Links: {sm.get('broken_internal')} broken internal addresses with 301 redirects proposed, "
                     f"{sm.get('suggestions')} internal links worth adding, {sm.get('orphans')} pages with no links in")
+    sd = d.get("structured_data")
+    if sd and sd.get("summary"):
+        sm = sd["summary"]
+        snap.append(f"- Structured data: {sm.get('typed_pages_done')}/{sm.get('typed_pages')} content pages carry schema.org markup; "
+                    f"{sm.get('sitewide_issues')} sitewide markup issues; trlibrary.com llms.txt: {'yes' if sm.get('llms_txt') else 'no (draft available)'}")
     return f"""# TRPL Search & AI Visibility
 
 > How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built {d['generated']}.
@@ -423,6 +460,8 @@ The dashboard at {BASE}/ is rendered with JavaScript. AI tools should read the d
 - [Digest (Markdown)]({BASE}/digest.md): one-page ranked briefing: search totals, top opportunities, tracked keywords, AI-assistant answers, audit issues, drafted recommendations, and house rules for suggesting copy
 - [Digest (JSON)]({BASE}/data/digest.json): the same content as structured data
 - [Redirects to add (CSV)]({BASE}/data/redirects.csv): proposed 301 redirects for broken links, ready for Drupal's Redirect import
+- [Structured data opportunities]({BASE}/data/schema.json): schema.org gaps by content type with ready-to-paste JSON-LD
+- [Draft llms.txt for trlibrary.com]({BASE}/data/site-llms.txt): proposed AI-tool guide for the main site, built from its sitemap
 
 ## Snapshot
 {chr(10).join(snap) or '- Data sources are still being connected.'}

@@ -368,3 +368,67 @@ def test_links_parse_marks_linked_text_and_skips_nav():
     assert "/tr" not in d["links"]                      # breadcrumb/nav ignored
     assert "/tr/people/jacob-riis" in d["links"] and "/tr/old-page.html" in d["raw_links"]
     assert "Jacob Riis" not in d["paras"][0] and "Square Deal" in d["paras"][0]
+
+
+# ---------- structured data ----------
+from seo import schema  # noqa: E402
+
+FAQ_HTML = """<html><head><meta property="og:title" content="Tickets"><meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Museum","Library"],"@id":"https://www.trlibrary.com/#organization","name":"X"},{"@type":"Person","@id":"https://www.trlibrary.com/tr/#person"}]}</script></head>
+<body><main><h1>Tickets</h1>
+<div data-custom-accordion><h2><button data-custom-accordion-button><span>keyboard_arrow_up</span> How do I buy tickets?</button></h2>
+<div data-custom-accordion-body><p>Online or at the Welcome Desk.</p></div></div>
+<div data-custom-accordion><h2><button data-custom-accordion-button>Can I park an RV?</button></h2>
+<div data-custom-accordion-body><p>Yes, in the RV lot.</p></div></div>
+<div data-custom-accordion><h2><button data-custom-accordion-button>Parking</button></h2><div data-custom-accordion-body><p>Free.</p></div></div>
+</main></body></html>"""
+
+
+def test_schema_extract_faq_and_stub_ids():
+    p = schema.extract(FAQ_HTML, "https://www.trlibrary.com/visit/faq/tickets")
+    assert p["faq"] == [("How do I buy tickets?", "Online or at the Welcome Desk."), ("Can I park an RV?", "Yes, in the RV lot.")]
+    assert "https://www.trlibrary.com/tr/#person" in p["stub_ids"]
+    assert "https://www.trlibrary.com/#organization" in p["defined_ids"]
+    j = schema.build_faq(p, {})
+    assert j["@type"] == "FAQPage" and len(j["mainEntity"]) == 2
+    json.dumps(j)  # serialisable
+
+
+def test_schema_classify_and_missing_props():
+    p = schema.extract(FAQ_HTML, "https://www.trlibrary.com/tr/badlands/maltese-cross")
+    keys = [g["key"] for g in schema.classify("/tr/badlands/maltese-cross", p)]
+    assert keys == ["faq", "tr_articles"]
+    assert [g["key"] for g in schema.classify("/tr/speeches/new-nationalism", {"faq": []})] == ["tr_speeches"]
+    assert [g["key"] for g in schema.classify("/calendar/special-event/x", {"faq": []})] == ["event"]
+    nodes = [{"@type": "NewsArticle", "headline": "h", "datePublished": "2020-10-27T06:00:00-0600", "image": "i"}]
+    assert schema.missing_props(nodes, {"NewsArticle"}) == ["author", "publisher"]
+    assert schema.missing_props(nodes, {"Event"}) is None
+    assert schema.BASIC_OFFSET.search("2020-10-27T06:00:00-0600") and not schema.BASIC_OFFSET.search("2020-10-27T06:00:00-06:00")
+
+
+def test_schema_sitewide_checks():
+    import datetime as dt
+    home = {"blocks": [{"@graph": [
+        {"@type": ["Museum"], "@id": "o", "description": "Library in Medora. Opens July 4, 2026.",
+         "sameAs": ["https://x.com/a"],
+         "openingHoursSpecification": [{"description": "Fall restaurant hours", "validFrom": "2026-09-14", "validThrough": "2026-11-30"}]},
+        {"@type": "WebSite", "description": "Official site"}]}]}
+    ctx = {"site": "https://www.trlibrary.com/", "tr_id": "https://www.trlibrary.com/tr/#person",
+           "lib_wikipedia": "https://en.wikipedia.org/wiki/X", "lib_wikidata": "https://www.wikidata.org/wiki/Q1",
+           "tr_wikipedia": None, "tr_wikidata": "https://www.wikidata.org/wiki/Q33866"}
+    extras = {"llms_status": 404, "node_urls": 0, "node_examples": [], "video_view_in_sitemap": 5, "video_views_linked": 5,
+              "website_og": 0, "dangling": {"https://www.trlibrary.com/tr/#person": ["/tr/a"] * 30}, "bad_dates": []}
+    ids = [f["id"] for f in schema.sitewide_checks(home, ctx, dt.date(2026, 10, 22), extras)]
+    assert {"stale_description", "sameas", "tr_entity", "mixed_hours", "admission", "llms_txt"} <= set(ids)
+    assert "hours_gap" not in ids
+    ids = [f["id"] for f in schema.sitewide_checks(home, ctx, dt.date(2026, 6, 1), extras)]
+    assert "stale_description" not in ids and "hours_gap" in ids
+
+
+def test_schema_llms_draft():
+    pages = {"/visit": {"title": "Plan Your Visit", "description": "Hours and tickets"},
+             "/tr/badlands": {"title": "Badlands", "description": ""}, "/privacy": {"title": "Privacy", "description": ""}}
+    txt = schema.llms_draft("TRPL", "https://www.trlibrary.com/", "Summary.", pages)
+    assert txt.startswith("# TRPL\n\n> Summary.")
+    assert "- [Plan Your Visit](https://www.trlibrary.com/visit): Hours and tickets" in txt
+    assert "/privacy" not in txt
