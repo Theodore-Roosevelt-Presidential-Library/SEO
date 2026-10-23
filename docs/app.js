@@ -467,6 +467,23 @@
       if (devs.length) out.push(el("h2", {}, "By device"), el("div", { class: "card" }, table([
         { key: "d", label: "Device" }, { key: "cc", label: "Checkout completion", num: true, render: (r) => fmt(r.cc) }, { key: "sc", label: "Store visitors who buy", num: true, render: (r) => fmt(r.sc) },
       ], devs.map((dv) => ({ d: dv, cc: c.by_device[dv].checkout_completion, sc: c.by_device[dv].store_conversion })), { search: false })));
+      const fr = c.store_friction;
+      if (fr) {
+        const o = fr.overall || {}, p1 = (v) => (v == null ? "–" : `${v}%`);
+        out.push(el("h2", {}, "Where people struggle in the store"),
+          el("p", { class: "lead" }, `From Microsoft Clarity on the ticket store, ${fr.period}: the share of sessions with each frustration signal. Dead clicks are clicks on things that aren't links or buttons; quick backs are people leaving a page within seconds.`),
+          el("div", { class: "grid kpis" },
+            kpi("Dead clicks", p1(o.dead_clicks), "sessions with at least one"), kpi("Rage clicks", p1(o.rage_clicks), "repeated frustrated clicking"),
+            kpi("Quick backs", p1(o.quick_backs), "left a page almost immediately"), kpi("Scroll depth", p1(o.scroll_depth), "average")),
+          el("div", { class: "card", style: "margin-top:1rem" }, table([
+            { key: "page", label: "Store page" }, { key: "dead_clicks", label: "Dead clicks", num: true, fmt: p1 },
+            { key: "rage_clicks", label: "Rage clicks", num: true, fmt: p1 }, { key: "quick_backs", label: "Quick backs", num: true, fmt: p1 },
+            { key: "scroll_depth", label: "Scroll depth", num: true, fmt: p1 },
+          ], Object.entries(fr.pages || {}).map(([page, v]) => ({ page, ...v })), { search: false, sort: ["dead_clicks", -1], limit: 15 })),
+          el("p", { class: "small muted" }, "Watch the matching session recordings in Clarity to see what people were trying to click."));
+      } else if (c.store_friction_error) {
+        out.push(el("p", { class: "warn-box small", style: "margin-top:1rem" }, `Clarity: ${c.store_friction_error}`));
+      }
       const wk = (c.weekly || []).filter((w) => typeof w.checkout_completion === "number");
       if (wk.length > 1) out.push(el("h2", {}, "Weekly trend"), el("div", { class: "card" }, lineChart([
         { label: "Checkout completion", data: wk.map((w) => w.checkout_completion) }, { label: "Store visitors who buy", data: wk.map((w) => (typeof w.store_conversion === "number" ? w.store_conversion : null)) }],
@@ -508,7 +525,7 @@
 
     setup() {
       const names = { gsc: "Search Console", audit: "Site audit", ranks: "Rank tracking", ai_visibility: "AI visibility", opportunities: "Opportunities", curate: "Keyword & question discovery", ux: "Visitor experience (/visit)", checkout: "Ticket checkout (GA4)", tips: "AI recommendations", digest: "AI-readable digest (llms.txt)" };
-      const secrets = { gsc: "Variables GCP_WIF_PROVIDER + GCP_SERVICE_ACCOUNT (or secret GSC_SERVICE_ACCOUNT_JSON)", audit: "none needed", ranks: "DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD", ai_visibility: "OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY, ANTHROPIC_API_KEY (any)", opportunities: "none needed", curate: "none (an AI key improves the filtering); rules in config/tracking.yml", ux: "PAGESPEED_API_KEY (needed); any AI key for task checks; optional GA4_PROPERTY_ID variable and CLARITY_API_TOKEN", checkout: "Variable GA4_PROPERTY_ID + Google sign-in (service account as GA4 Viewer)", digest: "none needed", tips: "Any one of GEMINI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY, PERPLEXITY_API_KEY (order set in config/site.yml)" };
+      const secrets = { gsc: "Variables GCP_WIF_PROVIDER + GCP_SERVICE_ACCOUNT (or secret GSC_SERVICE_ACCOUNT_JSON)", audit: "none needed", ranks: "DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD", ai_visibility: "OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY, ANTHROPIC_API_KEY (any)", opportunities: "none needed", curate: "none (an AI key improves the filtering); rules in config/tracking.yml", ux: "PAGESPEED_API_KEY (needed); any AI key for task checks; optional GA4_PROPERTY_ID variable and CLARITY_API_TOKEN (the website's Clarity project)", checkout: "Variable GA4_PROPERTY_ID + Google sign-in (service account as GA4 Viewer); optional CLARITY_STORE_API_TOKEN for store frustration signals", digest: "none needed", tips: "Any one of GEMINI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY, PERPLEXITY_API_KEY (order set in config/site.yml)" };
       const st = D.status || {};
       return [
         el("p", { class: "lead" }, "Each source turns on when its key is added as a GitHub Actions secret on the SEO repo. Instructions are in the repo README."),

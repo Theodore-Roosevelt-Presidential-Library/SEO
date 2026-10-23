@@ -184,6 +184,7 @@ def build() -> dict:
         }
     if co:
         d["checkout"] = {"updated": co.get("updated"), "note": co.get("note"), "current": co.get("current"),
+                         "store_friction": co.get("store_friction"),
                          "previous": {k: co.get("previous", {}).get(k) for k in ("checkout_completion", "store_conversion")},
                          "by_device": co.get("by_device"), "ticket_page_to_store": co.get("ticket_page_to_store")}
 
@@ -341,6 +342,13 @@ def to_markdown(d: dict) -> str:
               f"Checkout completion {f(c.get('checkout_completion'))} (prior {f(ck['previous'].get('checkout_completion'))}); "
               f"store visitors who buy {f(c.get('store_conversion'))} (prior {f(ck['previous'].get('store_conversion'))}); "
               f"ticket page to store {f(ck.get('ticket_page_to_store'))}. Steps the store doesn't report: {', '.join(c.get('missing_steps') or []) or 'none'}.\n"]
+        sf = ck.get("store_friction")
+        if sf:
+            o = sf.get("overall") or {}
+            L += [f"Store frustration signals ({sf['period']}, Clarity): dead clicks {o.get('dead_clicks')}% of sessions, rage clicks {o.get('rage_clicks')}%, "
+                  f"quick backs {o.get('quick_backs')}%, scroll depth {o.get('scroll_depth')}%.\n",
+                  _table([{"page": k, **v} for k, v in (sf.get("pages") or {}).items()],
+                         [("page", "Store page"), ("dead_clicks", "Dead %"), ("rage_clicks", "Rage %"), ("quick_backs", "Quick back %"), ("scroll_depth", "Scroll %")])]
 
     tr = d.get("tracking")
     if tr and tr["recent_changes"]:

@@ -47,6 +47,7 @@ jobs:
           PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GA4_PROPERTY_ID: ${{ vars.GA4_PROPERTY_ID }}
+          CLARITY_STORE_API_TOKEN: ${{ secrets.CLARITY_STORE_API_TOKEN }}
           PAGESPEED_API_KEY: ${{ secrets.PAGESPEED_API_KEY }}
           CLARITY_API_TOKEN: ${{ secrets.CLARITY_API_TOKEN }}
           JOBS: ${{ github.event.inputs.jobs || 'weekly' }}

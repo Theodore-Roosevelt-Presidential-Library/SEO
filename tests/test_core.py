@@ -308,3 +308,31 @@ def test_checkout_rates_never_expose_counts():
         assert n not in flat                                      # no raw counts in public output
     small = checkout.rates({"store_visit": 12, "begin_checkout": 5, "purchase": 4}, ["begin_checkout", "purchase"], 30)
     assert small["checkout_completion"] == "low volume" and small["store_conversion"] == "low volume"
+
+
+def test_clarity_store_friction(monkeypatch):
+    from seo import checkout
+    url_resp = [
+        {"metricName": "DeadClickCount", "information": [
+            {"sessionsCount": "500", "sessionsWithMetricPercentage": 22.5, "Url": "https://access.trlibrary.com/orders/613/calendar?eventId=699756534428678a27bde26f"},
+            {"sessionsCount": "300", "sessionsWithMetricPercentage": 10.0, "Url": "https://access.trlibrary.com/checkout/613/forms"}]},
+        {"metricName": "ScrollDepth", "information": [{"averageScrollDepth": 61.2, "URL": "https://access.trlibrary.com/checkout/613/forms"}]},
+        {"metricName": "Traffic", "information": [{"totalSessionCount": "800"}]}]
+    overall_resp = [{"metricName": "DeadClickCount", "information": [{"sessionsCount": "800", "sessionsWithMetricPercentage": 20.5}]}]
+
+    class R:
+        status_code = 200
+        def __init__(self, d): self.d = d
+        def json(self): return self.d
+
+    class S:
+        def get(self, url, params=None, **kw):
+            return R(url_resp if params.get("dimension1") else overall_resp)
+
+    monkeypatch.setattr(C, "session", lambda *a, **k: S())
+    monkeypatch.setenv("CLARITY_STORE_API_TOKEN", "t")
+    f, err = checkout.store_friction()
+    assert err is None and f["overall"] == {"dead_clicks": 20.5}
+    assert f["pages"]["orders/calendar"] == {"dead_clicks": 22.5}
+    assert f["pages"]["checkout/forms"] == {"dead_clicks": 10.0, "scroll_depth": 61.2}
+    assert "800" not in json.dumps(f) and "500" not in json.dumps(f)   # no session counts published

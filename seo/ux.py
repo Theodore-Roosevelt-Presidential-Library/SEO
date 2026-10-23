@@ -224,36 +224,15 @@ def ga4_pages(section: str, host: str) -> dict:
 
 
 def clarity_pages(section: str) -> tuple[dict, str | None]:
+    """Website Clarity project (CLARITY_API_TOKEN), per /visit page."""
     tok = C.env("CLARITY_API_TOKEN")
     if not tok:
         return {}, None
-    r = C.session().get("https://www.clarity.ms/export-data/api/v1/project-live-insights",
-                        params={"numOfDays": 3, "dimension1": "URL"},
-                        headers={"Authorization": f"Bearer {tok}"}, timeout=60)
-    if r.status_code != 200:
-        return {}, f"Clarity {r.status_code}: {r.text[:150]}"
-    want = {"DeadClickCount": "dead_clicks", "RageClickCount": "rage_clicks", "QuickbackClick": "quick_backs",
-            "ScrollDepth": "scroll_depth", "ExcessiveScroll": "excessive_scroll"}
-    out: dict = {}
-    for metric in r.json() or []:
-        name = want.get(metric.get("metricName"))
-        if not name:
-            continue
-        for info in metric.get("information") or []:
-            url = next((v for k, v in info.items() if k.lower() == "url"), None)
-            if not url:
-                continue
-            path = urlparse(url).path.rstrip("/") or "/"
-            if not path.startswith(section):
-                continue
-            val = info.get("sessionsWithMetricPercentage", info.get("averageScrollDepth"))
-            if val is None:
-                val = next((v for k, v in info.items() if isinstance(v, (int, float))), None)
-            try:
-                out.setdefault(path, {})[name] = round(float(val), 1)
-            except (TypeError, ValueError):
-                pass
-    return out, None
+    try:
+        per_url, _ = C.clarity_insights(tok)
+    except Exception as e:  # noqa: BLE001
+        return {}, str(e)[:200]
+    return {path: v for (_, path), v in per_url.items() if path.startswith(section)}, None
 
 
 # ---------- main ----------

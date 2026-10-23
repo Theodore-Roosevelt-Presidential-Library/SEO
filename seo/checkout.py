@@ -8,6 +8,11 @@ PUBLIC DASHBOARD RULE: only rates are written. No user, order or revenue counts
 ever leave this function, and rates based on fewer than `min_users_for_rate`
 users are replaced with "low volume".
 
+With CLARITY_STORE_API_TOKEN (the Clarity project installed on the ticket
+store), it also adds frustration signals for each store page: the share of
+sessions with dead clicks, rage clicks and quick back-outs, and scroll depth
+(last 3 days; Clarity's API goes no further back). Percentages only.
+
 Needs the repo variable GA4_PROPERTY_ID and the Google sign-in (the same
 service account as Search Console, added in GA4 as a Viewer).
 
@@ -59,6 +64,32 @@ def rates(counts: dict, steps: list[str], min_users: int) -> dict:
     return out
 
 
+def store_friction() -> tuple[dict | None, str | None]:
+    """Clarity signals for the ticket store, grouped by page type."""
+    import re
+    tok = C.env("CLARITY_STORE_API_TOKEN")
+    if not tok:
+        return None, None
+    try:
+        per_url, overall = C.clarity_insights(tok)
+    except Exception as e:  # noqa: BLE001
+        return None, str(e)[:200]
+    pages: dict = {}
+    for (host, path), v in per_url.items():
+        # /orders/613/calendar, /checkout/613/forms ... -> "orders/calendar", "checkout/forms"
+        key = "/".join(seg for seg in path.strip("/").split("/") if not re.fullmatch(r"[0-9a-f]{6,}|\d+", seg)) or "/"
+        pages.setdefault(key, []).append(v)
+    grouped = {}
+    for key, vals in pages.items():
+        merged = {}
+        for m in C.CLARITY_METRICS.values():
+            xs = [v[m] for v in vals if v.get(m) is not None]
+            if xs:
+                merged[m] = round(sum(xs) / len(xs), 1)
+        grouped[key] = merged
+    return {"period": "last 3 days", "overall": overall, "pages": grouped}, None
+
+
 def run() -> None:
     cfg = C.config().get("checkout", {})
     if not C.env("GA4_PROPERTY_ID"):
@@ -103,6 +134,11 @@ def run() -> None:
             "ticket_page_to_store": handoff,
             "weekly": trend,
         }
+        friction, ferr = store_friction()
+        if friction:
+            out["store_friction"] = friction
+        elif ferr:
+            out["store_friction_error"] = ferr
         C.write_json("checkout/latest.json", out)
         cc = out["current"]["checkout_completion"]
         C.upsert_history("checkout/history.json", {"date": C.today().isoformat(),

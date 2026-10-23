@@ -278,3 +278,52 @@ def ga4_and(*filters: dict) -> dict:
 
 def ga4_in(field: str, values: list[str]) -> dict:
     return {"filter": {"fieldName": field, "inListFilter": {"values": values}}}
+
+
+# ---------- Microsoft Clarity data export ----------
+
+CLARITY_METRICS = {"DeadClickCount": "dead_clicks", "RageClickCount": "rage_clicks", "QuickbackClick": "quick_backs",
+                   "ScrollDepth": "scroll_depth", "ExcessiveScroll": "excessive_scroll"}
+
+
+def _clarity_value(info: dict):
+    for k in ("sessionsWithMetricPercentage", "averageScrollDepth", "averageScroll"):
+        if info.get(k) is not None:
+            try:
+                return round(float(info[k]), 1)
+            except (TypeError, ValueError):
+                pass
+    return None
+
+
+def clarity_insights(token: str, by_url: bool = True, days: int = 3) -> tuple[dict, dict]:
+    """Clarity's live-insights export (last 1-3 days; 10 calls per project per day).
+    Returns (per_url, overall): percentages of sessions with each frustration
+    signal, plus average scroll depth. Never returns session counts."""
+    from urllib.parse import urlparse
+    url = "https://www.clarity.ms/export-data/api/v1/project-live-insights"
+    hdr = {"Authorization": f"Bearer {token}"}
+    per_url: dict = {}
+    overall: dict = {}
+    calls = [(True, {"numOfDays": days, "dimension1": "URL"})] if by_url else []
+    calls.append((False, {"numOfDays": days}))
+    for is_url, params in calls:
+        r = session().get(url, params=params, headers=hdr, timeout=60)
+        if r.status_code != 200:
+            raise RuntimeError(f"Clarity {r.status_code}: {r.text[:150]}")
+        for metric in r.json() or []:
+            name = CLARITY_METRICS.get(metric.get("metricName"))
+            if not name:
+                continue
+            for info in metric.get("information") or []:
+                val = _clarity_value(info)
+                if val is None:
+                    continue
+                if is_url:
+                    u = next((v for k, v in info.items() if k.lower() == "url"), None)
+                    if u:
+                        p = urlparse(u)
+                        per_url.setdefault((p.netloc, p.path.rstrip("/") or "/"), {})[name] = val
+                else:
+                    overall[name] = val
+    return per_url, overall

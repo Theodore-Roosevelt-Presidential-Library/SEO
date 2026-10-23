@@ -132,7 +132,8 @@ Key pages and tasks are set in `config/site.yml` under `ux`.
    - Copy the numeric **Property ID** from **Admin → Property details** and add it as the repo **variable** `GA4_PROPERTY_ID`.
 
    This turns on the Checkout tab and the engagement columns on Visitor Experience.
-3. **Microsoft Clarity (`CLARITY_API_TOKEN`, optional):** in Clarity, open the trlibrary.com project and go to **Settings → Data Export → Generate new API token**. Add it as the secret `CLARITY_API_TOKEN`. This adds rage clicks, dead clicks and scroll depth for the last three days, which is all Clarity's API provides.
+3. **Clarity on the ticket store (`CLARITY_STORE_API_TOKEN`, optional):** the Clarity project you can sign in to (`w5s3tkfszo`) records the ACME ticket store. A data-export token from it adds store frustration signals (dead clicks, rage clicks, quick backs, scroll depth) to the Checkout tab, as percentages only.
+4. **Microsoft Clarity on the website (`CLARITY_API_TOKEN`, optional):** trlibrary.com itself reports to a different Clarity project (`t1b2w52dwl`), likely set up by FiveJars. Ask for access, then in Clarity, open the trlibrary.com project and go to **Settings → Data Export → Generate new API token**. Add it as the secret `CLARITY_API_TOKEN`. This adds rage clicks, dead clicks and scroll depth for the last three days, which is all Clarity's API provides.
 
 ## Changing what's tracked
 All tracking is controlled by three files in `config/`. Edit them on GitHub; the next run picks up the changes.
