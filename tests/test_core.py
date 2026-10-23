@@ -336,3 +336,35 @@ def test_clarity_store_friction(monkeypatch):
     assert f["pages"]["orders/calendar"] == {"dead_clicks": 22.5}
     assert f["pages"]["checkout/forms"] == {"dead_clicks": 10.0, "scroll_depth": 61.2}
     assert "800" not in json.dumps(f) and "500" not in json.dumps(f)   # no session counts published
+
+
+def test_links_names_and_redirects():
+    from seo import links
+    assert links.names_for("/tr/people/jacob-riis", "Jacob Riis: The Photographer Who Opened Roosevelt's Eyes", "") == ["Jacob Riis", "jacob riis"]
+    assert links.names_for("/visit/national-park", "Theodore Roosevelt National Park", "") == ["Theodore Roosevelt National Park"]
+    t = "The valley within Yosemite National Park was dammed."
+    assert links.inside_longer_name(t, t.index("National Park"))
+    t = "When Roosevelt served as Civil Service Commissioner"
+    assert not links.inside_longer_name(t, t.index("Civil Service"))
+    t = "The Bully Pulpit Golf Course is nearby"
+    assert links.continues_into_name(t, t.index("Pulpit") + len("Pulpit"))
+    live = {"/tr", "/tr/people/ted-jr", "/tr/badlands", "/tr/people/alice-longworth", "/"}
+    s = links.suggest_redirect
+    assert s("/tr/people/ted-jr.html", live, {}, {})["to"] == "/tr/people/ted-jr"
+    assert s("/tr/people/ted-jr.html", live, {}, {})["confidence"] == "high"
+    assert s("/tr/badlands/overview", live, {}, {})["to"] == "/tr/badlands"
+    assert s("/tr/people/alice-roosevelt", live, {"alice roosevelt": ["/tr/people/alice-longworth"]}, {})["to"] == "/tr/people/alice-longworth"
+    assert s("/orders/613/tickets", live, {}, {})["to"] == "https://access.trlibrary.com/orders/613/tickets"
+    assert s("/tr/zzz/nothing-like-it", live, {}, {})["confidence"] == "low"
+
+
+def test_links_parse_marks_linked_text_and_skips_nav():
+    from seo import links
+    html = """<html><body><main><nav><a href="/tr">Theodore Roosevelt</a></nav><h1>Henry Cabot Lodge</h1>
+    <p>Lodge met <a href="/tr/people/jacob-riis">Jacob Riis</a> and later backed the Square Deal in the Senate.</p>
+    <p><a href="https://example.com">Outside</a> and <a href="/tr/old-page.html">old</a></p></main></body></html>"""
+    d = links.parse(html, "https://www.trlibrary.com/tr/people/henry-cabot-lodge", "trlibrary.com")
+    assert d["h1"] == "Henry Cabot Lodge"
+    assert "/tr" not in d["links"]                      # breadcrumb/nav ignored
+    assert "/tr/people/jacob-riis" in d["links"] and "/tr/old-page.html" in d["raw_links"]
+    assert "Jacob Riis" not in d["paras"][0] and "Square Deal" in d["paras"][0]

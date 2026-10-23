@@ -45,6 +45,8 @@ RAW_FILES = {
     "tips.json": "AI-drafted page recommendations and the AI-visibility brief",
     "ux/latest.json": "Visitor experience on /visit pages: PageSpeed, accessibility, readability, AI task checks, conflicting facts, GA4/Clarity behaviour",
     "checkout/latest.json": "Ticket-store checkout completion rates from GA4 (rates only)",
+    "links.json": "Internal links: broken internal links with proposed 301 redirects, links to add, orphan pages, duplicate topics, related unlinked pages, broken outside links",
+    "redirects.csv": "Proposed 301 redirects in Drupal Redirect import format (source,destination,language,status_code,confidence)",
     "tracking.json": "Keywords and AI questions the system discovered, graduated or retired, with reasons",
 }
 
@@ -67,6 +69,7 @@ def build() -> dict:
     tracking = C.read_json("tracking.json")
     uxd = C.read_json("ux/latest.json")
     co = C.read_json("checkout/latest.json")
+    lk = C.read_json("links.json")
 
     d: dict = {
         "generated": C.now_iso(),
@@ -181,6 +184,23 @@ def build() -> dict:
             "hardest_to_read": [{"page": p["path"], "grade": p["readability"]["grade_level"]}
                                 for p in sorted((p for p in uxd.get("pages", []) if (p.get("readability") or {}).get("grade_level")),
                                                 key=lambda p: -p["readability"]["grade_level"])[:8]],
+        }
+    if lk:
+        d["internal_links"] = {
+            "updated": lk.get("updated"), "summary": lk.get("summary"),
+            "how_to_fix_broken": "Add a 301 redirect in Drupal (Configuration > Search and metadata > URL redirects) from each broken address to redirect_to; "
+                                 "bulk import: " + BASE + "/data/redirects.csv. High confidence = safe; check medium/low first. "
+                                 "Ticket-store paths should also be corrected on the page to the full access.trlibrary.com address.",
+            "broken_internal": [{k: b[k] for k in ("broken", "status", "redirect_to", "confidence", "why", "source_count")}
+                                | {"linked_from": [x["page"] for x in b["sources"][:5]]} for b in lk.get("broken_internal", [])],
+            "links_to_add": [{"on_page": x["source"], "link_text": x["phrase"], "to_page": x["target"], "context": x["snippet"],
+                              "value": x["score"]} for x in lk.get("suggestions", [])[:60]],
+            "orphan_pages": [{"page": o["page"], "title": o["title"], "impressions": o["impressions"]} for o in lk.get("orphans", [])[:25]],
+            "duplicate_topics": lk.get("duplicate_topics", [])[:15],
+            "related_unlinked": [{k: r[k] for k in ("a", "b", "similarity")} for r in lk.get("related_unlinked", [])[:20]],
+            "external_broken": [{k: r[k] for k in ("url", "status", "kind", "sources", "from_video_pages")}
+                                for r in (lk.get("external") or {}).get("external", []) if r["kind"] == "broken"][:40],
+            "linkchecker_scan": (lk.get("external") or {}).get("generated_at"),
         }
     if co:
         d["checkout"] = {"updated": co.get("updated"), "note": co.get("note"), "current": co.get("current"),
@@ -334,6 +354,24 @@ def to_markdown(d: dict) -> str:
             L += ["### Slowest pages on mobile", _table(vx["slowest_pages"], [("page", "Page"), ("speed", "Speed /100"), ("lcp_s", "Load (s)")])]
         if vx["accessibility_problems"]:
             L += ["### Accessibility problems found", "\n".join(f"- {a}" for a in vx["accessibility_problems"]) + "\n"]
+    il = d.get("internal_links")
+    if il:
+        sm = il["summary"] or {}
+        L += ["## Internal links and broken links",
+              f"{sm.get('broken_internal')} broken internal addresses ({sm.get('broken_internal_instances')} links), "
+              f"{sm.get('suggestions')} links worth adding, {sm.get('orphans')} pages with no links in, "
+              f"{sm.get('duplicate_topics')} topics with two pages, {sm.get('external_broken')} broken outside links "
+              f"(LinkChecker scan {il.get('linkchecker_scan')}).\n",
+              "### Broken links on trlibrary.com: 301 redirects to add", il["how_to_fix_broken"] + "\n",
+              _table(il["broken_internal"], [("broken", "Broken"), ("status", "Status"), ("redirect_to", "Redirect to"),
+                                             ("confidence", "Confidence"), ("source_count", "Links"), ("why", "Why")]),
+              "### Links to add (highest value first; the [[bracketed]] words become the link)",
+              _table(il["links_to_add"][:40], [("on_page", "On page"), ("context", "Context"), ("to_page", "Link to")]),
+              "### Pages nothing links to", _table(il["orphan_pages"], [("page", "Page"), ("title", "Title"), ("impressions", "Impr.")]),
+              "### Same topic, two pages", _table([{"topic": x["name"], "pages": x["pages"]} for x in il["duplicate_topics"]], [("topic", "Topic"), ("pages", "Pages")]),
+              "### Broken links to other websites (fix on the page; /video/ ones come from YouTube descriptions)",
+              _table(il["external_broken"], [("url", "Link"), ("status", "Status"), ("sources", "On pages"), ("from_video_pages", "Video page")])]
+
     ck = d.get("checkout")
     if ck:
         c = ck["current"] or {}
@@ -370,6 +408,11 @@ def llms_txt(d: dict) -> str:
     if a:
         rates = [f"{k} {v['mention_rate']:.0%}" for k, v in a["engines"].items() if v.get("mention_rate") is not None]
         snap.append("- AI assistants mentioning the Library: " + (", ".join(rates) if rates else "no answers in the latest run (see digest for errors)"))
+    il = d.get("internal_links")
+    if il and il.get("summary"):
+        sm = il["summary"]
+        snap.append(f"- Links: {sm.get('broken_internal')} broken internal addresses with 301 redirects proposed, "
+                    f"{sm.get('suggestions')} internal links worth adding, {sm.get('orphans')} pages with no links in")
     return f"""# TRPL Search & AI Visibility
 
 > How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built {d['generated']}.
@@ -379,6 +422,7 @@ The dashboard at {BASE}/ is rendered with JavaScript. AI tools should read the d
 ## Start here
 - [Digest (Markdown)]({BASE}/digest.md): one-page ranked briefing: search totals, top opportunities, tracked keywords, AI-assistant answers, audit issues, drafted recommendations, and house rules for suggesting copy
 - [Digest (JSON)]({BASE}/data/digest.json): the same content as structured data
+- [Redirects to add (CSV)]({BASE}/data/redirects.csv): proposed 301 redirects for broken links, ready for Drupal's Redirect import
 
 ## Snapshot
 {chr(10).join(snap) or '- Data sources are still being connected.'}

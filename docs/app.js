@@ -11,7 +11,7 @@
     ai: "data/ai/latest.json", aiHist: "data/ai/history.json",
     audit: "data/audit/summary.json", auditPages: "data/audit/pages.json", auditHist: "data/audit/history.json",
     tips: "data/tips.json", tracking: "data/tracking.json",
-    ux: "data/ux/latest.json", uxHist: "data/ux/history.json", checkout: "data/checkout/latest.json",
+    ux: "data/ux/latest.json", uxHist: "data/ux/history.json", checkout: "data/checkout/latest.json", links: "data/links.json",
   };
   const D = {};
   const charts = [];
@@ -491,6 +491,85 @@
       return out;
     },
 
+    links() {
+      const L = D.links;
+      if (!L) return [empty("The internal-links check hasn't run yet.", "It runs weekly; no keys needed.")];
+      const s = L.summary || {};
+      const short = (p) => (p || "").replace(/^https?:\/\/(www\.)?trlibrary\.com/, "") || "/";
+      const pageLink = (p) => link("https://www.trlibrary.com" + p, p);
+      const out = [el("p", { class: "lead" }, `Every page of trlibrary.com, read ${date(L.updated)}. Internal links help readers go deeper and tell Google which pages matter; broken ones lose both.`)];
+      out.push(el("div", { class: "grid kpis" },
+        kpi("Broken links on our site", num(s.broken_internal), `${num(s.broken_internal_instances)} links on our pages point to these; ${num(s.redirects_high_confidence)} sure fixes`),
+        kpi("Links to add", num(s.suggestions), "Pages mention a topic we have a page for, but don't link it"),
+        kpi("Pages nothing links to", num(s.orphans), "No links from other pages' content"),
+        kpi("Same topic, two pages", num(s.duplicate_topics), "Pick one to be the main page"),
+        kpi("Broken outside links", num(s.external_broken), s.linkchecker_scan ? `From the LinkChecker, scanned ${s.linkchecker_scan}` : "LinkChecker results unavailable"),
+      ));
+      // 1. broken internal -> redirects
+      const conf = (c) => el("span", { class: `pill ${c === "high" ? "ok" : c === "medium" ? "medium" : "low"}` }, c);
+      out.push(el("h2", {}, "Fix broken links with 301 redirects"),
+        el("p", { class: "lead" }, "Each broken address below gets a proposed redirect. Add the high-confidence ones in Drupal (Configuration → Search and metadata → URL redirects), and check medium and low ones before adding. Fixing the link on the page itself is even better when there are only one or two."),
+        el("p", {}, el("a", { href: "data/redirects.csv", download: "trlibrary-redirects.csv" }, "Download all as CSV"), el("span", { class: "small muted" }, " (source, destination, language, status code — the Redirect module's import format)")),
+        el("div", { class: "card" }, table([
+          { key: "broken", label: "Broken address", cls: "url", render: (b) => el("span", {}, b.broken, " ", el("span", { class: "pill" }, String(b.status))) },
+          { key: "redirect_to", label: "Redirect to", cls: "url", render: (b) => (b.redirect_to.startsWith("http") ? link(b.redirect_to, b.redirect_to) : pageLink(b.redirect_to)) },
+          { key: "confidence", label: "Confidence", render: (b) => conf(b.confidence), sortVal: (b) => ({ high: 3, medium: 2, low: 1 })[b.confidence] },
+          { key: "why", label: "Why", render: (b) => el("span", { class: "small" }, b.why) },
+          { key: "source_count", label: "Linked from", num: true, render: (b) => el("details", {}, el("summary", {}, `${b.source_count} page${b.source_count === 1 ? "" : "s"}`), el("ul", { class: "clean small" }, ...b.sources.map((x) => el("li", {}, pageLink(x.page), x.link_text ? ` (“${x.link_text}”)` : "")))), sortVal: (b) => b.source_count },
+        ], L.broken_internal || [], { sort: ["confidence", -1], limit: 30 })));
+      // 2. suggested links
+      const secs = [...new Set((L.suggestions || []).map((x) => "/" + x.source.split("/")[1]))].sort();
+      (L.suggestions || []).forEach((x) => { x._section = "/" + x.source.split("/")[1]; });
+      out.push(el("h2", {}, "Links to add"),
+        el("p", { class: "lead" }, "The bracketed words name a topic that has its own page. Link them. Highest-value first: links to pages Google already shows, especially ones ranking 4–20, and pages with few links in."),
+        el("div", { class: "card" }, table([
+          { key: "source", label: "On this page", cls: "url", render: (x) => pageLink(x.source) },
+          { key: "snippet", label: "Link these words", render: (x) => { const m = x.snippet.split(/\[\[|\]\]/); return el("span", { class: "small" }, m[0], el("mark", {}, m[1] || ""), m[2] || ""); } },
+          { key: "target", label: "To this page", cls: "url", render: (x) => el("span", {}, pageLink(x.target), el("div", { class: "small muted" }, x.target_title)) },
+          { key: "target_inlinks", label: "Links in now", num: true },
+          { key: "score", label: "Value", num: true, fmt: (v) => v.toFixed(1) },
+        ], L.suggestions || [], { sort: ["score", -1], limit: 25, filters: [{ key: "_section", label: "sections", options: secs }] })));
+      // 3. orphans
+      out.push(el("h2", {}, "Pages nothing links to"), el("p", { class: "lead" }, "Only menus or search lead here. Sorted by how often Google shows them, so the top ones are the biggest missed opportunity."),
+        el("div", { class: "card" }, table([
+          { key: "page", label: "Page", cls: "url", render: (r) => el("span", {}, pageLink(r.page), el("div", { class: "small muted" }, r.title)) },
+          { key: "impressions", label: "Google impressions (28d)", num: true, fmt: num }, { key: "position", label: "Avg position", num: true, fmt: pos },
+          { key: "unlinked_mentions", label: "Mentioned without link", num: true },
+        ], L.orphans || [], { sort: ["impressions", -1], limit: 20 })));
+      // 4. duplicates
+      if ((L.duplicate_topics || []).length) out.push(el("h2", {}, "Same topic, two pages"), el("p", { class: "lead" }, "These pages compete with each other in Google and split links. Choose a main page, link the others to it, or merge and redirect."),
+        el("div", { class: "card" }, table([
+          { key: "name", label: "Topic" },
+          { key: "pages", label: "Pages (Google impressions, 28d)", render: (d) => el("ul", { class: "clean small" }, ...d.pages.map((p, i) => el("li", {}, pageLink(p), ` (${num(d.impressions[i])})`))) },
+        ], L.duplicate_topics, { search: false, limit: 20 })));
+      // 5. related pairs
+      if ((L.related_unlinked || []).length) out.push(el("h2", {}, `Related ${L.focus_sections.join(", ")} pages with no link either way`),
+        el("div", { class: "card" }, table([
+          { key: "a", label: "Page", cls: "url", render: (r) => el("span", {}, pageLink(r.a), el("div", { class: "small muted" }, r.a_title)) },
+          { key: "b", label: "Related page", cls: "url", render: (r) => el("span", {}, pageLink(r.b), el("div", { class: "small muted" }, r.b_title)) },
+          { key: "similarity", label: "Overlap", num: true, fmt: (v) => pct(v, 0) },
+          { key: "shared_words", label: "Shared words", render: (r) => r.shared_words.join(", ") },
+        ], L.related_unlinked, { sort: ["similarity", -1], limit: 20 })));
+      // 6. external
+      const ext = L.external || {};
+      if (ext.error) out.push(el("p", { class: "warn-box" }, ext.error));
+      else if ((ext.external || []).length) {
+        const ours = ext.external.filter((r) => !r.from_video_pages), vids = ext.external.filter((r) => r.from_video_pages);
+        const extTable = (rows) => table([
+          { key: "url", label: "Outside link", cls: "url", render: (r) => link(r.url, r.url) },
+          { key: "status", label: "Status", render: (r) => el("span", { class: `pill ${r.kind === "broken" ? "high" : "low"}` }, r.status ? String(r.status) : r.error ? "error" : r.kind) },
+          { key: "sources", label: "On pages", render: (r) => el("span", { class: "small" }, ...r.sources.slice(0, 4).flatMap((p, i) => [i ? ", " : "", pageLink(p)])), sortVal: (r) => r.sources.length },
+        ], rows, { limit: 20 });
+        out.push(el("h2", {}, "Broken links to other websites"),
+          el("p", { class: "lead" }, `From the LinkChecker (links.labs.trlibrary.com), last scan ${ext.generated_at}. Update or remove these in the page content; redirects can't fix links to other sites. 403s are often the other site blocking automated checks, so test those in a browser first.`),
+          el("div", { class: "card" }, extTable(ours)));
+        if (vids.length) out.push(el("details", {}, el("summary", {}, `${vids.length} more on /video/ pages (from YouTube descriptions, lower priority)`), el("div", { class: "card" }, extTable(vids))));
+      }
+      if ((L.links_through_redirects || []).length) out.push(el("details", {}, el("summary", {}, `${L.links_through_redirects.length} links that work but go through a redirect (update when convenient)`),
+        el("div", { class: "card" }, table([{ key: "link", label: "Link", cls: "url" }, { key: "goes_to", label: "Ends up at", cls: "url", render: (r) => pageLink(r.goes_to) }, { key: "sources", label: "On pages", render: (r) => r.sources.slice(0, 3).join(", ") }], L.links_through_redirects, { limit: 20 }))));
+      return out;
+    },
+
     tips() {
       const t = D.tips;
       if (!t) return [empty("No recommendations yet.", "Add any AI key (Gemini, Claude, ChatGPT or Perplexity). Recommendations are written weekly.")];
@@ -524,8 +603,8 @@
     },
 
     setup() {
-      const names = { gsc: "Search Console", audit: "Site audit", ranks: "Rank tracking", ai_visibility: "AI visibility", opportunities: "Opportunities", curate: "Keyword & question discovery", ux: "Visitor experience (/visit)", checkout: "Ticket checkout (GA4)", tips: "AI recommendations", digest: "AI-readable digest (llms.txt)" };
-      const secrets = { gsc: "Variables GCP_WIF_PROVIDER + GCP_SERVICE_ACCOUNT (or secret GSC_SERVICE_ACCOUNT_JSON)", audit: "none needed", ranks: "DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD", ai_visibility: "OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY, ANTHROPIC_API_KEY (any)", opportunities: "none needed", curate: "none (an AI key improves the filtering); rules in config/tracking.yml", ux: "PAGESPEED_API_KEY (needed); any AI key for task checks; optional GA4_PROPERTY_ID variable and CLARITY_API_TOKEN (the website's Clarity project)", checkout: "Variable GA4_PROPERTY_ID + Google sign-in (service account as GA4 Viewer); optional CLARITY_STORE_API_TOKEN for store frustration signals", digest: "none needed", tips: "Any one of GEMINI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY, PERPLEXITY_API_KEY (order set in config/site.yml)" };
+      const names = { gsc: "Search Console", audit: "Site audit", ranks: "Rank tracking", ai_visibility: "AI visibility", opportunities: "Opportunities", curate: "Keyword & question discovery", ux: "Visitor experience (/visit)", links: "Internal links & redirects", checkout: "Ticket checkout (GA4)", tips: "AI recommendations", digest: "AI-readable digest (llms.txt)" };
+      const secrets = { gsc: "Variables GCP_WIF_PROVIDER + GCP_SERVICE_ACCOUNT (or secret GSC_SERVICE_ACCOUNT_JSON)", audit: "none needed", ranks: "DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD", ai_visibility: "OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY, ANTHROPIC_API_KEY (any)", opportunities: "none needed", curate: "none (an AI key improves the filtering); rules in config/tracking.yml", ux: "PAGESPEED_API_KEY (needed); any AI key for task checks; optional GA4_PROPERTY_ID variable and CLARITY_API_TOKEN (the website's Clarity project)", links: "none needed (reads the LinkChecker's results.json for outside links)", checkout: "Variable GA4_PROPERTY_ID + Google sign-in (service account as GA4 Viewer); optional CLARITY_STORE_API_TOKEN for store frustration signals", digest: "none needed", tips: "Any one of GEMINI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY, PERPLEXITY_API_KEY (order set in config/site.yml)" };
       const st = D.status || {};
       return [
         el("p", { class: "lead" }, "Each source turns on when its key is added as a GitHub Actions secret on the SEO repo. Instructions are in the repo README."),

@@ -107,3 +107,14 @@ checkout:
   ticket_page_prefix: /tickets
   steps: [view_item, add_to_cart, begin_checkout, add_payment_info, purchase]
   min_users_for_rate: 30          # below this, a rate is shown as "low volume"
+
+# Internal Links tab (weekly): where pages should link to each other.
+links:
+  focus_sections: [/tr]                 # also gets "related pages with no link" analysis
+  exclude_patterns: ["/video/", "/quiz/", "/node/", "/calendar/", "/print$", "/staff-members/", "/search"]
+  max_phrase_share: 0.2                 # ignore names that appear on more than 20% of pages
+  max_suggestions_per_source: 10
+  related_pairs: 80
+  # External broken links come from the LinkChecker tool; internal links are checked here every week.
+  linkchecker_results: https://links.labs.trlibrary.com/results.json
+  video_pattern: "^/video/"            # pages whose outside links come from YouTube descriptions (low priority)

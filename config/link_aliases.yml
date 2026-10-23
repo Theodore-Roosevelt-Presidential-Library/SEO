@@ -1,0 +1,27 @@
+# Extra names readers (and page text) use for a page's subject, so the Internal
+# Links tab can spot mentions that should link there. Page titles and URL slugs
+# are used automatically; add only the other ways a subject gets written.
+#
+# Format:
+#   /path/of/page: [Another Name, Another Way It Is Written]
+
+aliases:
+  /tr/people/alice-longworth: [Alice Roosevelt Longworth, Alice Roosevelt]
+  /tr/people/jacob-riis: [Jacob Riis, Riis]
+  /tr/presidency/square-deal: [Square Deal]
+  /tr/presidency/roosevelt-corollary: [Roosevelt Corollary]
+  /tr/presidency/brownsville: [Brownsville Affair, Brownsville incident]
+  /tr/presidency/trust-busting: [trust-busting, trust busting]
+  /tr/speeches/man-in-the-arena: [Man in the Arena, Citizenship in a Republic]
+  /tr/rise-to-power/san-juan-hill: [San Juan Hill, Rough Riders]
+  /tr/new-york-politics/alice-lee: [Alice Hathaway Lee, Alice Lee]
+  /tr/tr-mount-rushmore: [Mount Rushmore]
+  /visit/national-park/elkhorn-ranch: [Elkhorn Ranch]
+  /visit/national-park: [Theodore Roosevelt National Park]
+
+# Names that are ambiguous and should never be auto-suggested as links.
+# ("Theodore Roosevelt Jr." is TR himself as often as it is his son Ted.)
+never_link:
+  - Theodore Roosevelt Jr
+  - Theodore Roosevelt Jr.
+  - Theodore Roosevelt Sr

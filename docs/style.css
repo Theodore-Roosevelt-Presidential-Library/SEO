@@ -114,3 +114,5 @@ ul.clean { padding-left: 1.1rem; margin: .25rem 0; }
   .kpi .value { font-size: 1.6rem; }
   td.url { max-width: 220px; }
 }
+
+mark { background: color-mix(in srgb, var(--accent) 30%, transparent); color: inherit; padding: 0 .15em; border-radius: 3px; }
