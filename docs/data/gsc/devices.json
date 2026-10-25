@@ -1,23 +1,23 @@
 [
  {
   "device": "MOBILE",
-  "clicks": 26744,
-  "impressions": 850943,
-  "ctr": 0.0314,
+  "clicks": 26274,
+  "impressions": 853760,
+  "ctr": 0.0308,
   "position": 6.6
  },
  {
   "device": "DESKTOP",
-  "clicks": 18736,
-  "impressions": 1499807,
-  "ctr": 0.0125,
+  "clicks": 18681,
+  "impressions": 1515191,
+  "ctr": 0.0123,
   "position": 5.8
  },
  {
   "device": "TABLET",
-  "clicks": 1252,
-  "impressions": 31649,
-  "ctr": 0.0396,
-  "position": 6.3
+  "clicks": 1234,
+  "impressions": 31689,
+  "ctr": 0.0389,
+  "position": 6.2
  }
 ]

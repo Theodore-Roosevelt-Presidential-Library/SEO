@@ -1,5 +1,5 @@
 # trlibrary.com search & AI visibility digest
-Generated 2026-10-24T13:26:16+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
+Generated 2026-10-25T13:25:47+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
 
 ## How to use this
 Read top to bottom: the biggest, cheapest wins come first in each section. When you suggest copy, follow these house rules:
@@ -20,73 +20,73 @@ Read top to bottom: the biggest, cheapest wins come first in each section. When 
 |---|---|---|---|
 | audit | ok | 2026-10-20T05:12:15+00:00 | Crawled 1074 pages, health 96/100 |
 | ranks | ok | 2026-10-20T05:14:53+00:00 | 20 keywords checked |
-| opportunities | ok | 2026-10-24T13:26:06+00:00 | 150 striking-distance queries, 60 low-CTR pages |
-| gsc | ok | 2026-10-24T13:26:06+00:00 | 24348 queries, 1554 pages (2026-09-24 to 2026-10-21) |
+| opportunities | ok | 2026-10-25T13:25:38+00:00 | 150 striking-distance queries, 60 low-CTR pages |
+| gsc | ok | 2026-10-25T13:25:38+00:00 | 24282 queries, 1599 pages (2026-09-25 to 2026-10-22) |
 | ai_visibility | error | 2026-10-20T05:22:20+00:00 | 28 answers from ChatGPT, Gemini, Perplexity; 17 failed: Gemini 429: {   "error": {     "code": 429,     "message": "You exceeded your current quota, please check your plan and billing details. For more info |
 | tips | ok | 2026-10-20T05:25:10+00:00 | Gemini wrote tips for 8 pages |
-| digest | ok | 2026-10-23T13:30:13+00:00 | llms.txt, digest.md and digest.json rebuilt |
-| checkout | ok | 2026-10-24T13:26:16+00:00 | Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info |
+| digest | ok | 2026-10-24T13:26:17+00:00 | llms.txt, digest.md and digest.json rebuilt |
+| checkout | ok | 2026-10-25T13:25:47+00:00 | Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info |
 
 ## Google Search (Search Console)
-2026-09-24 to 2026-10-21 vs the prior 28 days: **46,732 clicks** (prior 66,263), 2,382,399 impressions (prior 2,089,675), CTR 2.0% (prior 3.2%), average position 6.1 (prior 6.9). Branded clicks 18845, non-branded 9350, search term hidden by Google 18537.
+2026-09-25 to 2026-10-22 vs the prior 28 days: **46,189 clicks** (prior 65,952), 2,400,640 impressions (prior 2,115,121), CTR 1.9% (prior 3.1%), average position 6.1 (prior 6.8). Branded clicks 18375, non-branded 9319, search term hidden by Google 18495.
 
 ### Top non-branded searches (people who didn't search our name)
 | Search | Clicks | Impr. | Pos. |
 |---|---|---|---|
-| brownsville affair | 2 | 72496 | 6.2 |
-| karl rove | 27 | 37197 | 9.8 |
-| square deal | 146 | 33840 | 3.3 |
-| theodore roosevelt | 82 | 30801 | 10.3 |
-| roosevelt corollary | 36 | 21270 | 5.4 |
-| chris murphy | 5 | 16910 | 11.7 |
-| jacob riis | 43 | 16533 | 11 |
-| bill kristol | 8 | 15242 | 11.9 |
-| alice roosevelt | 37 | 13543 | 9 |
-| alice roosevelt longworth | 10 | 10410 | 9 |
-| teddy roosevelt | 40 | 9543 | 9.6 |
-| roosevelt family | 24 | 9363 | 4 |
-| kermit roosevelt | 49 | 8765 | 6.6 |
-| alice hathaway lee roosevelt | 10 | 6491 | 5.9 |
-| mount rushmore presidents | 22 | 6081 | 4.8 |
-| bull moose party | 31 | 5884 | 5.7 |
-| theodore | 3 | 5697 | 12 |
-| henry cabot lodge | 2 | 5443 | 6.9 |
-| meg whitman | 1 | 5367 | 11.6 |
-| theodore roosevelt jr. | 1 | 5353 | 11.2 |
-| edith roosevelt | 11 | 5251 | 6.1 |
-| tr | 0 | 4859 | 9.2 |
-| theodore roosevelt jr | 1 | 4755 | 11.1 |
-| theodore roosevelt national park | 13 | 4581 | 9.1 |
-| great white fleet | 12 | 4550 | 7.1 |
+| brownsville affair | 3 | 76982 | 6.1 |
+| karl rove | 25 | 37166 | 9.7 |
+| square deal | 139 | 35671 | 3.3 |
+| theodore roosevelt | 77 | 27637 | 10.2 |
+| roosevelt corollary | 38 | 21753 | 5.2 |
+| jacob riis | 43 | 17226 | 10.9 |
+| chris murphy | 5 | 17029 | 11.7 |
+| bill kristol | 8 | 14905 | 11.9 |
+| alice roosevelt | 39 | 13177 | 8.9 |
+| alice roosevelt longworth | 11 | 10304 | 9 |
+| roosevelt family | 24 | 9428 | 4 |
+| kermit roosevelt | 48 | 8782 | 6.6 |
+| teddy roosevelt | 36 | 8410 | 9.2 |
+| alice hathaway lee roosevelt | 10 | 6440 | 5.9 |
+| bull moose party | 36 | 6231 | 5.6 |
+| mount rushmore presidents | 22 | 5960 | 4.8 |
+| henry cabot lodge | 2 | 5620 | 6.9 |
+| theodore | 3 | 5420 | 12 |
+| meg whitman | 1 | 5282 | 11.6 |
+| edith roosevelt | 11 | 5258 | 6.1 |
+| theodore roosevelt jr. | 1 | 5210 | 11.3 |
+| theodore roosevelt national park | 13 | 4741 | 9.1 |
+| theodore roosevelt jr | 1 | 4660 | 11.1 |
+| great white fleet | 12 | 4650 | 7 |
+| quentin roosevelt | 3 | 4426 | 10.6 |
 
 ### Top pages
 | Page | Clicks | Prior | Impr. | Pos. |
 |---|---|---|---|---|
-| / | 9471 | 16224 | 235934 | 7.8 |
-| /tickets | 5105 | 10424 | 73216 | 3.3 |
-| /?utm_source=gbp&utm_medium=organic | 4339 | 0 | 24500 | 3.7 |
-| /tickets?utm_source=gbp&utm_medium=organic | 3901 | 16128 | 18145 | 3.3 |
-| /visit | 1891 | 4594 | 70823 | 2.7 |
-| /tr/family/fdr-connection | 1142 | 601 | 76052 | 3.2 |
-| /tr/square-deal | 1075 | 750 | 95937 | 3.3 |
-| /tr/presidency/trust-busting | 903 | 429 | 73038 | 3.5 |
-| /visit/directions | 741 | 1477 | 59975 | 2.7 |
-| /bullet-speech | 734 | 780 | 40996 | 3.6 |
-| /visit/hours | 695 | 1566 | 58136 | 2.6 |
-| /tr/pre-presidency-political-accomplishments | 681 | 356 | 50611 | 5.4 |
-| /tr/quotes | 617 | 637 | 31396 | 13.9 |
-| /tr/tr-mount-rushmore | 509 | 934 | 94501 | 5.2 |
-| /tr/presidency/square-deal | 463 | 141 | 77867 | 4.7 |
-| /tr/rise-to-power/san-juan-hill | 375 | 179 | 28543 | 3.7 |
-| /tr/tr-importance | 367 | 229 | 39544 | 5.1 |
-| /tr/tr-shot | 359 | 349 | 39770 | 4 |
-| /tr/speeches/man-in-the-arena | 356 | 229 | 16081 | 5.3 |
-| /tr/people/jacob-riis | 343 | 169 | 71645 | 7 |
-| /tr/family/family-tree | 335 | 166 | 21646 | 5.1 |
-| /tr/fake-quotes | 327 | 492 | 19181 | 7.2 |
-| /tr/presidency-timeline | 322 | 232 | 56988 | 4.7 |
-| /tr/presidency/ten-facts | 298 | 93 | 13197 | 4.4 |
-| /about/trustees/theodore-roosevelt-v | 267 | 285 | 4376 | 3.6 |
+| / | 9343 | 16043 | 220866 | 7.7 |
+| /tickets | 4945 | 10287 | 71863 | 3.3 |
+| /?utm_source=gbp&utm_medium=organic | 4536 | 0 | 25999 | 3.7 |
+| /tickets?utm_source=gbp&utm_medium=organic | 3469 | 16000 | 16143 | 3.2 |
+| /visit | 1813 | 4528 | 69383 | 2.7 |
+| /tr/family/fdr-connection | 1160 | 625 | 76975 | 3.2 |
+| /tr/square-deal | 1040 | 808 | 97485 | 3.4 |
+| /tr/presidency/trust-busting | 930 | 448 | 73294 | 3.5 |
+| /bullet-speech | 735 | 780 | 40889 | 3.6 |
+| /visit/directions | 725 | 1449 | 58773 | 2.7 |
+| /visit/hours | 666 | 1562 | 56926 | 2.6 |
+| /tr/pre-presidency-political-accomplishments | 665 | 377 | 51262 | 5.5 |
+| /tr/quotes | 611 | 652 | 31127 | 13.8 |
+| /tr/tr-mount-rushmore | 504 | 936 | 96913 | 5.2 |
+| /tr/presidency/square-deal | 458 | 152 | 79620 | 4.7 |
+| /tr/rise-to-power/san-juan-hill | 387 | 189 | 28661 | 3.7 |
+| /tr/speeches/man-in-the-arena | 385 | 234 | 17822 | 5.2 |
+| /tr/tr-importance | 363 | 236 | 39633 | 5.1 |
+| /tr/tr-shot | 361 | 345 | 39587 | 4 |
+| /tr/people/jacob-riis | 357 | 176 | 73865 | 7 |
+| /tr/family/family-tree | 341 | 168 | 22160 | 5.1 |
+| /tr/presidency/ten-facts | 331 | 91 | 13843 | 4.3 |
+| /tr/fake-quotes | 318 | 492 | 18893 | 7.2 |
+| /tr/presidency-timeline | 317 | 239 | 56769 | 4.7 |
+| /about/trustees/theodore-roosevelt-v | 265 | 285 | 4382 | 3.7 |
 
 ## Opportunities (ranked)
 _Estimated extra clicks use a rough industry click-through curve. Treat them as a way to rank opportunities, not a forecast._
@@ -94,97 +94,97 @@ _Estimated extra clicks use a rough industry click-through curve. Treat them as 
 ### Striking distance: ranking 4-20 with demand; strengthen the page for the exact search
 | Search | Page | Pos. | Impr. | Upside |
 |---|---|---|---|---|
-| brownsville affair | /tr/presidency/brownsville | 6.2 | 72496 | 7975 |
-| karl rove | /podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature | 9.8 | 37193 | 4065 |
-| theodore roosevelt | / | 11.5 | 23299 | 2542 |
-| roosevelt corollary | /tr/presidency/roosevelt-corollary | 5.4 | 21270 | 2304 |
-| square deal | /tr/presidency/square-deal | 5.7 | 17868 | 1953 |
-| chris murphy | /podcast/good-citizen/senator-chris-murphy | 11.7 | 16910 | 1855 |
-| jacob riis | /tr/people/jacob-riis | 11.1 | 16526 | 1775 |
-| bill kristol | /podcast/good-citizen/bill-kristol | 11.9 | 15242 | 1669 |
-| alice roosevelt | /tr/people/alice-longworth | 9 | 13525 | 1451 |
-| alice roosevelt longworth | /tr/people/alice-longworth | 8.9 | 10393 | 1133 |
-| alice hathaway lee roosevelt | /tr/new-york-politics/alice-lee | 5.8 | 6454 | 700 |
-| kermit roosevelt | /podcast/good-citizen/kermit-roosevelt-iii | 7.1 | 6667 | 699 |
-| mount rushmore presidents | /tr/tr-mount-rushmore | 4.5 | 6061 | 645 |
-| teddy roosevelt | / | 12.5 | 5529 | 598 |
-| teddy roosevelt library | /video/view/Vf8ee-gccpc | 5.6 | 5833 | 597 |
+| brownsville affair | /tr/presidency/brownsville | 6.1 | 76982 | 8468 |
+| karl rove | /podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature | 9.7 | 37162 | 4062 |
+| roosevelt corollary | /tr/presidency/roosevelt-corollary | 5.2 | 21753 | 2356 |
+| theodore roosevelt | / | 11.6 | 20059 | 2188 |
+| square deal | /tr/presidency/square-deal | 5.6 | 18794 | 2056 |
+| chris murphy | /podcast/good-citizen/senator-chris-murphy | 11.7 | 17029 | 1868 |
+| jacob riis | /tr/people/jacob-riis | 10.9 | 17220 | 1851 |
+| bill kristol | /podcast/good-citizen/bill-kristol | 11.9 | 14905 | 1632 |
+| alice roosevelt | /tr/people/alice-longworth | 8.9 | 13159 | 1408 |
+| alice roosevelt longworth | /tr/people/alice-longworth | 8.9 | 10286 | 1120 |
+| kermit roosevelt | /podcast/good-citizen/kermit-roosevelt-iii | 7.1 | 6730 | 706 |
+| alice hathaway lee roosevelt | /tr/new-york-politics/alice-lee | 5.8 | 6402 | 694 |
+| mount rushmore presidents | /tr/tr-mount-rushmore | 4.5 | 5940 | 631 |
+| henry cabot lodge | /tr/people/henry-cabot-lodge | 6.9 | 5608 | 615 |
+| meg whitman | /podcast/good-citizen/meg-whitman | 11.6 | 5282 | 580 |
 
 ### Ranking well but skipped: rewrite title/meta description
 | Page | Pos. | CTR | Typical | Upside |
 |---|---|---|---|---|
-| /tr/square-deal | 3.3 | 1.1% | 11.0% | 9479 |
-| /tr/family/fdr-connection | 3.2 | 1.5% | 11.0% | 7225 |
-| /tr/presidency/roosevelt-corollary | 5.4 | 0.2% | 6.0% | 6647 |
-| /visit | 2.7 | 2.7% | 11.0% | 5900 |
-| /visit/directions | 2.7 | 1.2% | 11.0% | 5854 |
-| /visit/hours | 2.6 | 1.2% | 11.0% | 5697 |
-| /tr/tr-mount-rushmore | 5.2 | 0.5% | 6.0% | 5160 |
-| /tr/presidency/trust-busting | 3.5 | 1.2% | 8.0% | 4937 |
-| /tr/presidency/square-deal | 4.7 | 0.6% | 6.0% | 4213 |
-| /project | 2 | 0.5% | 16.0% | 4198 |
-| /tr/presidency/brownsville | 6.2 | 0.0% | 4.5% | 3330 |
-| /tr/presidency-timeline | 4.7 | 0.6% | 6.0% | 3094 |
-| /tr/tr-shot | 4 | 0.9% | 8.0% | 2824 |
-| /bullet-speech | 3.6 | 1.8% | 8.0% | 2546 |
-| /tr/pre-presidency-political-accomplishments | 5.4 | 1.4% | 6.0% | 2353 |
+| /tr/square-deal | 3.4 | 1.1% | 11.0% | 9680 |
+| /tr/family/fdr-connection | 3.2 | 1.5% | 11.0% | 7305 |
+| /tr/presidency/roosevelt-corollary | 5.3 | 0.2% | 6.0% | 6835 |
+| /visit | 2.7 | 2.6% | 11.0% | 5821 |
+| /visit/directions | 2.7 | 1.2% | 11.0% | 5742 |
+| /visit/hours | 2.6 | 1.2% | 11.0% | 5596 |
+| /tr/tr-mount-rushmore | 5.2 | 0.5% | 6.0% | 5311 |
+| /tr/presidency/trust-busting | 3.5 | 1.3% | 8.0% | 4933 |
+| /tr/presidency/square-deal | 4.7 | 0.6% | 6.0% | 4315 |
+| /project | 2 | 0.5% | 16.0% | 4130 |
+| /tr/presidency/brownsville | 6.1 | 0.0% | 4.5% | 3539 |
+| /tr/presidency-timeline | 4.7 | 0.6% | 6.0% | 3088 |
+| /tr/tr-shot | 4 | 0.9% | 8.0% | 2807 |
+| /bullet-speech | 3.6 | 1.8% | 8.0% | 2535 |
+| /tr/presidency/panama-canal | 5.2 | 0.5% | 6.0% | 2476 |
 
 ### Search words missing from the ranking page's title
 | Search | Page | Current title | Missing | Impr. |
 |---|---|---|---|---|
-| teddy roosevelt | / | Theodore Roosevelt Presidential Library / Medora, North Dakota | teddy | 5529 |
+| teddy roosevelt | / | Theodore Roosevelt Presidential Library / Medora, North Dakota | teddy | 4247 |
 | when was teddy roosevelt president | /tr/presidency-timeline | Timeline of TR’s Presidency / Theodore Roosevelt Presidential Library | was, teddy, president | 4178 |
-| hepburn act | /tr/presidency/railroad-regulation | Railroad Regulation: Federal Authority Over Private Enterprise / Theodore Roosevelt Presidential Library | hepburn, act | 2860 |
-| when was theodore roosevelt president | /tr/presidency-timeline | Timeline of TR’s Presidency / Theodore Roosevelt Presidential Library | was, president | 2850 |
-| carl rove | /podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature | Karl Rove: Historic Redemption, the Hard Work of Politics, and the Essential Nature of Americans / Theodore Roosevelt Presidential Library | carl | 2266 |
-| mt rushmore presidents | /tr/tr-mount-rushmore | Why is Theodore Roosevelt on Mount Rushmore? / Theodore Roosevelt Presidential Library | mt, presidents | 2103 |
-| when did teddy roosevelt die | /tr/timeline | Timeline of TR’s Life / Theodore Roosevelt Presidential Library | did, teddy, die | 1573 |
-| what was theodore roosevelt known for | /tr/tr-importance | Why is Theodore Roosevelt Important? / Theodore Roosevelt Presidential Library | was, known | 1487 |
-| who are the four presidents on mount rushmore | /tr/tr-mount-rushmore | Why is Theodore Roosevelt on Mount Rushmore? / Theodore Roosevelt Presidential Library | four, presidents | 1456 |
-| "roosevelt" "the united states" "american" "latin america" "western hemisphere" or "interests and projecting influence globally." or "it not just expanded u.s. territory but also its position" | /tr/presidency/roosevelt-corollary | The Roosevelt Corollary: America as Hemispheric Policeman / Theodore Roosevelt Presidential Library | united, states, american, latin, western, hemisphere, interests, projecting, influence, globally, not, just, expanded, territory, but, also, its, position | 1374 |
-| theodore's dining room medora | /visit/eat | Dining / Theodore Roosevelt Presidential Library | theodore's, room, medora | 1282 |
-| square deal definition us history | /tr/square-deal | What was the Square Deal? / Theodore Roosevelt Presidential Library | definition, us, history | 1267 |
-| when did theodore roosevelt die | /tr/timeline | Timeline of TR’s Life / Theodore Roosevelt Presidential Library | did, die | 1234 |
-| teddy roosevelt museum | / | Theodore Roosevelt Presidential Library / Medora, North Dakota | teddy, museum | 1220 |
-| roosevelt corollary to the monroe doctrine | /tr/presidency/roosevelt-corollary | The Roosevelt Corollary: America as Hemispheric Policeman / Theodore Roosevelt Presidential Library | monroe, doctrine | 1099 |
+| hepburn act | /tr/presidency/railroad-regulation | Railroad Regulation: Federal Authority Over Private Enterprise / Theodore Roosevelt Presidential Library | hepburn, act | 3021 |
+| when was theodore roosevelt president | /tr/presidency-timeline | Timeline of TR’s Presidency / Theodore Roosevelt Presidential Library | was, president | 2875 |
+| carl rove | /podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature | Karl Rove: Historic Redemption, the Hard Work of Politics, and the Essential Nature of Americans / Theodore Roosevelt Presidential Library | carl | 2254 |
+| mt rushmore presidents | /tr/tr-mount-rushmore | Why is Theodore Roosevelt on Mount Rushmore? / Theodore Roosevelt Presidential Library | mt, presidents | 2213 |
+| theo elections | /tr/presidency/elections | The Election of 1904: Roosevelt's Mandate and Fateful Promise / Theodore Roosevelt Presidential Library | theo | 2032 |
+| when did teddy roosevelt die | /tr/timeline | Timeline of TR’s Life / Theodore Roosevelt Presidential Library | did, teddy, die | 1565 |
+| what was theodore roosevelt known for | /tr/tr-importance | Why is Theodore Roosevelt Important? / Theodore Roosevelt Presidential Library | was, known | 1474 |
+| who are the four presidents on mount rushmore | /tr/tr-mount-rushmore | Why is Theodore Roosevelt on Mount Rushmore? / Theodore Roosevelt Presidential Library | four, presidents | 1441 |
+| square deal definition us history | /tr/square-deal | What was the Square Deal? / Theodore Roosevelt Presidential Library | definition, us, history | 1275 |
+| when did theodore roosevelt die | /tr/timeline | Timeline of TR’s Life / Theodore Roosevelt Presidential Library | did, die | 1231 |
+| teddy roosevelt museum | / | Theodore Roosevelt Presidential Library / Medora, North Dakota | teddy, museum | 1190 |
+| theodore's dining room medora | /visit/eat | Dining / Theodore Roosevelt Presidential Library | theodore's, room, medora | 1130 |
+| roosevelt corollary to the monroe doctrine | /tr/presidency/roosevelt-corollary | The Roosevelt Corollary: America as Hemispheric Policeman / Theodore Roosevelt Presidential Library | monroe, doctrine | 1114 |
 
 ### Losing clicks vs prior 28 days (check seasonality first)
 | Type | Search/page | Clicks | Prior | Change |
 |---|---|---|---|---|
-| page | /tickets?utm_source=gbp&utm_medium=organic | 3901 | 16128 | -75.8% |
-| page | / | 9471 | 16224 | -41.6% |
-| page | /tickets | 5105 | 10424 | -51.0% |
-| query | theodore roosevelt presidential library | 7293 | 11727 | -37.8% |
-| page | /visit | 1891 | 4594 | -58.8% |
-| query | teddy roosevelt presidential library | 2588 | 5067 | -48.9% |
-| query | theodore roosevelt library | 1212 | 3080 | -60.6% |
-| query | teddy roosevelt library | 2207 | 3941 | -44.0% |
-| page | /visit/hours | 695 | 1566 | -55.6% |
-| page | /visit/directions | 741 | 1477 | -49.8% |
-| page | /tr/tr-mount-rushmore | 509 | 934 | -45.5% |
-| query | presidential library medora | 287 | 647 | -55.6% |
-| query | roosevelt library | 341 | 665 | -48.7% |
-| query | roosevelt library north dakota | 354 | 605 | -41.5% |
-| page | /visit/eat | 231 | 435 | -46.9% |
+| page | /tickets?utm_source=gbp&utm_medium=organic | 3469 | 16000 | -78.3% |
+| page | / | 9343 | 16043 | -41.8% |
+| page | /tickets | 4945 | 10287 | -51.9% |
+| query | theodore roosevelt presidential library | 7103 | 11652 | -39.0% |
+| page | /visit | 1813 | 4528 | -60.0% |
+| query | teddy roosevelt presidential library | 2532 | 5023 | -49.6% |
+| query | theodore roosevelt library | 1197 | 3056 | -60.8% |
+| query | teddy roosevelt library | 2140 | 3911 | -45.3% |
+| page | /visit/hours | 666 | 1562 | -57.4% |
+| page | /visit/directions | 725 | 1449 | -50.0% |
+| page | /tr/tr-mount-rushmore | 504 | 936 | -46.2% |
+| query | presidential library medora | 287 | 633 | -54.7% |
+| query | roosevelt library | 328 | 668 | -50.9% |
+| query | roosevelt library north dakota | 348 | 596 | -41.6% |
+| page | /visit/eat | 224 | 432 | -48.1% |
 
 ### Our pages competing for the same search
 | Search | Impr. | Pages |
 |---|---|---|
-| square deal | 50375 | /tr/square-deal (pos 3.8), /tr/presidency/square-deal (pos 5.7) |
-| kermit roosevelt | 10517 | /podcast/good-citizen/kermit-roosevelt-iii (pos 7.1), /about/trustees/kermit-roosevelt (pos 7.2) |
-| roosevelt family | 9307 | /tr/family/family-tree (pos 3.2), /tr/family (pos 4.7), /tr/family/fdr-connection (pos 1.8) |
-| bull moose party | 5919 | /tr/post-presidency/bull-moose/platform (pos 6.9), /tr/post-presidency/bull-moose (pos 3.1) |
-| teddy roosevelt museum | 5124 | / (pos 1.9), /tickets (pos 2.5), /visit (pos 2.6), /video/view/Vf8ee-gccpc (pos 5.6) |
-| what was a square deal | 3791 | /tr/square-deal (pos 1.4), /tr/presidency/square-deal (pos 8.1) |
-| the square deal | 3505 | /tr/square-deal (pos 1.8), /tr/presidency/square-deal (pos 6.0) |
-| man in the arena | 3007 | /tr/speeches/man-in-the-arena (pos 1.3), /tr/post-presidency/man-in-the-arena (pos 9.5) |
-| what was the square deal | 2579 | /tr/square-deal (pos 1.5), /tr/presidency/square-deal (pos 4.5) |
-| theodore roosevelt museum | 2179 | / (pos 2.0), /tickets (pos 2.4), /visit (pos 2.4), /visit/hours (pos 2.9) |
-| square deal definition us history | 1617 | /tr/square-deal (pos 1.7), /tr/presidency/square-deal (pos 5.0) |
-| what did theodore roosevelt do | 1529 | /tr/pre-presidency-political-accomplishments (pos 7.8), /tr/tr-importance (pos 4.9) |
-| teddy roosevelt assassination attempt | 1432 | /bullet-speech (pos 2.2), /tr/tr-shot (pos 4.8) |
-| theodore roosevelt shot | 1356 | /tr/tr-shot (pos 2.2), /bullet-speech (pos 5.7) |
-| theodore roosevelt assassination attempt | 1321 | /bullet-speech (pos 2.5), /tr/tr-shot (pos 4.4) |
+| square deal | 53035 | /tr/square-deal (pos 3.8), /tr/presidency/square-deal (pos 5.6) |
+| kermit roosevelt | 10525 | /podcast/good-citizen/kermit-roosevelt-iii (pos 7.1), /about/trustees/kermit-roosevelt (pos 7.1) |
+| roosevelt family | 9369 | /tr/family/family-tree (pos 3.2), /tr/family (pos 4.7), /tr/family/fdr-connection (pos 1.8) |
+| bull moose party | 6265 | /tr/post-presidency/bull-moose/platform (pos 6.9), /tr/post-presidency/bull-moose (pos 3.0) |
+| teddy roosevelt museum | 4925 | / (pos 1.9), /tickets (pos 2.6), /visit (pos 2.6), /video/view/Vf8ee-gccpc (pos 5.7) |
+| what was a square deal | 3684 | /tr/square-deal (pos 1.4), /tr/presidency/square-deal (pos 8.3) |
+| the square deal | 3499 | /tr/square-deal (pos 1.8), /tr/presidency/square-deal (pos 6.0) |
+| man in the arena | 3198 | /tr/speeches/man-in-the-arena (pos 1.9), /tr/post-presidency/man-in-the-arena (pos 9.5) |
+| what was the square deal | 2628 | /tr/square-deal (pos 1.5), /tr/presidency/square-deal (pos 4.4) |
+| theodore roosevelt museum | 2083 | / (pos 1.9), /tickets (pos 2.4), /visit (pos 2.4), /visit/hours (pos 2.9) |
+| the man in the arena | 2055 | /tr/post-presidency/man-in-the-arena (pos 8.8), /tr/speeches/man-in-the-arena (pos 5.0) |
+| square deal definition us history | 1622 | /tr/square-deal (pos 1.6), /tr/presidency/square-deal (pos 5.0) |
+| teddy roosevelt assassination attempt | 1446 | /bullet-speech (pos 2.2), /tr/tr-shot (pos 5.0) |
+| theodore roosevelt shot | 1348 | /tr/tr-shot (pos 2.2), /bullet-speech (pos 5.7) |
+| theodore roosevelt assassination attempt | 1336 | /bullet-speech (pos 2.6), /tr/tr-shot (pos 4.6) |
 
 ## Tracked keywords (dataforseo+gsc)
 | Keyword | Group | Volume | GSC pos. | Google rank | AI Overview | Cites us | Above us |
@@ -349,165 +349,172 @@ Crawled 1074 of 1112 sitemap URLs. Health 96/100, AI readiness 60/100. llms.txt 
 ## Ticket checkout (GA4, rates only)
 Checkout completion – (prior –); store visitors who buy 41% (prior 43%); ticket page to store 67%. Steps the store doesn't report: view_item, add_to_cart, begin_checkout, add_payment_info.
 
-Store frustration signals (last 3 days, Clarity): dead clicks 19.9% of sessions, rage clicks 0.1%, quick backs 44.0%, scroll depth 77.2%.
+Store frustration signals (last 3 days, Clarity): dead clicks 20.2% of sessions, rage clicks 0.3%, quick backs 44.8%, scroll depth 78.0%.
 
 | Store page | Dead % | Rage % | Quick back % | Scroll % |
 |---|---|---|---|---|
-| orders/forms | 50 | 0 | 0 | 100 |
-| membership/upgrade | 0 | 0 | 16.6 | 100 |
-| orders/tickets | 50 | 0 | 0 | 74 |
+| membership/upgrade | 0 | 0 | 12.5 | 98.4 |
+| orders/tickets | 50 | 0 | 25 | 59 |
 | private-events/inquiry | 0 | 0 | 0 | 94 |
-| membership/detail | 6.2 | 0 | 36.1 | 91.3 |
-| checkout/confirm | 4.6 | 0 | 2.2 | 99.4 |
-| checkout/process | 50 | 0 | 0 | 99.5 |
-| media/edit | 0 | 0 | 25 | 100 |
-| project/living-building-challenge | 0 | 0 | 0 | 23 |
-| tickets | 13.3 | 0 | 53.3 | 42.5 |
-| bullet-speech | 0 | 0 | 0 | 99 |
-| tr | 0 | 0 | 0 | 26.2 |
+| membership/detail | 5.4 | 0 | 31.1 | 97.3 |
+| orders/forms | 0 | 0 | 0 | 100 |
+| checkout/confirm | 5.8 | 0 | 2.3 | 99.2 |
+| private-events/spaces | 0 | 0 | 0 | 99 |
+| checkout/process | 87.5 | 0 | 0 | 100 |
+| tickets | 14.3 | 0 | 54.3 | 40.1 |
+| bullet-speech | 0 | 0 | 0 | 14 |
 | calendar/special-event/america-beautiful-film-screening | 0 | 0 | 0 | 28 |
-| orders/calendar | 0 | 0 | 50 | 100 |
-| auth/members | 0 | 0 | 25 | 93.8 |
 | video/view/qrwdZmqFO5A | 0 | 0 | 0 | 50 |
-| tr/people | 0 | 0 | 0 | 7 |
-| visit/faq/rules-safety | 0 | 0 | 0 | 95 |
-| membership/profile | 0 | 0 | 50 | 100 |
+| tr | 0 | 0 | 0 | 47 |
+| visit/faq/rules-safety | 0 | 0 | 0 | 100 |
 | tr/people/alice-longworth/1905-asia-mission | 0 | 0 | 0 | 87.3 |
 | tr/birthday | 0 | 0 | 0 | 60 |
-| visit/itineraries/black-hills-loop | 0 | 0 | 0 | 59 |
 | tr/birthday-timeline | 0 | 0 | 0 | 60.2 |
 | tr/badlands/elkhorn-ranch | 100 | 0 | 0 | 10 |
 | events/detail | 0 | 0 | 0 | 100 |
-| tr/presidency/trust-busting | 0 | 0 | 0 | 26 |
-| project | 0 | 0 | 50 | 72.3 |
-| volunteer | 0 | 0 | 0 | 62 |
-| visit/hours | 0 | 0 | 20 | 50 |
+| orders/calendar | 0 | 0 | 16.6 | 99.8 |
+| tr/presidency/trust-busting | 0 | 0 | 0 | 15 |
+| calendar | 0 | 0 | 0 | 75.5 |
+| project | 0 | 0 | 50 | 74.7 |
+| volunteer | 0 | 0 | 0 | 79.5 |
+| visit/hours | 0 | 0 | 16.7 | 57.5 |
 | visit/wildlife | 0 | 0 | 0 | 19 |
-| calendar/specialty-tour | 0 | 0 | 0 | 56 |
-| membership/join | 0 | 0 | 25 | 39.8 |
-| events/list | 0 | 0 | 0 | 73.5 |
-| calendar | 0 | 0 | 0 | 56.3 |
+| calendar/specialty-tour | 0 | 0 | 100 | 87.5 |
+| membership/join | 0 | 0 | 33.4 | 39.5 |
+| tr/tr-mount-rushmore | 0 | 0 | 0 | 6 |
+| auth/members | 71.5 | 0 | 57.1 | 97.8 |
+| events/list | 0 | 0 | 0 | 80.5 |
 | tr/people/edith-roosevelt/white-house-renovation | 0 | 0 | 0 | 89 |
 | layout_builder/update/block/overrides/node.562/first/d0dda441-5320-486d-bafd-6f461134e2af | 0 | 0 | 0 | 48 |
-| tr/speeches/man-in-the-arena | 20 | 0 | 0 | 73.8 |
-| search | 0 | 0 | 0 | 100 |
-| user | 0 | 0 | 0 | 98.8 |
+| quiz/new-year | 100 | 0 | 0 | 86 |
+| tr/speeches/man-in-the-arena | 50 | 0 | 0 | 49.5 |
+| tr/badlands/where-to-see | 0 | 0 | 0 | 100 |
+| user | 0 | 0 | 0 | 98 |
+| membership/profile | 0 | 0 | 50 | 100 |
+| visit/accessibility | 0 | 0 | 0 | 100 |
 | quiz/who-was-tr | 0 | 0 | 0 | 100 |
-| visit/faq | 0 | 0 | 25 | 78.6 |
-| user/login | 33.3 | 0 | 0 | 100 |
+| search | 0 | 0 | 0 | 54 |
+| tr/badlands | 0 | 0 | 0 | 52.5 |
+| visit/faq | 0 | 0 | 50 | 78.7 |
+| tr/presidency/great-white-fleet | 0 | 0 | 0 | 6 |
 | layout_builder/update/block/overrides/node.561/second/9d96cba7-7dd3-4751-953a-648b9b64db43 | 0 | 0 | 0 | 100 |
 | visit/groups/field-trips | 0 | 0 | 0 | 55 |
 | about/trustees/dr-stephen-dow-beckham | 0 | 0 | 100 | 100 |
 | tr/rise-to-power/governor | 100 | 0 | 0 | 12 |
 | quiz/badlands-wildlife-family | 0 | 0 | 0 | 89.5 |
-| tr/early-life | 0 | 0 | 0 | 81 |
-| tr/quotes | 0 | 0 | 0 | 30 |
+| tr/early-life | 50 | 0 | 50 | 47.8 |
+| tr/quotes | 0 | 0 | 0 | 87 |
 | video/view/c22t8zesYIg | 0 | 0 | 0 | 38 |
-| support | 0 | 0 | 0 | 73.7 |
+| support | 0 | 0 | 0 | 84 |
 | tr/presidency/booker-t-washington | 100 | 0 | 0 | 90 |
-| visit/faq/tickets | 0 | 0 | 33.3 | 52.8 |
+| visit/faq/tickets | 0 | 0 | 0 | 37 |
 | press/clips | 50 | 0 | 0 | 13.7 |
-| video/view/-mcN1M3ZEps | 0 | 0 | 0 | 40.3 |
-| teach-tr | 0 | 0 | 0 | 59.7 |
+| video/view/-mcN1M3ZEps | 0 | 0 | 0 | 57.4 |
+| teach-tr | 0 | 0 | 0 | 24 |
 | tr/presidency/railroad-regulation | 0 | 0 | 0 | 12 |
 | tr/presidency/conservation/national-forests | 0 | 0 | 0 | 10 |
 | tr/presidency | 0 | 0 | 0 | 51 |
 | quiz/the-boardwalk | 0 | 0 | 0 | 57 |
-| membership | 0 | 0 | 0 | 40.4 |
+| membership | 0 | 0 | 0 | 54.7 |
 | tr/new-york-politics/convention-1884 | 0 | 0 | 0 | 8 |
+| tr/presidency/second-term | 0 | 0 | 0 | 10 |
 | tr/complex-legacy/equestrian-statue | 0 | 0 | 0 | 9 |
 | layout_builder/update/block/overrides/node.567/second/a5d0ee1a-9a38-4f5a-88cd-18c6818a5033 | 0 | 0 | 0 | 48 |
-| tr/badlands-timeline | 0 | 0 | 0 | 10 |
-| tr/presidency/conservation | 0 | 0 | 50 | 38 |
-| contact | 0 | 0 | 0 | 79 |
-| visit | 0 | 0 | 0 | 36 |
-| tr/badlands | 0 | 0 | 50 | 57.5 |
-| about/trustees/dick-boyce | 0 | 0 | 0 | 81 |
+| tr/post-presidency/death | 100 | 0 | 0 | 100 |
+| tr/badlands-timeline | 0 | 0 | 0 | 17.8 |
+| tr/presidency/conservation | 0 | 0 | 0 | 42 |
+| contact | 0 | 0 | 0 | 100 |
+| tr/post-presidency/bull-moose | 0 | 0 | 0 | 86 |
 | tr/quotes/citizenship | 0 | 0 | 0 | 8 |
+| tr/badlands/first-trip | 0 | 0 | 0 | 89 |
 | visit/exhibits/artificial-intelligence | 0 | 0 | 0 | 100 |
-| tr/family/fdr-connection | 0 | 0 | 0 | 32 |
-| visit/weather | 0 | 0 | 0 | 39 |
-| visit/tours | 0 | 0 | 0 | 78.7 |
-| qa-page | 0 | 0 | 0 | 37.2 |
-| about/press | 0 | 0 | 0 | 80.5 |
-| tr/speeches | 33.3 | 0 | 33.3 | 55.7 |
-| visit/faq/during-your-visit | 0 | 0 | 50 | 93 |
+| tr/family/fdr-connection | 0 | 0 | 0 | 72 |
+| visit/tours | 0 | 0 | 0 | 68 |
+| about/press | 0 | 0 | 0 | 76.8 |
+| tr/speeches | 0 | 0 | 0 | 58 |
+| visit/faq/during-your-visit | 0 | 0 | 0 | 90 |
 | video/view/W9sq8PuGQVo | 0 | 0 | 0 | 86 |
-| calendar/special-event | 0 | 0 | 0 | 83 |
-| about/trustees | 0 | 0 | 33.3 | 66.9 |
-| about/mission | 0 | 0 | 0 | 100 |
+| about/trustees | 0 | 0 | 50 | 64.9 |
+| tr/rise-to-power/buffalo-soldiers | 0 | 0 | 0 | 6 |
 | staff-members/susan-sarna | 0 | 0 | 0 | 71 |
 | video/view/yEEsRy7sdng | 0 | 0 | 0 | 93 |
 | about/press/press-releases/sarah-and-ross-perot-jr-foundation-gifts-5-million-theodore-roosevelt | 0 | 0 | 0 | 56 |
 | tr/presidency/panama-canal | 0 | 0 | 0 | 19 |
-| visit/faq/food-drink | 0 | 0 | 0 | 97 |
-| visit/national-park | 0 | 0 | 0 | 31 |
 | tr/quotes/strenuous-life | 0 | 0 | 0 | 9 |
-| membership/renew | 0 | 0 | 25 | 92 |
+| membership/renew | 0 | 0 | 16.7 | 95.4 |
 | layout_builder/update/block/overrides/node.561/first/8e7c0573-1dbc-406c-94cb-a8365634655d | 0 | 0 | 0 | 100 |
-| project/sustainability | 100 | 0 | 0 | 100 |
-| visit/directions | 20 | 0 | 0 | 13 |
-| visit/eat | 0 | 0 | 0 | 42.7 |
+| visit/directions | 0 | 0 | 0 | 25.8 |
+| visit/eat | 0 | 0 | 0 | 41.8 |
 | about/trustees/hilary-hamm | 0 | 0 | 0 | 86 |
+| tr/conservation | 0 | 0 | 0 | 87 |
 | tr/presidency/conservation/national-monuments | 0 | 0 | 0 | 9 |
-| research | 0 | 0 | 0 | 59.8 |
-| staff-members | 0 | 0 | 0 | 49.5 |
+| research | 0 | 0 | 0 | 54.5 |
+| visit/faq/photography | 0 | 0 | 0 | 100 |
+| video/view/k3U8V1HmKDs | 0 | 0 | 0 | 29 |
+| staff-members | 0 | 0 | 0 | 73 |
 | programs | 0 | 0 | 100 | 100 |
-| calendar/medora | 0 | 0 | 0 | 94.7 |
-| visit/tickets | 0 | 0 | 100 | 87 |
+| calendar/medora | 0 | 0 | 0 | 96 |
 | about | 0 | 0 | 0 | 39 |
 | tr/people/edith-roosevelt | 0 | 0 | 0 | 86 |
-| visit/tickets/plan-ahead | 0 | 0 | 100 | 83 |
+| visit/tickets/plan-ahead | 75 | 0 | 0 | 80.7 |
 | quiz/native-plant-project | 0 | 0 | 0 | 78 |
 | video/playlist/PLafKMriNZlgo | 0 | 0 | 0 | 73 |
 | video/view/KRj81Cqm09I | 0 | 0 | 0 | 80.5 |
-| about/careers | 0 | 0 | 0 | 64.1 |
+| about/careers | 0 | 0 | 0 | 58 |
 | tr/timeline | 0 | 0 | 0 | 34 |
 | tr/holidays | 0 | 0 | 0 | 75.7 |
 | tr/legacy/teddy-bear | 100 | 0 | 0 | 12 |
 | tr/thanksgiving-timeline | 0 | 0 | 0 | 67.7 |
 | tr/conservation/quotes | 0 | 0 | 0 | 8 |
-| tr/legacy | 0 | 0 | 0 | 51.5 |
-| / | 0 | 0 | 16.7 | 14.8 |
-| visit/exhibits | 0 | 0 | 0 | 82 |
+| visit/exhibits | 0 | 0 | 0 | 76.2 |
 | tr/tr-shot | 0 | 0 | 0 | 97 |
 | tr/post-presidency/bull-moose/platform | 0 | 0 | 0 | 66 |
+| media/add/image | 0 | 0 | 0 | 100 |
 | press/press-releases | 0 | 0 | 100 | 14 |
-| media/revisions | 0 | 0 | 0 | 100 |
-| tr/conservation | 0 | 0 | 0 | 87 |
-| about/trustees/dr-chevy-humphrey | 0 | 0 | 0 | 53 |
-| visit/scenic-drives | 0 | 0 | 0 | 96 |
+| / | 0 | 0 | 0 | 11 |
+| visit | 0 | 0 | 0 | 36 |
+| visit/scenic-drives | 50 | 0 | 50 | 38 |
 | visit/activities | 0 | 0 | 0 | 13 |
 | tr/christmas | 0 | 0 | 0 | 68 |
 | tr/family | 0 | 0 | 0 | 94 |
 | podcast/good-citizen/call-adventure-charlie-melcher-ed-okeefe-and-brand-new-theodore-roosevelt | 100 | 0 | 0 | 10 |
-| visit/itineraries/weekend-drives/bismarck | 0 | 0 | 0 | 100 |
 | podcast/good-citizen/dana-milbank-retreat-restore-rehumanize | 100 | 0 | 0 | 7 |
+| staff-members/jayna-wiens | 0 | 0 | 0 | 91 |
 | video/view/zRPJAdE-IBI | 0 | 0 | 0 | 52 |
-| legislative-day/rsvp/results | 14.3 | 0 | 0 | 68.6 |
-| join-us | 0 | 0 | 100 | 56.9 |
+| legislative-day/rsvp/results | 0 | 0 | 0 | 68.6 |
 | tr/early-life/father | 0 | 0 | 0 | 94 |
 | visit/shopping | 0 | 0 | 0 | 94 |
 | about/trustees/douglas-brinkley | 0 | 0 | 0 | 70 |
-| about/press/press-releases/trplf-announces-100-million-commitments-unlocks-50-million-state | 100 | 0 | 0 | 59.5 |
-| video/view/q-lbQRxZ7uI | 0 | 0 | 0 | 100 |
-| visit/stargazing | 0 | 0 | 0 | 37 |
+| tr/complex-legacy/race | 0 | 0 | 0 | 92 |
 | tr/badlands/frontier-life | 0 | 0 | 0 | 92 |
 | tr/legacy/rankings | 0 | 0 | 0 | 6 |
-| tr/speeches/inaugural | 0 | 0 | 0 | 47.5 |
-| visit/lodging | 50 | 0 | 50 | 26.2 |
+| tr/speeches/inaugural | 0 | 0 | 0 | 5 |
+| visit/lodging | 42.9 | 0 | 14.3 | 43.6 |
 | visit/faq/getting-here | 0 | 0 | 0 | 74 |
+| tr/quotes/misquotes | 0 | 0 | 0 | 86 |
 | tr/square-deal | 0 | 0 | 0 | 12 |
 | tr/presidency/conservation/reclamation | 100 | 0 | 0 | 10 |
-| podcast/good-citizen/kermit-roosevelt-iii | 0 | 0 | 0 | 12 |
 | brand | 0 | 0 | 0 | 85.5 |
 | quiz/badlands-family | 0 | 0 | 0 | 57 |
 | tr/family/roosevelt-women | 0 | 0 | 50 | 70.6 |
-| tr/presidency/coal-strike | 100 | 0 | 0 | 99 |
-| tr/quotes/leadership | 0 | 0 | 0 | 8 |
-| about/trustees/theodore-roosevelt-v | 0 | 0 | 0 | 100 |
-| tr/teddy-nickname | 0 | 0 | 0 | 6 |
+| tr/quotes/leadership | 0 | 0 | 0 | 21.5 |
+| about/trustees/theodore-roosevelt-v | 0 | 0 | 0 | 90 |
 | layout_builder/update/block/overrides/node.525/second/7e5c56e3-7eae-4cc4-9e20-e34f0f7c778f | 0 | 0 | 0 | 43 |
+| user/login | 0 | 0 | 0 | 100 |
+| tr/badlands/maltese-cross | 0 | 0 | 0 | 94 |
+| tr/post-presidency/assassination-attempt | 100 | 0 | 0 | 8 |
+| video | 0 | 0 | 0 | 49.7 |
+| tr/complex-legacy/eugenics | 100 | 0 | 0 | 68 |
+| visit/exhibits/main | 50 | 0 | 0 | 15 |
+| legal/privacy | 0 | 0 | 0 | 6.7 |
+| tr/people/edith-roosevelt/first-lady | 0 | 0 | 0 | 100 |
+| tr/presidency/conservation/national-parks | 33.3 | 0 | 0 | 26.3 |
+| visit/maps | 0 | 0 | 0 | 59 |
+| tr/early-life/young-naturalist | 0 | 0 | 0 | 14 |
+| signature-experiences | 0 | 0 | 0 | 76 |
+| tr/christmas-timeline | 0 | 0 | 0 | 67.2 |
+| tr/complex-legacy/native-americans | 0 | 0 | 0 | 7 |
+| tr/thanksgiving | 0 | 0 | 0 | 66.3 |
 
 ## Raw data
 All JSON, refreshed daily (Search Console) and weekly (everything else):
