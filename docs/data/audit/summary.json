@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-20T05:12:15+00:00",
+ "updated": "2026-10-26T14:14:30+00:00",
  "site": "https://www.trlibrary.com",
- "sitemap_urls": 1112,
- "crawled": 1074,
+ "sitemap_urls": 1144,
+ "crawled": 1105,
  "score": 96,
  "ai_score": 60,
  "issues": [
@@ -19,22 +19,22 @@
    "pages": 35
   },
   {
-   "code": "h1_missing",
-   "severity": "medium",
-   "label": "No H1 heading",
-   "pages": 27
-  },
-  {
    "code": "og_missing",
    "severity": "medium",
    "label": "Missing Open Graph tags",
-   "pages": 24
+   "pages": 30
   },
   {
    "code": "meta_missing",
    "severity": "medium",
    "label": "No meta description",
-   "pages": 23
+   "pages": 29
+  },
+  {
+   "code": "h1_missing",
+   "severity": "medium",
+   "label": "No H1 heading",
+   "pages": 27
   },
   {
    "code": "redirect_in_sitemap",
@@ -46,19 +46,19 @@
    "code": "title_too_long",
    "severity": "low",
    "label": "Title over 60 characters, not counting the site-name suffix",
-   "pages": 267
+   "pages": 263
   },
   {
    "code": "thin_content",
    "severity": "low",
    "label": "Under 150 words of body text",
-   "pages": 230
+   "pages": 235
   },
   {
    "code": "title_too_short",
    "severity": "low",
    "label": "Title under 15 characters, not counting the site-name suffix",
-   "pages": 149
+   "pages": 147
   },
   {
    "code": "meta_duplicate",
@@ -67,10 +67,16 @@
    "pages": 126
   },
   {
+   "code": "slow",
+   "severity": "low",
+   "label": "Took over 3 seconds to respond",
+   "pages": 29
+  },
+  {
    "code": "h1_multiple",
    "severity": "low",
    "label": "More than one H1",
-   "pages": 23
+   "pages": 21
   },
   {
    "code": "meta_too_short",
@@ -80,48 +86,48 @@
   }
  ],
  "status_codes": {
-  "200": 1074
+  "200": 1105
  },
  "slowest": [
   {
-   "url": "https://www.trlibrary.com/video/view/Hfr1_zZTi_8",
-   "seconds": 2.21
+   "url": "https://www.trlibrary.com/beam-signing-ceremony",
+   "seconds": 8.24
   },
   {
-   "url": "https://www.trlibrary.com/video/view/YC1qwFurRV0",
-   "seconds": 0.61
+   "url": "https://www.trlibrary.com/visit/itineraries/13-day-denver-wyoming",
+   "seconds": 5.36
   },
   {
-   "url": "https://www.trlibrary.com/video/view/b_qkJUPuafU",
-   "seconds": 0.54
+   "url": "https://www.trlibrary.com/visit/itineraries/7-day-billings-bismarck",
+   "seconds": 4.82
   },
   {
-   "url": "https://www.trlibrary.com/video/view/s2lndF5ZZ60",
-   "seconds": 0.5
+   "url": "https://www.trlibrary.com/video/view/lgvwRZFLvdw",
+   "seconds": 4.2
   },
   {
-   "url": "https://www.trlibrary.com/video/view/dD83eHTH6t8",
-   "seconds": 0.49
+   "url": "https://www.trlibrary.com/tr/people/marquis-de-mores",
+   "seconds": 3.98
   },
   {
-   "url": "https://www.trlibrary.com/video/view/88J39-TLM7o",
-   "seconds": 0.45
+   "url": "https://www.trlibrary.com/visit/roosevelt-in-medora",
+   "seconds": 3.97
   },
   {
-   "url": "https://www.trlibrary.com/tr/badlands-timeline",
-   "seconds": 0.42
+   "url": "https://www.trlibrary.com/tr/presidency/white-house-workers",
+   "seconds": 3.85
   },
   {
-   "url": "https://www.trlibrary.com/tr/books-and-writings/complete-list",
-   "seconds": 0.41
+   "url": "https://www.trlibrary.com/visit/medora",
+   "seconds": 3.82
   },
   {
-   "url": "https://www.trlibrary.com/event/24",
-   "seconds": 0.38
+   "url": "https://www.trlibrary.com/video/view/lK2X0xyhtfs",
+   "seconds": 3.54
   },
   {
-   "url": "https://www.trlibrary.com/video/view/e-9LOmU1JK0",
-   "seconds": 0.37
+   "url": "https://www.trlibrary.com/video/view/IweEqPAOl_w",
+   "seconds": 3.53
   }
  ],
  "robots": {
@@ -142,22 +148,23 @@
  },
  "llms_txt": false,
  "structured_data_types": {
-  "EntryPoint": 1074,
-  "PostalAddress": 1074,
-  "OpeningHoursSpecification": 1074,
-  "GeoCoordinates": 1074,
-  "ImageObject": 1074,
-  "SearchAction": 1074,
-  "WebSite": 1074,
-  "BreadcrumbList": 1073,
-  "ListItem": 1073,
-  "Person": 271,
+  "GeoCoordinates": 1105,
+  "EntryPoint": 1105,
+  "SearchAction": 1105,
+  "PostalAddress": 1105,
+  "WebSite": 1105,
+  "OpeningHoursSpecification": 1105,
+  "ImageObject": 1105,
+  "BreadcrumbList": 1104,
+  "ListItem": 1104,
+  "Person": 292,
   "Place": 59,
   "Event": 59,
+  "Offer": 21,
   "NewsArticle": 19,
-  "Answer": 17,
-  "Question": 17,
-  "FAQPage": 17,
+  "Answer": 19,
+  "FAQPage": 19,
+  "Question": 19,
   "Schedule": 8
  },
  "sitewide_structured_data": [
@@ -171,6 +178,6 @@
   "SearchAction",
   "WebSite"
  ],
- "page_specific_structured_data": 363,
+ "page_specific_structured_data": 385,
  "title_suffix": " | Theodore Roosevelt Presidential Library"
 }

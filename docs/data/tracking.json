@@ -1,0 +1,118 @@
+{
+ "keywords": [
+  {
+   "keyword": "teddy roosevelt national park",
+   "group": "Auto: Visit",
+   "status": "active",
+   "added": "2026-10-26",
+   "reason": "position 8.6, 2000 impressions/28d; Key regional trip-planning search directly adjacent to the Library in Medora.",
+   "score": 322
+  },
+  {
+   "keyword": "enchanted highway",
+   "group": "Auto: Visit",
+   "status": "active",
+   "added": "2026-10-26",
+   "reason": "position 8.6, 2123 impressions/28d; Major North Dakota travel attraction relevant to Badlands visitors and road trip planners.",
+   "score": 343
+  },
+  {
+   "keyword": "mount rushmore presidents",
+   "group": "Auto: Visit",
+   "status": "active",
+   "added": "2026-10-26",
+   "reason": "position 4.8, 5953 impressions/28d; Regional heritage travelers connecting Theodore Roosevelt to Dakota Black Hills and Badlands itineraries.",
+   "score": 632
+  },
+  {
+   "keyword": "teddy roosevelt",
+   "group": "Auto: History",
+   "status": "active",
+   "added": "2026-10-26",
+   "reason": "position 8.8, 7588 impressions/28d; High-volume core biographical search for Roosevelt's life, career, and legacy.",
+   "score": 802
+  },
+  {
+   "keyword": "theodore roosevelt died",
+   "group": "Auto: History",
+   "status": "active",
+   "added": "2026-10-26",
+   "reason": "position 5.5, 2618 impressions/28d; Foundational biographical search regarding the end of Roosevelt's life.",
+   "score": 278
+  }
+ ],
+ "prompts": [
+  {
+   "id": "auto-what-were-theodore-roosevelt-s-major-accomplishmen",
+   "group": "History",
+   "text": "What were Theodore Roosevelt's major accomplishments, conservation work, and legacy?",
+   "source_query": "what was theodore roosevelt known for",
+   "status": "active",
+   "added": "2026-10-26",
+   "reason": "from the Google search \"what was theodore roosevelt known for\"; Core overview query establishing the Library as the authoritative source on Roosevelt's life and achievements.",
+   "auto": true
+  },
+  {
+   "id": "auto-can-you-explain-theodore-roosevelt-s-square-deal-d",
+   "group": "History",
+   "text": "Can you explain Theodore Roosevelt's Square Deal domestic policy and its main goals?",
+   "source_query": "what was the square deal",
+   "status": "active",
+   "added": "2026-10-26",
+   "reason": "from the Google search \"what was the square deal\"; Signature domestic policy topic essential for student research and civic education.",
+   "auto": true
+  }
+ ],
+ "log": [
+  {
+   "date": "2026-10-26",
+   "action": "added",
+   "kind": "question",
+   "item": "Can you explain Theodore Roosevelt's Square Deal domestic policy and its main goals?",
+   "reason": "from the Google search \"what was the square deal\"; Signature domestic policy topic essential for student research and civic education."
+  },
+  {
+   "date": "2026-10-26",
+   "action": "added",
+   "kind": "question",
+   "item": "What were Theodore Roosevelt's major accomplishments, conservation work, and legacy?",
+   "reason": "from the Google search \"what was theodore roosevelt known for\"; Core overview query establishing the Library as the authoritative source on Roosevelt's life and achievements."
+  },
+  {
+   "date": "2026-10-26",
+   "action": "added",
+   "kind": "keyword",
+   "item": "theodore roosevelt died",
+   "reason": "position 5.5, 2618 impressions/28d; Foundational biographical search regarding the end of Roosevelt's life."
+  },
+  {
+   "date": "2026-10-26",
+   "action": "added",
+   "kind": "keyword",
+   "item": "teddy roosevelt",
+   "reason": "position 8.8, 7588 impressions/28d; High-volume core biographical search for Roosevelt's life, career, and legacy."
+  },
+  {
+   "date": "2026-10-26",
+   "action": "added",
+   "kind": "keyword",
+   "item": "mount rushmore presidents",
+   "reason": "position 4.8, 5953 impressions/28d; Regional heritage travelers connecting Theodore Roosevelt to Dakota Black Hills and Badlands itineraries."
+  },
+  {
+   "date": "2026-10-26",
+   "action": "added",
+   "kind": "keyword",
+   "item": "enchanted highway",
+   "reason": "position 8.6, 2123 impressions/28d; Major North Dakota travel attraction relevant to Badlands visitors and road trip planners."
+  },
+  {
+   "date": "2026-10-26",
+   "action": "added",
+   "kind": "keyword",
+   "item": "teddy roosevelt national park",
+   "reason": "position 8.6, 2000 impressions/28d; Key regional trip-planning search directly adjacent to the Library in Medora."
+  }
+ ],
+ "updated": "2026-10-26T14:15:10+00:00"
+}

@@ -100,5 +100,117 @@
     "perplexity": false
    }
   }
+ },
+ {
+  "date": "2026-10-26",
+  "overall": {
+   "n": 51,
+   "mention_rate": 0.412,
+   "cite_rate": 0.431
+  },
+  "providers": {
+   "openai": {
+    "n": 17,
+    "mention_rate": 0.706,
+    "cite_rate": 0.588
+   },
+   "gemini": {
+    "n": 17,
+    "mention_rate": 0.353,
+    "cite_rate": 0.235
+   },
+   "perplexity": {
+    "n": 17,
+    "mention_rate": 0.176,
+    "cite_rate": 0.471
+   }
+  },
+  "prompts": {
+   "trnp-what-to-see": {
+    "openai": true,
+    "gemini": false,
+    "perplexity": false
+   },
+   "medora-things-to-do": {
+    "openai": true,
+    "gemini": false,
+    "perplexity": true
+   },
+   "nd-road-trip": {
+    "openai": true,
+    "gemini": false,
+    "perplexity": false
+   },
+   "rushmore-to-trnp": {
+    "openai": true,
+    "gemini": false,
+    "perplexity": false
+   },
+   "i94-stops": {
+    "openai": true,
+    "gemini": false,
+    "perplexity": false
+   },
+   "family-badlands": {
+    "openai": false,
+    "gemini": false,
+    "perplexity": false
+   },
+   "rainy-day-medora": {
+    "openai": true,
+    "gemini": true,
+    "perplexity": false
+   },
+   "nd-museums": {
+    "openai": false,
+    "gemini": false,
+    "perplexity": false
+   },
+   "newest-presidential-library": {
+    "openai": true,
+    "gemini": true,
+    "perplexity": true
+   },
+   "presidential-libraries-visit": {
+    "openai": true,
+    "gemini": true,
+    "perplexity": false
+   },
+   "tr-learn-where": {
+    "openai": true,
+    "gemini": true,
+    "perplexity": true
+   },
+   "tr-sites": {
+    "openai": false,
+    "gemini": false,
+    "perplexity": false
+   },
+   "tr-library-worth-it": {
+    "openai": true,
+    "gemini": true,
+    "perplexity": false
+   },
+   "tr-library-time": {
+    "openai": true,
+    "gemini": true,
+    "perplexity": false
+   },
+   "tr-library-tickets": {
+    "openai": true,
+    "gemini": false,
+    "perplexity": false
+   },
+   "auto-what-were-theodore-roosevelt-s-major-accomplishmen": {
+    "openai": false,
+    "gemini": false,
+    "perplexity": false
+   },
+   "auto-can-you-explain-theodore-roosevelt-s-square-deal-d": {
+    "openai": false,
+    "gemini": false,
+    "perplexity": false
+   }
+  }
  }
 ]

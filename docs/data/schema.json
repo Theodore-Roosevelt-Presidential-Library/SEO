@@ -1,0 +1,7002 @@
+{
+ "generated": "2026-10-26T14:42:29+00:00",
+ "summary": {
+  "pages_read": 1013,
+  "pages_with_own_markup": 350,
+  "typed_pages": 863,
+  "typed_pages_done": 96,
+  "coverage_pct": 11,
+  "faq_pages": 20,
+  "faq_questions": 144,
+  "sitewide_issues": 9,
+  "high": 4,
+  "llms_txt": false
+ },
+ "sitewide": [
+  {
+   "id": "stale_description",
+   "severity": "high",
+   "title": "Sitewide description still says the Library is about to open",
+   "detail": "Library: “Independently operated presidential library in Medora, North Dakota, dedicated to the life, legacy, and ideals of Theodore Roosevelt. Opens July 4, 2026.” · Website: “The official website of the Theodore Roosevelt Presidential Library, opening July 4, 2026 in Medora, North Dakota.”",
+   "fix": "Update the description in the sitewide schema (Drupal Metatag/Schema settings) to present tense, e.g. “Presidential library and museum in Medora, North Dakota, dedicated to the life, legacy, and ideals of Theodore Roosevelt. Opened July 4, 2026.” AI tools copy this sentence into answers."
+  },
+  {
+   "id": "sameas",
+   "severity": "high",
+   "title": "Sitewide markup doesn't link to the Library's Wikipedia or Wikidata entry",
+   "detail": "sameAs lists only social accounts. Wikipedia and Wikidata links are how search engines and AI tools confirm that trlibrary.com is the same Theodore Roosevelt Presidential Library they know about.",
+   "fix": "Add these to sameAs in the sitewide schema.",
+   "snippet": {
+    "sameAs": [
+     "https://en.wikipedia.org/wiki/Theodore_Roosevelt_Presidential_Library",
+     "https://www.wikidata.org/wiki/Q104858042"
+    ]
+   }
+  },
+  {
+   "id": "tr_entity",
+   "severity": "high",
+   "title": "236 pages point to a Theodore Roosevelt entity that is never defined",
+   "detail": "Every /tr page says it's about https://www.trlibrary.com/tr/#person, but no page says who that is: no name, no Wikidata link. To a machine it's an empty placeholder, so the link to the real Theodore Roosevelt is lost.",
+   "fix": "Define the entity once in the sitewide @graph (so every page carries it). This is the single highest-value change for the /tr section.",
+   "snippet": {
+    "@type": "Person",
+    "@id": "https://www.trlibrary.com/tr/#person",
+    "name": "Theodore Roosevelt",
+    "alternateName": [
+     "TR",
+     "Teddy Roosevelt"
+    ],
+    "birthDate": "1858-10-27",
+    "deathDate": "1919-01-06",
+    "jobTitle": "26th President of the United States",
+    "sameAs": [
+     "https://en.wikipedia.org/wiki/Theodore_Roosevelt",
+     "https://www.wikidata.org/wiki/Q33866"
+    ]
+   },
+   "examples": [
+    "/tr/timeline",
+    "/tr/presidency-timeline",
+    "/tr/badlands-timeline",
+    "/tr/kids-timeline",
+    "/bullet-speech"
+   ]
+  },
+  {
+   "id": "llms_txt",
+   "severity": "high",
+   "title": "www.trlibrary.com has no llms.txt",
+   "detail": "llms.txt is a plain-text guide that tells AI tools what the site covers and which pages matter. A draft built from the sitemap is attached.",
+   "fix": "Review the draft, then ask FiveJars to serve it at https://www.trlibrary.com/llms.txt.",
+   "file": "data/site-llms.txt"
+  },
+  {
+   "id": "mixed_hours",
+   "severity": "medium",
+   "title": "Restaurant and store hours are listed as the museum's hours",
+   "detail": "The museum entity carries 15 hours entries, including restaurant, store hours. Machines can't tell which hours mean the museum is open.",
+   "fix": "Keep only museum hours on the Library entity. Give the restaurant and the store their own entities (Restaurant, Store) with their hours, linked with containsPlace.",
+   "snippet": {
+    "containsPlace": [
+     {
+      "@type": "Restaurant",
+      "name": "TODO: restaurant name",
+      "servesCuisine": "TODO: cuisine",
+      "openingHoursSpecification": "TODO: restaurant hours"
+     },
+     {
+      "@type": "Store",
+      "name": "TODO: store name",
+      "openingHoursSpecification": "TODO: store hours"
+     }
+    ]
+   }
+  },
+  {
+   "id": "admission",
+   "severity": "medium",
+   "title": "No admission information in the markup",
+   "detail": "“How much are tickets?” is one of the most common visitor questions. The markup has no price or ticket link.",
+   "fix": "Add admission offers (and isAccessibleForFree: false) to the Library entity.",
+   "snippet": {
+    "isAccessibleForFree": false,
+    "publicAccess": true,
+    "makesOffer": [
+     {
+      "@type": "Offer",
+      "name": "General admission",
+      "price": "TODO: adult price",
+      "priceCurrency": "USD",
+      "url": "https://www.trlibrary.com/visit/tickets"
+     }
+    ]
+   }
+  },
+  {
+   "id": "node_urls",
+   "severity": "medium",
+   "title": "35 unaliased /node/ URLs are in the sitemap",
+   "detail": "These are duplicate addresses for pages that have proper URLs (or old, unpublished-looking items). They waste crawler time and split signals between two addresses.",
+   "fix": "Ask FiveJars to leave unaliased /node/ URLs out of the XML sitemap.",
+   "examples": [
+    "https://www.trlibrary.com/node/205",
+    "https://www.trlibrary.com/node/213",
+    "https://www.trlibrary.com/node/22",
+    "https://www.trlibrary.com/node/23",
+    "https://www.trlibrary.com/node/236",
+    "https://www.trlibrary.com/node/237",
+    "https://www.trlibrary.com/node/238",
+    "https://www.trlibrary.com/node/239"
+   ]
+  },
+  {
+   "id": "date_format",
+   "severity": "low",
+   "title": "22 pages have dates without a colon in the time zone",
+   "detail": "For example datePublished “2020-10-27T06:00:00-0600” on /about/press/press-releases/trplf-announces-100-million-commitments-unlocks-50-million-state. Strict ISO 8601 wants “-06:00”, and some validators reject the short form.",
+   "fix": "In the Drupal schema templates, format dateModified, datePublished, endDate, startDate with the PHP date format “c” (e.g. 2020-10-27T06:00:00-06:00)."
+  },
+  {
+   "id": "og_type",
+   "severity": "low",
+   "title": "277 articles are labelled og:type “website”",
+   "detail": "Social and AI previews treat them as generic pages rather than articles.",
+   "fix": "Set og:type to “article” on /tr, press release and podcast templates (Drupal Metatag)."
+  }
+ ],
+ "groups": [
+  {
+   "incomplete": 0,
+   "property_gaps": {},
+   "key": "tr_articles",
+   "label": "TR history articles",
+   "schema_type": "Article",
+   "why": "The /tr section is the Library's richest content for AI answers. Article markup says who published it, when it was updated, and that it's about Theodore Roosevelt (linked to his Wikidata entry).",
+   "drupal": "Add Article JSON-LD to the /tr article template with about = Theodore Roosevelt (the sitewide #theodore-roosevelt entity) and dateModified from the node's changed date.",
+   "pages": 159,
+   "done": 0,
+   "missing": 159,
+   "example": {
+    "path": "/tr/badlands/bad-lands-cow-boy",
+    "jsonld": {
+     "@context": "https://schema.org",
+     "@type": "Article",
+     "@id": "https://www.trlibrary.com/tr/badlands/bad-lands-cow-boy#main",
+     "headline": "The Bad Lands Cow Boy: Medora's Newspaper, 1884–1886",
+     "url": "https://www.trlibrary.com/tr/badlands/bad-lands-cow-boy",
+     "description": "Read The Bad Lands Cow Boy, Medora's newspaper of 1884–86, week by week: the town Theodore Roosevelt knew, its people, news and ads, all searchable.",
+     "image": "https://www.trlibrary.com/sites/default/files/2026-10/bad-lands-cow-boy-share.jpg",
+     "dateModified": "2026-10-12T10:53:50-06:00",
+     "author": {
+      "@id": "https://www.trlibrary.com/#organization"
+     },
+     "publisher": {
+      "@id": "https://www.trlibrary.com/#organization"
+     },
+     "about": {
+      "@id": "https://www.trlibrary.com/tr/#person"
+     },
+     "isPartOf": {
+      "@id": "https://www.trlibrary.com/#website"
+     }
+    }
+   },
+   "items": [
+    {
+     "path": "/tr/badlands/bad-lands-cow-boy",
+     "title": "The Bad Lands Cow Boy: Medora's Newspaper, 1884–1886",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Person",
+      "Question"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands/bad-lands-cow-boy/ads",
+     "title": "What Medora Was Buying: The Ads in The Bad Lands Cow Boy",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands/bad-lands-cow-boy/day-by-day",
+     "title": "Medora Day by Day, 1884–1886",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands/bad-lands-cow-boy/people",
+     "title": "People of the Bad Lands Cow Boy: Who's Who in Medora, 1884–1886",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands/bad-lands-cow-boy/roosevelt",
+     "title": "Roosevelt in the Bad Lands Cow Boy, 1884–1886",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands/boat-thieves",
+     "title": "The Adventure of the Three Boat Thieves: Justice on the Little Missouri",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands/day-in-the-life",
+     "title": "A Day in the Life of a Dakota Rancher",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands/elkhorn-ranch",
+     "title": "Elkhorn Ranch: The Cradle of Conservation",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands/first-trip",
+     "title": "TR’s First Trip West: The Buffalo Hunt That Changed Everything",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands/frontier-life",
+     "title": "Frontier Life in the 1880s Badlands",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands/landscape",
+     "title": "The Badlands Landscape: The Land That Changed Roosevelt",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands/maltese-cross",
+     "title": "Maltese Cross Ranch: Roosevelt's Dakota Foothold",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands/medora",
+     "title": "Medora, North Dakota: From Frontier Boom Town to Living Monument",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands/ten-facts",
+     "title": "Ten Facts About Theodore Roosevelt in the Dakota Badlands",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands/timeline",
+     "title": "The Badlands Years: 1883–1887 Timeline",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands/western-writer",
+     "title": "TR as Western Writer: The Badlands That Made an Author",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands/where-to-see",
+     "title": "Where to See Theodore Roosevelt's North Dakota",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Person",
+      "Question"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands/winter-of-1887",
+     "title": "The Devastating Winter of 1886–87",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/books-and-writings/autobiography",
+     "title": "The Autobiography of Theodore Roosevelt (1913)",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/books-and-writings/complete-list",
+     "title": "Complete List of Theodore Roosevelt's Published Books",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/books-and-writings/reader",
+     "title": "Theodore Roosevelt the Reader",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/complex-legacy/equestrian-statue",
+     "title": "The Equestrian Statue: How We Remember Complex Historical Figures",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/complex-legacy/eugenics",
+     "title": "Theodore Roosevelt and Eugenics: 'Race Suicide' and the Science of the Era",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/complex-legacy/imperialism",
+     "title": "Theodore Roosevelt & American Imperialism: Power, Destiny, and Dominion",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/complex-legacy/native-americans",
+     "title": "Theodore Roosevelt & Native Americans: Conservation, Conquest, and Complicated History",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/complex-legacy/native-nations-timeline",
+     "title": "Same Years, Different Ground: Roosevelt and Native Nations",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/complex-legacy/race",
+     "title": "Theodore Roosevelt & Race: The Record and Its Contradictions",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/conservation/by-the-numbers",
+     "title": "Conservation by the Numbers",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/conservation/quotes",
+     "title": "Conservation in Roosevelt's Own Words",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/early-life/childhood-illness",
+     "title": "\"Make Your Body\": Overcoming Childhood Asthma",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/early-life/civil-war",
+     "title": "A Family Divided: The Roosevelts and the Civil War",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/early-life/day-in-the-life",
+     "title": "A Day in the Life of Young Theodore: Inside the Life of an Extraordinary Boy",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/early-life/family-roots",
+     "title": "The Roosevelt Family Roots",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/early-life/family-travels",
+     "title": "The Roosevelt Family Abroad: Travels That Made a Cosmopolitan",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/early-life/father",
+     "title": "Theodore Roosevelt Sr.: The Man Who Shaped a President",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/early-life/harvard",
+     "title": "Roosevelt at Harvard: The Making of a Historian and Political Thinker",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/early-life/mother",
+     "title": "Martha \"Mittie\" Bulloch Roosevelt: The Southern Belle in New York",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/early-life/siblings",
+     "title": "TR’s Siblings: Bamie, Elliott, and Corinne—Family at Its Best and Worst",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/early-life/ten-facts",
+     "title": "Ten Facts About Theodore Roosevelt’s Early Life",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/early-life/young-naturalist",
+     "title": "The Young Naturalist: Building a Museum in His Bedroom",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/family/children",
+     "title": "Theodore Roosevelt's Children: Alice, Ted, Kermit and More",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/family/elliott-roosevelt",
+     "title": "Elliott Roosevelt: Theodore's Troubled Brother",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/family/family-tree",
+     "title": "The Roosevelt Family Tree",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/family/fdr-connection",
+     "title": "How Theodore and Franklin Roosevelt Were Related",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/family/roosevelt-women",
+     "title": "Women of the Roosevelt World",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/for-educators/elementary",
+     "title": "Teaching Theodore Roosevelt: Elementary School Resources (Grades 3-5)",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/for-educators/high-school",
+     "title": "Teaching Theodore Roosevelt: High School & AP Resources (Grades 9-12)",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/for-educators/middle-school",
+     "title": "Teaching Theodore Roosevelt: Middle School Resources (Grades 6-8)",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/for-educators/roosevelt-women",
+     "title": "Women of the Roosevelt World: A Primary-Source Lesson",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/homes-and-places/birthplace",
+     "title": "Theodore Roosevelt's Birthplace: 28 East 20th Street, New York",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/homes-and-places/pine-knot",
+     "title": "Pine Knot: The Rustic Escape from Power",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/homes-and-places/sagamore-hill",
+     "title": "Sagamore Hill: The Heart of Roosevelt's Home Life",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/homes-and-places/tr-national-park",
+     "title": "Theodore Roosevelt National Park",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/homes-and-places/white-house",
+     "title": "The Roosevelt White House: Renovation, Power, and a Lively Family",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/legacy/film-and-tv",
+     "title": "TR in Film + TV",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/legacy/mount-rushmore",
+     "title": "Mount Rushmore: Why Roosevelt Is Carved in Stone",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/legacy/rankings",
+     "title": "TR in Presidential Rankings: A Consistent Top Tier",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/legacy/teddy-bear",
+     "title": "The Teddy Bear: A Moment of Mercy That Became an Icon",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/legacy/the-library",
+     "title": "The Theodore Roosevelt Presidential Library: Where Vision Becomes Place",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/legacy/words-he-coined",
+     "title": "Words and Phrases TR Popularized: A Verbal Legacy",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/myths/misquotes",
+     "title": "Common Misquotes: What Roosevelt Actually Said",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/new-york-politics/alice-lee",
+     "title": "Alice Hathaway Lee Roosevelt: Theodore's First Love",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/new-york-politics/assembly",
+     "title": "The New York State Assembly: A Cyclone at Age 23",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/new-york-politics/convention-1884",
+     "title": "The 1884 Republican National Convention: When Ideals Meet Politics",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/new-york-politics/double-tragedy",
+     "title": "The Double Tragedy: February 14, 1884",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/new-york-politics/naval-war-of-1812",
+     "title": "The Naval War of 1812: A Young Historian's Masterwork",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/alice-longworth/1905-asia-mission",
+     "title": "Alice and the 1905 Taft Mission",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/alice-longworth/complex-legacy",
+     "title": "Alice Roosevelt Longworth: A Complicated Legacy",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/alice-longworth/in-her-words",
+     "title": "Alice Roosevelt Longworth in Her Own Words",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/alice-longworth/washington-power-broker",
+     "title": "Mrs. L. of Washington",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/bamie/political-adviser",
+     "title": "Bamie, Theodore Roosevelt’s Sounding Board",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/edith-roosevelt/colonial-gardens",
+     "title": "Edith Roosevelt’s Colonial Gardens",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/edith-roosevelt/first-lady",
+     "title": "Edith Roosevelt, First Lady",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/edith-roosevelt/in-her-words",
+     "title": "Edith Roosevelt in Her Own Words",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/edith-roosevelt/later-years",
+     "title": "Edith Roosevelt After the White House",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/edith-roosevelt/presidential-china",
+     "title": "Edith Roosevelt and the Presidential China",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/edith-roosevelt/running-the-white-house",
+     "title": "Running the White House",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/edith-roosevelt/white-house-renovation",
+     "title": "Remaking the White House, 1902",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/ethel/world-war-i",
+     "title": "Ethel Roosevelt Derby’s First World War",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/post-presidency/african-safari",
+     "title": "The African Safari (1909–1910): The Smithsonian Expedition",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/post-presidency/assassination-attempt",
+     "title": "The Assassination Attempt: Milwaukee, October 14, 1912",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/post-presidency/bull-moose",
+     "title": "The Bull Moose Campaign of 1912: The Third-Party Insurgency",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/post-presidency/bull-moose/platform",
+     "title": "The Bull Moose Platform: Progressive Party of 1912",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/post-presidency/death",
+     "title": "Death at Sagamore Hill: January 6, 1919",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/post-presidency/final-visit-medora",
+     "title": "TR's Farewell to the Badlands",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/post-presidency/man-in-the-arena",
+     "title": "TR's 1910 European Tour and the Man in the Arena Speech",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/post-presidency/new-nationalism",
+     "title": "The New Nationalism: Osawatomie, Kansas, August 31, 1910",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/post-presidency/quentin",
+     "title": "The Death of Quentin Roosevelt: July 14, 1918",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/post-presidency/river-of-doubt",
+     "title": "The River of Doubt: The Brazilian Expedition (1913–1914)",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/post-presidency/ten-facts",
+     "title": "Ten Facts About Theodore Roosevelt's Post-Presidency",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/post-presidency/world-war-i",
+     "title": "TR and World War I: Preparedness and Sacrifice",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/booker-t-washington",
+     "title": "The Dinner with Booker T. Washington: Breaking Barriers and Revealing Limits",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/brownsville",
+     "title": "The Brownsville Affair: An Injustice That Took 66 Years to Correct",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/bully-pulpit",
+     "title": "The Bully Pulpit: Roosevelt Invents Modern Presidential Communication",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/cabinet",
+     "title": "Theodore Roosevelt's Cabinet: Strong Minds and Stronger Authority",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/coal-strike",
+     "title": "The Coal Strike of 1902: The President Who Sided with the Miners",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/conservation",
+     "title": "Roosevelt and Conservation",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/conservation/antiquities-act",
+     "title": "The Antiquities Act of 1906: Roosevelt's Conservation Superpower",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/conservation/bird-reserves",
+     "title": "51 Federal Bird Reserves: Roosevelt's Ornithological Vision",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/conservation/gifford-pinchot",
+     "title": "Gifford Pinchot: The Chief Forester and Architect of Conservation",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/conservation/governors-conference",
+     "title": "The 1908 Governors' Conference: Making Conservation a National Movement",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/conservation/john-muir",
+     "title": "Roosevelt and John Muir at Yosemite: The Grandest Day of His Life",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/conservation/midnight-forests",
+     "title": "The Midnight Forests: How Roosevelt Protected 16 Million Acres with a Signature",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/conservation/national-forests",
+     "title": "National Forests: From 47 Million to 194 Million Acres",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/conservation/national-monuments",
+     "title": "National Monuments Proclaimed by Theodore Roosevelt",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/conservation/national-parks",
+     "title": "National Parks Established Under Theodore Roosevelt",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/conservation/reclamation",
+     "title": "The Newlands Reclamation Act: Bringing Water to the Arid West",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/elections",
+     "title": "The Election of 1904: Roosevelt's Mandate and Fateful Promise",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/executive-actions",
+     "title": "Theodore Roosevelt's Executive Orders and Proclamations",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/executive-actions/action",
+     "title": "An Executive Action of Theodore Roosevelt",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/executive-actions/stories",
+     "title": "Stories Behind Roosevelt's Executive Orders",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/executive-actions/story",
+     "title": "A Story Behind Roosevelt's Executive Orders",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/executive-actions/then-and-now",
+     "title": "Then and Now: What Roosevelt's Orders Became",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/executive-power",
+     "title": "Executive Power: The Stewardship Theory and Modern Presidency",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/first-term",
+     "title": "Theodore Roosevelt's First Term",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/food-and-drug",
+     "title": "Pure Food and Drug Act: Protecting the American Table",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/foreign-policy",
+     "title": "Roosevelt's Foreign Policy: America Takes Its Place Among Nations",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/great-white-fleet",
+     "title": "The Great White Fleet: A Voyage Around the World Announces American Power",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/indian-policy",
+     "title": "Roosevelt and Indian Policy",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/japan",
+     "title": "TR and Japan: Admiration, Rivalry, and Racial Tensions",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/nobel-peace-prize",
+     "title": "The Nobel Peace Prize: When the Warrior Became a Peacemaker",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/panama-canal",
+     "title": "The Panama Canal: Roosevelt's Bold Gambit for American Power",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/race",
+     "title": "Roosevelt and Race During the Presidency: A Complicated Legacy",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/railroad-regulation",
+     "title": "Railroad Regulation: Federal Authority Over Private Enterprise",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/roosevelt-corollary",
+     "title": "The Roosevelt Corollary: America as Hemispheric Policeman",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/second-term",
+     "title": "Theodore Roosevelt's Second Term",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/square-deal",
+     "title": "The Square Deal in Depth: Roosevelt as the Nation's Referee",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/strenuous-life-in-office",
+     "title": "The Strenuous Life in the White House",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/ten-facts",
+     "title": "Ten Facts About Theodore Roosevelt's Presidency",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/trust-busting",
+     "title": "What Was Trust-Busting? Roosevelt Takes On the Monopolies",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/white-house-family",
+     "title": "The White House Family",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/white-house-family/pets",
+     "title": "White House Pets: The Roosevelt Menagerie",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/white-house-family/white-house-gang",
+     "title": "The White House Gang",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency/white-house-workers",
+     "title": "The White House Workers of Theodore Roosevelt's Presidency",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/quotes/citizenship",
+     "title": "Theodore Roosevelt on Citizenship",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/quotes/conservation",
+     "title": "Theodore Roosevelt on Conservation",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/quotes/family",
+     "title": "Theodore Roosevelt on Family",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/quotes/leadership",
+     "title": "Theodore Roosevelt on Leadership",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/quotes/misquotes",
+     "title": "Common Misquotes: What Theodore Roosevelt Actually Said (and Didn't Say)",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/quotes/strenuous-life",
+     "title": "Theodore Roosevelt on the Strenuous Life",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/rise-to-power/assistant-navy-secretary",
+     "title": "Assistant Secretary of the Navy: Preparing for War (1897-1898)",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/rise-to-power/becoming-president",
+     "title": "How Theodore Roosevelt Became President: The Pan-American Exposition and McKinley's Assassination",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/rise-to-power/boone-and-crockett",
+     "title": "The Boone and Crockett Club: Hunters Who Became Conservationists",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/rise-to-power/buffalo-soldiers",
+     "title": "The Buffalo Soldiers at San Juan Hill: Unsung Heroes of American Victory",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/rise-to-power/civil-service",
+     "title": "U.S. Civil Service Commission: Reforming Federal Government (1889-1895)",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/rise-to-power/edith-roosevelt",
+     "title": "Edith Roosevelt: Courtship, Marriage and Sagamore Hill",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/rise-to-power/governor",
+     "title": "Governor of New York: The Stepping Stone to the Presidency (1899-1900)",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/rise-to-power/jacob-riis",
+     "title": "Theodore Roosevelt and Jacob Riis: Reformer and Muckraker United",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/rise-to-power/police-commissioner",
+     "title": "NYC Police Commissioner: Midnight Walks and Radical Reform (1895-1897)",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/rise-to-power/rough-riders",
+     "title": "The Rough Riders: America's Most Famous Regiment",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/rise-to-power/rough-riders/who-were-they",
+     "title": "Who Were the Rough Riders? Stories of Individual Men",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/rise-to-power/sagamore-hill",
+     "title": "Sagamore Hill: Theodore Roosevelt's Beloved Home",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/rise-to-power/san-juan-hill",
+     "title": "The Battle of San Juan Heights: Theodore Roosevelt’s “Crowded Hour”",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/rise-to-power/spanish-american-war",
+     "title": "Theodore Roosevelt and the Spanish-American War: America's Rise to Power",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/rise-to-power/ten-facts",
+     "title": "Ten Facts About Theodore Roosevelt's Rise to Power",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/rise-to-power/vice-presidency",
+     "title": "The Reluctant Vice President: An Office Theodore Roosevelt Despised",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/strenuous-life/athletics",
+     "title": "TR the Athlete: A Life of Physical Vigor",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/strenuous-life/explorer",
+     "title": "TR the Explorer: A Life of Discovery and Adventure",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/strenuous-life/hunter",
+     "title": "TR the Hunter: Sport, Ethics, and Conservation",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    }
+   ]
+  },
+  {
+   "incomplete": 0,
+   "property_gaps": {},
+   "key": "videos",
+   "label": "Video pages",
+   "schema_type": "VideoObject",
+   "why": "Video markup lets search and AI tools show and cite the Library's videos, with title, length and date.",
+   "drupal": "Add VideoObject JSON-LD to the video view template from the stored YouTube data (title, description, thumbnail, publish date, duration).",
+   "pages": 407,
+   "done": 0,
+   "missing": 407,
+   "example": {
+    "path": "/video/view/-QfzHHXPYqM",
+    "jsonld": {
+     "@context": "https://schema.org",
+     "@type": "VideoObject",
+     "@id": "https://www.trlibrary.com/video/view/-QfzHHXPYqM#main",
+     "name": "Vice President J.D. Vance lands in Dickinson and motorcade to Theodore Roosevelt Library site",
+     "url": "https://www.trlibrary.com/video/view/-QfzHHXPYqM",
+     "image": "https://i.ytimg.com/vi/-QfzHHXPYqM/maxresdefault.jpg",
+     "thumbnailUrl": "https://i.ytimg.com/vi/-QfzHHXPYqM/maxresdefault.jpg",
+     "embedUrl": "https://www.youtube.com/embed/-QfzHHXPYqM",
+     "uploadDate": "TODO: YouTube publish date",
+     "publisher": {
+      "@id": "https://www.trlibrary.com/#organization"
+     }
+    }
+   },
+   "items": [
+    {
+     "path": "/video/view/-QfzHHXPYqM",
+     "title": "Vice President J.D. Vance lands in Dickinson and motorcade to Theodore Roosevelt Library site",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/-TNqu1aIePM",
+     "title": "Good Citizen - Ep 16 with Susan Berfield",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/-fP_84JgLdM",
+     "title": "TR Trivia: Birthday Edition",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/-hAbH24Ia_w",
+     "title": "Senate passes legislation to support establishment of Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/-ly77R5Pszo",
+     "title": "Good Citizen Ep. 51 with Ruth Whippman",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/-mcN1M3ZEps",
+     "title": "In the Room: Photographs by David Hume Kennerly | Exhibition Preview",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/-udCxePoWgE",
+     "title": "Curator Talk: Honoring the Military Service of Theodore Roosevelt's Sons",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/0NiRkijqLGw",
+     "title": "President Trump Participates in a Freedom 250 Train Ride and Welcome Ceremony",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/0dZOcXcYJo0",
+     "title": "From the Cradle of Conservation to the Next Era",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/15dkv17Wk38",
+     "title": "Hardcore Facts About Teddy Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/1SfkNHpi7dU",
+     "title": "May 2024 Construction Update",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/1SqdaUrbU7U",
+     "title": "Native Plant Project",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/1ftA6rWo1NA",
+     "title": "Book Talk: Jean Flahive's Teddy Roosevelt, Millie, and the Elegant Ride with Phil Morse",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/1jhn1Zx3rK0",
+     "title": "Book Talk: David Gessner's Leave It As It Is",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/1lvMPK_4MAg",
+     "title": "Panel 1: Nature’s Sanctuaries Protection of Public Lands",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/1w_lJZ2mIxw",
+     "title": "2026.08.20 - Carry a Big Stick Forum with General Guetlein",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/24wRaw13N-E",
+     "title": "Theodore Roosevelt Presidential Library Opens in Medora, North Dakota Ahead of July 4th",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/2AWoe6mRBus",
+     "title": "Artist Panel: Kennerly, Balkowitsch, And Ziemendorf",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/2LuyRNg_7Zs",
+     "title": "Bismarck artist commissioned to paint piece for Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/2RDLAWCZOSc",
+     "title": "Book Talk: James Blase's Theodore Roosevelt's Brotherhood of America",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/2XhNlRgkT1w",
+     "title": "North Dakota - Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/2ZatbH6VDbg",
+     "title": "The Tragic Truth About Theodore Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/2fc5xBlPPQ4",
+     "title": "Elkhorn | Sneak Peek | Fight | INSP | Theodore Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/2uiwf9SJlsU",
+     "title": "Family Life at Sagamore Hill",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/32pd_ni6Y_8",
+     "title": "February Highlights",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/33-ACG6xEfo",
+     "title": "Good Citizen - Ep 18 with Richard Haass",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/38eoqKxRCMM",
+     "title": "State leaders gather at Teddy Roosevelt Library site",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/3AKVAf1VYMA",
+     "title": "Raising of the \"Man in the Arena\" Beam",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/3e1EkDK5ZKQ",
+     "title": "Theodore Roosevelt Reviewing and Speaking to 13th Regiment at Sagmore Hill, 1917",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/3eA6UmYevWM",
+     "title": "Good Citizen - Ep 27 with Carly Fiorina",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/3i6j26fH7JE",
+     "title": "TR at Baltimore [1918]",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/3uWrQWSzrGA",
+     "title": "The Square Deal at 250: Business, Community & the American Promise",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/3y-8aHZr0Nk",
+     "title": "Theodore Roosevelt | 60-Second Presidents | PBS",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/4E3MfO6oO00",
+     "title": "Book Talk: Theodore Roosevelt in California: The Presidential Adventure That Saved the Wilderness",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/4R0NPmxJReI",
+     "title": "Teddy Roosevelt and the \"Rough Riders\" in Cuba",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/4aV_PXDDTVA",
+     "title": "Good Citizen Ep. 59 with Karl Rove",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/5-mP3KQw-Pw",
+     "title": "Teddy Roosevelt Presidential Library Medora North Dakota video #2481",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/52sV__9zfpE",
+     "title": "Elkhorn | Sneak Peek | Fight | INSP | Theodore Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/577EQKwCZsY",
+     "title": "Meet Us in the Middle, Virtually: A Conversation with Ed O'Keefe",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/5bAVYk4m6QY",
+     "title": "Things to do in Theodore Roosevelt National Park, North Dakota!",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/5hp-HQWodTU",
+     "title": "Construction underway for Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/5yQGpC18v1U",
+     "title": "Theodore Roosevelt: The Old Lion",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/6KcpuRy1xr4",
+     "title": "Theodore Roosevelt & the Navy: 5 Facts | USS Theodore Roosevelt Crew",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/6T25p1GrUb8",
+     "title": "Hoeven Secures Commitment for Development of Teddy Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/6UskbjcbWZg",
+     "title": "Panel 2: Braving the Elements Woods, Water, and the City in Roosevelt’s Time",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/6jpzK1EZvw8",
+     "title": "Edmund & Sylvia Morris Collection arrives at Theodore Roosevelt Center at Dickinson State University",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/77WeuNissrE",
+     "title": "BADLANDS: Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/7JLs9vhR_Sw",
+     "title": "The American President: Expanding Power",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/7Rcsv5uYzro",
+     "title": "Living Roof and Rising Galleries | Summer 2025 Progress Update",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/7UYYpUBJDUA",
+     "title": "Maah Daah Hey Trail Guide | From Theodore Roosevelt National Park North to South",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/7_2jfLT6qzk",
+     "title": "Book Talk: Rolf Sletten's Roosevelt's Ranches",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/7j72fAlhKSE",
+     "title": "Theodore Roosevelt Presidential Library on track for July 4 opening",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/7ukgEW1WoTM",
+     "title": "Holt Collier Documentary (Famous Hunting Guide of Theodore Roosevelt)",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/7zPnNxh5S-0",
+     "title": "\"The Loves of Theodore Roosevelt\" shares the story of the important women in his life",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/82savcaM9Q0",
+     "title": "Governor Burgum testifies about Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/88J39-TLM7o",
+     "title": "Theodore Roosevelt: The Conservationist",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/88oGjZFmIVg",
+     "title": "Teddy Roosevelt's pursuit in building the Panama Canal",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/8KMZtJnSz3Y",
+     "title": "UPDATE: Construction Of Theodore Roosevelt Presidential Library, Medora, North Dakota",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/8Pmk1kvMasU",
+     "title": "What Happened To Theodore Roosevelt's 6 Children?",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/8_QQhZ7RAKQ",
+     "title": "Badlands Wildlife with Roosevelt - NDGF - 07-02-2026",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/9VASDKW0Zbg",
+     "title": "Teddy Talks - Police Commissioner Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/9ikBE45W2w0",
+     "title": "Full Movie: Teddy Roosevelt A Cowboys Ride To The White House",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/9os3vftUa2M",
+     "title": "Taste of History: Dessert Edition",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/A9VuKTZIDvQ",
+     "title": "Theodore Roosevelt Presidential Library & A.I. Interview With T.R.",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/AnfBDO1gBOM",
+     "title": "That Time Teddy Roosevelt Got Shot in the Chest But Gave a 90 Minute Speech Anyway",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/AxLddKqzDFY",
+     "title": "Good Citizen - Ep 14 with Benji Backer",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/B16CkDO7gsw",
+     "title": "Book Talk: Michael Patrick Cullinane and Michael Sacopulos's Birding with TR",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/B1o-RmPhS-A",
+     "title": "Good Citizen - Ep 20 with Anne Therese Gennari",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/BDcEYopmVyU",
+     "title": "The final beam",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/BF6ZHFqp2Qg",
+     "title": "Theodore Roosevelt Presidential Library takes shape amid Badlands hills",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/BLn2BM4DvFg",
+     "title": "Elkhorn | Sneak Peek | Helpless | Theodore Roosevelt | INSP",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/BS3yKf3afxc",
+     "title": "Episode 9 - Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/BmCtAO7SOk8",
+     "title": "What I Feared | Exclusive Clip | Elkhorn | Theodore Roosevelt | INSP",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/BpWhnLXmbBM",
+     "title": "Good Citizen Ep. 35 with Judith Shulevitz",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Bv2NVhvInUo",
+     "title": "Good Citizen - Ep 29 with Daniel Levitin",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Bwh7AGECvWk",
+     "title": "Roosevelt Library LookLive",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/CCHvJ3yUTMk",
+     "title": "What books did Theodore Roosevelt read?",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/CDHoZa7ZKb8",
+     "title": "Arthur Brooks on the Strenuous Life & the Search for Happiness",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/CGc6w5ryVHk",
+     "title": "Good Citizen Ep. 36 with Sharon McMahon",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/CRJyRfk7ll4",
+     "title": "Introducing the Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/CTHN22B1PUM",
+     "title": "Theodore Roosevelt's Legacy in Government Today | A Bipartisan Conversation",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/CataVnTL1vk",
+     "title": "America In Pursuit: An Evening with NPR's Steve Inskeep | June 24, 2026",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Cp3wtxCOJXM",
+     "title": "History meets high tech at Roosevelt site",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/CpkJWLNgpuc",
+     "title": "How Theodore Roosevelt Used His Energy to Power the Presidency | Biography",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/CqDAWfKUikw",
+     "title": "Good Citizen - Ep 26 with Kermit Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/DWjjmFbNZwo",
+     "title": "Chef Candace Stock: Indigenous Corn Pudding | Prairie Mosaic",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/DawKsd2fPdY",
+     "title": "ND Today: LIVE in Medora: Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/E23B_0-zEBc",
+     "title": "Senator Hoeven Talks to NPS Director Nominee at Senate Committee Hearing",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/ELBwCpPTmEQ",
+     "title": "Good Citizen - Ep 19 with Katherine Gehl",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/EWtqhHSJdPA",
+     "title": "Theodore Roosevelt Presidential Library Steel Erection Animation | Anatomic Iron Steel Detailing",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/EkDijgLen-g",
+     "title": "Common Sense | Sneak Peek | Elkhorn",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/F1vei9VkyM4",
+     "title": "Teddy Talks - Citizenship in a Republic",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/F5Ft8634DbI",
+     "title": "Theodore Roosevelt in Africa 1909",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/FLrGvb6xMR8",
+     "title": "Theodore Roosevelt on Love, Ladies, and Conservation | The MeatEater Podcast Ep. 841",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/FNO5jhKjHfM",
+     "title": "Arlington company’s boardwalk featured at Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/FZ7CvBHvj4I",
+     "title": "Good Citizen Ep. 65 with Dr Vivek Murthy on Loneliness, Staying Human, and What True Success Is Like",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/FifB-mUKrOA",
+     "title": "Business Development: Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Fjp8_BuydfY",
+     "title": "Hadara Talks With David Hume Kennerly",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/FvBnk-aRcAs",
+     "title": "Construction underway at Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/GErm0LMSAqk",
+     "title": "Good Citizen - Ep 05 Ambassador Meg Whitman",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/GHM7Y66lCBk",
+     "title": "Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/GrvufrGcQGQ",
+     "title": "Q&A with the cast of Elkhorn",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Gs7kVRYvdHM",
+     "title": "How North Dakota Transformed Theodore Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/HJxLVmaKb10",
+     "title": "Eyes on the Stars - 1776 Drones Over the Badlands",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/H_-XhdBVvOs",
+     "title": "The Five Loves of Theodore Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Hfr1_zZTi_8",
+     "title": "Theodore Roosevelt Presidential Library: Construction Highlights (Feb 2024 - July 2024)",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Hjg-Lz0WqnA",
+     "title": "The Rough Riders: Teddy Roosevelt and Legends of Old West War | 2024 Documentary",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Hmq2NFdIAk8",
+     "title": "An unprecedented lens on the White House",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/HrXmxJGpljE",
+     "title": "The Theodore Roosevelt Presidential Library on WDAY",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/I-yavew2zpQ",
+     "title": "Good Citizen Ep. 45 with Benji Backer (re release)",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/I6F_A7dQbvw",
+     "title": "Living Building Challenge: Health + Happiness | Designing a Library for People & Nature",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/IGDJuGDnUCI",
+     "title": "Harold Hamm on Energy, Enterprise & What We Pass On",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/IQzx5hsjig4",
+     "title": "The First Lady Who Tamed the Bull Moose | HISTORY This Week",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/IpsGhGXObGg",
+     "title": "Why We love Theodore Roosevelt National Park in North Dakota",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/IqZhLmAeOFw",
+     "title": "Theodore Roosevelt Presidential Library CEO leaving for new job",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/IsP-PrFq8nk",
+     "title": "Happy Earth Day 2026",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/IweEqPAOl_w",
+     "title": "Good Citizen Ep. 37 with Mark Bittman",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/IykSvT3KeXs",
+     "title": "Living Building Challenge: Materials | Building With Mass Timber and Rammed Earth",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/J4sc8IWk-14",
+     "title": "Theodore Roosevelt National Park blew us away! We explored the North and South Units in ONE Day",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/J82hjGTuUZA",
+     "title": "ACC Summit 2025: Matt Briney of the Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Jalya_Y9XEk",
+     "title": "Theodore Roosevelt Presidential Library Update: Construction Progress and Opening Plans",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/JxNk0ppsJjM",
+     "title": "Sagamore Hill Grounds Tour: Edith's Rose Arbor",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/K47b9sqvzpY",
+     "title": "Exploring the hidden gems of Theodore Roosevelt National Park",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/KRj81Cqm09I",
+     "title": "The Leadership of President Theodore Roosevelt with Robbie Lauf",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/KUHixTeKW_k",
+     "title": "Ed O’Keefe talks new book ‘The Loves of Theodore Roosevelt’",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/KWIVmpvn2x8",
+     "title": "Good Citizen - Ep 25 with Dan Harris",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/KpA9oY_1HZ8",
+     "title": "IPW 2025 Edward O'Keefe Announcement of Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Krzsw4_tj5I",
+     "title": "Rahm Emanuel: America and the World Stage",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/L-kmlngY3xc",
+     "title": "Good Citizen Ep. 57 with Michael Luo",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/L08bDsNwOOE",
+     "title": "Roosevelt’s Maltese Cross Brand Comes Home to the Badlands",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/LC4J8FvYH_Y",
+     "title": "An Evening with Arthur Brooks - TR in North Dakota",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/LL9KvJFNH0s",
+     "title": "Theodore Roosevelt's Animals",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Lk8bs9ilpLI",
+     "title": "Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/LlO5Sw4Tn3A",
+     "title": "The Loves of Theodore Roosevelt—Edward F. O’Keefe with Douglas Brinkley",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/LoEIPA3UbiU",
+     "title": "Panel 3: Executive Power and American Conservation",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/LpiloxPk0wU",
+     "title": "Good Citizen Ep. 40 with Leah Hunt Hendrix",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Lz1yKz3qN7I",
+     "title": "Theodore Roosevelt Wins Nobel Peace Prize",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/M0yg7wFyy1M",
+     "title": "Teddy Talks - Ted, Jr. & Kermit",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/M53atJw6U70",
+     "title": "Theodore Roosevelt Speaking at Sagamore Hill [1916-1918]",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/MBWEuEXxdkI",
+     "title": "On designing a presidential library | Craig Dykers | TEDxFargo",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/MHKc_3BMejQ",
+     "title": "Theodore Roosevelt V offers support for Teddy Roosevelt Library and Museum in Medora",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/MI-wL605iE8",
+     "title": "Living Building Challenge: Beauty | Architecture Inspired by the Badlands",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/MJu_-hiK_qk",
+     "title": "Doris Kearns Goodwin meets Teddy Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/McO5zOhYu9c",
+     "title": "TR in San Francisco, 1903",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/N40FrDWTYfk",
+     "title": "Stunning! Theodore Roosevelt Presidential Library To Be Built In Dickinson, North Dakota",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/N9kHPu4Ei9U",
+     "title": "Theodore Roosevelt Presidential Library – It's NOT What You Think!",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/NNhr9UvcOuI",
+     "title": "Bismarck gallery highlights making of Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/NWex9HaMV8Q",
+     "title": "Alan Siegel conversation with David Hume Kennerly",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/NdWkrRKyhiY",
+     "title": "Trump Cuts Ribbon, Donates Theodore Roosevelt Medal of Honor at Historic Library Opening | AC1N",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/NmKAr9No--g",
+     "title": "Introduction - A Brief Introduction to Theodore Roosevelt and the Gilded Age",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/NoLhSWhiCpA",
+     "title": "President Trump Participates in an Event at Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/NpG3gTcttyQ",
+     "title": "Good Citizen - Ep 06 Jehmu Greene",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/OGAU1U2GwJI",
+     "title": "Tribute To Theodore Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/OPln5y9ZA90",
+     "title": "2024 Year in Review",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/OvtRg2Hb1s0",
+     "title": "28 Theodore Roosevelt Facts | Mental Floss",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Oxn6SpWQzgw",
+     "title": "President Trump Delivers Remarks, Jul. 1, 2026",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Oz9vQWmHQy8",
+     "title": "Theodore Roosevelt National Library releases target opening date",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/P38N-m3T_Jk",
+     "title": "Teddy Talks - Grand Canyon",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/PC4ebYYLGBY",
+     "title": "Built to Endure: Sustainability, Stewardship & the Making of TRPL",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/PV7mK0ZKoUk",
+     "title": "Why Teddy Roosevelt Left the Republicans...then came back.",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Pj-SqRNP4Wk",
+     "title": "Theodore Roosevelt Presidential Library under construction more than a century after his death",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/QLoISVrANbk",
+     "title": "Good Citizen - Ep 11 with Beth Silvers & Sarah Stewart Holland",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/QUKpb3bStX8",
+     "title": "Theodore Roosevelt - Shall We Prepare?",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/QXYaidrlXPA",
+     "title": "First Look: Theodore Roosevelt Presidential Library to Open for America’s 250th Anniversary",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/QgNuaVNyhA4",
+     "title": "716: 'We built what I think is one of the most beautiful buildings in the world'",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/QgRJ8fA_sCQ",
+     "title": "Theodore Roosevelt Presidential Library opens to the public",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/QmEqwAWUd-k",
+     "title": "Theodore Roosevelt Presidential Library update",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/QrSCjQ2xl3g",
+     "title": "Episode 31 - Theodore Roosevelt Center Staff",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/QzClGRDa-XE",
+     "title": "Good Citizen - Ep 17 with David Maraniss",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/RfjoDspFBLw",
+     "title": "Theodore Roosevelt Library Coin",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Ri1R5AK7oh4",
+     "title": "Edward O'Keefe, \"The Loves of Theodore Roosevelt\"",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/RqFOa0Ec9SQ",
+     "title": "The Loves of Theodore Roosevelt: A Book Event with Edward F. O’Keefe",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Rzd-BXSGYHk",
+     "title": "Prince Henry of Prussia & President Theodore Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/SArL5hpIsxE",
+     "title": "Sagamore Hill: Inside the Roosevelt Family Home",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/SCcY7TBRVR8",
+     "title": "Good Citizen - Ep 07 with Bill Kristol",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/SDBh9xZCRhI",
+     "title": "Good Citizen Ep. 38 with Anna Jane Joyner",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/SOO-FgtY3IU",
+     "title": "Good Citizen - Ep 23 with Spencer Glendon",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/SZ5fnXyok-c",
+     "title": "Good Citizen - Ep 04 Secretary Deb Haaland",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/SagTw8pvC9I",
+     "title": "Teddy Talks - Where the Tall Corn Grows",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Slt11aQy9H4",
+     "title": "Theodore Roosevelt Presidential Library Opens to the Public",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/SnjbILJMlsk",
+     "title": "Teddy Talks - The Boat Thieves",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/SwyjfZYd6Hc",
+     "title": "Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/T7obepkvuZk",
+     "title": "Good Citizen Ep. 53 with Douglas Brinkley",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/TDIvZaY-MDA",
+     "title": "Sneak Peek | Stampede | Elkhorn | Theodore Roosevelt | INSP",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/TOhUuCqEduw",
+     "title": "The history of Teddy Roosevelt with TRPL intern",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/TQwWoDBrhts",
+     "title": "Good Citizen - Ep 27 with Dr. Carla Hayden",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/TZ0-lwH4_h4",
+     "title": "2025 Theodore Roosevelt Symposium - Day 1",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Tb8My3-LeEU",
+     "title": "Edward O'Keefe | Full Episode 6.28.24 | Firing Line with Margaret Hoover | PBS",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/ToqblXc05us",
+     "title": "Theodore Roosevelt - The River of Doubt, Part 2",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Tv_qZ2Vx478",
+     "title": "Funeral procession for President Theodore Roosevelt in Oyster Bay, New York. HD Stock Footage.",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/U6EG-MfOd9c",
+     "title": "Was Roosevelt the Real-Life Inspiration Behind this Cuddly Toy?",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/V1y8L5WL4ws",
+     "title": "Discover Medora Podcast Trailer",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/V4q6UJCYduU",
+     "title": "Book Talk: Nancy Churnin's A Teddy Bear for Emily—and President Roosevelt, Too",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/VVYSIOSIKzI",
+     "title": "Elkhorn Season 2 Teaser | INSP",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/VXGApEChk7Y",
+     "title": "Theodore Roosevelt Symposium 2020 - Elkhorn Ranch",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Vf8ee-gccpc",
+     "title": "Inside the Theodore Roosevelt Presidential Library That Doesn't Want to Be a Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Vp3hmGIYdzk",
+     "title": "Inside the Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/VtqXtMjkTnw",
+     "title": "Theodore Roosevelt and North Dakota",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/W5I-KlvyaLM",
+     "title": "Good Citizen Ep. 67 with Dana Milbank: Retreat, Restore, Rehumanize",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/W9sq8PuGQVo",
+     "title": "Discover the Theodore Roosevelt Presidential Library | Medora, North Dakota",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/WOpsWHRIcmc",
+     "title": "Foraging for exciting flavors with chef Candace Stock",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/WZ9QWz7KP9U",
+     "title": "5 Ways Theodore Roosevelt Changed America",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/WnnW1vPUh1s",
+     "title": "Theodore Roosevelt: A Cowboy's Ride to the White House",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/WtudRvSwG3w",
+     "title": "How Much Do You Know About Theodore Roosevelt? | Elkhorn | INSP",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/WvDKNShcdmI",
+     "title": "2025 Theodore Roosevelt Symposium - Day 2",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/X1--DdLbSWM",
+     "title": "Good Citizen Ep. 31 with Katharine Hayhoe",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/XLKx-CiJYVk",
+     "title": "North Dakota Oil Tycoon Donates $50-Million To T.R. Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/XM9ONlpQx7A",
+     "title": "Good Citizen - Ep 01 Candice Millard",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/XOteyfIHT1w",
+     "title": "Taste of History: Cocktail Edition",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/XWavBYKE5Ec",
+     "title": "Funeral of Theodore Roosevelt at Oyster Bay, New York - 1919",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/XZ0AY8Y05Pw",
+     "title": "Theodore Roosevelt presidential library under construction in North Dakota",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/XhsuP269izM",
+     "title": "North Dakota Made Him: A Governors' Conversation on TR & the Badlands",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/XmtF0-bPwDI",
+     "title": "Michelle Delk | @ARCHITECT-ING_PODCAST",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Y3jQTzNVVFY",
+     "title": "TR library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/YBgXfxhtsl0",
+     "title": "Grand Opening Ceremony of the Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/YC1qwFurRV0",
+     "title": "Good Citizen Ep. 58 with Dwayne Fields",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/YCD3KPFXCUE",
+     "title": "AI Teddy Roosevelt Greets Library Visitors",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/YDjubszLWTE",
+     "title": "Doris Kearns Goodwin: Finding Hope in History",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/YJ_qzszUZUA",
+     "title": "TR Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/YcJtisBGjnE",
+     "title": "Good Citizen - Ep 09 with Laurie Leshin",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/YtGk0XLNoc0",
+     "title": "Elkhorn Season 2 Episode 1 Sneak Peek | INSP | Theodore Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/Z-QSHj7VGO8",
+     "title": "NECA and the IBEW Build a Legacy Project in the North Dakota Badlands",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/ZB4vvVGz8OI",
+     "title": "Taste of History: Holiday Edition",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/ZDixWF-jRjs",
+     "title": "Live from the Badlands — Theodore Roosevelt Presidential Library Grand Opening | July 4, 2026",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/ZPIMZGL-qyg",
+     "title": "Teddy Roosevelt Hunts A Man Eating Grizzly Bear | Elkhorn",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/_AiNoppYqWw",
+     "title": "Book Talk: Jeffrey Rosen's The Pursuit of Liberty",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/_Eiybv9KgeI",
+     "title": "Teddy Talks - Salute to Minnesota",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/_NMibIec0rY",
+     "title": "The First Lady & the Modern Presidency | From Edith Roosevelt Forward",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/_QiUubZAMX8",
+     "title": "Next Level Scholarship - Dr. Cullinane and President Easton, Dickinson State University",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/_UF6GoOxeLs",
+     "title": "Scenes from Theodore Roosevelt's East African Expedition",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/_WIkVmhf0w0",
+     "title": "Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/_XUd9A801xc",
+     "title": "Good Citizen - Ep 30 with Ted Leonsis",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/_Zu6d5rSsQ0",
+     "title": "Living Building Challenge: Energy | How the TR Presidential Library Powers Itself",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/_mH0f1SPqGI",
+     "title": "Virtual Talk: Bill Bleyer Presents \"Robert B. Roosevelt: The Black Sheep Roosevelt\"",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/_qMpxHDS4FM",
+     "title": "Good Citizen Ep. 34 with Matthew Barzun",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/aNzv4trzNNE",
+     "title": "Theodore Roosevelt: The Sagamore Years",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/a_UiXan-AX0",
+     "title": "Good Citizen - Ep 12 with Michael D. Smith",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/a_vJy33Un0s",
+     "title": "Edmund and Sylvia Morris Collection",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/aaxaXMCvjB0",
+     "title": "Elkhorn | Official Trailer | Theodore Roosevelt | INSP",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/auTieWxlCIU",
+     "title": "Teddy Talks - Marquis de Morès",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/ay16ArC01FU",
+     "title": "Medora, North Dakota",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/bDk45YjSBQc",
+     "title": "Medora's Theodore Roosevelt, Joe Wiegand, Entertains Thousands Each Year",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/bNpkcnRSmmQ",
+     "title": "The Spanish-American War 1898 (Documentary)",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/bOYQU4HjpSw",
+     "title": "Theodore Roosevelt Attends His Son Archies Wedding at Boston, 1917",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/b_qkJUPuafU",
+     "title": "Theodore Roosevelt: Political Beginnings",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/bblYAN5H6yY",
+     "title": "How a Camping Trip Created our National Parks | History Honors 250",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/biA_67nJQpE",
+     "title": "Good Citizen Ep. 63 with Adam Met",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/bjiTEu_zG-s",
+     "title": "Good Citizen - Ep 24 with Mike Rowe",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/c22t8zesYIg",
+     "title": "Progressive covenant with the people",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/c2zmpunFGYk",
+     "title": "Theodore Roosevelt Presidential Library opens to the public",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/cOvMVsK5QlY",
+     "title": "Good Citizen Podcast Trailer",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/cWKIpRcVppI",
+     "title": "Theodore Roosevelt Ends Major Coal Strike | History",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/cYSI-h4OpUc",
+     "title": "2015 Lucie Awards Honoree: David Kennerly, Achievement in Photojournalism",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/caM39tk-WIo",
+     "title": "The Theodore Roosevelt Presidential Library! It's Worth The Drive!",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/cjC-K8rkuMM",
+     "title": "Theodore Roosevelt Presidential Library Construction Tour (4/25)",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/coiXi059ySs",
+     "title": "Unveiling the Edmund and Sylvia Morris Collection: Insights into Theodore Roosevelt Studies",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/crDc7G_VLuQ",
+     "title": "'INSPIRATION FOR THE FUTURE': Sec Burgum shares backstory of Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/cztQVr_fAz4",
+     "title": "Who Were the Rough Riders? | Explorer",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/dD83eHTH6t8",
+     "title": "North Dakota Travels with Darley Episode: Explore Theodore Roosevelt National Park & Watford City",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/dFGrXz7Nj8s",
+     "title": "Eyes on the Stars: Theodore Roosevelt and the West — Drone Show LIVE from the Badlands | July 4",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/dMSUAH5EZAI",
+     "title": "Theodore Roosevelt Calls on Neighbors at Christmas, 1917",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/dRIXs_adw7U",
+     "title": "Book Talk: Candice Millard's The River of Doubt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/duICpw_mkqk",
+     "title": "North Dakota to create ‘digital, world-class’ library for Teddy Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/dxd-_B-8xQs",
+     "title": "Good Citizen - Ep 10 with Liz Cheney",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/dygTIx64zaE",
+     "title": "The Teddy Roosevelt You May Not Know",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/e-9LOmU1JK0",
+     "title": "Sagamore Hill Grounds Tour: The Pet Cemetery",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/e9Q4TbcwXmo",
+     "title": "An amazing project is coming to Medora",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/eNCMmLGK5Lw",
+     "title": "Theodore Roosevelt with Rough Rider Friends",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/eOESRWJJ-00",
+     "title": "Theodore Roosevelt—Edward F. O’Keefe and Karl Rove",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/e_lc4th0w7I",
+     "title": "Theodore Roosevelt and the Western Experience (1991) | Documentary | KSPS PBS",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/eb2v8aZvyfQ",
+     "title": "How Teddy Roosevelt Got Shot and Still Did an 84 Minute Speech",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/f6vMgSjDDw8",
+     "title": "Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/fBDKVvnOntA",
+     "title": "Living Building Challenge: Place | Building With the Land in the North Dakota Badlands",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/fEsgh2ArsqY",
+     "title": "North Dakota tourism director reflects on Theodore Roosevelt’s legacy | Prairie Pulse",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/fHCyNfqxPbw",
+     "title": "Peter Greenberg in Medora | What's On Your Mind with Scott Hennen",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/fKXOtJeaTEQ",
+     "title": "Theodore Roosevelt - The River of Doubt, Part 1",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/fNkbx1Vgs6Y",
+     "title": "Nick Kennerly, Violin | In the Room Opening | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/fXsW00JN9Ho",
+     "title": "Theodore Roosevelt Library Opening Trip",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/fdvh5TkOBKQ",
+     "title": "Teddy Roosevelt’s Daily Routine | How to be the president of the USA",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/flN2nWPozCk",
+     "title": "Acting Secretary of the Navy Attends the Opening of the Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/g9a0_YpUdu0",
+     "title": "Finding Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/gFlYlWqzRNo",
+     "title": "Theodore Roosevelt Presidential Library opens 107 years after his death",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/g_bLZyruHAw",
+     "title": "Curator Talk: Top 10 Documents from Theodore Roosevelt's Presidency",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/gjy4XjgMEVU",
+     "title": "NDT Theodore Roosevelt Presidential Library July 14",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/gtDTwBMTn2Q",
+     "title": "\"Resolute\" — Theodore Roosevelt in His Own Words",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/hAcuqHMDUr4",
+     "title": "Living Building Challenge: Water | Net-Zero Water Design at the TR Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/hEPpzwOSQC4",
+     "title": "Twin sisters, descendants of Theodore Roosevelt, travel from New York City to experience his Pres...",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/hKbIjys5bLo",
+     "title": "Your Guide to Outdoor Adventure in Medora with Mike Jensen | Ep. 2 | Discover Medora Podcast",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/hizEyx-SHks",
+     "title": "Taste of History: Camping Edition",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/hl7VEhR2P0s",
+     "title": "State of the State: Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/i5skb9D3fTg",
+     "title": "Seamless Scalability and Future Growth – the Role of DAM to Aggregate Collections",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/iTlA73sDt2k",
+     "title": "Elkhorn Teaser | Theodore Roosevelt | INSP",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/iZNTkHl0WUM",
+     "title": "A Summer Like No Other： Medora Prepares for TRPL Opening",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/iaakvJCCQaI",
+     "title": "The right of the people to rule",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/idUn-JPr6BM",
+     "title": "Theodore Roosevelt's Conservation Influences",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/ipUdTv_fHgM",
+     "title": "Here's How the National Park Service Got Started | History",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/ituU4YcPzLA",
+     "title": "North Dakota Today – Theodore Roosevelt Presidential Library – August 16",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/jKQoYEPX860",
+     "title": "Riding to the Badlands with Teddy Roosevelt | Ed O'Keefe",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/jYZeEP3suD4",
+     "title": "Building TR's Library in the Badlands With Robbie Lauf | Ep. 1 | Discover Medora Podcast",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/k0WyMR8RJBg",
+     "title": "Theodore Roosevelt National Park and Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/k3-pV0HbIRU",
+     "title": "Elkhorn | Sneak Peek | The Marquis | INSP | Theodore Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/k3U8V1HmKDs",
+     "title": "\"Arena\" — JFK Reads Roosevelt's \"Man in the Arena\"",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/k8xMrZc6mWg",
+     "title": "From Theodore Roosevelt's Desk To Yours - A Demonstration of the TRC Digital Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/kEdC_jTHyx4",
+     "title": "Preview of Theodore Roosevelt Presidential Library ahead of July 4 opening",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/kcChppiRXCI",
+     "title": "Theodore Roosevelt and the American Century | Historical Documentary | Lucasfilm",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/keI8LTjqrs4",
+     "title": "Good Citizen Ep. 61 with Doris Kearns Goodwin",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/keuIKAkGqVs",
+     "title": "Exploring Theodore Roosevelt's legacy as the conservation president",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/kihrWY57lGI",
+     "title": "Unveiling Historical Mysteries: Verifying Theodore Roosevelt’s Presence at Lincoln’s Funeral",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/kn-w6oPQCDA",
+     "title": "Good Citizen Ep. 39 with Carrie Besnette Hauser",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/kokgw1ZTBD4",
+     "title": "Campfire & Prairie Talks - July 3",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/kwxEi6ds_F0",
+     "title": "Good Citizen - Ep 03 Baratunde Thurston",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/l1DH4LpBl_E",
+     "title": "Teddy Talks - Roosevelt in Utah",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/l48F_BA4YMA",
+     "title": "Good Citizen - Ep 21 with Senator Chris Murphy",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/lBhNOeithwg",
+     "title": "THEODORE ROOSEVELT PRESIDENTIAL LIBRARY | INSIDE TOUR | MEDORA ND",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/lK2X0xyhtfs",
+     "title": "Good Citizen Ep. 32 with Eric Liu",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/lRqnqk6Vj08",
+     "title": "Teddy Roosevelt's ranch",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/lRx-iuHLgYM",
+     "title": "Witness to the End, Photographer Reflects on Vietnam",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/lUrOTRzNT4M",
+     "title": "Theodore Roosevelt: Youngest U.S. President & Nobel Peace Prize Winner | Mini Bio | BIO",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/lfN4zBFgOGc",
+     "title": "TrueNorth Steel Structural | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/lgvwRZFLvdw",
+     "title": "Good Citizen Ep. 68 with Admiral Stavridis on NATO and the World of 2084: The Future is a Warning",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/liSRJUqFaD4",
+     "title": "'50 Weeks in 50 States' visits North Dakota",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/ln0ojkXJ0Vg",
+     "title": "Gov. Kelly Armstrong and Karl Rove in Conversation | Live from Bismarck",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/lvKgI12sOvQ",
+     "title": "The Business Blueprint Episode 019: Navigating the New AI Frontier",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/lw4LahAdtds",
+     "title": "Theodore Roosevelt Cracks Down on NYC Corruption | History",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/m0apsoICMrQ",
+     "title": "Good Citizen Ep. 59 with Jane Carpenter Rock",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/mMpM4SOiIP4",
+     "title": "Theodore Roosevelt's Inaugural Ceremony, 1905",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/n4HLm_dLrkU",
+     "title": "Coming soon: The Teddy Roosevelt Museum! Hugh talks with Ed O’Keefe",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/nCoGX9_NUU8",
+     "title": "2025 Year in Review: Building the Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/nLgu5jcinsE",
+     "title": "Edmund Morris on Theodore Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/nQdbuiCfYBg",
+     "title": "Sixty Years in the Room | David Hume Kennerly on What's On Your Mind",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/ncgsrf85Rus",
+     "title": "Theodore Roosevelt & the Secret Power of Sisters | Ed O'Keefe | TEDxFargo",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/nemvsIJFoGs",
+     "title": "Theodore Roosevelt Pushes for Expansion",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/nw28bCFGMow",
+     "title": "Taking a look inside the Theodore Roosevelt Presidential Library ahead of opening",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/o5bjl9NJlts",
+     "title": "Good Citizen Ep. 41 with Ed O'Keefe",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/o6y6LF_tdPY",
+     "title": "Earth Day Celebration",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/o7X2oPGLGq8",
+     "title": "Theodore Roosevelt National Park North Dakota 8K (Visually Stunning Tour)",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/oU7t130yM80",
+     "title": "Giving Hearts Day 2026 - Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/ou2FK-JXJt4",
+     "title": "Living Building Challenge: Equity | A Presidential Library Designed for Everyone",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/oyrqJ3PVBN0",
+     "title": "Founding Fragments - Teddy Roosevelt Vole Specimens",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/p6p1r7lFL5c",
+     "title": "Catching Up with The Curator: Presidential Portrait of Theodore Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/pFxzRcuwfTA",
+     "title": "The Rebel Daughter of Theodore Roosevelt Who Shocked America",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/pJZ7PniVgxg",
+     "title": "Introducing the Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/pcDmRge-n5o",
+     "title": "Theodore Roosevelt: Reborn in the Badlands",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/pjyWX1is1sg",
+     "title": "Behind the Lens: 50 years of campaign photography",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/pp8jMWjNK9M",
+     "title": "Professor Stephen Dow Beckham: Alumni 4 at 5 Lecture Series - Theodore Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/pvhZCJvPKr4",
+     "title": "Elkhorn Season 2 Trailer - Medora Premiere",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/q-lbQRxZ7uI",
+     "title": "Teddy Talks - The Man with the Muck Rake",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/qBErn8Oe-8s",
+     "title": "Good Citizen Ep. 45 with Ben Jealous",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/qPq4zlJTdyM",
+     "title": "The Roosevelts: A Conversation with Ken Burns",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/qR8xwIkw_TA",
+     "title": "The new Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/qS_iCtZb-WM",
+     "title": "The farmer and the business man",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/qYSfoKwbiGg",
+     "title": "Elkhorn | Sneak Peek | Time To Pay Up | INSP | Theodore Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/qqGrUq6qWd0",
+     "title": "Good Citizen Ep. 50 with Tony Porter",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/qrwdZmqFO5A",
+     "title": "Your Journey Starts Here — The Trailblazer",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/qwggInEnsh4",
+     "title": "Theodore Roosevelt Presidential Library Tour @billpetersonhistorian",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/qymYpc-IV5Q",
+     "title": "May 17, 2021",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/rV_2eyCKZYo",
+     "title": "Teddy Roosevelt helped institute the forward pass so football players would stop dying so much",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/rVxbZ230drM",
+     "title": "Good Citizen Ep. 54 with Amy Bowers Cordalis",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/rh9JTkAbEaw",
+     "title": "Teddy Roosevelt Statue To Be Moved To Museum In North Dakota",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/rpboUBj4b6c",
+     "title": "Good Citizen - Ep 02 Christiana Figeures",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/rqyP5O9tt8I",
+     "title": "Growing a Prairie From Scratch in the North Dakota Badlands",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/rtIlEH7mr_g",
+     "title": "North Dakotans Are Excited For The Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/s2lndF5ZZ60",
+     "title": "Theodore Roosevelt Would've Loved What They Built Here",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/sUIbk8egtC0",
+     "title": "Roosevelt's Rough Riders",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/sVpoUQVDT0g",
+     "title": "Johnny Morris on Conservation, Commerce & the Great Outdoors",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/sVxuv_VO03Y",
+     "title": "Theodore Roosevelt: Writer, Solider and President of the United States of America | Mini Bio | BIO",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/sW_VucG1IcU",
+     "title": "#476: Edward O'Keefe: The Era, Women, and Realignment That Made Theodore Roosevelt - The Realignment",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/sWa88sTTopg",
+     "title": "Commerce budget bill passes with no funding for presidential library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/sYIZdAMfO5M",
+     "title": "Bringing Teddy Home",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/scYoyFa90DE",
+     "title": "Good Citizen Ep. 49 with Jeffrey Rosen",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/sfqPJWR3ZCU",
+     "title": "Volunteers welcome visitors to Theodore Roosevelt Presidential Library with a dose of ‘North Dako...",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/tZZsn-mTfGU",
+     "title": "Campfire & Prairie Talks - July 2",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/tfS7d1tWw78",
+     "title": "Social and industrial justice",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/uJwA0eFpZ60",
+     "title": "It's Been Real - Ford White House Photographer David Hume Kennerly",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/unXrPB0VMeI",
+     "title": "Theodore Roosevelt & U.S. Naval Leadership | Admirals in Conversation",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/v5y53t6frHk",
+     "title": "Theodore Roosevelt Presidential Library Board Member Gretchen Stenehjem (LMC S2 E8)",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/vDrRvN6oTPw",
+     "title": "Good Citizen - Ep 15 with Temple Grandin",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/vJ7zBp3eOig",
+     "title": "Theodore Roosevelt Presidential Library gives visitors an interactive, hands-on experience",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/vtKJWJnks8I",
+     "title": "The Theodore Roosevelt Presidential Library Exhibits Preview",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/vyxzrdlkrKA",
+     "title": "Good Citizen Ep. 66 with Senator Mitt Romney",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/w1brjK6Fxqs",
+     "title": "John Hoeven Celebrates Opening Of Theodore Roosevelt Presidential Library In North Dakota",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/w51a-8GltZw",
+     "title": "Virtual Taste of History: Drink Through TR’s Life with Historical Cocktails and Mocktails",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/wAknvXeHzSc",
+     "title": "Discover Medora",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/wWpgaDB_uDI",
+     "title": "Theodore Roosevelt Was a Feminist",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/wWydL3sh4BQ",
+     "title": "Governor Burgum signs bill for Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/wuvf3zdjwgs",
+     "title": "Sagamore Hill Grounds Tour: The Carriage Road and the Secret Service",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/ww_RcEAfT1o",
+     "title": "Theodore Roosevelt Inauguration Reenactment",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/x7aEa5Jpa7E",
+     "title": "Teddy Talks - The Strenuous Life",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/xBzcj7_cv9U",
+     "title": "Theodore Roosevelt National Park | South & North Unit (Full Guide + Scenic Drives)",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/xJdJcRj3pgE",
+     "title": "Inside the TR Library: A Vision for the Future with Executive Director Robbie Lauf",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/xS2TdAd37oY",
+     "title": "Medora Steps In | Elkhorn Season 2 Ep 1 | INSP | Theodore Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/xZLdmnBppfk",
+     "title": "Keynote Address: Roosevelt’s African Expedition and Conservation Today",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/xo0InTzQhWw",
+     "title": "Major construction milestone for the Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/yEEsRy7sdng",
+     "title": "Step Into the Amazon: Theodore Roosevelt's River of Doubt Comes Alive",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/yG6VrXnTPME",
+     "title": "In the Room: David Hume Kennerly, Live from the Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/yGS2rfWCuW4",
+     "title": "Telling the Story in 1/60th of a Second: David Hume Kennerly at TEDxBend",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/yIlpDwMKzJo",
+     "title": "Colonel Roosevelt is invited to fly in Arch Hoxsey's plane at St. Louis, Mo., 1910",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/yJ4XzjYaW_c",
+     "title": "Teddy Talks - Speaking of Rochambeau",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/yKpOdEFvtew",
+     "title": "10 Reasons Teddy Roosevelt Wasn’t Quite the Hero People Think...",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/ySqHJ7FfMoY",
+     "title": "Elkhorn Exclusive Clip | Card Fight | Season 2 Episode 2",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/yZBfI3ZESsk",
+     "title": "Theodore Roosevelt V offers support for Teddy Roosevelt Library and Museum in Medora",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/ymK4obRBdDI",
+     "title": "Scenes of Theodore Roosevelt at Sagamore Hill, 1912",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/zCn-CtTLr74",
+     "title": "Theodore Roosevelt Birthplace - American Artifacts Preview",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/zRPJAdE-IBI",
+     "title": "Walking the Badlands Without Leaving the Trail — The TR Library Boardwalk",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/zaKNv9vCtLA",
+     "title": "Teddy Roosevelt Gets Into A Scrap In The Dakota Territory | Elkhorn",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/znj23cFMUx8",
+     "title": "New Trails for the Badlands | Robbie Lauf on What's On Your Mind",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/zp8aV45gaEs",
+     "title": "The White House 1600 Sessions: The Making of President Theodore Roosevelt",
+     "has": [],
+     "done": false
+    }
+   ]
+  },
+  {
+   "incomplete": 0,
+   "property_gaps": {},
+   "key": "podcast_episode",
+   "label": "Good Citizen episodes",
+   "schema_type": "PodcastEpisode",
+   "why": "Ties each episode to the Good Citizen series and its guest so AI tools can cite the right episode.",
+   "drupal": "Add PodcastEpisode JSON-LD to the podcast episode template (title, summary, release date, Simplecast player).",
+   "pages": 67,
+   "done": 0,
+   "missing": 67,
+   "example": {
+    "path": "/podcast/good-citizen/adam-met-climate-action-musical-stardom-and-art-building-movement",
+    "jsonld": {
+     "@context": "https://schema.org",
+     "@type": "PodcastEpisode",
+     "@id": "https://www.trlibrary.com/podcast/good-citizen/adam-met-climate-action-musical-stardom-and-art-building-movement#main",
+     "name": "Adam Met: Climate Action, Musical Stardom, and the Art of Building a Movement",
+     "url": "https://www.trlibrary.com/podcast/good-citizen/adam-met-climate-action-musical-stardom-and-art-building-movement",
+     "description": "Adam Met is a musician, climate policy writer, and genuine problem-solver – not your typical celebrity activist. This bass guitarist spent years building a",
+     "image": "https://www.trlibrary.com/sites/default/files/2026-03/Adam-Met_0.png",
+     "partOfSeries": {
+      "@type": "PodcastSeries",
+      "name": "Good Citizen",
+      "url": "https://www.trlibrary.com/podcast/good-citizen"
+     },
+     "datePublished": "TODO: release date, e.g. 2025-05-28",
+     "associatedMedia": {
+      "@type": "MediaObject",
+      "embedUrl": "https://player.simplecast.com/aecf97ac-4ac2-48a0-a1a1-d016aed84893"
+     },
+     "publisher": {
+      "@id": "https://www.trlibrary.com/#organization"
+     }
+    }
+   },
+   "items": [
+    {
+     "path": "/podcast/good-citizen/adam-met-climate-action-musical-stardom-and-art-building-movement",
+     "title": "Adam Met: Climate Action, Musical Stardom, and the Art of Building a Movement",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/admiral-stavridis-nato-and-world-2084-future-warning",
+     "title": "Admiral Stavridis on NATO and the World of 2084: The Future is a Warning",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/aloe-blacc",
+     "title": "Aloe Blacc",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/amy-bowers-cordalis",
+     "title": "Amy Bowers Cordalis",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/anna-jane-joyner",
+     "title": "Anna Jane Joyner",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/anne-therese-gennari",
+     "title": "Anne Therese Gennari",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/baratunde-thurston",
+     "title": "Baratunde Thurston",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/ben-jealous",
+     "title": "Ben Jealous",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/benji-backer",
+     "title": "Benji Backer",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/beth-silvers-amp-sarah-stewart-holland",
+     "title": "Beth Silvers & Sarah Stewart Holland",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/bill-kristol",
+     "title": "Bill Kristol",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/bob-crawford-americas-greatest-ex-president-john-quincy-adams",
+     "title": "Bob Crawford on America’s Greatest Ex-President: John Quincy Adams",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/bradford-fitch",
+     "title": "Bradford Fitch",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/call-adventure-charlie-melcher-ed-okeefe-and-brand-new-theodore-roosevelt",
+     "title": "A Call to Adventure: Charlie Melcher, Ed O’Keefe and the Brand New Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/candice-millard",
+     "title": "Candice Millard",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/carly-fiorina",
+     "title": "Carly Fiorina",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/carrie-besnette-hauser-phd",
+     "title": "Carrie Besnette Hauser, PhD",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/christiana-figueres",
+     "title": "Christiana Figueres",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/dan-harris",
+     "title": "Dan Harris",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/dana-milbank-retreat-restore-rehumanize",
+     "title": "Dana Milbank: Retreat, Restore, Rehumanize",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/daniel-levitin",
+     "title": "Daniel Levitin",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/david-maraniss",
+     "title": "David Maraniss",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore",
+     "title": "Doris Kearns Goodwin: Presidential Stories, the TRPL, and the Enduring Lessons of Theodore Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/douglas-brinkley",
+     "title": "Douglas Brinkley",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/dr-carla-hayden",
+     "title": "Dr. Carla Hayden",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/dr-vivek-murthy-loneliness-staying-human-and-what-true-success-looks",
+     "title": "Dr. Vivek Murthy on Loneliness, Staying Human, and What True Success Looks Like",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/dwayne-fields-survival-purpose-life-shaped-nature",
+     "title": "Dwayne Fields: From Survival to Purpose in a Life Shaped by Nature",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/edward-okeefe",
+     "title": "Edward O'Keefe",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/emily-oster",
+     "title": "Emily Oster",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/eric-liu",
+     "title": "Eric Liu",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/george-packer-patriotism-democratic-values-and-turning-fiction",
+     "title": "George Packer on Patriotism, Democratic Values, and Turning to Fiction",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/jane-carpenter-rock-art-diplomacy-division-and-stewarding-american-story",
+     "title": "Jane Carpenter-Rock: Art, Diplomacy, Division, and Stewarding the American Story",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/jeffrey-rosen",
+     "title": "Jeffrey Rosen",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/jehmu-greene",
+     "title": "Jehmu Greene",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/judith-shulevitz",
+     "title": "Judith Shulevitz",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature",
+     "title": "Karl Rove: Historic Redemption, the Hard Work of Politics, and the Essential Nature of Americans",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/katharine-hayhoe",
+     "title": "Katharine Hayhoe",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/katherine-gehl",
+     "title": "Katherine Gehl",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/kermit-roosevelt-iii",
+     "title": "Kermit Roosevelt III",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/laurie-leshin",
+     "title": "Laurie Leshin",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/leah-hunt-hendrix",
+     "title": "Leah Hunt-Hendrix",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/live-trpl-1-doris-kearns-goodwin-finding-hope-history",
+     "title": "Live from the TRPL #1: Doris Kearns Goodwin on Finding Hope in History",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/live-trpl-2-johnny-morris-and-gov-kelly-armstrong-conservation-commerce-and",
+     "title": "Live from the TRPL #2: Johnny Morris and Gov. Kelly Armstrong on Conservation, Commerce, and the Great Outdoors",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/liz-cheney",
+     "title": "Liz Cheney",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/lucas-st-clair-honey-humility-and-making-national-monument",
+     "title": "Lucas St. Clair: Honey, Humility, and the Making of a National Monument",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/mark-bittman",
+     "title": "Mark Bittman",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/matthew-barzun",
+     "title": "Matthew Barzun",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/matthew-continetti",
+     "title": "Matthew Continetti",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/meg-whitman",
+     "title": "Meg Whitman",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/michael-d-smith",
+     "title": "Michael D. Smith",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/michael-luo",
+     "title": "Michael Luo",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/mike-rowe",
+     "title": "Mike Rowe",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/richard-haass",
+     "title": "Richard Haass",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/ruth-whippman",
+     "title": "Ruth Whippman",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/sarabeth-berman-what-dies-when-local-news-does-crisis-nobodys-covering",
+     "title": "Sarabeth Berman on What Dies When Local News Does: The Crisis Nobody's Covering",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/secretary-deb-haaland",
+     "title": "Secretary Deb Haaland",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/senator-chris-murphy",
+     "title": "Senator Chris Murphy",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/senator-mitt-romney-formative-moments-presidential-leadership-and-question",
+     "title": "Senator Mitt Romney on Formative Moments, Presidential Leadership, and the Question of Legacy",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/sharon-mcmahon",
+     "title": "Sharon McMahon",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/spencer-glendon",
+     "title": "Spencer Glendon",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/stewart-mclaurin",
+     "title": "Stewart McLaurin",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/susan-berfield",
+     "title": "Susan Berfield",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/susannah-cahalan",
+     "title": "Susannah Cahalan",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/ted-leonsis",
+     "title": "Ted Leonsis",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/temple-grandin",
+     "title": "Temple Grandin",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/tony-porter",
+     "title": "Tony Porter",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/podcast/good-citizen/welcome-to-good-citizen-with-ted-roosevelt-v",
+     "title": "Welcome to Good Citizen with Ted Roosevelt V!",
+     "has": [],
+     "done": false
+    }
+   ]
+  },
+  {
+   "incomplete": 0,
+   "property_gaps": {},
+   "key": "tr_hubs",
+   "label": "TR history section pages",
+   "schema_type": "CollectionPage",
+   "why": "Marks the section pages as collections about TR.",
+   "drupal": "Add CollectionPage JSON-LD to the /tr section landing template.",
+   "pages": 42,
+   "done": 0,
+   "missing": 42,
+   "example": {
+    "path": "/tr",
+    "jsonld": {
+     "@context": "https://schema.org",
+     "@type": "CollectionPage",
+     "@id": "https://www.trlibrary.com/tr#main",
+     "name": "Theodore Roosevelt",
+     "url": "https://www.trlibrary.com/tr",
+     "description": "Follow Theodore Roosevelt's whole life — naturalist, rancher, reformer, and president — told chapter by chapter, from a frail boy to a national force.",
+     "image": "https://www.trlibrary.com/sites/default/files/2026-07/el-hub_birthplace_sq.jpg",
+     "about": {
+      "@id": "https://www.trlibrary.com/tr/#person"
+     },
+     "isPartOf": {
+      "@id": "https://www.trlibrary.com/#website"
+     }
+    }
+   },
+   "items": [
+    {
+     "path": "/tr",
+     "title": "Theodore Roosevelt",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/tr/10-myths-teddy-bear",
+     "title": "Top 10 Myths about Theodore Roosevelt + the Invention of the Teddy Bear",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/5-big-adventures",
+     "title": "TR’s Five Big Post-Presidential Adventures",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands",
+     "title": "Theodore Roosevelt in the Badlands",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/badlands-timeline",
+     "title": "Timeline of TR in the Badlands",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/birthday",
+     "title": "Theodore Roosevelt's Birthday: October 27",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/birthday-timeline",
+     "title": "Timeline of T.R.'s Birthdays",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/books-and-writings",
+     "title": "Theodore Roosevelt's Books & Writings",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/christmas",
+     "title": "Christmas with Theodore Roosevelt",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/christmas-timeline",
+     "title": "Timeline of T.R.'s Christmases",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/complex-legacy",
+     "title": "Roosevelt's Complex Legacy",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/conservation",
+     "title": "Roosevelt and the Conservation Story",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/early-life",
+     "title": "Theodore Roosevelt's Early Life",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/elkhorn",
+     "title": "Elkhorn",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/elkhorn-timeline",
+     "title": "Elkhorn Timeline",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/fake-quotes",
+     "title": "Did TR Really Say That?",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/family",
+     "title": "The Roosevelt Family",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/for-educators",
+     "title": "Theodore Roosevelt for Educators",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/holidays",
+     "title": "Theodore Roosevelt's Holidays",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/homes-and-places",
+     "title": "Roosevelt's Homes & Places",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/kids-timeline",
+     "title": "Theodore Roosevelt for Kids: A Timeline of His Life",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/legacy",
+     "title": "Theodore Roosevelt's Legacy",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/myths",
+     "title": "Theodore Roosevelt Myths & Misconceptions",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/new-york-politics",
+     "title": "Theodore Roosevelt in New York Politics",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people",
+     "title": "The People in Roosevelt's Life",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/post-presidency",
+     "title": "Theodore Roosevelt's Post-Presidency",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/pre-presidency-political-accomplishments",
+     "title": "What Did Theodore Roosevelt Do Before He Was President?",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency",
+     "title": "Theodore Roosevelt's Presidency",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/presidency-timeline",
+     "title": "When Was Theodore Roosevelt President? 1901–1909 Timeline",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/quotes",
+     "title": "Theodore Roosevelt Quotes",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/rise-to-power",
+     "title": "Theodore Roosevelt's Rise to Power",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/speeches",
+     "title": "Theodore Roosevelt's Great Speeches",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/square-deal",
+     "title": "What was the Square Deal?",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/strenuous-life",
+     "title": "Theodore Roosevelt's Strenuous Life",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/teddy-nickname",
+     "title": "Why “Teddy” Roosevelt? What TR Thought of His Nickname",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/thanksgiving",
+     "title": "Thanksgiving with Theodore Roosevelt",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/thanksgiving-timeline",
+     "title": "Timeline of T.R.'s Thanksgivings",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/timeline",
+     "title": "Timeline of TR’s Life",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/tr-importance",
+     "title": "Why is Theodore Roosevelt Important?",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/tr-mount-rushmore",
+     "title": "Why is Theodore Roosevelt on Mount Rushmore?",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/tr-save-the-bison",
+     "title": "Did Theodore Roosevelt Save the Bison?",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/tr-shot",
+     "title": "Why Was Theodore Roosevelt Shot? The 1912 Milwaukee Attack",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    }
+   ]
+  },
+  {
+   "incomplete": 0,
+   "property_gaps": {},
+   "key": "tr_people",
+   "label": "TR history: people",
+   "schema_type": "Article",
+   "why": "Marks each page as an article about a specific person in TR's life, linked to their Wikipedia/Wikidata entry.",
+   "drupal": "Add Article JSON-LD to the /tr people template, with an 'about' Person; a field for the person's Wikidata link makes it precise.",
+   "pages": 26,
+   "done": 0,
+   "missing": 26,
+   "example": {
+    "path": "/tr/people/alice-lee",
+    "jsonld": {
+     "@context": "https://schema.org",
+     "@type": "Article",
+     "@id": "https://www.trlibrary.com/tr/people/alice-lee#main",
+     "headline": "Alice Hathaway Lee Roosevelt",
+     "url": "https://www.trlibrary.com/tr/people/alice-lee",
+     "description": "Born into Boston's Chestnut Hill elite in 1861, Alice Hathaway Lee charmed Theodore during his Harvard years and became his radiant first wife.",
+     "image": "https://www.trlibrary.com/sites/default/files/2026-07/a1.jpg",
+     "dateModified": "2026-10-23T01:31:52-06:00",
+     "author": {
+      "@id": "https://www.trlibrary.com/#organization"
+     },
+     "publisher": {
+      "@id": "https://www.trlibrary.com/#organization"
+     },
+     "about": {
+      "@type": "Person",
+      "name": "Alice Hathaway Lee Roosevelt",
+      "sameAs": [
+       "TODO: Wikipedia and Wikidata links for Alice Hathaway Lee Roosevelt"
+      ]
+     },
+     "isPartOf": {
+      "@id": "https://www.trlibrary.com/#website"
+     }
+    }
+   },
+   "items": [
+    {
+     "path": "/tr/people/alice-lee",
+     "title": "Alice Hathaway Lee Roosevelt",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/alice-longworth",
+     "title": "Alice Roosevelt Longworth",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/archibald",
+     "title": "Archibald Roosevelt: Wounded Twice in War",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/bamie",
+     "title": "Bamie Roosevelt Cowles: The Politically Connected Sister",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/bill-sewall",
+     "title": "Bill Sewall: The Maine Woodsman Who Knew the Real TR",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/booker-t-washington",
+     "title": "Booker T. Washington: The Dinner That Shook America",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/candido-rondon",
+     "title": "Colonel Cândido Rondon: Explorer, Protector, and South American Partner",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/corinne",
+     "title": "Corinne Roosevelt Robinson: The Poet Sister",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/edith-roosevelt",
+     "title": "Edith Kermit Carow Roosevelt",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/eleanor",
+     "title": "Eleanor Roosevelt: The Legacy of Uncle Theodore",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/elliott",
+     "title": "Elliott Roosevelt: The Tragic Brother",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/ethel",
+     "title": "Ethel Roosevelt Derby: The Devoted Daughter",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/geronimo",
+     "title": "Geronimo: The Apache Leader Who Asked to Go Home",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/gifford-pinchot",
+     "title": "Gifford Pinchot: The Forester Who Shaped a Nation",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/henry-cabot-lodge",
+     "title": "Henry Cabot Lodge: The Loyal Friend",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/jacob-riis",
+     "title": "Jacob Riis: The Photographer Who Opened Roosevelt's Eyes",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/john-muir",
+     "title": "John Muir: The Wilderness Prophet",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/kermit",
+     "title": "Kermit Roosevelt",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/leonard-wood",
+     "title": "Leonard Wood: Soldier, Rough Rider Colonel, and Ally",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/marquis-de-mores",
+     "title": "The Marquis de Morès: The Romantic Rival",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/mittie",
+     "title": "Martha \"Mittie\" Bulloch Roosevelt",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/quanah-parker",
+     "title": "Quanah Parker: The Comanche Leader Who Rode With a President",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/quentin",
+     "title": "Quentin Roosevelt: The Youngest and the Lost",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/ted-jr",
+     "title": "Theodore Roosevelt Jr.",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/theodore-sr",
+     "title": "Theodore Roosevelt Sr.",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/people/william-howard-taft",
+     "title": "William Howard Taft: Friend, Protégé, Rival",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    }
+   ]
+  },
+  {
+   "incomplete": 0,
+   "property_gaps": {},
+   "key": "itineraries",
+   "label": "Trip itineraries",
+   "schema_type": "TouristTrip",
+   "why": "AI trip planners can pick up each itinerary as a ready-made route with its stops.",
+   "drupal": "Add TouristTrip JSON-LD to the itinerary template, listing each stop. Check the drafted stop list: it's taken from the page headings.",
+   "pages": 20,
+   "done": 0,
+   "missing": 20,
+   "example": {
+    "path": "/visit/itineraries/10-day-denver-salt-lake-city",
+    "jsonld": {
+     "@context": "https://schema.org",
+     "@type": "TouristTrip",
+     "@id": "https://www.trlibrary.com/visit/itineraries/10-day-denver-salt-lake-city#main",
+     "name": "10-Day Denver to Salt Lake City",
+     "url": "https://www.trlibrary.com/visit/itineraries/10-day-denver-salt-lake-city",
+     "description": "A ten-day loop between Denver and Salt Lake City through the national parks of the northern Rockies and plains, with the Badlands and the Library in Medora.",
+     "image": "https://www.trlibrary.com/sites/default/files/2026-07/painted-canyon.jpg",
+     "provider": {
+      "@id": "https://www.trlibrary.com/#organization"
+     }
+    }
+   },
+   "items": [
+    {
+     "path": "/visit/itineraries/10-day-denver-salt-lake-city",
+     "title": "10-Day Denver to Salt Lake City",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/13-day-denver-wyoming",
+     "title": "13-Day Adventure: Denver to Jackson Hole",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/3-days-medora",
+     "title": "2 Nights, 3 Days in Medora: Legends, Landscapes & Western Flair",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/4-days-north-dakota",
+     "title": "4-Day North Dakota Road Trip Itinerary",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/7-day-billings-bismarck",
+     "title": "7-Day Trip: Billings, Montana to Bismarck, North Dakota",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/7-day-bismarck-rapid-city",
+     "title": "7-Day Trip: Bismarck, North Dakota to Rapid City, South Dakota",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/black-hills-loop",
+     "title": "The Black Hills Loop: Six Days from Medora",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/chicago-badlands",
+     "title": "Chicago to the Badlands: The Long Way",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/conservation",
+     "title": "The Conservation Trip: What Roosevelt Saved",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/dinosaurs",
+     "title": "Deep Time: A Dinosaur and Fossil Trip for Families",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/enchanted-highway",
+     "title": "The Enchanted Highway: Giants on the Prairie",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/north-on-29",
+     "title": "North on 29: Omaha and Kansas City to the Badlands",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/one-day",
+     "title": "One Day at the Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/presidential-libraries",
+     "title": "Five Presidents: A Presidential Library Road Trip",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/river-road",
+     "title": "The River Road: Lewis and Clark Across North Dakota",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/roosevelt-triangle",
+     "title": "Roosevelt Triangle",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/seattle-badlands",
+     "title": "Seattle to the Badlands: The Long Way",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/sturgis-medora",
+     "title": "Sturgis to Medora: Add the Badlands to Your Rally Ride",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/trs-badlands",
+     "title": "TR's Badlands: The Places That Made Him",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/visit/itineraries/weekend-drives",
+     "title": "Weekend Drives to Medora",
+     "has": [],
+     "done": false
+    }
+   ]
+  },
+  {
+   "incomplete": 0,
+   "property_gaps": {},
+   "key": "video_playlists",
+   "label": "Video playlists",
+   "schema_type": "ItemList / VideoObject",
+   "why": "Each playlist page can list its videos so search and AI tools see them as videos, not just links.",
+   "drupal": "Add ItemList of VideoObject JSON-LD to the playlist template. Drupal already stores each video's YouTube data, including its publish date (uploadDate).",
+   "pages": 39,
+   "done": 0,
+   "missing": 39,
+   "example": {
+    "path": "/video/playlist/PL-sck-PjBiFcBeOS7Qx2nb2RReo4HqYD8",
+    "jsonld": {
+     "@context": "https://schema.org",
+     "@type": "ItemList",
+     "@id": "https://www.trlibrary.com/video/playlist/PL-sck-PjBiFcBeOS7Qx2nb2RReo4HqYD8#videos",
+     "name": "River of Doubt Film",
+     "url": "https://www.trlibrary.com/video/playlist/PL-sck-PjBiFcBeOS7Qx2nb2RReo4HqYD8",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "item": {
+        "@type": "VideoObject",
+        "name": "Theodore Roosevelt - The River of Doubt, Part 2",
+        "url": "https://www.trlibrary.com/video/view/ToqblXc05us",
+        "embedUrl": "https://www.youtube.com/embed/ToqblXc05us",
+        "thumbnailUrl": "https://i.ytimg.com/vi/ToqblXc05us/hqdefault.jpg",
+        "uploadDate": "TODO: YouTube publish date"
+       }
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "item": {
+        "@type": "VideoObject",
+        "name": "Theodore Roosevelt - The River of Doubt, Part 1",
+        "url": "https://www.trlibrary.com/video/view/fKXOtJeaTEQ",
+        "embedUrl": "https://www.youtube.com/embed/fKXOtJeaTEQ",
+        "thumbnailUrl": "https://i.ytimg.com/vi/fKXOtJeaTEQ/hqdefault.jpg",
+        "uploadDate": "TODO: YouTube publish date"
+       }
+      }
+     ]
+    }
+   },
+   "items": [
+    {
+     "path": "/video/playlist/PL-sck-PjBiFcBeOS7Qx2nb2RReo4HqYD8",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFcCy98xmXArJzPRxtWS7Kqt",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFcCzAIKbHqbUj7_QBoBsB4I",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFcKcXcMQgMaWfZTx9iNnYUK",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFcL6ccCkFgcMg5AJl9q8M9w",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFcZCLxl4hCDAXmEj9gvjeDT",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFciehPglv2br-QrJ16ob40w",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFckfWxGlaKx64hnfB5lsXra",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFcmsHNbQmX_si9Jx5teXsCc",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFcxu6QSF_0u7aDB9EJ5mLe_",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFd7E1qm196OGgy_S_-cHlFp",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFdITqSJzldtNrxL7AwXKIYJ",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFdMvcX7NXpA688QUgdJILk8",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFdoe8bWA8DpPKPpD3O001Qz",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFdughliULJkH3k0ZMEDiUy1",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFe0c4VCUNnBs91gCPe05sa1",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFeNeYJixWBtc7BLwfj8O1PM",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFeQKd2f0Khg_ofZEtjLZg3B",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFeWMMRZFnHWBomzj1m0Z7Ah",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFelZ6jvE62RfVlRvbicBsoS",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFeyV8H6Gad41Ox8h7PNR4E5",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFf9ZV95z0PKyNz7lkqKZcxm",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFf9d_KqxPiAyGzHdHfC7cf9",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFfeuKMa6eUnL7DuERjHEtuz",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFfu9EhF15jUS48bssBq1RQK",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PL-sck-PjBiFfyCbYhDUctY0Ur5Z7F1A5l",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PLEUY06tAT_fU",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PLI6x60yeqKig",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PLIEjRP2NQLiA",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PLLm3NC-DUA_c",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PLRzfYdGoa3xg",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PLT_yAWH_U1wo",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PLUPICzVe-_ME",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PLWdA8F0rSmNg",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PLZyreFrm02D8",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PLafKMriNZlgo",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PLcUVCjvkBFMw",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PLd8chiX0Ys7k",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PLex_OJ7HycLo",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    }
+   ]
+  },
+  {
+   "incomplete": 0,
+   "property_gaps": {},
+   "key": "tr_speeches",
+   "label": "TR history: speeches",
+   "schema_type": "Article",
+   "why": "Marks the page as being about a specific TR speech, authored by TR.",
+   "drupal": "Add Article JSON-LD with an 'about' CreativeWork (the speech, author: Theodore Roosevelt).",
+   "pages": 6,
+   "done": 0,
+   "missing": 6,
+   "example": {
+    "path": "/tr/speeches/confession-of-faith",
+    "jsonld": {
+     "@context": "https://schema.org",
+     "@type": "Article",
+     "@id": "https://www.trlibrary.com/tr/speeches/confession-of-faith#main",
+     "headline": "Confession of Faith (1912)",
+     "url": "https://www.trlibrary.com/tr/speeches/confession-of-faith",
+     "description": "Roosevelt delivered his \"Confession of Faith\" at the fervent 1912 Progressive Party convention in Chicago, where reformers rallied behind his cause.",
+     "image": "https://www.trlibrary.com/sites/default/files/2026-07/02_convention.jpg",
+     "dateModified": "2026-08-13T02:30:03-06:00",
+     "author": {
+      "@id": "https://www.trlibrary.com/#organization"
+     },
+     "publisher": {
+      "@id": "https://www.trlibrary.com/#organization"
+     },
+     "about": {
+      "@type": "CreativeWork",
+      "name": "Confession of Faith (1912)",
+      "author": {
+       "@id": "https://www.trlibrary.com/tr/#person"
+      }
+     },
+     "isPartOf": {
+      "@id": "https://www.trlibrary.com/#website"
+     }
+    }
+   },
+   "items": [
+    {
+     "path": "/tr/speeches/confession-of-faith",
+     "title": "Confession of Faith (1912)",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/speeches/first-annual-message",
+     "title": "First Annual Message to Congress (1901)",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/speeches/inaugural",
+     "title": "Inaugural Address (1905)",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/speeches/man-in-the-arena",
+     "title": "The Man in the Arena: Citizenship in a Republic",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/speeches/new-nationalism",
+     "title": "The New Nationalism (1910)",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/speeches/strenuous-life",
+     "title": "The Strenuous Life (1899)",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    }
+   ]
+  },
+  {
+   "incomplete": 19,
+   "property_gaps": {
+    "author": 19,
+    "publisher": 19
+   },
+   "key": "press",
+   "label": "Press releases",
+   "schema_type": "Article / NewsArticle",
+   "why": "Gives each release a publish date, so AI answers don't mix up old and new announcements.",
+   "drupal": "Add NewsArticle JSON-LD to the press release template, using the release date field.",
+   "pages": 19,
+   "done": 19,
+   "missing": 0,
+   "example": null,
+   "items": [
+    {
+     "path": "/about/press/press-releases/architectural-design-concepts-unveiled",
+     "title": "Architectural Design Concepts Unveiled",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    },
+    {
+     "path": "/about/press/press-releases/confluence-named-landscape-architect-record",
+     "title": "Confluence Named Landscape Architect Of Record",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    },
+    {
+     "path": "/about/press/press-releases/conocophillips-contributes-2-million-theodore-roosevelt-presidential",
+     "title": "ConocoPhillips Contributes $2 Million to Theodore Roosevelt Presidential Library; Preserves Elkhorn Ranch Viewshed at TR National Park",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    },
+    {
+     "path": "/about/press/press-releases/ed-schafer-theodore-roosevelt-presidential-library-would-influence-world",
+     "title": "Ed Schafer: A Theodore Roosevelt Presidential Library Would Influence The World",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    },
+    {
+     "path": "/about/press/press-releases/equestrian-statue-heading-trpl",
+     "title": "Equestrian Statue Heading To TRPL",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    },
+    {
+     "path": "/about/press/press-releases/harold-hamm-donates-50-million-trpl",
+     "title": "Harold Hamm Donates $50 Million To TRPL",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    },
+    {
+     "path": "/about/press/press-releases/roosevelt-family-acquires-903-acres-trpl",
+     "title": "Roosevelt Family Acquires 90.3 Acres For TRPL",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    },
+    {
+     "path": "/about/press/press-releases/sarah-and-ross-perot-jr-foundation-gifts-5-million-theodore-roosevelt",
+     "title": "Sarah and Ross Perot, Jr. Foundation Gifts $5 Million to Theodore Roosevelt Presidential Library",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    },
+    {
+     "path": "/about/press/press-releases/snohetta-selected-design-architect-trpl",
+     "title": "Snøhetta Selected As Design Architect For The Trpl",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    },
+    {
+     "path": "/about/press/press-releases/theodore-roosevelt-presidential-library-launches-good-citizen-podcast",
+     "title": "Theodore Roosevelt Presidential Library Launches 'Good Citizen' Podcast Hosted by Ted Roosevelt",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    },
+    {
+     "path": "/about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026",
+     "title": "Theodore Roosevelt Presidential Library Opening Celebrations on July 4, 2026",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    },
+    {
+     "path": "/about/press/press-releases/theodore-roosevelt-presidential-library-unveils-edmund-morris-archives",
+     "title": "Theodore Roosevelt Presidential Library Unveils Edmund Morris Archives at Dickinson State University",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    },
+    {
+     "path": "/about/press/press-releases/theodore-roosevelt-presidential-library-welcomes-doris-kearns-goodwin",
+     "title": "Theodore Roosevelt Presidential Library Welcomes Doris Kearns Goodwin and Beth Laski to Board of Trustees",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    },
+    {
+     "path": "/about/press/press-releases/theodore-roosevelt-presidential-library-welcomes-new-trustees-ahead-2026",
+     "title": "Theodore Roosevelt Presidential Library Welcomes New Trustees Ahead of 2026 Opening",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    },
+    {
+     "path": "/about/press/press-releases/theodore-roosevelts-groundbreaking-firsts-and-feats-celebration",
+     "title": "Theodore Roosevelt's Groundbreaking Firsts and Feats in Celebration of Presidents' Day",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    },
+    {
+     "path": "/about/press/press-releases/trpl-elects-new-board-members",
+     "title": "TRPL Elects New Board Members",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    },
+    {
+     "path": "/about/press/press-releases/trplf-announces-100-million-commitments-unlocks-50-million-state",
+     "title": "TRPLF Announces $100 Million In Commitments, Unlocks $50 Million State Endowment",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    },
+    {
+     "path": "/about/press/press-releases/trplf-elects-spencer-zwick-board",
+     "title": "TRPLF Elects Spencer Zwick To Board",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    },
+    {
+     "path": "/about/press/press-releases/trplf-elects-victoria-chambers-eric-jolly-and-vaughn-williams-board",
+     "title": "TRPLF Elects Victoria Chambers, Eric Jolly, And Vaughn Williams To Board",
+     "has": [
+      "NewsArticle"
+     ],
+     "done": true,
+     "missing_props": [
+      "author",
+      "publisher"
+     ]
+    }
+   ]
+  },
+  {
+   "incomplete": 14,
+   "property_gaps": {
+    "worksFor/memberOf": 14
+   },
+   "key": "trustees",
+   "label": "Trustee profiles",
+   "schema_type": "Person / ProfilePage",
+   "why": "Tells AI tools who sits on the Board.",
+   "drupal": "Add ProfilePage + Person JSON-LD (role: Trustee) to the trustee template.",
+   "pages": 14,
+   "done": 14,
+   "missing": 0,
+   "example": null,
+   "items": [
+    {
+     "path": "/about/trustees/beth-laski",
+     "title": "Beth Laski",
+     "has": [
+      "Person"
+     ],
+     "done": true,
+     "missing_props": [
+      "worksFor/memberOf"
+     ]
+    },
+    {
+     "path": "/about/trustees/beth-myers",
+     "title": "Beth Myers",
+     "has": [
+      "Person"
+     ],
+     "done": true,
+     "missing_props": [
+      "worksFor/memberOf"
+     ]
+    },
+    {
+     "path": "/about/trustees/david-saggau",
+     "title": "David Saggau",
+     "has": [
+      "Person"
+     ],
+     "done": true,
+     "missing_props": [
+      "worksFor/memberOf"
+     ]
+    },
+    {
+     "path": "/about/trustees/doris-kearns-goodwin",
+     "title": "Doris Kearns Goodwin",
+     "has": [
+      "Person"
+     ],
+     "done": true,
+     "missing_props": [
+      "worksFor/memberOf"
+     ]
+    },
+    {
+     "path": "/about/trustees/douglas-brinkley",
+     "title": "Douglas Brinkley",
+     "has": [
+      "Person"
+     ],
+     "done": true,
+     "missing_props": [
+      "worksFor/memberOf"
+     ]
+    },
+    {
+     "path": "/about/trustees/dr-chevy-humphrey",
+     "title": "Dr. Chevy Humphrey",
+     "has": [
+      "Person"
+     ],
+     "done": true,
+     "missing_props": [
+      "worksFor/memberOf"
+     ]
+    },
+    {
+     "path": "/about/trustees/edward-okeefe",
+     "title": "Edward O’Keefe",
+     "has": [
+      "Person"
+     ],
+     "done": true,
+     "missing_props": [
+      "worksFor/memberOf"
+     ]
+    },
+    {
+     "path": "/about/trustees/eileen-scheel",
+     "title": "Eileen Scheel",
+     "has": [
+      "Person"
+     ],
+     "done": true,
+     "missing_props": [
+      "worksFor/memberOf"
+     ]
+    },
+    {
+     "path": "/about/trustees/hilary-hamm",
+     "title": "Hilary Hamm",
+     "has": [
+      "Person"
+     ],
+     "done": true,
+     "missing_props": [
+      "worksFor/memberOf"
+     ]
+    },
+    {
+     "path": "/about/trustees/john-palfrey",
+     "title": "John Palfrey",
+     "has": [
+      "Person"
+     ],
+     "done": true,
+     "missing_props": [
+      "worksFor/memberOf"
+     ]
+    },
+    {
+     "path": "/about/trustees/kermit-roosevelt",
+     "title": "Kermit Roosevelt",
+     "has": [
+      "Person"
+     ],
+     "done": true,
+     "missing_props": [
+      "worksFor/memberOf"
+     ]
+    },
+    {
+     "path": "/about/trustees/theodore-roosevelt-v",
+     "title": "Theodore Roosevelt V",
+     "has": [
+      "Person"
+     ],
+     "done": true,
+     "missing_props": [
+      "worksFor/memberOf"
+     ]
+    },
+    {
+     "path": "/about/trustees/vaughn-williams",
+     "title": "Vaughn Williams",
+     "has": [
+      "Person"
+     ],
+     "done": true,
+     "missing_props": [
+      "worksFor/memberOf"
+     ]
+    },
+    {
+     "path": "/about/trustees/victoria-chambers",
+     "title": "Victoria Chambers",
+     "has": [
+      "Person"
+     ],
+     "done": true,
+     "missing_props": [
+      "worksFor/memberOf"
+     ]
+    }
+   ]
+  },
+  {
+   "incomplete": 0,
+   "property_gaps": {},
+   "key": "faq",
+   "label": "Pages with Q&A",
+   "schema_type": "FAQPage",
+   "why": "Questions and answers are exactly what AI tools quote. FAQ markup hands them the question and the Library's own answer, word for word.",
+   "drupal": "Add FAQPage JSON-LD to the accordion paragraph type: when every item's title is a question, output each as Question/Answer. One template change covers every FAQ page.",
+   "pages": 20,
+   "done": 19,
+   "missing": 1,
+   "example": {
+    "path": "/benefactor-society-qas",
+    "jsonld": {
+     "@context": "https://schema.org",
+     "@type": "FAQPage",
+     "@id": "https://www.trlibrary.com/benefactor-society-qas#faq",
+     "url": "https://www.trlibrary.com/benefactor-society-qas",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "HOW CAN I DONATE?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can make a secure online payment through the website: trlibrary.com/donate . Or, send a check payable to the Theodore Roosevelt Presidential Library Foundation to: TR Library 401 E Main Ave Ste 201 Bismarck, ND 58501."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "IF I JOIN A BENEFACTOR SOCIETY, HOW WILL MY DONATION BE USED?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your donation will provide funding for physical and virtual programing and operations to explore the life, legacy, and enduring relevance of Theodore Roosevelt."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "MAY I DIRECT MY GIFT TO SUPPORT A SPECIFIC AREA OF TRPL?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most powerful way to support the Library is with an unrestricted gift. Unrestricted support gives us the flexibility to direct resources where the need and opportunity are greatest — such as to the programs, conservation, and educational work that will define the Library's future — and it ensures your generosity has the broadest possible impact. That said, we're always glad to hear from benefactors with a particular passion. If you'd like to support a specific area, we welcome the conversation and would be pleased to explore opportunities that align with your interests and the Library's long-term vision. However you choose to give, your support will be recognized through the appropriate Benefactor Society."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "WHAT IS THE TAX-EXEMPT STATUS OF THE THEODORE ROOSEVELT PRESIDENTIAL LIBRARY?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Theodore Roosevelt Presidential Library Foundation manages the Library and fundraises on its behalf. The Foundation is a tax-exempt 501(c)(3) organization."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "WILL MY GIFT BE TAX DEDUCTIBLE?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, gifts are 100% tax-deductible to the full extent of the law."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "WILL I RECEIVE A TAX RECEIPT?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, a tax receipt will be provided."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "WHAT ARE SOME OF THE BENEFACTOR SOCIETY BENEFITS?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Benefits include a special welcome packet, the Theodore Roosevelt Presidential Library e-newsletter and digital recognition (unless anonymity is requested). Additional opportunities for recognition are available based on level of support."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "HOW LONG DOES MY BENEFACTOR SOCIETY PARTICIPATION LAST?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Benefactor Society participation recognizes the total impact of your cumulative giving."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "DO YOU SELL OR SHARE BENEFACTOR INFORMATION WITH THIRD PARTIES?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, we do not."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "MAY I MAKE AN ANONYMOUS GIFT TO JOIN A BENEFACTOR SOCIETY?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Certainly, simply specify your desire to remain anonymous when you make your gift and your request will be honored."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "WILL MY NAME BE PRINTED IN MATERIALS OR PUBLISHED IN ANY WAY?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, digital recognition (unless anonymity is requested) and additional opportunities for recognition are available based on level of support."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "I HAVE MORE QUESTIONS. WHO CAN I REACH OUT TO?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Please contact us at giving@trlibrary.com ."
+       }
+      }
+     ]
+    }
+   },
+   "items": [
+    {
+     "path": "/benefactor-society-qas",
+     "title": "BENEFACTOR SOCIETY Q&A'S",
+     "has": [],
+     "done": false,
+     "questions": 12,
+     "jsonld": {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://www.trlibrary.com/benefactor-society-qas#faq",
+      "url": "https://www.trlibrary.com/benefactor-society-qas",
+      "mainEntity": [
+       {
+        "@type": "Question",
+        "name": "HOW CAN I DONATE?",
+        "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "You can make a secure online payment through the website: trlibrary.com/donate . Or, send a check payable to the Theodore Roosevelt Presidential Library Foundation to: TR Library 401 E Main Ave Ste 201 Bismarck, ND 58501."
+        }
+       },
+       {
+        "@type": "Question",
+        "name": "IF I JOIN A BENEFACTOR SOCIETY, HOW WILL MY DONATION BE USED?",
+        "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "Your donation will provide funding for physical and virtual programing and operations to explore the life, legacy, and enduring relevance of Theodore Roosevelt."
+        }
+       },
+       {
+        "@type": "Question",
+        "name": "MAY I DIRECT MY GIFT TO SUPPORT A SPECIFIC AREA OF TRPL?",
+        "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "The most powerful way to support the Library is with an unrestricted gift. Unrestricted support gives us the flexibility to direct resources where the need and opportunity are greatest — such as to the programs, conservation, and educational work that will define the Library's future — and it ensures your generosity has the broadest possible impact. That said, we're always glad to hear from benefactors with a particular passion. If you'd like to support a specific area, we welcome the conversation and would be pleased to explore opportunities that align with your interests and the Library's long-term vision. However you choose to give, your support will be recognized through the appropriate Benefactor Society."
+        }
+       },
+       {
+        "@type": "Question",
+        "name": "WHAT IS THE TAX-EXEMPT STATUS OF THE THEODORE ROOSEVELT PRESIDENTIAL LIBRARY?",
+        "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "The Theodore Roosevelt Presidential Library Foundation manages the Library and fundraises on its behalf. The Foundation is a tax-exempt 501(c)(3) organization."
+        }
+       },
+       {
+        "@type": "Question",
+        "name": "WILL MY GIFT BE TAX DEDUCTIBLE?",
+        "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "Yes, gifts are 100% tax-deductible to the full extent of the law."
+        }
+       },
+       {
+        "@type": "Question",
+        "name": "WILL I RECEIVE A TAX RECEIPT?",
+        "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "Yes, a tax receipt will be provided."
+        }
+       },
+       {
+        "@type": "Question",
+        "name": "WHAT ARE SOME OF THE BENEFACTOR SOCIETY BENEFITS?",
+        "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "Benefits include a special welcome packet, the Theodore Roosevelt Presidential Library e-newsletter and digital recognition (unless anonymity is requested). Additional opportunities for recognition are available based on level of support."
+        }
+       },
+       {
+        "@type": "Question",
+        "name": "HOW LONG DOES MY BENEFACTOR SOCIETY PARTICIPATION LAST?",
+        "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "Benefactor Society participation recognizes the total impact of your cumulative giving."
+        }
+       },
+       {
+        "@type": "Question",
+        "name": "DO YOU SELL OR SHARE BENEFACTOR INFORMATION WITH THIRD PARTIES?",
+        "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "No, we do not."
+        }
+       },
+       {
+        "@type": "Question",
+        "name": "MAY I MAKE AN ANONYMOUS GIFT TO JOIN A BENEFACTOR SOCIETY?",
+        "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "Certainly, simply specify your desire to remain anonymous when you make your gift and your request will be honored."
+        }
+       },
+       {
+        "@type": "Question",
+        "name": "WILL MY NAME BE PRINTED IN MATERIALS OR PUBLISHED IN ANY WAY?",
+        "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "Yes, digital recognition (unless anonymity is requested) and additional opportunities for recognition are available based on level of support."
+        }
+       },
+       {
+        "@type": "Question",
+        "name": "I HAVE MORE QUESTIONS. WHO CAN I REACH OUT TO?",
+        "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "Please contact us at giving@trlibrary.com ."
+        }
+       }
+      ]
+     }
+    },
+    {
+     "path": "/signature-experiences",
+     "title": "Signature Experiences",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Question"
+     ],
+     "done": true,
+     "questions": 3
+    },
+    {
+     "path": "/tr/badlands/bad-lands-cow-boy",
+     "title": "The Bad Lands Cow Boy: Medora's Newspaper, 1884–1886",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Person",
+      "Question"
+     ],
+     "done": true,
+     "questions": 7
+    },
+    {
+     "path": "/tr/badlands/where-to-see",
+     "title": "Where to See Theodore Roosevelt's North Dakota",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Person",
+      "Question"
+     ],
+     "done": true,
+     "questions": 5
+    },
+    {
+     "path": "/visit/camping",
+     "title": "Camping Near Medora, North Dakota",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Question"
+     ],
+     "done": true,
+     "questions": 9
+    },
+    {
+     "path": "/visit/faq/accessibility",
+     "title": "Accessibility",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Question"
+     ],
+     "done": true,
+     "questions": 6
+    },
+    {
+     "path": "/visit/faq/during-your-visit",
+     "title": "During Your Visit",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Question"
+     ],
+     "done": true,
+     "questions": 16
+    },
+    {
+     "path": "/visit/faq/food-drink",
+     "title": "Food & Drink",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Question"
+     ],
+     "done": true,
+     "questions": 4
+    },
+    {
+     "path": "/visit/faq/getting-here",
+     "title": "Getting Here & Parking",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Question"
+     ],
+     "done": true,
+     "questions": 10
+    },
+    {
+     "path": "/visit/faq/photography",
+     "title": "Photography & Filming",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Question"
+     ],
+     "done": true,
+     "questions": 5
+    },
+    {
+     "path": "/visit/faq/rules-safety",
+     "title": "Rules & Safety",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Question"
+     ],
+     "done": true,
+     "questions": 7
+    },
+    {
+     "path": "/visit/faq/tickets",
+     "title": "Tickets & Entry",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Question"
+     ],
+     "done": true,
+     "questions": 10
+    },
+    {
+     "path": "/visit/hunting-fishing",
+     "title": "Hunting and Fishing Near Medora, North Dakota",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Question"
+     ],
+     "done": true,
+     "questions": 11
+    },
+    {
+     "path": "/visit/i-94",
+     "title": "Best Stops on I-94 in North Dakota",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Question"
+     ],
+     "done": true,
+     "questions": 5
+    },
+    {
+     "path": "/visit/little-missouri-river",
+     "title": "Little Missouri River at Medora, North Dakota",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Question"
+     ],
+     "done": true,
+     "questions": 6
+    },
+    {
+     "path": "/visit/national-park",
+     "title": "Visiting Theodore Roosevelt National Park",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Question"
+     ],
+     "done": true,
+     "questions": 6
+    },
+    {
+     "path": "/visit/national-park/elkhorn-ranch",
+     "title": "Visiting the Elkhorn Ranch",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Question"
+     ],
+     "done": true,
+     "questions": 5
+    },
+    {
+     "path": "/visit/national-park/geology",
+     "title": "Badlands Geology in Theodore Roosevelt National Park, Medora",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Question"
+     ],
+     "done": true,
+     "questions": 6
+    },
+    {
+     "path": "/visit/national-park/trip-planner",
+     "title": "Theodore Roosevelt National Park Trip Planner",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Question"
+     ],
+     "done": true,
+     "questions": 5
+    },
+    {
+     "path": "/visit/stargazing/northern-lights",
+     "title": "Northern Lights in Medora, North Dakota",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Question"
+     ],
+     "done": true,
+     "questions": 6
+    }
+   ]
+  },
+  {
+   "incomplete": 0,
+   "property_gaps": {},
+   "key": "podcast_series",
+   "label": "Good Citizen podcast page",
+   "schema_type": "PodcastSeries",
+   "why": "Names the show as a podcast series.",
+   "drupal": "Add PodcastSeries JSON-LD to the podcast landing page.",
+   "pages": 1,
+   "done": 0,
+   "missing": 1,
+   "example": {
+    "path": "/podcast/good-citizen",
+    "jsonld": {
+     "@context": "https://schema.org",
+     "@type": "PodcastSeries",
+     "@id": "https://www.trlibrary.com/podcast/good-citizen#main",
+     "name": "Good Citizen Podcast",
+     "url": "https://www.trlibrary.com/podcast/good-citizen",
+     "description": "Join Ted Roosevelt V on the Good Citizen podcast for conversations about citizenship — what it means to step into the arena and make positive change.",
+     "image": "https://www.trlibrary.com/sites/default/files/2026-06/building-clean-june.jpg",
+     "publisher": {
+      "@id": "https://www.trlibrary.com/#organization"
+     }
+    }
+   },
+   "items": [
+    {
+     "path": "/podcast/good-citizen",
+     "title": "Good Citizen Podcast",
+     "has": [],
+     "done": false
+    }
+   ]
+  },
+  {
+   "incomplete": 0,
+   "property_gaps": {},
+   "key": "event",
+   "label": "Calendar events",
+   "schema_type": "Event",
+   "why": "Lets Google and AI assistants answer 'what's happening at the Library this weekend' with the date, time and ticket link.",
+   "drupal": "Add Event JSON-LD to the Event content type template, filled from the event's date, time, price and ticket fields. One template change covers every event.",
+   "pages": 21,
+   "done": 21,
+   "missing": 0,
+   "example": null,
+   "items": [
+    {
+     "path": "/calendar/daily-activity/free-final-hour",
+     "title": "Free Final Hour",
+     "has": [
+      "Event",
+      "Offer",
+      "Place",
+      "Schedule"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/daily-activity/guided-highlights-tour",
+     "title": "Guided Highlights Tour",
+     "has": [
+      "Event",
+      "Offer",
+      "Place",
+      "Schedule"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/daily-activity/room-sixty-years-front-lines-history",
+     "title": "In the Room: Sixty Years on the Front Lines of History",
+     "has": [
+      "Event",
+      "Offer",
+      "Place",
+      "Schedule"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/special-event/911-whca-remembers-historic-tragedies-and-near-tragedies",
+     "title": "9/11: WHCA Remembers Historic Tragedies and Near Tragedies",
+     "has": [
+      "Event",
+      "Offer",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/special-event/america-beautiful-film-screening",
+     "title": "America the Beautiful Film Screening",
+     "has": [
+      "Event",
+      "Offer",
+      "Place",
+      "Schedule"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/special-event/american-conservation-coalition-2026-public-programs",
+     "title": "American Conservation Coalition 2026 Public Programs",
+     "has": [
+      "Event",
+      "Offer",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/special-event/artist-demonstration-shane-balkowitsch",
+     "title": "Artist Demonstration: Shane Balkowitsch",
+     "has": [
+      "Event",
+      "Offer",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/special-event/artist-talk-chad-ziemendorf",
+     "title": "Artist Talk: Chad Ziemendorf",
+     "has": [
+      "Event",
+      "Offer",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/special-event/bill-bleyer-presents-sagamore-hill-theodore-roosevelts-summer-white-house",
+     "title": "Bill Bleyer Presents: \"Sagamore Hill: Theodore Roosevelt's Summer White House\"",
+     "has": [
+      "Event",
+      "Offer",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/special-event/book-signing-and-meet-greet",
+     "title": "Book Signing and Meet & Greet",
+     "has": [
+      "Event",
+      "Offer",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/special-event/downward-bull-moose-yoga-tr",
+     "title": "Downward Bull Moose: Yoga with T.R.",
+     "has": [
+      "Event",
+      "Offer",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/special-event/governor-kelly-armstrong-and-karl-rove-conversation",
+     "title": "Governor Kelly Armstrong and Karl Rove In Conversation",
+     "has": [
+      "Event",
+      "Offer",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/special-event/hamilton-speaks",
+     "title": "Hamilton Speaks",
+     "has": [
+      "Event",
+      "Offer",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/special-event/maah-daah-hey-bike-race",
+     "title": "Maah Daah Hey Bike Race",
+     "has": [
+      "Event",
+      "Offer",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/special-event/maah-daah-hey-trail-run",
+     "title": "Maah Daah Hey Trail Run",
+     "has": [
+      "Event",
+      "Offer",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/special-event/precedent-power-teaching-executive-authority-through-george-washington-and",
+     "title": "From Precedent to Power: Teaching Executive Authority Through George Washington and Theodore Roosevelt",
+     "has": [
+      "Event",
+      "Offer",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/special-event/white-house-communications-agency-alumni-wives-tales-and-war-stories",
+     "title": "White House Communications Agency Alumni: Wives' Tales and War Stories",
+     "has": [
+      "Event",
+      "Offer",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/specialty-tour/architecture-and-sustainability-tour",
+     "title": "Architecture and Sustainability Tour",
+     "has": [
+      "Event",
+      "Offer",
+      "Place",
+      "Schedule"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/specialty-tour/badlands-landscape-tour",
+     "title": "Badlands Landscape Tour",
+     "has": [
+      "Event",
+      "Offer",
+      "Place",
+      "Schedule"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/specialty-tour/member-behind-arena-tour",
+     "title": "Member \"Behind the Arena\" Tour",
+     "has": [
+      "Event",
+      "Offer",
+      "Place",
+      "Schedule"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/specialty-tour/tr-deep-dive-tour",
+     "title": "T.R. Deep-Dive Tour",
+     "has": [
+      "Event",
+      "Offer",
+      "Place",
+      "Schedule"
+     ],
+     "done": true
+    }
+   ]
+  },
+  {
+   "incomplete": 0,
+   "property_gaps": {},
+   "key": "staff",
+   "label": "Staff profiles",
+   "schema_type": "Person / ProfilePage",
+   "why": "Tells AI tools who holds which role at the Library.",
+   "drupal": "Add ProfilePage + Person JSON-LD to the staff member template (name, job title, photo).",
+   "pages": 42,
+   "done": 42,
+   "missing": 0,
+   "example": null,
+   "items": [
+    {
+     "path": "/staff-members/addison-olson",
+     "title": "Addison Olson",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/alice-wynd",
+     "title": "Alice Wynd",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/amy-mccann",
+     "title": "Amy McCann",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/barbara-shockey",
+     "title": "Barbara Shockey",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/blakely-page",
+     "title": "Blakely Page",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/bonnie-salveson",
+     "title": "Bonnie Salveson",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/brett-bennick",
+     "title": "Brett Bennick",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/candace-stock",
+     "title": "Candace Stock",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/chris-blackwell",
+     "title": "Chris Blackwell",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/cj-von-buchwald-wright",
+     "title": "CJ von Buchwald-Wright",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/clancy-griggs",
+     "title": "Clancy Griggs",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/clark-crowley-bunyard",
+     "title": "Clark Crowley-Bunyard",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/courtland-miller",
+     "title": "Courtland Miller",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/dan-muus",
+     "title": "Dan Muus",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/danielle-sahlin",
+     "title": "Danielle Sahlin",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/debbie-queen",
+     "title": "Debbie Queen",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/jacob-simpson",
+     "title": "Jacob Simpson",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/jayna-wiens",
+     "title": "Jayna Wiens",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/jenn-carroll",
+     "title": "Jenn Carroll",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/jeremy-beam",
+     "title": "Jeremy Beam",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/jessyca-macklin",
+     "title": "Jessyca Macklin",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/jolene-procive",
+     "title": "Jolene Procive",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/julianna-gonzaba",
+     "title": "Julianna Gonzaba",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/katie-fulton",
+     "title": "Katie Fulton",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/katie-reilly",
+     "title": "Katie Reilly",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/keah-munsen",
+     "title": "Keah Munsen",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/ken-vein",
+     "title": "Ken Vein",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/kristie-skunberg",
+     "title": "Kristie Skunberg",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/luke-radzak",
+     "title": "Luke Radzak",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/marcie-woehl",
+     "title": "Marcie Woehl",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/matt-briney",
+     "title": "Matt Briney",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/matt-ronk",
+     "title": "Matt Ronk",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/nicole-turchin",
+     "title": "Nicole Turchin",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/peter-troutner",
+     "title": "Peter Troutner",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/rachel-moats",
+     "title": "Rachel Moats",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/robbie-lauf",
+     "title": "Robbie Lauf",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/sarah-mellor",
+     "title": "Sarah Mellor",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/sigrid-letcher",
+     "title": "Sigrid Letcher",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/susan-sarna",
+     "title": "Susan Sarna",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/tony-erickson",
+     "title": "Tony Erickson",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/will-hollingsworth",
+     "title": "Will Hollingsworth",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    },
+    {
+     "path": "/staff-members/zoey-gill",
+     "title": "Zoey Gill",
+     "has": [
+      "Person"
+     ],
+     "done": true
+    }
+   ]
+  }
+ ],
+ "llms_txt_draft": "data/site-llms.txt"
+}

@@ -1,42 +1,63 @@
 {
  "audit": {
   "state": "ok",
-  "message": "Crawled 1074 pages, health 96/100",
-  "updated": "2026-10-20T05:12:15+00:00"
+  "message": "Crawled 1105 pages, health 96/100",
+  "updated": "2026-10-26T14:14:30+00:00"
  },
  "ranks": {
   "state": "ok",
-  "message": "20 keywords checked",
-  "updated": "2026-10-20T05:14:53+00:00"
+  "message": "25 keywords checked",
+  "updated": "2026-10-26T14:18:31+00:00"
  },
  "opportunities": {
   "state": "ok",
   "message": "150 striking-distance queries, 60 low-CTR pages",
-  "updated": "2026-10-25T13:25:38+00:00"
+  "updated": "2026-10-26T14:24:29+00:00"
  },
  "gsc": {
   "state": "ok",
-  "message": "24282 queries, 1599 pages (2026-09-25 to 2026-10-22)",
-  "updated": "2026-10-25T13:25:38+00:00"
+  "message": "24193 queries, 1640 pages (2026-09-26 to 2026-10-23)",
+  "updated": "2026-10-26T14:11:32+00:00"
  },
  "ai_visibility": {
-  "state": "error",
-  "message": "28 answers from ChatGPT, Gemini, Perplexity; 17 failed: Gemini 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more info",
-  "updated": "2026-10-20T05:22:20+00:00"
+  "state": "ok",
+  "message": "51 answers from ChatGPT, Gemini, Perplexity",
+  "updated": "2026-10-26T14:24:29+00:00"
  },
  "tips": {
   "state": "ok",
   "message": "Gemini wrote tips for 8 pages",
-  "updated": "2026-10-20T05:25:10+00:00"
+  "updated": "2026-10-26T14:45:54+00:00"
  },
  "digest": {
   "state": "ok",
   "message": "llms.txt, digest.md and digest.json rebuilt",
-  "updated": "2026-10-25T13:25:47+00:00"
+  "updated": "2026-10-26T14:45:54+00:00"
  },
  "checkout": {
   "state": "ok",
   "message": "Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info",
-  "updated": "2026-10-25T13:25:47+00:00"
+  "updated": "2026-10-26T14:42:36+00:00"
+ },
+ "curate": {
+  "state": "ok",
+  "message": "5 discovered keywords and 2 discovered questions tracked; 7 changes today",
+  "updated": "2026-10-26T14:15:10+00:00"
+ },
+ "ux": {
+  "state": "ok",
+  "message": "79 pages; PageSpeed on 78; AI task check by gemini (gemini-3.8-flash); GA4 on; Clarity off; 1 errors, e.g. PageSpeed /visit/maps/campus: PageSpeed 500: {\n  \"error\": {\n    \"code\": 500,\n    \"message\": \"Lighthouse returned error: PAGE_HUNG. Lighthouse was unable to reliably load the URL you requeste",
+  "updated": "2026-10-26T14:38:48+00:00"
+ },
+ "links": {
+  "state": "ok",
+  "message": "1139 pages crawled; 48 broken internal links (redirects proposed); 1109 suggested links; 46 orphan pages; 49 related pairs without links",
+  "updated": "2026-10-26T14:40:46+00:00"
+ },
+ "schema": {
+  "state": "ok",
+  "message": "96/863 content pages have their own markup; 9 sitewide issues",
+  "updated": "2026-10-26T14:42:29+00:00",
+  "pages": 1013
  }
 }

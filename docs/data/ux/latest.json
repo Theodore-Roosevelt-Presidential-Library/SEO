@@ -1,0 +1,3078 @@
+{
+ "updated": "2026-10-26T14:38:48+00:00",
+ "section": "/visit",
+ "tasks": {
+  "hours": "When is the Library open?",
+  "price": "How much are tickets?",
+  "buy": "Where do I buy tickets?",
+  "directions": "How do I get there, and where do I park?",
+  "visit_length": "How long should I plan to spend?",
+  "accessibility": "Is the Library accessible for wheelchairs and strollers?",
+  "food": "Can I get food or coffee there?"
+ },
+ "checked_by": "gemini (gemini-3.8-flash)",
+ "sources": {
+  "pagespeed": "all pages",
+  "ga4": true,
+  "clarity": false,
+  "ai_task_check": true
+ },
+ "summary": {
+  "pages": 79,
+  "pagespeed_checked": 78,
+  "performance": 42,
+  "accessibility": 96,
+  "findability": 46,
+  "reading_ease": 60,
+  "grade_level": 8.2,
+  "hard_to_read": 11,
+  "conflicts": 1,
+  "origin_field": "FAST",
+  "task_status": {
+   "hours": {
+    "linked": 4,
+    "missing": 6,
+    "top": 1
+   },
+   "price": {
+    "linked": 5,
+    "missing": 4,
+    "buried": 1,
+    "top": 1
+   },
+   "buy": {
+    "linked": 6,
+    "missing": 2,
+    "top": 3
+   },
+   "directions": {
+    "top": 1,
+    "buried": 3,
+    "missing": 2,
+    "linked": 4,
+    "not_relevant": 1
+   },
+   "visit_length": {
+    "missing": 6,
+    "not_relevant": 1,
+    "top": 2,
+    "buried": 1,
+    "linked": 1
+   },
+   "accessibility": {
+    "buried": 2,
+    "missing": 5,
+    "linked": 2,
+    "top": 1,
+    "not_relevant": 1
+   },
+   "food": {
+    "top": 3,
+    "linked": 2,
+    "missing": 4,
+    "buried": 1,
+    "not_relevant": 1
+   }
+  }
+ },
+ "conflicts": [
+  {
+   "fact": "visit_length",
+   "pages": [
+    "/visit/groups",
+    "/visit",
+    "/visit/hours"
+   ],
+   "detail": "The groups page lists visit length as approximately three hours, whereas the visit and hours pages recommend about three and a half hours."
+  }
+ ],
+ "pages": [
+  {
+   "path": "/visit",
+   "url": "https://www.trlibrary.com/visit",
+   "status": 200,
+   "readability": {
+    "words": 1448,
+    "reading_ease": 48.4,
+    "grade_level": 10.4,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": 6,
+    "label": "fairly hard"
+   },
+   "pagespeed": {
+    "performance": 81,
+    "accessibility": 80,
+    "best_practices": 96,
+    "lcp_s": 2.7,
+    "cls": 0.084,
+    "tbt_ms": 421,
+    "a11y_failures": [
+     "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+     "`[role]`s are not contained by their required parent element",
+     "Background and foreground colors do not have a sufficient contrast ratio.",
+     "Heading elements are not in a sequentially-descending order",
+     "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements.",
+     "Touch targets do not have sufficient size or spacing."
+    ],
+    "field": {
+     "overall": "FAST",
+     "lcp_ms": 960,
+     "inp_ms": 104,
+     "cls": 0.0
+    },
+    "origin_field": "FAST"
+   },
+   "task_check": {
+    "tasks": {
+     "hours": {
+      "status": "linked",
+      "note": "Season date ranges appear near the top, but daily opening and closing times require clicking through."
+     },
+     "price": {
+      "status": "top",
+      "note": "Ticket prices for adults, youth, children, and discount categories appear in the opening sections."
+     },
+     "buy": {
+      "status": "top",
+      "note": "Prominent ticket links and reservation prompts appear right near the top of the page."
+     },
+     "directions": {
+      "status": "buried",
+      "note": "Driving directions from I-94 appear halfway down; parking information is omitted entirely."
+     },
+     "visit_length": {
+      "status": "top",
+      "note": "Recommends three and a half hours for exhibitions plus extra for the boardwalk in the second paragraph."
+     },
+     "accessibility": {
+      "status": "linked",
+      "note": "Brief general commitment is buried near the bottom; specific wheelchair and stroller details link out."
+     },
+     "food": {
+      "status": "buried",
+      "note": "Salt+Scoria restaurant information and menu link appear deep down the page under exhibition text."
+     }
+    },
+    "facts": {
+     "hours": null,
+     "prices": "Adults (13+) : $26\nYouth (3–12) : $16\nChildren (Under 3) : Free\nDiscounts are available for seniors, active duty and military veterans, college students, and groups of 15+ .",
+     "visit_length": "Plan about three and a half hours to explore the exhibition. If you’d like to walk the one-mile boardwalk, allow extra time.",
+     "address": "3410 Chateau Road, Medora, North Dakota",
+     "parking": null
+    },
+    "biggest_fix": "State daily opening and closing hours and parking instructions directly on this page instead of leaving them out or requiring extra clicks.",
+    "findability": 79,
+    "checked_by": "gemini (gemini-3.8-flash)"
+   },
+   "ga4": {
+    "views": 9792,
+    "engagement_rate": 0.858,
+    "bounce_rate": 0.142,
+    "avg_engagement_s": 67
+   }
+  },
+  {
+   "path": "/visit/accessibility",
+   "url": "https://www.trlibrary.com/visit/accessibility",
+   "status": 200,
+   "readability": {
+    "words": 494,
+    "reading_ease": 42.6,
+    "grade_level": 9.8,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 77,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 2.9,
+    "cls": 0.011,
+    "tbt_ms": 575,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "task_check": {
+    "tasks": {
+     "hours": {
+      "status": "missing",
+      "note": "Operating hours are not mentioned or linked on this page."
+     },
+     "price": {
+      "status": "missing",
+      "note": "No ticket pricing or admission details are listed."
+     },
+     "buy": {
+      "status": "missing",
+      "note": "No link or information provided for purchasing tickets."
+     },
+     "directions": {
+      "status": "linked",
+      "note": "ADA parking is detailed; a 'Get Directions' link leads to full driving directions."
+     },
+     "visit_length": {
+      "status": "missing",
+      "note": "Recommended visit length is not stated."
+     },
+     "accessibility": {
+      "status": "top",
+      "note": "Thoroughly detailed from the top, covering parking, doorways, wheelchairs, boardwalks, and sensory considerations."
+     },
+     "food": {
+      "status": "missing",
+      "note": "No information about dining, snacks, or drinks is provided."
+     }
+    },
+    "facts": {
+     "hours": null,
+     "prices": null,
+     "visit_length": null,
+     "address": null,
+     "parking": "There are 8 ADA accessible parking spaces available within 400 feet of the entrance. Parking surfaces are concrete and the mobility access area aisles are wooden cobbles. The pathways are aggregate paving (not loose surface)."
+    },
+    "biggest_fix": "State whether strollers are permitted alongside wheelchairs and add basic trip-planning links for tickets and hours.",
+    "findability": 25,
+    "checked_by": "gemini (gemini-3.8-flash)"
+   },
+   "ga4": {
+    "views": 112,
+    "engagement_rate": 0.721,
+    "bounce_rate": 0.279,
+    "avg_engagement_s": 51
+   }
+  },
+  {
+   "path": "/visit/activities",
+   "url": "https://www.trlibrary.com/visit/activities",
+   "status": 200,
+   "readability": {
+    "words": 2107,
+    "reading_ease": 66.3,
+    "grade_level": 6.8,
+    "long_paragraphs": 1,
+    "words_before_ticket_link": 185,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 26,
+    "accessibility": 87,
+    "best_practices": 96,
+    "lcp_s": 14.3,
+    "cls": 0,
+    "tbt_ms": 4218,
+    "a11y_failures": [
+     "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+     "`[role]`s are not contained by their required parent element",
+     "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements."
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 276,
+    "engagement_rate": 0.889,
+    "bounce_rate": 0.111,
+    "avg_engagement_s": 91
+   }
+  },
+  {
+   "path": "/visit/biking",
+   "url": "https://www.trlibrary.com/visit/biking",
+   "status": 200,
+   "readability": {
+    "words": 997,
+    "reading_ease": 52.7,
+    "grade_level": 9.2,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 26,
+    "accessibility": 80,
+    "best_practices": 96,
+    "lcp_s": 19.2,
+    "cls": 0,
+    "tbt_ms": 3630,
+    "a11y_failures": [
+     "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+     "`[role]`s are not contained by their required parent element",
+     "Background and foreground colors do not have a sufficient contrast ratio.",
+     "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements.",
+     "Touch targets do not have sufficient size or spacing."
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 87,
+    "engagement_rate": 0.731,
+    "bounce_rate": 0.269,
+    "avg_engagement_s": 81
+   }
+  },
+  {
+   "path": "/visit/camping",
+   "url": "https://www.trlibrary.com/visit/camping",
+   "status": 200,
+   "readability": {
+    "words": 810,
+    "reading_ease": 72.0,
+    "grade_level": 6.6,
+    "long_paragraphs": 2,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 52,
+    "accessibility": 98,
+    "best_practices": 96,
+    "lcp_s": 4.2,
+    "cls": 0.065,
+    "tbt_ms": 2506,
+    "a11y_failures": [
+     "Heading elements are not in a sequentially-descending order"
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 60,
+    "engagement_rate": 0.863,
+    "bounce_rate": 0.137,
+    "avg_engagement_s": 43
+   }
+  },
+  {
+   "path": "/visit/directions",
+   "url": "https://www.trlibrary.com/visit/directions",
+   "status": 200,
+   "readability": {
+    "words": 1533,
+    "reading_ease": 45.1,
+    "grade_level": 10.4,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": 3,
+    "label": "fairly hard"
+   },
+   "pagespeed": {
+    "performance": 26,
+    "accessibility": 87,
+    "best_practices": 96,
+    "lcp_s": 17.9,
+    "cls": 0,
+    "tbt_ms": 5324,
+    "a11y_failures": [
+     "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+     "`[role]`s are not contained by their required parent element",
+     "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements."
+    ],
+    "field": {
+     "overall": "FAST",
+     "lcp_ms": 1127,
+     "inp_ms": 120,
+     "cls": 0.0
+    },
+    "origin_field": "FAST"
+   },
+   "task_check": {
+    "tasks": {
+     "hours": {
+      "status": "linked",
+      "note": "Hours link in navigation menu; no operating hours stated in page text."
+     },
+     "price": {
+      "status": "linked",
+      "note": "Tickets link in navigation menu; no pricing information provided on page."
+     },
+     "buy": {
+      "status": "linked",
+      "note": "Tickets link in navigation menu; group ticketing contact provided lower down."
+     },
+     "directions": {
+      "status": "top",
+      "note": "Clear street address, highway exits, airport driving routes, and parking details provided."
+     },
+     "visit_length": {
+      "status": "missing",
+      "note": "Does not mention the recommended 3 1/2-hour visit duration anywhere."
+     },
+     "accessibility": {
+      "status": "buried",
+      "note": "Mentions accessible parking and links to accessibility page toward the bottom."
+     },
+     "food": {
+      "status": "top",
+      "note": "Opening text notes the campus map includes a restaurant."
+     }
+    },
+    "facts": {
+     "hours": null,
+     "prices": null,
+     "visit_length": null,
+     "address": "3410 Chateau Rd, Medora, ND 58645",
+     "parking": "Free general parking is available on the Library campus, a short walk from the main entrance. Lots accommodate standard vehicles, accessible parking, and drop-off areas for those with mobility needs."
+    },
+    "biggest_fix": "Add the recommended 3 1/2-hour visit time near the top so road-trippers allocate enough time when planning driving stops.",
+    "findability": 68,
+    "checked_by": "gemini (gemini-3.8-flash)"
+   },
+   "ga4": {
+    "views": 2955,
+    "engagement_rate": 0.742,
+    "bounce_rate": 0.258,
+    "avg_engagement_s": 54
+   }
+  },
+  {
+   "path": "/visit/directions/ev-charging",
+   "url": "https://www.trlibrary.com/visit/directions/ev-charging",
+   "status": 200,
+   "readability": {
+    "words": 316,
+    "reading_ease": 66.5,
+    "grade_level": 7.7,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 57,
+    "accessibility": 98,
+    "best_practices": 96,
+    "lcp_s": 7.2,
+    "cls": 0.164,
+    "tbt_ms": 356,
+    "a11y_failures": [
+     "Heading elements are not in a sequentially-descending order"
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 37,
+    "engagement_rate": 0.806,
+    "bounce_rate": 0.194,
+    "avg_engagement_s": 50
+   }
+  },
+  {
+   "path": "/visit/eat",
+   "url": "https://www.trlibrary.com/visit/eat",
+   "status": 200,
+   "readability": {
+    "words": 2237,
+    "reading_ease": 59.2,
+    "grade_level": 8.3,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 29,
+    "accessibility": 87,
+    "best_practices": 96,
+    "lcp_s": 14.6,
+    "cls": 0.003,
+    "tbt_ms": 1978,
+    "a11y_failures": [
+     "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+     "`[role]`s are not contained by their required parent element",
+     "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements."
+    ],
+    "field": {
+     "overall": "FAST",
+     "lcp_ms": 826,
+     "inp_ms": 134,
+     "cls": 0.0
+    },
+    "origin_field": "FAST"
+   },
+   "task_check": {
+    "tasks": {
+     "hours": {
+      "status": "missing",
+      "note": "Gives seasonal restaurant hours only; general Library opening hours are missing entirely."
+     },
+     "price": {
+      "status": "missing",
+      "note": "Notes no ticket is required to dine, but gives no Library admission pricing or link."
+     },
+     "buy": {
+      "status": "missing",
+      "note": "No link or info provided for purchasing general Library admission tickets."
+     },
+     "directions": {
+      "status": "buried",
+      "note": "Mentions parking car at Library and taking free Medora Stageline Trolley, but lacks driving directions/address."
+     },
+     "visit_length": {
+      "status": "not_relevant",
+      "note": "Dining guide page; visitor duration is covered on general planning pages."
+     },
+     "accessibility": {
+      "status": "missing",
+      "note": "No accessibility details for dining areas or physical navigation mentioned."
+     },
+     "food": {
+      "status": "top",
+      "note": "Extensively details Salt+Scoria inside the Library and town dining options right at the top."
+     }
+    },
+    "facts": {
+     "hours": null,
+     "prices": null,
+     "visit_length": null,
+     "address": null,
+     "parking": "no need to move your car to go to dinner"
+    },
+    "biggest_fix": "Add a prominent callout box clarifying general Library hours alongside the restaurant hours so trip planners understand building access.",
+    "findability": 25,
+    "checked_by": "gemini (gemini-3.8-flash)"
+   },
+   "ga4": {
+    "views": 1502,
+    "engagement_rate": 0.847,
+    "bounce_rate": 0.153,
+    "avg_engagement_s": 71
+   }
+  },
+  {
+   "path": "/visit/exhibits",
+   "url": "https://www.trlibrary.com/visit/exhibits",
+   "status": 200,
+   "readability": {
+    "words": 514,
+    "reading_ease": 64.6,
+    "grade_level": 8.8,
+    "long_paragraphs": 1,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 59,
+    "accessibility": 86,
+    "best_practices": 96,
+    "lcp_s": 4.4,
+    "cls": 0.059,
+    "tbt_ms": 794,
+    "a11y_failures": [
+     "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+     "Background and foreground colors do not have a sufficient contrast ratio.",
+     "Heading elements are not in a sequentially-descending order",
+     "Touch targets do not have sufficient size or spacing."
+    ],
+    "field": {
+     "overall": "FAST",
+     "lcp_ms": 1114,
+     "inp_ms": null,
+     "cls": 0.0
+    },
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 1435,
+    "engagement_rate": 0.896,
+    "bounce_rate": 0.104,
+    "avg_engagement_s": 48
+   }
+  },
+  {
+   "path": "/visit/exhibits/artificial-intelligence",
+   "url": "https://www.trlibrary.com/visit/exhibits/artificial-intelligence",
+   "status": 200,
+   "readability": {
+    "words": 689,
+    "reading_ease": 39.5,
+    "grade_level": 12.1,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "hard"
+   },
+   "pagespeed": {
+    "performance": 39,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 11.9,
+    "cls": 0.144,
+    "tbt_ms": 930,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 116,
+    "engagement_rate": 0.627,
+    "bounce_rate": 0.373,
+    "avg_engagement_s": 52
+   }
+  },
+  {
+   "path": "/visit/exhibits/diary",
+   "url": "https://www.trlibrary.com/visit/exhibits/diary",
+   "status": 200,
+   "readability": {
+    "words": 874,
+    "reading_ease": 63.8,
+    "grade_level": 8.2,
+    "long_paragraphs": 2,
+    "words_before_ticket_link": 855,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 60,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 3.3,
+    "cls": 0.162,
+    "tbt_ms": 770,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 62,
+    "engagement_rate": 0.736,
+    "bounce_rate": 0.264,
+    "avg_engagement_s": 53
+   }
+  },
+  {
+   "path": "/visit/exhibits/kennerly",
+   "url": "https://www.trlibrary.com/visit/exhibits/kennerly",
+   "status": 200,
+   "readability": {
+    "words": 633,
+    "reading_ease": 48.4,
+    "grade_level": 11.0,
+    "long_paragraphs": 1,
+    "words_before_ticket_link": null,
+    "label": "fairly hard"
+   },
+   "pagespeed": {
+    "performance": 64,
+    "accessibility": 98,
+    "best_practices": 54,
+    "lcp_s": 2.4,
+    "cls": 0.095,
+    "tbt_ms": 1230,
+    "a11y_failures": [
+     "Heading elements are not in a sequentially-descending order"
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 140,
+    "engagement_rate": 0.607,
+    "bounce_rate": 0.393,
+    "avg_engagement_s": 60
+   }
+  },
+  {
+   "path": "/visit/exhibits/main",
+   "url": "https://www.trlibrary.com/visit/exhibits/main",
+   "status": 200,
+   "readability": {
+    "words": 9195,
+    "reading_ease": 60.6,
+    "grade_level": 9.5,
+    "long_paragraphs": 41,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 35,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 9.9,
+    "cls": 0.169,
+    "tbt_ms": 1092,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 642,
+    "engagement_rate": 0.78,
+    "bounce_rate": 0.22,
+    "avg_engagement_s": 147
+   }
+  },
+  {
+   "path": "/visit/faq",
+   "url": "https://www.trlibrary.com/visit/faq",
+   "status": 200,
+   "readability": {
+    "words": 154,
+    "reading_ease": 71.2,
+    "grade_level": 4.8,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": 6,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 46,
+    "accessibility": 86,
+    "best_practices": 96,
+    "lcp_s": 6.0,
+    "cls": 0.002,
+    "tbt_ms": 714,
+    "a11y_failures": [
+     "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+     "`[role]`s are not contained by their required parent element",
+     "Heading elements are not in a sequentially-descending order",
+     "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements."
+    ],
+    "field": {
+     "overall": "FAST",
+     "lcp_ms": 575,
+     "inp_ms": 57,
+     "cls": 0.0
+    },
+    "origin_field": "FAST"
+   },
+   "task_check": {
+    "tasks": {
+     "hours": {
+      "status": "linked",
+      "note": "Linked in top navigation and intro copy, but opening hours are not stated directly on this page."
+     },
+     "price": {
+      "status": "linked",
+      "note": "Linked under Tickets & Entry and intro copy; ticket costs are not displayed here."
+     },
+     "buy": {
+      "status": "linked",
+      "note": "Linked in header navigation and the Tickets & Entry section link."
+     },
+     "directions": {
+      "status": "linked",
+      "note": "Linked in header and under the Getting Here & Parking category link."
+     },
+     "visit_length": {
+      "status": "linked",
+      "note": "Mentioned as a topic under During Your Visit, requiring a click to view."
+     },
+     "accessibility": {
+      "status": "linked",
+      "note": "Linked via the Accessibility category heading, but details require clicking through."
+     },
+     "food": {
+      "status": "linked",
+      "note": "Linked via the Food & Drink category heading; details require clicking through."
+     }
+    },
+    "facts": {
+     "hours": null,
+     "prices": null,
+     "visit_length": null,
+     "address": null,
+     "parking": null
+    },
+    "biggest_fix": "Provide immediate answers to the top visitor questions—hours, ticket prices, and the recommended 3 1/2-hour visit length—directly on this hub page.",
+    "findability": 75,
+    "checked_by": "gemini (gemini-3.8-flash)"
+   },
+   "ga4": {
+    "views": 2830,
+    "engagement_rate": 0.924,
+    "bounce_rate": 0.076,
+    "avg_engagement_s": 31
+   }
+  },
+  {
+   "path": "/visit/faq/accessibility",
+   "url": "https://www.trlibrary.com/visit/faq/accessibility",
+   "status": 200,
+   "readability": {
+    "words": 296,
+    "reading_ease": 50.8,
+    "grade_level": 9.2,
+    "long_paragraphs": 1,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 45,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 16.2,
+    "cls": 0,
+    "tbt_ms": 502,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 101,
+    "engagement_rate": 0.909,
+    "bounce_rate": 0.091,
+    "avg_engagement_s": 51
+   }
+  },
+  {
+   "path": "/visit/faq/during-your-visit",
+   "url": "https://www.trlibrary.com/visit/faq/during-your-visit",
+   "status": 200,
+   "readability": {
+    "words": 737,
+    "reading_ease": 53.2,
+    "grade_level": 9.5,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 38,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 11.4,
+    "cls": 0,
+    "tbt_ms": 1640,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 715,
+    "engagement_rate": 0.918,
+    "bounce_rate": 0.082,
+    "avg_engagement_s": 85
+   }
+  },
+  {
+   "path": "/visit/faq/food-drink",
+   "url": "https://www.trlibrary.com/visit/faq/food-drink",
+   "status": 200,
+   "readability": {
+    "words": 184,
+    "reading_ease": 66.6,
+    "grade_level": 7.2,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 39,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 12.5,
+    "cls": 0.291,
+    "tbt_ms": 549,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 284,
+    "engagement_rate": 0.928,
+    "bounce_rate": 0.072,
+    "avg_engagement_s": 34
+   }
+  },
+  {
+   "path": "/visit/faq/getting-here",
+   "url": "https://www.trlibrary.com/visit/faq/getting-here",
+   "status": 200,
+   "readability": {
+    "words": 599,
+    "reading_ease": 55.7,
+    "grade_level": 9.1,
+    "long_paragraphs": 2,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 23,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 10.5,
+    "cls": 0.686,
+    "tbt_ms": 890,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 325,
+    "engagement_rate": 0.938,
+    "bounce_rate": 0.062,
+    "avg_engagement_s": 57
+   }
+  },
+  {
+   "path": "/visit/faq/photography",
+   "url": "https://www.trlibrary.com/visit/faq/photography",
+   "status": 200,
+   "readability": {
+    "words": 208,
+    "reading_ease": 40.7,
+    "grade_level": 10.8,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "fairly hard"
+   },
+   "pagespeed": {
+    "performance": 17,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 16.4,
+    "cls": 0.581,
+    "tbt_ms": 748,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 223,
+    "engagement_rate": 0.924,
+    "bounce_rate": 0.076,
+    "avg_engagement_s": 28
+   }
+  },
+  {
+   "path": "/visit/faq/rules-safety",
+   "url": "https://www.trlibrary.com/visit/faq/rules-safety",
+   "status": 200,
+   "readability": {
+    "words": 410,
+    "reading_ease": 45.3,
+    "grade_level": 11.4,
+    "long_paragraphs": 1,
+    "words_before_ticket_link": null,
+    "label": "fairly hard"
+   },
+   "pagespeed": {
+    "performance": 68,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 2.4,
+    "cls": 0.534,
+    "tbt_ms": 258,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 357,
+    "engagement_rate": 0.943,
+    "bounce_rate": 0.057,
+    "avg_engagement_s": 59
+   }
+  },
+  {
+   "path": "/visit/faq/tickets",
+   "url": "https://www.trlibrary.com/visit/faq/tickets",
+   "status": 200,
+   "readability": {
+    "words": 423,
+    "reading_ease": 57.5,
+    "grade_level": 9.0,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": 68,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 63,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 2.4,
+    "cls": 0.704,
+    "tbt_ms": 364,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "task_check": {
+    "tasks": {
+     "hours": {
+      "status": "missing",
+      "note": "Operating hours are not listed or linked on this ticketing page."
+     },
+     "price": {
+      "status": "linked",
+      "note": "Prices are not shown directly, but 'Buy tickets ›' links to the ticketing page."
+     },
+     "buy": {
+      "status": "top",
+      "note": "Answered immediately in the first question with an online booking link."
+     },
+     "directions": {
+      "status": "not_relevant",
+      "note": "Directions and parking belong on a location or parking FAQ page."
+     },
+     "visit_length": {
+      "status": "missing",
+      "note": "The recommended 3 1/2-hour visit length is missing, which is essential context for timed entry."
+     },
+     "accessibility": {
+      "status": "not_relevant",
+      "note": "Accessibility details belong on a dedicated accessibility FAQ page."
+     },
+     "food": {
+      "status": "not_relevant",
+      "note": "Dining information belongs on a general visitor or amenities FAQ page."
+     }
+    },
+    "facts": {
+     "hours": null,
+     "prices": null,
+     "visit_length": null,
+     "address": null,
+     "parking": null
+    },
+    "biggest_fix": "Add ticket prices and note that visits take about 3 1/2 hours so visitors can budget and plan their arrival time.",
+    "findability": 44,
+    "checked_by": "gemini (gemini-3.8-flash)"
+   },
+   "ga4": {
+    "views": 831,
+    "engagement_rate": 0.939,
+    "bounce_rate": 0.061,
+    "avg_engagement_s": 60
+   }
+  },
+  {
+   "path": "/visit/general-aviation",
+   "url": "https://www.trlibrary.com/visit/general-aviation",
+   "status": 200,
+   "readability": {
+    "words": 406,
+    "reading_ease": 68.3,
+    "grade_level": 5.3,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": 536,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 26,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 13.4,
+    "cls": 0,
+    "tbt_ms": 3558,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 10,
+    "engagement_rate": 0.5,
+    "bounce_rate": 0.5,
+    "avg_engagement_s": 80
+   }
+  },
+  {
+   "path": "/visit/groups",
+   "url": "https://www.trlibrary.com/visit/groups",
+   "status": 200,
+   "readability": {
+    "words": 372,
+    "reading_ease": 38.2,
+    "grade_level": 12.1,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "hard"
+   },
+   "pagespeed": {
+    "performance": 47,
+    "accessibility": 87,
+    "best_practices": 96,
+    "lcp_s": 17.1,
+    "cls": 0,
+    "tbt_ms": 435,
+    "a11y_failures": [
+     "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+     "Background and foreground colors do not have a sufficient contrast ratio.",
+     "Touch targets do not have sufficient size or spacing."
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "task_check": {
+    "tasks": {
+     "hours": {
+      "status": "missing",
+      "note": "Operating hours are not listed or linked on this page."
+     },
+     "price": {
+      "status": "buried",
+      "note": "Group rates appear in the sixth paragraph below several general introductory sections."
+     },
+     "buy": {
+      "status": "linked",
+      "note": "Linked 'Request a Group Tour' buttons send planners to an external reservation form."
+     },
+     "directions": {
+      "status": "missing",
+      "note": "No driving directions, street address, or bus parking instructions are provided."
+     },
+     "visit_length": {
+      "status": "top",
+      "note": "Second paragraph suggests allowing approximately three hours for the museum experience."
+     },
+     "accessibility": {
+      "status": "missing",
+      "note": "Wheelchair access, walking distances, and mobility accommodations are not mentioned."
+     },
+     "food": {
+      "status": "missing",
+      "note": "No information about on-site dining, box lunches, or catering for groups."
+     }
+    },
+    "facts": {
+     "hours": null,
+     "prices": "General admission is $26 per person. Groups of 15 or more guests qualify for a 10% group discount, which makes admission $23.40 per person . The motorcoach driver and tour guide get in free.",
+     "visit_length": "approximately three hours",
+     "address": null,
+     "parking": null
+    },
+    "biggest_fix": "Update the recommended visit length to about 3 1/2 hours and add clear instructions for motorcoach drop-off and parking.",
+    "findability": 32,
+    "checked_by": "gemini (gemini-3.8-flash)"
+   },
+   "ga4": {
+    "views": 90,
+    "engagement_rate": 0.863,
+    "bounce_rate": 0.138,
+    "avg_engagement_s": 42
+   }
+  },
+  {
+   "path": "/visit/groups/field-trips",
+   "url": "https://www.trlibrary.com/visit/groups/field-trips",
+   "status": 200,
+   "readability": {
+    "words": 151,
+    "reading_ease": 42.7,
+    "grade_level": 9.1,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 38,
+    "accessibility": 93,
+    "best_practices": 54,
+    "lcp_s": 19.1,
+    "cls": 0,
+    "tbt_ms": 972,
+    "a11y_failures": [
+     "Background and foreground colors do not have a sufficient contrast ratio.",
+     "`<frame>` or `<iframe>` elements do not have a title"
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 102,
+    "engagement_rate": 0.774,
+    "bounce_rate": 0.226,
+    "avg_engagement_s": 45
+   }
+  },
+  {
+   "path": "/visit/hiking",
+   "url": "https://www.trlibrary.com/visit/hiking",
+   "status": 200,
+   "readability": {
+    "words": 1273,
+    "reading_ease": 69.6,
+    "grade_level": 6.3,
+    "long_paragraphs": 1,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 26,
+    "accessibility": 80,
+    "best_practices": 96,
+    "lcp_s": 11.3,
+    "cls": 0.06,
+    "tbt_ms": 4053,
+    "a11y_failures": [
+     "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+     "`[role]`s are not contained by their required parent element",
+     "Background and foreground colors do not have a sufficient contrast ratio.",
+     "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements.",
+     "Touch targets do not have sufficient size or spacing."
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 196,
+    "engagement_rate": 0.837,
+    "bounce_rate": 0.163,
+    "avg_engagement_s": 105
+   }
+  },
+  {
+   "path": "/visit/hours",
+   "url": "https://www.trlibrary.com/visit/hours",
+   "status": 200,
+   "readability": {
+    "words": 190,
+    "reading_ease": 49.7,
+    "grade_level": 7.9,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": 4,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 52,
+    "accessibility": 85,
+    "best_practices": 96,
+    "lcp_s": 14.9,
+    "cls": 0,
+    "tbt_ms": 247,
+    "a11y_failures": [
+     "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+     "`[role]`s are not contained by their required parent element",
+     "Heading elements are not in a sequentially-descending order",
+     "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements."
+    ],
+    "field": {
+     "overall": "FAST",
+     "lcp_ms": 919,
+     "inp_ms": 112,
+     "cls": 0.0
+    },
+    "origin_field": "FAST"
+   },
+   "task_check": {
+    "tasks": {
+     "hours": {
+      "status": "top",
+      "note": "States open year-round with seasonal date ranges at top, but specific daily opening times are omitted."
+     },
+     "price": {
+      "status": "linked",
+      "note": "Regular ticket prices are not listed; nav links lead to /tickets."
+     },
+     "buy": {
+      "status": "linked",
+      "note": "Buttons and links for Tickets and Reserve Tickets lead to /tickets."
+     },
+     "directions": {
+      "status": "linked",
+      "note": "Directions link leads to /visit/directions; no address or parking info on page."
+     },
+     "visit_length": {
+      "status": "buried",
+      "note": "Listed lower down under Additional Details: allow about three and a half hours."
+     },
+     "accessibility": {
+      "status": "missing",
+      "note": "Mentions boardwalk access after hours, but wheelchair and stroller access are completely missing."
+     },
+     "food": {
+      "status": "top",
+      "note": "Lists Salt + Scoria Restaurant near top and details Café Lite under Additional Details."
+     }
+    },
+    "facts": {
+     "hours": null,
+     "prices": null,
+     "visit_length": "Allow about three and a half hours to explore the exhibition.",
+     "address": null,
+     "parking": null
+    },
+    "biggest_fix": "Add the actual daily opening and closing times for the museum, store, and restaurant across each season.",
+    "findability": 68,
+    "checked_by": "gemini (gemini-3.8-flash)"
+   },
+   "ga4": {
+    "views": 2613,
+    "engagement_rate": 0.795,
+    "bounce_rate": 0.205,
+    "avg_engagement_s": 55
+   }
+  },
+  {
+   "path": "/visit/hunting-fishing",
+   "url": "https://www.trlibrary.com/visit/hunting-fishing",
+   "status": 200,
+   "readability": {
+    "words": 843,
+    "reading_ease": 70.4,
+    "grade_level": 7.0,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 39,
+    "accessibility": 99,
+    "best_practices": 96,
+    "lcp_s": 14.0,
+    "cls": 0,
+    "tbt_ms": 1156,
+    "a11y_failures": [
+     "Heading elements are not in a sequentially-descending order"
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 75,
+    "engagement_rate": 0.716,
+    "bounce_rate": 0.284,
+    "avg_engagement_s": 50
+   }
+  },
+  {
+   "path": "/visit/i-94",
+   "url": "https://www.trlibrary.com/visit/i-94",
+   "status": 200,
+   "readability": {
+    "words": 909,
+    "reading_ease": 62.5,
+    "grade_level": 7.8,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": 653,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 28,
+    "accessibility": 98,
+    "best_practices": 96,
+    "lcp_s": 17.1,
+    "cls": 0,
+    "tbt_ms": 1981,
+    "a11y_failures": [
+     "Heading elements are not in a sequentially-descending order"
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 12,
+    "engagement_rate": 1.0,
+    "bounce_rate": 0.0,
+    "avg_engagement_s": 246
+   }
+  },
+  {
+   "path": "/visit/itineraries",
+   "url": "https://www.trlibrary.com/visit/itineraries",
+   "status": 200,
+   "readability": {
+    "words": 902,
+    "reading_ease": 56.8,
+    "grade_level": 9.9,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 68,
+    "accessibility": 86,
+    "best_practices": 96,
+    "lcp_s": 3.3,
+    "cls": 0.059,
+    "tbt_ms": 753,
+    "a11y_failures": [
+     "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+     "Background and foreground colors do not have a sufficient contrast ratio.",
+     "Heading elements are not in a sequentially-descending order",
+     "Touch targets do not have sufficient size or spacing."
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 287,
+    "engagement_rate": 0.853,
+    "bounce_rate": 0.147,
+    "avg_engagement_s": 59
+   }
+  },
+  {
+   "path": "/visit/itineraries/10-day-denver-salt-lake-city",
+   "url": "https://www.trlibrary.com/visit/itineraries/10-day-denver-salt-lake-city",
+   "status": 200,
+   "readability": {
+    "words": 31,
+    "reading_ease": 81.7,
+    "grade_level": 4.4,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 54,
+    "accessibility": 96,
+    "best_practices": 96,
+    "lcp_s": 2.7,
+    "cls": 0.211,
+    "tbt_ms": 784,
+    "a11y_failures": [
+     "Links do not have a discernible name"
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 5,
+    "engagement_rate": 0.8,
+    "bounce_rate": 0.2,
+    "avg_engagement_s": 16
+   }
+  },
+  {
+   "path": "/visit/itineraries/13-day-denver-wyoming",
+   "url": "https://www.trlibrary.com/visit/itineraries/13-day-denver-wyoming",
+   "status": 200,
+   "readability": {
+    "words": 943,
+    "reading_ease": 59.7,
+    "grade_level": 7.5,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 26,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 18.1,
+    "cls": 0,
+    "tbt_ms": 3353,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 10,
+    "engagement_rate": 0.667,
+    "bounce_rate": 0.333,
+    "avg_engagement_s": 49
+   }
+  },
+  {
+   "path": "/visit/itineraries/3-days-medora",
+   "url": "https://www.trlibrary.com/visit/itineraries/3-days-medora",
+   "status": 200,
+   "readability": {
+    "words": 484,
+    "reading_ease": 54.8,
+    "grade_level": 9.5,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 29,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 16.2,
+    "cls": 0,
+    "tbt_ms": 2059,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 65,
+    "engagement_rate": 0.708,
+    "bounce_rate": 0.292,
+    "avg_engagement_s": 73
+   }
+  },
+  {
+   "path": "/visit/itineraries/4-days-north-dakota",
+   "url": "https://www.trlibrary.com/visit/itineraries/4-days-north-dakota",
+   "status": 200,
+   "readability": {
+    "words": 639,
+    "reading_ease": 51.0,
+    "grade_level": 9.8,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 22,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 8.0,
+    "cls": 0.165,
+    "tbt_ms": 2605,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 48,
+    "engagement_rate": 0.8,
+    "bounce_rate": 0.2,
+    "avg_engagement_s": 92
+   }
+  },
+  {
+   "path": "/visit/itineraries/7-day-billings-bismarck",
+   "url": "https://www.trlibrary.com/visit/itineraries/7-day-billings-bismarck",
+   "status": 200,
+   "readability": {
+    "words": 840,
+    "reading_ease": 58.3,
+    "grade_level": 8.0,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 23,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 8.3,
+    "cls": 0.144,
+    "tbt_ms": 3333,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 22,
+    "engagement_rate": 0.727,
+    "bounce_rate": 0.273,
+    "avg_engagement_s": 127
+   }
+  },
+  {
+   "path": "/visit/itineraries/7-day-bismarck-rapid-city",
+   "url": "https://www.trlibrary.com/visit/itineraries/7-day-bismarck-rapid-city",
+   "status": 200,
+   "readability": {
+    "words": 731,
+    "reading_ease": 57.9,
+    "grade_level": 7.9,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 26,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 7.9,
+    "cls": 0.145,
+    "tbt_ms": 1662,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 31,
+    "engagement_rate": 0.774,
+    "bounce_rate": 0.226,
+    "avg_engagement_s": 66
+   }
+  },
+  {
+   "path": "/visit/itineraries/black-hills-loop",
+   "url": "https://www.trlibrary.com/visit/itineraries/black-hills-loop",
+   "status": 200,
+   "readability": {
+    "words": 852,
+    "reading_ease": 66.5,
+    "grade_level": 8.0,
+    "long_paragraphs": 2,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 21,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 8.1,
+    "cls": 0.158,
+    "tbt_ms": 4979,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 31,
+    "engagement_rate": 0.531,
+    "bounce_rate": 0.469,
+    "avg_engagement_s": 65
+   }
+  },
+  {
+   "path": "/visit/itineraries/chicago-badlands",
+   "url": "https://www.trlibrary.com/visit/itineraries/chicago-badlands",
+   "status": 200,
+   "readability": {
+    "words": 906,
+    "reading_ease": 69.7,
+    "grade_level": 6.9,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 27,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 11.7,
+    "cls": 0,
+    "tbt_ms": 2798,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 30,
+    "engagement_rate": 0.679,
+    "bounce_rate": 0.321,
+    "avg_engagement_s": 92
+   }
+  },
+  {
+   "path": "/visit/itineraries/conservation",
+   "url": "https://www.trlibrary.com/visit/itineraries/conservation",
+   "status": 200,
+   "readability": {
+    "words": 639,
+    "reading_ease": 52.7,
+    "grade_level": 9.4,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 21,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 8.1,
+    "cls": 0.158,
+    "tbt_ms": 4886,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 12,
+    "engagement_rate": 0.769,
+    "bounce_rate": 0.231,
+    "avg_engagement_s": 29
+   }
+  },
+  {
+   "path": "/visit/itineraries/dinosaurs",
+   "url": "https://www.trlibrary.com/visit/itineraries/dinosaurs",
+   "status": 200,
+   "readability": {
+    "words": 914,
+    "reading_ease": 54.9,
+    "grade_level": 9.7,
+    "long_paragraphs": 1,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 26,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 13.3,
+    "cls": 0,
+    "tbt_ms": 3814,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 21,
+    "engagement_rate": 0.632,
+    "bounce_rate": 0.368,
+    "avg_engagement_s": 85
+   }
+  },
+  {
+   "path": "/visit/itineraries/enchanted-highway",
+   "url": "https://www.trlibrary.com/visit/itineraries/enchanted-highway",
+   "status": 200,
+   "readability": {
+    "words": 739,
+    "reading_ease": 72.6,
+    "grade_level": 6.7,
+    "long_paragraphs": 1,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 21,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 12.6,
+    "cls": 0.158,
+    "tbt_ms": 2516,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 57,
+    "engagement_rate": 0.694,
+    "bounce_rate": 0.306,
+    "avg_engagement_s": 60
+   }
+  },
+  {
+   "path": "/visit/itineraries/north-on-29",
+   "url": "https://www.trlibrary.com/visit/itineraries/north-on-29",
+   "status": 200,
+   "readability": {
+    "words": 798,
+    "reading_ease": 64.5,
+    "grade_level": 8.2,
+    "long_paragraphs": 1,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 25,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 7.8,
+    "cls": 0.144,
+    "tbt_ms": 2071,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 13,
+    "engagement_rate": 0.75,
+    "bounce_rate": 0.25,
+    "avg_engagement_s": 46
+   }
+  },
+  {
+   "path": "/visit/itineraries/one-day",
+   "url": "https://www.trlibrary.com/visit/itineraries/one-day",
+   "status": 200,
+   "readability": {
+    "words": 620,
+    "reading_ease": 65.5,
+    "grade_level": 7.5,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 27,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 12.6,
+    "cls": 0,
+    "tbt_ms": 2502,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 232,
+    "engagement_rate": 0.797,
+    "bounce_rate": 0.203,
+    "avg_engagement_s": 116
+   }
+  },
+  {
+   "path": "/visit/itineraries/presidential-libraries",
+   "url": "https://www.trlibrary.com/visit/itineraries/presidential-libraries",
+   "status": 200,
+   "readability": {
+    "words": 776,
+    "reading_ease": 57.1,
+    "grade_level": 8.6,
+    "long_paragraphs": 1,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 25,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 15.0,
+    "cls": 0.144,
+    "tbt_ms": 1463,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 49,
+    "engagement_rate": 0.674,
+    "bounce_rate": 0.326,
+    "avg_engagement_s": 62
+   }
+  },
+  {
+   "path": "/visit/itineraries/river-road",
+   "url": "https://www.trlibrary.com/visit/itineraries/river-road",
+   "status": 200,
+   "readability": {
+    "words": 919,
+    "reading_ease": 56.3,
+    "grade_level": 9.6,
+    "long_paragraphs": 2,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 23,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 13.2,
+    "cls": 0.144,
+    "tbt_ms": 2196,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 9,
+    "engagement_rate": 0.778,
+    "bounce_rate": 0.222,
+    "avg_engagement_s": 41
+   }
+  },
+  {
+   "path": "/visit/itineraries/roosevelt-triangle",
+   "url": "https://www.trlibrary.com/visit/itineraries/roosevelt-triangle",
+   "status": 200,
+   "readability": {
+    "words": 31,
+    "reading_ease": 81.7,
+    "grade_level": 4.4,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 15,
+    "accessibility": 96,
+    "best_practices": 96,
+    "lcp_s": 11.5,
+    "cls": 0.211,
+    "tbt_ms": 3559,
+    "a11y_failures": [
+     "Links do not have a discernible name"
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 9,
+    "engagement_rate": 0.889,
+    "bounce_rate": 0.111,
+    "avg_engagement_s": 47
+   }
+  },
+  {
+   "path": "/visit/itineraries/seattle-badlands",
+   "url": "https://www.trlibrary.com/visit/itineraries/seattle-badlands",
+   "status": 200,
+   "readability": {
+    "words": 978,
+    "reading_ease": 70.6,
+    "grade_level": 6.7,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 22,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 8.1,
+    "cls": 0.157,
+    "tbt_ms": 3020,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 17,
+    "engagement_rate": 0.529,
+    "bounce_rate": 0.471,
+    "avg_engagement_s": 67
+   }
+  },
+  {
+   "path": "/visit/itineraries/sturgis-medora",
+   "url": "https://www.trlibrary.com/visit/itineraries/sturgis-medora",
+   "status": 200,
+   "readability": {
+    "words": 772,
+    "reading_ease": 67.9,
+    "grade_level": 7.3,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 27,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 7.7,
+    "cls": 0.144,
+    "tbt_ms": 1449,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 10,
+    "engagement_rate": 0.6,
+    "bounce_rate": 0.4,
+    "avg_engagement_s": 45
+   }
+  },
+  {
+   "path": "/visit/itineraries/trs-badlands",
+   "url": "https://www.trlibrary.com/visit/itineraries/trs-badlands",
+   "status": 200,
+   "readability": {
+    "words": 731,
+    "reading_ease": 63.2,
+    "grade_level": 8.0,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 27,
+    "accessibility": 96,
+    "best_practices": 96,
+    "lcp_s": 36.6,
+    "cls": 0,
+    "tbt_ms": 2292,
+    "a11y_failures": [
+     "`<frame>` or `<iframe>` elements do not have a title"
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 27,
+    "engagement_rate": 0.917,
+    "bounce_rate": 0.083,
+    "avg_engagement_s": 95
+   }
+  },
+  {
+   "path": "/visit/itineraries/weekend-drives",
+   "url": "https://www.trlibrary.com/visit/itineraries/weekend-drives",
+   "status": 200,
+   "readability": {
+    "words": 483,
+    "reading_ease": 68.5,
+    "grade_level": 6.4,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 22,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 8.0,
+    "cls": 0.174,
+    "tbt_ms": 2030,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 24,
+    "engagement_rate": 0.826,
+    "bounce_rate": 0.174,
+    "avg_engagement_s": 51
+   }
+  },
+  {
+   "path": "/visit/itineraries/weekend-drives/bismarck",
+   "url": "https://www.trlibrary.com/visit/itineraries/weekend-drives/bismarck",
+   "status": 200,
+   "readability": {
+    "words": 447,
+    "reading_ease": 72.4,
+    "grade_level": 6.3,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 50,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 16.7,
+    "cls": 0,
+    "tbt_ms": 300,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 24,
+    "engagement_rate": 0.696,
+    "bounce_rate": 0.304,
+    "avg_engagement_s": 99
+   }
+  },
+  {
+   "path": "/visit/itineraries/weekend-drives/fargo",
+   "url": "https://www.trlibrary.com/visit/itineraries/weekend-drives/fargo",
+   "status": 200,
+   "readability": {
+    "words": 386,
+    "reading_ease": 66.2,
+    "grade_level": 7.2,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 53,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 16.2,
+    "cls": 0.153,
+    "tbt_ms": 251,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 33,
+    "engagement_rate": 0.758,
+    "bounce_rate": 0.242,
+    "avg_engagement_s": 92
+   }
+  },
+  {
+   "path": "/visit/itineraries/weekend-drives/minneapolis",
+   "url": "https://www.trlibrary.com/visit/itineraries/weekend-drives/minneapolis",
+   "status": 200,
+   "readability": {
+    "words": 464,
+    "reading_ease": 74.4,
+    "grade_level": 5.6,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 67,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 3.0,
+    "cls": 0.153,
+    "tbt_ms": 628,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 13,
+    "engagement_rate": 0.833,
+    "bounce_rate": 0.167,
+    "avg_engagement_s": 53
+   }
+  },
+  {
+   "path": "/visit/itineraries/weekend-drives/winnipeg",
+   "url": "https://www.trlibrary.com/visit/itineraries/weekend-drives/winnipeg",
+   "status": 200,
+   "readability": {
+    "words": 468,
+    "reading_ease": 63.4,
+    "grade_level": 7.9,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 73,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 3.3,
+    "cls": 0.153,
+    "tbt_ms": 316,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 4,
+    "engagement_rate": 0.75,
+    "bounce_rate": 0.25,
+    "avg_engagement_s": 11
+   }
+  },
+  {
+   "path": "/visit/little-missouri-river",
+   "url": "https://www.trlibrary.com/visit/little-missouri-river",
+   "status": 200,
+   "readability": {
+    "words": 830,
+    "reading_ease": 69.2,
+    "grade_level": 7.6,
+    "long_paragraphs": 1,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 50,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 20.8,
+    "cls": 0,
+    "tbt_ms": 338,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 49,
+    "engagement_rate": 0.644,
+    "bounce_rate": 0.356,
+    "avg_engagement_s": 64
+   }
+  },
+  {
+   "path": "/visit/lodging",
+   "url": "https://www.trlibrary.com/visit/lodging",
+   "status": 200,
+   "readability": {
+    "words": 1600,
+    "reading_ease": 46.4,
+    "grade_level": 10.6,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "fairly hard"
+   },
+   "pagespeed": {
+    "performance": 26,
+    "accessibility": 87,
+    "best_practices": 96,
+    "lcp_s": 15.9,
+    "cls": 0,
+    "tbt_ms": 6711,
+    "a11y_failures": [
+     "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+     "`[role]`s are not contained by their required parent element",
+     "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements."
+    ],
+    "field": {
+     "overall": "FAST",
+     "lcp_ms": 732,
+     "inp_ms": null,
+     "cls": 0.0
+    },
+    "origin_field": "FAST"
+   },
+   "task_check": {
+    "tasks": {
+     "hours": {
+      "status": "missing",
+      "note": "Operating hours are not stated or linked on this lodging page."
+     },
+     "price": {
+      "status": "missing",
+      "note": "Admission prices are not provided on this page."
+     },
+     "buy": {
+      "status": "linked",
+      "note": "Linked under hotel tips via the One Medora package link."
+     },
+     "directions": {
+      "status": "buried",
+      "note": "Trolley service from hotels is noted under hotel tips, but Library driving directions and parking are missing."
+     },
+     "visit_length": {
+      "status": "missing",
+      "note": "No mention of how long to budget for a Library visit."
+     },
+     "accessibility": {
+      "status": "missing",
+      "note": "Library accessibility details for wheelchairs and strollers are absent."
+     },
+     "food": {
+      "status": "linked",
+      "note": "Linked in navigation via 'Where to Eat'."
+     }
+    },
+    "facts": {
+     "hours": null,
+     "prices": null,
+     "visit_length": null,
+     "address": null,
+     "parking": null
+    },
+    "biggest_fix": "Finish the truncated sentence under 'Staying in Dickinson' and add a clear link to essential visit details such as Library hours and tickets.",
+    "findability": 29,
+    "checked_by": "gemini (gemini-3.8-flash)"
+   },
+   "ga4": {
+    "views": 1671,
+    "engagement_rate": 0.882,
+    "bounce_rate": 0.118,
+    "avg_engagement_s": 70
+   }
+  },
+  {
+   "path": "/visit/lodging/availability",
+   "url": "https://www.trlibrary.com/visit/lodging/availability",
+   "status": 200,
+   "readability": {
+    "words": 223,
+    "reading_ease": 62.2,
+    "grade_level": 7.7,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 53,
+    "accessibility": 99,
+    "best_practices": 96,
+    "lcp_s": 20.8,
+    "cls": 0,
+    "tbt_ms": 208,
+    "a11y_failures": [
+     "Heading elements are not in a sequentially-descending order"
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 348,
+    "engagement_rate": 0.881,
+    "bounce_rate": 0.119,
+    "avg_engagement_s": 89
+   }
+  },
+  {
+   "path": "/visit/maps",
+   "url": "https://www.trlibrary.com/visit/maps",
+   "status": 200,
+   "readability": {
+    "words": 326,
+    "reading_ease": 47.0,
+    "grade_level": 9.9,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": 5,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 54,
+    "accessibility": 87,
+    "best_practices": 96,
+    "lcp_s": 2.7,
+    "cls": 0.07,
+    "tbt_ms": 17036,
+    "a11y_failures": [
+     "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+     "`[role]`s are not contained by their required parent element",
+     "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements."
+    ],
+    "field": {
+     "overall": "FAST",
+     "lcp_ms": 686,
+     "inp_ms": null,
+     "cls": 0.0
+    },
+    "origin_field": "FAST"
+   },
+   "task_check": {
+    "tasks": {
+     "hours": {
+      "status": "linked",
+      "note": "Linked via 'Hours' in the navigation menu."
+     },
+     "price": {
+      "status": "linked",
+      "note": "Linked via 'Tickets' in the navigation menu."
+     },
+     "buy": {
+      "status": "linked",
+      "note": "Linked via 'Tickets' in the navigation menu."
+     },
+     "directions": {
+      "status": "linked",
+      "note": "Linked via 'Directions' in the navigation menu; parking is not detailed here."
+     },
+     "visit_length": {
+      "status": "missing",
+      "note": "Not stated; no mention that a typical visit takes about 3 1/2 hours."
+     },
+     "accessibility": {
+      "status": "buried",
+      "note": "Mentions elevators as a map layer, but lacks broader details on wheelchairs and strollers."
+     },
+     "food": {
+      "status": "missing",
+      "note": "No information about food, drinks, or dining options on campus."
+     }
+    },
+    "facts": {
+     "hours": null,
+     "prices": null,
+     "visit_length": null,
+     "address": null,
+     "parking": null
+    },
+    "biggest_fix": "Add a prominent visual map key showing restrooms, elevators, and trails alongside a clear note to allow about 3 1/2 hours to explore the campus.",
+    "findability": 50,
+    "checked_by": "gemini (gemini-3.8-flash)"
+   },
+   "ga4": {
+    "views": 1305,
+    "engagement_rate": 0.856,
+    "bounce_rate": 0.144,
+    "avg_engagement_s": 64
+   }
+  },
+  {
+   "path": "/visit/maps/campus",
+   "url": "https://www.trlibrary.com/visit/maps/campus",
+   "status": 200,
+   "readability": {
+    "words": 0,
+    "reading_ease": null,
+    "grade_level": null,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "–"
+   },
+   "ga4": {
+    "views": 27,
+    "engagement_rate": 0.636,
+    "bounce_rate": 0.364,
+    "avg_engagement_s": 19
+   }
+  },
+  {
+   "path": "/visit/medora",
+   "url": "https://www.trlibrary.com/visit/medora",
+   "status": 200,
+   "readability": {
+    "words": 890,
+    "reading_ease": 33.4,
+    "grade_level": 14.1,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "hard"
+   },
+   "pagespeed": {
+    "performance": 45,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 17.2,
+    "cls": 0,
+    "tbt_ms": 482,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 151,
+    "engagement_rate": 0.783,
+    "bounce_rate": 0.217,
+    "avg_engagement_s": 5954
+   }
+  },
+  {
+   "path": "/visit/medora/history",
+   "url": "https://www.trlibrary.com/visit/medora/history",
+   "status": 200,
+   "readability": {
+    "words": 2331,
+    "reading_ease": 45.2,
+    "grade_level": 12.2,
+    "long_paragraphs": 8,
+    "words_before_ticket_link": null,
+    "label": "hard"
+   },
+   "pagespeed": {
+    "performance": 75,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 3.3,
+    "cls": 0.119,
+    "tbt_ms": 332,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 68,
+    "engagement_rate": 0.565,
+    "bounce_rate": 0.435,
+    "avg_engagement_s": 121
+   }
+  },
+  {
+   "path": "/visit/national-park",
+   "url": "https://www.trlibrary.com/visit/national-park",
+   "status": 200,
+   "readability": {
+    "words": 1418,
+    "reading_ease": 59.7,
+    "grade_level": 8.3,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": 1252,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 27,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 16.2,
+    "cls": 0,
+    "tbt_ms": 2461,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 718,
+    "engagement_rate": 0.793,
+    "bounce_rate": 0.207,
+    "avg_engagement_s": 86
+   }
+  },
+  {
+   "path": "/visit/national-park/audio-tour",
+   "url": "https://www.trlibrary.com/visit/national-park/audio-tour",
+   "status": 200,
+   "readability": {
+    "words": 361,
+    "reading_ease": 83.8,
+    "grade_level": 4.2,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 75,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 2.4,
+    "cls": 0.198,
+    "tbt_ms": 412,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 103,
+    "engagement_rate": 0.86,
+    "bounce_rate": 0.14,
+    "avg_engagement_s": 73
+   }
+  },
+  {
+   "path": "/visit/national-park/elkhorn-ranch",
+   "url": "https://www.trlibrary.com/visit/national-park/elkhorn-ranch",
+   "status": 200,
+   "readability": {
+    "words": 1314,
+    "reading_ease": 73.3,
+    "grade_level": 6.0,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": 373,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 21,
+    "accessibility": 98,
+    "best_practices": 96,
+    "lcp_s": 8.0,
+    "cls": 0.18,
+    "tbt_ms": 2262,
+    "a11y_failures": [
+     "Heading elements are not in a sequentially-descending order"
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 31,
+    "engagement_rate": 0.654,
+    "bounce_rate": 0.346,
+    "avg_engagement_s": 71
+   }
+  },
+  {
+   "path": "/visit/national-park/geology",
+   "url": "https://www.trlibrary.com/visit/national-park/geology",
+   "status": 200,
+   "readability": {
+    "words": 1128,
+    "reading_ease": 65.8,
+    "grade_level": 8.0,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 37,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 19.4,
+    "cls": 0,
+    "tbt_ms": 806,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 175,
+    "engagement_rate": 0.664,
+    "bounce_rate": 0.336,
+    "avg_engagement_s": 50
+   }
+  },
+  {
+   "path": "/visit/national-park/trip-planner",
+   "url": "https://www.trlibrary.com/visit/national-park/trip-planner",
+   "status": 200,
+   "readability": {
+    "words": 385,
+    "reading_ease": 69.9,
+    "grade_level": 7.5,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 68,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 2.7,
+    "cls": 0.165,
+    "tbt_ms": 703,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 75,
+    "engagement_rate": 0.897,
+    "bounce_rate": 0.103,
+    "avg_engagement_s": 128
+   }
+  },
+  {
+   "path": "/visit/one-medora",
+   "url": "https://www.trlibrary.com/visit/one-medora",
+   "status": 200,
+   "readability": {
+    "words": 238,
+    "reading_ease": 59.0,
+    "grade_level": 8.5,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 62,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 6.0,
+    "cls": 0.065,
+    "tbt_ms": 436,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 144,
+    "engagement_rate": 0.881,
+    "bounce_rate": 0.119,
+    "avg_engagement_s": 84
+   }
+  },
+  {
+   "path": "/visit/outdoors",
+   "url": "https://www.trlibrary.com/visit/outdoors",
+   "status": 200,
+   "readability": {
+    "words": 822,
+    "reading_ease": 49.5,
+    "grade_level": 9.9,
+    "long_paragraphs": 1,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 67,
+    "accessibility": 81,
+    "best_practices": 96,
+    "lcp_s": 3.2,
+    "cls": 0.016,
+    "tbt_ms": 928,
+    "a11y_failures": [
+     "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+     "`[role]`s are not contained by their required parent element",
+     "Background and foreground colors do not have a sufficient contrast ratio.",
+     "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements.",
+     "Touch targets do not have sufficient size or spacing."
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 394,
+    "engagement_rate": 0.881,
+    "bounce_rate": 0.119,
+    "avg_engagement_s": 48
+   }
+  },
+  {
+   "path": "/visit/planner",
+   "url": "https://www.trlibrary.com/visit/planner",
+   "status": 200,
+   "readability": {
+    "words": 0,
+    "reading_ease": null,
+    "grade_level": null,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "–"
+   },
+   "pagespeed": {
+    "performance": 26,
+    "accessibility": 98,
+    "best_practices": 96,
+    "lcp_s": 10.7,
+    "cls": 0.814,
+    "tbt_ms": 872,
+    "a11y_failures": [
+     "Heading elements are not in a sequentially-descending order"
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 669,
+    "engagement_rate": 0.918,
+    "bounce_rate": 0.082,
+    "avg_engagement_s": 77
+   }
+  },
+  {
+   "path": "/visit/roosevelt-in-medora",
+   "url": "https://www.trlibrary.com/visit/roosevelt-in-medora",
+   "status": 200,
+   "readability": {
+    "words": 940,
+    "reading_ease": 60.1,
+    "grade_level": 7.8,
+    "long_paragraphs": 1,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 25,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 24.4,
+    "cls": 0,
+    "tbt_ms": 7012,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 36,
+    "engagement_rate": 0.636,
+    "bounce_rate": 0.364,
+    "avg_engagement_s": 16
+   }
+  },
+  {
+   "path": "/visit/scenic-drives",
+   "url": "https://www.trlibrary.com/visit/scenic-drives",
+   "status": 200,
+   "readability": {
+    "words": 564,
+    "reading_ease": 72.4,
+    "grade_level": 6.1,
+    "long_paragraphs": 1,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 49,
+    "accessibility": 87,
+    "best_practices": 96,
+    "lcp_s": 12.0,
+    "cls": 0.065,
+    "tbt_ms": 663,
+    "a11y_failures": [
+     "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+     "`[role]`s are not contained by their required parent element",
+     "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements."
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 320,
+    "engagement_rate": 0.85,
+    "bounce_rate": 0.15,
+    "avg_engagement_s": 73
+   }
+  },
+  {
+   "path": "/visit/shopping",
+   "url": "https://www.trlibrary.com/visit/shopping",
+   "status": 200,
+   "readability": {
+    "words": 1463,
+    "reading_ease": 53.1,
+    "grade_level": 8.3,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "plain"
+   },
+   "pagespeed": {
+    "performance": 37,
+    "accessibility": 87,
+    "best_practices": 96,
+    "lcp_s": 5.1,
+    "cls": 0.026,
+    "tbt_ms": 3429,
+    "a11y_failures": [
+     "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+     "`[role]`s are not contained by their required parent element",
+     "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements."
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 388,
+    "engagement_rate": 0.862,
+    "bounce_rate": 0.138,
+    "avg_engagement_s": 43
+   }
+  },
+  {
+   "path": "/visit/stargazing",
+   "url": "https://www.trlibrary.com/visit/stargazing",
+   "status": 200,
+   "readability": {
+    "words": 749,
+    "reading_ease": 65.6,
+    "grade_level": 7.6,
+    "long_paragraphs": 3,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 26,
+    "accessibility": 87,
+    "best_practices": 96,
+    "lcp_s": 15.7,
+    "cls": 0,
+    "tbt_ms": 3385,
+    "a11y_failures": [
+     "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+     "`[role]`s are not contained by their required parent element",
+     "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements."
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 237,
+    "engagement_rate": 0.844,
+    "bounce_rate": 0.156,
+    "avg_engagement_s": 68
+   }
+  },
+  {
+   "path": "/visit/stargazing/northern-lights",
+   "url": "https://www.trlibrary.com/visit/stargazing/northern-lights",
+   "status": 200,
+   "readability": {
+    "words": 448,
+    "reading_ease": 70.3,
+    "grade_level": 7.4,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 41,
+    "accessibility": 91,
+    "best_practices": 96,
+    "lcp_s": 16.1,
+    "cls": 0,
+    "tbt_ms": 656,
+    "a11y_failures": [
+     "Elements use prohibited ARIA attributes",
+     "ARIA `tooltip` elements do not have accessible names.",
+     "Heading elements are not in a sequentially-descending order"
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 12,
+    "engagement_rate": 0.667,
+    "bounce_rate": 0.333,
+    "avg_engagement_s": 16
+   }
+  },
+  {
+   "path": "/visit/teddy-trail",
+   "url": "https://www.trlibrary.com/visit/teddy-trail",
+   "status": 200,
+   "readability": {
+    "words": 2994,
+    "reading_ease": 64.9,
+    "grade_level": 7.8,
+    "long_paragraphs": 3,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 57,
+    "accessibility": 98,
+    "best_practices": 96,
+    "lcp_s": 15.3,
+    "cls": 0.068,
+    "tbt_ms": 300,
+    "a11y_failures": [
+     "Heading elements are not in a sequentially-descending order"
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 22,
+    "engagement_rate": 0.632,
+    "bounce_rate": 0.368,
+    "avg_engagement_s": 128
+   }
+  },
+  {
+   "path": "/visit/tickets/plan-ahead",
+   "url": "https://www.trlibrary.com/visit/tickets/plan-ahead",
+   "status": 200,
+   "readability": {
+    "words": 120,
+    "reading_ease": 64.7,
+    "grade_level": 8.0,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 54,
+    "accessibility": 98,
+    "best_practices": 96,
+    "lcp_s": 3.8,
+    "cls": 0.084,
+    "tbt_ms": 1205,
+    "a11y_failures": [
+     "Heading elements are not in a sequentially-descending order"
+    ],
+    "field": {
+     "overall": "FAST",
+     "lcp_ms": 541,
+     "inp_ms": 103,
+     "cls": 0.0
+    },
+    "origin_field": "FAST"
+   },
+   "task_check": {
+    "tasks": {
+     "hours": {
+      "status": "missing",
+      "note": "No daily operating hours or seasonal schedules are listed."
+     },
+     "price": {
+      "status": "missing",
+      "note": "Ticket prices, discounts, and admission fees are not mentioned."
+     },
+     "buy": {
+      "status": "top",
+      "note": "Instructs visitors to book online in advance using the calendar tool referenced on the page."
+     },
+     "directions": {
+      "status": "missing",
+      "note": "Mentions Medora and the Badlands, but gives no address, driving directions, or parking details."
+     },
+     "visit_length": {
+      "status": "missing",
+      "note": "Does not state how much time visitors should plan to spend exploring the Library."
+     },
+     "accessibility": {
+      "status": "missing",
+      "note": "No information provided regarding wheelchairs, strollers, or physical accessibility."
+     },
+     "food": {
+      "status": "missing",
+      "note": "No mention of on-site dining, snacks, or coffee options."
+     }
+    },
+    "facts": {
+     "hours": null,
+     "prices": null,
+     "visit_length": null,
+     "address": null,
+     "parking": null
+    },
+    "biggest_fix": "Add ticket prices, an active booking link, and tell visitors to plan on spending about 3 1/2 hours here.",
+    "findability": 14,
+    "checked_by": "gemini (gemini-3.8-flash)"
+   },
+   "ga4": {
+    "views": 1378,
+    "engagement_rate": 0.907,
+    "bounce_rate": 0.093,
+    "avg_engagement_s": 83
+   }
+  },
+  {
+   "path": "/visit/tours",
+   "url": "https://www.trlibrary.com/visit/tours",
+   "status": 200,
+   "readability": {
+    "words": 283,
+    "reading_ease": 45.3,
+    "grade_level": 11.1,
+    "long_paragraphs": 1,
+    "words_before_ticket_link": 150,
+    "label": "fairly hard"
+   },
+   "pagespeed": {
+    "performance": 91,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 2.4,
+    "cls": 0.01,
+    "tbt_ms": 207,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 677,
+    "engagement_rate": 0.91,
+    "bounce_rate": 0.09,
+    "avg_engagement_s": 52
+   }
+  },
+  {
+   "path": "/visit/trolley",
+   "url": "https://www.trlibrary.com/visit/trolley",
+   "status": 200,
+   "readability": {
+    "words": 347,
+    "reading_ease": 63.3,
+    "grade_level": 7.0,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 42,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 17.0,
+    "cls": 0,
+    "tbt_ms": 599,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 65,
+    "engagement_rate": 0.852,
+    "bounce_rate": 0.148,
+    "avg_engagement_s": 43
+   }
+  },
+  {
+   "path": "/visit/weather",
+   "url": "https://www.trlibrary.com/visit/weather",
+   "status": 200,
+   "readability": {
+    "words": 494,
+    "reading_ease": 75.2,
+    "grade_level": 5.7,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 53,
+    "accessibility": 100,
+    "best_practices": 96,
+    "lcp_s": 13.1,
+    "cls": 0,
+    "tbt_ms": 486,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 157,
+    "engagement_rate": 0.611,
+    "bounce_rate": 0.389,
+    "avg_engagement_s": 29
+   }
+  },
+  {
+   "path": "/visit/wildlife",
+   "url": "https://www.trlibrary.com/visit/wildlife",
+   "status": 200,
+   "readability": {
+    "words": 434,
+    "reading_ease": 74.1,
+    "grade_level": 5.6,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": null,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 70,
+    "accessibility": 87,
+    "best_practices": 96,
+    "lcp_s": 3.9,
+    "cls": 0.062,
+    "tbt_ms": 376,
+    "a11y_failures": [
+     "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+     "`[role]`s are not contained by their required parent element",
+     "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements."
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 74,
+    "engagement_rate": 0.719,
+    "bounce_rate": 0.281,
+    "avg_engagement_s": 56
+   }
+  }
+ ],
+ "errors": [
+  "PageSpeed /visit/maps/campus: PageSpeed 500: {\n  \"error\": {\n    \"code\": 500,\n    \"message\": \"Lighthouse returned error: PAGE_HUNG. Lighthouse was unable to reliably load the URL you requeste"
+ ]
+}
