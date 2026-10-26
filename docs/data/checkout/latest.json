@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T14:42:32+00:00",
+ "updated": "2026-10-26T14:48:20+00:00",
  "store": "access.trlibrary.com",
  "period": "last 28 days",
  "note": "Rates only; counts are never published. Users who triggered each step on the ticket store, from GA4.",
@@ -177,7 +177,7 @@
    "dead_clicks": 19.1,
    "excessive_scroll": 0.0,
    "rage_clicks": 0.5,
-   "quick_backs": 43.1,
+   "quick_backs": 43.3,
    "scroll_depth": 77.1
   },
   "pages": {
@@ -300,18 +300,18 @@
     "scroll_depth": 47.0,
     "excessive_scroll": 0.0
    },
-   "video/view/k3U8V1HmKDs": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 29.0,
-    "excessive_scroll": 0.0
-   },
    "visit/faq/rules-safety": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 100.0,
+    "excessive_scroll": 0.0
+   },
+   "video/view/k3U8V1HmKDs": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 29.0,
     "excessive_scroll": 0.0
    },
    "tr/quotes": {
@@ -447,18 +447,18 @@
     "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
-   "tr/tr-mount-rushmore": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 6.0,
-    "excessive_scroll": 0.0
-   },
    "search": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 54.0,
+    "excessive_scroll": 0.0
+   },
+   "tr/tr-mount-rushmore": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 6.0,
     "excessive_scroll": 0.0
    },
    "events/list": {
@@ -867,18 +867,18 @@
     "scroll_depth": 94.0,
     "excessive_scroll": 0.0
    },
-   "tr/quotes/leadership": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 35.0,
-    "excessive_scroll": 0.0
-   },
    "about/trustees/theodore-roosevelt-v": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 91.0,
+    "excessive_scroll": 0.0
+   },
+   "tr/quotes/leadership": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 35.0,
     "excessive_scroll": 0.0
    },
    "visit/tours": {
@@ -944,13 +944,6 @@
     "scroll_depth": 19.0,
     "excessive_scroll": 0.0
    },
-   "staff-members/susan-sarna": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 71.0,
-    "excessive_scroll": 0.0
-   },
    "video/view/yEEsRy7sdng": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
@@ -958,18 +951,18 @@
     "scroll_depth": 93.0,
     "excessive_scroll": 0.0
    },
-   "about/press/press-releases/sarah-and-ross-perot-jr-foundation-gifts-5-million-theodore-roosevelt": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 56.0,
-    "excessive_scroll": 0.0
-   },
    "tr/tr-importance": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 4.0,
+    "excessive_scroll": 0.0
+   },
+   "about/press/press-releases/sarah-and-ross-perot-jr-foundation-gifts-5-million-theodore-roosevelt": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 56.0,
     "excessive_scroll": 0.0
    },
    "tr/presidency/panama-canal": {
@@ -1028,18 +1021,18 @@
     "scroll_depth": 44.0,
     "excessive_scroll": 0.0
    },
-   "visit/maps": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 59.0,
-    "excessive_scroll": 0.0
-   },
    "tr/homes-and-places": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 13.0,
+    "excessive_scroll": 0.0
+   },
+   "visit/maps": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 59.0,
     "excessive_scroll": 0.0
    },
    "tr/presidency/indian-policy": {
@@ -1056,11 +1049,11 @@
     "scroll_depth": 35.0,
     "excessive_scroll": 0.0
    },
-   "tr/christmas-timeline": {
+   "signature-experiences": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 90.0,
+    "scroll_depth": 58.0,
     "excessive_scroll": 0.0
    },
    "visit/directions": {
@@ -1070,11 +1063,11 @@
     "scroll_depth": 29.4,
     "excessive_scroll": 0.0
    },
-   "signature-experiences": {
+   "tr/christmas-timeline": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 58.0,
+    "scroll_depth": 90.0,
     "excessive_scroll": 0.0
    },
    "tr/rise-to-power/rough-riders/who-were-they": {

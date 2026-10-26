@@ -1,5 +1,5 @@
 # trlibrary.com search & AI visibility digest
-Generated 2026-10-26T14:45:54+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
+Generated 2026-10-26T14:48:25+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
 
 ## How to use this
 Read top to bottom: the biggest, cheapest wins come first in each section. When you suggest copy, follow these house rules:
@@ -20,12 +20,12 @@ Read top to bottom: the biggest, cheapest wins come first in each section. When 
 |---|---|---|---|
 | audit | ok | 2026-10-26T14:14:30+00:00 | Crawled 1105 pages, health 96/100 |
 | ranks | ok | 2026-10-26T14:18:31+00:00 | 25 keywords checked |
-| opportunities | ok | 2026-10-26T14:24:29+00:00 | 150 striking-distance queries, 60 low-CTR pages |
-| gsc | ok | 2026-10-26T14:11:32+00:00 | 24193 queries, 1640 pages (2026-09-26 to 2026-10-23) |
+| opportunities | ok | 2026-10-26T14:48:18+00:00 | 150 striking-distance queries, 60 low-CTR pages |
+| gsc | ok | 2026-10-26T14:48:17+00:00 | 24193 queries, 1640 pages (2026-09-26 to 2026-10-23) |
 | ai_visibility | ok | 2026-10-26T14:24:29+00:00 | 51 answers from ChatGPT, Gemini, Perplexity |
 | tips | ok | 2026-10-26T14:45:54+00:00 | Gemini wrote tips for 8 pages |
-| digest | ok | 2026-10-25T13:25:47+00:00 | llms.txt, digest.md and digest.json rebuilt |
-| checkout | ok | 2026-10-26T14:42:36+00:00 | Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info |
+| digest | ok | 2026-10-26T14:45:54+00:00 | llms.txt, digest.md and digest.json rebuilt |
+| checkout | ok | 2026-10-26T14:48:25+00:00 | Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info |
 | curate | ok | 2026-10-26T14:15:10+00:00 | 5 discovered keywords and 2 discovered questions tracked; 7 changes today |
 | ux | ok | 2026-10-26T14:38:48+00:00 | 79 pages; PageSpeed on 78; AI task check by gemini (gemini-3.8-flash); GA4 on; Clarity off; 1 errors, e.g. PageSpeed /visit/maps/campus: PageSpeed 500: {   "error": {     "code": 500,     "message": "Lighthouse returned error: PAGE_HUNG. Lighthouse was unable to reliably load the URL you requeste |
 | links | ok | 2026-10-26T14:40:46+00:00 | 1139 pages crawled; 48 broken internal links (redirects proposed); 1109 suggested links; 46 orphan pages; 49 related pairs without links |
@@ -660,7 +660,7 @@ Most fixes are one change to a Drupal template per content type (ask FiveJars); 
 ## Ticket checkout (GA4, rates only)
 Checkout completion – (prior –); store visitors who buy 41% (prior 42%); ticket page to store 67%. Steps the store doesn't report: view_item, add_to_cart, begin_checkout, add_payment_info.
 
-Store frustration signals (last 3 days, Clarity): dead clicks 19.1% of sessions, rage clicks 0.5%, quick backs 43.1%, scroll depth 77.1%.
+Store frustration signals (last 3 days, Clarity): dead clicks 19.1% of sessions, rage clicks 0.5%, quick backs 43.3%, scroll depth 77.1%.
 
 | Store page | Dead % | Rage % | Quick back % | Scroll % |
 |---|---|---|---|---|
@@ -681,8 +681,8 @@ Store frustration signals (last 3 days, Clarity): dead clicks 19.1% of sessions,
 | calendar/special-event/america-beautiful-film-screening | 0 | 0 | 0 | 28 |
 | tr/rise-to-power/san-juan-hill | 0 | 0 | 0 | 15.6 |
 | tr | 0 | 0 | 0 | 47 |
-| video/view/k3U8V1HmKDs | 0 | 0 | 0 | 29 |
 | visit/faq/rules-safety | 0 | 0 | 0 | 100 |
+| video/view/k3U8V1HmKDs | 0 | 0 | 0 | 29 |
 | tr/quotes | 100 | 0 | 0 | 65 |
 | tr/people/alice-longworth/1905-asia-mission | 0 | 0 | 0 | 88 |
 | video/view/KRj81Cqm09I | 0 | 0 | 0 | 80.5 |
@@ -702,8 +702,8 @@ Store frustration signals (last 3 days, Clarity): dead clicks 19.1% of sessions,
 | visit/exhibits | 0 | 0 | 0 | 48.5 |
 | membership/join | 0.9 | 0 | 3.6 | 70.8 |
 | media/add/image | 0 | 0 | 0 | 100 |
-| tr/tr-mount-rushmore | 0 | 0 | 0 | 6 |
 | search | 0 | 0 | 0 | 54 |
+| tr/tr-mount-rushmore | 0 | 0 | 0 | 6 |
 | events/list | 0 | 0 | 0 | 80.5 |
 | / | 0 | 0 | 0 | 18 |
 | visit | 0 | 0 | 0 | 13 |
@@ -762,8 +762,8 @@ Store frustration signals (last 3 days, Clarity): dead clicks 19.1% of sessions,
 | visit/exhibits/artificial-intelligence | 0 | 0 | 0 | 100 |
 | tr/family/fdr-connection | 33.3 | 0 | 0 | 57 |
 | tr/new-york-politics | 0 | 0 | 100 | 94 |
-| tr/quotes/leadership | 0 | 0 | 0 | 35 |
 | about/trustees/theodore-roosevelt-v | 0 | 0 | 0 | 91 |
+| tr/quotes/leadership | 0 | 0 | 0 | 35 |
 | visit/tours | 0 | 0 | 0 | 68 |
 | about/press | 50 | 0 | 0 | 96.5 |
 | tr/speeches | 0 | 0 | 0 | 58 |
@@ -773,10 +773,9 @@ Store frustration signals (last 3 days, Clarity): dead clicks 19.1% of sessions,
 | tr/badlands/boat-thieves | 0 | 0 | 0 | 80.5 |
 | tr/rise-to-power/buffalo-soldiers | 0 | 0 | 0 | 6 |
 | tr/badlands/maltese-cross | 0 | 0 | 0 | 19 |
-| staff-members/susan-sarna | 0 | 0 | 0 | 71 |
 | video/view/yEEsRy7sdng | 0 | 0 | 0 | 93 |
-| about/press/press-releases/sarah-and-ross-perot-jr-foundation-gifts-5-million-theodore-roosevelt | 0 | 0 | 0 | 56 |
 | tr/tr-importance | 0 | 0 | 0 | 4 |
+| about/press/press-releases/sarah-and-ross-perot-jr-foundation-gifts-5-million-theodore-roosevelt | 0 | 0 | 0 | 56 |
 | tr/presidency/panama-canal | 0 | 0 | 0 | 52 |
 | video | 0 | 0 | 0 | 25.5 |
 | visit/national-park | 0 | 0 | 0 | 27 |
@@ -785,13 +784,13 @@ Store frustration signals (last 3 days, Clarity): dead clicks 19.1% of sessions,
 | legal/privacy | 0 | 0 | 0 | 6.7 |
 | project/sustainability | 0 | 0 | 0 | 86 |
 | tr/presidency/conservation/national-parks | 100 | 0 | 0 | 44 |
-| visit/maps | 0 | 0 | 0 | 59 |
 | tr/homes-and-places | 0 | 0 | 0 | 13 |
+| visit/maps | 0 | 0 | 0 | 59 |
 | tr/presidency/indian-policy | 0 | 0 | 0 | 27 |
 | tr/early-life/young-naturalist | 50 | 0 | 0 | 35 |
-| tr/christmas-timeline | 0 | 0 | 0 | 90 |
-| visit/directions | 0 | 0 | 0 | 29.4 |
 | signature-experiences | 0 | 0 | 0 | 58 |
+| visit/directions | 0 | 0 | 0 | 29.4 |
+| tr/christmas-timeline | 0 | 0 | 0 | 90 |
 | tr/rise-to-power/rough-riders/who-were-they | 0 | 0 | 0 | 7 |
 | visit/eat | 0 | 0 | 0 | 30.7 |
 | tr/complex-legacy/native-americans | 0 | 0 | 0 | 7 |
