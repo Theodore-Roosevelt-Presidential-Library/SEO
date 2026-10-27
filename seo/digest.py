@@ -18,6 +18,7 @@ N = 15  # rows per list in the digest
 
 HOUSE_RULES = [
     "Suggestions are drafts for the communications team; nothing is published automatically.",
+    "Pages listed under 'Recently changed' were just edited: don't recommend changing them again until their hold ends; judge them by the before/after numbers.",
     "Never invent historical facts, dates, names, prices or hours. Use only what the page already says, or flag it for verification.",
     "Never quote or paraphrase Theodore Roosevelt. Say 'consider a verified TR quote about X' instead.",
     "Voice: friendly, plain, concrete (a knowledgeable park ranger, not a professor). Keep 'we/our/us' to a minimum.",
@@ -30,6 +31,7 @@ HOUSE_RULES = [
 ]
 
 RAW_FILES = {
+    "changes.json": "Change log: pages changed recently (held back from recommendations) with Search Console before/after numbers",
     "status.json": "Which data sources are on, last run time, errors",
     "gsc/summary.json": "Search Console totals, last 28 days vs prior 28",
     "gsc/daily.json": "Clicks/impressions/CTR/position per day (~16 months)",
@@ -68,6 +70,7 @@ def build() -> dict:
     audit = C.read_json("audit/summary.json")
     apages = C.read_json("audit/pages.json", []) or []
     tips = C.read_json("tips.json")
+    chg = C.read_json("changes.json")
     tracking = C.read_json("tracking.json")
     uxd = C.read_json("ux/latest.json")
     co = C.read_json("checkout/latest.json")
@@ -153,13 +156,25 @@ def build() -> dict:
                               for p in apages[:20]],
         }
 
+    if chg:
+        d["recently_changed"] = {
+            "hold_days": chg.get("hold_days"), "data_through": chg.get("data_through"), "note": chg.get("note"),
+            "how_to_add": "List each site change in config/changes.yml (date, page, kind, what). Pages changed within hold_days are held back from recommendations.",
+            "pages": [{"page": r["page"], "changed": r["changed"], "held": r["held"], "what": "; ".join(c["what"] for c in r["changes"][:3]),
+                       "before": r.get("before"), "after": r.get("after"), "change": r.get("change")} for r in chg.get("watching", [])],
+            "sitewide": chg.get("sitewide", []),
+        }
+
     if tips:
         d["recommendations"] = {
             "updated": tips.get("updated"), "written_by": f"{tips.get('provider_label', 'AI')} ({tips.get('model')})",
             "ai_brief": tips.get("ai_brief"),
             "pages": [{k: p.get(k) for k in ("page", "summary", "title", "meta_description", "content_additions",
-                                              "ai_readiness", "technical", "needs_verification", "checks")}
+                                              "ai_readiness", "technical", "needs_verification", "checks",
+                                              "summary_note", "dropped_claims")}
                       for p in tips.get("pages", [])],
+            "held_back": tips.get("held_back", []),
+            "claims_dropped": tips.get("claims_dropped", 0),
         }
 
     if tracking:
@@ -178,6 +193,7 @@ def build() -> dict:
             "conflicts": uxd.get("conflicts", []),
             "task_checks": [{"page": p["path"], "findability": p["task_check"].get("findability"),
                              "biggest_fix": p["task_check"].get("biggest_fix"),
+                             "dropped_claims": p["task_check"].get("dropped_claims", []),
                              "missing_or_buried": [k for k, v in p["task_check"]["tasks"].items() if v["status"] in ("missing", "buried")]}
                             for p in uxd.get("pages", []) if p.get("task_check")],
             "slowest_pages": [{"page": p["path"], "speed": p["pagespeed"]["performance"], "lcp_s": p["pagespeed"].get("lcp_s")}
@@ -339,9 +355,22 @@ def to_markdown(d: dict) -> str:
               _table([{**i, "examples": [_short(u) for u in i["examples"][:5]]} for i in au["issues"]],
                      [("severity", "Severity"), ("label", "Issue"), ("pages", "Pages"), ("examples", "Examples")])]
 
+    rc = d.get("recently_changed")
+    if rc and rc["pages"]:
+        fmt = lambda w, k: "–" if not w or w.get(k) is None else (f"{w[k]:.1%}" if k == "ctr" else str(w[k]))  # noqa: E731
+        L += [f"## Recently changed pages (held back from recommendations for {rc['hold_days']} days)", rc["note"] + "\n",
+              _table([{"page": r["page"], "changed": r["changed"], "what": r["what"][:90],
+                       "clicks_day": f"{fmt(r['before'], 'clicks_per_day')} → {fmt(r['after'], 'clicks_per_day')}",
+                       "ctr": f"{fmt(r['before'], 'ctr')} → {fmt(r['after'], 'ctr')}",
+                       "position": f"{fmt(r['before'], 'position')} → {fmt(r['after'], 'position')}"} for r in rc["pages"] if r["held"]],
+                     [("page", "Page"), ("changed", "Changed"), ("what", "What"), ("clicks_day", "Clicks/day before → after"),
+                      ("ctr", "CTR"), ("position", "Position")])]
+
     rec = d.get("recommendations")
     if rec:
         L += [f"## Drafted recommendations ({rec['written_by']}, {rec['updated']})"]
+        if rec.get("claims_dropped"):
+            L.append(f"_{rec['claims_dropped']} AI claims were dropped because the live page contradicted them._\n")
         b = rec.get("ai_brief") or {}
         if b:
             L.append(f"**AI visibility:** {b.get('headline', '')}")
@@ -445,6 +474,10 @@ def llms_txt(d: dict) -> str:
         sm = il["summary"]
         snap.append(f"- Links: {sm.get('broken_internal')} broken internal addresses with 301 redirects proposed, "
                     f"{sm.get('suggestions')} internal links worth adding, {sm.get('orphans')} pages with no links in")
+    rc = d.get("recently_changed")
+    if rc:
+        snap.append(f"- Recently changed: {sum(1 for r in rc['pages'] if r['held'])} pages held back from recommendations "
+                    f"(see 'Recently changed' in the digest for before/after numbers)")
     sd = d.get("structured_data")
     if sd and sd.get("summary"):
         sm = sd["summary"]
@@ -460,6 +493,7 @@ The dashboard at {BASE}/ is rendered with JavaScript. AI tools should read the d
 - [Digest (Markdown)]({BASE}/digest.md): one-page ranked briefing: search totals, top opportunities, tracked keywords, AI-assistant answers, audit issues, drafted recommendations, and house rules for suggesting copy
 - [Digest (JSON)]({BASE}/data/digest.json): the same content as structured data
 - [Redirects to add (CSV)]({BASE}/data/redirects.csv): proposed 301 redirects for broken links, ready for Drupal's Redirect import
+- [Change log with before/after numbers]({BASE}/data/changes.json): pages changed recently, held back from recommendations
 - [Structured data opportunities]({BASE}/data/schema.json): schema.org gaps by content type with ready-to-paste JSON-LD
 - [Draft llms.txt for trlibrary.com]({BASE}/data/site-llms.txt): proposed AI-tool guide for the main site, built from its sitemap
 

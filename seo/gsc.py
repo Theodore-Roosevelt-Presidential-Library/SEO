@@ -13,6 +13,7 @@ Writes:
   gsc/pages.json        top pages, last 28 days, with previous-period numbers
   gsc/query_pages.json  query x page pairs (feeds opportunities + tips)
   gsc/devices.json      split by device
+  changes.json          before/after numbers for pages in config/changes.yml
 """
 from __future__ import annotations
 
@@ -20,7 +21,7 @@ import datetime as dt
 import json
 from urllib.parse import quote
 
-from . import common as C
+from . import changes as CH, common as C
 
 SCOPE = "https://www.googleapis.com/auth/webmasters.readonly"
 API = "https://searchconsole.googleapis.com/webmasters/v3/sites/{site}/searchAnalytics/query"
@@ -40,7 +41,8 @@ class GSC:
         self.s.headers["Authorization"] = f"Bearer {token}"
         self.url = API.format(site=quote(prop, safe=""))
 
-    def query(self, start: dt.date, end: dt.date, dims: list[str], limit: int = 25000) -> list[dict]:
+    def query(self, start: dt.date, end: dt.date, dims: list[str], limit: int = 25000,
+              filters: list[dict] | None = None) -> list[dict]:
         rows, start_row = [], 0
         while True:
             body = {
@@ -51,6 +53,8 @@ class GSC:
                 "startRow": start_row,
                 "dataState": "final",
             }
+            if filters:
+                body["dimensionFilterGroups"] = [{"filters": filters}]
             r = self.s.post(self.url, json=body, timeout=60)
             if r.status_code != 200:
                 raise RuntimeError(f"Search Console API {r.status_code}: {r.text[:300]}")
@@ -100,6 +104,7 @@ def run() -> None:
     sa = C.env("GSC_SERVICE_ACCOUNT_JSON")
     if not sa and not C.env("GOOGLE_APPLICATION_CREDENTIALS"):
         C.set_status("gsc", "skipped", "Set up Google sign-in (Workload Identity Federation, see README) to turn on Search Console data.")
+        CH.run()  # change log without before/after numbers
         return
     prop = cfg["site"]["gsc_property"]
     try:
@@ -153,7 +158,9 @@ def run() -> None:
         C.write_json("gsc/pages.json", _merge_prev(sorted(pg_cur, key=lambda r: -r["impressions"]), pg_prev, "page"))
         C.write_json("gsc/query_pages.json", sorted(qp, key=lambda r: -r["impressions"]))
         C.write_json("gsc/devices.json", dev)
-        C.set_status("gsc", "ok", f"{len(q_cur)} queries, {len(pg_cur)} pages ({start} to {end})")
+        ch = CH.run(g, cfg["site"]["url"], end)
+        C.set_status("gsc", "ok", f"{len(q_cur)} queries, {len(pg_cur)} pages ({start} to {end}); "
+                     f"{len(ch['watching'])} changed pages tracked")
     except Exception as e:  # noqa: BLE001
         C.set_status("gsc", "error", str(e)[:400])
         raise C.JobError(str(e)) from e

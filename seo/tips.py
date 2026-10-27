@@ -20,7 +20,7 @@ import re
 
 from bs4 import BeautifulSoup
 
-from . import common as C
+from . import changes as CH, common as C, verify as V
 from .audit import ISSUE_TEXT
 
 SYSTEM = """You are an SEO and AI-search adviser for the Theodore Roosevelt Presidential Library (trlibrary.com) in Medora, North Dakota. You suggest improvements to the Library's own web pages. A communications team member reviews everything before it is used.
@@ -174,20 +174,15 @@ def parse_json(text: str) -> dict:
 
 
 def page_text(url: str) -> dict:
+    """Title, meta and the full main text (divs, tables, accordions and tabs included;
+    see verify.main_text), plus the facts used to check the AI's claims afterwards."""
     r = C.session().get(url, timeout=30)
     r.raise_for_status()
     soup = BeautifulSoup(r.text, "lxml")
     title = soup.title.get_text(" ", strip=True) if soup.title else ""
     md = soup.find("meta", attrs={"name": "description"})
-    body = soup.find("main") or soup.body or soup
-    for t in body.find_all(["script", "style", "noscript", "nav", "header", "footer", "form"]):
-        t.decompose()
-    lines = []
-    for el in body.find_all(["h1", "h2", "h3", "p", "li"]):
-        t = el.get_text(" ", strip=True)
-        if t:
-            lines.append(("# " if el.name in ("h1", "h2", "h3") else "") + t)
-    return {"title": title, "meta": (md.get("content") or "") if md else "", "text": "\n".join(dict.fromkeys(lines))[:8000]}
+    return {"title": title, "meta": (md.get("content") or "") if md else "",
+            "text": V.main_text(r.text, 30000), "facts": V.page_facts(r.text)}
 
 
 def validate(t: dict) -> dict:
@@ -206,24 +201,30 @@ def validate(t: dict) -> dict:
 
 
 def pick_pages(cfg: dict) -> list[str]:
+    """Pages with the most upside, skipping any changed recently (config/changes.yml):
+    their Search Console numbers still mostly describe the old version."""
     tcfg = cfg.get("tips", {})
     n, min_impr = tcfg.get("max_pages", 8), tcfg.get("min_impressions", 50)
+    held = CH.held_paths()
     pages_impr = {r["page"]: r["impressions"] for r in C.read_json("gsc/pages.json", []) or []}
     opp = (C.read_json("opportunities.json", {}) or {}).get("page_scores", [])
-    picked = [r["page"] for r in opp if pages_impr.get(r["page"], 0) >= min_impr][:n]
+    # podcast guest pages (often current political figures) and video pages aren't ours to rewrite
+    skip = re.compile(r"/(quiz|video|staff-members|node|calendar|podcast)/")
+    picked = [r["page"] for r in opp if pages_impr.get(r["page"], 0) >= min_impr
+              and CH.path_of(r["page"]) not in held and not skip.search(r["page"])][:n]
     if len(picked) < n:  # top up with weak, important pages from the audit
-        skip = re.compile(r"/(quiz|video|staff-members|node|calendar|podcast)/")
         for p in C.read_json("audit/pages.json", []) or []:
             u = p.get("final_url") or p["url"]
-            if p.get("status", 0) < 400 and not skip.search(u) and u not in picked and p["score"] < 85:
+            if p.get("status", 0) < 400 and not skip.search(u) and u not in picked and p["score"] < 85 \
+                    and CH.path_of(u) not in held:
                 picked.append(u)
             if len(picked) >= n:
                 break
     return picked
 
 
-def page_brief(url: str, cfg: dict) -> str:
-    pg = page_text(url)
+def page_brief(url: str, cfg: dict, pg: dict | None = None) -> str:
+    pg = pg or page_text(url)
     nu = C.norm_url(url)
     queries = [r for r in C.read_json("gsc/query_pages.json", []) or [] if C.norm_url(r["page"]) == nu][:25]
     audit = next((p for p in C.read_json("audit/pages.json", []) or [] if C.norm_url(p.get("final_url") or p["url"]) == nu), {})
@@ -244,8 +245,10 @@ Search queries this page shows up for (last 28 days):
 AI assistant questions where the Library was NOT mentioned this week (only use if relevant to this page):
 {chr(10).join('- ' + m for m in missed) or '- (no AI visibility data yet)'}
 
-Page text (headings marked with #):
+Page text, complete, in reading order (headings marked with #; text inside tabs and accordions included):
 {pg['text']}
+
+Only say something is missing, empty or cut off if it is absent from the text above.
 
 Suggest improvements for this page. Return JSON in exactly this shape:
 {PAGE_SCHEMA}"""
@@ -283,10 +286,13 @@ def run() -> None:
     w = Writer(providers)
     out = {"updated": C.now_iso(), "pages": [], "ai_brief": None, "errors": []}
 
+    out["held_back"] = sorted(CH.held_paths())
     for url in pick_pages(cfg):
         try:
-            t, prov, model = w.call(page_brief(url, cfg))
-            out["pages"].append({"page": url, "written_by": f"{LABELS[prov]} ({model})", **validate(t)})
+            pg = page_text(url)
+            t, prov, model = w.call(page_brief(url, cfg, pg))
+            t = V.check_tips(validate(t), pg["facts"])
+            out["pages"].append({"page": url, "written_by": f"{LABELS[prov]} ({model})", **t})
         except Exception as e:  # noqa: BLE001
             out["errors"].append(f"{url}: {e}"[:300])
 
@@ -304,6 +310,7 @@ def run() -> None:
                model=", ".join(m for p, _, m in providers if p in used) or first[2],
                fallbacks=w.dropped)
 
+    out["claims_dropped"] = sum(len(p.get("dropped_claims") or []) for p in out["pages"])
     C.write_json("tips.json", out)
     note = f"; skipped {', '.join(w.dropped)}" if w.dropped else ""
     if out["errors"] and not out["pages"]:

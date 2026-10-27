@@ -12,7 +12,7 @@
     audit: "data/audit/summary.json", auditPages: "data/audit/pages.json", auditHist: "data/audit/history.json",
     tips: "data/tips.json", tracking: "data/tracking.json",
     ux: "data/ux/latest.json", uxHist: "data/ux/history.json", checkout: "data/checkout/latest.json", links: "data/links.json",
-    schema: "data/schema.json",
+    schema: "data/schema.json", changes: "data/changes.json",
   };
   const D = {};
   const charts = [];
@@ -128,6 +128,36 @@
     return wrap;
   }
 
+  // Pages changed recently (config/changes.yml), with Search Console before/after
+  function recentlyChanged() {
+    const c = D.changes;
+    const rows = ((c || {}).watching || []).filter((r) => r.held);
+    if (!rows.length) return null;
+    const ba = (r, k, f) => {
+      const b = (r.before || {})[k], a = (r.after || {})[k];
+      return el("span", { class: "nowrap" }, b == null ? "–" : f(b), " → ", a == null ? "–" : f(a));
+    };
+    const one = (v) => (v == null ? "–" : Number(v).toFixed(1));
+    const left = (r) => Math.max(0, Math.ceil((new Date(r.held_until) - new Date()) / 86400000));
+    return [el("h2", {}, "Recently changed"),
+      el("p", { class: "lead" }, `These pages were changed in the last ${c.hold_days} days, so they're held back from the lists and recommendations below: their 28-day numbers still mostly describe the old version. Before = the 28 days before the change; after = the days since (Search Console data through ${date(c.data_through + "T12:00:00")}). Compare per day, and give it a few weeks. Add new changes to config/changes.yml.`),
+      el("div", { class: "card" }, table([
+        { key: "page", label: "Page", cls: "url changed-page", render: (r) => el("span", {}, link("https://www.trlibrary.com" + r.page, r.page), el("div", { class: "small muted" }, r.changes.map((x) => x.what).slice(0, 2).join("; "))) },
+        { key: "changed", label: "Changed", render: (r) => date(r.changed + "T12:00:00"), sortVal: (r) => r.changed },
+        { key: "cpd", label: "Clicks/day", num: true, render: (r) => ba(r, "clicks_per_day", one), sortVal: (r) => (r.before || {}).clicks_per_day },
+        { key: "ctr", label: "CTR", num: true, render: (r) => ba(r, "ctr", (v) => pct(v)), sortVal: (r) => (r.change || {}).ctr_points },
+        { key: "pos", label: "Position", num: true, render: (r) => ba(r, "position", pos), sortVal: (r) => (r.change || {}).position },
+        { key: "left", label: "Hold ends", num: true, render: (r) => `${left(r)} days`, sortVal: left },
+      ], rows, { sort: ["changed", -1], limit: 20 }))];
+  }
+
+  // AI claims the live page contradicted (seo/verify.py)
+  function droppedClaims(list, label) {
+    if (!(list || []).length) return null;
+    return el("details", { class: "small" }, el("summary", {}, `${list.length} ${label || "AI claim"}${list.length === 1 ? "" : "s"} dropped: the live page says otherwise`),
+      el("ul", { class: "clean small" }, ...list.map((d) => el("li", {}, el("span", { class: "muted" }, `${d.where}: `), `“${d.claim}” `, el("em", {}, `(${d.reason})`)))));
+  }
+
   // What the system added/retired on its own (seo/curate.py)
   function trackingLog() {
     const t = D.tracking;
@@ -233,6 +263,7 @@
       const sec = (title, lead, node) => [el("h2", {}, title), el("p", { class: "lead" }, lead), el("div", { class: "card" }, node)];
       return [
         el("p", { class: "lead" }, o.note),
+        ...(recentlyChanged() || []),
         ...sec("Striking distance", "Ranking 4–20 with real demand. Strengthen the page for the exact search: use the words in the title and an H2, answer the question directly, and link to it from related pages.", table([
           { key: "query", label: "Search" }, { key: "page", label: "Page", render: (r) => link(r.page), cls: "url" },
           { key: "position", label: "Pos.", num: true, fmt: pos }, { key: "impressions", label: "Impr.", num: true, fmt: num },
@@ -413,7 +444,8 @@
         const ids = Object.keys(u.tasks);
         const sym = { top: ["✓", "yes", "Answered near the top"], buried: ["↓", "err", "Answered, but buried"], linked: ["→", "cite", "Linked from here"], missing: ["✕", "no", "Missing"], not_relevant: ["·", "no", "Not expected here"] };
         const tb = el("tbody", {}, ...keyed.map((p) => el("tr", {},
-          el("td", {}, link(p.url, p.path), p.task_check.biggest_fix ? el("div", { class: "small muted" }, p.task_check.biggest_fix) : null),
+          el("td", {}, link(p.url, p.path), p.task_check.biggest_fix ? el("div", { class: "small muted" }, p.task_check.biggest_fix) : null,
+            droppedClaims(p.task_check.dropped_claims, "claim")),
           el("td", { class: "num" }, p.task_check.findability ?? "–"),
           ...ids.map((id) => { const t = p.task_check.tasks[id] || { status: "missing" }; const [g, c, lbl] = sym[t.status] || sym.missing;
             return el("td", { class: "cell", title: `${lbl}${t.note ? ": " + t.note : ""}` }, el("span", { class: `dot ${c}` }, g)); }))));
@@ -421,7 +453,7 @@
           el("div", { class: "legend" }, ...Object.values(sym).slice(0, 4).map(([g, c, l]) => el("span", {}, el("span", { class: `dot ${c}` }, g), " ", l))),
           el("div", { class: "card table-wrap" }, el("table", { class: "matrix" },
             el("thead", {}, el("tr", {}, el("th", {}, "Page"), el("th", { class: "num" }, "Score"), ...ids.map((id) => el("th", { class: "num", title: u.tasks[id] }, id.replace("_", " "))))), tb)),
-          el("p", { class: "small muted" }, "Hover a dot for the reviewer's note."));
+          el("p", { class: "small muted" }, "Hover a dot for the reviewer's note." + (s.claims_dropped ? ` ${s.claims_dropped} AI claims were checked against the live pages and dropped or corrected.` : "")));
       }
       const fmtS = (v) => (v == null ? "–" : `${v}s`);
       out.push(el("h2", {}, "Every /visit page"), el("div", { class: "card" }, table([
@@ -629,7 +661,8 @@
     tips() {
       const t = D.tips;
       if (!t) return [empty("No recommendations yet.", "Add any AI key (Gemini, Claude, ChatGPT or Perplexity). Recommendations are written weekly.")];
-      const out = [el("p", { class: "warn-box" }, `Drafts written by ${t.provider_label || "AI"} (${t.model}) on ${date(t.updated)}.${(t.fallbacks || []).length ? ` Skipped this week: ${t.fallbacks.join(", ")}.` : ""} Review before using: check every historical claim and never publish a TR quote that hasn't been verified.`)];
+      const out = [el("p", { class: "warn-box" }, `Drafts written by ${t.provider_label || "AI"} (${t.model}) on ${date(t.updated)}.${(t.fallbacks || []).length ? ` Skipped this week: ${t.fallbacks.join(", ")}.` : ""} Review before using: check every historical claim and never publish a TR quote that hasn't been verified.${t.claims_dropped ? ` ${t.claims_dropped} AI claims were checked against the live pages and dropped because the pages say otherwise.` : ""}`)];
+      out.push(...(recentlyChanged() || []));
       const b = t.ai_brief;
       if (b) {
         out.push(el("h2", {}, "Getting recommended by AI assistants"), el("div", { class: "card tip" },
@@ -646,12 +679,14 @@
         const list = (title, arr, f) => ((arr || []).length ? el("div", {}, el("h3", { style: "margin-top:.75rem" }, title), el("ul", { class: "clean" }, ...arr.map(f))) : null);
         out.push(el("div", { class: "card tip" },
           el("h3", {}, link(p.page)), p.written_by ? el("p", { class: "small muted" }, `Written by ${p.written_by}`) : null, el("p", {}, p.summary || ""),
+          p.summary_note ? el("p", { class: "warn-box small" }, p.summary_note) : null,
           (p.checks || []).length ? el("p", { class: "warn-box small" }, p.checks.join(" · ")) : null,
           sug("Suggested title", p.title), sug("Suggested meta description", p.meta_description),
           list("Content to add", p.content_additions, (c) => el("li", {}, c.for_query ? el("strong", {}, `“${c.for_query}”: `) : null, c.suggestion, c.draft ? el("div", { class: "suggest small" }, c.draft) : null)),
           list("AI readiness", p.ai_readiness, (c) => el("li", {}, c.suggestion, el("span", { class: "muted" }, ` (${c.why})`))),
           list("Technical", p.technical, (c) => el("li", {}, c.suggestion, el("span", { class: "muted" }, ` (${c.why})`))),
           list("Verify before publishing", p.needs_verification, (c) => el("li", {}, c)),
+          droppedClaims(p.dropped_claims),
         ));
       }
       if ((t.errors || []).length) out.push(el("details", {}, el("summary", {}, `${t.errors.length} pages failed`), el("ul", { class: "clean small" }, ...t.errors.map((e) => el("li", {}, e)))));

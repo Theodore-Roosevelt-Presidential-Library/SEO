@@ -8,12 +8,14 @@ Writes opportunities.json with these lists:
   declining          queries and pages losing clicks vs the previous 28 days
   cannibalization    queries where two or more of our pages compete
   page_scores        every page ranked by total opportunity (feeds the tips job)
+  held_back          pages left out because they changed recently (config/changes.yml);
+                     their 28-day numbers still mostly describe the old version
 """
 from __future__ import annotations
 
 from collections import defaultdict
 
-from . import common as C
+from . import changes as CH, common as C
 
 # Rough organic click-through rate by position (industry averages, desktop+mobile blend).
 # Only used to estimate *relative* upside; not a forecast.
@@ -113,6 +115,33 @@ def build(query_pages, queries, pages, audit_pages, min_impr: int = 30) -> dict:
     }
 
 
+def hold_back(out: dict, held: set[str], log: dict | None = None) -> dict:
+    """Remove recently changed pages from the fix-it lists; flag them in 'declining'
+    (a drop right after a change is worth seeing) and in 'cannibalization'."""
+    changed_on = {p: e[0]["date"].isoformat() for p, e in CH.by_page(log or CH.load()).items() if p in held}
+    held_rows: dict = {}
+    for key in ("striking_distance", "low_ctr", "missing_in_title", "page_scores"):
+        keep = []
+        for r in out.get(key, []):
+            p = CH.path_of(r["page"])
+            if p in held:
+                h = held_rows.setdefault(p, {"page": r["page"], "changed": changed_on.get(p), "lists": []})
+                if key not in h["lists"]:
+                    h["lists"].append(key)
+            else:
+                keep.append(r)
+        out[key] = keep
+    for r in out.get("declining", []):
+        if r["kind"] == "page" and CH.path_of(r["item"]) in held:
+            r["changed"] = changed_on.get(CH.path_of(r["item"]))
+    for r in out.get("cannibalization", []):
+        for p in r["pages"]:
+            if CH.path_of(p["page"]) in held:
+                p["changed"] = changed_on.get(CH.path_of(p["page"]))
+    out["held_back"] = sorted(held_rows.values(), key=lambda r: r["page"])
+    return out
+
+
 def run() -> None:
     qp = C.read_json("gsc/query_pages.json")
     if not qp:
@@ -120,10 +149,13 @@ def run() -> None:
         return
     out = build(qp, C.read_json("gsc/queries.json", []), C.read_json("gsc/pages.json", []),
                 C.read_json("audit/pages.json", []))
+    log = CH.load()
+    out = hold_back(out, CH.held_paths(log=log), log)
     out["updated"] = C.now_iso()
     out["note"] = "Estimated extra clicks use a rough industry click-through curve. Treat them as a way to rank opportunities, not a forecast."
     C.write_json("opportunities.json", out)
-    C.set_status("opportunities", "ok", f"{len(out['striking_distance'])} striking-distance queries, {len(out['low_ctr'])} low-CTR pages")
+    C.set_status("opportunities", "ok", f"{len(out['striking_distance'])} striking-distance queries, {len(out['low_ctr'])} low-CTR pages"
+                 + (f"; {len(out['held_back'])} recently changed pages held back" if out["held_back"] else ""))
 
 
 if __name__ == "__main__":

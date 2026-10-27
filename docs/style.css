@@ -127,3 +127,5 @@ mark { background: color-mix(in srgb, var(--accent) 30%, transparent); color: in
 .code-wrap { position: relative; margin: .4rem 0; }
 .code-wrap > button { position: absolute; top: .4rem; right: .4rem; }
 pre.code { background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: .75rem; overflow: auto; max-height: 360px; font-size: .78rem; line-height: 1.45; white-space: pre; margin: 0; }
+.nowrap { white-space: nowrap; }
+td.changed-page { min-width: 14rem; }

@@ -116,6 +116,8 @@ links:
   max_suggestions_per_source: 10
   related_pairs: 80
   # External broken links come from the LinkChecker tool; internal links are checked here every week.
+  # Live pages that aren't in the sitemap; redirect suggestions can point to them.
+  extra_live_paths: [/tickets, /donate, /membership, /search]
   linkchecker_results: https://links.labs.trlibrary.com/results.json
   video_pattern: "^/video/"            # pages whose outside links come from YouTube descriptions (low priority)
 

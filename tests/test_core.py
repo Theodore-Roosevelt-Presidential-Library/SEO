@@ -432,3 +432,91 @@ def test_schema_llms_draft():
     assert txt.startswith("# TRPL\n\n> Summary.")
     assert "- [Plan Your Visit](https://www.trlibrary.com/visit): Hours and tickets" in txt
     assert "/privacy" not in txt
+
+
+# ---------- change log, AI-claim checks, redirect suggestions ----------
+import datetime as _dt  # noqa: E402
+
+from seo import changes as CH, links as LK, verify as V  # noqa: E402
+
+LONG_PAGE = """<html><body><header>menu</header><main><h1>Directions</h1>
+<div class="tabs"><span>Tuesday - Friday</span><span>10am - 4pm</span></div>
+<h3>Staying in Dickinson</h3><p>""" + "Dickinson has hotels and restaurants for travellers. " * 200 + """</p>
+<h3>Getting Around Town</h3><div><span>Medora is walkable, with sidewalks connecting shops and dining.</span></div>
+<div data-custom-accordion><button>How long should I plan to stay?</button><div>Plan about three and a half hours.</div></div>
+<p><a href="https://access.trlibrary.com/x">Buy tickets</a> Adults are $26.</p>
+</main><footer>footer</footer></body></html>"""
+
+
+def test_main_text_keeps_divs_spans_accordions_and_never_cuts_mid_section():
+    t = V.main_text(LONG_PAGE)
+    assert "10am - 4pm" in t and "Medora is walkable" in t and "three and a half hours" in t
+    assert "# Getting Around Town" in t and "menu" not in t and "footer" not in t
+    short = V.main_text(LONG_PAGE, limit=3000)
+    assert short.endswith("Do not treat later sections as missing.]")
+    assert "# Getting Around Town" not in short          # a cut never leaves a heading with nothing under it
+
+
+def test_check_claims_against_page():
+    f = V.page_facts(LONG_PAGE)
+    assert f["has_open_hours"] and f["has_visit_length"] and f["has_price"] and f["has_ticket_link"] and f["h1_count"] == 1
+    ok, _ = V.check_claim("Add the actual daily opening and closing times for the museum.", f)
+    assert ok is False
+    ok, why = V.check_claim("ends abruptly with an empty '# Getting Around Town' heading", f)
+    assert ok is False and "words under it" in why
+    ok, _ = V.check_claim("Finish the truncated sentence under 'Staying in Dickinson'", f)
+    assert ok is False
+    ok, _ = V.check_claim("Fix the duplicate H1 tags.", f)
+    assert ok is False
+    ok, _ = V.check_claim("Tell visitors to plan on spending about 3 1/2 hours here.", f)
+    assert ok is False
+    assert V.check_claim("Add a photo of the bison herd.", f)[0] is None
+    t = V.check_tips({"summary": "Great page.", "technical": [{"suggestion": "Fix the duplicate H1 tags", "why": "SEO"},
+                                                              {"suggestion": "Add FAQ schema", "why": "AI"}]}, f)
+    assert [x["suggestion"] for x in t["technical"]] == ["Add FAQ schema"] and len(t["dropped_claims"]) == 1
+    r = V.check_task_result({"tasks": {"visit_length": {"status": "missing", "note": ""}, "hours": {"status": "missing"}},
+                             "biggest_fix": "State the daily opening hours on this page."}, f)
+    assert r["tasks"]["visit_length"]["status"] == "buried" and r["tasks"]["hours"]["status"] == "missing"
+    assert r["biggest_fix"] is None and len(r["dropped_claims"]) == 2
+    # placement advice ("add a callout box near the top") isn't treated as a claim that something is missing
+    assert V.check_claim("Add a callout box near the top with the 3 1/2-hour visit length.", f)[0] is None
+
+
+def test_change_log_holds_recent_pages(tmp_path, monkeypatch):
+    (tmp_path / "changes.yml").write_text("""hold_days: 28
+changes:
+  - {date: 2026-10-20, page: /tr/square-deal/, kind: [title], what: t}
+  - {date: 2026-09-01, page: /old, kind: title, what: o}
+  - {date: 2026-10-27, page: "*", kind: [schema], what: s}
+""")
+    monkeypatch.setattr(C, "CONFIG_DIR", tmp_path)
+    today = _dt.date(2026, 10, 27)
+    assert CH.held_paths(today) == {"/tr/square-deal"}
+
+    class FakeGSC:
+        def query(self, start, end, dims, filters=None):
+            assert filters[0]["expression"] == "https://www.trlibrary.com/tr/square-deal"
+            days = [(start + _dt.timedelta(days=i)) for i in range((end - start).days + 1)]
+            return [{"date": d.isoformat(), "clicks": 10 if d < _dt.date(2026, 10, 20) else 20,
+                     "impressions": 1000, "ctr": 0.01, "position": 4.0} for d in days]
+    out = CH.build(FakeGSC(), "https://www.trlibrary.com", end=_dt.date(2026, 10, 24), today=today)
+    sq = next(r for r in out["watching"] if r["page"] == "/tr/square-deal")
+    assert sq["held"] and sq["before"]["days"] == 28 and sq["before"]["clicks_per_day"] == 10
+    assert sq["after"]["days"] == 4 and sq["after"]["clicks_per_day"] == 20 and sq["change"]["clicks_per_day"] == 1.0
+    assert out["sitewide"][0]["what"] == "s" and out["held_back"] == ["/tr/square-deal"]
+    opp = {"striking_distance": [{"page": "https://www.trlibrary.com/tr/square-deal"}, {"page": "https://www.trlibrary.com/x"}],
+           "low_ctr": [], "missing_in_title": [], "page_scores": [{"page": "https://www.trlibrary.com/tr/square-deal"}],
+           "declining": [{"kind": "page", "item": "https://www.trlibrary.com/tr/square-deal"}], "cannibalization": []}
+    opp = opportunities.hold_back(opp, {"/tr/square-deal"}, CH.load())
+    assert [r["page"] for r in opp["striking_distance"]] == ["https://www.trlibrary.com/x"] and not opp["page_scores"]
+    assert opp["held_back"][0]["lists"] == ["striking_distance", "page_scores"] and opp["declining"][0]["changed"] == "2026-10-20"
+
+
+def test_redirect_suggestions_use_live_pages_outside_sitemap():
+    live = {"/tickets", "/visit", "/visit/faq/tickets", "/tr", "/tr/birthday", "/tr/presidency/coal-strike", "/tr/badlands"}
+    s = LK.suggest_redirect("/visit/tickets", live, {}, {})
+    assert s["to"] == "/tickets" and s["confidence"] == "high"
+    assert LK.suggest_redirect("/tr/coal-strike", live, {}, {})["to"] == "/tr/presidency/coal-strike"
+    s = LK.suggest_redirect("/tr/biography", live, {}, {})
+    assert s["to"] == "/tr" and s["confidence"] == "low"          # not /tr/birthday
+    assert LK.suggest_redirect("/tr/badlands/overview", live, {}, {})["to"] == "/tr/badlands"

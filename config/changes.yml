@@ -1,0 +1,70 @@
+# Change log: what was changed on trlibrary.com, and when.
+#
+# The tool reads this file so it doesn't recommend the same fix twice.
+# A page changed within the last `hold_days` days is held back from the
+# Opportunities lists and the AI recommendations (its Search Console numbers
+# still mostly describe the old version). It appears under "Recently changed"
+# instead, with Search Console before/after numbers so you can see whether
+# the change worked.
+#
+# Add one entry per page per change. Fields:
+#   date:  YYYY-MM-DD the change went live
+#   page:  path on www.trlibrary.com, e.g. /visit/hours ("*" for sitewide changes)
+#   kind:  title | meta | content | redirect | schema | new_page | merge
+#          (several allowed: [title, meta])
+#   what:  one line, plain English
+#
+# Newest first is easiest to read, but order doesn't matter.
+
+hold_days: 28
+
+changes:
+  # ---- 2026-10-27 ----
+  - {date: 2026-10-27, page: /visit, kind: [title], what: "Title: Plan Your Visit: Tickets, Hours and Directions"}
+  - {date: 2026-10-27, page: /visit/exhibits, kind: [title], what: "Title: Exhibits: Roosevelt’s Life in Eight Chapters"}
+  - {date: 2026-10-27, page: /tr/people/jacob-riis, kind: [title, meta], what: "Title and description aimed at 'who was Jacob Riis'"}
+  - {date: 2026-10-27, page: /tr/presidency/panama-canal, kind: [title, meta], what: "Title and description: Theodore Roosevelt and the Panama Canal, 1903–1914"}
+  - {date: 2026-10-27, page: /tr/presidency/railroad-regulation, kind: [title, meta], what: "Title names the Hepburn Act and Elkins Act"}
+  - {date: 2026-10-27, page: /tr/rise-to-power/san-juan-hill, kind: [title, meta], what: "Title uses 'Battle of San Juan Hill'"}
+  - {date: 2026-10-27, page: /tr/presidency/coal-strike, kind: [title, meta], what: "Title uses 'Anthracite Coal Strike of 1902'"}
+  - {date: 2026-10-27, page: /visit/groups, kind: [content], what: "Visit length changed from about three hours to about three and a half hours"}
+  - {date: 2026-10-27, page: /visit/faq/tickets, kind: [content, redirect], what: "'Buy tickets' link fixed (was /visit/tickets, a 404); 301 /visit/tickets -> /tickets"}
+  - {date: 2026-10-27, page: /visit/faq, kind: [content], what: "Tickets link fixed (was /visit/tickets, a 404)"}
+  - {date: 2026-10-27, page: /tr/presidency/square-deal, kind: [content], what: "Removed duplicate H1"}
+  - {date: 2026-10-27, page: "*", kind: [schema], what: "Sitewide schema: description no longer says 'Opens July 4, 2026'; Wikipedia/Wikidata sameAs; Theodore Roosevelt entity defined"}
+
+  # ---- 2026-10-20 ----
+  - {date: 2026-10-20, page: /tr/square-deal, kind: [title, meta, content], what: "Title 'What Was the Square Deal? Roosevelt's Three Cs'; wording fixes"}
+  - {date: 2026-10-20, page: /tr/family/fdr-connection, kind: [title, meta, content], what: "Title 'How Were Theodore and Franklin Roosevelt Related?'; 32 years fix; Eleanor sentence"}
+  - {date: 2026-10-20, page: /tr/presidency/brownsville, kind: [title, meta, content], what: "Title 'The Brownsville Affair of 1906: What Happened and Why'; Medal of Honor claim and dates corrected"}
+  - {date: 2026-10-20, page: /tr/presidency/roosevelt-corollary, kind: [title, meta, content], what: "Title 'Roosevelt Corollary to the Monroe Doctrine, Explained'; stray second H1 section removed"}
+  - {date: 2026-10-20, page: /tr/tr-mount-rushmore, kind: [title, meta], what: "Title 'Mount Rushmore Presidents: Why Theodore Roosevelt Is There'"}
+  - {date: 2026-10-20, page: /visit/hours, kind: [title, meta, content], what: "Title 'Hours in Medora: Seasonal Schedule and Last Entry'; visit-length bullet"}
+  - {date: 2026-10-20, page: /visit/directions, kind: [title], what: "Title 'Directions to Medora from I-94 and Nearby Airports'"}
+  - {date: 2026-10-20, page: /project, kind: [title, meta], what: "Title 'Building the Library: Design, Values and Sustainability'"}
+  - {date: 2026-10-20, page: /tr/presidency/trust-busting, kind: [title, meta], what: "Title 'What Was Trust-Busting? Roosevelt Takes On the Monopolies'"}
+  - {date: 2026-10-20, page: /tr/presidency-timeline, kind: [title, meta], what: "Title 'When Was Theodore Roosevelt President? 1901–1909 Timeline'"}
+  - {date: 2026-10-20, page: /tr/tr-shot, kind: [title, meta], what: "Title 'Why Was Theodore Roosevelt Shot? The 1912 Milwaukee Attack'"}
+  - {date: 2026-10-20, page: /bullet-speech, kind: [title, meta, content], what: "Title 'The Bullet Speech: Roosevelt's Assassination Attempt'; link to /tr/tr-shot"}
+  - {date: 2026-10-20, page: /tr/pre-presidency-political-accomplishments, kind: [title, meta], what: "Title 'What Did Theodore Roosevelt Do Before He Was President?'"}
+  - {date: 2026-10-20, page: /tr/presidency/square-deal, kind: [title, meta, content], what: "Title 'The Square Deal in Depth: Roosevelt as the Nation's Referee'; cross-link to /tr/square-deal"}
+  - {date: 2026-10-20, page: /tr/post-presidency/man-in-the-arena, kind: [title, meta, content], what: "Title 'TR's 1910 European Tour and the Man in the Arena Speech'; cross-link"}
+  - {date: 2026-10-20, page: /tr/family/children, kind: [title, meta, content], what: "Title 'Theodore Roosevelt's Children: Alice, Ted, Kermit and More'; link to kids timeline"}
+  - {date: 2026-10-20, page: /tr/kids-timeline, kind: [title, meta], what: "Title 'Theodore Roosevelt for Kids: A Timeline of His Life'"}
+  - {date: 2026-10-20, page: /tr/teddy-nickname, kind: [title, meta, content, merge], what: "Merged /tr/myths/teddy-name into this page; new title and description; teddy bear sentence"}
+  - {date: 2026-10-20, page: /tr/myths/teddy-name, kind: [redirect, merge], what: "Archived; 301 to /tr/teddy-nickname"}
+  - {date: 2026-10-20, page: /, kind: [meta], what: "Description mentions 'Teddy'"}
+  - {date: 2026-10-20, page: /visit, kind: [content], what: "Visit length: about three and a half hours"}
+  - {date: 2026-10-20, page: /visit/exhibits, kind: [content], what: "Visit length and restaurant name (Salt+Scoria)"}
+  - {date: 2026-10-20, page: /visit/national-park, kind: [content], what: "Visit length, restaurant name; link to where-to-see"}
+  - {date: 2026-10-20, page: /visit/activities, kind: [content], what: "Visit length and restaurant name"}
+  - {date: 2026-10-20, page: /visit/itineraries, kind: [content], what: "Link to the I-94 guide"}
+  - {date: 2026-10-20, page: /visit/itineraries/one-day, kind: [content], what: "Visit length and restaurant name"}
+  - {date: 2026-10-20, page: /visit/itineraries/4-days-north-dakota, kind: [content], what: "Visit length and restaurant name"}
+  - {date: 2026-10-20, page: /visit/itineraries/seattle-badlands, kind: [content], what: "Visit length and restaurant name"}
+  - {date: 2026-10-20, page: /visit/itineraries/chicago-badlands, kind: [content], what: "Visit length and restaurant name"}
+  - {date: 2026-10-20, page: /visit/i-94, kind: [new_page], what: "New page: Best Stops on I-94 in North Dakota"}
+  - {date: 2026-10-20, page: /tr/badlands/where-to-see, kind: [new_page], what: "New page: Where to See Theodore Roosevelt's North Dakota"}
+  - {date: 2026-10-20, page: /tr/badlands, kind: [content], what: "Link to where-to-see"}
+  - {date: 2026-10-20, page: /visit/medora/history, kind: [content], what: "North Dakota quote aligned to the 1918 Volwiler letter"}
+  - {date: 2026-10-20, page: "*", kind: [schema], what: "Organization alternateName adds Teddy Roosevelt Presidential Library and Teddy Roosevelt Library"}

@@ -30,7 +30,7 @@ from urllib.parse import urlparse
 
 from bs4 import BeautifulSoup
 
-from . import common as C
+from . import common as C, verify as V
 
 PSI = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed"
 class QuotaExhausted(RuntimeError):
@@ -82,9 +82,8 @@ def readability(html: str, url: str, ticket_re: re.Pattern) -> dict:
         "grade_level": round(grade, 1) if words else None,
         "long_paragraphs": sum(1 for p in paras if len(p.split()) > 80),
         "words_before_ticket_link": words_before,
-        "text": "\n".join(dict.fromkeys(
-            ("# " if h.name in ("h1", "h2", "h3") else "") + h.get_text(" ", strip=True)
-            for h in main.find_all(["h1", "h2", "h3", "p", "li"]) if h.get_text(strip=True)))[:9000],
+        # full main text incl. divs, tables, tabs and accordions (see verify.main_text)
+        "text": V.main_text(html, 24000),
         "links": [a.get_text(" ", strip=True)[:60] + " -> " + a["href"][:120]
                   for a in main.find_all("a", href=True) if a.get_text(strip=True)][:60],
     }
@@ -153,7 +152,7 @@ def pagespeed(sess, url: str, key: str | None) -> dict:
 TASK_PROMPT = """You are testing a page of trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) as a first-time visitor planning a trip, reading on a phone.
 
 Page: {url}
-Page text in reading order (headings marked with #):
+Page text, complete, in reading order (headings marked with #; text inside tabs and accordions included):
 {text}
 
 Links on the page (text -> URL):
@@ -183,15 +182,18 @@ CONFLICT_PROMPT = """These facts were copied word for word from different trlibr
 Return JSON only: {{"conflicts": [{{"fact": "hours|prices|visit_length|address|parking", "pages": ["/path", "/path"], "detail": "what disagrees, under 30 words"}}]}}"""
 
 
-def task_check(writer, url: str, rd: dict, tasks: dict) -> dict:
+def task_check(writer, url: str, rd: dict, tasks: dict, facts: dict | None = None) -> dict:
     user = TASK_PROMPT.format(url=url, text=rd["text"], links="\n".join(rd["links"]) or "(none)",
                               tasks="\n".join(f"- {k}: {v}" for k, v in tasks.items()))
     res, prov, model = writer.call(user)
     res = res if isinstance(res, dict) else {}
+    if facts:  # drop claims the live page contradicts
+        res = V.check_task_result(res, facts)
     t = res.get("tasks") or {}
     clean = {k: {"status": (t.get(k) or {}).get("status", "missing"), "note": (t.get(k) or {}).get("note", "")} for k in tasks}
     relevant = [v["status"] for v in clean.values() if v["status"] in TASK_SCORE]
     return {"tasks": clean, "facts": res.get("facts") or {}, "biggest_fix": res.get("biggest_fix"),
+            "dropped_claims": res.get("dropped_claims") or [],
             "findability": round(100 * sum(TASK_SCORE[s] for s in relevant) / len(relevant)) if relevant else None,
             "checked_by": f"{prov} ({model})"}
 
@@ -264,7 +266,8 @@ def run() -> None:
         try:
             r = sess.get(x, timeout=30)
             pages[x] = {"path": paths[x], "url": x, "status": r.status_code,
-                        **({"readability": readability(r.text, x, ticket_re)} if r.status_code < 400 else {})}
+                        **({"readability": readability(r.text, x, ticket_re),
+                            "_facts": V.page_facts(r.text, ticket_re)} if r.status_code < 400 else {})}
         except Exception as e:  # noqa: BLE001
             pages[x] = {"path": paths[x], "url": x, "status": 599, "error": str(e)[:120]}
 
@@ -300,7 +303,7 @@ def run() -> None:
         for x in urls:
             if paths[x] in key_pages and pages[x].get("readability"):
                 try:
-                    pages[x]["task_check"] = task_check(writer, x, pages[x]["readability"], tasks)
+                    pages[x]["task_check"] = task_check(writer, x, pages[x]["readability"], tasks, pages[x].get("_facts"))
                     checked_by = pages[x]["task_check"]["checked_by"]
                 except Exception as e:  # noqa: BLE001
                     errors.append(f"Task check {paths[x]}: {e}"[:200])
@@ -325,6 +328,7 @@ def run() -> None:
     if cl_err:
         errors.append(cl_err)
     for p in pages.values():
+        p.pop("_facts", None)
         if p["path"] in ga:
             p["ga4"] = ga[p["path"]]
         if p["path"] in cl:
@@ -355,6 +359,7 @@ def run() -> None:
             [p["readability"]["grade_level"] for p in rows if (p.get("readability") or {}).get("grade_level") is not None]),
         "hard_to_read": sum(1 for p in rows if (p.get("readability") or {}).get("label") in ("fairly hard", "hard")),
         "conflicts": len(conflicts),
+        "claims_dropped": sum(len((p.get("task_check") or {}).get("dropped_claims") or []) for p in rows),
         "origin_field": next(((p.get("pagespeed") or {}).get("origin_field") for p in rows if (p.get("pagespeed") or {}).get("origin_field")), None),
         "task_status": task_status,
     }

@@ -169,6 +169,17 @@ def suggest_redirect(broken: str, live: set, name_index: dict, titles: dict) -> 
     for c in (cand, cand.lower()):
         if c in live and c != p:
             return {"to": c, "confidence": "high", "why": "same page without the file extension / trailing part"}
+    # 1b. the last part of the address is exactly a live page's name somewhere else
+    #     (/visit/tickets -> /tickets). Live pages outside the sitemap count too.
+    last = cand.rsplit("/", 1)[-1].lower()
+    if last and last not in ("overview", "index", "home", "main", "timeline"):
+        # shortest address wins (a top-level /tickets beats /visit/faq/tickets), then same section
+        same_name = sorted((x for x in live if x != cand and x.rsplit("/", 1)[-1].lower() == last),
+                           key=lambda x: (x.count("/"), not x.startswith("/" + cand.strip("/").split("/")[0] + "/"), x))
+        if same_name:
+            clear = len(same_name) == 1 or same_name[0].count("/") < same_name[1].count("/")
+            return {"to": same_name[0], "confidence": "high" if clear else "medium",
+                    "why": "live page with the same name" + (f" (also: {', '.join(same_name[1:3])})" if len(same_name) > 1 else "")}
     # 2. "<section>/overview" or "<section>/index" -> the section's landing page
     parent = cand.rsplit("/", 1)[0] or "/"
     if cand.rsplit("/", 1)[-1] in ("overview", "index", "home", "main", "timeline") and parent in live:
@@ -181,6 +192,9 @@ def suggest_redirect(broken: str, live: set, name_index: dict, titles: dict) -> 
     sec = "/" + cand.strip("/").split("/")[0]
     pool = [x for x in live if x.startswith(sec)] or list(live)
     best = difflib.get_close_matches(cand.lower(), pool, n=1, cutoff=0.72)
+    # only accept it if the last parts share a whole word (stops /tr/biography -> /tr/birthday)
+    if best and not set(_slug_words(cand.rsplit("/", 1)[-1])) & set(_slug_words(best[0].rsplit("/", 1)[-1])):
+        best = []
     if best:
         return {"to": best[0], "confidence": "medium" if difflib.SequenceMatcher(None, cand.lower(), best[0]).ratio() > 0.85 else "low",
                 "why": f"closest address: {titles.get(best[0], '')[:60]}"}
@@ -301,7 +315,12 @@ def run() -> None:
         for raw_path, text in d["raw_links"].items():
             if path_of(raw_path) not in live and not re.search(r"\.(pdf|jpe?g|png|gif|webp|svg|docx?|xlsx?|zip|mp3|mp4)$|^/(sites|system|user|admin|core|themes|modules)/", raw_path, re.I):
                 unknown[raw_path].append((p, text))
-    status = check_paths(sess, site, sorted(unknown)[: lc.get("max_unknown_links_checked", 600)])
+    # live pages that aren't in the sitemap (e.g. /tickets): known extras plus any linked path that works
+    extra = [p for p in lc.get("extra_live_paths", ["/tickets", "/donate", "/membership", "/search"]) if p not in live]
+    status = check_paths(sess, site, sorted(set(unknown) | set(extra))[: lc.get("max_unknown_links_checked", 600) + len(extra)])
+    live_extra = {path_of(p) for p, st in status.items() if st.get("status") == 200 and not st.get("redirected")} | \
+                 {st["final"] for st in status.values() if st.get("status") == 200 and st.get("final")}
+    live = live | live_extra
     titles = {p: d["h1"] for p, d in all_pages.items()}
     name_index = {n: v for n, v in name_target.items()}
     broken, via_redirect = [], []

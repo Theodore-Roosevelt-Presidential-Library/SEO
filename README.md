@@ -136,7 +136,7 @@ Key pages and tasks are set in `config/site.yml` under `ux`.
 4. **Microsoft Clarity on the website (`CLARITY_API_TOKEN`, optional):** trlibrary.com itself reports to a different Clarity project (`t1b2w52dwl`), likely set up by FiveJars. Ask for access, then in Clarity, open the trlibrary.com project and go to **Settings → Data Export → Generate new API token**. Add it as the secret `CLARITY_API_TOKEN`. This adds rage clicks, dead clicks and scroll depth for the last three days, which is all Clarity's API provides.
 
 ## Changing what's tracked
-All tracking is controlled by three files in `config/`. Edit them on GitHub; the next run picks up the changes.
+All tracking is controlled by files in `config/`. Edit them on GitHub; the next run picks up the changes.
 - `config/keywords.yml`: the searches tracked on the Rankings tab, in groups.
 - `config/ai_prompts.yml`: the questions asked to AI assistants. Keep each `id` stable so its history continues.
 - `config/site.yml`:
@@ -144,6 +144,28 @@ All tracking is controlled by three files in `config/`. Edit them on GitHub; the
   - nearby attractions to compare against
   - audit settings (pages to skip, the title suffix to ignore)
   - model names
+
+## Logging site changes (config/changes.yml)
+Every time a page on trlibrary.com is changed for SEO (new title or description, content fix, redirect, schema), add a line to `config/changes.yml`:
+
+```yaml
+- {date: 2026-10-27, page: /visit/hours, kind: [title, meta], what: "New title: Hours in Medora"}
+```
+
+- **Held back:** pages changed within `hold_days` (28 by default) are left out of the Opportunities lists and the AI recommendations. Their 28-day Search Console numbers still mostly describe the old version, so recommending them again would repeat work that's already done.
+- **Before and after:** the daily run compares each changed page's Search Console clicks, impressions, CTR and position for the 28 days before the change with the days since. The results show under "Recently changed" on the Opportunities and Recommendations tabs, and in `data/changes.json`. Compare per-day numbers, and give a change a few weeks.
+- **Sitewide changes:** use `page: "*"`. They're listed but don't hold back any page.
+
+## How the AI's claims are checked
+The AI reads each page's full main text in reading order, including text in tables, tabs and accordions. If a page is very long, the text stops at a heading, never mid-sentence, and the AI is told so. Earlier versions cut pages at about 8,000 characters and read only paragraphs and lists. That caused false reports: missing hours on /visit/hours, a "truncated" sentence on /visit/lodging, and an "empty" Getting Around Town section on /visit/directions.
+
+After the AI replies, claims that can be tested mechanically are checked against the live page (`seo/verify.py`):
+- a section is empty
+- a sentence or section is cut off
+- the page has no opening hours, visit length, price or ticket link
+- the page has a duplicate H1
+
+Claims the page contradicts are dropped and listed under "AI claims dropped" on the Recommendations and Visitor Experience tabs. Advice about placement ("add a callout near the top") is left alone.
 
 ## Editorial guardrails
 Recommendations are drafts, and nothing is published automatically. Whichever model writes them gets the same instructions (`seo/tips.py`), which require it to:
