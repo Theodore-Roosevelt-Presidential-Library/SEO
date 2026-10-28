@@ -1,6 +1,6 @@
 # TRPL Search & AI Visibility
 
-> How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built 2026-10-27T13:38:35+00:00.
+> How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built 2026-10-28T13:24:06+00:00.
 
 The dashboard at https://seo.labs.trlibrary.com/ is rendered with JavaScript. AI tools should read the digest below instead.
 
@@ -8,17 +8,20 @@ The dashboard at https://seo.labs.trlibrary.com/ is rendered with JavaScript. AI
 - [Digest (Markdown)](https://seo.labs.trlibrary.com/digest.md): one-page ranked briefing: search totals, top opportunities, tracked keywords, AI-assistant answers, audit issues, drafted recommendations, and house rules for suggesting copy
 - [Digest (JSON)](https://seo.labs.trlibrary.com/data/digest.json): the same content as structured data
 - [Redirects to add (CSV)](https://seo.labs.trlibrary.com/data/redirects.csv): proposed 301 redirects for broken links, ready for Drupal's Redirect import
+- [Change log with before/after numbers](https://seo.labs.trlibrary.com/data/changes.json): pages changed recently, held back from recommendations
 - [Structured data opportunities](https://seo.labs.trlibrary.com/data/schema.json): schema.org gaps by content type with ready-to-paste JSON-LD
 - [Draft llms.txt for trlibrary.com](https://seo.labs.trlibrary.com/data/site-llms.txt): proposed AI-tool guide for the main site, built from its sitemap
 
 ## Snapshot
-- Google: 45,254 clicks, avg position 6.0 (28 days to 2026-10-24)
+- Google: 44,782 clicks, avg position 6.0 (28 days to 2026-10-25)
 - Site audit: health 96/100, AI readiness 60/100
 - AI assistants mentioning the Library: ChatGPT 71%, Gemini 35%, Perplexity 18%
 - Links: 48 broken internal addresses with 301 redirects proposed, 1109 internal links worth adding, 46 pages with no links in
+- Recently changed: 41 pages held back from recommendations (see 'Recently changed' in the digest for before/after numbers)
 - Structured data: 96/863 content pages carry schema.org markup; 9 sitewide markup issues; trlibrary.com llms.txt: no (draft available)
 
 ## Raw data
+- [changes.json](https://seo.labs.trlibrary.com/data/changes.json): Change log: pages changed recently (held back from recommendations) with Search Console before/after numbers
 - [status.json](https://seo.labs.trlibrary.com/data/status.json): Which data sources are on, last run time, errors
 - [gsc/summary.json](https://seo.labs.trlibrary.com/data/gsc/summary.json): Search Console totals, last 28 days vs prior 28
 - [gsc/daily.json](https://seo.labs.trlibrary.com/data/gsc/daily.json): Clicks/impressions/CTR/position per day (~16 months)
@@ -42,6 +45,7 @@ The dashboard at https://seo.labs.trlibrary.com/ is rendered with JavaScript. AI
 
 ## House rules for suggesting changes
 - Suggestions are drafts for the communications team; nothing is published automatically.
+- Pages listed under 'Recently changed' were just edited: don't recommend changing them again until their hold ends; judge them by the before/after numbers.
 - Never invent historical facts, dates, names, prices or hours. Use only what the page already says, or flag it for verification.
 - Never quote or paraphrase Theodore Roosevelt. Say 'consider a verified TR quote about X' instead.
 - Voice: friendly, plain, concrete (a knowledgeable park ranger, not a professor). Keep 'we/our/us' to a minimum.

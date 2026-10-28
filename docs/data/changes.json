@@ -1,0 +1,1620 @@
+{
+ "updated": "2026-10-28T13:23:55+00:00",
+ "hold_days": 28,
+ "data_through": "2026-10-25",
+ "note": "Before = the 28 days before the change; after = the days since, up to the latest settled Search Console day. Compare per-day numbers; a week or two after a change is still early.",
+ "held_back": [
+  "/",
+  "/bullet-speech",
+  "/project",
+  "/tr/badlands",
+  "/tr/badlands/where-to-see",
+  "/tr/family/children",
+  "/tr/family/fdr-connection",
+  "/tr/kids-timeline",
+  "/tr/myths/teddy-name",
+  "/tr/people/jacob-riis",
+  "/tr/post-presidency/man-in-the-arena",
+  "/tr/pre-presidency-political-accomplishments",
+  "/tr/presidency-timeline",
+  "/tr/presidency/brownsville",
+  "/tr/presidency/coal-strike",
+  "/tr/presidency/panama-canal",
+  "/tr/presidency/railroad-regulation",
+  "/tr/presidency/roosevelt-corollary",
+  "/tr/presidency/square-deal",
+  "/tr/presidency/trust-busting",
+  "/tr/rise-to-power/san-juan-hill",
+  "/tr/square-deal",
+  "/tr/teddy-nickname",
+  "/tr/tr-mount-rushmore",
+  "/tr/tr-shot",
+  "/visit",
+  "/visit/activities",
+  "/visit/directions",
+  "/visit/exhibits",
+  "/visit/faq",
+  "/visit/faq/tickets",
+  "/visit/groups",
+  "/visit/hours",
+  "/visit/i-94",
+  "/visit/itineraries",
+  "/visit/itineraries/4-days-north-dakota",
+  "/visit/itineraries/chicago-badlands",
+  "/visit/itineraries/one-day",
+  "/visit/itineraries/seattle-badlands",
+  "/visit/medora/history",
+  "/visit/national-park"
+ ],
+ "watching": [
+  {
+   "page": "/visit",
+   "changed": "2026-10-27",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-11-24",
+   "changes": [
+    {
+     "date": "2026-10-27",
+     "kind": [
+      "title"
+     ],
+     "what": "Title: Plan Your Visit: Tickets, Hours and Directions"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "content"
+     ],
+     "what": "Visit length: about three and a half hours"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 1604,
+    "impressions": 64141,
+    "ctr": 0.025,
+    "position": 2.7,
+    "clicks_per_day": 57.3,
+    "impressions_per_day": 2290.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/exhibits",
+   "changed": "2026-10-27",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-11-24",
+   "changes": [
+    {
+     "date": "2026-10-27",
+     "kind": [
+      "title"
+     ],
+     "what": "Title: Exhibits: Roosevelt’s Life in Eight Chapters"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "content"
+     ],
+     "what": "Visit length and restaurant name (Salt+Scoria)"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 122,
+    "impressions": 22729,
+    "ctr": 0.0054,
+    "position": 3.8,
+    "clicks_per_day": 4.4,
+    "impressions_per_day": 811.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/jacob-riis",
+   "changed": "2026-10-27",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-11-24",
+   "changes": [
+    {
+     "date": "2026-10-27",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title and description aimed at 'who was Jacob Riis'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 388,
+    "impressions": 77871,
+    "ctr": 0.005,
+    "position": 6.9,
+    "clicks_per_day": 13.9,
+    "impressions_per_day": 2781.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/panama-canal",
+   "changed": "2026-10-27",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-11-24",
+   "changes": [
+    {
+     "date": "2026-10-27",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title and description: Theodore Roosevelt and the Panama Canal, 1903–1914"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 229,
+    "impressions": 50631,
+    "ctr": 0.0045,
+    "position": 5.2,
+    "clicks_per_day": 8.2,
+    "impressions_per_day": 1808.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/railroad-regulation",
+   "changed": "2026-10-27",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-11-24",
+   "changes": [
+    {
+     "date": "2026-10-27",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title names the Hepburn Act and Elkins Act"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 109,
+    "impressions": 27910,
+    "ctr": 0.0039,
+    "position": 4.0,
+    "clicks_per_day": 3.9,
+    "impressions_per_day": 996.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/rise-to-power/san-juan-hill",
+   "changed": "2026-10-27",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-11-24",
+   "changes": [
+    {
+     "date": "2026-10-27",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title uses 'Battle of San Juan Hill'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 405,
+    "impressions": 29109,
+    "ctr": 0.0139,
+    "position": 3.7,
+    "clicks_per_day": 14.5,
+    "impressions_per_day": 1039.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/coal-strike",
+   "changed": "2026-10-27",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-11-24",
+   "changes": [
+    {
+     "date": "2026-10-27",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title uses 'Anthracite Coal Strike of 1902'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 220,
+    "impressions": 24776,
+    "ctr": 0.0089,
+    "position": 4.2,
+    "clicks_per_day": 7.9,
+    "impressions_per_day": 884.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/groups",
+   "changed": "2026-10-27",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-11-24",
+   "changes": [
+    {
+     "date": "2026-10-27",
+     "kind": [
+      "content"
+     ],
+     "what": "Visit length changed from about three hours to about three and a half hours"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 2,
+    "impressions": 342,
+    "ctr": 0.0058,
+    "position": 6.5,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 12.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/faq/tickets",
+   "changed": "2026-10-27",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-11-24",
+   "changes": [
+    {
+     "date": "2026-10-27",
+     "kind": [
+      "content",
+      "redirect"
+     ],
+     "what": "'Buy tickets' link fixed (was /visit/tickets, a 404); 301 /visit/tickets -> /tickets"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 57,
+    "impressions": 1338,
+    "ctr": 0.0426,
+    "position": 6.3,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 47.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/faq",
+   "changed": "2026-10-27",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-11-24",
+   "changes": [
+    {
+     "date": "2026-10-27",
+     "kind": [
+      "content"
+     ],
+     "what": "Tickets link fixed (was /visit/tickets, a 404)"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 58,
+    "impressions": 7195,
+    "ctr": 0.0081,
+    "position": 4.7,
+    "clicks_per_day": 2.1,
+    "impressions_per_day": 257.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/square-deal",
+   "changed": "2026-10-27",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-11-24",
+   "changes": [
+    {
+     "date": "2026-10-27",
+     "kind": [
+      "content"
+     ],
+     "what": "Removed duplicate H1"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta",
+      "content"
+     ],
+     "what": "Title 'The Square Deal in Depth: Roosevelt as the Nation's Referee'; cross-link to /tr/square-deal"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 500,
+    "impressions": 84352,
+    "ctr": 0.0059,
+    "position": 4.6,
+    "clicks_per_day": 17.9,
+    "impressions_per_day": 3012.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/square-deal",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta",
+      "content"
+     ],
+     "what": "Title 'What Was the Square Deal? Roosevelt's Three Cs'; wording fixes"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 1130,
+    "impressions": 91617,
+    "ctr": 0.0123,
+    "position": 3.3,
+    "clicks_per_day": 40.4,
+    "impressions_per_day": 3272.0
+   },
+   "after": {
+    "days": 5,
+    "clicks": 148,
+    "impressions": 19907,
+    "ctr": 0.0074,
+    "position": 3.8,
+    "clicks_per_day": 29.6,
+    "impressions_per_day": 3981.4
+   },
+   "change": {
+    "clicks_per_day": -0.267,
+    "impressions_per_day": 0.217,
+    "ctr_points": -0.49,
+    "position": 0.5
+   }
+  },
+  {
+   "page": "/tr/family/fdr-connection",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta",
+      "content"
+     ],
+     "what": "Title 'How Were Theodore and Franklin Roosevelt Related?'; 32 years fix; Eleanor sentence"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 1099,
+    "impressions": 75155,
+    "ctr": 0.0146,
+    "position": 3.2,
+    "clicks_per_day": 39.2,
+    "impressions_per_day": 2684.1
+   },
+   "after": {
+    "days": 5,
+    "clicks": 392,
+    "impressions": 16733,
+    "ctr": 0.0234,
+    "position": 3.2,
+    "clicks_per_day": 78.4,
+    "impressions_per_day": 3346.6
+   },
+   "change": {
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 0.247,
+    "ctr_points": 0.88,
+    "position": 0.0
+   }
+  },
+  {
+   "page": "/tr/presidency/brownsville",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta",
+      "content"
+     ],
+     "what": "Title 'The Brownsville Affair of 1906: What Happened and Why'; Medal of Honor claim and dates corrected"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 26,
+    "impressions": 62731,
+    "ctr": 0.0004,
+    "position": 6.3,
+    "clicks_per_day": 0.9,
+    "impressions_per_day": 2240.4
+   },
+   "after": {
+    "days": 5,
+    "clicks": 6,
+    "impressions": 23617,
+    "ctr": 0.0003,
+    "position": 4.8,
+    "clicks_per_day": 1.2,
+    "impressions_per_day": 4723.4
+   },
+   "change": {
+    "clicks_per_day": 0.333,
+    "impressions_per_day": 1.108,
+    "ctr_points": -0.01,
+    "position": -1.5
+   }
+  },
+  {
+   "page": "/tr/presidency/roosevelt-corollary",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta",
+      "content"
+     ],
+     "what": "Title 'Roosevelt Corollary to the Monroe Doctrine, Explained'; stray second H1 section removed"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 185,
+    "impressions": 105940,
+    "ctr": 0.0017,
+    "position": 5.4,
+    "clicks_per_day": 6.6,
+    "impressions_per_day": 3783.6
+   },
+   "after": {
+    "days": 5,
+    "clicks": 44,
+    "impressions": 24135,
+    "ctr": 0.0018,
+    "position": 4.4,
+    "clicks_per_day": 8.8,
+    "impressions_per_day": 4827.0
+   },
+   "change": {
+    "clicks_per_day": 0.333,
+    "impressions_per_day": 0.276,
+    "ctr_points": 0.01,
+    "position": -1.0
+   }
+  },
+  {
+   "page": "/tr/tr-mount-rushmore",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title 'Mount Rushmore Presidents: Why Theodore Roosevelt Is There'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 546,
+    "impressions": 95494,
+    "ctr": 0.0057,
+    "position": 5.1,
+    "clicks_per_day": 19.5,
+    "impressions_per_day": 3410.5
+   },
+   "after": {
+    "days": 5,
+    "clicks": 82,
+    "impressions": 31647,
+    "ctr": 0.0026,
+    "position": 5.6,
+    "clicks_per_day": 16.4,
+    "impressions_per_day": 6329.4
+   },
+   "change": {
+    "clicks_per_day": -0.159,
+    "impressions_per_day": 0.856,
+    "ctr_points": -0.31,
+    "position": 0.5
+   }
+  },
+  {
+   "page": "/visit/hours",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta",
+      "content"
+     ],
+     "what": "Title 'Hours in Medora: Seasonal Schedule and Last Entry'; visit-length bullet"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 757,
+    "impressions": 61205,
+    "ctr": 0.0124,
+    "position": 2.7,
+    "clicks_per_day": 27.0,
+    "impressions_per_day": 2185.9
+   },
+   "after": {
+    "days": 5,
+    "clicks": 84,
+    "impressions": 7567,
+    "ctr": 0.0111,
+    "position": 2.4,
+    "clicks_per_day": 16.8,
+    "impressions_per_day": 1513.4
+   },
+   "change": {
+    "clicks_per_day": -0.378,
+    "impressions_per_day": -0.308,
+    "ctr_points": -0.13,
+    "position": -0.3
+   }
+  },
+  {
+   "page": "/visit/directions",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title"
+     ],
+     "what": "Title 'Directions to Medora from I-94 and Nearby Airports'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 811,
+    "impressions": 62916,
+    "ctr": 0.0129,
+    "position": 2.7,
+    "clicks_per_day": 29.0,
+    "impressions_per_day": 2247.0
+   },
+   "after": {
+    "days": 5,
+    "clicks": 96,
+    "impressions": 8441,
+    "ctr": 0.0114,
+    "position": 2.7,
+    "clicks_per_day": 19.2,
+    "impressions_per_day": 1688.2
+   },
+   "change": {
+    "clicks_per_day": -0.338,
+    "impressions_per_day": -0.249,
+    "ctr_points": -0.15,
+    "position": 0.0
+   }
+  },
+  {
+   "page": "/project",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title 'Building the Library: Design, Values and Sustainability'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 147,
+    "impressions": 27965,
+    "ctr": 0.0053,
+    "position": 2.0,
+    "clicks_per_day": 5.2,
+    "impressions_per_day": 998.8
+   },
+   "after": {
+    "days": 5,
+    "clicks": 24,
+    "impressions": 3761,
+    "ctr": 0.0064,
+    "position": 2.2,
+    "clicks_per_day": 4.8,
+    "impressions_per_day": 752.2
+   },
+   "change": {
+    "clicks_per_day": -0.077,
+    "impressions_per_day": -0.247,
+    "ctr_points": 0.11,
+    "position": 0.2
+   }
+  },
+  {
+   "page": "/tr/presidency/trust-busting",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title 'What Was Trust-Busting? Roosevelt Takes On the Monopolies'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 877,
+    "impressions": 73269,
+    "ctr": 0.012,
+    "position": 3.6,
+    "clicks_per_day": 31.3,
+    "impressions_per_day": 2616.8
+   },
+   "after": {
+    "days": 5,
+    "clicks": 202,
+    "impressions": 12011,
+    "ctr": 0.0168,
+    "position": 3.4,
+    "clicks_per_day": 40.4,
+    "impressions_per_day": 2402.2
+   },
+   "change": {
+    "clicks_per_day": 0.291,
+    "impressions_per_day": -0.082,
+    "ctr_points": 0.48,
+    "position": -0.2
+   }
+  },
+  {
+   "page": "/tr/presidency-timeline",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title 'When Was Theodore Roosevelt President? 1901–1909 Timeline'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 328,
+    "impressions": 57662,
+    "ctr": 0.0057,
+    "position": 4.7,
+    "clicks_per_day": 11.7,
+    "impressions_per_day": 2059.4
+   },
+   "after": {
+    "days": 5,
+    "clicks": 34,
+    "impressions": 8773,
+    "ctr": 0.0039,
+    "position": 4.8,
+    "clicks_per_day": 6.8,
+    "impressions_per_day": 1754.6
+   },
+   "change": {
+    "clicks_per_day": -0.419,
+    "impressions_per_day": -0.148,
+    "ctr_points": -0.18,
+    "position": 0.1
+   }
+  },
+  {
+   "page": "/tr/tr-shot",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title 'Why Was Theodore Roosevelt Shot? The 1912 Milwaukee Attack'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 359,
+    "impressions": 40430,
+    "ctr": 0.0089,
+    "position": 4.0,
+    "clicks_per_day": 12.8,
+    "impressions_per_day": 1443.9
+   },
+   "after": {
+    "days": 5,
+    "clicks": 41,
+    "impressions": 5716,
+    "ctr": 0.0072,
+    "position": 4.1,
+    "clicks_per_day": 8.2,
+    "impressions_per_day": 1143.2
+   },
+   "change": {
+    "clicks_per_day": -0.359,
+    "impressions_per_day": -0.208,
+    "ctr_points": -0.17,
+    "position": 0.1
+   }
+  },
+  {
+   "page": "/bullet-speech",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta",
+      "content"
+     ],
+     "what": "Title 'The Bullet Speech: Roosevelt's Assassination Attempt'; link to /tr/tr-shot"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 759,
+    "impressions": 41280,
+    "ctr": 0.0184,
+    "position": 3.6,
+    "clicks_per_day": 27.1,
+    "impressions_per_day": 1474.3
+   },
+   "after": {
+    "days": 5,
+    "clicks": 99,
+    "impressions": 5928,
+    "ctr": 0.0167,
+    "position": 4.0,
+    "clicks_per_day": 19.8,
+    "impressions_per_day": 1185.6
+   },
+   "change": {
+    "clicks_per_day": -0.269,
+    "impressions_per_day": -0.196,
+    "ctr_points": -0.17,
+    "position": 0.4
+   }
+  },
+  {
+   "page": "/tr/pre-presidency-political-accomplishments",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title 'What Did Theodore Roosevelt Do Before He Was President?'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 683,
+    "impressions": 49559,
+    "ctr": 0.0138,
+    "position": 5.4,
+    "clicks_per_day": 24.4,
+    "impressions_per_day": 1770.0
+   },
+   "after": {
+    "days": 5,
+    "clicks": 43,
+    "impressions": 10162,
+    "ctr": 0.0042,
+    "position": 6.1,
+    "clicks_per_day": 8.6,
+    "impressions_per_day": 2032.4
+   },
+   "change": {
+    "clicks_per_day": -0.648,
+    "impressions_per_day": 0.148,
+    "ctr_points": -0.96,
+    "position": 0.7
+   }
+  },
+  {
+   "page": "/tr/post-presidency/man-in-the-arena",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta",
+      "content"
+     ],
+     "what": "Title 'TR's 1910 European Tour and the Man in the Arena Speech'; cross-link"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 45,
+    "impressions": 5508,
+    "ctr": 0.0082,
+    "position": 7.6,
+    "clicks_per_day": 1.6,
+    "impressions_per_day": 196.7
+   },
+   "after": {
+    "days": 5,
+    "clicks": 6,
+    "impressions": 613,
+    "ctr": 0.0098,
+    "position": 7.3,
+    "clicks_per_day": 1.2,
+    "impressions_per_day": 122.6
+   },
+   "change": {
+    "clicks_per_day": -0.25,
+    "impressions_per_day": -0.377,
+    "ctr_points": 0.16,
+    "position": -0.3
+   }
+  },
+  {
+   "page": "/tr/family/children",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta",
+      "content"
+     ],
+     "what": "Title 'Theodore Roosevelt's Children: Alice, Ted, Kermit and More'; link to kids timeline"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 91,
+    "impressions": 10021,
+    "ctr": 0.0091,
+    "position": 5.3,
+    "clicks_per_day": 3.2,
+    "impressions_per_day": 357.9
+   },
+   "after": {
+    "days": 5,
+    "clicks": 16,
+    "impressions": 1718,
+    "ctr": 0.0093,
+    "position": 4.1,
+    "clicks_per_day": 3.2,
+    "impressions_per_day": 343.6
+   },
+   "change": {
+    "clicks_per_day": 0.0,
+    "impressions_per_day": -0.04,
+    "ctr_points": 0.02,
+    "position": -1.2
+   }
+  },
+  {
+   "page": "/tr/kids-timeline",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title 'Theodore Roosevelt for Kids: A Timeline of His Life'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 104,
+    "impressions": 12602,
+    "ctr": 0.0083,
+    "position": 8.6,
+    "clicks_per_day": 3.7,
+    "impressions_per_day": 450.1
+   },
+   "after": {
+    "days": 5,
+    "clicks": 13,
+    "impressions": 1544,
+    "ctr": 0.0084,
+    "position": 10.9,
+    "clicks_per_day": 2.6,
+    "impressions_per_day": 308.8
+   },
+   "change": {
+    "clicks_per_day": -0.297,
+    "impressions_per_day": -0.314,
+    "ctr_points": 0.01,
+    "position": 2.3
+   }
+  },
+  {
+   "page": "/tr/teddy-nickname",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta",
+      "content",
+      "merge"
+     ],
+     "what": "Merged /tr/myths/teddy-name into this page; new title and description; teddy bear sentence"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 99,
+    "impressions": 23850,
+    "ctr": 0.0042,
+    "position": 5.1,
+    "clicks_per_day": 3.5,
+    "impressions_per_day": 851.8
+   },
+   "after": {
+    "days": 5,
+    "clicks": 29,
+    "impressions": 3379,
+    "ctr": 0.0086,
+    "position": 4.6,
+    "clicks_per_day": 5.8,
+    "impressions_per_day": 675.8
+   },
+   "change": {
+    "clicks_per_day": 0.657,
+    "impressions_per_day": -0.207,
+    "ctr_points": 0.44,
+    "position": -0.5
+   }
+  },
+  {
+   "page": "/tr/myths/teddy-name",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "redirect",
+      "merge"
+     ],
+     "what": "Archived; 301 to /tr/teddy-nickname"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 7,
+    "impressions": 586,
+    "ctr": 0.0119,
+    "position": 6.2,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 20.9
+   },
+   "after": {
+    "days": 5,
+    "clicks": 4,
+    "impressions": 812,
+    "ctr": 0.0049,
+    "position": 5.6,
+    "clicks_per_day": 0.8,
+    "impressions_per_day": 162.4
+   },
+   "change": {
+    "clicks_per_day": 3.0,
+    "impressions_per_day": 6.77,
+    "ctr_points": -0.7,
+    "position": -0.6
+   }
+  },
+  {
+   "page": "/",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "meta"
+     ],
+     "what": "Description mentions 'Teddy'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 9888,
+    "impressions": 259261,
+    "ctr": 0.0381,
+    "position": 8.0,
+    "clicks_per_day": 353.1,
+    "impressions_per_day": 9259.3
+   },
+   "after": {
+    "days": 5,
+    "clicks": 1327,
+    "impressions": 13663,
+    "ctr": 0.0971,
+    "position": 6.1,
+    "clicks_per_day": 265.4,
+    "impressions_per_day": 2732.6
+   },
+   "change": {
+    "clicks_per_day": -0.248,
+    "impressions_per_day": -0.705,
+    "ctr_points": 5.9,
+    "position": -1.9
+   }
+  },
+  {
+   "page": "/visit/national-park",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "content"
+     ],
+     "what": "Visit length, restaurant name; link to where-to-see"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 113,
+    "impressions": 21699,
+    "ctr": 0.0052,
+    "position": 7.5,
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 775.0
+   },
+   "after": {
+    "days": 5,
+    "clicks": 18,
+    "impressions": 2905,
+    "ctr": 0.0062,
+    "position": 8.6,
+    "clicks_per_day": 3.6,
+    "impressions_per_day": 581.0
+   },
+   "change": {
+    "clicks_per_day": -0.1,
+    "impressions_per_day": -0.25,
+    "ctr_points": 0.1,
+    "position": 1.1
+   }
+  },
+  {
+   "page": "/visit/activities",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "content"
+     ],
+     "what": "Visit length and restaurant name"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 10,
+    "impressions": 882,
+    "ctr": 0.0113,
+    "position": 5.2,
+    "clicks_per_day": 0.4,
+    "impressions_per_day": 31.5
+   },
+   "after": {
+    "days": 5,
+    "clicks": 1,
+    "impressions": 182,
+    "ctr": 0.0055,
+    "position": 8.3,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 36.4
+   },
+   "change": {
+    "clicks_per_day": -0.5,
+    "impressions_per_day": 0.156,
+    "ctr_points": -0.58,
+    "position": 3.1
+   }
+  },
+  {
+   "page": "/visit/itineraries",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "content"
+     ],
+     "what": "Link to the I-94 guide"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 77,
+    "impressions": 5527,
+    "ctr": 0.0139,
+    "position": 6.8,
+    "clicks_per_day": 2.8,
+    "impressions_per_day": 197.4
+   },
+   "after": {
+    "days": 5,
+    "clicks": 13,
+    "impressions": 679,
+    "ctr": 0.0191,
+    "position": 6.8,
+    "clicks_per_day": 2.6,
+    "impressions_per_day": 135.8
+   },
+   "change": {
+    "clicks_per_day": -0.071,
+    "impressions_per_day": -0.312,
+    "ctr_points": 0.52,
+    "position": 0.0
+   }
+  },
+  {
+   "page": "/visit/itineraries/one-day",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "content"
+     ],
+     "what": "Visit length and restaurant name"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 98,
+    "impressions": 2370,
+    "ctr": 0.0414,
+    "position": 3.9,
+    "clicks_per_day": 3.5,
+    "impressions_per_day": 84.6
+   },
+   "after": {
+    "days": 5,
+    "clicks": 17,
+    "impressions": 419,
+    "ctr": 0.0406,
+    "position": 3.4,
+    "clicks_per_day": 3.4,
+    "impressions_per_day": 83.8
+   },
+   "change": {
+    "clicks_per_day": -0.029,
+    "impressions_per_day": -0.009,
+    "ctr_points": -0.08,
+    "position": -0.5
+   }
+  },
+  {
+   "page": "/visit/itineraries/4-days-north-dakota",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "content"
+     ],
+     "what": "Visit length and restaurant name"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 20,
+    "impressions": 1438,
+    "ctr": 0.0139,
+    "position": 7.6,
+    "clicks_per_day": 0.7,
+    "impressions_per_day": 51.4
+   },
+   "after": {
+    "days": 5,
+    "clicks": 1,
+    "impressions": 214,
+    "ctr": 0.0047,
+    "position": 7.3,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 42.8
+   },
+   "change": {
+    "clicks_per_day": -0.714,
+    "impressions_per_day": -0.167,
+    "ctr_points": -0.92,
+    "position": -0.3
+   }
+  },
+  {
+   "page": "/visit/itineraries/seattle-badlands",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "content"
+     ],
+     "what": "Visit length and restaurant name"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 4,
+    "impressions": 346,
+    "ctr": 0.0116,
+    "position": 6.7,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 12.4
+   },
+   "after": {
+    "days": 5,
+    "clicks": 1,
+    "impressions": 65,
+    "ctr": 0.0154,
+    "position": 6.6,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 13.0
+   },
+   "change": {
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 0.048,
+    "ctr_points": 0.38,
+    "position": -0.1
+   }
+  },
+  {
+   "page": "/visit/itineraries/chicago-badlands",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "content"
+     ],
+     "what": "Visit length and restaurant name"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 19,
+    "impressions": 1421,
+    "ctr": 0.0134,
+    "position": 6.6,
+    "clicks_per_day": 0.7,
+    "impressions_per_day": 50.8
+   },
+   "after": {
+    "days": 5,
+    "clicks": 2,
+    "impressions": 213,
+    "ctr": 0.0094,
+    "position": 7.7,
+    "clicks_per_day": 0.4,
+    "impressions_per_day": 42.6
+   },
+   "change": {
+    "clicks_per_day": -0.429,
+    "impressions_per_day": -0.161,
+    "ctr_points": -0.4,
+    "position": 1.1
+   }
+  },
+  {
+   "page": "/visit/i-94",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "new_page"
+     ],
+     "what": "New page: Best Stops on I-94 in North Dakota"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 0,
+    "impressions": 0,
+    "ctr": null,
+    "position": null,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 0.0
+   },
+   "after": {
+    "days": 5,
+    "clicks": 0,
+    "impressions": 0,
+    "ctr": null,
+    "position": null,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 0.0
+   },
+   "change": {
+    "clicks_per_day": null,
+    "impressions_per_day": null,
+    "ctr_points": null,
+    "position": null
+   }
+  },
+  {
+   "page": "/tr/badlands/where-to-see",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "new_page"
+     ],
+     "what": "New page: Where to See Theodore Roosevelt's North Dakota"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 0,
+    "impressions": 0,
+    "ctr": null,
+    "position": null,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 0.0
+   },
+   "after": {
+    "days": 5,
+    "clicks": 0,
+    "impressions": 0,
+    "ctr": null,
+    "position": null,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 0.0
+   },
+   "change": {
+    "clicks_per_day": null,
+    "impressions_per_day": null,
+    "ctr_points": null,
+    "position": null
+   }
+  },
+  {
+   "page": "/tr/badlands",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "content"
+     ],
+     "what": "Link to where-to-see"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 2,
+    "impressions": 410,
+    "ctr": 0.0049,
+    "position": 5.1,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 14.6
+   },
+   "after": {
+    "days": 5,
+    "clicks": 1,
+    "impressions": 42,
+    "ctr": 0.0238,
+    "position": 5.7,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 8.4
+   },
+   "change": {
+    "clicks_per_day": 1.0,
+    "impressions_per_day": -0.425,
+    "ctr_points": 1.89,
+    "position": 0.6
+   }
+  },
+  {
+   "page": "/visit/medora/history",
+   "changed": "2026-10-20",
+   "days_since": 8,
+   "held": true,
+   "held_until": "2026-11-17",
+   "changes": [
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "content"
+     ],
+     "what": "North Dakota quote aligned to the 1918 Volwiler letter"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 45,
+    "impressions": 3341,
+    "ctr": 0.0135,
+    "position": 7.1,
+    "clicks_per_day": 1.6,
+    "impressions_per_day": 119.3
+   },
+   "after": {
+    "days": 5,
+    "clicks": 8,
+    "impressions": 465,
+    "ctr": 0.0172,
+    "position": 6.8,
+    "clicks_per_day": 1.6,
+    "impressions_per_day": 93.0
+   },
+   "change": {
+    "clicks_per_day": 0.0,
+    "impressions_per_day": -0.22,
+    "ctr_points": 0.37,
+    "position": -0.3
+   }
+  }
+ ],
+ "sitewide": [
+  {
+   "date": "2026-10-27",
+   "kind": [
+    "schema"
+   ],
+   "what": "Sitewide schema: description no longer says 'Opens July 4, 2026'; Wikipedia/Wikidata sameAs; Theodore Roosevelt entity defined"
+  },
+  {
+   "date": "2026-10-20",
+   "kind": [
+    "schema"
+   ],
+   "what": "Organization alternateName adds Teddy Roosevelt Presidential Library and Teddy Roosevelt Library"
+  }
+ ]
+}
