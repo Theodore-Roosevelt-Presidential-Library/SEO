@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T13:09:25+00:00",
+ "generated": "2026-11-02T13:25:32+00:00",
  "site": "https://www.trlibrary.com",
  "dashboard": "https://seo.labs.trlibrary.com",
  "sources": {
@@ -15,12 +15,12 @@
   },
   "opportunities": {
    "state": "ok",
-   "updated": "2026-11-02T12:44:59+00:00",
+   "updated": "2026-11-02T13:22:28+00:00",
    "message": "103 striking-distance queries, 36 low-CTR pages; 31 recently changed pages held back"
   },
   "gsc": {
    "state": "ok",
-   "updated": "2026-11-02T12:30:23+00:00",
+   "updated": "2026-11-02T13:22:28+00:00",
    "message": "23106 queries, 1937 pages (2026-10-03 to 2026-10-30); 41 changed pages tracked"
   },
   "ai_visibility": {
@@ -35,12 +35,12 @@
   },
   "digest": {
    "state": "ok",
-   "updated": "2026-11-01T13:22:54+00:00",
+   "updated": "2026-11-02T13:09:25+00:00",
    "message": "llms.txt, digest.md and digest.json rebuilt"
   },
   "checkout": {
    "state": "ok",
-   "updated": "2026-11-02T13:05:54+00:00",
+   "updated": "2026-11-02T13:25:32+00:00",
    "message": "Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info"
   },
   "curate": {
@@ -7594,7 +7594,7 @@
   "llms_txt_draft": "https://seo.labs.trlibrary.com/data/site-llms.txt"
  },
  "checkout": {
-  "updated": "2026-11-02T13:02:53+00:00",
+  "updated": "2026-11-02T13:22:31+00:00",
   "note": "Rates only; counts are never published. Users who triggered each step on the ticket store, from GA4.",
   "current": {
    "tracked_steps": [

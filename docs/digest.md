@@ -1,5 +1,5 @@
 # trlibrary.com search & AI visibility digest
-Generated 2026-11-02T13:09:25+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
+Generated 2026-11-02T13:25:32+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
 
 ## How to use this
 Read top to bottom: the biggest, cheapest wins come first in each section. When you suggest copy, follow these house rules:
@@ -21,12 +21,12 @@ Read top to bottom: the biggest, cheapest wins come first in each section. When 
 |---|---|---|---|
 | audit | ok | 2026-11-02T12:32:16+00:00 | Crawled 1130 pages, health 96/100 |
 | ranks | ok | 2026-11-02T12:38:36+00:00 | 30 keywords checked |
-| opportunities | ok | 2026-11-02T12:44:59+00:00 | 103 striking-distance queries, 36 low-CTR pages; 31 recently changed pages held back |
-| gsc | ok | 2026-11-02T12:30:23+00:00 | 23106 queries, 1937 pages (2026-10-03 to 2026-10-30); 41 changed pages tracked |
+| opportunities | ok | 2026-11-02T13:22:28+00:00 | 103 striking-distance queries, 36 low-CTR pages; 31 recently changed pages held back |
+| gsc | ok | 2026-11-02T13:22:28+00:00 | 23106 queries, 1937 pages (2026-10-03 to 2026-10-30); 41 changed pages tracked |
 | ai_visibility | error | 2026-11-02T12:44:59+00:00 | 38 answers from ChatGPT, Gemini, Perplexity; 19 failed: Perplexity 403: {"error":{"message":"The Agent API requires paid credits. Add paid credit at https://console.perplexity.ai to upgrade your organizatio |
 | tips | ok | 2026-11-02T13:09:25+00:00 | Gemini wrote tips for 8 pages |
-| digest | ok | 2026-11-01T13:22:54+00:00 | llms.txt, digest.md and digest.json rebuilt |
-| checkout | ok | 2026-11-02T13:05:54+00:00 | Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info |
+| digest | ok | 2026-11-02T13:09:25+00:00 | llms.txt, digest.md and digest.json rebuilt |
+| checkout | ok | 2026-11-02T13:25:32+00:00 | Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info |
 | curate | ok | 2026-11-02T12:33:01+00:00 | 10 discovered keywords and 4 discovered questions tracked; 7 changes today |
 | ux | ok | 2026-11-02T12:59:15+00:00 | 79 pages; PageSpeed on 77; AI task check by gemini (gemini-3.8-flash); GA4 on; Clarity off; 2 errors, e.g. PageSpeed /visit/maps: PageSpeed 500: {   "error": {     "code": 500,     "message": "Lighthouse returned error: PAGE_HUNG. Lighthouse was unable to reliably load the URL you requeste |
 | links | ok | 2026-11-02T13:01:07+00:00 | 1164 pages crawled; 0 broken internal links (redirects proposed); 1176 suggested links; 50 orphan pages; 49 related pairs without links |
