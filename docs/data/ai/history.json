@@ -212,5 +212,127 @@
     "perplexity": false
    }
   }
+ },
+ {
+  "date": "2026-11-02",
+  "overall": {
+   "n": 38,
+   "mention_rate": 0.5,
+   "cite_rate": 0.395
+  },
+  "providers": {
+   "openai": {
+    "n": 19,
+    "mention_rate": 0.684,
+    "cite_rate": 0.579
+   },
+   "gemini": {
+    "n": 19,
+    "mention_rate": 0.316,
+    "cite_rate": 0.211
+   },
+   "perplexity": {
+    "n": 0,
+    "mention_rate": null,
+    "cite_rate": null
+   }
+  },
+  "prompts": {
+   "trnp-what-to-see": {
+    "openai": true,
+    "gemini": false,
+    "perplexity": false
+   },
+   "medora-things-to-do": {
+    "openai": true,
+    "gemini": false,
+    "perplexity": false
+   },
+   "nd-road-trip": {
+    "openai": true,
+    "gemini": false,
+    "perplexity": false
+   },
+   "rushmore-to-trnp": {
+    "openai": false,
+    "gemini": false,
+    "perplexity": false
+   },
+   "i94-stops": {
+    "openai": true,
+    "gemini": false,
+    "perplexity": false
+   },
+   "family-badlands": {
+    "openai": true,
+    "gemini": false,
+    "perplexity": false
+   },
+   "rainy-day-medora": {
+    "openai": true,
+    "gemini": false,
+    "perplexity": false
+   },
+   "nd-museums": {
+    "openai": true,
+    "gemini": false,
+    "perplexity": false
+   },
+   "newest-presidential-library": {
+    "openai": true,
+    "gemini": true,
+    "perplexity": false
+   },
+   "presidential-libraries-visit": {
+    "openai": true,
+    "gemini": true,
+    "perplexity": false
+   },
+   "tr-learn-where": {
+    "openai": true,
+    "gemini": true,
+    "perplexity": false
+   },
+   "tr-sites": {
+    "openai": false,
+    "gemini": false,
+    "perplexity": false
+   },
+   "tr-library-worth-it": {
+    "openai": true,
+    "gemini": true,
+    "perplexity": false
+   },
+   "tr-library-time": {
+    "openai": true,
+    "gemini": true,
+    "perplexity": false
+   },
+   "tr-library-tickets": {
+    "openai": true,
+    "gemini": true,
+    "perplexity": false
+   },
+   "auto-what-were-theodore-roosevelt-s-major-accomplishmen": {
+    "openai": false,
+    "gemini": false,
+    "perplexity": false
+   },
+   "auto-can-you-explain-theodore-roosevelt-s-square-deal-d": {
+    "openai": false,
+    "gemini": false,
+    "perplexity": false
+   },
+   "auto-what-years-was-theodore-roosevelt-in-office-and-wh": {
+    "openai": false,
+    "gemini": false,
+    "perplexity": false
+   },
+   "auto-which-presidents-are-carved-on-mount-rushmore-and-": {
+    "openai": false,
+    "gemini": false,
+    "perplexity": false
+   }
+  }
  }
 ]

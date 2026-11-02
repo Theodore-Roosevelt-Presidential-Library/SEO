@@ -48,5 +48,10 @@
   "date": "2026-11-01",
   "checkout_completion": null,
   "store_conversion": 0.382
+ },
+ {
+  "date": "2026-11-02",
+  "checkout_completion": null,
+  "store_conversion": 0.378
  }
 ]

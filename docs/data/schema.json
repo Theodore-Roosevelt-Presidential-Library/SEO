@@ -1,42 +1,34 @@
 {
- "generated": "2026-10-26T14:42:29+00:00",
+ "generated": "2026-11-02T13:02:49+00:00",
  "summary": {
-  "pages_read": 1013,
-  "pages_with_own_markup": 350,
-  "typed_pages": 863,
-  "typed_pages_done": 96,
+  "pages_read": 1038,
+  "pages_with_own_markup": 369,
+  "typed_pages": 883,
+  "typed_pages_done": 101,
   "coverage_pct": 11,
   "faq_pages": 20,
   "faq_questions": 144,
-  "sitewide_issues": 9,
-  "high": 4,
+  "sitewide_issues": 8,
+  "high": 3,
   "llms_txt": false
  },
  "sitewide": [
   {
-   "id": "stale_description",
-   "severity": "high",
-   "title": "Sitewide description still says the Library is about to open",
-   "detail": "Library: “Independently operated presidential library in Medora, North Dakota, dedicated to the life, legacy, and ideals of Theodore Roosevelt. Opens July 4, 2026.” · Website: “The official website of the Theodore Roosevelt Presidential Library, opening July 4, 2026 in Medora, North Dakota.”",
-   "fix": "Update the description in the sitewide schema (Drupal Metatag/Schema settings) to present tense, e.g. “Presidential library and museum in Medora, North Dakota, dedicated to the life, legacy, and ideals of Theodore Roosevelt. Opened July 4, 2026.” AI tools copy this sentence into answers."
-  },
-  {
    "id": "sameas",
    "severity": "high",
-   "title": "Sitewide markup doesn't link to the Library's Wikipedia or Wikidata entry",
+   "title": "Sitewide markup doesn't link to the Library's Wikipedia entry",
    "detail": "sameAs lists only social accounts. Wikipedia and Wikidata links are how search engines and AI tools confirm that trlibrary.com is the same Theodore Roosevelt Presidential Library they know about.",
    "fix": "Add these to sameAs in the sitewide schema.",
    "snippet": {
     "sameAs": [
-     "https://en.wikipedia.org/wiki/Theodore_Roosevelt_Presidential_Library",
-     "https://www.wikidata.org/wiki/Q104858042"
+     "https://en.wikipedia.org/wiki/Theodore_Roosevelt_Presidential_Library"
     ]
    }
   },
   {
    "id": "tr_entity",
    "severity": "high",
-   "title": "236 pages point to a Theodore Roosevelt entity that is never defined",
+   "title": "249 pages point to a Theodore Roosevelt entity that is never defined",
    "detail": "Every /tr page says it's about https://www.trlibrary.com/tr/#person, but no page says who that is: no name, no Wikidata link. To a machine it's an empty placeholder, so the link to the real Theodore Roosevelt is lost.",
    "fix": "Define the entity once in the sitewide @graph (so every page carries it). This is the single highest-value change for the /tr section.",
    "snippet": {
@@ -167,7 +159,7 @@
      "url": "https://www.trlibrary.com/tr/badlands/bad-lands-cow-boy",
      "description": "Read The Bad Lands Cow Boy, Medora's newspaper of 1884–86, week by week: the town Theodore Roosevelt knew, its people, news and ads, all searchable.",
      "image": "https://www.trlibrary.com/sites/default/files/2026-10/bad-lands-cow-boy-share.jpg",
-     "dateModified": "2026-10-12T10:53:50-06:00",
+     "dateModified": "2026-10-28T08:34:37-06:00",
      "author": {
       "@id": "https://www.trlibrary.com/#organization"
      },
@@ -951,7 +943,7 @@
     },
     {
      "path": "/tr/presidency/coal-strike",
-     "title": "The Coal Strike of 1902: The President Who Sided with the Miners",
+     "title": "Anthracite Coal Strike of 1902: How Roosevelt Ended It",
      "has": [
       "Person"
      ],
@@ -1159,7 +1151,7 @@
     },
     {
      "path": "/tr/presidency/panama-canal",
-     "title": "The Panama Canal: Roosevelt's Bold Gambit for American Power",
+     "title": "Theodore Roosevelt and the Panama Canal, 1903–1914",
      "has": [
       "Person"
      ],
@@ -1175,7 +1167,7 @@
     },
     {
      "path": "/tr/presidency/railroad-regulation",
-     "title": "Railroad Regulation: Federal Authority Over Private Enterprise",
+     "title": "Hepburn Act and Elkins Act: Roosevelt Regulates Railroads",
      "has": [
       "Person"
      ],
@@ -1199,7 +1191,7 @@
     },
     {
      "path": "/tr/presidency/square-deal",
-     "title": "The Square Deal in Depth: Roosevelt as the Nation's Referee",
+     "title": "What Was the Square Deal? Roosevelt's Three Cs",
      "has": [
       "Person"
      ],
@@ -1407,7 +1399,7 @@
     },
     {
      "path": "/tr/rise-to-power/san-juan-hill",
-     "title": "The Battle of San Juan Heights: Theodore Roosevelt’s “Crowded Hour”",
+     "title": "Battle of San Juan Hill: Roosevelt and the Rough Riders",
      "has": [
       "Person"
      ],
@@ -1471,9 +1463,9 @@
    "schema_type": "VideoObject",
    "why": "Video markup lets search and AI tools show and cite the Library's videos, with title, length and date.",
    "drupal": "Add VideoObject JSON-LD to the video view template from the stored YouTube data (title, description, thumbnail, publish date, duration).",
-   "pages": 407,
+   "pages": 409,
    "done": 0,
-   "missing": 407,
+   "missing": 409,
    "example": {
     "path": "/video/view/-QfzHHXPYqM",
     "jsonld": {
@@ -3383,6 +3375,12 @@
      "done": false
     },
     {
+     "path": "/video/view/lPnE-bKve_U",
+     "title": "In the Room | David Hume Kennerly at the Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
      "path": "/video/view/lRqnqk6Vj08",
      "title": "Teddy Roosevelt's ranch",
      "has": [],
@@ -3637,6 +3635,12 @@
     {
      "path": "/video/view/rVxbZ230drM",
      "title": "Good Citizen Ep. 54 with Amy Bowers Cordalis",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/rYaDctbdRE8",
+     "title": "Theodore Roosevelt Presidential Library celebrates his commitment to conservation",
      "has": [],
      "done": false
     },
@@ -4385,9 +4389,9 @@
    "schema_type": "CollectionPage",
    "why": "Marks the section pages as collections about TR.",
    "drupal": "Add CollectionPage JSON-LD to the /tr section landing template.",
-   "pages": 42,
+   "pages": 55,
    "done": 0,
-   "missing": 42,
+   "missing": 55,
    "example": {
     "path": "/tr",
     "jsonld": {
@@ -4424,6 +4428,22 @@
     {
      "path": "/tr/5-big-adventures",
      "title": "TR’s Five Big Post-Presidential Adventures",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/arbor-day",
+     "title": "Arbor Day with Theodore Roosevelt",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/arbor-day-timeline",
+     "title": "Timeline of T.R.’s Arbor Days",
      "has": [
       "Person"
      ],
@@ -4550,6 +4570,22 @@
      "done": false
     },
     {
+     "path": "/tr/fourth-of-july",
+     "title": "The Fourth of July with Theodore Roosevelt",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/fourth-of-july-timeline",
+     "title": "Timeline of T.R.’s Fourths of July",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
      "path": "/tr/holidays",
      "title": "Theodore Roosevelt's Holidays",
      "has": [
@@ -4574,6 +4610,22 @@
      "done": false
     },
     {
+     "path": "/tr/labor-day",
+     "title": "Labor Day with Theodore Roosevelt",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/labor-day-timeline",
+     "title": "Timeline of T.R.’s Labor Days",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
      "path": "/tr/legacy",
      "title": "Theodore Roosevelt's Legacy",
      "has": [
@@ -4582,8 +4634,40 @@
      "done": false
     },
     {
+     "path": "/tr/memorial-day",
+     "title": "Memorial Day with Theodore Roosevelt",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/memorial-day-timeline",
+     "title": "Timeline of T.R.’s Memorial Days",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
      "path": "/tr/myths",
      "title": "Theodore Roosevelt Myths & Misconceptions",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/new-years-day",
+     "title": "New Year’s Day with Theodore Roosevelt",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/new-years-day-timeline",
+     "title": "Timeline of T.R.’s New Year’s Days",
      "has": [
       "Person"
      ],
@@ -4662,14 +4746,6 @@
      "done": false
     },
     {
-     "path": "/tr/square-deal",
-     "title": "What was the Square Deal?",
-     "has": [
-      "Person"
-     ],
-     "done": false
-    },
-    {
      "path": "/tr/strenuous-life",
      "title": "Theodore Roosevelt's Strenuous Life",
      "has": [
@@ -4736,6 +4812,38 @@
     {
      "path": "/tr/tr-shot",
      "title": "Why Was Theodore Roosevelt Shot? The 1912 Milwaukee Attack",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/valentines-day",
+     "title": "Valentine’s Day in Theodore Roosevelt’s Life",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/valentines-day-timeline",
+     "title": "Timeline of T.R.’s Valentine’s Days",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/veterans-day",
+     "title": "Theodore Roosevelt and Veterans Day",
+     "has": [
+      "Person"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/veterans-day-timeline",
+     "title": "Timeline: The Roosevelts in Uniform",
      "has": [
       "Person"
      ],
@@ -4906,7 +5014,7 @@
     },
     {
      "path": "/tr/people/jacob-riis",
-     "title": "Jacob Riis: The Photographer Who Opened Roosevelt's Eyes",
+     "title": "Who Was Jacob Riis? Photographer, Reformer, Roosevelt Ally",
      "has": [
       "Person"
      ],
@@ -6414,18 +6522,30 @@
    ]
   },
   {
-   "incomplete": 0,
-   "property_gaps": {},
+   "incomplete": 1,
+   "property_gaps": {
+    "offers": 1
+   },
    "key": "event",
    "label": "Calendar events",
    "schema_type": "Event",
    "why": "Lets Google and AI assistants answer 'what's happening at the Library this weekend' with the date, time and ticket link.",
    "drupal": "Add Event JSON-LD to the Event content type template, filled from the event's date, time, price and ticket fields. One template change covers every event.",
-   "pages": 21,
-   "done": 21,
+   "pages": 26,
+   "done": 26,
    "missing": 0,
    "example": null,
    "items": [
+    {
+     "path": "/calendar/daily-activity/family-crafting-time",
+     "title": "Family Crafting Time",
+     "has": [
+      "Event",
+      "Offer",
+      "Place"
+     ],
+     "done": true
+    },
     {
      "path": "/calendar/daily-activity/free-final-hour",
      "title": "Free Final Hour",
@@ -6531,8 +6651,28 @@
      "done": true
     },
     {
+     "path": "/calendar/special-event/butchery-workshop",
+     "title": "Butchery Workshop",
+     "has": [
+      "Event",
+      "Offer",
+      "Place"
+     ],
+     "done": true
+    },
+    {
      "path": "/calendar/special-event/downward-bull-moose-yoga-tr",
      "title": "Downward Bull Moose: Yoga with T.R.",
+     "has": [
+      "Event",
+      "Offer",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/special-event/elkhorn-evenings",
+     "title": "Elkhorn Evenings",
      "has": [
       "Event",
       "Offer",
@@ -6589,6 +6729,28 @@
       "Place"
      ],
      "done": true
+    },
+    {
+     "path": "/calendar/special-event/virtual-learning-session-reconstruction-and-second-founding",
+     "title": "Virtual Learning Session: Reconstruction and the Second Founding",
+     "has": [
+      "Event",
+      "Offer",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/special-event/visit-santa-claus",
+     "title": "Visit with Santa Claus",
+     "has": [
+      "Event",
+      "Place"
+     ],
+     "done": true,
+     "missing_props": [
+      "offers"
+     ]
     },
     {
      "path": "/calendar/special-event/white-house-communications-agency-alumni-wives-tales-and-war-stories",

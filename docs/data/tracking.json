@@ -39,6 +39,46 @@
    "added": "2026-10-26",
    "reason": "position 5.5, 2618 impressions/28d; Foundational biographical search regarding the end of Roosevelt's life.",
    "score": 278
+  },
+  {
+   "keyword": "brownsville affair",
+   "group": "Auto: History",
+   "status": "active",
+   "added": "2026-11-02",
+   "reason": "position 5.6, 111795 impressions/28d; Key civil rights controversy from Theodore Roosevelt's presidency",
+   "score": 18446
+  },
+  {
+   "keyword": "roosevelt corollary",
+   "group": "Auto: History",
+   "status": "active",
+   "added": "2026-11-02",
+   "reason": "position 4.7, 23395 impressions/28d; Major foreign policy doctrine central to Roosevelt's presidency and US history curricula",
+   "score": 3793
+  },
+  {
+   "keyword": "jacob riis",
+   "group": "Auto: History",
+   "status": "active",
+   "added": "2026-11-02",
+   "reason": "position 10.2, 20915 impressions/28d; Key Progressive Era ally and close associate during Roosevelt's New York years",
+   "score": 3329
+  },
+  {
+   "keyword": "alice roosevelt longworth",
+   "group": "Auto: Family",
+   "status": "active",
+   "added": "2026-11-02",
+   "reason": "position 8.5, 9143 impressions/28d; Roosevelt's eldest daughter and a prominent public figure in her own right",
+   "score": 994
+  },
+  {
+   "keyword": "bull moose party",
+   "group": "Auto: History",
+   "status": "active",
+   "added": "2026-11-02",
+   "reason": "position 4.4, 6818 impressions/28d; Roosevelt's historic 1912 third-party presidential campaign",
+   "score": 1057
   }
  ],
  "prompts": [
@@ -61,9 +101,78 @@
    "added": "2026-10-26",
    "reason": "from the Google search \"what was the square deal\"; Signature domestic policy topic essential for student research and civic education.",
    "auto": true
+  },
+  {
+   "id": "auto-what-years-was-theodore-roosevelt-in-office-and-wh",
+   "group": "History",
+   "text": "What years was Theodore Roosevelt in office, and what were the major milestones of his administration?",
+   "source_query": "when was theodore roosevelt president",
+   "status": "active",
+   "added": "2026-11-02",
+   "reason": "from the Google search \"when was theodore roosevelt president\"; Core presidential timeline search; establishes authority on his administration.",
+   "auto": true
+  },
+  {
+   "id": "auto-which-presidents-are-carved-on-mount-rushmore-and-",
+   "group": "History",
+   "text": "Which presidents are carved on Mount Rushmore, and why was Theodore Roosevelt included?",
+   "source_query": "who is on mount rushmore",
+   "status": "active",
+   "added": "2026-11-02",
+   "reason": "from the Google search \"who is on mount rushmore\"; High-volume inquiry connecting Roosevelt to regional Northern Plains travel and heritage.",
+   "auto": true
   }
  ],
  "log": [
+  {
+   "date": "2026-11-02",
+   "action": "added",
+   "kind": "question",
+   "item": "Which presidents are carved on Mount Rushmore, and why was Theodore Roosevelt included?",
+   "reason": "from the Google search \"who is on mount rushmore\"; High-volume inquiry connecting Roosevelt to regional Northern Plains travel and heritage."
+  },
+  {
+   "date": "2026-11-02",
+   "action": "added",
+   "kind": "question",
+   "item": "What years was Theodore Roosevelt in office, and what were the major milestones of his administration?",
+   "reason": "from the Google search \"when was theodore roosevelt president\"; Core presidential timeline search; establishes authority on his administration."
+  },
+  {
+   "date": "2026-11-02",
+   "action": "added",
+   "kind": "keyword",
+   "item": "bull moose party",
+   "reason": "position 4.4, 6818 impressions/28d; Roosevelt's historic 1912 third-party presidential campaign"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "added",
+   "kind": "keyword",
+   "item": "alice roosevelt longworth",
+   "reason": "position 8.5, 9143 impressions/28d; Roosevelt's eldest daughter and a prominent public figure in her own right"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "added",
+   "kind": "keyword",
+   "item": "jacob riis",
+   "reason": "position 10.2, 20915 impressions/28d; Key Progressive Era ally and close associate during Roosevelt's New York years"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "added",
+   "kind": "keyword",
+   "item": "roosevelt corollary",
+   "reason": "position 4.7, 23395 impressions/28d; Major foreign policy doctrine central to Roosevelt's presidency and US history curricula"
+  },
+  {
+   "date": "2026-11-02",
+   "action": "added",
+   "kind": "keyword",
+   "item": "brownsville affair",
+   "reason": "position 5.6, 111795 impressions/28d; Key civil rights controversy from Theodore Roosevelt's presidency"
+  },
   {
    "date": "2026-10-26",
    "action": "added",
@@ -114,5 +223,5 @@
    "reason": "position 8.6, 2000 impressions/28d; Key regional trip-planning search directly adjacent to the Library in Medora."
   }
  ],
- "updated": "2026-10-26T14:15:10+00:00"
+ "updated": "2026-11-02T12:33:01+00:00"
 }

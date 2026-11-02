@@ -1,6 +1,6 @@
 # TRPL Search & AI Visibility
 
-> How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built 2026-11-01T13:22:54+00:00.
+> How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built 2026-11-02T13:09:25+00:00.
 
 The dashboard at https://seo.labs.trlibrary.com/ is rendered with JavaScript. AI tools should read the digest below instead.
 
@@ -13,12 +13,12 @@ The dashboard at https://seo.labs.trlibrary.com/ is rendered with JavaScript. AI
 - [Draft llms.txt for trlibrary.com](https://seo.labs.trlibrary.com/data/site-llms.txt): proposed AI-tool guide for the main site, built from its sitemap
 
 ## Snapshot
-- Google: 44,988 clicks, avg position 5.8 (28 days to 2026-10-29)
+- Google: 44,630 clicks, avg position 5.8 (28 days to 2026-10-30)
 - Site audit: health 96/100, AI readiness 60/100
-- AI assistants mentioning the Library: ChatGPT 71%, Gemini 35%, Perplexity 18%
-- Links: 48 broken internal addresses with 301 redirects proposed, 1109 internal links worth adding, 46 pages with no links in
+- AI assistants mentioning the Library: ChatGPT 68%, Gemini 32%
+- Links: 0 broken internal addresses with 301 redirects proposed, 1176 internal links worth adding, 50 pages with no links in
 - Recently changed: 41 pages held back from recommendations (see 'Recently changed' in the digest for before/after numbers)
-- Structured data: 96/863 content pages carry schema.org markup; 9 sitewide markup issues; trlibrary.com llms.txt: no (draft available)
+- Structured data: 101/883 content pages carry schema.org markup; 8 sitewide markup issues; trlibrary.com llms.txt: no (draft available)
 
 ## Raw data
 - [changes.json](https://seo.labs.trlibrary.com/data/changes.json): Change log: pages changed recently (held back from recommendations) with Search Console before/after numbers

@@ -1,495 +1,515 @@
 {
- "updated": "2026-10-26T14:42:36+00:00",
+ "updated": "2026-11-02T13:05:54+00:00",
  "pages": [
   {
-   "page": "https://www.trlibrary.com/tr/presidency/brownsville",
+   "page": "https://www.trlibrary.com/tr/people/alice-longworth",
    "written_by": "Gemini (gemini-3.8-flash)",
-   "summary": "With over 81,000 impressions at position 6 and only 3 clicks, the page suffers from a severe click-through rate deficit that can be solved by front-loading high-intent search terms and adding a clear call-to-action in the title and meta description.",
+   "summary": "High search volume targets Alice as Theodore Roosevelt's daughter and queries about her life and death; clarifying her identity immediately under the title and adding structured quick facts will capture high-intent search traffic and AI summaries.",
    "title": {
-    "suggested": "Brownsville Affair of 1906: Roosevelt and the 25th Infantry",
-    "why": "At 59 characters, this puts the primary search phrase first and clarifies the central conflict, improving click-through appeal over the generic 'What Happened and Why'."
+    "suggested": "Alice Roosevelt Longworth: TR's Outspoken Daughter",
+    "why": "At 50 characters, this places her name first while explicitly targeting high-volume searches for TR and Theodore Roosevelt's daughter."
    },
    "meta_description": {
-    "suggested": "Discover why Theodore Roosevelt discharged 167 Black soldiers without trial in 1906, the bitter political fallout, and how the injustice was finally answered.",
-    "why": "At 151 characters, this creates curiosity around the decision and its aftermath rather than giving away the ending, giving searchers a clear reason to click."
+    "suggested": "Explore the life of Alice Roosevelt Longworth, TR's rebellious daughter: White House antics, global diplomacy, and six decades of sharp Washington wit.",
+    "why": "Runs 149 characters, targets daughter queries, and gives searchers a lively reason to click."
    },
    "content_additions": [
     {
-     "for_query": "bad things teddy roosevelt did",
-     "suggestion": "Add a clear summary box near the top titled 'At a Glance: The 1906 Brownsville Decision' to answer direct search queries and AI overviews about presidential missteps.",
-     "draft": "The Brownsville Affair stands as one of the most controversial decisions of Theodore Roosevelt's presidency. Following an unproven shooting incident in Brownsville, Texas, Roosevelt used presidential authority to dismiss 167 Black soldiers of the 25th Infantry Regiment without trial or individual hearings, stripping them of their pensions and livelihoods."
+     "for_query": "teddy roosevelt daughter",
+     "suggestion": "Add an introductory lead paragraph directly below the main heading that explicitly introduces Alice as Theodore Roosevelt's eldest child and celebrity First Daughter before jumping into her birth story.",
+     "draft": "Alice Roosevelt Longworth was Theodore Roosevelt's eldest child, a celebrity First Daughter who broke White House rules, captivated the nation as 'Princess Alice,' and spent nearly a century shaping American political life."
     },
     {
-     "for_query": "brownsville incident",
-     "suggestion": "Include an FAQ section addressing alternate names for the event (the Brownsville incident, Brownsville raid, or Brownsville affray) and answering why no trial occurred.",
-     "draft": "Why were the soldiers dismissed without a court-martial? Special Orders No. 266 issued an administrative discharge 'without honor' rather than a dishonorable discharge, bypassing the formal court-martial process required under military law."
+     "for_query": "alice roosevelt longworth died",
+     "suggestion": "Add a clear key facts summary box near the top of the article to capture snippet queries for her birth, death, marriage, and family ties.",
+     "draft": "Fast Facts:\n- Born: February 12, 1884\n- Died: 1980 (age 96)\n- Parents: Theodore Roosevelt and Alice Hathaway Lee\n- Spouse: Nicholas Longworth (married February 17, 1906)\n- Child: Paulina (born 1925)"
     }
    ],
    "ai_readiness": [
     {
-     "suggestion": "Add structured FAQ content using FAQPage schema to clearly answer key questions like 'What was the Brownsville Affair?' and 'Who opposed Roosevelt's decision?'",
-     "why": "AI answer engines pull direct definitions when users search for Roosevelt's controversial actions or historical events from 1906."
-    },
-    {
-     "suggestion": "Ensure the final section detailing the 66-year path to exoneration is complete and not truncated on the live page.",
-     "why": "The headline promises an explanation of an injustice that took 66 years to correct, but the text cuts off during the Senator Foraker dispute, depriving AI engines and readers of the conclusion."
+     "suggestion": "Structure the biographical milestones with explicit subheadings or definition lists (such as Early Life, White House Years, Marriage, and Washington Salon).",
+     "why": "AI engines extracting answers to questions like 'Who was Theodore Roosevelt's daughter?' or 'When did Alice Roosevelt die?' parse clearly marked biographical sections far more reliably than embedded narrative text."
     }
    ],
    "technical": [
     {
-     "suggestion": "Add Article schema markup to complement the existing BreadcrumbList and Person schemas.",
-     "why": "Search engines currently see organizational and local business schema on this page; adding Article or HistoricalEvent schema helps search engines properly categorize this in-depth historical narrative."
+     "suggestion": "Verify that the existing Person schema markup includes birthDate (1884-02-12), deathDate (1980), parent (Theodore Roosevelt, Alice Hathaway Lee), and spouse (Nicholas Longworth).",
+     "why": "Search engines use schema Person properties to populate knowledge graphs and directly answer factual queries about historical figures."
     }
    ],
    "needs_verification": [
-    "Confirm whether the live page text is actually cut off after the Senator Foraker paragraph or if it was truncated only in this prompt.",
-    "Ensure all mentions of the 1972 Army exoneration match official records in the Library's archival materials before adding further details."
+    "Verify whether the exact day and month of Alice Roosevelt Longworth's death in 1980 is available in Library records if the team wishes to display more than the year 1980."
+   ],
+   "checks": [],
+   "dropped_claims": []
+  },
+  {
+   "page": "https://www.trlibrary.com/tr/post-presidency/bull-moose/platform",
+   "written_by": "Gemini (gemini-3.8-flash)",
+   "summary": "Searchers frequently look for basic definitions of the Bull Moose Party and its core beliefs, but the page opens without a quick, direct definition before diving into deep policy analysis.",
+   "title": {
+    "suggested": "Bull Moose Party Platform: 1912 Progressive Beliefs",
+    "why": "Front-loads the high-volume search terms 'Bull Moose Party' and 'Platform' while targeting searches for party beliefs within 51 characters."
+   },
+   "meta_description": {
+    "suggested": "Explore the Bull Moose Party platform of 1912, from women's suffrage and labor laws to direct democracy. See the bold beliefs that reshaped American policy.",
+    "why": "At 151 characters, this incorporates top keywords ('Bull Moose Party platform', 'beliefs') and provides an active reason to click."
+   },
+   "content_additions": [
+    {
+     "for_query": "bull moose party definition us history",
+     "suggestion": "Add a highlighted 'Quick Summary: Bull Moose Party Definition & Beliefs' callout directly below the main heading so students and casual searchers get an immediate answer.",
+     "draft": "In United States history, the Bull Moose Party—officially the Progressive Party of 1912—was a third party organized around Theodore Roosevelt's 'New Nationalism.' Its platform declared that the federal government must step in to protect workers, oversee corporate power, and expand democracy. Core planks called for an eight-hour workday, an end to child labor, women's voting rights, national conservation, and social insurance."
+    },
+    {
+     "for_query": "what party was theodore roosevelt",
+     "suggestion": "Add a short subsection or sidebar note clarifying Theodore Roosevelt's political parties to help visitors who arrive wondering how he fit into the Republican, Democratic, and Progressive systems.",
+     "draft": "Roosevelt ran for president in 1912 on the Progressive ticket after breaking with conventional Republican leadership. His Bull Moose campaign split the Republican vote that year, offering voters an independent agenda that rejected business-as-usual party lines."
+    }
+   ],
+   "ai_readiness": [
+    {
+     "suggestion": "Convert the main reform areas into a structured key-takeaways bullet list near the top.",
+     "why": "AI engines and search snippets favor concise bullet points when answering multi-part prompts like 'What were the main goals of the Bull Moose Party platform?'"
+    },
+    {
+     "suggestion": "Add FAQ structured data (FAQPage) covering common queries about the 1912 platform and party beliefs.",
+     "why": "Helps AI overviews and search engines pull direct Q&A snippets for queries like 'What was the Bull Moose Party platform?'"
+    }
+   ],
+   "technical": [
+    {
+     "suggestion": "Add Article schema markup to complement the existing BreadcrumbList and Person schema.",
+     "why": "Search engines currently lack clear content-type metadata classifying this page as an educational history article."
+    }
+   ],
+   "needs_verification": [
+    "Confirm that the suggested draft definition text accurately reflects the Library's educational guidelines for describing third parties in US history."
    ],
    "checks": [
     "Suggestion contains a year: check it against the page and the no-years rule"
+   ],
+   "dropped_claims": [
+    {
+     "where": "technical",
+     "claim": "Fix heading tags so there is only one H1 on the page.",
+     "reason": "page has 1 H1 heading"
+    }
    ]
   },
   {
-   "page": "https://www.trlibrary.com/tr/presidency/roosevelt-corollary",
+   "page": "https://www.trlibrary.com/tr/presidency/great-white-fleet",
    "written_by": "Gemini (gemini-3.8-flash)",
-   "summary": "This page ranks on page 1 for high-volume queries like 'what was the roosevelt corollary' but ends on an unfinished sentence and lacks a quick-answer summary block to win featured snippets and AI overviews.",
+   "summary": "Optimize the page for high-volume definition and purpose queries by shortening the title to under 60 characters and adding a concise definition summary block near the top.",
    "title": {
-    "suggested": "Roosevelt Corollary: Purpose, Definition, and History",
-    "why": "Puts high-volume search terms first and matches the top informational queries ('what was the roosevelt corollary', 'purpose') within 54 characters."
+    "suggested": "The Great White Fleet: Roosevelt's Global Voyage",
+    "why": "At 48 characters, this fits within the 60-character cutoff, highlights the primary search term immediately, and pairs it with Roosevelt's historic undertaking."
    },
    "meta_description": {
-    "suggested": "See how the Roosevelt Corollary reshaped the Monroe Doctrine, what hemispheric police power meant, and how customs takeovers worked in practice.",
-    "why": "Runs 145 characters, opens with an active reason to click, and addresses both the definition and real-world examples."
+    "suggested": "Discover why Theodore Roosevelt sent sixteen white battleships on a 43,000-mile world voyage and how the daring journey reshaped American diplomacy.",
+    "why": "At 148 characters, this meets length guidelines, highlights the scale of the fleet, and gives readers a compelling reason to click."
    },
    "content_additions": [
     {
-     "for_query": "what was the roosevelt corollary",
-     "suggestion": "Add a standalone definition callout near the top of the page directly beneath the first heading so search engines and readers can quickly grasp the core premise.",
-     "draft": "In short: The Monroe Doctrine told European powers to stay out of the Western Hemisphere. The Roosevelt Corollary took that idea a step further, declaring that the United States had the right to step in as an international police power when neighboring nations could not manage their finances or maintain order."
+     "for_query": "what was the great white fleet",
+     "suggestion": "Add a highlighted quick-answer or callout box directly below the introduction to provide a clear, concise definition for search engines and readers seeking a direct answer.",
+     "draft": "What was the Great White Fleet? The Great White Fleet was a force of sixteen American battleships painted brilliant white that sailed around the world on a 43,000-mile voyage from late 1907 to early 1909. Ordered by Theodore Roosevelt, the armada traveled to six continents and twenty ports to demonstrate the nation's growing naval power and global reach."
     },
     {
-     "for_query": "roosevelt corollary examples",
-     "suggestion": "Complete the truncated final paragraph under 'Justifications and Criticisms' so the article finishes cleanly and lists the subsequent interventions.",
-     "draft": "Complete the final sentence that cuts off at 'all ostensibly ' to explain how later administrations cited the doctrine during military deployments across the Caribbean."
+     "for_query": "why was the great white fleet important",
+     "suggestion": "Add a clear summary list under 'The Meaning of a Floating Symbol' or 'Legacy and Lessons' that breaks down the four core outcomes of the voyage.",
+     "draft": "Why the voyage mattered:\n- Global presence: Proved the fleet could steam across oceans and project force across the Pacific and Atlantic alike.\n- Naval readiness: Offered thousands of sailors and officers crucial training in long-distance operations and fleet maneuvers.\n- Diplomatic impact: Welcomed warmly in ports worldwide, particularly in Japan, demonstrating capability alongside peaceful intentions.\n- Executive leadership: Established presidential initiative in foreign policy when Roosevelt pushed Congress to fund the journey."
     }
    ],
    "ai_readiness": [
     {
-     "suggestion": "Convert subheadings into direct questions such as 'What was the purpose of the Roosevelt Corollary?' and 'How did the Corollary differ from the Monroe Doctrine?'",
-     "why": "AI answer engines look for conversational question-and-answer pairs to cite as direct responses."
+     "suggestion": "Introduce an FAQ section covering 'What was the Great White Fleet?', 'Why did Theodore Roosevelt send the fleet?', and 'Where did the fleet travel?'.",
+     "why": "AI answer engines favor clear question-and-answer headings when answering user prompts about historical definitions and motives."
     },
     {
-     "suggestion": "Add a comparison table or side-by-side callout contrasting the Monroe Doctrine with the Roosevelt Corollary.",
-     "why": "Search engines frequently pull structured comparison data for queries comparing both policies."
+     "suggestion": "Format the fleet's route into a scannable sequence (Hampton Roads to South America, across the Pacific, through the Suez Canal, and back to Virginia).",
+     "why": "Extracting itineraries and geographic stops into ordered milestones makes it easier for AI retrieval systems to answer route-specific queries."
     }
    ],
    "technical": [
     {
-     "suggestion": "Repair the truncated sentence ending the article ('Marines landed in Nicaragua, Haiti, the Dominican Republic, and elsewhere—all ostensibly ').",
-     "why": "Unfinished text signals low editorial quality to search engine quality raters."
+     "suggestion": "Add Article or HistoricalResource structured data markup alongside the existing WebSite and BreadcrumbList schemas.",
+     "why": "The current schema includes location and opening hours metadata from the site shell, but lacks specific Article metadata describing the historical topic, author, and publication details.",
+     "confirmed": "no opening times found on the page"
     },
     {
-     "suggestion": "Add FAQPage structured data to mark up the core definitions and distinctions between the Monroe Doctrine and the Corollary.",
-     "why": "Helps search engines parse and display rich results for question-based queries."
+     "suggestion": "Add descriptive image alt attributes containing 'Great White Fleet battleships' and the vessel name 'USS Connecticut' where relevant.",
+     "why": "Enhances accessibility and helps the page rank for image-driven searches like 'great white fleet ships'."
     }
    ],
    "needs_verification": [
-    "Verify the historical wording used to complete the truncated sentence regarding U.S. Marine deployments in Nicaragua, Haiti, and the Dominican Republic.",
-    "Confirm whether Dominican customs receivership was the sole direct application undertaken during Roosevelt's presidency before highlighting it as the primary case study."
+    "Verify the draft statement that the fleet traveled to twenty ports across six continents (matches existing page text).",
+    "Verify whether all sixteen battleships were commissioned battleships of the Atlantic Fleet during the entire departure.",
+    "Verify dates: departure on December 16, 1907, and return on February 22, 1909 (matches existing page text)."
    ],
-   "checks": []
+   "checks": [],
+   "dropped_claims": []
   },
   {
-   "page": "https://www.trlibrary.com/tr/square-deal",
+   "page": "https://www.trlibrary.com/tr/speeches/man-in-the-arena",
    "written_by": "Gemini (gemini-3.8-flash)",
-   "summary": "Capture high-volume definition and question queries by adding a direct, snippet-friendly definition of the Square Deal at the very top, while removing references to modern political figures to uphold the Library's nonpartisan standard.",
+   "summary": "Capture high-intent searches for the full speech and its meaning by adding a dedicated transcript download link and an explicit summary of the core message.",
    "title": {
-    "suggested": "Square Deal: Definition & Roosevelt's Three Cs",
-    "why": "Puts high-volume terms ('Square Deal', 'Definition', 'Three Cs') upfront within 46 characters, well under the 60-character ceiling before the site suffix."
+    "suggested": "Man in the Arena Speech: Citizenship in a Republic",
+    "why": "Front-loads the highest-volume search phrases ('man in the arena' and 'speech') while staying under 60 characters."
    },
    "meta_description": {
-    "suggested": "Learn what Theodore Roosevelt's Square Deal meant for everyday Americans. Explore the Three Cs—conservation, corporate control, and consumer protection.",
-    "why": "At 152 characters, it hits the target range, leads with the primary keyword, and gives readers a clear reason to click."
+    "suggested": "Explore Theodore Roosevelt's famous Man in the Arena passage from his 1910 Sorbonne speech, discover its enduring meaning, and read the full address.",
+    "why": "Fits the 120-155 character requirement at 151 characters and provides a clear reason to click for searchers seeking the text and its interpretation."
    },
    "content_additions": [
     {
-     "for_query": "square deal definition",
-     "suggestion": "Add a standalone definition callout immediately below the introductory quote. Searchers and AI engines looking for 'what was the square deal' or 'square deal definition' need an immediate, plain-language summary before diving into origin stories.",
-     "draft": "In US history, the Square Deal refers to Theodore Roosevelt’s domestic program. Built on three central goals—often called the Three Cs—it focused on corporate regulation, consumer protection, and natural resource conservation to ensure fair treatment for everyday citizens, workers, and businesses alike."
+     "for_query": "man in the arena meaning",
+     "suggestion": "Add a short subsection under 'The Passage That Would Endure' or 'Beyond the Famous Passage' summarizing the practical takeaway of the speech in plain terms.",
+     "draft": "At its heart, the address argues that real credit belongs to participants rather than onlookers. Roosevelt insisted that a healthy republic depends on people willing to step up, make decisions, take risks, and endure public mistakes instead of standing on the sidelines passing judgment."
     },
     {
-     "for_query": "Can you explain Theodore Roosevelt's Square Deal domestic policy and its main goals?",
-     "suggestion": "Review and update the final section ('The Square Deal Today'). The text currently mentions modern political figures, which conflicts with house guidelines on nonpartisanship. Refocus the conclusion on how the program set a precedent for twentieth-century domestic policy without referencing active political debates or contemporary figures."
+     "for_query": "citizenship in a republic full speech pdf",
+     "suggestion": "Add a clear callout box with a direct link or download option in the 'Reading the Complete Speech' section to satisfy visitors looking for the complete text.",
+     "draft": "Looking for the full text? Read or download the complete transcript of Citizenship in a Republic through the Theodore Roosevelt Center archive."
     }
    ],
    "ai_readiness": [
     {
-     "suggestion": "Structure the Three Cs section with clear subheadings (H3s) for Corporate Regulation, Consumer Protection, and Conservation.",
-     "why": "AI answer engines parse discrete headings more reliably when extracting multi-point summaries for questions about Roosevelt's domestic policy goals."
+     "suggestion": "Add CreativeWork or Speech schema markup representing 'Citizenship in a Republic'.",
+     "why": "Search engines and AI answer engines can more accurately index the speech title, date, location (Sorbonne, Paris), and author, helping surface the page in direct factual queries."
     },
     {
-     "suggestion": "Add Article and DefinedTerm structured data to this guide.",
-     "why": "The page currently uses general location and organization schemas, but lacks Article or DefinedTerm markup to explicitly signal to search crawlers that this is an educational reference entry on the Square Deal."
+     "suggestion": "Include concise H2 or H3 question headers such as 'What is the meaning of the Man in the Arena passage?' and 'Where was the speech delivered?'.",
+     "why": "Direct question-and-answer patterns allow AI summaries and voice searches to extract clean, authoritative snippets directly from the Library."
     }
    ],
    "technical": [
     {
-     "suggestion": "Convert all section headings from H1 to H2.",
-     "why": "The page text currently formats every major section title as an H1. A single H1 at the top followed by H2s establishes a clean semantic hierarchy for search engines and screen readers."
+     "suggestion": "Revise 'The Speech and Civic Engagement' section to reduce first-person pronouns ('we', 'our', 'us').",
+     "why": "The current text relies heavily on 'We believe', 'when we invite you', 'when we ask you', which shifts focus away from the historical subject and runs counter to house voice guidelines."
     }
    ],
    "needs_verification": [
-    "Confirm whether 'corporate control' vs. 'corporate regulation' is the preferred phrasing in the Library's interpretive materials for the first 'C'."
+    "Confirm that the Theodore Roosevelt Center at Dickinson State University offers a direct link or downloadable PDF of the complete 'Citizenship in a Republic' transcript before adding direct download links."
    ],
-   "checks": []
+   "checks": [
+    "Suggestion contains a year: check it against the page and the no-years rule"
+   ],
+   "dropped_claims": []
   },
   {
-   "page": "https://www.trlibrary.com/tr/tr-mount-rushmore",
+   "page": "https://www.trlibrary.com/tr/tr-importance",
    "written_by": "Gemini (gemini-3.8-flash)",
-   "summary": "This page attracts heavy search volume for generic 'Mount Rushmore presidents' queries but misses top rankings and AI road-trip traffic because it lacks an immediate, scannable roster of the four faces and a travel link between the Black Hills and Medora.",
+   "summary": "This page captures strong search volume for what Theodore Roosevelt was known for and accomplished, but it currently lacks a dedicated summary section answering those high-intent queries directly and omits any connection to visiting the Library in Medora.",
    "title": {
-    "suggested": "Mount Rushmore Presidents: The 4 Faces & Why TR Was Chosen",
-    "why": "Puts high-volume keywords ('Mount Rushmore Presidents', '4 Faces') up front while keeping the unique hook on Theodore Roosevelt within 58 characters."
+    "suggested": "What Was Theodore Roosevelt Known For?",
+    "why": "Aligns directly with the top search queries ('what was theodore roosevelt known for', 'what did theodore roosevelt do') while staying well under the 60-character limit."
    },
    "meta_description": {
-    "suggested": "Discover the four presidents on Mount Rushmore—Washington, Jefferson, Lincoln, and Roosevelt—and find out why Gutzon Borglum carved TR into the granite.",
-    "why": "153 characters, names all four presidents to match search intent, and gives a clear historical reason to click."
+    "suggested": "Discover what Theodore Roosevelt accomplished, from leading the Rough Riders and protecting 230 million acres of public land to reforming food safety laws.",
+    "why": "At 154 characters, it directly addresses high-volume queries with concrete accomplishments and gives users clear reasons to click."
    },
    "content_additions": [
     {
-     "for_query": "who are the four presidents on mount rushmore",
-     "suggestion": "Add an explicit quick-answer callout box or list right after the introductory paragraph to win featured snippets for 'who are the presidents on mount rushmore' and 'mount rushmore faces'.",
-     "draft": "### The Four Faces on Mount Rushmore\n\nLooking across the granite face, the four presidents carved into the Black Hills are:\n- **George Washington**: Symbolizing the founding of the republic.\n- **Thomas Jefferson**: Symbolizing growth and the expansion of democracy.\n- **Theodore Roosevelt**: Symbolizing modern development, conservation, and economic reform.\n- **Abraham Lincoln**: Symbolizing the preservation of the Union."
+     "for_query": "what was theodore roosevelt known for",
+     "suggestion": "Add a quick-glance key accomplishments summary directly under the main heading before section 1, answering the core search query immediately in bullet points.",
+     "draft": "Theodore Roosevelt is best known for:\n- Protecting Public Lands: Preserved approximately 230 million acres, including national forests, wildlife refuges, and national monuments.\n- Consumer Protection: Signed the Pure Food and Drug Act and the Meat Inspection Act in 1906.\n- Leading the Rough Riders: Commanded the 1st U.S. Volunteer Cavalry during the 1898 Battle of San Juan Heights in Cuba.\n- Modernizing the Presidency: Championed emerging technology, from public automobile rides to naval expansion, and reshaped national conservation."
     },
     {
-     "for_query": "why is it called mount rushmore",
-     "suggestion": "Add a dedicated subhead answering the origin of the name to capture the 500+ monthly searches currently landing on page two.",
-     "draft": "### Why Is It Called Mount Rushmore?\n\nThe peak was named after New York attorney Charles E. Rushmore. Long before it carried that name, the Lakota knew the sacred granite formation as Tȟuŋkášila Šákpe, or 'Six Grandfathers.'"
-    },
-    {
-     "for_query": "We're driving from Mount Rushmore to Theodore Roosevelt National Park. What's worth stopping for?",
-     "suggestion": "Add a road-trip travel callout near the bottom showing how visitors gazing up at TR in South Dakota can travel north to experience his story in North Dakota.",
-     "draft": "### From the Black Hills to the Badlands\n\nMany travelers explore Roosevelt's legacy by pairing a visit to Mount Rushmore with a trip north to Medora, North Dakota. Plan to set aside about 3 1/2 hours for a visit to the Theodore Roosevelt Presidential Library to walk through the rugged landscape that shaped his conservation ideals."
+     "for_query": "what historic sites are connected to theodore roosevelt",
+     "suggestion": "Add a brief transition in the conclusion or section 3 connecting TR's conservation legacy and Badlands experience to visiting Medora, North Dakota.",
+     "draft": "Roosevelt's time in the North Dakota Badlands in the 1880s helped spark his deep commitment to public lands. Set aside about 3 1/2 hours to explore his lasting legacy at the Theodore Roosevelt Presidential Library in Medora, right next to the rugged landscapes that shaped him."
     }
    ],
    "ai_readiness": [
     {
-     "suggestion": "Use clear H2/H3 question headers matching conversational queries such as 'Who are the four presidents on Mount Rushmore?' and 'Why was Theodore Roosevelt chosen?'",
-     "why": "LLMs extract conversational heading-and-answer pairs directly into overview summaries when users ask who is depicted on the monument."
-    },
-    {
-     "suggestion": "Add a connection between the Black Hills monument and Medora's Badlands in the travel and legacy sections.",
-     "why": "AI engines currently overlook the Library when travelers ask for itinerary suggestions between Mount Rushmore and Theodore Roosevelt National Park."
+     "suggestion": "Add structured FAQ schema or a dedicated 'Quick Facts' section highlighting what TR was known for, his major domestic legislation, and his conservation impact.",
+     "why": "AI answer engines seek extractable, concise definitions when answering questions like 'what did Theodore Roosevelt do' and 'what was Theodore Roosevelt famous for'."
     }
    ],
    "technical": [
     {
-     "suggestion": "Implement FAQPage structured data covering the four presidents, the naming of Mount Rushmore, and why Gutzon Borglum selected Theodore Roosevelt.",
-     "why": "Helps search engines parse the specific names and answers for rich snippet presentation in search results."
+     "suggestion": "Replace generic 'Click here' links in the Additional Resources section with descriptive anchor text matching the resource names.",
+     "why": "Screen readers and search crawlers rely on meaningful anchor text (e.g., 'View the Pure Food and Drug Act Resource Packet' instead of 'Click here') to understand link destination context."
     }
    ],
    "needs_verification": [
-    "Verify the traditional geographic viewing order (left-to-right: Washington, Jefferson, Roosevelt, Lincoln) matches Borglum's final layout on the cliff.",
-    "Verify whether the proposed road-trip callout aligns with regional tourism partnership descriptions for Black Hills-to-Badlands routes."
+    "Confirm whether the Library's connection to Theodore Roosevelt National Park should be specifically referenced in visitor-facing context on this page."
    ],
-   "checks": []
+   "checks": [],
+   "dropped_claims": []
   },
   {
-   "page": "https://www.trlibrary.com/tr/family/fdr-connection",
+   "page": "https://www.trlibrary.com/tr/timeline",
    "written_by": "Gemini (gemini-3.8-flash)",
-   "summary": "The page already ranks near the top for high-volume family connection queries, but it cuts off abruptly mid-sentence at the end and lacks a concise direct-answer summary box optimized for featured snippets and AI overviews.",
+   "summary": "High-volume searches target specific biographical questions like TR's birthplace, early life, and age upon taking office; adding a quick-facts summary at the top and section jump-links will capture these searchers and feed AI answer engines immediately.",
    "title": {
-    "suggested": "Theodore and Franklin Roosevelt: How They Were Related",
-    "why": "Front-loads the highest-volume search terms ('Theodore and Franklin Roosevelt') while staying under 60 characters."
+    "suggested": "Theodore Roosevelt Timeline: Life and Key Milestones",
+    "why": "Focuses on high-intent terms ('Theodore Roosevelt Timeline', 'Life') within 51 characters, placing the most important search words first."
    },
    "meta_description": {
-    "suggested": "Theodore and Franklin Roosevelt were fifth cousins, tied closer when TR walked Eleanor down the aisle. Explore how Oyster Bay and Hyde Park shaped history.",
-    "why": "Answers the central query immediately, stays within the 120-155 character limit (154 characters), and gives a clear reason to click."
+    "suggested": "Explore the key dates of Theodore Roosevelt’s life, from his New York childhood and Badlands ranching to the presidency. Walk through his journey here.",
+    "why": "Meets the 120-155 character limit (152 characters), highlights popular life stages, and gives searchers a direct reason to click."
    },
    "content_additions": [
     {
-     "for_query": "is fdr related to teddy roosevelt",
-     "suggestion": "Add a highlighted 'Quick Answer' callout box right under the main title before the deeper historical breakdown. This provides a direct, extractable answer for voice assistants and Google AI Overviews.",
-     "draft": "The Short Answer: Theodore Roosevelt and Franklin Delano Roosevelt were fifth cousins. Their families belonged to two distinct branches—Theodore to the Oyster Bay branch and Franklin to the Hyde Park branch. The bond grew much tighter on March 17, 1905, when Franklin married Theodore's niece Eleanor Roosevelt, with President Theodore Roosevelt walking the bride down the aisle."
+     "for_query": "where was theodore roosevelt born",
+     "suggestion": "Add a 'TR at a Glance' quick-reference block right beneath the main page heading to provide instant answers to the most frequent factual queries before the full chronological list begins.",
+     "draft": "Theodore Roosevelt at a Glance: Born on October 27, 1858, at 28 East 20th Street in New York City. Arrived in the North Dakota Badlands on September 8, 1883, purchasing the Maltese Cross Ranch. Sworn in as the twenty-sixth president on September 14, 1901, at age 42—the youngest president in American history."
     },
     {
-     "for_query": "theodore roosevelt and franklin roosevelt",
-     "suggestion": "Complete the truncated final sentence at the very end of the page under '# TR and FDR: The Wedding and a Generational Transfer' so visitors and web crawlers do not encounter broken copy.",
-     "draft": "Others suggest there was tension between the two—that the older president kept a cautious eye on the ambitious young Democrat. Even so, their shared family line connected two defining presidencies across four decades."
+     "for_query": "theodore roosevelt early life",
+     "suggestion": "Add quick jump navigation at the top of the timeline allowing visitors to filter or jump directly to major eras of his life.",
+     "draft": "Jump through his life: Early Years & New York | Badlands Ranching | Public Service & Rough Riders | The White House Years | Post-Presidency"
+    },
+    {
+     "for_query": "did theodore roosevelt's wife and mother die on the same day",
+     "suggestion": "Ensure the February 14, 1884 entry has a distinct descriptive subhead and anchor point so search engines can easily surface the answer to this frequent search query.",
+     "draft": "February 14, 1884: Tragedy in New York. TR’s mother Mittie died from typhoid fever at three in the morning, and his wife Alice passed away from Bright’s disease that afternoon, just two days after the birth of their daughter."
     }
    ],
    "ai_readiness": [
     {
-     "suggestion": "Add an FAQ section or FAQ schema markup with explicit questions like 'Were Theodore Roosevelt and FDR related?' and 'How was Eleanor Roosevelt related to Theodore Roosevelt?'.",
-     "why": "AI assistants and search engines pull directly from structured Q&A formats to answer conversational relationship questions."
+     "suggestion": "Add structured Timeline/ItemList schema markup to the chronological entries.",
+     "why": "AI assistants and search engines parse structured ItemList or Event markup far more effectively than unstructured date headings when answering specific 'when did X happen' queries."
     },
     {
-     "suggestion": "Structure key genealogical milestones with clear bullet points (common ancestor Nicholas Roosevelt, fifth cousins, niece Eleanor's marriage).",
-     "why": "Large language models parse structured relational bullets more reliably than narrative paragraphs when responding to specific factual prompts."
+     "suggestion": "Add a brief paragraph connecting the timeline to Medora, noting how his 1883 Badlands arrival shaped his conservation legacy.",
+     "why": "Helps AI models connect user queries about historic sites and Badlands trip planning directly to the Library and TR's time in North Dakota."
     }
    ],
    "technical": [
     {
-     "suggestion": "Implement FAQPage structured data alongside the existing Person and WebSite schema.",
-     "why": "Eligible search results can gain rich snippet enhancements and provide immediate source attribution in conversational search engines."
-    },
-    {
-     "suggestion": "Fix the text truncation bug in the content management system that cut off the final paragraph.",
-     "why": "Abruptly cut-off sentences degrade user trust and can trigger quality penalties in automated content evaluations."
+     "suggestion": "Add persistent anchor IDs to key milestone headings (e.g., #birth, #badlands-arrival, #presidency, #february-14-1884).",
+     "why": "Allows deep-linking from search results directly to specific timeline events and lets featured snippets target exact moments in his life."
     }
    ],
    "needs_verification": [
-    "Verify the historical consensus and intended wording regarding whether Theodore Roosevelt distrusted FDR or maintained reservations about his early Democratic career to finish the truncated final sentence accurately."
+    "Verify that all drafted dates and family details (October 27, 1858; September 8, 1883; September 14, 1901; age 42) match the Library's preferred timeline copy.",
+    "Verify whether the timeline's final entries include his death date and location, as queries regarding his death receive heavy search traffic but were not in the provided excerpt."
    ],
-   "checks": []
+   "checks": [],
+   "dropped_claims": []
   },
   {
-   "page": "https://www.trlibrary.com/tr/presidency/square-deal",
+   "page": "https://www.trlibrary.com/tr/presidency/bully-pulpit",
    "written_by": "Gemini (gemini-3.8-flash)",
-   "summary": "Turn high search impressions into clicks by providing a direct definition of the Square Deal and the Three Cs right at the top, while fixing the duplicate H1 tags.",
+   "summary": "This page attracts thousands of searches for basic definitions and examples of the 'bully pulpit,' but buries the definition in running text. Adding a direct, clear definition and an explicit 'examples' structure will capture high-volume definition queries and AI answer engines.",
    "title": {
-    "suggested": "Square Deal: Theodore Roosevelt's Three Cs Explained",
-    "why": "Puts the highest-volume search term first, integrates 'Three Cs', and stays under 60 characters without the automated site suffix."
+    "suggested": "The Bully Pulpit: Meaning, Origin, and Examples",
+    "why": "At 47 characters, it fits well under the 60-character limit and front-loads the exact terms searchers use most: meaning, origin, and examples."
    },
    "meta_description": {
-    "suggested": "See how Theodore Roosevelt's Square Deal tackled corporate power, consumer safety, and land conservation. Explore the Three Cs that reshaped the economy.",
-    "why": "Hits key search terms (Square Deal, Three Cs), stays within the 120-155 character range (153 characters), and gives searchers a direct reason to click."
+    "suggested": "What did Theodore Roosevelt mean by 'bully pulpit'? Discover the definition, why 'bully' meant 'wonderful,' and how TR used the press to shape the nation.",
+    "why": "At 154 characters, it addresses the core search intent directly, explains the odd nineteenth-century wording, and gives readers a clear reason to click."
    },
    "content_additions": [
     {
-     "for_query": "square deal definition us history",
-     "suggestion": "Add a highlighted quick-definition callout directly below the main header before diving into the detailed historical context.",
-     "draft": "What was the Square Deal? The Square Deal was Theodore Roosevelt's domestic policy founded on three core goals, known as the Three Cs: control of corporations, consumer protection, and conservation of natural resources. It aimed to balance the interests of workers, business owners, and consumers with the federal government acting as an honest referee."
+     "for_query": "what is the bully pulpit",
+     "suggestion": "Place a prominent definition callout directly under the introductory heading to answer the query immediately for searchers and featured snippets.",
+     "draft": "### Bully Pulpit: A Quick Definition\n\nA 'bully pulpit' is a public office or position of authority that provides an outstanding platform to speak out and persuade people. Theodore Roosevelt coined the phrase during his presidency. In his day, 'bully' was slang for 'first-rate,' 'excellent,' or 'wonderful'—not an intimidator. A 'pulpit' was a preacher's platform. To Roosevelt, the White House was an unmatched stage from which to rally everyday Americans behind his policies."
     },
     {
-     "for_query": "Can you explain Theodore Roosevelt's Square Deal domestic policy and its main goals?",
-     "suggestion": "Complete the truncated ending paragraph and add a concise summary list of goals at the end of the page to give AI answer engines clean, extractable text.",
-     "draft": "Key Goals of the Square Deal:\n- Control of Corporations: Break up abusive monopolies, regulate unfair railroad pricing, and enforce fair corporate taxation while distinguishing between good trusts and bad trusts.\n- Consumer Protection: Shield public health by holding food and drug makers accountable for safe, honest goods.\n- Conservation: Protect public lands, waterways, and forests for the lasting benefit of all citizens."
+     "for_query": "bully pulpit examples",
+     "suggestion": "Add a short introductory roadmap before the policy sections so readers and AI engines can instantly find Roosevelt's real-world uses of the pulpit.",
+     "draft": "### Examples of Roosevelt's Bully Pulpit in Action\n\nRoosevelt did not use his platform just for speeches; he used it to build popular support and push for change across the country:\n\n* **Trust-Busting:** Turning federal action into a public moral campaign against business monopolies.\n* **Conservation:** Using vivid language in the press to inspire Americans to care about protecting forests, canyons, and natural wonders.\n* **The 1902 Coal Strike:** Bringing labor and mine operators to the White House to resolve a fuel crisis in full view of the public."
     }
    ],
    "ai_readiness": [
     {
-     "suggestion": "Format the 'Three Cs' section with clear question-based H2 or H3 subheadings, such as 'What Are the Three Cs of the Square Deal?' followed by distinct bullet points.",
-     "why": "AI chatbots and featured snippets look for clean question-and-answer pairs to summarize domestic policies."
+     "suggestion": "Add FAQ schema markup covering the most frequent definition queries: 'What is the bully pulpit?', 'What did bully mean to Theodore Roosevelt?', and 'What are examples of the bully pulpit?'",
+     "why": "Search engines and AI overview generators rely on structured Q&A pairings to populate direct response boxes and conversational answers."
     },
     {
-     "suggestion": "Add FAQPage structured data addressing 'What was the Square Deal?' and 'What are the Three Cs of the Square Deal?'.",
-     "why": "Gives search engines and answer engines explicit machine-readable entities to parse for conversational answers."
+     "suggestion": "Turn the H1/H2 headings into explicit, question-led or descriptive headers such as 'What Does Bully Pulpit Mean?' and 'Examples of the Bully Pulpit in Action'.",
+     "why": "Clear semantic headings help AI crawlers map the page's factual answers directly to conversational prompts."
     }
    ],
    "technical": [
     {
-     "suggestion": "Resolve the multiple H1 issue by keeping '# The Square Deal: TR's Vision for a Fair American Economy' as the single H1 and demoting '# A President Steps Between Labor and Capital' to an H2.",
-     "why": "A single H1 establishes clear page hierarchy for screen readers and search engine crawlers."
-    },
-    {
-     "suggestion": "Repair the truncated final sentence ('So') under the '# The Square Deal and American Democracy' section.",
-     "why": "Incomplete sentences signal low editorial quality to web crawlers and disrupt the reading experience."
+     "suggestion": "Add DefinedTerm or Article structured data linking the term 'bully pulpit' to Roosevelt as its coiner.",
+     "why": "Reinforces knowledge graph relationships between Theodore Roosevelt and the term he introduced."
     }
    ],
    "needs_verification": [
-    "Verify the wording in the proposed quick-definition callout against approved curatorial guidelines.",
-    "Verify the text used to complete the broken final sentence under 'The Square Deal and American Democracy'."
+    "Confirm that nineteenth-century colloquial usage of 'bully' as slang for 'first-rate' or 'excellent' aligns with Library historical standards before publishing definition copy."
    ],
-   "checks": []
+   "checks": [],
+   "dropped_claims": [
+    {
+     "where": "technical",
+     "claim": "Ensure the section heading 'From the Archives' contains content or link assets, as it currently appears in the text without accompanying items.",
+     "reason": "“From the Archives” has 17 words under it"
+    }
+   ]
   },
   {
-   "page": "https://www.trlibrary.com/visit",
+   "page": "https://www.trlibrary.com/tr/presidency/elections",
    "written_by": "Gemini (gemini-3.8-flash)",
-   "summary": "Clarify daily operating hours and package the key visit logistics—ticket prices, 3 1/2-hour recommended visit length, and direct I-94 driving access—into a scannable visit summary to capture high-intent searchers and AI trip-planning queries.",
+   "summary": "Shorten and front-load the page title to capture dominant 1904 presidential election search traffic, and add explicit summary panels for election candidates, vote counts, and key facts to answer AI search and direct user queries.",
    "title": {
-    "suggested": "Plan Your Visit: Tickets, Hours & Directions to Medora",
-    "why": "Leads with primary visitor search intents (tickets, hours, directions) within 54 characters while letting the site template append the Library name."
+    "suggested": "1904 Presidential Election: Roosevelt's Mandate",
+    "why": "Stays under the 60-character limit (48 characters), places high-volume search queries ('1904 presidential election', '1904 election') front and center, and omits the site-name suffix."
    },
    "meta_description": {
-    "suggested": "Get ready for Medora with tickets, hours, and directions off I-94. Plan three and a half hours to explore the galleries and Badlands trails.",
-    "why": "Fits the 120–155 character range (139 characters), incorporates highway accessibility, sets visit duration expectations, and gives a clear reason to click."
+    "suggested": "Discover how Theodore Roosevelt won the 1904 presidential election in a landslide over Alton B. Parker, and why his victory-night pledge changed history.",
+    "why": "Hits 153 characters, includes top search terms (Theodore Roosevelt, 1904 presidential election, Alton B. Parker), and gives readers a clear reason to click."
    },
    "content_additions": [
     {
-     "for_query": "How much time do I need at the Theodore Roosevelt Presidential Library?",
-     "suggestion": "Add a standalone 'Quick Visit Facts' callout box near the top of the page confirming the 3 1/2-hour gallery time plus outdoor options.",
-     "draft": "How much time to budget: Plan about three and a half hours to take in the permanent and special exhibitions. Set aside additional time if you want to walk the one-mile boardwalk, explore surrounding Badlands trails, or sit down for lunch at Salt+Scoria."
+     "for_query": "1904 presidential election candidates",
+     "suggestion": "Add a structured 'At a Glance: The 1904 Candidates' callout box directly under the first heading to explicitly answer queries looking for running mates, party tickets, and opponents.",
+     "draft": "At a Glance: The 1904 Presidential Race\n• Republican Ticket: Theodore Roosevelt & Charles W. Fairbanks\n• Democratic Ticket: Alton B. Parker & Henry G. Davis\n• Outcome: Roosevelt captured 336 electoral votes and 56.4 percent of the popular vote to Parker's 140 electoral votes."
     },
     {
-     "for_query": "What are the best stops along I-94 in North Dakota?",
-     "suggestion": "Strengthen the Directions section header and introductory sentence to explicitly mention I-94 travelers and road trippers.",
-     "draft": "Located directly off Interstate 94 in western North Dakota, the Library sits at 3410 Chateau Road in Medora. Drivers heading westbound from Bismarck or Dickinson take Exit 27; drivers heading eastbound from Montana take Exit 24. Follow the signs right into town and up to Chateau Road."
-    },
-    {
-     "for_query": "teddy roosevelt museum north dakota",
-     "suggestion": "Include natural museum terminology under The Experience to meet searchers looking for museum exhibits without resorting to museum jargon.",
-     "draft": "A New Kind of Presidential Museum: Walk through eight narrative chapters tracing Theodore Roosevelt from his boyhood to the Badlands, the White House, and beyond. Plan to explore hands-on interactive galleries alongside historic displays before stepping outside to take in the views from the roof terrace."
+     "for_query": "who did theodore roosevelt run against in 1904",
+     "suggestion": "Add a clear subhead or FAQ snippet under 'The Road to Nomination' or 'The Campaign Against Parker' stating directly who Roosevelt ran against.",
+     "draft": "Who did Theodore Roosevelt defeat in 1904? Roosevelt faced Democratic nominee Alton B. Parker, Chief Judge of the New York Court of Appeals, defeating him in a landslide across northern and western states."
     }
    ],
    "ai_readiness": [
     {
-     "suggestion": "Add an explicit FAQ section using standard Q&A headers covering ticket prices, time required, and seasonal hours.",
-     "why": "AI engines answering questions like 'How much are tickets to the Theodore Roosevelt Presidential Library?' favor direct question-and-answer pairs over narrative copy."
+     "suggestion": "Add a concise key-facts summary block or bullet list summarizing the popular vote margin (56.4%), electoral count (336 to 140), date of the election (November 8, 1904), and the two-term announcement.",
+     "why": "AI engines extract structured facts best when entity relationships and statistical outcomes are formatted as direct question-answer or concise lists rather than buried across narrative paragraphs."
     },
     {
-     "suggestion": "Provide exact daily open and close times within each seasonal range in the body copy.",
-     "why": "The text lists date intervals (such as March 2 – May 31) without stating the opening and closing hours, causing AI assistants to fail when travelers ask when doors open."
+     "suggestion": "Ensure Alton B. Parker's running mate is named in the text alongside Charles W. Fairbanks.",
+     "why": "Queries regarding '1904 presidential election candidates' look for full tickets, which assists conversational LLMs in returning complete answers."
     }
    ],
    "technical": [
     {
-     "suggestion": "Fix the truncated heading '# Scenic Driv' at the bottom of the page.",
-     "why": "Broken or cut-off headings harm accessibility, signal unmaintained content to search bots, and disrupt heading hierarchy."
+     "suggestion": "Add schema markup for an Article or HistoricalEvent specifically covering the 1904 United States Presidential Election, linking Charles W. Fairbanks and Alton B. Parker as Person entities.",
+     "why": "Currently the page uses generic WebSite, Person, and BreadcrumbList schemas; adding event or article schema improves entity clarity for search graph indexing."
     },
     {
-     "suggestion": "Include a TouristAttraction or Museum schema entity containing priceRange and detailed OpeningHoursSpecification on the page.",
-     "why": "Connecting ticket pricing ($26 adult, $16 youth) and location data directly to rich snippets improves map and search visibility."
+     "suggestion": "Verify that all image elements have descriptive, query-aligned alt text (e.g., '1904 presidential election electoral map showing Roosevelt victory').",
+     "why": "The page ranks for visual queries like '1904 election map' and '1904 electoral map'; descriptive alt attributes improve image search rankings."
     }
    ],
    "needs_verification": [
-    "Confirm the exact daily opening and closing hours for each seasonal window (March 2 – May 31, June 1 – September 13, September 14 – November 30, December 1 – March 1) to publish on the page."
+    "Verify whether Henry G. Davis was Alton B. Parker's official vice-presidential running mate in 1904 before adding him to candidate callout copy."
    ],
-   "checks": []
-  },
-  {
-   "page": "https://www.trlibrary.com/visit/directions",
-   "written_by": "Gemini (gemini-3.8-flash)",
-   "summary": "The page captures strong traffic for location-seeking queries ('where is the library') and road-trippers, but ends abruptly with an empty '# Getting Around Town' heading and lacks vital visit-duration context (3 1/2 hours) for travelers timing their drives along I-94 and US-85.",
-   "title": {
-    "suggested": "Directions to Medora: Driving Routes & Airports",
-    "why": "Puts high-intent keywords 'Directions to Medora' first and stays well under 60 characters so it fits neatly before the sitewide template suffix."
-   },
-   "meta_description": {
-    "suggested": "Find driving routes from I-94, airport options, EV charging, and RV camping details to reach the Theodore Roosevelt Presidential Library in Medora.",
-    "why": "At 147 characters, this fits the length limit, lists practical trip-planning elements, and provides a clear reason to click."
-   },
-   "content_additions": [
-    {
-     "for_query": "where is the theodore roosevelt presidential library",
-     "suggestion": "Add a quick-reference arrival snapshot directly below the main heading that answers the exact location and recommended stop time for travelers building a driving itinerary.",
-     "draft": "Location: 3410 Chateau Road, Medora, North Dakota 58645. Plan on about 3 1/2 hours to explore the Library campus, galleries, and walking trails."
-    },
-    {
-     "for_query": "We're driving from Mount Rushmore to Theodore Roosevelt National Park. What's worth stopping for?",
-     "suggestion": "Expand the Rapid City / US-85 paragraph under 'Driving Directions' to guide road-trippers connecting Mount Rushmore, the Black Hills, and western North Dakota.",
-     "draft": "Connecting from Mount Rushmore and the Black Hills? Follow US-85 north through the plains straight toward Medora. When planning your travel day, budget about 3 1/2 hours for a complete stop at the Library before heading into Theodore Roosevelt National Park."
-    },
-    {
-     "for_query": "Getting around Medora",
-     "suggestion": "Fill in the completely empty '# Getting Around Town' section at the bottom of the page with practical advice on foot travel, bluffs access, and parking.",
-     "draft": "Medora is a compact, walkable town. Downtown shops, restaurants, and the South Unit entrance to Theodore Roosevelt National Park sit within easy walking or driving distance of each other. The Library sits on the bluffs just above town; standard vehicle parking and dedicated motorcoach bays are available on site."
-    },
-    {
-     "for_query": "EV charging Medora ND",
-     "suggestion": "Rewrite the EV charging section to eliminate 'we/our' per house rules.",
-     "draft": "On-site Tesla destination chargers are located in the main parking lot for visitors traveling in electric vehicles."
-    }
+   "checks": [
+    "Suggestion contains a year: check it against the page and the no-years rule"
    ],
-   "ai_readiness": [
-    {
-     "suggestion": "Include clear heading-and-answer pairs for common conversational queries such as 'Where is the Theodore Roosevelt Presidential Library located?' and 'How far is Medora from the nearest airport?'.",
-     "why": "AI engines prefer concise, self-contained paragraphs that directly pair a geographical question with clear drive times and interstate exits."
-    },
-    {
-     "suggestion": "Explicitly state landmark proximity (e.g., 'adjacent to Theodore Roosevelt National Park South Unit' and 'along I-94 in western North Dakota') near the top.",
-     "why": "Large language models build associative trip itineraries around national park gateways; anchoring the Library to the South Unit entrance improves inclusion in regional road-trip recommendations."
-    }
-   ],
-   "technical": [
-    {
-     "suggestion": "Populate or remove the trailing empty H1/H2 '# Getting Around Town' heading.",
-     "why": "Empty headings confuse screen readers, fail accessibility checks, and create poor quality signals for search crawlers."
-    },
-    {
-     "suggestion": "Ensure the existing GeoCoordinates and PostalAddress schema explicitly nest inside a TouristAttraction or Library entity type on this page.",
-     "why": "Connecting physical address entities directly to the Library schema clarifies navigational search signals and Google Maps knowledge panel matching."
-    }
-   ],
-   "needs_verification": [
-    "Confirm the precise operational setup and connector types for the Tesla destination chargers (e.g., whether J1772 adapters are on site for non-Tesla EVs).",
-    "Confirm accessibility options for walking from downtown Medora up to the bluffs where the Library is situated."
-   ],
-   "checks": []
+   "dropped_claims": []
   }
  ],
  "ai_brief": {
-  "headline": "The Library anchors ChatGPT recommendations for Medora road trips, but Gemini and Perplexity frequently miss it, confuse it with a hotel lounge, or leave it off family and museum lists.",
-  "how_described": "ChatGPT highlights the Library as a major anchor on the Medora bluff with indoor exhibits, film screenings, and a café. Gemini labeled it a 'world-class destination' and recommended half-day visits of 3 to 5 hours, but also confused it with the private book collection inside the Rough Riders Hotel lobby. Perplexity asserts the Library is open year-round near the South Unit entrance and states it opened July 4, 2026.",
+  "headline": "ChatGPT reliably recommends the Library for Medora trips and museum queries, while Gemini overlooks it entirely on regional travel itineraries and both engines miss it on Roosevelt history questions.",
+  "how_described": "When mentioned, AI engines describe the Library as a major indoor museum near Medora and Theodore Roosevelt National Park focused on Roosevelt's Badlands years, conservation work, and architecture. ChatGPT describes it as an immersive multi-gallery experience, while Gemini highlights its independent status outside the Presidential Libraries Act.",
   "gaps": [
    {
-    "theme": "Family outings and Badlands activities with children",
-    "who_shows_up_instead": "Theodore Roosevelt National Park, Medora Musical, Chateau de Mores, North Dakota Cowboy Hall of Fame, Painted Canyon",
+    "theme": "General Badlands and Medora trip planning on Gemini",
+    "who_shows_up_instead": "Chateau de Mores, North Dakota Cowboy Hall of Fame, Medora Musical, and Pitchfork Steak Fondue",
     "prompt_ids": [
-     "family-badlands"
-    ]
-   },
-   {
-    "theme": "North Dakota museum itineraries",
-    "who_shows_up_instead": "Chateau de Mores, Plains Art Museum, Bonanzaville, North Dakota Museum of Art",
-    "prompt_ids": [
+     "trnp-what-to-see",
+     "medora-things-to-do",
+     "nd-road-trip",
+     "family-badlands",
+     "rainy-day-medora",
      "nd-museums"
     ]
    },
    {
-    "theme": "Historic sites and landmarks tied to Theodore Roosevelt",
-    "who_shows_up_instead": "Maltese Cross Cabin, Elkhorn Ranch, Theodore Roosevelt National Park, Mount Rushmore",
-    "prompt_ids": [
-     "tr-sites"
-    ]
-   },
-   {
-    "theme": "Cross-state road trips and scenic highway detours",
-    "who_shows_up_instead": "Theodore Roosevelt National Park, Painted Canyon, Chateau de Mores, Medora Musical",
+    "theme": "Cross-state Black Hills and I-94 driving routes",
+    "who_shows_up_instead": "Mount Rushmore, Painted Canyon, and historic Deadwood",
     "prompt_ids": [
      "rushmore-to-trnp",
      "i94-stops"
+    ]
+   },
+   {
+    "theme": "General presidential library lists and Roosevelt history queries",
+    "who_shows_up_instead": "Franklin D. Roosevelt Presidential Library in Hyde Park, New York, or solely national park sites",
+    "prompt_ids": [
+     "presidential-libraries-visit",
+     "tr-sites",
+     "auto-what-were-theodore-roosevelt-s-major-accomplishmen",
+     "auto-can-you-explain-theodore-roosevelt-s-square-deal-d",
+     "auto-what-years-was-theodore-roosevelt-in-office-and-wh",
+     "auto-which-presidents-are-carved-on-mount-rushmore-and-"
     ]
    }
   ],
   "actions": [
    {
-    "action": "Publish a dedicated family Badlands planner detailing hands-on exhibits, walking paths, and kid-friendly rest stops.",
-    "why": "Every tested AI assistant left the Library off kid-friendly itineraries in western North Dakota.",
+    "action": "Build road-trip landing pages highlighting drive times between Mount Rushmore, the Black Hills, and Medora, noting the 3 1/2 hour library visit.",
+    "why": "Both engines fail to connect travel between Mount Rushmore and Theodore Roosevelt National Park with a stop at the Library.",
     "effort": "medium",
-    "where": "trlibrary.com/visit/families"
+    "where": "trlibrary.com/visit/road-trips"
    },
    {
-    "action": "Publish a museum comparison guide detailing indoor galleries, theater spaces, and Badlands view decks, noting typical visits take about 3 1/2 hours.",
-    "why": "The Library does not appear in state museum queries despite strong indoor facilities.",
+    "action": "Coordinate with North Dakota Tourism (ndtourism.com) and Medora partner sites to add Library entries to family, indoor, and rainy-day directories.",
+    "why": "Gemini draws heavily from ndtourism.com and medora.com for itinerary answers, causing it to miss the Library across standard travel prompts.",
     "effort": "low",
-    "where": "trlibrary.com/visit/activities"
+    "where": "ndtourism.com and medora.com"
    },
    {
-    "action": "Add distinct Organization and Place structured data separating the Presidential Library from the Rough Riders Hotel library.",
-    "why": "Gemini directs travelers looking for indoor activities to the historic hotel lobby instead of the Library campus.",
-    "effort": "medium",
-    "where": "trlibrary.com/visit"
-   },
-   {
-    "action": "Pitch state tourism partners to update western North Dakota highway guides and road-trip roundups with direct Library references.",
-    "why": "Travel routes along I-94 and drives from Mount Rushmore heavily cite third-party state tourism sources that miss the Library.",
+    "action": "Publish educational overview pages detailing Roosevelt's life, his conservation milestones, and his presidency.",
+    "why": "AI engines currently rely on general encyclopedia pages and NPS sites for historical questions, bypassing the Library completely.",
     "effort": "high",
-    "where": "ndtourism.com and medora.com partner listings"
+    "where": "trlibrary.com/history"
    }
   ],
   "inaccuracies": [
    {
-    "engine": "Gemini",
-    "claim": "Told bad-weather travelers that the TR Library is a private library inside the lobby of the Rough Riders Hotel.",
-    "correction_source": "trlibrary.com/visit"
-   },
-   {
-    "engine": "Perplexity",
-    "claim": "Stated that the Library is already open year-round near the South Unit entrance while simultaneously citing an opening date of July 4, 2026.",
-    "correction_source": "trlibrary.com/tickets"
-   },
-   {
     "engine": "ChatGPT",
-    "claim": "Asserted as an accomplished fact that the Library opened to the public on July 4, 2026.",
-    "correction_source": "trlibrary.com/about/press"
+    "claim": "Equates 'Roosevelt Presidential Library' directly to Hyde Park, New York without distinguishing Theodore Roosevelt from Franklin D. Roosevelt.",
+    "correction_source": "trlibrary.com/about"
    }
   ],
   "written_by": "Gemini (gemini-3.8-flash)"
  },
  "errors": [],
+ "held_back": [
+  "/",
+  "/bullet-speech",
+  "/project",
+  "/tr/badlands",
+  "/tr/badlands/where-to-see",
+  "/tr/family/children",
+  "/tr/family/fdr-connection",
+  "/tr/kids-timeline",
+  "/tr/myths/teddy-name",
+  "/tr/people/jacob-riis",
+  "/tr/post-presidency/man-in-the-arena",
+  "/tr/pre-presidency-political-accomplishments",
+  "/tr/presidency-timeline",
+  "/tr/presidency/brownsville",
+  "/tr/presidency/coal-strike",
+  "/tr/presidency/panama-canal",
+  "/tr/presidency/railroad-regulation",
+  "/tr/presidency/roosevelt-corollary",
+  "/tr/presidency/square-deal",
+  "/tr/presidency/trust-busting",
+  "/tr/rise-to-power/san-juan-hill",
+  "/tr/square-deal",
+  "/tr/teddy-nickname",
+  "/tr/tr-mount-rushmore",
+  "/tr/tr-shot",
+  "/visit",
+  "/visit/activities",
+  "/visit/directions",
+  "/visit/exhibits",
+  "/visit/faq",
+  "/visit/faq/tickets",
+  "/visit/groups",
+  "/visit/hours",
+  "/visit/i-94",
+  "/visit/itineraries",
+  "/visit/itineraries/4-days-north-dakota",
+  "/visit/itineraries/chicago-badlands",
+  "/visit/itineraries/one-day",
+  "/visit/itineraries/seattle-badlands",
+  "/visit/medora/history",
+  "/visit/national-park"
+ ],
  "provider": "gemini",
  "provider_label": "Gemini",
  "model": "gemini-3.8-flash",
- "fallbacks": []
+ "fallbacks": [],
+ "claims_dropped": 2
 }

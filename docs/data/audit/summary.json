@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-26T14:14:30+00:00",
+ "updated": "2026-11-02T12:32:16+00:00",
  "site": "https://www.trlibrary.com",
- "sitemap_urls": 1144,
- "crawled": 1105,
+ "sitemap_urls": 1169,
+ "crawled": 1130,
  "score": 96,
  "ai_score": 60,
  "issues": [
@@ -22,19 +22,19 @@
    "code": "og_missing",
    "severity": "medium",
    "label": "Missing Open Graph tags",
-   "pages": 30
+   "pages": 32
   },
   {
    "code": "meta_missing",
    "severity": "medium",
    "label": "No meta description",
-   "pages": 29
+   "pages": 31
   },
   {
    "code": "h1_missing",
    "severity": "medium",
    "label": "No H1 heading",
-   "pages": 27
+   "pages": 29
   },
   {
    "code": "redirect_in_sitemap",
@@ -52,13 +52,13 @@
    "code": "thin_content",
    "severity": "low",
    "label": "Under 150 words of body text",
-   "pages": 235
+   "pages": 239
   },
   {
    "code": "title_too_short",
    "severity": "low",
    "label": "Title under 15 characters, not counting the site-name suffix",
-   "pages": 147
+   "pages": 149
   },
   {
    "code": "meta_duplicate",
@@ -67,67 +67,67 @@
    "pages": 126
   },
   {
-   "code": "slow",
+   "code": "meta_too_short",
    "severity": "low",
-   "label": "Took over 3 seconds to respond",
-   "pages": 29
+   "label": "Meta description under 70 characters",
+   "pages": 18
   },
   {
    "code": "h1_multiple",
    "severity": "low",
    "label": "More than one H1",
-   "pages": 21
+   "pages": 10
   },
   {
-   "code": "meta_too_short",
+   "code": "slow",
    "severity": "low",
-   "label": "Meta description under 70 characters",
-   "pages": 17
+   "label": "Took over 3 seconds to respond",
+   "pages": 3
   }
  ],
  "status_codes": {
-  "200": 1105
+  "200": 1130
  },
  "slowest": [
   {
-   "url": "https://www.trlibrary.com/beam-signing-ceremony",
-   "seconds": 8.24
+   "url": "https://www.trlibrary.com/video/view/GHM7Y66lCBk",
+   "seconds": 3.72
   },
   {
-   "url": "https://www.trlibrary.com/visit/itineraries/13-day-denver-wyoming",
-   "seconds": 5.36
+   "url": "https://www.trlibrary.com/video/view/gjy4XjgMEVU",
+   "seconds": 3.13
   },
   {
-   "url": "https://www.trlibrary.com/visit/itineraries/7-day-billings-bismarck",
-   "seconds": 4.82
+   "url": "https://www.trlibrary.com/video/view/CGc6w5ryVHk",
+   "seconds": 3.07
   },
   {
-   "url": "https://www.trlibrary.com/video/view/lgvwRZFLvdw",
-   "seconds": 4.2
+   "url": "https://www.trlibrary.com/video/view/hEPpzwOSQC4",
+   "seconds": 2.97
   },
   {
-   "url": "https://www.trlibrary.com/tr/people/marquis-de-mores",
-   "seconds": 3.98
+   "url": "https://www.trlibrary.com/video/view/_Eiybv9KgeI",
+   "seconds": 2.96
   },
   {
-   "url": "https://www.trlibrary.com/visit/roosevelt-in-medora",
-   "seconds": 3.97
+   "url": "https://www.trlibrary.com/video/view/FvBnk-aRcAs",
+   "seconds": 2.88
   },
   {
-   "url": "https://www.trlibrary.com/tr/presidency/white-house-workers",
-   "seconds": 3.85
+   "url": "https://www.trlibrary.com/video/view/FZ7CvBHvj4I",
+   "seconds": 2.66
   },
   {
-   "url": "https://www.trlibrary.com/visit/medora",
-   "seconds": 3.82
+   "url": "https://www.trlibrary.com/video/view/FNO5jhKjHfM",
+   "seconds": 2.65
   },
   {
-   "url": "https://www.trlibrary.com/video/view/lK2X0xyhtfs",
-   "seconds": 3.54
+   "url": "https://www.trlibrary.com/video/view/BS3yKf3afxc",
+   "seconds": 2.64
   },
   {
-   "url": "https://www.trlibrary.com/video/view/IweEqPAOl_w",
-   "seconds": 3.53
+   "url": "https://www.trlibrary.com/video/view/iZNTkHl0WUM",
+   "seconds": 2.62
   }
  ],
  "robots": {
@@ -148,23 +148,23 @@
  },
  "llms_txt": false,
  "structured_data_types": {
-  "GeoCoordinates": 1105,
-  "EntryPoint": 1105,
-  "SearchAction": 1105,
-  "PostalAddress": 1105,
-  "WebSite": 1105,
-  "OpeningHoursSpecification": 1105,
-  "ImageObject": 1105,
-  "BreadcrumbList": 1104,
-  "ListItem": 1104,
-  "Person": 292,
-  "Place": 59,
-  "Event": 59,
-  "Offer": 21,
+  "SearchAction": 1130,
+  "WebSite": 1130,
+  "ImageObject": 1130,
+  "OpeningHoursSpecification": 1130,
+  "GeoCoordinates": 1130,
+  "EntryPoint": 1130,
+  "PostalAddress": 1130,
+  "ListItem": 1129,
+  "BreadcrumbList": 1129,
+  "Person": 305,
+  "Event": 65,
+  "Place": 65,
+  "Offer": 26,
   "NewsArticle": 19,
+  "Question": 19,
   "Answer": 19,
   "FAQPage": 19,
-  "Question": 19,
   "Schedule": 8
  },
  "sitewide_structured_data": [
@@ -178,6 +178,6 @@
   "SearchAction",
   "WebSite"
  ],
- "page_specific_structured_data": 385,
+ "page_specific_structured_data": 404,
  "title_suffix": " | Theodore Roosevelt Presidential Library"
 }
