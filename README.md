@@ -86,7 +86,22 @@ The dashboard is drawn with JavaScript, so AI assistants that fetch it see an em
 - **https://seo.labs.trlibrary.com/digest.md**: a one-page ranked briefing (about 25 KB) that an AI tool can read in a single fetch.
 - **https://seo.labs.trlibrary.com/data/digest.json**: the same content as structured data, for scripts.
 
-To use it, tell Claude (or any assistant): "Read https://seo.labs.trlibrary.com/llms.txt and tell me the five best ways to improve our SEO this week."
+To use it, tell Claude (or any assistant): "Read https://seo.labs.trlibrary.com/llms.txt and work this week's moves."
+
+## Work queue
+`seo/workqueue.py` turns every finding (search opportunities, audit issues, internal links, structured data, AI visibility) into tasks in `data/work_queue.json`, shown on the **Work Queue** tab and at the top of the digest. Each task has its pages (busiest in Google first), who can fix it (the TRPL team in Drupal, or FiveJars), step-by-step Drupal instructions and a done-when check. "Page jobs" bundle every fix for one page.
+
+- **This week's moves:** the top open task from up to three different areas, plus a short "what else we checked" list with a one-line reason each can wait. Assistants are told to lead with these, carry them out after approval, and log them in `config/changes.yml`.
+- **Upside is sized honestly:** against a realistic next step (a few places up, not #1), minus the clicks a page already gets, without counting the same impressions twice, and labelled with how the gain would happen.
+- **Already handed off:** list task ids under `work_queue.ticketed` in `config/site.yml` (sent to FiveJars) or `work_queue.blocked` (with the reason), so the queue stops asking. `work_queue.skip` drops a task.
+
+## Why AI assistants answer the way they do
+`seo/ai_sources.py` runs with the weekly AI answers (no extra API calls for the first part):
+- **What the assistants searched for:** ChatGPT, Claude and Gemini run their own web searches before answering. Each search is matched to trlibrary.com's Search Console position. A search we don't rank for is a page to strengthen or write.
+- **Pages AI cites when it leaves the Library out:** each cited page is sorted by type (list or guide, review or booking site, forum, reference, news, partner, another attraction, our own). The most-cited outside pages are read once to check whether they mention the Library. Lists that name other places but not the Library become "ask to be added" tasks. Add domain types under `ai_visibility.source_types` in `config/site.yml`.
+
+## IndexNow
+`seo/indexnow.py` (daily) tells Bing and the other IndexNow engines when a page logged in `config/changes.yml` changes, so Copilot and ChatGPT search can pick it up within hours. It does nothing until FiveJars serves the key file (or turns on the Drupal IndexNow module) and the key is set in `config/site.yml` (`indexnow.key`).
 
 ## Self-managing tracking
 Each week the tool adds promising keywords and AI questions on its own, and retires ones that are done. Your files `config/keywords.yml` and `config/ai_prompts.yml` are never changed.

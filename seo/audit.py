@@ -43,7 +43,12 @@ ISSUE_TEXT = {
     "thin_content": ("low", "Under 150 words of body text"),
     "no_structured_data": ("low", "No structured data (JSON-LD)"),
     "slow": ("low", "Took over 3 seconds to respond"),
+    "redirect_chain": ("medium", "Sitemap URL goes through more than one redirect"),
+    "canonical_conflict": ("medium", "Canonical points to a page that redirects, errors or is noindexed"),
+    "heading_skip": ("low", "Heading levels skip (e.g. H2 straight to H4)"),
+    "deep_page": ("low", "More than 4 clicks from the homepage"),
 }
+DEEP_CLICKS = 4
 
 QUESTION_RE = re.compile(r"^(who|what|when|where|why|how|is|are|can|do|does|should|which)\b.*\??$", re.I)
 
@@ -84,6 +89,11 @@ def parse_page(html: str, url: str) -> dict:
         jsonld_types += re.findall(r'"@type"\s*:\s*"([^"]+)"', s.string or "")
 
     h1s = [h.get_text(" ", strip=True) for h in soup.find_all("h1")]
+    # Heading outline of the main content: a jump of more than one level down
+    # (H2 -> H4) breaks the outline screen readers and AI tools rely on.
+    main = soup.find("main") or soup.body or soup
+    levels = [int(h.name[1]) for h in main.find_all(["h1", "h2", "h3", "h4", "h5", "h6"]) if h.get_text(strip=True)]
+    skips = [f"H{a}→H{b}" for a, b in zip(levels, levels[1:]) if b > a + 1]
     h2s = [h.get_text(" ", strip=True) for h in soup.find_all(["h2", "h3"])]
 
     imgs = soup.find_all("img")
@@ -121,6 +131,8 @@ def parse_page(html: str, url: str) -> dict:
         "images_no_alt": len(no_alt),
         "words": words,
         "internal_links": len(internal),
+        "heading_skips": list(dict.fromkeys(skips))[:5],
+        "_links": sorted({C.norm_url(u) for u in internal}),
         "first_text": text[:300],
     }
 
@@ -141,6 +153,8 @@ def check_page(p: dict, title_suffix: str = "") -> list[str]:
         return ["http_error"]
     if p.get("redirected"):
         issues.append("redirect_in_sitemap")
+        if (p.get("redirect_hops") or 0) > 1:
+            issues.append("redirect_chain")
     if "/node/" in urlparse(p["url"]).path:
         issues.append("unaliased_url")
     if p.get("noindex"):
@@ -178,7 +192,44 @@ def check_page(p: dict, title_suffix: str = "") -> list[str]:
         issues.append("no_structured_data")
     if p.get("seconds", 0) > 3:
         issues.append("slow")
+    if p.get("heading_skips"):
+        issues.append("heading_skip")
     return issues
+
+
+def site_checks(pages: list[dict], home: str) -> None:
+    """Checks that need the whole crawl: canonical targets and click depth.
+    Adds issue codes in place and drops the temporary link lists."""
+    by_url = {}
+    for p in pages:
+        for u in (p["url"], p.get("final_url")):
+            if u:
+                by_url.setdefault(C.norm_url(u), p)
+    for p in pages:
+        can = p.get("canonical")
+        if can and "canonical_mismatch" in p.get("issues", []):
+            t = by_url.get(C.norm_url(urljoin(p.get("final_url") or p["url"], can)))
+            if t is not None and (t.get("status", 200) >= 400 or t.get("redirected") or t.get("noindex")):
+                p["issues"].append("canonical_conflict")
+                p["canonical_problem"] = "redirects" if t.get("redirected") else "noindex" if t.get("noindex") else f"returns {t.get('status')}"
+    # click depth: breadth-first from the homepage over links between crawled pages
+    graph = {C.norm_url(p.get("final_url") or p["url"]): [C.norm_url(v) for v in p.get("_links", [])] for p in pages}
+    start = C.norm_url(home)
+    depth, frontier = {start: 0}, [start]
+    while frontier:
+        nxt = []
+        for u in frontier:
+            for v in graph.get(u, []):
+                if v not in depth:
+                    depth[v] = depth[u] + 1
+                    nxt.append(v)
+        frontier = nxt
+    for p in pages:
+        d = depth.get(C.norm_url(p.get("final_url") or p["url"]))
+        p["click_depth"] = d
+        if d is not None and d > DEEP_CLICKS and p.get("status", 200) < 400 and not p.get("redirected"):
+            p["issues"].append("deep_page")
+        p.pop("_links", None)
 
 
 def page_score(issues: list[str]) -> int:
@@ -255,6 +306,7 @@ def run() -> None:
             p["issues"] = check_page(p, suffix)
             if p.get("title"):
                 p["title_core_length"] = len(page_title(p["title"], suffix))
+        site_checks(pages, site)
         ok_pages = [p for p in pages if p.get("status", 0) < 400]
         type_counts = Counter(t for p in ok_pages for t in set(p.get("jsonld_types", [])))
         sitewide = {t for t, n in type_counts.items() if ok_pages and n >= 0.9 * len(ok_pages)}

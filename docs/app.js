@@ -16,6 +16,7 @@
   };
   const D = {};
   const charts = [];
+  const ROUTE = { sub: null };   // "#audit/meta_missing" -> sub = "meta_missing"
 
   // ---------- helpers ----------
   function el(tag, attrs, ...kids) {
@@ -86,7 +87,7 @@
   }
 
   // Sortable, searchable table
-  function table(columns, rows, { search = true, limit = 50, sort, filters } = {}) {
+  function table(columns, rows, { search = true, limit = 50, sort, filters, onRow, rowActive } = {}) {
     let q = "", shown = limit, sortKey = sort ? sort[0] : null, sortDir = sort ? sort[1] : -1;
     const extra = {};
     const wrap = el("div");
@@ -116,7 +117,10 @@
         r = [...r].sort((a, b) => { const A = val(a), B = val(b); if (A == null) return 1; if (B == null) return -1; return (A > B ? 1 : A < B ? -1 : 0) * sortDir; });
       }
       ths.forEach((th, i) => th.setAttribute("aria-sort", columns[i].key === sortKey ? (sortDir > 0 ? "ascending" : "descending") : "none"));
-      tbody.replaceChildren(...r.slice(0, shown).map((row) => el("tr", {}, ...columns.map((c) => {
+      tbody.replaceChildren(...r.slice(0, shown).map((row) => el("tr", onRow ? {
+        class: "clickable-row" + (rowActive && rowActive(row) ? " active" : ""), tabindex: 0,
+        onclick: (e) => { if (!e.target.closest("a")) onRow(row); }, onkeydown: (e) => { if (e.key === "Enter") onRow(row); },
+      } : {}, ...columns.map((c) => {
         const v = c.render ? c.render(row) : c.fmt ? c.fmt(row[c.key]) : row[c.key];
         return el("td", { class: (c.num ? "num " : "") + (c.cls || "") }, v ?? "–");
       }))));
@@ -267,7 +271,9 @@
         ...sec("Striking distance", "Ranking 4–20 with real demand. Strengthen the page for the exact search: use the words in the title and an H2, answer the question directly, and link to it from related pages.", table([
           { key: "query", label: "Search" }, { key: "page", label: "Page", render: (r) => link(r.page), cls: "url" },
           { key: "position", label: "Pos.", num: true, fmt: pos }, { key: "impressions", label: "Impr.", num: true, fmt: num },
-          { key: "clicks", label: "Clicks", num: true, fmt: num }, { key: "est_extra_clicks", label: "Upside", num: true, fmt: num },
+          { key: "clicks", label: "Clicks", num: true, fmt: num },
+          { key: "mechanism", label: "How", render: (r) => el("span", { class: "small muted" }, r.mechanism || "") },
+          { key: "est_extra_clicks", label: "Upside", num: true, fmt: num },
         ], o.striking_distance, { sort: ["est_extra_clicks", -1], limit: 25 })),
         ...sec("Ranking well, few clicks", "These pages sit high in results but people skip them. Usually a title or meta description problem.", table([
           { key: "page", label: "Page", render: (r) => link(r.page), cls: "url" }, { key: "position", label: "Pos.", num: true, fmt: pos },
@@ -357,6 +363,7 @@
           r.error ? el("p", { class: "warn-box" }, r.error) : null,
           el("p", {}, r.mentioned ? `Mentioned${r.position ? `, #${r.position} among tracked attractions` : ""}${r.cited_us ? ", and trlibrary.com is cited." : ", but trlibrary.com isn't cited."}` : "The Library isn't mentioned."),
           r.peers && r.peers.length ? el("p", { class: "small muted" }, "Also mentioned: " + r.peers.join(", ")) : null,
+          r.searches && r.searches.length ? el("p", { class: "small" }, el("strong", {}, "Searched the web for: "), r.searches.map((q) => `“${q}”`).join(", ")) : null,
           r.citations && r.citations.length ? el("details", {}, el("summary", {}, `Sources cited (${r.citations.length})`), el("ul", { class: "clean small" }, ...r.citations.map((c) => el("li", {}, link(c, c))))) : null,
           el("details", { open: true }, el("summary", {}, "Full answer"), el("div", { class: "answer" }, r.text || "")),
         ].filter(Boolean));
@@ -376,6 +383,34 @@
             { key: "d", label: "Site" }, { key: "n", label: "Citations", num: true },
             { key: "bar", label: "", render: (r) => el("div", { class: "bar", style: "min-width:120px" }, el("span", { style: `width:${(100 * r.n) / max}%` })) },
           ], a.top_cited_domains.map(([d, n]) => ({ d, n })), { search: false, limit: 25, sort: ["n", -1] })));
+      }
+      const fo = a.fanout;
+      if (fo && fo.searches && fo.searches.length) {
+        const fs = fo.summary || {};
+        out.push(el("h2", {}, "What the assistants searched for"),
+          el("p", { class: "lead" }, `Before answering, the assistants run their own web searches; those decide which pages they read and cite. ${num(fs.unique)} different searches this week: trlibrary.com ranks top 10 in Google for ${num(fs.we_rank_top10)}, lower for ${num(fs.we_rank_lower)}, and not at all for ${num(fs.not_ranking)}.`),
+          el("div", { class: "card" }, table([
+            { key: "search", label: "Search the assistant ran" },
+            { key: "engines", label: "Engines", render: (r) => el("span", { class: "small" }, r.engines.join(", ")) },
+            { key: "in_gap_answers", label: "In answers missing us", num: true },
+            { key: "google", label: "trlibrary.com in Google", render: (r) => r.google ? el("span", {}, `#${pos(r.google.position)}`, el("span", { class: "small muted" }, ` ${num(r.google.impressions)} impr.${r.google.match === "exact" ? "" : " (same words)"}`)) : el("span", { class: "pill high" }, "not ranking"), sortVal: (r) => (r.google ? r.google.position : 999) },
+            { key: "questions", label: "For the question", render: (r) => el("span", { class: "small muted" }, r.questions.slice(0, 2).join(" · ")) },
+          ], fo.searches, { limit: 25, sort: ["in_gap_answers", -1] })));
+      }
+      const gs = a.gap_sources;
+      if (gs && gs.sources && gs.sources.length) {
+        const yn = (v) => v === true ? el("span", { class: "pill ok" }, "yes") : v === false ? el("span", { class: "pill high" }, "no") : el("span", { class: "muted" }, "–");
+        out.push(el("h2", {}, "Pages AI cites when it leaves the Library out"),
+          el("p", { class: "lead" }, `${num(gs.gap_answers)} answers left the Library out. These are the pages they leaned on, sorted by type. A list or guide that names other attractions but not the Library is the cheapest fix: ask to be added.`),
+          el("div", { class: "grid kpis" }, ...Object.entries(gs.by_type || {}).slice(0, 4).map(([k, v]) => kpi(k, num(v), (gs.type_actions || {})[k] || ""))),
+          el("div", { class: "card" }, table([
+            { key: "url", label: "Page", cls: "url", render: (r) => link(r.url, r.domain) },
+            { key: "type", label: "Type" },
+            { key: "answers", label: "Answers", num: true },
+            { key: "mentions_library", label: "Mentions the Library", render: (r) => yn(r.mentions_library), sortVal: (r) => (r.mentions_library === false ? 0 : r.mentions_library ? 2 : 1) },
+            { key: "attractions_named", label: "Helped name", render: (r) => el("span", { class: "small" }, (r.attractions_named || []).join(", ") || "–") },
+            { key: "action", label: "What to do", render: (r) => el("span", { class: "small muted" }, r.action) },
+          ], gs.sources, { limit: 25, sort: ["answers", -1] })));
       }
       out.push(...trackingLog());
       return out;
@@ -397,16 +432,59 @@
 
       const bots = (s.robots && s.robots.bots) || {};
       out.push(el("div", { class: "grid two", style: "margin-top:1rem" },
-        el("div", { class: "card" }, el("h3", {}, "Issues found"), table([
+        el("div", { class: "card" }, el("h3", {}, "Issues found"),
+          el("p", { class: "small muted" }, "Click an issue to see every page that has it, who fixes it and how."),
+          table([
           { key: "severity", label: "Severity", render: (r) => el("span", { class: `pill ${r.severity}` }, r.severity), sortVal: (r) => ({ high: 3, medium: 2, low: 1 })[r.severity] },
-          { key: "label", label: "Issue" }, { key: "pages", label: "Pages", num: true, fmt: num },
-        ], s.issues, { search: false, limit: 30, sort: ["severity", -1] })),
+          { key: "label", label: "Issue", render: (r) => el("a", { href: `#audit/${r.code}` }, r.label) },
+          { key: "pages", label: "Pages", num: true, fmt: num },
+        ], s.issues, { search: false, limit: 30, sort: ["severity", -1], onRow: (r) => { location.hash = `#audit/${r.code}`; }, rowActive: (r) => r.code === ROUTE.sub })),
         el("div", { class: "card" }, el("h3", {}, "Crawler access (robots.txt)"),
           el("p", { class: "small muted" }, "AI assistants can only recommend what their crawlers are allowed to read."),
           el("table", {}, el("tbody", {}, ...Object.entries(bots).map(([b, ok]) => el("tr", {}, el("td", {}, b), el("td", {}, el("span", { class: `pill ${ok ? "ok" : "error"}` }, ok ? "Allowed" : "Blocked")))))),
           el("h3", { style: "margin-top:1rem" }, "Structured data in use"),
           el("p", { class: "small" }, Object.entries(s.structured_data_types || {}).map(([t, n]) => `${t} (${n})`).join(", ") || "None found")),
       ));
+
+      const issue = ROUTE.sub && (s.issues || []).find((i) => i.code === ROUTE.sub);
+      if (issue && D.auditPages) {
+        const impr = {};
+        for (const g of D.pages || []) { const k = shortUrl(g.page).replace(/\/$/, "") || "/"; impr[k] = (impr[k] || 0) + (g.impressions || 0); }
+        const pathOf = (u) => shortUrl(u).split("?")[0].replace(/\/$/, "") || "/";
+        const rows = D.auditPages.filter((p) => p.issues.includes(issue.code)).map((p) => ({ ...p, _path: pathOf(p.url), _impr: impr[pathOf(p.url)] || 0 }));
+        const detail = (p) => {
+          const c = issue.code;
+          if (c.startsWith("title")) return p.title ? `${p.title.split(" | ")[0]} (${p.title_core_length ?? p.title.length})` : "no title";
+          if (c.startsWith("meta")) return p.meta_description ? `${p.meta_description} (${p.meta_description.length})` : "no description";
+          if (c.startsWith("h1")) return (p.h1 || []).join(" / ") || "no H1";
+          if (c === "heading_skip") return (p.heading_skips || []).join(", ");
+          if (c === "deep_page") return `${p.click_depth} clicks from the homepage`;
+          if (c === "canonical_conflict" || c === "canonical_mismatch") return `canonical: ${shortUrl(p.canonical || "")}${p.canonical_problem ? " (" + p.canonical_problem + ")" : ""}`;
+          if (c.startsWith("redirect") || c === "unaliased_url") return `→ ${shortUrl(p.final_url || "")}${p.redirect_hops > 1 ? ` (${p.redirect_hops} hops)` : ""}`;
+          if (c === "thin_content") return `${num(p.words)} words`;
+          if (c === "slow") return `${p.seconds}s`;
+          if (c === "img_alt_missing") return `${p.images_no_alt} of ${p.images} images`;
+          if (c === "og_missing") return ["og_title", "og_description", "og_image"].filter((k) => !p[k]).map((k) => k.replace("og_", "og:")).join(", ") + " missing";
+          return (p.duplicates && p.duplicates[c] || []).map(shortUrl).join(", ");
+        };
+        const tasks = ((D.queue || {}).tasks || []).filter((t) => t.id === `audit:${issue.code}` || t.id === `audit:${issue.code}:template`);
+        const panel = el("div", { class: "card issue-detail", id: "issue-detail" },
+          el("div", { class: "row" }, el("span", { class: `pill ${issue.severity}` }, issue.severity), el("h3", { style: "margin:0 .5rem" }, issue.label),
+            el("span", { class: "muted small" }, `${num(issue.pages)} pages`), el("a", { href: "#audit", class: "small", style: "margin-left:auto" }, "Close")),
+          ...tasks.map((t) => el("div", { class: "small", style: "margin-top:.5rem" },
+            tasks.length > 1 ? el("p", { class: "label" }, el("strong", {}, t.id.endsWith(":template") ? "Video pages (one template fix)" : "All other pages")) : null,
+            el("p", {}, el("strong", {}, "Who: "), t.owner, t.status !== "to do" ? ` (${t.status})` : ""),
+            el("p", {}, el("strong", {}, "How: "), t.how), el("p", {}, el("strong", {}, "Done when: "), t.done_when))),
+          !tasks.length ? el("p", { class: "small muted" }, "Not in the work queue (low value on its own, or handled in another task).") : null,
+          table([
+            { key: "_path", label: "Page", cls: "url", render: (p) => link(p.url, p._path) },
+            { key: "_impr", label: "Google impr.", num: true, fmt: num },
+            { key: "detail", label: "What's wrong", render: (p) => el("span", { class: "small" }, detail(p)), sortVal: detail },
+            { key: "score", label: "Score", num: true },
+          ], rows, { sort: ["_impr", -1], limit: 25 }));
+        out.push(panel);
+        setTimeout(() => { const n = document.getElementById("issue-detail"); if (n) n.scrollIntoView({ behavior: "smooth", block: "start" }); }, 50);
+      }
 
       if (D.auditPages) {
         const codes = [...new Set(D.auditPages.flatMap((p) => p.issues))].sort();
@@ -529,23 +607,34 @@
       const Q = D.queue;
       if (!Q) return [empty("The work queue hasn't been built yet.", "It's rebuilt with the digest, daily and weekly.")];
       const s = Q.summary || {};
-      const pageLink = (p) => (p || "").startsWith("http") ? link(p, shortUrl(p)) : link("https://www.trlibrary.com" + p, p);
+      const pageLink = (p) => (p || "").startsWith("http") ? link(p, shortUrl(p)) : (p || "").startsWith("/") ? link("https://www.trlibrary.com" + p, p) : el("span", {}, p);
       const pill = (t) => el("span", { class: `pill ${t.status === "with FiveJars" || t.status === "blocked" ? "low" : t.status === "needs approval" ? "medium" : "ok"}`, title: t.blocked_by || "" }, t.status);
       const waiting = (Q.tasks || []).filter((t) => t.status === "with FiveJars" || t.status === "blocked").length;
       const trpl = (Q.tasks || []).filter((t) => t.owner.startsWith("TRPL") && t.status !== "with FiveJars" && t.status !== "blocked").length;
       const out = [el("p", { class: "lead" }, "Every fix the audit, internal-links and structured-data checks found, turned into tasks: which pages (busiest first), who can do it, the steps in Drupal, and how to tell it worked. AI assistants read the same queue (digest.md and work_queue.json) and are told to carry tasks out after approval, not just recommend them.")];
       out.push(el("div", { class: "grid kpis" },
-        kpi("Tasks", num(s.tasks), `${num((s.by_area || {}).audit)} audit · ${num((s.by_area || {}).internal_links)} links · ${num((s.by_area || {}).structured_data)} markup`),
+        kpi("Tasks", num(s.tasks), `${num((s.by_area || {}).search)} search · ${num((s.by_area || {}).audit)} audit · ${num((s.by_area || {}).internal_links)} links · ${num((s.by_area || {}).structured_data)} markup · ${num((s.by_area || {}).ai_visibility)} AI`),
         kpi("TRPL can do now", num(trpl), "In Drupal admin"),
         kpi("Waiting on FiveJars", num(waiting), "Ticketed or blocked (config/site.yml)"),
         kpi("Page jobs", num(s.page_jobs), "Pages with several fixes to do in one visit"),
       ));
+      if ((Q.moves || []).length) {
+        out.push(el("h2", {}, "This week's moves"), el("div", { class: "grid three" }, ...Q.moves.map((m, i) => el("div", { class: "card" },
+          el("div", { class: "label small muted" }, `Move ${i + 1} · ${m.area.replace("_", " ")}`),
+          el("h3", {}, m.title), el("p", { class: "small" }, m.why),
+          el("ul", { class: "clean small" }, ...m.start_with.map((x) => el("li", {}, x)))))));
+        if ((Q.what_else || []).length) out.push(el("details", { class: "card" }, el("summary", {}, el("strong", {}, "What else we checked, and why it can wait")),
+          el("ul", { class: "clean small" }, ...Q.what_else.map((w) => el("li", {}, el("strong", {}, w.title), ": ", w.why_not_now)))));
+      }
       out.push(el("details", { class: "card" }, el("summary", {}, el("strong", {}, "How to work the queue")),
         el("ol", { class: "small" }, ...(Q.workflow || []).map((w) => el("li", {}, w)))));
       out.push(el("h2", {}, "Tasks, highest value first"));
       for (const t of Q.tasks || []) {
         const cols = [{ key: "page", label: "Page", cls: "url", render: (r) => pageLink(r.page) }, { key: "impressions", label: "Impr.", num: true, fmt: num }];
         const extra = (r) => {
+          if (r.search) return `“${r.search}” #${pos(r.position)} · ${r.mechanism || ""} · ~${num(r.upside)} clicks/28d`;
+          if (r.engines) return `run by ${r.engines.join(", ")}; we rank ${r.google ? "#" + r.google.position : "nowhere"}`;
+          if (r.type && r.answers != null) return `${r.type}, cited in ${r.answers} answers; names ${(r.named || []).join(", ") || "other places"}`;
           if (r.links) return r.links.map((x) => `[[${x.words}]] → ${x.to}`).join("; ");
           if (r.link_from) return "link from " + r.link_from.map((x) => `${x.page} ([[${x.words}]])`).join("; ");
           if (r.other) return "↔ " + r.other;
@@ -753,8 +842,8 @@
     },
 
     setup() {
-      const names = { gsc: "Search Console", audit: "Site audit", ranks: "Rank tracking", ai_visibility: "AI visibility", opportunities: "Opportunities", curate: "Keyword & question discovery", ux: "Visitor experience (/visit)", links: "Internal links & redirects", schema: "Structured data (schema.org)", checkout: "Ticket checkout (GA4)", tips: "AI recommendations", digest: "AI-readable digest (llms.txt)" };
-      const secrets = { gsc: "Variables GCP_WIF_PROVIDER + GCP_SERVICE_ACCOUNT (or secret GSC_SERVICE_ACCOUNT_JSON)", audit: "none needed", ranks: "DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD", ai_visibility: "OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY, ANTHROPIC_API_KEY (any)", opportunities: "none needed", curate: "none (an AI key improves the filtering); rules in config/tracking.yml", ux: "PAGESPEED_API_KEY (needed); any AI key for task checks; optional GA4_PROPERTY_ID variable and CLARITY_API_TOKEN (the website's Clarity project)", links: "none needed (reads the LinkChecker's results.json for outside links)", schema: "none needed", checkout: "Variable GA4_PROPERTY_ID + Google sign-in (service account as GA4 Viewer); optional CLARITY_STORE_API_TOKEN for store frustration signals", digest: "none needed", tips: "Any one of GEMINI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY, PERPLEXITY_API_KEY (order set in config/site.yml)" };
+      const names = { gsc: "Search Console", audit: "Site audit", ranks: "Rank tracking", ai_visibility: "AI visibility", opportunities: "Opportunities", curate: "Keyword & question discovery", ux: "Visitor experience (/visit)", links: "Internal links & redirects", schema: "Structured data (schema.org)", checkout: "Ticket checkout (GA4)", tips: "AI recommendations", digest: "AI-readable digest (llms.txt)", indexnow: "IndexNow (tell Bing about changes)" };
+      const secrets = { gsc: "Variables GCP_WIF_PROVIDER + GCP_SERVICE_ACCOUNT (or secret GSC_SERVICE_ACCOUNT_JSON)", audit: "none needed", ranks: "DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD", ai_visibility: "OPENAI_API_KEY, GEMINI_API_KEY, PERPLEXITY_API_KEY, ANTHROPIC_API_KEY (any)", opportunities: "none needed", curate: "none (an AI key improves the filtering); rules in config/tracking.yml", ux: "PAGESPEED_API_KEY (needed); any AI key for task checks; optional GA4_PROPERTY_ID variable and CLARITY_API_TOKEN (the website's Clarity project)", links: "none needed (reads the LinkChecker's results.json for outside links)", schema: "none needed", checkout: "Variable GA4_PROPERTY_ID + Google sign-in (service account as GA4 Viewer); optional CLARITY_STORE_API_TOKEN for store frustration signals", digest: "none needed", indexnow: "No secret: put the public key in config/site.yml (indexnow.key) once its file is live on trlibrary.com", tips: "Any one of GEMINI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY, PERPLEXITY_API_KEY (order set in config/site.yml)" };
       const st = D.status || {};
       return [
         el("p", { class: "lead" }, "Each source turns on when its key is added as a GitHub Actions secret on the SEO repo. Instructions are in the repo README."),
@@ -769,7 +858,8 @@
 
   // ---------- routing ----------
   function render() {
-    const id = (location.hash || "#overview").slice(1);
+    const [id, sub] = (location.hash || "#overview").slice(1).split("/");
+    ROUTE.sub = sub ? decodeURIComponent(sub) : null;
     const view = VIEWS[id] ? id : "overview";
     charts.splice(0).forEach((c) => c.destroy());
     document.querySelectorAll("#tabs a").forEach((a) => {

@@ -40,15 +40,19 @@ def ask_openai(sess, key, model, prompt):
         last = r
     else:
         raise RuntimeError(f"OpenAI {last.status_code}: {last.text[:200]}")
-    text, cites = [], []
+    text, cites, searches = [], [], []
     for item in r.json().get("output", []):
+        if item.get("type") == "web_search_call":
+            act = item.get("action") or {}
+            searches += [q for q in [act.get("query"), *(act.get("queries") or [])] if q]
+            continue
         if item.get("type") != "message":
             continue
         for c in item.get("content", []):
             if c.get("type") == "output_text":
                 text.append(c.get("text", ""))
                 cites += [a.get("url") for a in c.get("annotations", []) if a.get("url")]
-    return {"text": "\n".join(text), "citations": cites}
+    return {"text": "\n".join(text), "citations": cites, "searches": searches}
 
 
 def ask_gemini(sess, key, model, prompt):
@@ -57,19 +61,20 @@ def ask_gemini(sess, key, model, prompt):
         raise RuntimeError(f"Gemini {r.status_code}: {r.text[:200]}")
     cand = (r.json().get("candidates") or [{}])[0]
     text = "".join(p.get("text", "") for p in (cand.get("content") or {}).get("parts", []))
+    searches = list((cand.get("groundingMetadata") or {}).get("webSearchQueries") or [])
     cites = []
     for ch in (cand.get("groundingMetadata") or {}).get("groundingChunks", []):
         web = ch.get("web") or {}
         # Gemini returns redirect URLs; the title is usually the source domain.
         title = (web.get("title") or "").strip()
         cites.append(f"https://{title}/" if re.fullmatch(r"[\w.-]+\.[a-z]{2,}", title) else web.get("uri"))
-    return {"text": text, "citations": [c for c in cites if c]}
+    return {"text": text, "citations": [c for c in cites if c], "searches": searches}
 
 
 def ask_perplexity(sess, key, model, prompt):
     # Perplexity retired Sonar chat-completions; this uses the Agent API.
     ans = C.perplexity_agent(sess, key, prompt, model=model, timeout=180)
-    return {"text": ans["text"], "citations": ans["citations"]}
+    return {"text": ans["text"], "citations": ans["citations"], "searches": ans.get("searches", [])}
 
 
 def ask_anthropic(sess, key, model, prompt):
@@ -80,14 +85,18 @@ def ask_anthropic(sess, key, model, prompt):
                         "messages": [{"role": "user", "content": prompt}]})
     if r.status_code != 200:
         raise RuntimeError(f"Claude {r.status_code}: {r.text[:200]}")
-    text, cites, searched = [], [], []
+    text, cites, searched, searches = [], [], [], []
     for b in r.json().get("content", []):
-        if b.get("type") == "text":
+        if b.get("type") == "server_tool_use" and b.get("name") == "web_search":
+            q = (b.get("input") or {}).get("query")
+            if q:
+                searches.append(q)
+        elif b.get("type") == "text":
             text.append(b.get("text", ""))
             cites += [c.get("url") for c in b.get("citations") or [] if c.get("url")]
         elif b.get("type") == "web_search_tool_result" and isinstance(b.get("content"), list):
             searched += [x.get("url") for x in b["content"] if x.get("url")]
-    return {"text": "".join(text), "citations": cites or searched}
+    return {"text": "".join(text), "citations": cites or searched, "searches": searches}
 
 
 ASK = {"openai": ask_openai, "gemini": ask_gemini, "perplexity": ask_perplexity, "anthropic": ask_anthropic}
@@ -164,6 +173,7 @@ def run() -> None:
             ans = ASK[prov](sess, active[prov], model, p["text"])
             res = analyse(ans["text"], ans["citations"], brand_re, peers, our)
             return {"prompt_id": p["id"], "provider": prov, "model": model, **res,
+                    "searches": list(dict.fromkeys(ans.get("searches") or []))[:12],
                     "citations": ans["citations"][:20], "text": ans["text"][:6000]}
         except Exception as e:  # noqa: BLE001
             return {"prompt_id": p["id"], "provider": prov, "model": model, "error": str(e)[:300],
@@ -175,13 +185,21 @@ def run() -> None:
 
     by_prov = {p: rates([r for r in results if r["provider"] == p]) for p in active}
     cited = Counter(d for r in results for d in r.get("cited_domains", []))
-    C.write_json("ai/latest.json", {
+    from . import ai_sources
+    gsc_queries = C.read_json("gsc/queries.json", []) or []
+    latest = {
         "updated": C.now_iso(),
         "providers": {p: {"label": LABELS[p], "model": pcfg[p]["model"], **by_prov[p]} for p in active},
         "prompts": prompts,
         "results": results,
         "top_cited_domains": cited.most_common(25),
-    })
+    }
+    try:
+        latest["fanout"] = ai_sources.fanout(results, prompts, gsc_queries, LABELS)
+        latest["gap_sources"] = ai_sources.gap_sources(results, prompts, brand_re, our, cfg, C.session(), LABELS)
+    except Exception as e:  # noqa: BLE001  (extra analysis must never sink the weekly answers)
+        latest["analysis_error"] = str(e)[:300]
+    C.write_json("ai/latest.json", latest)
     C.upsert_history("ai/history.json", {
         "date": C.today().isoformat(),
         "overall": rates(results),

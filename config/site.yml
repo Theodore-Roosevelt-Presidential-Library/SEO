@@ -135,6 +135,13 @@ structured_data:
       wikipedia: https://en.wikipedia.org/wiki/Theodore_Roosevelt
       wikidata: https://www.wikidata.org/wiki/Q33866
 
+# IndexNow: tells Bing (Copilot, much of ChatGPT search) when a page changes.
+# Pages logged in config/changes.yml are submitted daily once the key file is live
+# at https://www.trlibrary.com/<key>.txt. The key isn't secret (it's published on the site).
+indexnow:
+  key: ""        # set after FiveJars serves the key file (or the Drupal IndexNow module is on)
+  days: 3        # submit changes logged within this many days
+
 # Work queue (docs/data/work_queue.json, top of digest.md): tasks an AI assistant
 # or a person can carry out. List task ids here once they're handed off, so the
 # queue shows them as waiting rather than asking again. Ids are shown in the queue.

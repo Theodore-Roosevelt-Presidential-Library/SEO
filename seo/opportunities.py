@@ -27,6 +27,13 @@ def expected_ctr(pos: float) -> float:
     return CTR_CURVE.get(p, 0.01 if p <= 20 else 0.003)
 
 
+def realistic_target(pos: float) -> int:
+    """The next realistic step up, not position one: a page at #5 can aim for #3,
+    at #9 for #5, on page two for the bottom of page one."""
+    p = round(pos)
+    return 3 if p <= 6 else 5 if p <= 10 else 8
+
+
 def build(query_pages, queries, pages, audit_pages, min_impr: int = 30) -> dict:
     audit_by = {C.norm_url(p.get("final_url") or p["url"]): p for p in audit_pages or []}
 
@@ -34,9 +41,12 @@ def build(query_pages, queries, pages, audit_pages, min_impr: int = 30) -> dict:
     sd = []
     for r in query_pages:
         if 4 <= r["position"] <= 20 and r["impressions"] >= min_impr:
-            gain = r["impressions"] * (expected_ctr(3) - r["ctr"])
+            tgt = realistic_target(r["position"])
+            # The page already gets its current clicks: only the difference counts.
+            gain = r["impressions"] * (expected_ctr(tgt) - r["ctr"])
             if gain > 0:
-                sd.append({**r, "est_extra_clicks": round(gain)})
+                sd.append({**r, "est_extra_clicks": round(gain), "target_position": tgt,
+                           "mechanism": f"move up from #{round(r['position'])} to about #{tgt}"})
     sd.sort(key=lambda r: -r["est_extra_clicks"])
 
     # low CTR for position
@@ -45,7 +55,8 @@ def build(query_pages, queries, pages, audit_pages, min_impr: int = 30) -> dict:
         if r["position"] <= 8 and r["impressions"] >= min_impr * 3:
             exp = expected_ctr(r["position"])
             if r["ctr"] < exp * 0.5:
-                low.append({**r, "expected_ctr": exp, "est_extra_clicks": round(r["impressions"] * (exp - r["ctr"]))})
+                low.append({**r, "expected_ctr": exp, "est_extra_clicks": round(r["impressions"] * (exp - r["ctr"])),
+                            "mechanism": "more clicks at the same position (title and description)"})
     low.sort(key=lambda r: -r["est_extra_clicks"])
 
     # query not reflected in the ranking page's title
@@ -93,11 +104,15 @@ def build(query_pages, queries, pages, audit_pages, min_impr: int = 30) -> dict:
     can.sort(key=lambda r: -r["impressions"])
 
     # page-level roll-up
-    score = defaultdict(lambda: {"est_extra_clicks": 0, "reasons": set()})
+    # The striking-distance searches and the page's low CTR are the same impressions
+    # seen two ways, so take the larger estimate rather than adding them.
+    score = defaultdict(lambda: {"sd": 0, "low": 0, "reasons": set()})
     for r in sd:
-        s = score[r["page"]]; s["est_extra_clicks"] += r["est_extra_clicks"]; s["reasons"].add("striking_distance")
+        s = score[r["page"]]; s["sd"] += r["est_extra_clicks"]; s["reasons"].add("striking_distance")
     for r in low:
-        s = score[r["page"]]; s["est_extra_clicks"] += r["est_extra_clicks"]; s["reasons"].add("low_ctr")
+        s = score[r["page"]]; s["low"] = max(s["low"], r["est_extra_clicks"]); s["reasons"].add("low_ctr")
+    for v in score.values():
+        v["est_extra_clicks"] = max(v["sd"], v["low"])
     for r in mit:
         score[r["page"]]["reasons"].add("missing_in_title")
     page_scores = sorted(
@@ -152,7 +167,10 @@ def run() -> None:
     log = CH.load()
     out = hold_back(out, CH.held_paths(log=log), log)
     out["updated"] = C.now_iso()
-    out["note"] = "Estimated extra clicks use a rough industry click-through curve. Treat them as a way to rank opportunities, not a forecast."
+    out["note"] = ("Upside is sized against a realistic next step (a few places up, not #1), minus the clicks the page already gets, "
+                   "using a rough industry click-through curve; overlapping searches for one page aren't added twice. "
+                   "Use it to rank opportunities, never as a forecast, and say how the gain would happen: a new ranking, "
+                   "a higher position, or more clicks at the same position.")
     C.write_json("opportunities.json", out)
     C.set_status("opportunities", "ok", f"{len(out['striking_distance'])} striking-distance queries, {len(out['low_ctr'])} low-CTR pages"
                  + (f"; {len(out['held_back'])} recently changed pages held back" if out["held_back"] else ""))

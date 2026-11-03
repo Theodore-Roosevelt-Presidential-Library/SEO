@@ -36,6 +36,14 @@ RECIPES = {
                   "Title), which renders as the H1; or change the first heading in the top text block to Heading 1. Save layout.",
     "h1_multiple": "Open the Layout. Keep one H1 (normally the page title block). In any text block whose heading is set to "
                    "Heading 1, change it to Heading 2. Save layout.",
+    "chain": "Configuration > Search and metadata > URL redirects: find the redirects for this address and point the first one straight "
+             "at the final page. Update any links on the site that use the old address.",
+    "canonical": "Edit the node > 'Customize meta tags' > Advanced > Canonical URL: clear it (Drupal then uses the page's own address) "
+                 "or set it to the live page it should point to.",
+    "headings": "Open the Layout. In the text blocks, change the heading levels so they step down one at a time (H2 under the page "
+                "title, H3 under an H2). Headings used just for size should be styled text instead.",
+    "deep": "Link to the page from its section's hub page or a related, well-visited page, so people (and crawlers) reach it in "
+            "three or four clicks.",
     "alias": "Edit the node > URL alias: give it a readable path that fits its section; save. The /node/NID address keeps working "
              "and the sitemap will list the readable one. "
              "(The lasting fix is FiveJars keeping unaliased /node/ URLs out of the XML sitemap.)",
@@ -62,6 +70,16 @@ RECIPES = {
                      "(Wikipedia/Wikidata only when verified).",
     "schema_event": "Edit the node > 'Customize meta tags' > Schema.org Event: name, startDate/endDate (ISO 8601 with a colon in the "
                     "offset, e.g. 2026-12-04T18:00:00-06:00), location = the Library, offers (price, ticket URL) only from the page.",
+    "striking": "Open the page and make it the best answer to that exact search: use the search's words in the title or a heading, "
+                "answer it plainly in the first paragraph, add the specifics people want (facts already on the site), and link to it "
+                "from 2-3 related pages. Don't rewrite a page that already ranks in the top 3 for its main search.",
+    "outreach": "Read the page. If it's a list of things to do or a travel guide that names nearby attractions, find the author or the "
+                "update/contact link and ask to be added, with a two-sentence blurb (what the Library is, why it's worth the stop, "
+                "about 3 1/2 hours) and a photo. Draft the note for approval; nothing goes out without it.",
+    "fanout": "These are the searches the assistants ran before answering a question where they left the Library out. Find the "
+              "trlibrary.com page that should answer each one (or note that none does). Strengthen that page for the search: "
+              "say it in the title or a heading and answer it in the first paragraph, with facts already on the site. If no page fits, "
+              "propose one.",
     "global": "Sitewide (Global) meta tags: change them only through Configuration > Development > Configuration synchronization > "
               "Import > Single item (Simple configuration, metatag.metatag_defaults.global), then clear all caches. Never save the "
               "Global defaults form itself: it drops fields.",
@@ -84,6 +102,10 @@ AUDIT = {
     "unaliased_url":       (TRPL, "alias", "The sitemap lists a readable path instead of /node/NID", 0),
     "redirect_in_sitemap": (TRPL, "sitemap", "The sitemap no longer lists the redirecting URL", 0),
     "slow":                (FIVEJARS, "fivejars", "Responds in under 3 seconds", 0),
+    "redirect_chain":      (TRPL, "chain", "The address redirects once, straight to the final page", 0),
+    "canonical_conflict":  (TRPL, "canonical", "The canonical tag points to a live, indexable page (usually the page itself)", 0),
+    "heading_skip":        (TRPL, "headings", "Heading levels step down one at a time", 50),
+    "deep_page":           (TRPL, "deep", "The page is 4 or fewer clicks from the homepage", 50),
 }
 META_CODES = {k for k, v in AUDIT.items() if v[1] == "meta"}
 
@@ -133,12 +155,15 @@ def build() -> dict:
     # ---- 1. Audit issues ----
     by_code = defaultdict(list)
     for p in apages:
-        if p.get("redirected") or p.get("noindex") or (p.get("status") or 200) >= 400:
+        if (p.get("status") or 200) >= 400:
             continue
         path = _path(p["url"])
         for code in p.get("issues", []):
-            if code in AUDIT:
-                by_code[code].append((path, p))
+            if code not in AUDIT:
+                continue
+            if (p.get("redirected") or p.get("noindex")) and code not in ("redirect_in_sitemap", "redirect_chain", "unaliased_url"):
+                continue
+            by_code[code].append((path, p))
     for code, rows in by_code.items():
         owner, recipe, done, min_imp = AUDIT[code]
         editor_rows, template_rows = [], []
@@ -162,6 +187,16 @@ def build() -> dict:
                     it["h1"] = p.get("h1")
                 if code == "thin_content":
                     it["words"] = p.get("words")
+                if code == "heading_skip":
+                    it["skips"] = p.get("heading_skips")
+                if code == "deep_page":
+                    it["clicks"] = p.get("click_depth")
+                if code == "canonical_conflict":
+                    it["canonical"] = p.get("canonical")
+                    it["problem"] = p.get("canonical_problem")
+                if code == "redirect_chain":
+                    it["hops"] = p.get("redirect_hops")
+                    it["final"] = _path(p.get("final_url") or "")
                 if path in held and code in META_CODES:
                     it["held"] = True
                 items.append(it)
@@ -248,7 +283,51 @@ def build() -> dict:
                       "pages": [{"page": v["link"], "goes_to": v["goes_to"], "linked_from": v.get("sources", [])[:8], "impressions": 0}
                                 for v in via], "impact": _score("low", sum(imp.get(x, 0) for v in via for x in v.get("sources", [])))})
 
-    # ---- 3. Structured data ----
+    # ---- 2b. Search opportunities (Search Console) ----
+    opp = C.read_json("opportunities.json") or {}
+    sd = [r for r in opp.get("striking_distance", []) if _path(r["page"]) not in held][:30]
+    if sd:
+        tasks.append({"id": "search:striking_distance", "area": "search",
+                      "title": "Strengthen pages ranking just off the top for searches people make",
+                      "owner": TRPL, "severity": "medium", "count": len(sd), "how": RECIPES["striking"],
+                      "done_when": "Average position for the search improves over the next 4 weeks (change log before/after)",
+                      "pages": [{"page": _path(r["page"]), "impressions": r["impressions"], "search": r["query"],
+                                 "position": r["position"], "mechanism": r.get("mechanism"), "upside": r.get("est_extra_clicks")}
+                                for r in sd],
+                      "impact": _score("medium", sum(r["impressions"] for r in sd[:25]))})
+    low = [r for r in opp.get("low_ctr", []) if _path(r["page"]) not in held][:20]
+    if low:
+        tasks.append({"id": "search:low_ctr", "area": "search", "title": "Pages ranking well that people skip: rewrite title and description",
+                      "owner": TRPL, "severity": "medium", "count": len(low), "how": RECIPES["meta"],
+                      "done_when": "Click-through rate rises at the same position (change log before/after)",
+                      "pages": [{"page": _path(r["page"]), "impressions": r["impressions"], "position": r["position"],
+                                 "ctr": r.get("ctr"), "mechanism": r.get("mechanism"), "upside": r.get("est_extra_clicks")}
+                                for r in low],
+                      "impact": _score("medium", sum(r["impressions"] for r in low[:25]))})
+
+    # ---- 3. AI visibility: where assistants look, and lists that leave the Library out ----
+    ai = C.read_json("ai/latest.json") or {}
+    gs = ai.get("gap_sources") or {}
+    targets = gs.get("add_us_targets") or []
+    if targets:
+        tasks.append({"id": "ai:ask_to_be_added", "area": "ai_visibility", "title": "Get onto pages AI cites that leave the Library out",
+                      "owner": TRPL, "severity": "medium", "count": len(targets), "how": RECIPES["outreach"],
+                      "done_when": "The page names the Library (next weekly run re-reads it)",
+                      "pages": [{"page": t["url"], "impressions": 0, "type": t["type"], "answers": t["answers"],
+                                 "named": t.get("attractions_named")} for t in targets],
+                      "impact": _score("medium", 5000 * sum(t["answers"] for t in targets))})
+    fo = [x for x in (ai.get("fanout") or {}).get("searches", []) if x.get("in_gap_answers")
+          and (not x.get("google") or (x["google"].get("position") or 99) > 10)]
+    if fo:
+        tasks.append({"id": "ai:searches_we_miss", "area": "ai_visibility",
+                      "title": "Searches AI assistants run where trlibrary.com isn't on page one",
+                      "owner": TRPL, "severity": "medium", "count": len(fo), "how": RECIPES["fanout"],
+                      "done_when": "trlibrary.com ranks top 10 for the search (Search Console) and the next AI run cites it",
+                      "pages": [{"page": x["search"], "impressions": (x.get("google") or {}).get("impressions") or 0,
+                                 "google": x.get("google"), "engines": x["engines"], "questions": x["questions"][:2]} for x in fo[:40]],
+                      "impact": _score("medium", 3000 * sum(x["in_gap_answers"] for x in fo[:20]))})
+
+    # ---- 4. Structured data ----
     for f in sc.get("sitewide", []):
         if f["id"] == "node_urls":  # same fix as the audit's unaliased_url task
             continue
@@ -285,6 +364,15 @@ def build() -> dict:
                 for r in top:
                     jobs[r["page"]]["markup"] = {"type": g["schema_type"], "how": field}
 
+    if not ((C.config().get("indexnow") or {}).get("key")):
+        tasks.append({"id": "setup:indexnow", "area": "audit", "title": "Turn on IndexNow so Bing and Copilot see changes within hours",
+                      "owner": FIVEJARS, "severity": "medium", "count": 1,
+                      "how": "Ask FiveJars to install and enable the Drupal IndexNow module (it pings Bing, Yandex and others whenever "
+                             "a node is saved) or to serve a key file at https://www.trlibrary.com/<key>.txt. Then put the key in "
+                             "config/site.yml (indexnow.key) so the SEO tool also submits pages logged in changes.yml. "
+                             + RECIPES["fivejars"],
+                      "done_when": "The key file is live and the daily run reports 'Submitted N changed page(s)'",
+                      "pages": [], "impact": _score("medium", site_total) * 0.6})
     wq = (C.config().get("work_queue") or {})
     ticketed, skip = set(wq.get("ticketed") or []), set(wq.get("skip") or [])
     blocked = wq.get("blocked") or {}
@@ -299,6 +387,10 @@ def build() -> dict:
         t["rank"] = i
         t["impact"] = round(t["impact"], 1)
 
+    for t in tasks:
+        t["reach"] = sum(p.get("impressions") or 0 for p in t["pages"][:25]) if t["pages"] else None
+    moves, what_else = pick_moves(tasks)
+
     page_jobs = []
     for page, j in jobs.items():
         n = len(j["fixes"]) + len(j["links_to_add"]) + (1 if j["markup"] else 0)
@@ -312,13 +404,63 @@ def build() -> dict:
     return {
         "generated": C.now_iso(),
         "summary": {"tasks": len(tasks), "by_owner": dict(by_owner),
-                    "by_area": {a: sum(1 for t in tasks if t["area"] == a) for a in ("audit", "internal_links", "structured_data")},
+                    "by_area": {a: sum(1 for t in tasks if t["area"] == a) for a in ("search", "audit", "internal_links", "structured_data", "ai_visibility")},
                     "page_jobs": len(page_jobs), "held_pages": len(held)},
+        "moves": moves,
+        "what_else": what_else,
         "workflow": WORKFLOW,
         "recipes": RECIPES,
         "tasks": tasks,
         "page_jobs": page_jobs[:60],
     }
+
+
+def _item_text(t: dict, p: dict) -> str:
+    if p.get("search"):
+        return f"{p['page']} for \"{p['search']}\" (#{p.get('position')}, {p.get('mechanism') or ''})"
+    if p.get("engines"):
+        return f"\"{p['page']}\" (run by {', '.join(p['engines'])})"
+    return p.get("page") or ""
+
+
+def pick_moves(tasks: list[dict], n: int = 3) -> tuple[list[dict], list[dict]]:
+    """Research broadly, recommend selectively: the top open task from up to three
+    different areas becomes 'this week's moves'; the next few get a one-line reason
+    they didn't make the cut."""
+    moves, areas = [], set()
+    for t in tasks:
+        if t["status"] != "to do" or t["owner"] != TRPL or t["area"] in areas:
+            continue
+        areas.add(t["area"])
+        moves.append({"task": t["id"], "rank": t["rank"], "area": t["area"], "title": t["title"],
+                      "start_with": [_item_text(t, p) for p in t["pages"][:3]] or [t.get("detail") or "one sitewide change (see How)"],
+                      "why": f"{t['severity']} priority; " + (f"pages involved get {t['reach']:,} Google impressions (28 days)"
+                                                               if t.get("reach") else "affects the whole site"),
+                      "how": t["how"], "done_when": t["done_when"]})
+        if len(moves) == n:
+            break
+    floor = min((t["reach"] for t in tasks if t["id"] in {m["task"] for m in moves} and t.get("reach")), default=None)
+    what_else = []
+    for t in tasks:
+        if t["id"] in {m["task"] for m in moves}:
+            continue
+        if t["status"] == "with FiveJars":
+            why = "already with FiveJars; check whether it has landed"
+        elif t["status"] == "blocked":
+            why = "blocked: " + t.get("blocked_by", "")
+        elif t["status"] == "needs approval":
+            why = "needs a decision first (merge or archive)"
+        elif t["owner"] != TRPL:
+            why = "FiveJars work; send as a ticket"
+        elif t["area"] in areas:
+            why = f"same area as a move this week ({t['area'].replace('_', ' ')}); next in line"
+        else:
+            why = (f"smaller reach ({(t.get('reach') or 0):,} Google impressions vs {floor:,} for this week's moves)" if floor
+                   else "lower priority than this week's moves")
+        what_else.append({"task": t["id"], "title": t["title"], "why_not_now": why})
+        if len(what_else) == 8:
+            break
+    return moves, what_else
 
 
 WORKFLOW = [

@@ -553,3 +553,76 @@ def test_work_queue_turns_findings_into_tasks(monkeypatch):
     assert {f["issue"] for f in job["fixes"]} == {"meta_missing", "h1_multiple"} and job["markup"]["type"] == "Article"
     md = DG._work_queue_md(q)
     assert any("Work queue" in x for x in md) and any("Waiting on FiveJars" in x for x in md)
+
+
+def test_new_audit_checks_heading_skips_chains_canonical_and_depth():
+    html = "<html><body><main><h1>T</h1><h2>A</h2><h4>B</h4><h3>C</h3><h5>D</h5></main></body></html>"
+    p = audit.parse_page(html, "https://www.trlibrary.com/x")
+    assert p["heading_skips"] == ["H2→H4", "H3→H5"]
+    p.update(url="https://www.trlibrary.com/x", final_url="https://www.trlibrary.com/x", status=200)
+    assert "heading_skip" in audit.check_page(p)
+    assert "redirect_chain" in audit.check_page({"url": "u", "final_url": "v", "status": 200, "redirected": True, "redirect_hops": 2})
+    U = "https://www.trlibrary.com"
+    pages = [{"url": U + "/", "status": 200, "issues": [], "_links": [U + "/a"]},
+             {"url": U + "/a", "status": 200, "issues": [], "_links": [U + "/b"]},
+             {"url": U + "/b", "status": 200, "issues": [], "_links": [U + "/c"]},
+             {"url": U + "/c", "status": 200, "issues": [], "_links": [U + "/d"]},
+             {"url": U + "/d", "status": 200, "issues": [], "_links": [U + "/e"]},
+             {"url": U + "/e", "status": 200, "issues": ["canonical_mismatch"], "canonical": U + "/old", "_links": []},
+             {"url": U + "/old", "status": 200, "redirected": True, "final_url": U + "/new", "issues": []}]
+    audit.site_checks(pages, U)
+    e = pages[5]
+    assert e["click_depth"] == 5 and "deep_page" in e["issues"] and "canonical_conflict" in e["issues"]
+    assert e["canonical_problem"] == "redirects" and "_links" not in e and "deep_page" not in pages[4]["issues"]
+
+
+def test_ai_fanout_and_gap_sources():
+    from seo import ai_sources as S
+    results = [{"prompt_id": "p1", "provider": "openai", "mentioned": False, "peers": ["Mount Rushmore"],
+                "searches": ["things to do near Medora ND", "Medora attractions"],
+                "citations": ["https://example.com/best-things-to-do-medora?utm_source=openai", "https://en.wikipedia.org/wiki/Medora",
+                              "https://www.trlibrary.com/visit"]},
+               {"prompt_id": "p1", "provider": "anthropic", "mentioned": True, "peers": [], "searches": ["things to do near medora nd"]}]
+    prompts = [{"id": "p1", "text": "What should I see near Medora?"}]
+    gsc = [{"query": "medora attractions", "position": 14.2, "impressions": 900, "clicks": 3}]
+    f = S.fanout(results, prompts, gsc, {"openai": "ChatGPT", "anthropic": "Claude"})
+    rows = {x["search"].lower(): x for x in f["searches"]}
+    assert rows["things to do near medora nd"]["engines"] == ["ChatGPT", "Claude"] and rows["things to do near medora nd"]["google"] is None
+    assert rows["medora attractions"]["google"]["position"] == 14.2 and f["summary"]["we_rank_lower"] == 1
+
+    class Sess:
+        def get(self, url, **kw):
+            class R: status_code = 200; headers = {"content-type": "text/html"}; text = "<p>Mount Rushmore is great</p>"
+            return R()
+    g = S.gap_sources(results, prompts, C.brand_regex(["Theodore Roosevelt Presidential Library"]), "trlibrary.com", {}, Sess(),
+                      {"openai": "ChatGPT"})
+    by = {x["url"]: x for x in g["sources"]}
+    lst = by["https://example.com/best-things-to-do-medora"]                 # utm_ stripped
+    assert lst["type"] == "list or guide" and lst["mentions_library"] is False
+    assert by["https://en.wikipedia.org/wiki/Medora"]["type"] == "reference" and by["https://www.trlibrary.com/visit"]["type"] == "owned"
+    assert [x["url"] for x in g["add_us_targets"]] == ["https://example.com/best-things-to-do-medora"]
+
+
+def test_moves_pick_three_areas_and_explain_the_rest():
+    from seo import workqueue as WQ
+    T = lambda i, area, owner=WQ.TRPL, status="to do", reach=100: {"id": i, "rank": 0, "area": area, "title": i, "owner": owner,  # noqa: E731
+                                                                   "status": status, "severity": "medium", "pages": [{"page": "/x", "impressions": reach}],
+                                                                   "reach": reach, "how": "h", "done_when": "d"}
+    tasks = [T("a1", "audit", reach=900), T("a2", "audit"), T("l1", "internal_links"), T("f1", "structured_data", WQ.FIVEJARS, "with FiveJars"),
+             T("s1", "search", reach=50), T("x1", "ai_visibility")]
+    moves, rest = WQ.pick_moves(tasks)
+    assert [m["task"] for m in moves] == ["a1", "l1", "s1"]
+    why = {w["task"]: w["why_not_now"] for w in rest}
+    assert "same area" in why["a2"] and "FiveJars" in why["f1"] and why["x1"].startswith("smaller reach")
+
+
+def test_honest_upside_and_indexnow_pending():
+    assert opportunities.realistic_target(5) == 3 and opportunities.realistic_target(9) == 5 and opportunities.realistic_target(15) == 8
+    o = opportunities.build([{"query": "q", "page": "/p", "position": 9, "impressions": 1000, "ctr": 0.02, "clicks": 20}], [], [], [])
+    sd = o["striking_distance"][0]
+    assert sd["target_position"] == 5 and sd["est_extra_clicks"] == 40 and "to about #5" in sd["mechanism"]
+    from seo import indexnow
+    log = {"changes": [{"date": _dt.date(2026, 11, 2), "page": "/a"}, {"date": _dt.date(2026, 10, 1), "page": "/old"},
+                       {"date": _dt.date(2026, 11, 2), "page": "*"}]}
+    assert indexnow.pending(log, set(), _dt.date(2026, 11, 3), 3, "https://www.trlibrary.com") == ["https://www.trlibrary.com/a"]
+    assert indexnow.pending(log, {"2026-11-02 https://www.trlibrary.com/a"}, _dt.date(2026, 11, 3), 3, "https://www.trlibrary.com") == []

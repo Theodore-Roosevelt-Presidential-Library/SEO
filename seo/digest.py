@@ -31,11 +31,14 @@ HOUSE_RULES = [
     "Nonpartisan: no current political figures or debates.",
     "Page titles: the site appends ' | Theodore Roosevelt Presidential Library' automatically; suggest only the page-specific part, 60 characters or fewer.",
     "Meta descriptions: 120-155 characters with a reason to click.",
+    "Recommend selectively: lead with one to three moves (start from 'This week's moves'), then a short 'what else we checked' list, each with a one-line reason it can wait.",
+    "Size gains honestly: name how the gain happens (a new ranking, a higher position, or more clicks at the same position); a page that already ranks already gets some clicks; upside figures rank options and are never forecasts.",
     "Website changes are made in Drupal Layout Builder by the TRPL team; bugs and features go to the developers (FiveJars).",
 ]
 
 RAW_FILES = {
     "changes.json": "Change log: pages changed recently (held back from recommendations) with Search Console before/after numbers",
+    "indexnow.json": "IndexNow submissions: changed pages sent to Bing and other engines, by date",
     "work_queue.json": "Work queue: every audit, internal-link and structured-data fix as a task with pages, owner (TRPL or FiveJars), Drupal steps and a done-when check, plus page jobs that bundle all fixes for one page",
     "status.json": "Which data sources are on, last run time, errors",
     "gsc/summary.json": "Search Console totals, last 28 days vs prior 28",
@@ -140,6 +143,12 @@ def build() -> dict:
                             for r in res if r["prompt_id"] == pid]}
                 for pid, p in prompts.items()],
             "top_cited_domains": ai.get("top_cited_domains", [])[:15],
+            "searches_ai_ran": (ai.get("fanout") or {}).get("searches", [])[:40],
+            "searches_note": (ai.get("fanout") or {}).get("note"),
+            "searches_summary": (ai.get("fanout") or {}).get("summary"),
+            "sources_when_missing": {k: (ai.get("gap_sources") or {}).get(k) for k in ("note", "gap_answers", "by_type", "type_actions")}
+                                    | {"sources": (ai.get("gap_sources") or {}).get("sources", [])[:30],
+                                       "ask_to_be_added": (ai.get("gap_sources") or {}).get("add_us_targets", [])},
             "errors": list(dict.fromkeys(f"{r['provider']}: {' '.join(r['error'].split())[:140]}" for r in ai.get("results", []) if r.get("error")))[:3],
         }
 
@@ -286,11 +295,18 @@ def _work_queue_md(q: dict | None) -> list[str]:
     open_ = [t for t in tasks if t["status"] not in ("with FiveJars", "blocked")]
     waiting = [t for t in tasks if t["status"] in ("with FiveJars", "blocked")]
     L = ["\n## Work queue: what to fix next, who fixes it, and how",
-         f"{sm['tasks']} tasks ({sm['by_area'].get('audit', 0)} audit, {sm['by_area'].get('internal_links', 0)} internal links, "
-         f"{sm['by_area'].get('structured_data', 0)} structured data); {len(waiting)} already with FiveJars. "
+         f"{sm['tasks']} tasks ({sm['by_area'].get('search', 0)} search, {sm['by_area'].get('audit', 0)} audit, {sm['by_area'].get('internal_links', 0)} internal links, "
+         f"{sm['by_area'].get('structured_data', 0)} structured data, {sm['by_area'].get('ai_visibility', 0)} AI visibility); "
+         f"{len(waiting)} with FiveJars or blocked. "
          f"Ranked by severity x the Google audience of the pages involved. Full lists, every page, and step-by-step Drupal recipes: "
          f"{BASE}/data/work_queue.json\n",
-         "**How to work it**"]
+         "### This week's moves"]
+    for i, m in enumerate(q.get("moves") or [], 1):
+        L.append(f"{i}. **{m['title']}** (`{m['task']}`): {m['why']}. Start with: " + "; ".join(m["start_with"]).rstrip(".") + ".")
+    if q.get("what_else"):
+        L += ["", "### What else we checked (and why it can wait)"]
+        L += [f"- {w['title']} (`{w['task']}`): {w['why_not_now']}" for w in q["what_else"]]
+    L += ["", "**How to work it**"]
     L += [f"{i}. {w}" for i, w in enumerate(q["workflow"], 1)]
     L += ["", _table([{"rank": t["rank"], "id": t["id"], "area": t["area"].replace("_", " "), "title": t["title"],
                        "owner": t["owner"].split(" (")[0], "count": t["count"], "status": t["status"]} for t in open_[:30]],
@@ -327,6 +343,13 @@ def _work_queue_md(q: dict | None) -> list[str]:
                 bits.append(f"-> {p['redirect_to']} ({p.get('confidence')})")
             if p.get("goes_to"):
                 bits.append(f"-> {p['goes_to']}")
+            if p.get("search"):
+                bits.append(f"\"{p['search']}\" #{p.get('position')}, {p.get('mechanism')}, upside ~{p.get('upside')} clicks/28d")
+            if p.get("engines"):
+                g = p.get("google")
+                bits.append(f"run by {', '.join(p['engines'])}; we rank " + (f"#{g['position']}" if g else "nowhere"))
+            if p.get("type") and t["id"] == "ai:ask_to_be_added":
+                bits.append(f"{p['type']}, cited in {p.get('answers')} answers; names {', '.join(p.get('named') or []) or 'other places'}")
             L.append("  - " + ", ".join(bits))
         if len(t["pages"]) > 8:
             L.append(f"  - ...and {len(t['pages']) - 8} more in work_queue.json")
@@ -384,7 +407,7 @@ def to_markdown(d: dict) -> str:
         L += ["## Opportunities (ranked)", f"_{o.get('note')}_\n",
               "### Striking distance: ranking 4-20 with demand; strengthen the page for the exact search",
               _table([{**x, "page": _short(x["page"])} for x in o["striking_distance"]],
-                     [("query", "Search"), ("page", "Page"), ("position", "Pos."), ("impressions", "Impr."), ("est_extra_clicks", "Upside")]),
+                     [("query", "Search"), ("page", "Page"), ("position", "Pos."), ("impressions", "Impr."), ("mechanism", "How"), ("est_extra_clicks", "Upside")]),
               "### Ranking well but skipped: rewrite title/meta description",
               _table([{**x, "page": _short(x["page"])} for x in o["low_ctr"]],
                      [("page", "Page"), ("position", "Pos."), ("ctr", "CTR"), ("expected_ctr", "Typical"), ("est_extra_clicks", "Upside")]),
@@ -426,6 +449,31 @@ def to_markdown(d: dict) -> str:
                 L.append(f"- {ans['engine']}: {state}.{extra}{desc} Sources: {', '.join(ans['sources']) or 'none'}")
             L.append("")
         L += ["### Sites AI assistants cite most", ", ".join(f"{dm} ({n})" for dm, n in a["top_cited_domains"]) + "\n"]
+        if a.get("searches_ai_ran"):
+            sm = a.get("searches_summary") or {}
+            L += ["### Searches the assistants ran before answering",
+                  f"{a.get('searches_note')} {sm.get('unique')} different searches: we rank top 10 for {sm.get('we_rank_top10')}, "
+                  f"lower for {sm.get('we_rank_lower')}, not at all for {sm.get('not_ranking')}.\n",
+                  _table([{"search": x["search"], "engines": x["engines"], "gap": x["in_gap_answers"],
+                           "google": "–" if not x["google"] else f"#{x['google']['position']} ({x['google']['impressions']:,} impr.)"}
+                          for x in a["searches_ai_ran"][:20]],
+                         [("search", "Search the assistant ran"), ("engines", "Engines"), ("gap", "In answers missing us"),
+                          ("google", "trlibrary.com in Google")])]
+        sw = a.get("sources_when_missing") or {}
+        if sw.get("sources"):
+            L += ["### Pages AI cites when it leaves the Library out",
+                  f"{sw.get('note')} {sw.get('gap_answers')} answers left the Library out. Citations by type: "
+                  + ", ".join(f"{k} {v}" for k, v in (sw.get("by_type") or {}).items()) + ".\n",
+                  _table([{"url": x["url"], "type": x["type"], "answers": x["answers"],
+                           "mentions": {True: "yes", False: "NO", None: "–"}[x.get("mentions_library")],
+                           "named": x["attractions_named"]} for x in sw["sources"][:20]],
+                         [("url", "Page"), ("type", "Type"), ("answers", "Answers"), ("mentions", "Mentions the Library"),
+                          ("named", "Attractions it helped name")])]
+            if sw.get("ask_to_be_added"):
+                L += ["**Ask to be added** (cited by AI, lists other things, doesn't mention the Library):"]
+                L += [f"- {x['url']} ({x['type']}; cited in {x['answers']} answers)" for x in sw["ask_to_be_added"]]
+                L.append("")
+            L += ["What to do by type:"] + [f"- **{k}**: {v}" for k, v in (sw.get("type_actions") or {}).items()] + [""]
 
     au = d.get("audit")
     if au:

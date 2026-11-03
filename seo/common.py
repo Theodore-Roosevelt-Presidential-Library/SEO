@@ -195,7 +195,7 @@ def perplexity_agent(sess, key: str, text: str, preset: str = "fast", model: str
     if r.status_code != 200:
         raise RuntimeError(f"Perplexity {r.status_code}: {r.text[:200]}")
     d = r.json()
-    texts, cites = [], []
+    texts, cites, searches = [], [], []
     for item in d.get("output") or []:
         if item.get("type") == "message":
             for c in item.get("content") or []:
@@ -204,9 +204,11 @@ def perplexity_agent(sess, key: str, text: str, preset: str = "fast", model: str
                     cites += [a.get("url") for a in c.get("annotations") or [] if a.get("url")]
         elif item.get("type") == "search_results":
             cites += [x.get("url") for x in item.get("results") or [] if x.get("url")]
+            searches += [q for q in [item.get("query"), *(item.get("queries") or [])] if isinstance(q, str) and q]
     if not texts and d.get("output_text"):
         texts.append(d["output_text"])
-    return {"text": "\n".join(texts), "citations": list(dict.fromkeys(c for c in cites if c)), "status_code": r.status_code}
+    return {"text": "\n".join(texts), "citations": list(dict.fromkeys(c for c in cites if c)),
+            "searches": list(dict.fromkeys(searches)), "status_code": r.status_code}
 
 
 # ---------- Google sign-in shared by Search Console and GA4 ----------
