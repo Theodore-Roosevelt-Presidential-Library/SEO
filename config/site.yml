@@ -134,3 +134,29 @@ structured_data:
     tr:
       wikipedia: https://en.wikipedia.org/wiki/Theodore_Roosevelt
       wikidata: https://www.wikidata.org/wiki/Q33866
+
+# Work queue (docs/data/work_queue.json, top of digest.md): tasks an AI assistant
+# or a person can carry out. List task ids here once they're handed off, so the
+# queue shows them as waiting rather than asking again. Ids are shown in the queue.
+work_queue:
+  ticketed:   # sent to FiveJars (Basecamp, "SEO tool: technical fixes" doc, 2026-10-27)
+    - schema:sitewide:tr_entity
+    - schema:sitewide:llms_txt
+    - schema:sitewide:admission
+    - schema:sitewide:date_format
+    - schema:sitewide:og_type
+    - schema:tr_articles
+    - schema:tr_hubs
+    - schema:tr_people
+    - schema:tr_speeches
+    - schema:videos
+    - schema:video_playlists
+    - schema:podcast_episode
+    - schema:podcast_series
+    - schema:itineraries
+    - schema:press
+    - schema:trustees
+    - schema:faq
+  blocked:    # task id: what it's waiting on
+    schema:sitewide:sameas: "the per-page sameAs field is capped at 255 characters; FiveJars asked to raise it. Wikidata is in place; Wikipedia and Bluesky go back in once it's raised"
+  skip: []    # task ids to leave out entirely

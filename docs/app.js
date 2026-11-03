@@ -12,7 +12,7 @@
     audit: "data/audit/summary.json", auditPages: "data/audit/pages.json", auditHist: "data/audit/history.json",
     tips: "data/tips.json", tracking: "data/tracking.json",
     ux: "data/ux/latest.json", uxHist: "data/ux/history.json", checkout: "data/checkout/latest.json", links: "data/links.json",
-    schema: "data/schema.json", changes: "data/changes.json",
+    schema: "data/schema.json", changes: "data/changes.json", queue: "data/work_queue.json",
   };
   const D = {};
   const charts = [];
@@ -391,6 +391,7 @@
         kpi("llms.txt", s.llms_txt ? "Yes" : "No", "A plain-text guide for AI tools at /llms.txt"),
         kpi("Errors", num((s.status_codes && Object.entries(s.status_codes).filter(([c]) => +c >= 400).reduce((a, [, n]) => a + n, 0)) || 0), "Pages returning 4xx/5xx"),
       ));
+      if (D.queue) out.push(el("p", { class: "small", style: "margin-top:.75rem" }, "Who fixes each issue, the Drupal steps and the pages to start with are in the ", el("a", { href: "#queue" }, "Work Queue"), " tab."));
       if (D.auditHist && D.auditHist.length > 1) out.push(el("div", { class: "card", style: "margin-top:1rem" }, lineChart([
         { label: "Health", data: D.auditHist.map((x) => x.score) }, { label: "AI readiness", data: D.auditHist.map((x) => x.ai_score) }], D.auditHist.map((x) => x.date))));
 
@@ -521,6 +522,64 @@
       if (wk.length > 1) out.push(el("h2", {}, "Weekly trend"), el("div", { class: "card" }, lineChart([
         { label: "Checkout completion", data: wk.map((w) => w.checkout_completion) }, { label: "Store visitors who buy", data: wk.map((w) => (typeof w.store_conversion === "number" ? w.store_conversion : null)) }],
         wk.map((w) => `Wk ${String(w.week).slice(4)}`), { pctAxis: true })));
+      return out;
+    },
+
+    queue() {
+      const Q = D.queue;
+      if (!Q) return [empty("The work queue hasn't been built yet.", "It's rebuilt with the digest, daily and weekly.")];
+      const s = Q.summary || {};
+      const pageLink = (p) => (p || "").startsWith("http") ? link(p, shortUrl(p)) : link("https://www.trlibrary.com" + p, p);
+      const pill = (t) => el("span", { class: `pill ${t.status === "with FiveJars" || t.status === "blocked" ? "low" : t.status === "needs approval" ? "medium" : "ok"}`, title: t.blocked_by || "" }, t.status);
+      const waiting = (Q.tasks || []).filter((t) => t.status === "with FiveJars" || t.status === "blocked").length;
+      const trpl = (Q.tasks || []).filter((t) => t.owner.startsWith("TRPL") && t.status !== "with FiveJars" && t.status !== "blocked").length;
+      const out = [el("p", { class: "lead" }, "Every fix the audit, internal-links and structured-data checks found, turned into tasks: which pages (busiest first), who can do it, the steps in Drupal, and how to tell it worked. AI assistants read the same queue (digest.md and work_queue.json) and are told to carry tasks out after approval, not just recommend them.")];
+      out.push(el("div", { class: "grid kpis" },
+        kpi("Tasks", num(s.tasks), `${num((s.by_area || {}).audit)} audit · ${num((s.by_area || {}).internal_links)} links · ${num((s.by_area || {}).structured_data)} markup`),
+        kpi("TRPL can do now", num(trpl), "In Drupal admin"),
+        kpi("Waiting on FiveJars", num(waiting), "Ticketed or blocked (config/site.yml)"),
+        kpi("Page jobs", num(s.page_jobs), "Pages with several fixes to do in one visit"),
+      ));
+      out.push(el("details", { class: "card" }, el("summary", {}, el("strong", {}, "How to work the queue")),
+        el("ol", { class: "small" }, ...(Q.workflow || []).map((w) => el("li", {}, w)))));
+      out.push(el("h2", {}, "Tasks, highest value first"));
+      for (const t of Q.tasks || []) {
+        const cols = [{ key: "page", label: "Page", cls: "url", render: (r) => pageLink(r.page) }, { key: "impressions", label: "Impr.", num: true, fmt: num }];
+        const extra = (r) => {
+          if (r.links) return r.links.map((x) => `[[${x.words}]] → ${x.to}`).join("; ");
+          if (r.link_from) return "link from " + r.link_from.map((x) => `${x.page} ([[${x.words}]])`).join("; ");
+          if (r.other) return "↔ " + r.other;
+          if (r.redirect_to) return `→ ${r.redirect_to} (${r.confidence})`;
+          if (r.goes_to) return `→ ${r.goes_to} (from ${(r.linked_from || []).join(", ")})`;
+          if (r.pages && r.topic) return `${r.topic}: ${r.pages.join(" vs ")}`;
+          if (r.same_as) return "same as " + r.same_as.join(", ");
+          if (r.h1) return r.h1.length ? "H1s: " + r.h1.join(" / ") : "no H1";
+          if (r.title) return `${r.title.split(" | ")[0]} (${r.title_length})`;
+          if (r.words != null) return `${r.words} words`;
+          return "";
+        };
+        cols.push({ key: "detail", label: "Detail", render: (r) => el("span", { class: "small" }, extra(r)), sortVal: extra });
+        out.push(el("details", { class: "card group" },
+          el("summary", {}, el("strong", {}, `${t.rank}. ${t.title}`), " ", pill(t),
+            el("span", { class: "muted small" }, ` ${t.owner} · ${t.area.replace("_", " ")} · ${num(t.count)} ${t.area === "audit" ? "pages" : "items"} · ${t.id}`)),
+          el("p", { class: "small" }, el("strong", {}, "How: "), t.how),
+          el("p", { class: "small" }, el("strong", {}, "Done when: "), t.done_when),
+          t.blocked_by ? el("p", { class: "small" }, el("strong", {}, "Blocked: "), t.blocked_by) : null,
+          t.detail ? el("p", { class: "small muted" }, t.detail) : null,
+          t.snippet ? el("pre", { class: "code" }, JSON.stringify(t.snippet, null, 2)) : null,
+          t.pages && t.pages.length ? table(cols, t.pages, { limit: 15, sort: ["impressions", -1] }) : null));
+      }
+      if ((Q.page_jobs || []).length) {
+        out.push(el("h2", {}, "Page jobs: everything to fix on one page"),
+          el("p", { class: "lead" }, "Open the page once and do it all: meta tags, headings, links to add and markup."),
+          el("div", { class: "card" }, table([
+            { key: "page", label: "Page", cls: "url", render: (r) => pageLink(r.page) },
+            { key: "impressions", label: "Impr.", num: true, fmt: num },
+            { key: "fixes", label: "Fixes", render: (r) => el("span", { class: "small" }, r.fixes.map((f) => f.label).join("; ") || "–"), sortVal: (r) => r.fixes.length },
+            { key: "links_to_add", label: "Links to add", render: (r) => el("span", { class: "small" }, r.links_to_add.map((x) => `[[${x.words}]] → ${x.to}`).join("; ") || "–"), sortVal: (r) => r.links_to_add.length },
+            { key: "markup", label: "Markup", render: (r) => (r.markup ? r.markup.type : "–") },
+          ], Q.page_jobs, { limit: 25, sort: ["impressions", -1] })));
+      }
       return out;
     },
 

@@ -520,3 +520,36 @@ def test_redirect_suggestions_use_live_pages_outside_sitemap():
     s = LK.suggest_redirect("/tr/biography", live, {}, {})
     assert s["to"] == "/tr" and s["confidence"] == "low"          # not /tr/birthday
     assert LK.suggest_redirect("/tr/badlands/overview", live, {}, {})["to"] == "/tr/badlands"
+
+
+def test_work_queue_turns_findings_into_tasks(monkeypatch):
+    from seo import digest as DG, workqueue as WQ
+    U = "https://www.trlibrary.com"
+    C.write_json("gsc/pages.json", [{"page": U + "/tr/a", "impressions": 5000}, {"page": U + "/visit", "impressions": 900},
+                                    {"page": U + "/video/view/x", "impressions": 10}])
+    C.write_json("audit/pages.json", [
+        {"url": U + "/tr/a", "status": 200, "issues": ["meta_missing", "h1_multiple"], "h1": ["A", "B"], "title": "A | X", "title_core_length": 1},
+        {"url": U + "/video/view/x", "status": 200, "issues": ["meta_missing"], "title": "V | X"},
+        {"url": U + "/old", "status": 200, "redirected": True, "issues": ["meta_missing"]},
+    ])
+    C.write_json("links.json", {"suggestions": [{"source": "/visit", "target": "/tr/a", "phrase": "A", "snippet": "see [[A]]", "score": 5}],
+                                "orphans": [{"page": "/tr/a", "title": "A", "impressions": 5000}],
+                                "broken_internal": [{"broken": "/tr/x/index", "redirect_to": "/tr/x", "confidence": "high", "sources": [{"page": "/visit"}]}]})
+    C.write_json("schema.json", {"sitewide": [{"id": "sameas", "severity": "high", "title": "s", "fix": "f"},
+                                              {"id": "tr_entity", "severity": "high", "title": "e", "fix": "f"}],
+                                 "groups": [{"key": "tr_articles", "label": "TR", "schema_type": "Article", "drupal": "d",
+                                             "items": [{"path": "/tr/a", "done": False}], "incomplete": 0}]})
+    C.write_json("changes.json", {"watching": []})
+    monkeypatch.setattr(C, "config", lambda: {"site": {"url": U}, "work_queue": {"ticketed": ["schema:sitewide:tr_entity"]}})
+    q = WQ.build()
+    ids = {t["id"]: t for t in q["tasks"]}
+    assert ids["audit:meta_missing"]["owner"] == WQ.TRPL and [p["page"] for p in ids["audit:meta_missing"]["pages"]] == ["/tr/a"]
+    assert ids["audit:meta_missing:template"]["owner"] == WQ.FIVEJARS            # video pages: template fix
+    assert ids["schema:sitewide:sameas"]["owner"] == WQ.TRPL and ids["schema:sitewide:tr_entity"]["status"] == "with FiveJars"
+    assert q["tasks"][-1]["id"] == "schema:sitewide:tr_entity"                   # ticketed items sink to the bottom
+    assert ids["schema:tr_articles"]["owner"] == WQ.FIVEJARS and ids["schema:tr_articles:per_node"]["owner"] == WQ.TRPL
+    assert ids["links:orphans"]["pages"][0]["link_from"][0]["page"] == "/visit"
+    job = next(j for j in q["page_jobs"] if j["page"] == "/tr/a")
+    assert {f["issue"] for f in job["fixes"]} == {"meta_missing", "h1_multiple"} and job["markup"]["type"] == "Article"
+    md = DG._work_queue_md(q)
+    assert any("Work queue" in x for x in md) and any("Waiting on FiveJars" in x for x in md)

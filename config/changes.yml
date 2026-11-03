@@ -19,6 +19,15 @@
 hold_days: 28
 
 changes:
+  # ---- 2026-11-03 ----
+  - {date: 2026-11-03, page: /tr/people/alice-longworth, kind: [title, meta], what: "Title 'Alice Roosevelt Longworth: Theodore Roosevelt's Daughter'"}
+  - {date: 2026-11-03, page: /tr/presidency/great-white-fleet, kind: [title, meta], what: "Title 'The Great White Fleet: Roosevelt's Global Voyage'"}
+  - {date: 2026-11-03, page: /tr/tr-importance, kind: [title, meta, content], what: "Title 'What Was Theodore Roosevelt Known For?'; typo fix"}
+  - {date: 2026-11-03, page: /tr/presidency/bully-pulpit, kind: [title, meta, content], what: "Title 'The Bully Pulpit: Meaning, Origin, and Examples'; phrase now 'attributed to' TR"}
+  - {date: 2026-11-03, page: /tr/presidency/elections, kind: [title, meta], what: "Title '1904 Presidential Election: Roosevelt's Mandate'"}
+  - {date: 2026-11-03, page: /tr/speeches/man-in-the-arena, kind: [title, meta], what: "Title 'Man in the Arena Speech: Citizenship in a Republic'"}
+  - {date: 2026-11-03, page: /tr/timeline, kind: [title, meta], what: "Title 'Theodore Roosevelt's Life Timeline: Key Dates, 1858–1919'"}
+  - {date: 2026-11-03, page: /tr/presidency/square-deal, kind: [meta, content], what: "Truncated description fixed; Three Cs heading; Springfield speech date and quote corrected"}
   # ---- 2026-10-27 ----
   - {date: 2026-10-27, page: /visit, kind: [title], what: "Title: Plan Your Visit: Tickets, Hours and Directions"}
   - {date: 2026-10-27, page: /visit/exhibits, kind: [title], what: "Title: Exhibits: Roosevelt’s Life in Eight Chapters"}
@@ -32,6 +41,8 @@ changes:
   - {date: 2026-10-27, page: /visit/faq, kind: [content], what: "Tickets link fixed (was /visit/tickets, a 404)"}
   - {date: 2026-10-27, page: /tr/presidency/square-deal, kind: [content], what: "Removed duplicate H1"}
   - {date: 2026-10-27, page: "*", kind: [schema], what: "Sitewide schema: description no longer says 'Opens July 4, 2026'; Wikipedia/Wikidata sameAs; Theodore Roosevelt entity defined"}
+  - {date: 2026-10-27, page: /tr/presidency/square-deal, kind: [title, meta, content, merge], what: "Merged /tr/square-deal into this page; title 'What Was the Square Deal? Roosevelt's Three Cs'; answer-first intro; origin, references and public-reaction sections"}
+  - {date: 2026-10-27, page: /tr/square-deal, kind: [redirect, merge], what: "Archived (node 278); 301 to /tr/presidency/square-deal (alias and node/278)"}
 
   # ---- 2026-10-20 ----
   - {date: 2026-10-20, page: /tr/square-deal, kind: [title, meta, content], what: "Title 'What Was the Square Deal? Roosevelt's Three Cs'; wording fixes"}

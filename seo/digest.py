@@ -10,14 +10,18 @@ Built only from the JSON the other jobs already wrote. No API keys needed.
 """
 from __future__ import annotations
 
+import json
+
 from . import common as C
 from .audit import ISSUE_TEXT
+from . import workqueue
 
 BASE = "https://seo.labs.trlibrary.com"
 N = 15  # rows per list in the digest
 
 HOUSE_RULES = [
-    "Suggestions are drafts for the communications team; nothing is published automatically.",
+    "Nothing on trlibrary.com changes without the communications team's approval. Once approved, make the change (if you have Drupal access) or hand it over ready to paste; never stop at a recommendation when a work-queue task can be carried out.",
+    "After any change, log it in config/changes.yml (date, page, kind, what) so the next run holds the page and reports before/after numbers.",
     "Pages listed under 'Recently changed' were just edited: don't recommend changing them again until their hold ends; judge them by the before/after numbers.",
     "Never invent historical facts, dates, names, prices or hours. Use only what the page already says, or flag it for verification.",
     "Never quote or paraphrase Theodore Roosevelt. Say 'consider a verified TR quote about X' instead.",
@@ -32,6 +36,7 @@ HOUSE_RULES = [
 
 RAW_FILES = {
     "changes.json": "Change log: pages changed recently (held back from recommendations) with Search Console before/after numbers",
+    "work_queue.json": "Work queue: every audit, internal-link and structured-data fix as a task with pages, owner (TRPL or FiveJars), Drupal steps and a done-when check, plus page jobs that bundle all fixes for one page",
     "status.json": "Which data sources are on, last run time, errors",
     "gsc/summary.json": "Search Console totals, last 28 days vs prior 28",
     "gsc/daily.json": "Clicks/impressions/CTR/position per day (~16 months)",
@@ -243,6 +248,9 @@ def build() -> dict:
                          "previous": {k: co.get("previous", {}).get(k) for k in ("checkout_completion", "store_conversion")},
                          "by_device": co.get("by_device"), "ticket_page_to_store": co.get("ticket_page_to_store")}
 
+    q = workqueue.run()
+    d["work_queue"] = q
+
     d["raw_files"] = {f"{BASE}/data/{k}": v for k, v in RAW_FILES.items()}
     return d
 
@@ -270,12 +278,89 @@ def _short(u: str) -> str:
     return (u or "").replace("https://www.trlibrary.com", "") or "/"
 
 
+def _work_queue_md(q: dict | None) -> list[str]:
+    if not q:
+        return []
+    sm = q["summary"]
+    tasks = q["tasks"]
+    open_ = [t for t in tasks if t["status"] not in ("with FiveJars", "blocked")]
+    waiting = [t for t in tasks if t["status"] in ("with FiveJars", "blocked")]
+    L = ["\n## Work queue: what to fix next, who fixes it, and how",
+         f"{sm['tasks']} tasks ({sm['by_area'].get('audit', 0)} audit, {sm['by_area'].get('internal_links', 0)} internal links, "
+         f"{sm['by_area'].get('structured_data', 0)} structured data); {len(waiting)} already with FiveJars. "
+         f"Ranked by severity x the Google audience of the pages involved. Full lists, every page, and step-by-step Drupal recipes: "
+         f"{BASE}/data/work_queue.json\n",
+         "**How to work it**"]
+    L += [f"{i}. {w}" for i, w in enumerate(q["workflow"], 1)]
+    L += ["", _table([{"rank": t["rank"], "id": t["id"], "area": t["area"].replace("_", " "), "title": t["title"],
+                       "owner": t["owner"].split(" (")[0], "count": t["count"], "status": t["status"]} for t in open_[:30]],
+                     [("rank", "#"), ("title", "Task"), ("area", "Area"), ("owner", "Who"), ("count", "Pages/items"),
+                      ("status", "Status"), ("id", "Id")])]
+    L.append("### Task details (TRPL can do these now)")
+    for t in [t for t in open_ if t["owner"].startswith("TRPL")][:14]:
+        L.append(f"**{t['rank']}. {t['title']}** (`{t['id']}`, {t['count']} {'items' if t['area'] != 'audit' else 'pages'})")
+        L.append(f"- How: {t['how']}")
+        L.append(f"- Done when: {t['done_when']}")
+        if t.get("snippet"):
+            L.append(f"- Paste: `{json.dumps(t['snippet'], ensure_ascii=False)}`")
+        for p in t["pages"][:8]:
+            bits = [f"`{p['page']}`"]
+            if p.get("impressions"):
+                bits.append(f"{p['impressions']:,} impr.")
+            if p.get("held"):
+                bits.append("HELD (recently changed)")
+            if p.get("title") and t["id"].startswith("audit:title"):
+                bits.append(f"title \"{p['title'].split(' | ')[0]}\" ({p.get('title_length')} chars)")
+            if p.get("same_as"):
+                bits.append("same as " + ", ".join(p["same_as"][:3]))
+            if p.get("h1") is not None and t["id"].startswith("audit:h1"):
+                bits.append("H1s: " + " / ".join(p["h1"][:3]) if p["h1"] else "no H1")
+            if p.get("links"):
+                bits.append("; ".join(f"[[{x['words']}]] -> {x['to']}" for x in p["links"][:3]))
+            if p.get("link_from"):
+                bits.append("link from: " + "; ".join(f"{x['page']} ([[{x['words']}]])" for x in p["link_from"][:2]))
+            if p.get("other"):
+                bits.append(f"<-> {p['other']}")
+            if p.get("pages") and t["id"] == "links:duplicate_topics":
+                bits.append(f"{p['topic']}: " + " vs ".join(p["pages"]))
+            if p.get("redirect_to"):
+                bits.append(f"-> {p['redirect_to']} ({p.get('confidence')})")
+            if p.get("goes_to"):
+                bits.append(f"-> {p['goes_to']}")
+            L.append("  - " + ", ".join(bits))
+        if len(t["pages"]) > 8:
+            L.append(f"  - ...and {len(t['pages']) - 8} more in work_queue.json")
+        L.append("")
+    jobs = q.get("page_jobs") or []
+    if jobs:
+        L += ["### Page jobs: everything to fix on one page, busiest pages first",
+              _table([{"page": j["page"], "impressions": j["impressions"],
+                       "fixes": ", ".join(f["issue"] for f in j["fixes"]) or "–",
+                       "links": "; ".join(f"[[{x['words']}]] -> {x['to']}" for x in j["links_to_add"][:3]) or "–",
+                       "markup": (j["markup"] or {}).get("type") or "–",
+                       "held": "held" if j["held"] else ""} for j in jobs[:15]],
+                     [("page", "Page"), ("impressions", "Impr."), ("fixes", "Fixes"), ("links", "Links to add"),
+                      ("markup", "Markup"), ("held", "")])]
+    if waiting:
+        L += ["### Waiting on FiveJars or blocked (already ticketed; check whether they've landed, don't re-ask)",
+              "\n".join(f"- {t['title']} (`{t['id']}`)" + (f": blocked, {t['blocked_by']}" if t.get("blocked_by") else "") for t in waiting) + "\n"]
+    return L
+
+
 def to_markdown(d: dict) -> str:
     L = [f"# trlibrary.com search & AI visibility digest",
          f"Generated {d['generated']} from {d['dashboard']}. Full data: see 'Raw data' at the end.\n",
          "## How to use this",
-         "Read top to bottom: the biggest, cheapest wins come first in each section. When you suggest copy, follow these house rules:\n"]
+         "This briefing is for doing the work, not only describing it. An assistant pointed here has four jobs, in this order:\n",
+         "1. **Work queue** (next section): audit fixes, internal links and structured data, ranked, each with the pages, who can fix it "
+         "(the TRPL team in Drupal, or FiveJars), the Drupal steps and how to check it worked. Propose the exact change for the top TRPL tasks; "
+         "once approved, carry it out (or package it for FiveJars).",
+         "2. **Drafted recommendations**: titles, descriptions and content for pages with search upside.",
+         "3. **Opportunities**: pages to strengthen, merge or rewrite.",
+         "4. **AI visibility and visitor experience**: what AI assistants say about the Library and where /visit pages fall short.\n",
+         "House rules for any change:\n"]
     L += [f"- {r}" for r in d["house_rules"]]
+    L += _work_queue_md(d.get("work_queue"))
     L.append("\n## Data freshness")
     L.append(_table([{"source": k, **v} for k, v in d["sources"].items()],
                     [("source", "Source"), ("state", "State"), ("updated", "Updated"), ("message", "Details")]))
@@ -483,6 +568,11 @@ def llms_txt(d: dict) -> str:
         sm = sd["summary"]
         snap.append(f"- Structured data: {sm.get('typed_pages_done')}/{sm.get('typed_pages')} content pages carry schema.org markup; "
                     f"{sm.get('sitewide_issues')} sitewide markup issues; trlibrary.com llms.txt: {'yes' if sm.get('llms_txt') else 'no (draft available)'}")
+    q = d.get("work_queue") or {}
+    wq_line = ""
+    if q.get("tasks"):
+        top = [t for t in q["tasks"] if t["status"] not in ("with FiveJars", "blocked")][:5]
+        wq_line = "\n\nTop of the queue now:\n" + "\n".join(f"- {t['title']} ({t['owner'].split(' (')[0]}, {t['count']})" for t in top)
     return f"""# TRPL Search & AI Visibility
 
 > How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built {d['generated']}.
@@ -490,12 +580,16 @@ def llms_txt(d: dict) -> str:
 The dashboard at {BASE}/ is rendered with JavaScript. AI tools should read the digest below instead.
 
 ## Start here
-- [Digest (Markdown)]({BASE}/digest.md): one-page ranked briefing: search totals, top opportunities, tracked keywords, AI-assistant answers, audit issues, drafted recommendations, and house rules for suggesting copy
+- [Digest (Markdown)]({BASE}/digest.md): one-page ranked briefing that opens with the work queue, then search totals, opportunities, tracked keywords, AI-assistant answers, audit issues, drafted recommendations and house rules
+- [Work queue (JSON)]({BASE}/data/work_queue.json): every audit, internal-link and structured-data fix as a task: pages (busiest first), who fixes it (TRPL in Drupal, or FiveJars), Drupal steps, done-when check; plus page jobs bundling all fixes for one page
 - [Digest (JSON)]({BASE}/data/digest.json): the same content as structured data
 - [Redirects to add (CSV)]({BASE}/data/redirects.csv): proposed 301 redirects for broken links, ready for Drupal's Redirect import
 - [Change log with before/after numbers]({BASE}/data/changes.json): pages changed recently, held back from recommendations
 - [Structured data opportunities]({BASE}/data/schema.json): schema.org gaps by content type with ready-to-paste JSON-LD
 - [Draft llms.txt for trlibrary.com]({BASE}/data/site-llms.txt): proposed AI-tool guide for the main site, built from its sitemap
+
+## What an assistant should do here
+Don't stop at recommendations. Work the queue: for the top TRPL tasks (audit fixes, internal links, structured data), write the exact change, get approval from the communications team, then carry it out in Drupal using the recipe (or package FiveJars tasks as a Basecamp to-do), check the live page, and log it in config/changes.yml. Title/description and content suggestions come second.{wq_line}
 
 ## Snapshot
 {chr(10).join(snap) or '- Data sources are still being connected.'}
