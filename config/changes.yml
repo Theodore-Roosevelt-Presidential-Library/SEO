@@ -19,6 +19,10 @@
 hold_days: 28
 
 changes:
+  - {date: 2026-11-03, page: "*", kind: [schema], what: "Global sameAs adds Wikipedia; Basic pages define Theodore Roosevelt Person (#person) with Wikipedia/Wikidata"}
+  - {date: 2026-11-03, page: /about/press/press-releases, kind: [schema, meta], what: "Press releases: og:type article, NewsArticle author/publisher/description, ISO dates with colon"}
+  - {date: 2026-11-03, page: /podcast/good-citizen, kind: [meta], what: "Podcast episodes: og:type article"}
+  - {date: 2026-11-03, page: /about/trustees, kind: [schema], what: "Trustee Person markup: memberOf the Library"}
   # ---- 2026-11-03 internal links (SEO tool 'Links to add') ----
   - {date: 2026-11-03, page: /tr/presidency, kind: [content], what: "Published Oct 18 draft plus 2 internal links (Taft, midnight forests)"}
   - {date: 2026-11-03, page: /tr/timeline, kind: [content], what: "Added 6 internal links from Links to add"}
