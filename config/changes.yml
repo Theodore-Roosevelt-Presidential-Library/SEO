@@ -20,6 +20,7 @@ hold_days: 28
 
 changes:
   # ---- 2026-11-03 internal links (SEO tool 'Links to add') ----
+  - {date: 2026-11-03, page: /tr/presidency, kind: [content], what: "Published Oct 18 draft plus 2 internal links (Taft, midnight forests)"}
   - {date: 2026-11-03, page: /tr/timeline, kind: [content], what: "Added 6 internal links from Links to add"}
   - {date: 2026-11-03, page: /visit/exhibits/main, kind: [content], what: "Added 6 internal links from Links to add"}
   - {date: 2026-11-03, page: /tr/teddy-nickname, kind: [content], what: "Added 6 internal links from Links to add"}
