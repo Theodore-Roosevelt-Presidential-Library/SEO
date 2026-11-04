@@ -1,10 +1,13 @@
 {
- "updated": "2026-11-03T13:22:34+00:00",
+ "updated": "2026-11-04T13:22:44+00:00",
  "last_run": [
   "gsc",
   "opportunities",
   "checkout",
+  "indexnow",
   "digest"
  ],
- "failed": []
+ "failed": [
+  "opportunities"
+ ]
 }

@@ -10,14 +10,14 @@
   "updated": "2026-11-02T12:38:36+00:00"
  },
  "opportunities": {
-  "state": "ok",
-  "message": "102 striking-distance queries, 36 low-CTR pages; 31 recently changed pages held back",
-  "updated": "2026-11-03T13:21:36+00:00"
+  "state": "error",
+  "message": "'est_extra_clicks'",
+  "updated": "2026-11-04T13:21:58+00:00"
  },
  "gsc": {
   "state": "ok",
-  "message": "23135 queries, 1959 pages (2026-10-04 to 2026-10-31); 41 changed pages tracked",
-  "updated": "2026-11-03T13:21:36+00:00"
+  "message": "23095 queries, 1989 pages (2026-10-05 to 2026-11-01); 249 changed pages tracked",
+  "updated": "2026-11-04T13:21:58+00:00"
  },
  "ai_visibility": {
   "state": "error",
@@ -32,12 +32,12 @@
  "digest": {
   "state": "ok",
   "message": "llms.txt, digest.md and digest.json rebuilt",
-  "updated": "2026-11-03T13:22:34+00:00"
+  "updated": "2026-11-04T13:22:44+00:00"
  },
  "checkout": {
   "state": "ok",
   "message": "Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info",
-  "updated": "2026-11-03T13:22:34+00:00"
+  "updated": "2026-11-04T13:22:44+00:00"
  },
  "curate": {
   "state": "ok",
@@ -59,5 +59,10 @@
   "message": "101/883 content pages have their own markup; 8 sitewide issues",
   "updated": "2026-11-02T13:02:49+00:00",
   "pages": 1038
+ },
+ "indexnow": {
+  "state": "skipped",
+  "message": "No IndexNow key yet: see the work queue task 'Turn on IndexNow'.",
+  "updated": "2026-11-04T13:22:44+00:00"
  }
 }

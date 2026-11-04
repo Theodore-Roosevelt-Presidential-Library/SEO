@@ -1,56 +1,6811 @@
 {
- "updated": "2026-11-03T13:21:36+00:00",
+ "updated": "2026-11-04T13:21:58+00:00",
  "hold_days": 28,
- "data_through": "2026-10-31",
+ "data_through": "2026-11-01",
  "note": "Before = the 28 days before the change; after = the days since, up to the latest settled Search Console day. Compare per-day numbers; a week or two after a change is still early.",
  "held_back": [
   "/",
+  "/about/foundation",
+  "/about/mission",
+  "/about/presidential-library-system",
+  "/about/press/press-releases/harold-hamm-donates-50-million-trpl",
+  "/about/press/press-releases/roosevelt-family-acquires-903-acres-trpl",
+  "/about/press/press-releases/sarah-and-ross-perot-jr-foundation-gifts-5-million-theodore-roosevelt",
+  "/about/press/press-releases/theodore-roosevelt-presidential-library-launches-good-citizen-podcast",
+  "/about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026",
+  "/about/press/press-releases/theodore-roosevelt-presidential-library-welcomes-doris-kearns-goodwin",
+  "/about/press/press-releases/theodore-roosevelts-groundbreaking-firsts-and-feats-celebration",
+  "/about/press/press-releases/trplf-announces-100-million-commitments-unlocks-50-million-state",
+  "/about/press/press-releases/trplf-elects-spencer-zwick-board",
+  "/about/trustees/beth-laski",
+  "/about/trustees/doris-kearns-goodwin",
+  "/beam-signing-ceremony",
   "/bullet-speech",
+  "/events/teddycon",
+  "/podcast/good-citizen/adam-met-climate-action-musical-stardom-and-art-building-movement",
+  "/podcast/good-citizen/ben-jealous",
+  "/podcast/good-citizen/call-adventure-charlie-melcher-ed-okeefe-and-brand-new-theodore-roosevelt",
+  "/podcast/good-citizen/candice-millard",
+  "/podcast/good-citizen/carly-fiorina",
+  "/podcast/good-citizen/dan-harris",
+  "/podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore",
+  "/podcast/good-citizen/douglas-brinkley",
+  "/podcast/good-citizen/dr-vivek-murthy-loneliness-staying-human-and-what-true-success-looks",
+  "/podcast/good-citizen/edward-okeefe",
+  "/podcast/good-citizen/eric-liu",
+  "/podcast/good-citizen/jeffrey-rosen",
+  "/podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature",
+  "/podcast/good-citizen/katharine-hayhoe",
+  "/podcast/good-citizen/katherine-gehl",
+  "/podcast/good-citizen/live-trpl-1-doris-kearns-goodwin-finding-hope-history",
+  "/podcast/good-citizen/matthew-barzun",
+  "/podcast/good-citizen/meg-whitman",
+  "/podcast/good-citizen/secretary-deb-haaland",
+  "/podcast/good-citizen/senator-mitt-romney-formative-moments-presidential-leadership-and-question",
+  "/podcast/good-citizen/susan-berfield",
+  "/podcast/good-citizen/susannah-cahalan",
+  "/podcast/good-citizen/ted-leonsis",
   "/project",
+  "/project/design",
+  "/project/native-plant-project",
+  "/research",
+  "/research/archives",
+  "/tr",
+  "/tr/10-myths-teddy-bear",
+  "/tr/5-big-adventures",
   "/tr/badlands",
+  "/tr/badlands-timeline",
+  "/tr/badlands/bad-lands-cow-boy",
+  "/tr/badlands/elkhorn-ranch",
+  "/tr/badlands/frontier-life",
+  "/tr/badlands/landscape",
+  "/tr/badlands/maltese-cross",
+  "/tr/badlands/medora",
+  "/tr/badlands/ten-facts",
   "/tr/badlands/where-to-see",
+  "/tr/books-and-writings",
+  "/tr/books-and-writings/autobiography",
+  "/tr/books-and-writings/complete-list",
+  "/tr/books-and-writings/reader",
+  "/tr/complex-legacy",
+  "/tr/complex-legacy/equestrian-statue",
+  "/tr/complex-legacy/eugenics",
+  "/tr/complex-legacy/imperialism",
+  "/tr/complex-legacy/race",
+  "/tr/conservation",
+  "/tr/conservation/by-the-numbers",
+  "/tr/conservation/quotes",
+  "/tr/early-life",
+  "/tr/early-life/childhood-illness",
+  "/tr/early-life/civil-war",
+  "/tr/early-life/day-in-the-life",
+  "/tr/early-life/family-roots",
+  "/tr/early-life/family-travels",
+  "/tr/early-life/father",
+  "/tr/early-life/harvard",
+  "/tr/early-life/mother",
+  "/tr/early-life/siblings",
+  "/tr/early-life/ten-facts",
+  "/tr/early-life/young-naturalist",
+  "/tr/elkhorn",
+  "/tr/elkhorn-timeline",
+  "/tr/fake-quotes",
+  "/tr/family",
   "/tr/family/children",
+  "/tr/family/elliott-roosevelt",
+  "/tr/family/family-tree",
   "/tr/family/fdr-connection",
+  "/tr/for-educators/elementary",
+  "/tr/for-educators/high-school",
+  "/tr/for-educators/middle-school",
+  "/tr/homes-and-places",
+  "/tr/homes-and-places/sagamore-hill",
+  "/tr/homes-and-places/tr-national-park",
   "/tr/kids-timeline",
+  "/tr/legacy",
+  "/tr/legacy/mount-rushmore",
+  "/tr/legacy/rankings",
+  "/tr/legacy/the-library",
+  "/tr/legacy/words-he-coined",
+  "/tr/myths",
+  "/tr/myths/misquotes",
   "/tr/myths/teddy-name",
+  "/tr/new-york-politics",
+  "/tr/new-york-politics/alice-lee",
+  "/tr/new-york-politics/convention-1884",
+  "/tr/new-york-politics/double-tragedy",
+  "/tr/people",
+  "/tr/people/alice-lee",
+  "/tr/people/alice-longworth",
+  "/tr/people/bamie",
+  "/tr/people/bill-sewall",
+  "/tr/people/booker-t-washington",
+  "/tr/people/corinne",
+  "/tr/people/edith-roosevelt",
+  "/tr/people/eleanor",
+  "/tr/people/elliott",
+  "/tr/people/ethel",
+  "/tr/people/gifford-pinchot",
+  "/tr/people/henry-cabot-lodge",
   "/tr/people/jacob-riis",
+  "/tr/people/john-muir",
+  "/tr/people/kermit",
+  "/tr/people/leonard-wood",
+  "/tr/people/mittie",
+  "/tr/people/quentin",
+  "/tr/people/ted-jr",
+  "/tr/people/theodore-sr",
+  "/tr/people/william-howard-taft",
+  "/tr/post-presidency",
+  "/tr/post-presidency/african-safari",
+  "/tr/post-presidency/assassination-attempt",
+  "/tr/post-presidency/bull-moose",
+  "/tr/post-presidency/bull-moose/platform",
+  "/tr/post-presidency/death",
   "/tr/post-presidency/man-in-the-arena",
+  "/tr/post-presidency/new-nationalism",
+  "/tr/post-presidency/quentin",
+  "/tr/post-presidency/river-of-doubt",
+  "/tr/post-presidency/ten-facts",
+  "/tr/post-presidency/world-war-i",
   "/tr/pre-presidency-political-accomplishments",
+  "/tr/presidency",
   "/tr/presidency-timeline",
   "/tr/presidency/brownsville",
+  "/tr/presidency/bully-pulpit",
+  "/tr/presidency/cabinet",
   "/tr/presidency/coal-strike",
+  "/tr/presidency/conservation/antiquities-act",
+  "/tr/presidency/conservation/bird-reserves",
+  "/tr/presidency/conservation/gifford-pinchot",
+  "/tr/presidency/conservation/governors-conference",
+  "/tr/presidency/conservation/john-muir",
+  "/tr/presidency/conservation/midnight-forests",
+  "/tr/presidency/conservation/national-forests",
+  "/tr/presidency/conservation/national-monuments",
+  "/tr/presidency/conservation/national-parks",
+  "/tr/presidency/conservation/reclamation",
+  "/tr/presidency/elections",
+  "/tr/presidency/executive-power",
+  "/tr/presidency/first-term",
+  "/tr/presidency/great-white-fleet",
   "/tr/presidency/panama-canal",
+  "/tr/presidency/race",
   "/tr/presidency/railroad-regulation",
   "/tr/presidency/roosevelt-corollary",
+  "/tr/presidency/second-term",
   "/tr/presidency/square-deal",
+  "/tr/presidency/ten-facts",
   "/tr/presidency/trust-busting",
+  "/tr/presidency/white-house-family",
+  "/tr/presidency/white-house-family/pets",
+  "/tr/presidency/white-house-family/white-house-gang",
+  "/tr/presidency/white-house-workers",
+  "/tr/quotes",
+  "/tr/quotes/citizenship",
+  "/tr/quotes/conservation",
+  "/tr/quotes/family",
+  "/tr/quotes/leadership",
+  "/tr/quotes/misquotes",
+  "/tr/quotes/strenuous-life",
+  "/tr/rise-to-power/becoming-president",
+  "/tr/rise-to-power/buffalo-soldiers",
+  "/tr/rise-to-power/civil-service",
+  "/tr/rise-to-power/edith-roosevelt",
+  "/tr/rise-to-power/jacob-riis",
+  "/tr/rise-to-power/police-commissioner",
+  "/tr/rise-to-power/sagamore-hill",
   "/tr/rise-to-power/san-juan-hill",
+  "/tr/rise-to-power/ten-facts",
+  "/tr/rise-to-power/vice-presidency",
+  "/tr/speeches/confession-of-faith",
+  "/tr/speeches/inaugural",
+  "/tr/speeches/man-in-the-arena",
+  "/tr/speeches/new-nationalism",
+  "/tr/speeches/strenuous-life",
   "/tr/square-deal",
+  "/tr/strenuous-life/explorer",
+  "/tr/strenuous-life/hunter",
   "/tr/teddy-nickname",
+  "/tr/timeline",
+  "/tr/tr-importance",
   "/tr/tr-mount-rushmore",
+  "/tr/tr-save-the-bison",
   "/tr/tr-shot",
+  "/virtual",
   "/visit",
   "/visit/activities",
+  "/visit/biking",
+  "/visit/camping",
   "/visit/directions",
+  "/visit/eat",
   "/visit/exhibits",
+  "/visit/exhibits/main",
   "/visit/faq",
   "/visit/faq/tickets",
   "/visit/groups",
+  "/visit/hiking",
   "/visit/hours",
+  "/visit/hunting-fishing",
   "/visit/i-94",
   "/visit/itineraries",
+  "/visit/itineraries/13-day-denver-wyoming",
   "/visit/itineraries/4-days-north-dakota",
+  "/visit/itineraries/7-day-billings-bismarck",
+  "/visit/itineraries/7-day-bismarck-rapid-city",
+  "/visit/itineraries/black-hills-loop",
   "/visit/itineraries/chicago-badlands",
+  "/visit/itineraries/north-on-29",
   "/visit/itineraries/one-day",
+  "/visit/itineraries/river-road",
   "/visit/itineraries/seattle-badlands",
+  "/visit/itineraries/weekend-drives/bismarck",
+  "/visit/itineraries/weekend-drives/fargo",
+  "/visit/little-missouri-river",
+  "/visit/maps",
+  "/visit/medora",
   "/visit/medora/history",
-  "/visit/national-park"
+  "/visit/national-park",
+  "/visit/outdoors",
+  "/visit/roosevelt-in-medora",
+  "/visit/shopping",
+  "/visit/stargazing",
+  "/visit/teddy-trail",
+  "/visit/trolley",
+  "/visit/wildlife"
  ],
  "watching": [
   {
+   "page": "/tr/presidency",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Published Oct 18 draft plus 2 internal links (Taft, midnight forests)"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 25,
+    "impressions": 4028,
+    "ctr": 0.0062,
+    "position": 6.3,
+    "clicks_per_day": 0.9,
+    "impressions_per_day": 143.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/timeline",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 6 internal links from Links to add"
+    },
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title 'Theodore Roosevelt's Life Timeline: Key Dates, 1858–1919'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 217,
+    "impressions": 42396,
+    "ctr": 0.0051,
+    "position": 7.4,
+    "clicks_per_day": 7.8,
+    "impressions_per_day": 1514.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/exhibits/main",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 6 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 78,
+    "impressions": 4249,
+    "ctr": 0.0184,
+    "position": 6.5,
+    "clicks_per_day": 2.8,
+    "impressions_per_day": 151.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/teddy-nickname",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 6 internal links from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta",
+      "content",
+      "merge"
+     ],
+     "what": "Merged /tr/myths/teddy-name into this page; new title and description; teddy bear sentence"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 135,
+    "impressions": 17241,
+    "ctr": 0.0078,
+    "position": 4.4,
+    "clicks_per_day": 4.8,
+    "impressions_per_day": 615.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency-timeline",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 6 internal links from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title 'When Was Theodore Roosevelt President? 1901–1909 Timeline'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 323,
+    "impressions": 54627,
+    "ctr": 0.0059,
+    "position": 4.6,
+    "clicks_per_day": 11.5,
+    "impressions_per_day": 1951.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/henry-cabot-lodge",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 6 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 31,
+    "impressions": 13717,
+    "ctr": 0.0023,
+    "position": 6.5,
+    "clicks_per_day": 1.1,
+    "impressions_per_day": 489.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/family/family-tree",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 5 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 397,
+    "impressions": 26679,
+    "ctr": 0.0149,
+    "position": 5.2,
+    "clicks_per_day": 14.2,
+    "impressions_per_day": 952.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/white-house-family",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 4 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 6,
+    "impressions": 1827,
+    "ctr": 0.0033,
+    "position": 6.6,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 65.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 5 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 8,
+    "impressions": 955,
+    "ctr": 0.0084,
+    "position": 8.8,
+    "clicks_per_day": 0.3,
+    "impressions_per_day": 34.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/legacy/rankings",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 5 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 140,
+    "impressions": 9067,
+    "ctr": 0.0154,
+    "position": 5.6,
+    "clicks_per_day": 5.0,
+    "impressions_per_day": 323.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/edward-okeefe",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 4 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 3,
+    "impressions": 383,
+    "ctr": 0.0078,
+    "position": 8.2,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 13.7
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/call-adventure-charlie-melcher-ed-okeefe-and-brand-new-theodore-roosevelt",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 6 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 9,
+    "impressions": 789,
+    "ctr": 0.0114,
+    "position": 7.4,
+    "clicks_per_day": 0.3,
+    "impressions_per_day": 28.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/for-educators/high-school",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 6 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 21,
+    "impressions": 1197,
+    "ctr": 0.0175,
+    "position": 7.0,
+    "clicks_per_day": 0.8,
+    "impressions_per_day": 42.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/about/press/press-releases/theodore-roosevelts-groundbreaking-firsts-and-feats-celebration",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 6 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 3,
+    "impressions": 268,
+    "ctr": 0.0112,
+    "position": 4.7,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 9.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/rise-to-power/ten-facts",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 6 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 92,
+    "impressions": 5789,
+    "ctr": 0.0159,
+    "position": 5.3,
+    "clicks_per_day": 3.3,
+    "impressions_per_day": 206.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/ten-facts",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 5 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 435,
+    "impressions": 15557,
+    "ctr": 0.028,
+    "position": 3.9,
+    "clicks_per_day": 15.5,
+    "impressions_per_day": 555.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/events/teddycon",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 6 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 96,
+    "impressions": 1085,
+    "ctr": 0.0885,
+    "position": 3.8,
+    "clicks_per_day": 3.4,
+    "impressions_per_day": 38.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/badlands-timeline",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 6 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 160,
+    "impressions": 7984,
+    "ctr": 0.02,
+    "position": 5.5,
+    "clicks_per_day": 5.7,
+    "impressions_per_day": 285.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/family/fdr-connection",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 4 internal links from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta",
+      "content"
+     ],
+     "what": "Title 'How Were Theodore and Franklin Roosevelt Related?'; 32 years fix; Eleanor sentence"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 1704,
+    "impressions": 87236,
+    "ctr": 0.0195,
+    "position": 3.2,
+    "clicks_per_day": 60.9,
+    "impressions_per_day": 3115.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/research/archives",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 5 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 47,
+    "impressions": 1918,
+    "ctr": 0.0245,
+    "position": 7.7,
+    "clicks_per_day": 1.7,
+    "impressions_per_day": 68.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/speeches/new-nationalism",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 5 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 48,
+    "impressions": 2349,
+    "ctr": 0.0204,
+    "position": 5.6,
+    "clicks_per_day": 1.7,
+    "impressions_per_day": 83.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/elections",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 4 internal links from Links to add"
+    },
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title '1904 Presidential Election: Roosevelt's Mandate'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 125,
+    "impressions": 21726,
+    "ctr": 0.0058,
+    "position": 5.9,
+    "clicks_per_day": 4.5,
+    "impressions_per_day": 775.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/legacy/the-library",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 5 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 33,
+    "impressions": 3281,
+    "ctr": 0.0101,
+    "position": 5.0,
+    "clicks_per_day": 1.2,
+    "impressions_per_day": 117.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/post-presidency/ten-facts",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 5 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 12,
+    "impressions": 1251,
+    "ctr": 0.0096,
+    "position": 5.5,
+    "clicks_per_day": 0.4,
+    "impressions_per_day": 44.7
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/medora/history",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 5 internal links from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "content"
+     ],
+     "what": "North Dakota quote aligned to the 1918 Volwiler letter"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 34,
+    "impressions": 2832,
+    "ctr": 0.012,
+    "position": 7.4,
+    "clicks_per_day": 1.2,
+    "impressions_per_day": 101.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/fake-quotes",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 327,
+    "impressions": 16160,
+    "ctr": 0.0202,
+    "position": 6.8,
+    "clicks_per_day": 11.7,
+    "impressions_per_day": 577.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/kids-timeline",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 5 internal links from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title 'Theodore Roosevelt for Kids: A Timeline of His Life'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 71,
+    "impressions": 10313,
+    "ctr": 0.0069,
+    "position": 9.4,
+    "clicks_per_day": 2.5,
+    "impressions_per_day": 368.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/tr-mount-rushmore",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title 'Mount Rushmore Presidents: Why Theodore Roosevelt Is There'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 447,
+    "impressions": 122070,
+    "ctr": 0.0037,
+    "position": 5.5,
+    "clicks_per_day": 16.0,
+    "impressions_per_day": 4359.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/directions",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 4 internal links from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title"
+     ],
+     "what": "Title 'Directions to Medora from I-94 and Nearby Airports'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 592,
+    "impressions": 51234,
+    "ctr": 0.0116,
+    "position": 2.7,
+    "clicks_per_day": 21.1,
+    "impressions_per_day": 1829.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/books-and-writings/autobiography",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 4 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 31,
+    "impressions": 2414,
+    "ctr": 0.0128,
+    "position": 5.7,
+    "clicks_per_day": 1.1,
+    "impressions_per_day": 86.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/pre-presidency-political-accomplishments",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 4 internal links from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title 'What Did Theodore Roosevelt Do Before He Was President?'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 574,
+    "impressions": 53412,
+    "ctr": 0.0107,
+    "position": 5.6,
+    "clicks_per_day": 20.5,
+    "impressions_per_day": 1907.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/books-and-writings/complete-list",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 4 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 6,
+    "impressions": 319,
+    "ctr": 0.0188,
+    "position": 5.4,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 11.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/quotes/leadership",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 5 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 102,
+    "impressions": 3425,
+    "ctr": 0.0298,
+    "position": 5.4,
+    "clicks_per_day": 3.6,
+    "impressions_per_day": 122.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/speeches/inaugural",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 4 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 13,
+    "impressions": 2409,
+    "ctr": 0.0054,
+    "position": 5.7,
+    "clicks_per_day": 0.5,
+    "impressions_per_day": 86.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/candice-millard",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 10,
+    "impressions": 3462,
+    "ctr": 0.0029,
+    "position": 9.3,
+    "clicks_per_day": 0.4,
+    "impressions_per_day": 123.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/eleanor",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 4 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 11,
+    "impressions": 2372,
+    "ctr": 0.0046,
+    "position": 6.9,
+    "clicks_per_day": 0.4,
+    "impressions_per_day": 84.7
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/bill-sewall",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 4 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 17,
+    "impressions": 774,
+    "ctr": 0.022,
+    "position": 5.5,
+    "clicks_per_day": 0.6,
+    "impressions_per_day": 27.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/post-presidency/quentin",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 4 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 27,
+    "impressions": 7257,
+    "ctr": 0.0037,
+    "position": 9.5,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 259.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/quotes/conservation",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 94,
+    "impressions": 4868,
+    "ctr": 0.0193,
+    "position": 5.3,
+    "clicks_per_day": 3.4,
+    "impressions_per_day": 173.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 51,
+    "impressions": 37559,
+    "ctr": 0.0014,
+    "position": 9.2,
+    "clicks_per_day": 1.8,
+    "impressions_per_day": 1341.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/early-life/siblings",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 33,
+    "impressions": 2663,
+    "ctr": 0.0124,
+    "position": 6.3,
+    "clicks_per_day": 1.2,
+    "impressions_per_day": 95.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/early-life/ten-facts",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 4 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 12,
+    "impressions": 337,
+    "ctr": 0.0356,
+    "position": 5.4,
+    "clicks_per_day": 0.4,
+    "impressions_per_day": 12.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/kermit",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 4 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 6,
+    "impressions": 1435,
+    "ctr": 0.0042,
+    "position": 8.6,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 51.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/legacy",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 3,
+    "impressions": 371,
+    "ctr": 0.0081,
+    "position": 8.8,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 13.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/bamie",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 5,
+    "impressions": 1036,
+    "ctr": 0.0048,
+    "position": 6.0,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 37.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/early-life",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 147,
+    "impressions": 15813,
+    "ctr": 0.0093,
+    "position": 6.7,
+    "clicks_per_day": 5.2,
+    "impressions_per_day": 564.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/jeffrey-rosen",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 5,
+    "impressions": 1559,
+    "ctr": 0.0032,
+    "position": 10.2,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 55.7
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/complex-legacy/imperialism",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 232,
+    "impressions": 23980,
+    "ctr": 0.0097,
+    "position": 5.2,
+    "clicks_per_day": 8.3,
+    "impressions_per_day": 856.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/strenuous-life/hunter",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 34,
+    "impressions": 3745,
+    "ctr": 0.0091,
+    "position": 5.6,
+    "clicks_per_day": 1.2,
+    "impressions_per_day": 133.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/tr-shot",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title 'Why Was Theodore Roosevelt Shot? The 1912 Milwaukee Attack'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 318,
+    "impressions": 36487,
+    "ctr": 0.0087,
+    "position": 4.0,
+    "clicks_per_day": 11.4,
+    "impressions_per_day": 1303.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/itineraries/chicago-badlands",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "content"
+     ],
+     "what": "Visit length and restaurant name"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 22,
+    "impressions": 1386,
+    "ctr": 0.0159,
+    "position": 6.9,
+    "clicks_per_day": 0.8,
+    "impressions_per_day": 49.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/post-presidency/death",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 79,
+    "impressions": 15894,
+    "ctr": 0.005,
+    "position": 5.5,
+    "clicks_per_day": 2.8,
+    "impressions_per_day": 567.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/new-york-politics/alice-lee",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 85,
+    "impressions": 11261,
+    "ctr": 0.0075,
+    "position": 5.5,
+    "clicks_per_day": 3.0,
+    "impressions_per_day": 402.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/square-deal",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    },
+    {
+     "date": "2026-10-27",
+     "kind": [
+      "redirect",
+      "merge"
+     ],
+     "what": "Archived (node 278); 301 to /tr/presidency/square-deal (alias and node/278)"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta",
+      "content"
+     ],
+     "what": "Title 'What Was the Square Deal? Roosevelt's Three Cs'; wording fixes"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 889,
+    "impressions": 107334,
+    "ctr": 0.0083,
+    "position": 3.9,
+    "clicks_per_day": 31.8,
+    "impressions_per_day": 3833.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/rise-to-power/edith-roosevelt",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 42,
+    "impressions": 10240,
+    "ctr": 0.0041,
+    "position": 6.9,
+    "clicks_per_day": 1.5,
+    "impressions_per_day": 365.7
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/conservation/midnight-forests",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 31,
+    "impressions": 2417,
+    "ctr": 0.0128,
+    "position": 5.1,
+    "clicks_per_day": 1.1,
+    "impressions_per_day": 86.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/quotes/misquotes",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 153,
+    "impressions": 5816,
+    "ctr": 0.0263,
+    "position": 4.0,
+    "clicks_per_day": 5.5,
+    "impressions_per_day": 207.7
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/post-presidency/man-in-the-arena",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta",
+      "content"
+     ],
+     "what": "Title 'TR's 1910 European Tour and the Man in the Arena Speech'; cross-link"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 46,
+    "impressions": 5503,
+    "ctr": 0.0084,
+    "position": 7.5,
+    "clicks_per_day": 1.6,
+    "impressions_per_day": 196.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/activities",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "content"
+     ],
+     "what": "Visit length and restaurant name"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 14,
+    "impressions": 1467,
+    "ctr": 0.0095,
+    "position": 5.3,
+    "clicks_per_day": 0.5,
+    "impressions_per_day": 52.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/conservation/by-the-numbers",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 45,
+    "impressions": 7525,
+    "ctr": 0.006,
+    "position": 5.1,
+    "clicks_per_day": 1.6,
+    "impressions_per_day": 268.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/conservation/gifford-pinchot",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 44,
+    "impressions": 6864,
+    "ctr": 0.0064,
+    "position": 4.4,
+    "clicks_per_day": 1.6,
+    "impressions_per_day": 245.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/early-life/family-roots",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 41,
+    "impressions": 5268,
+    "ctr": 0.0078,
+    "position": 4.8,
+    "clicks_per_day": 1.5,
+    "impressions_per_day": 188.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/live-trpl-1-doris-kearns-goodwin-finding-hope-history",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 2,
+    "impressions": 277,
+    "ctr": 0.0072,
+    "position": 8.8,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 9.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/homes-and-places/sagamore-hill",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 12,
+    "impressions": 1799,
+    "ctr": 0.0067,
+    "position": 7.0,
+    "clicks_per_day": 0.4,
+    "impressions_per_day": 64.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/conservation/national-monuments",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 25,
+    "impressions": 3110,
+    "ctr": 0.008,
+    "position": 5.5,
+    "clicks_per_day": 0.9,
+    "impressions_per_day": 111.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/white-house-family/pets",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 62,
+    "impressions": 5057,
+    "ctr": 0.0123,
+    "position": 5.1,
+    "clicks_per_day": 2.2,
+    "impressions_per_day": 180.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/teddy-trail",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 8,
+    "impressions": 653,
+    "ctr": 0.0123,
+    "position": 6.4,
+    "clicks_per_day": 0.3,
+    "impressions_per_day": 23.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/exhibits",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    },
+    {
+     "date": "2026-10-27",
+     "kind": [
+      "title"
+     ],
+     "what": "Title: Exhibits: Roosevelt’s Life in Eight Chapters"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "content"
+     ],
+     "what": "Visit length and restaurant name (Salt+Scoria)"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 105,
+    "impressions": 17751,
+    "ctr": 0.0059,
+    "position": 3.5,
+    "clicks_per_day": 3.8,
+    "impressions_per_day": 634.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 22,
+    "impressions": 5308,
+    "ctr": 0.0041,
+    "position": 7.4,
+    "clicks_per_day": 0.8,
+    "impressions_per_day": 189.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/about/trustees/doris-kearns-goodwin",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 6,
+    "impressions": 738,
+    "ctr": 0.0081,
+    "position": 16.0,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 26.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/william-howard-taft",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 49,
+    "impressions": 14370,
+    "ctr": 0.0034,
+    "position": 5.7,
+    "clicks_per_day": 1.8,
+    "impressions_per_day": 513.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 53,
+    "impressions": 1828,
+    "ctr": 0.029,
+    "position": 4.4,
+    "clicks_per_day": 1.9,
+    "impressions_per_day": 65.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 8,
+    "impressions": 5298,
+    "ctr": 0.0015,
+    "position": 6.9,
+    "clicks_per_day": 0.3,
+    "impressions_per_day": 189.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/post-presidency",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 51,
+    "impressions": 1954,
+    "ctr": 0.0261,
+    "position": 4.2,
+    "clicks_per_day": 1.8,
+    "impressions_per_day": 69.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/new-york-politics/double-tragedy",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 13,
+    "impressions": 815,
+    "ctr": 0.016,
+    "position": 4.4,
+    "clicks_per_day": 0.5,
+    "impressions_per_day": 29.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/quotes/family",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 8,
+    "impressions": 343,
+    "ctr": 0.0233,
+    "position": 6.2,
+    "clicks_per_day": 0.3,
+    "impressions_per_day": 12.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/alice-lee",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 3,
+    "impressions": 1134,
+    "ctr": 0.0026,
+    "position": 8.8,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 40.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/about/press/press-releases/harold-hamm-donates-50-million-trpl",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 47,
+    "impressions": 449,
+    "ctr": 0.1047,
+    "position": 3.1,
+    "clicks_per_day": 1.7,
+    "impressions_per_day": 16.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/theodore-sr",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 10,
+    "impressions": 4991,
+    "ctr": 0.002,
+    "position": 6.5,
+    "clicks_per_day": 0.4,
+    "impressions_per_day": 178.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/about/press/press-releases/roosevelt-family-acquires-903-acres-trpl",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 16,
+    "impressions": 230,
+    "ctr": 0.0696,
+    "position": 4.2,
+    "clicks_per_day": 0.6,
+    "impressions_per_day": 8.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/legacy/mount-rushmore",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 2,
+    "impressions": 857,
+    "ctr": 0.0023,
+    "position": 7.1,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 30.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/conservation/quotes",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 3 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 14,
+    "impressions": 1010,
+    "ctr": 0.0139,
+    "position": 4.9,
+    "clicks_per_day": 0.5,
+    "impressions_per_day": 36.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/itineraries/north-on-29",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 8,
+    "impressions": 1059,
+    "ctr": 0.0076,
+    "position": 7.2,
+    "clicks_per_day": 0.3,
+    "impressions_per_day": 37.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/rise-to-power/police-commissioner",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 49,
+    "impressions": 2820,
+    "ctr": 0.0174,
+    "position": 5.7,
+    "clicks_per_day": 1.8,
+    "impressions_per_day": 100.7
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/legacy/words-he-coined",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 26,
+    "impressions": 4563,
+    "ctr": 0.0057,
+    "position": 6.4,
+    "clicks_per_day": 0.9,
+    "impressions_per_day": 163.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/myths/misquotes",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 31,
+    "impressions": 2741,
+    "ctr": 0.0113,
+    "position": 5.2,
+    "clicks_per_day": 1.1,
+    "impressions_per_day": 97.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/quotes",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 608,
+    "impressions": 26809,
+    "ctr": 0.0227,
+    "position": 10.7,
+    "clicks_per_day": 21.7,
+    "impressions_per_day": 957.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/first-term",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 14,
+    "impressions": 837,
+    "ctr": 0.0167,
+    "position": 6.5,
+    "clicks_per_day": 0.5,
+    "impressions_per_day": 29.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/itineraries/13-day-denver-wyoming",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 3,
+    "impressions": 396,
+    "ctr": 0.0076,
+    "position": 8.9,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 14.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/family/children",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta",
+      "content"
+     ],
+     "what": "Title 'Theodore Roosevelt's Children: Alice, Ted, Kermit and More'; link to kids timeline"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 118,
+    "impressions": 10537,
+    "ctr": 0.0112,
+    "position": 4.2,
+    "clicks_per_day": 4.2,
+    "impressions_per_day": 376.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/shopping",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 141,
+    "impressions": 6411,
+    "ctr": 0.022,
+    "position": 5.0,
+    "clicks_per_day": 5.0,
+    "impressions_per_day": 229.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/family",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 31,
+    "impressions": 8242,
+    "ctr": 0.0038,
+    "position": 8.0,
+    "clicks_per_day": 1.1,
+    "impressions_per_day": 294.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/for-educators/middle-school",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 16,
+    "impressions": 737,
+    "ctr": 0.0217,
+    "position": 6.5,
+    "clicks_per_day": 0.6,
+    "impressions_per_day": 26.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/medora",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 30,
+    "impressions": 4474,
+    "ctr": 0.0067,
+    "position": 4.5,
+    "clicks_per_day": 1.1,
+    "impressions_per_day": 159.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/rise-to-power/buffalo-soldiers",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 45,
+    "impressions": 6917,
+    "ctr": 0.0065,
+    "position": 5.2,
+    "clicks_per_day": 1.6,
+    "impressions_per_day": 247.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/early-life/harvard",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 24,
+    "impressions": 2451,
+    "ctr": 0.0098,
+    "position": 5.4,
+    "clicks_per_day": 0.9,
+    "impressions_per_day": 87.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/elkhorn",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 44,
+    "impressions": 5554,
+    "ctr": 0.0079,
+    "position": 8.0,
+    "clicks_per_day": 1.6,
+    "impressions_per_day": 198.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/ted-leonsis",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 6,
+    "impressions": 3781,
+    "ctr": 0.0016,
+    "position": 10.0,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 135.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/conservation/national-parks",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 194,
+    "impressions": 22873,
+    "ctr": 0.0085,
+    "position": 6.0,
+    "clicks_per_day": 6.9,
+    "impressions_per_day": 816.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/bullet-speech",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta",
+      "content"
+     ],
+     "what": "Title 'The Bullet Speech: Roosevelt's Assassination Attempt'; link to /tr/tr-shot"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 683,
+    "impressions": 40001,
+    "ctr": 0.0171,
+    "position": 3.7,
+    "clicks_per_day": 24.4,
+    "impressions_per_day": 1428.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/early-life/mother",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 8,
+    "impressions": 2611,
+    "ctr": 0.0031,
+    "position": 5.1,
+    "clicks_per_day": 0.3,
+    "impressions_per_day": 93.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/post-presidency/river-of-doubt",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 73,
+    "impressions": 11740,
+    "ctr": 0.0062,
+    "position": 7.5,
+    "clicks_per_day": 2.6,
+    "impressions_per_day": 419.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/post-presidency/african-safari",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 34,
+    "impressions": 2538,
+    "ctr": 0.0134,
+    "position": 5.9,
+    "clicks_per_day": 1.2,
+    "impressions_per_day": 90.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/post-presidency/new-nationalism",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 50,
+    "impressions": 6880,
+    "ctr": 0.0073,
+    "position": 4.5,
+    "clicks_per_day": 1.8,
+    "impressions_per_day": 245.7
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/conservation/reclamation",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 93,
+    "impressions": 11422,
+    "ctr": 0.0081,
+    "position": 4.2,
+    "clicks_per_day": 3.3,
+    "impressions_per_day": 407.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/5-big-adventures",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 57,
+    "impressions": 5729,
+    "ctr": 0.0099,
+    "position": 6.5,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 204.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/rise-to-power/san-juan-hill",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    },
+    {
+     "date": "2026-10-27",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title uses 'Battle of San Juan Hill'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 415,
+    "impressions": 30553,
+    "ctr": 0.0136,
+    "position": 3.7,
+    "clicks_per_day": 14.8,
+    "impressions_per_day": 1091.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/conservation/bird-reserves",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 21,
+    "impressions": 1415,
+    "ctr": 0.0148,
+    "position": 5.4,
+    "clicks_per_day": 0.8,
+    "impressions_per_day": 50.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/douglas-brinkley",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 1,
+    "impressions": 808,
+    "ctr": 0.0012,
+    "position": 11.9,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 28.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/corinne",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 2,
+    "impressions": 1199,
+    "ctr": 0.0017,
+    "position": 4.3,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 42.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/eric-liu",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 2,
+    "impressions": 601,
+    "ctr": 0.0033,
+    "position": 7.8,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 21.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/quotes/strenuous-life",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 50,
+    "impressions": 3973,
+    "ctr": 0.0126,
+    "position": 6.3,
+    "clicks_per_day": 1.8,
+    "impressions_per_day": 141.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/quotes/citizenship",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 52,
+    "impressions": 3035,
+    "ctr": 0.0171,
+    "position": 5.8,
+    "clicks_per_day": 1.9,
+    "impressions_per_day": 108.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/elkhorn-timeline",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 4,
+    "impressions": 307,
+    "ctr": 0.013,
+    "position": 8.1,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 11.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/edith-roosevelt",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 11,
+    "impressions": 1629,
+    "ctr": 0.0068,
+    "position": 11.3,
+    "clicks_per_day": 0.4,
+    "impressions_per_day": 58.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/roosevelt-in-medora",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 3,
+    "impressions": 369,
+    "ctr": 0.0081,
+    "position": 7.4,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 13.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/meg-whitman",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 5,
+    "impressions": 5329,
+    "ctr": 0.0009,
+    "position": 11.4,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 190.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/speeches/strenuous-life",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 76,
+    "impressions": 4064,
+    "ctr": 0.0187,
+    "position": 5.7,
+    "clicks_per_day": 2.7,
+    "impressions_per_day": 145.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/quentin",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 2,
+    "impressions": 476,
+    "ctr": 0.0042,
+    "position": 8.5,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 17.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/post-presidency/world-war-i",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 7,
+    "impressions": 1481,
+    "ctr": 0.0047,
+    "position": 5.4,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 52.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/rise-to-power/sagamore-hill",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 10,
+    "impressions": 1156,
+    "ctr": 0.0087,
+    "position": 6.9,
+    "clicks_per_day": 0.4,
+    "impressions_per_day": 41.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/new-york-politics/convention-1884",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 4,
+    "impressions": 429,
+    "ctr": 0.0093,
+    "position": 6.7,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 15.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/about/press/press-releases/sarah-and-ross-perot-jr-foundation-gifts-5-million-theodore-roosevelt",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 1,
+    "impressions": 106,
+    "ctr": 0.0094,
+    "position": 6.4,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 3.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/about/press/press-releases/theodore-roosevelt-presidential-library-welcomes-doris-kearns-goodwin",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 1,
+    "impressions": 147,
+    "ctr": 0.0068,
+    "position": 5.3,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 5.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/about/foundation",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 69,
+    "impressions": 1871,
+    "ctr": 0.0369,
+    "position": 5.5,
+    "clicks_per_day": 2.5,
+    "impressions_per_day": 66.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/eat",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 162,
+    "impressions": 6050,
+    "ctr": 0.0268,
+    "position": 7.2,
+    "clicks_per_day": 5.8,
+    "impressions_per_day": 216.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/maps",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 47,
+    "impressions": 8701,
+    "ctr": 0.0054,
+    "position": 3.9,
+    "clicks_per_day": 1.7,
+    "impressions_per_day": 310.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/post-presidency/assassination-attempt",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 23,
+    "impressions": 3762,
+    "ctr": 0.0061,
+    "position": 8.0,
+    "clicks_per_day": 0.8,
+    "impressions_per_day": 134.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/research",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 32,
+    "impressions": 955,
+    "ctr": 0.0335,
+    "position": 5.5,
+    "clicks_per_day": 1.1,
+    "impressions_per_day": 34.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/white-house-family/white-house-gang",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 1,
+    "impressions": 53,
+    "ctr": 0.0189,
+    "position": 6.0,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 1.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/conservation/governors-conference",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 8,
+    "impressions": 235,
+    "ctr": 0.034,
+    "position": 4.8,
+    "clicks_per_day": 0.3,
+    "impressions_per_day": 8.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/rise-to-power/jacob-riis",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 47,
+    "impressions": 8313,
+    "ctr": 0.0057,
+    "position": 4.9,
+    "clicks_per_day": 1.7,
+    "impressions_per_day": 296.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/strenuous-life/explorer",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 2,
+    "impressions": 181,
+    "ctr": 0.011,
+    "position": 5.0,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 6.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/race",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 106,
+    "impressions": 9159,
+    "ctr": 0.0116,
+    "position": 4.4,
+    "clicks_per_day": 3.8,
+    "impressions_per_day": 327.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/itineraries",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "content"
+     ],
+     "what": "Link to the I-94 guide"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 76,
+    "impressions": 4819,
+    "ctr": 0.0158,
+    "position": 6.5,
+    "clicks_per_day": 2.7,
+    "impressions_per_day": 172.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/executive-power",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 80,
+    "impressions": 5184,
+    "ctr": 0.0154,
+    "position": 4.1,
+    "clicks_per_day": 2.9,
+    "impressions_per_day": 185.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/conservation/national-forests",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 2 internal links from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 14,
+    "impressions": 1851,
+    "ctr": 0.0076,
+    "position": 6.0,
+    "clicks_per_day": 0.5,
+    "impressions_per_day": 66.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/itineraries/black-hills-loop",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 14,
+    "impressions": 1415,
+    "ctr": 0.0099,
+    "position": 8.3,
+    "clicks_per_day": 0.5,
+    "impressions_per_day": 50.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/itineraries/7-day-billings-bismarck",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 7,
+    "impressions": 1484,
+    "ctr": 0.0047,
+    "position": 8.6,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 53.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/10-myths-teddy-bear",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 145,
+    "impressions": 19104,
+    "ctr": 0.0076,
+    "position": 5.5,
+    "clicks_per_day": 5.2,
+    "impressions_per_day": 682.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/post-presidency/bull-moose/platform",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 242,
+    "impressions": 34895,
+    "ctr": 0.0069,
+    "position": 5.0,
+    "clicks_per_day": 8.6,
+    "impressions_per_day": 1246.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/for-educators/elementary",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 33,
+    "impressions": 1328,
+    "ctr": 0.0248,
+    "position": 6.2,
+    "clicks_per_day": 1.2,
+    "impressions_per_day": 47.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/alice-longworth",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    },
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title 'Alice Roosevelt Longworth: Theodore Roosevelt's Daughter'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 104,
+    "impressions": 27988,
+    "ctr": 0.0037,
+    "position": 8.0,
+    "clicks_per_day": 3.7,
+    "impressions_per_day": 999.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/tr-save-the-bison",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 59,
+    "impressions": 3985,
+    "ctr": 0.0148,
+    "position": 5.1,
+    "clicks_per_day": 2.1,
+    "impressions_per_day": 142.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/trust-busting",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title 'What Was Trust-Busting? Roosevelt Takes On the Monopolies'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 1015,
+    "impressions": 76457,
+    "ctr": 0.0133,
+    "position": 3.4,
+    "clicks_per_day": 36.2,
+    "impressions_per_day": 2730.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/complex-legacy",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 10,
+    "impressions": 585,
+    "ctr": 0.0171,
+    "position": 6.0,
+    "clicks_per_day": 0.4,
+    "impressions_per_day": 20.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/susan-berfield",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 3,
+    "impressions": 605,
+    "ctr": 0.005,
+    "position": 5.6,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 21.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/badlands/bad-lands-cow-boy",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 6,
+    "impressions": 1772,
+    "ctr": 0.0034,
+    "position": 8.6,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 63.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/great-white-fleet",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    },
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title 'The Great White Fleet: Roosevelt's Global Voyage'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 185,
+    "impressions": 28145,
+    "ctr": 0.0066,
+    "position": 4.1,
+    "clicks_per_day": 6.6,
+    "impressions_per_day": 1005.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/badlands/ten-facts",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 12,
+    "impressions": 1076,
+    "ctr": 0.0112,
+    "position": 5.1,
+    "clicks_per_day": 0.4,
+    "impressions_per_day": 38.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/susannah-cahalan",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 8,
+    "impressions": 3357,
+    "ctr": 0.0024,
+    "position": 9.2,
+    "clicks_per_day": 0.3,
+    "impressions_per_day": 119.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/bully-pulpit",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    },
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "title",
+      "meta",
+      "content"
+     ],
+     "what": "Title 'The Bully Pulpit: Meaning, Origin, and Examples'; phrase now 'attributed to' TR"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 159,
+    "impressions": 27597,
+    "ctr": 0.0058,
+    "position": 4.6,
+    "clicks_per_day": 5.7,
+    "impressions_per_day": 985.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/speeches/man-in-the-arena",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    },
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title 'Man in the Arena Speech: Citizenship in a Republic'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 719,
+    "impressions": 31653,
+    "ctr": 0.0227,
+    "position": 5.2,
+    "clicks_per_day": 25.7,
+    "impressions_per_day": 1130.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/complex-legacy/eugenics",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 99,
+    "impressions": 3442,
+    "ctr": 0.0288,
+    "position": 4.2,
+    "clicks_per_day": 3.5,
+    "impressions_per_day": 122.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/jacob-riis",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    },
+    {
+     "date": "2026-10-27",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title and description aimed at 'who was Jacob Riis'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 458,
+    "impressions": 83790,
+    "ctr": 0.0055,
+    "position": 6.6,
+    "clicks_per_day": 16.4,
+    "impressions_per_day": 2992.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/badlands/maltese-cross",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 13,
+    "impressions": 424,
+    "ctr": 0.0307,
+    "position": 6.5,
+    "clicks_per_day": 0.5,
+    "impressions_per_day": 15.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/elliott",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 0,
+    "impressions": 205,
+    "ctr": 0.0,
+    "position": 9.4,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 7.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/rise-to-power/vice-presidency",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 54,
+    "impressions": 7439,
+    "ctr": 0.0073,
+    "position": 5.4,
+    "clicks_per_day": 1.9,
+    "impressions_per_day": 265.7
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/family/elliott-roosevelt",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 30,
+    "impressions": 5477,
+    "ctr": 0.0055,
+    "position": 7.5,
+    "clicks_per_day": 1.1,
+    "impressions_per_day": 195.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/badlands",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "content"
+     ],
+     "what": "Link to where-to-see"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 3,
+    "impressions": 260,
+    "ctr": 0.0115,
+    "position": 5.3,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 9.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/carly-fiorina",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 4,
+    "impressions": 1045,
+    "ctr": 0.0038,
+    "position": 8.7,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 37.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/badlands/medora",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 1,
+    "impressions": 262,
+    "ctr": 0.0038,
+    "position": 7.8,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 9.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/virtual",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 5,
+    "impressions": 98,
+    "ctr": 0.051,
+    "position": 6.3,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 3.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/books-and-writings/reader",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 34,
+    "impressions": 1775,
+    "ctr": 0.0192,
+    "position": 5.2,
+    "clicks_per_day": 1.2,
+    "impressions_per_day": 63.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/complex-legacy/race",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 24,
+    "impressions": 2531,
+    "ctr": 0.0095,
+    "position": 4.9,
+    "clicks_per_day": 0.9,
+    "impressions_per_day": 90.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/john-muir",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 27,
+    "impressions": 5095,
+    "ctr": 0.0053,
+    "position": 7.2,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 182.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/complex-legacy/equestrian-statue",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 7,
+    "impressions": 455,
+    "ctr": 0.0154,
+    "position": 5.5,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 16.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/ethel",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 8,
+    "impressions": 2585,
+    "ctr": 0.0031,
+    "position": 7.8,
+    "clicks_per_day": 0.3,
+    "impressions_per_day": 92.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/rise-to-power/becoming-president",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 38,
+    "impressions": 11111,
+    "ctr": 0.0034,
+    "position": 5.3,
+    "clicks_per_day": 1.4,
+    "impressions_per_day": 396.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/ted-jr",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 15,
+    "impressions": 12308,
+    "ctr": 0.0012,
+    "position": 10.2,
+    "clicks_per_day": 0.5,
+    "impressions_per_day": 439.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/mittie",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 9,
+    "impressions": 1601,
+    "ctr": 0.0056,
+    "position": 7.5,
+    "clicks_per_day": 0.3,
+    "impressions_per_day": 57.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/katherine-gehl",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 4,
+    "impressions": 373,
+    "ctr": 0.0107,
+    "position": 8.2,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 13.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/itineraries/7-day-bismarck-rapid-city",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 14,
+    "impressions": 3436,
+    "ctr": 0.0041,
+    "position": 8.1,
+    "clicks_per_day": 0.5,
+    "impressions_per_day": 122.7
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/early-life/childhood-illness",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 65,
+    "impressions": 3546,
+    "ctr": 0.0183,
+    "position": 4.0,
+    "clicks_per_day": 2.3,
+    "impressions_per_day": 126.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/square-deal",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    },
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "meta",
+      "content"
+     ],
+     "what": "Truncated description fixed; Three Cs heading; Springfield speech date and quote corrected"
+    },
+    {
+     "date": "2026-10-27",
+     "kind": [
+      "content"
+     ],
+     "what": "Removed duplicate H1"
+    },
+    {
+     "date": "2026-10-27",
+     "kind": [
+      "title",
+      "meta",
+      "content",
+      "merge"
+     ],
+     "what": "Merged /tr/square-deal into this page; title 'What Was the Square Deal? Roosevelt's Three Cs'; answer-first intro; origin, references and public-reaction sections"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta",
+      "content"
+     ],
+     "what": "Title 'The Square Deal in Depth: Roosevelt as the Nation's Referee'; cross-link to /tr/square-deal"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 580,
+    "impressions": 92800,
+    "ctr": 0.0063,
+    "position": 4.4,
+    "clicks_per_day": 20.7,
+    "impressions_per_day": 3314.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/conservation/john-muir",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 91,
+    "impressions": 8514,
+    "ctr": 0.0107,
+    "position": 4.5,
+    "clicks_per_day": 3.2,
+    "impressions_per_day": 304.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/myths",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 1,
+    "impressions": 198,
+    "ctr": 0.0051,
+    "position": 8.0,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 7.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/early-life/young-naturalist",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 4,
+    "impressions": 431,
+    "ctr": 0.0093,
+    "position": 4.9,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 15.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/cabinet",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 28,
+    "impressions": 2679,
+    "ctr": 0.0105,
+    "position": 5.0,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 95.7
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/booker-t-washington",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 11,
+    "impressions": 4434,
+    "ctr": 0.0025,
+    "position": 9.4,
+    "clicks_per_day": 0.4,
+    "impressions_per_day": 158.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/project/design",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 155,
+    "impressions": 4237,
+    "ctr": 0.0366,
+    "position": 4.5,
+    "clicks_per_day": 5.5,
+    "impressions_per_day": 151.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/early-life/family-travels",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 6,
+    "impressions": 428,
+    "ctr": 0.014,
+    "position": 5.2,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 15.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/adam-met-climate-action-musical-stardom-and-art-building-movement",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 0,
+    "impressions": 587,
+    "ctr": 0.0,
+    "position": 11.5,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 21.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/conservation",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 32,
+    "impressions": 3073,
+    "ctr": 0.0104,
+    "position": 7.2,
+    "clicks_per_day": 1.1,
+    "impressions_per_day": 109.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/speeches/confession-of-faith",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 13,
+    "impressions": 1190,
+    "ctr": 0.0109,
+    "position": 7.0,
+    "clicks_per_day": 0.5,
+    "impressions_per_day": 42.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/senator-mitt-romney-formative-moments-presidential-leadership-and-question",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 1,
+    "impressions": 952,
+    "ctr": 0.0011,
+    "position": 7.7,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 34.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/homes-and-places",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 34,
+    "impressions": 2963,
+    "ctr": 0.0115,
+    "position": 5.9,
+    "clicks_per_day": 1.2,
+    "impressions_per_day": 105.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/early-life/civil-war",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 6,
+    "impressions": 967,
+    "ctr": 0.0062,
+    "position": 5.1,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 34.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/early-life/day-in-the-life",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 2,
+    "impressions": 323,
+    "ctr": 0.0062,
+    "position": 6.9,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 11.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/national-park",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "content"
+     ],
+     "what": "Visit length, restaurant name; link to where-to-see"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 122,
+    "impressions": 19734,
+    "ctr": 0.0062,
+    "position": 8.1,
+    "clicks_per_day": 4.4,
+    "impressions_per_day": 704.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/gifford-pinchot",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 8,
+    "impressions": 921,
+    "ctr": 0.0087,
+    "position": 6.3,
+    "clicks_per_day": 0.3,
+    "impressions_per_day": 32.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/post-presidency/bull-moose",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 158,
+    "impressions": 24724,
+    "ctr": 0.0064,
+    "position": 4.6,
+    "clicks_per_day": 5.6,
+    "impressions_per_day": 883.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/hiking",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 11,
+    "impressions": 1534,
+    "ctr": 0.0072,
+    "position": 7.1,
+    "clicks_per_day": 0.4,
+    "impressions_per_day": 54.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/beam-signing-ceremony",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 0,
+    "impressions": 90,
+    "ctr": 0.0,
+    "position": 7.9,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 3.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/project/native-plant-project",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 15,
+    "impressions": 1583,
+    "ctr": 0.0095,
+    "position": 4.6,
+    "clicks_per_day": 0.5,
+    "impressions_per_day": 56.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/homes-and-places/tr-national-park",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 13,
+    "impressions": 1872,
+    "ctr": 0.0069,
+    "position": 7.1,
+    "clicks_per_day": 0.5,
+    "impressions_per_day": 66.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/hunting-fishing",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 21,
+    "impressions": 1900,
+    "ctr": 0.0111,
+    "position": 7.3,
+    "clicks_per_day": 0.8,
+    "impressions_per_day": 67.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/about/mission",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 10,
+    "impressions": 438,
+    "ctr": 0.0228,
+    "position": 4.7,
+    "clicks_per_day": 0.4,
+    "impressions_per_day": 15.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/rise-to-power/civil-service",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 59,
+    "impressions": 9805,
+    "ctr": 0.006,
+    "position": 5.3,
+    "clicks_per_day": 2.1,
+    "impressions_per_day": 350.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/badlands/elkhorn-ranch",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 18,
+    "impressions": 2181,
+    "ctr": 0.0083,
+    "position": 7.6,
+    "clicks_per_day": 0.6,
+    "impressions_per_day": 77.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/stargazing",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 12,
+    "impressions": 901,
+    "ctr": 0.0133,
+    "position": 6.2,
+    "clicks_per_day": 0.4,
+    "impressions_per_day": 32.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/dr-vivek-murthy-loneliness-staying-human-and-what-true-success-looks",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 3,
+    "impressions": 295,
+    "ctr": 0.0102,
+    "position": 10.4,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 10.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/secretary-deb-haaland",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 7,
+    "impressions": 747,
+    "ctr": 0.0094,
+    "position": 7.5,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 26.7
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/itineraries/river-road",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 4,
+    "impressions": 552,
+    "ctr": 0.0072,
+    "position": 7.3,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 19.7
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/white-house-workers",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 5,
+    "impressions": 347,
+    "ctr": 0.0144,
+    "position": 6.5,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 12.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/matthew-barzun",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 2,
+    "impressions": 234,
+    "ctr": 0.0085,
+    "position": 8.5,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 8.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/early-life/father",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 5,
+    "impressions": 994,
+    "ctr": 0.005,
+    "position": 6.7,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 35.5
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/camping",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 22,
+    "impressions": 1573,
+    "ctr": 0.014,
+    "position": 7.5,
+    "clicks_per_day": 0.8,
+    "impressions_per_day": 56.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/conservation/antiquities-act",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 5,
+    "impressions": 590,
+    "ctr": 0.0085,
+    "position": 6.1,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 21.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/trolley",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 9,
+    "impressions": 558,
+    "ctr": 0.0161,
+    "position": 6.9,
+    "clicks_per_day": 0.3,
+    "impressions_per_day": 19.9
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/badlands/landscape",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 8,
+    "impressions": 1272,
+    "ctr": 0.0063,
+    "position": 5.9,
+    "clicks_per_day": 0.3,
+    "impressions_per_day": 45.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/little-missouri-river",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 11,
+    "impressions": 956,
+    "ctr": 0.0115,
+    "position": 7.8,
+    "clicks_per_day": 0.4,
+    "impressions_per_day": 34.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/ben-jealous",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 0,
+    "impressions": 342,
+    "ctr": 0.0,
+    "position": 10.2,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 12.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/dan-harris",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 0,
+    "impressions": 420,
+    "ctr": 0.0,
+    "position": 8.8,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 15.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/outdoors",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 7,
+    "impressions": 508,
+    "ctr": 0.0138,
+    "position": 6.6,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 18.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/biking",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 9,
+    "impressions": 440,
+    "ctr": 0.0205,
+    "position": 7.3,
+    "clicks_per_day": 0.3,
+    "impressions_per_day": 15.7
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/wildlife",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 6,
+    "impressions": 990,
+    "ctr": 0.0061,
+    "position": 7.8,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 35.4
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/project",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    },
+    {
+     "date": "2026-10-20",
+     "kind": [
+      "title",
+      "meta"
+     ],
+     "what": "Title 'Building the Library: Design, Values and Sustainability'"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 140,
+    "impressions": 28105,
+    "ctr": 0.005,
+    "position": 2.4,
+    "clicks_per_day": 5.0,
+    "impressions_per_day": 1003.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/people/leonard-wood",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 4,
+    "impressions": 1682,
+    "ctr": 0.0024,
+    "position": 8.8,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 60.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/podcast/good-citizen/katharine-hayhoe",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 0,
+    "impressions": 129,
+    "ctr": 0.0,
+    "position": 8.5,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 4.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/itineraries/weekend-drives/fargo",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 17,
+    "impressions": 1626,
+    "ctr": 0.0105,
+    "position": 5.0,
+    "clicks_per_day": 0.6,
+    "impressions_per_day": 58.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/about/press/press-releases/trplf-elects-spencer-zwick-board",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 5,
+    "impressions": 314,
+    "ctr": 0.0159,
+    "position": 4.3,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 11.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/visit/itineraries/weekend-drives/bismarck",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 15,
+    "impressions": 1436,
+    "ctr": 0.0104,
+    "position": 5.1,
+    "clicks_per_day": 0.5,
+    "impressions_per_day": 51.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/presidency/second-term",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 7,
+    "impressions": 398,
+    "ctr": 0.0176,
+    "position": 6.0,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 14.2
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/books-and-writings",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 5,
+    "impressions": 610,
+    "ctr": 0.0082,
+    "position": 8.7,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 21.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/badlands/frontier-life",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 7,
+    "impressions": 843,
+    "ctr": 0.0083,
+    "position": 6.5,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 30.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/about/trustees/beth-laski",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 22,
+    "impressions": 268,
+    "ctr": 0.0821,
+    "position": 9.8,
+    "clicks_per_day": 0.8,
+    "impressions_per_day": 9.6
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/about/press/press-releases/theodore-roosevelt-presidential-library-launches-good-citizen-podcast",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 0,
+    "impressions": 37,
+    "ctr": 0.0,
+    "position": 5.9,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 1.3
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/about/presidential-library-system",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 17,
+    "impressions": 729,
+    "ctr": 0.0233,
+    "position": 6.2,
+    "clicks_per_day": 0.6,
+    "impressions_per_day": 26.0
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/about/press/press-releases/trplf-announces-100-million-commitments-unlocks-50-million-state",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 6,
+    "impressions": 216,
+    "ctr": 0.0278,
+    "position": 4.9,
+    "clicks_per_day": 0.2,
+    "impressions_per_day": 7.7
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/new-york-politics",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "content"
+     ],
+     "what": "Added 1 internal link from Links to add"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 2,
+    "impressions": 228,
+    "ctr": 0.0088,
+    "position": 7.0,
+    "clicks_per_day": 0.1,
+    "impressions_per_day": 8.1
+   },
+   "after": null,
+   "change": {}
+  },
+  {
+   "page": "/tr/tr-importance",
+   "changed": "2026-11-03",
+   "days_since": 1,
+   "held": true,
+   "held_until": "2026-12-01",
+   "changes": [
+    {
+     "date": "2026-11-03",
+     "kind": [
+      "title",
+      "meta",
+      "content"
+     ],
+     "what": "Title 'What Was Theodore Roosevelt Known For?'; typo fix"
+    }
+   ],
+   "before": {
+    "days": 28,
+    "clicks": 360,
+    "impressions": 37487,
+    "ctr": 0.0096,
+    "position": 4.9,
+    "clicks_per_day": 12.9,
+    "impressions_per_day": 1338.8
+   },
+   "after": null,
+   "change": {}
+  },
+  {
    "page": "/visit",
    "changed": "2026-10-27",
-   "days_since": 7,
+   "days_since": 8,
    "held": true,
    "held_until": "2026-11-24",
    "changes": [
@@ -79,113 +6834,25 @@
     "impressions_per_day": 2290.8
    },
    "after": {
-    "days": 4,
-    "clicks": 139,
-    "impressions": 7971,
-    "ctr": 0.0174,
+    "days": 5,
+    "clicks": 168,
+    "impressions": 9479,
+    "ctr": 0.0177,
     "position": 3.2,
-    "clicks_per_day": 34.8,
-    "impressions_per_day": 1992.8
+    "clicks_per_day": 33.6,
+    "impressions_per_day": 1895.8
    },
    "change": {
-    "clicks_per_day": -0.393,
-    "impressions_per_day": -0.13,
-    "ctr_points": -0.76,
+    "clicks_per_day": -0.414,
+    "impressions_per_day": -0.172,
+    "ctr_points": -0.73,
     "position": 0.5
-   }
-  },
-  {
-   "page": "/visit/exhibits",
-   "changed": "2026-10-27",
-   "days_since": 7,
-   "held": true,
-   "held_until": "2026-11-24",
-   "changes": [
-    {
-     "date": "2026-10-27",
-     "kind": [
-      "title"
-     ],
-     "what": "Title: Exhibits: Roosevelt’s Life in Eight Chapters"
-    },
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "content"
-     ],
-     "what": "Visit length and restaurant name (Salt+Scoria)"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 122,
-    "impressions": 22729,
-    "ctr": 0.0054,
-    "position": 3.8,
-    "clicks_per_day": 4.4,
-    "impressions_per_day": 811.8
-   },
-   "after": {
-    "days": 4,
-    "clicks": 8,
-    "impressions": 596,
-    "ctr": 0.0134,
-    "position": 4.7,
-    "clicks_per_day": 2.0,
-    "impressions_per_day": 149.0
-   },
-   "change": {
-    "clicks_per_day": -0.545,
-    "impressions_per_day": -0.816,
-    "ctr_points": 0.8,
-    "position": 0.9
-   }
-  },
-  {
-   "page": "/tr/people/jacob-riis",
-   "changed": "2026-10-27",
-   "days_since": 7,
-   "held": true,
-   "held_until": "2026-11-24",
-   "changes": [
-    {
-     "date": "2026-10-27",
-     "kind": [
-      "title",
-      "meta"
-     ],
-     "what": "Title and description aimed at 'who was Jacob Riis'"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 388,
-    "impressions": 77871,
-    "ctr": 0.005,
-    "position": 6.9,
-    "clicks_per_day": 13.9,
-    "impressions_per_day": 2781.1
-   },
-   "after": {
-    "days": 4,
-    "clicks": 80,
-    "impressions": 11999,
-    "ctr": 0.0067,
-    "position": 6.0,
-    "clicks_per_day": 20.0,
-    "impressions_per_day": 2999.8
-   },
-   "change": {
-    "clicks_per_day": 0.439,
-    "impressions_per_day": 0.079,
-    "ctr_points": 0.17,
-    "position": -0.9
    }
   },
   {
    "page": "/tr/presidency/panama-canal",
    "changed": "2026-10-27",
-   "days_since": 7,
+   "days_since": 8,
    "held": true,
    "held_until": "2026-11-24",
    "changes": [
@@ -208,25 +6875,25 @@
     "impressions_per_day": 1808.2
    },
    "after": {
-    "days": 4,
-    "clicks": 56,
-    "impressions": 11567,
+    "days": 5,
+    "clicks": 59,
+    "impressions": 12218,
     "ctr": 0.0048,
-    "position": 4.5,
-    "clicks_per_day": 14.0,
-    "impressions_per_day": 2891.8
+    "position": 4.6,
+    "clicks_per_day": 11.8,
+    "impressions_per_day": 2443.6
    },
    "change": {
-    "clicks_per_day": 0.707,
-    "impressions_per_day": 0.599,
+    "clicks_per_day": 0.439,
+    "impressions_per_day": 0.351,
     "ctr_points": 0.03,
-    "position": -0.7
+    "position": -0.6
    }
   },
   {
    "page": "/tr/presidency/railroad-regulation",
    "changed": "2026-10-27",
-   "days_since": 7,
+   "days_since": 8,
    "held": true,
    "held_until": "2026-11-24",
    "changes": [
@@ -249,66 +6916,25 @@
     "impressions_per_day": 996.8
    },
    "after": {
-    "days": 4,
-    "clicks": 13,
-    "impressions": 3674,
-    "ctr": 0.0035,
-    "position": 3.4,
-    "clicks_per_day": 3.2,
-    "impressions_per_day": 918.5
-   },
-   "change": {
-    "clicks_per_day": -0.179,
-    "impressions_per_day": -0.079,
-    "ctr_points": -0.04,
-    "position": -0.6
-   }
-  },
-  {
-   "page": "/tr/rise-to-power/san-juan-hill",
-   "changed": "2026-10-27",
-   "days_since": 7,
-   "held": true,
-   "held_until": "2026-11-24",
-   "changes": [
-    {
-     "date": "2026-10-27",
-     "kind": [
-      "title",
-      "meta"
-     ],
-     "what": "Title uses 'Battle of San Juan Hill'"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 405,
-    "impressions": 29109,
-    "ctr": 0.0139,
-    "position": 3.7,
-    "clicks_per_day": 14.5,
-    "impressions_per_day": 1039.6
-   },
-   "after": {
-    "days": 4,
-    "clicks": 59,
-    "impressions": 4878,
-    "ctr": 0.0121,
+    "days": 5,
+    "clicks": 17,
+    "impressions": 3974,
+    "ctr": 0.0043,
     "position": 3.5,
-    "clicks_per_day": 14.8,
-    "impressions_per_day": 1219.5
+    "clicks_per_day": 3.4,
+    "impressions_per_day": 794.8
    },
    "change": {
-    "clicks_per_day": 0.021,
-    "impressions_per_day": 0.173,
-    "ctr_points": -0.18,
-    "position": -0.2
+    "clicks_per_day": -0.128,
+    "impressions_per_day": -0.203,
+    "ctr_points": 0.04,
+    "position": -0.5
    }
   },
   {
    "page": "/tr/presidency/coal-strike",
    "changed": "2026-10-27",
-   "days_since": 7,
+   "days_since": 8,
    "held": true,
    "held_until": "2026-11-24",
    "changes": [
@@ -331,25 +6957,25 @@
     "impressions_per_day": 884.9
    },
    "after": {
-    "days": 4,
-    "clicks": 27,
-    "impressions": 3450,
-    "ctr": 0.0078,
+    "days": 5,
+    "clicks": 33,
+    "impressions": 3756,
+    "ctr": 0.0088,
     "position": 3.0,
-    "clicks_per_day": 6.8,
-    "impressions_per_day": 862.5
+    "clicks_per_day": 6.6,
+    "impressions_per_day": 751.2
    },
    "change": {
-    "clicks_per_day": -0.139,
-    "impressions_per_day": -0.025,
-    "ctr_points": -0.11,
+    "clicks_per_day": -0.165,
+    "impressions_per_day": -0.151,
+    "ctr_points": -0.01,
     "position": -1.2
    }
   },
   {
    "page": "/visit/groups",
    "changed": "2026-10-27",
-   "days_since": 7,
+   "days_since": 8,
    "held": true,
    "held_until": "2026-11-24",
    "changes": [
@@ -371,25 +6997,25 @@
     "impressions_per_day": 12.2
    },
    "after": {
-    "days": 4,
+    "days": 5,
     "clicks": 0,
-    "impressions": 9,
+    "impressions": 13,
     "ctr": 0.0,
-    "position": 5.6,
+    "position": 5.0,
     "clicks_per_day": 0.0,
-    "impressions_per_day": 2.2
+    "impressions_per_day": 2.6
    },
    "change": {
     "clicks_per_day": -1.0,
-    "impressions_per_day": -0.82,
+    "impressions_per_day": -0.787,
     "ctr_points": -0.58,
-    "position": -0.9
+    "position": -1.5
    }
   },
   {
    "page": "/visit/faq/tickets",
    "changed": "2026-10-27",
-   "days_since": 7,
+   "days_since": 8,
    "held": true,
    "held_until": "2026-11-24",
    "changes": [
@@ -412,25 +7038,25 @@
     "impressions_per_day": 47.8
    },
    "after": {
-    "days": 4,
-    "clicks": 5,
-    "impressions": 132,
-    "ctr": 0.0379,
+    "days": 5,
+    "clicks": 7,
+    "impressions": 161,
+    "ctr": 0.0435,
     "position": 4.8,
-    "clicks_per_day": 1.2,
-    "impressions_per_day": 33.0
+    "clicks_per_day": 1.4,
+    "impressions_per_day": 32.2
    },
    "change": {
-    "clicks_per_day": -0.4,
-    "impressions_per_day": -0.31,
-    "ctr_points": -0.47,
+    "clicks_per_day": -0.3,
+    "impressions_per_day": -0.326,
+    "ctr_points": 0.09,
     "position": -1.5
    }
   },
   {
    "page": "/visit/faq",
    "changed": "2026-10-27",
-   "days_since": 7,
+   "days_since": 8,
    "held": true,
    "held_until": "2026-11-24",
    "changes": [
@@ -452,158 +7078,25 @@
     "impressions_per_day": 257.0
    },
    "after": {
-    "days": 4,
-    "clicks": 2,
-    "impressions": 186,
-    "ctr": 0.0108,
-    "position": 6.4,
-    "clicks_per_day": 0.5,
-    "impressions_per_day": 46.5
+    "days": 5,
+    "clicks": 4,
+    "impressions": 222,
+    "ctr": 0.018,
+    "position": 6.6,
+    "clicks_per_day": 0.8,
+    "impressions_per_day": 44.4
    },
    "change": {
-    "clicks_per_day": -0.762,
-    "impressions_per_day": -0.819,
-    "ctr_points": 0.27,
-    "position": 1.7
-   }
-  },
-  {
-   "page": "/tr/presidency/square-deal",
-   "changed": "2026-10-27",
-   "days_since": 7,
-   "held": true,
-   "held_until": "2026-11-24",
-   "changes": [
-    {
-     "date": "2026-10-27",
-     "kind": [
-      "content"
-     ],
-     "what": "Removed duplicate H1"
-    },
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "title",
-      "meta",
-      "content"
-     ],
-     "what": "Title 'The Square Deal in Depth: Roosevelt as the Nation's Referee'; cross-link to /tr/square-deal"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 500,
-    "impressions": 84352,
-    "ctr": 0.0059,
-    "position": 4.6,
-    "clicks_per_day": 17.9,
-    "impressions_per_day": 3012.6
-   },
-   "after": {
-    "days": 4,
-    "clicks": 93,
-    "impressions": 14250,
-    "ctr": 0.0065,
-    "position": 4.1,
-    "clicks_per_day": 23.2,
-    "impressions_per_day": 3562.5
-   },
-   "change": {
-    "clicks_per_day": 0.296,
-    "impressions_per_day": 0.183,
-    "ctr_points": 0.06,
-    "position": -0.5
-   }
-  },
-  {
-   "page": "/tr/square-deal",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "title",
-      "meta",
-      "content"
-     ],
-     "what": "Title 'What Was the Square Deal? Roosevelt's Three Cs'; wording fixes"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 1130,
-    "impressions": 91617,
-    "ctr": 0.0123,
-    "position": 3.3,
-    "clicks_per_day": 40.4,
-    "impressions_per_day": 3272.0
-   },
-   "after": {
-    "days": 11,
-    "clicks": 341,
-    "impressions": 47003,
-    "ctr": 0.0073,
-    "position": 4.1,
-    "clicks_per_day": 31.0,
-    "impressions_per_day": 4273.0
-   },
-   "change": {
-    "clicks_per_day": -0.233,
-    "impressions_per_day": 0.306,
-    "ctr_points": -0.5,
-    "position": 0.8
-   }
-  },
-  {
-   "page": "/tr/family/fdr-connection",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "title",
-      "meta",
-      "content"
-     ],
-     "what": "Title 'How Were Theodore and Franklin Roosevelt Related?'; 32 years fix; Eleanor sentence"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 1099,
-    "impressions": 75155,
-    "ctr": 0.0146,
-    "position": 3.2,
-    "clicks_per_day": 39.2,
-    "impressions_per_day": 2684.1
-   },
-   "after": {
-    "days": 11,
-    "clicks": 836,
-    "impressions": 36863,
-    "ctr": 0.0227,
-    "position": 3.1,
-    "clicks_per_day": 76.0,
-    "impressions_per_day": 3351.2
-   },
-   "change": {
-    "clicks_per_day": 0.939,
-    "impressions_per_day": 0.249,
-    "ctr_points": 0.81,
-    "position": -0.1
+    "clicks_per_day": -0.619,
+    "impressions_per_day": -0.827,
+    "ctr_points": 0.99,
+    "position": 1.9
    }
   },
   {
    "page": "/tr/presidency/brownsville",
    "changed": "2026-10-20",
-   "days_since": 14,
+   "days_since": 15,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -627,17 +7120,17 @@
     "impressions_per_day": 2240.4
    },
    "after": {
-    "days": 11,
-    "clicks": 23,
-    "impressions": 49674,
+    "days": 12,
+    "clicks": 26,
+    "impressions": 55350,
     "ctr": 0.0005,
     "position": 4.5,
-    "clicks_per_day": 2.1,
-    "impressions_per_day": 4515.8
+    "clicks_per_day": 2.2,
+    "impressions_per_day": 4612.5
    },
    "change": {
-    "clicks_per_day": 1.333,
-    "impressions_per_day": 1.016,
+    "clicks_per_day": 1.444,
+    "impressions_per_day": 1.059,
     "ctr_points": 0.01,
     "position": -1.8
    }
@@ -645,7 +7138,7 @@
   {
    "page": "/tr/presidency/roosevelt-corollary",
    "changed": "2026-10-20",
-   "days_since": 14,
+   "days_since": 15,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -669,66 +7162,25 @@
     "impressions_per_day": 3783.6
    },
    "after": {
-    "days": 11,
-    "clicks": 144,
-    "impressions": 61166,
+    "days": 12,
+    "clicks": 148,
+    "impressions": 62445,
     "ctr": 0.0024,
     "position": 4.3,
-    "clicks_per_day": 13.1,
-    "impressions_per_day": 5560.5
+    "clicks_per_day": 12.3,
+    "impressions_per_day": 5203.8
    },
    "change": {
-    "clicks_per_day": 0.985,
-    "impressions_per_day": 0.47,
+    "clicks_per_day": 0.864,
+    "impressions_per_day": 0.375,
     "ctr_points": 0.07,
     "position": -1.1
    }
   },
   {
-   "page": "/tr/tr-mount-rushmore",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "title",
-      "meta"
-     ],
-     "what": "Title 'Mount Rushmore Presidents: Why Theodore Roosevelt Is There'"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 546,
-    "impressions": 95494,
-    "ctr": 0.0057,
-    "position": 5.1,
-    "clicks_per_day": 19.5,
-    "impressions_per_day": 3410.5
-   },
-   "after": {
-    "days": 11,
-    "clicks": 206,
-    "impressions": 68927,
-    "ctr": 0.003,
-    "position": 5.7,
-    "clicks_per_day": 18.7,
-    "impressions_per_day": 6266.1
-   },
-   "change": {
-    "clicks_per_day": -0.041,
-    "impressions_per_day": 0.837,
-    "ctr_points": -0.27,
-    "position": 0.6
-   }
-  },
-  {
    "page": "/visit/hours",
    "changed": "2026-10-20",
-   "days_since": 14,
+   "days_since": 15,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -752,480 +7204,25 @@
     "impressions_per_day": 2185.9
    },
    "after": {
-    "days": 11,
-    "clicks": 159,
-    "impressions": 16323,
-    "ctr": 0.0097,
+    "days": 12,
+    "clicks": 177,
+    "impressions": 17107,
+    "ctr": 0.0103,
     "position": 2.2,
-    "clicks_per_day": 14.5,
-    "impressions_per_day": 1483.9
+    "clicks_per_day": 14.8,
+    "impressions_per_day": 1425.6
    },
    "change": {
-    "clicks_per_day": -0.463,
-    "impressions_per_day": -0.321,
-    "ctr_points": -0.27,
+    "clicks_per_day": -0.452,
+    "impressions_per_day": -0.348,
+    "ctr_points": -0.21,
     "position": -0.5
-   }
-  },
-  {
-   "page": "/visit/directions",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "title"
-     ],
-     "what": "Title 'Directions to Medora from I-94 and Nearby Airports'"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 811,
-    "impressions": 62916,
-    "ctr": 0.0129,
-    "position": 2.7,
-    "clicks_per_day": 29.0,
-    "impressions_per_day": 2247.0
-   },
-   "after": {
-    "days": 11,
-    "clicks": 227,
-    "impressions": 19488,
-    "ctr": 0.0116,
-    "position": 2.7,
-    "clicks_per_day": 20.6,
-    "impressions_per_day": 1771.6
-   },
-   "change": {
-    "clicks_per_day": -0.29,
-    "impressions_per_day": -0.212,
-    "ctr_points": -0.13,
-    "position": 0.0
-   }
-  },
-  {
-   "page": "/project",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "title",
-      "meta"
-     ],
-     "what": "Title 'Building the Library: Design, Values and Sustainability'"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 147,
-    "impressions": 27965,
-    "ctr": 0.0053,
-    "position": 2.0,
-    "clicks_per_day": 5.2,
-    "impressions_per_day": 998.8
-   },
-   "after": {
-    "days": 11,
-    "clicks": 58,
-    "impressions": 12149,
-    "ctr": 0.0048,
-    "position": 2.8,
-    "clicks_per_day": 5.3,
-    "impressions_per_day": 1104.5
-   },
-   "change": {
-    "clicks_per_day": 0.019,
-    "impressions_per_day": 0.106,
-    "ctr_points": -0.05,
-    "position": 0.8
-   }
-  },
-  {
-   "page": "/tr/presidency/trust-busting",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "title",
-      "meta"
-     ],
-     "what": "Title 'What Was Trust-Busting? Roosevelt Takes On the Monopolies'"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 877,
-    "impressions": 73269,
-    "ctr": 0.012,
-    "position": 3.6,
-    "clicks_per_day": 31.3,
-    "impressions_per_day": 2616.8
-   },
-   "after": {
-    "days": 11,
-    "clicks": 463,
-    "impressions": 32665,
-    "ctr": 0.0142,
-    "position": 3.3,
-    "clicks_per_day": 42.1,
-    "impressions_per_day": 2969.5
-   },
-   "change": {
-    "clicks_per_day": 0.345,
-    "impressions_per_day": 0.135,
-    "ctr_points": 0.22,
-    "position": -0.3
-   }
-  },
-  {
-   "page": "/tr/presidency-timeline",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "title",
-      "meta"
-     ],
-     "what": "Title 'When Was Theodore Roosevelt President? 1901–1909 Timeline'"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 328,
-    "impressions": 57662,
-    "ctr": 0.0057,
-    "position": 4.7,
-    "clicks_per_day": 11.7,
-    "impressions_per_day": 2059.4
-   },
-   "after": {
-    "days": 11,
-    "clicks": 123,
-    "impressions": 20553,
-    "ctr": 0.006,
-    "position": 4.4,
-    "clicks_per_day": 11.2,
-    "impressions_per_day": 1868.5
-   },
-   "change": {
-    "clicks_per_day": -0.043,
-    "impressions_per_day": -0.093,
-    "ctr_points": 0.03,
-    "position": -0.3
-   }
-  },
-  {
-   "page": "/tr/tr-shot",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "title",
-      "meta"
-     ],
-     "what": "Title 'Why Was Theodore Roosevelt Shot? The 1912 Milwaukee Attack'"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 359,
-    "impressions": 40430,
-    "ctr": 0.0089,
-    "position": 4.0,
-    "clicks_per_day": 12.8,
-    "impressions_per_day": 1443.9
-   },
-   "after": {
-    "days": 11,
-    "clicks": 106,
-    "impressions": 12018,
-    "ctr": 0.0088,
-    "position": 4.1,
-    "clicks_per_day": 9.6,
-    "impressions_per_day": 1092.5
-   },
-   "change": {
-    "clicks_per_day": -0.25,
-    "impressions_per_day": -0.243,
-    "ctr_points": -0.01,
-    "position": 0.1
-   }
-  },
-  {
-   "page": "/bullet-speech",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "title",
-      "meta",
-      "content"
-     ],
-     "what": "Title 'The Bullet Speech: Roosevelt's Assassination Attempt'; link to /tr/tr-shot"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 759,
-    "impressions": 41280,
-    "ctr": 0.0184,
-    "position": 3.6,
-    "clicks_per_day": 27.1,
-    "impressions_per_day": 1474.3
-   },
-   "after": {
-    "days": 11,
-    "clicks": 222,
-    "impressions": 13696,
-    "ctr": 0.0162,
-    "position": 4.0,
-    "clicks_per_day": 20.2,
-    "impressions_per_day": 1245.1
-   },
-   "change": {
-    "clicks_per_day": -0.255,
-    "impressions_per_day": -0.155,
-    "ctr_points": -0.22,
-    "position": 0.4
-   }
-  },
-  {
-   "page": "/tr/pre-presidency-political-accomplishments",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "title",
-      "meta"
-     ],
-     "what": "Title 'What Did Theodore Roosevelt Do Before He Was President?'"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 683,
-    "impressions": 49559,
-    "ctr": 0.0138,
-    "position": 5.4,
-    "clicks_per_day": 24.4,
-    "impressions_per_day": 1770.0
-   },
-   "after": {
-    "days": 11,
-    "clicks": 150,
-    "impressions": 24207,
-    "ctr": 0.0062,
-    "position": 5.8,
-    "clicks_per_day": 13.6,
-    "impressions_per_day": 2200.6
-   },
-   "change": {
-    "clicks_per_day": -0.443,
-    "impressions_per_day": 0.243,
-    "ctr_points": -0.76,
-    "position": 0.4
-   }
-  },
-  {
-   "page": "/tr/post-presidency/man-in-the-arena",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "title",
-      "meta",
-      "content"
-     ],
-     "what": "Title 'TR's 1910 European Tour and the Man in the Arena Speech'; cross-link"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 45,
-    "impressions": 5508,
-    "ctr": 0.0082,
-    "position": 7.6,
-    "clicks_per_day": 1.6,
-    "impressions_per_day": 196.7
-   },
-   "after": {
-    "days": 11,
-    "clicks": 12,
-    "impressions": 1082,
-    "ctr": 0.0111,
-    "position": 6.8,
-    "clicks_per_day": 1.1,
-    "impressions_per_day": 98.4
-   },
-   "change": {
-    "clicks_per_day": -0.312,
-    "impressions_per_day": -0.5,
-    "ctr_points": 0.29,
-    "position": -0.8
-   }
-  },
-  {
-   "page": "/tr/family/children",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "title",
-      "meta",
-      "content"
-     ],
-     "what": "Title 'Theodore Roosevelt's Children: Alice, Ted, Kermit and More'; link to kids timeline"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 91,
-    "impressions": 10021,
-    "ctr": 0.0091,
-    "position": 5.3,
-    "clicks_per_day": 3.2,
-    "impressions_per_day": 357.9
-   },
-   "after": {
-    "days": 11,
-    "clicks": 45,
-    "impressions": 4307,
-    "ctr": 0.0104,
-    "position": 3.7,
-    "clicks_per_day": 4.1,
-    "impressions_per_day": 391.5
-   },
-   "change": {
-    "clicks_per_day": 0.281,
-    "impressions_per_day": 0.094,
-    "ctr_points": 0.13,
-    "position": -1.6
-   }
-  },
-  {
-   "page": "/tr/kids-timeline",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "title",
-      "meta"
-     ],
-     "what": "Title 'Theodore Roosevelt for Kids: A Timeline of His Life'"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 104,
-    "impressions": 12602,
-    "ctr": 0.0083,
-    "position": 8.6,
-    "clicks_per_day": 3.7,
-    "impressions_per_day": 450.1
-   },
-   "after": {
-    "days": 11,
-    "clicks": 33,
-    "impressions": 4239,
-    "ctr": 0.0078,
-    "position": 7.5,
-    "clicks_per_day": 3.0,
-    "impressions_per_day": 385.4
-   },
-   "change": {
-    "clicks_per_day": -0.189,
-    "impressions_per_day": -0.144,
-    "ctr_points": -0.05,
-    "position": -1.1
-   }
-  },
-  {
-   "page": "/tr/teddy-nickname",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "title",
-      "meta",
-      "content",
-      "merge"
-     ],
-     "what": "Merged /tr/myths/teddy-name into this page; new title and description; teddy bear sentence"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 99,
-    "impressions": 23850,
-    "ctr": 0.0042,
-    "position": 5.1,
-    "clicks_per_day": 3.5,
-    "impressions_per_day": 851.8
-   },
-   "after": {
-    "days": 11,
-    "clicks": 75,
-    "impressions": 7184,
-    "ctr": 0.0104,
-    "position": 4.4,
-    "clicks_per_day": 6.8,
-    "impressions_per_day": 653.1
-   },
-   "change": {
-    "clicks_per_day": 0.943,
-    "impressions_per_day": -0.233,
-    "ctr_points": 0.62,
-    "position": -0.7
    }
   },
   {
    "page": "/tr/myths/teddy-name",
    "changed": "2026-10-20",
-   "days_since": 14,
+   "days_since": 15,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -1248,17 +7245,17 @@
     "impressions_per_day": 20.9
    },
    "after": {
-    "days": 11,
+    "days": 12,
     "clicks": 5,
-    "impressions": 1007,
+    "impressions": 1008,
     "ctr": 0.005,
     "position": 5.4,
-    "clicks_per_day": 0.5,
-    "impressions_per_day": 91.5
+    "clicks_per_day": 0.4,
+    "impressions_per_day": 84.0
    },
    "change": {
-    "clicks_per_day": 1.5,
-    "impressions_per_day": 3.378,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 3.019,
     "ctr_points": -0.69,
     "position": -0.8
    }
@@ -1266,7 +7263,7 @@
   {
    "page": "/",
    "changed": "2026-10-20",
-   "days_since": 14,
+   "days_since": 15,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -1288,145 +7285,25 @@
     "impressions_per_day": 9259.3
    },
    "after": {
-    "days": 11,
-    "clicks": 3241,
-    "impressions": 34371,
-    "ctr": 0.0943,
-    "position": 6.3,
-    "clicks_per_day": 294.6,
-    "impressions_per_day": 3124.6
+    "days": 12,
+    "clicks": 3430,
+    "impressions": 36635,
+    "ctr": 0.0936,
+    "position": 6.5,
+    "clicks_per_day": 285.8,
+    "impressions_per_day": 3052.9
    },
    "change": {
-    "clicks_per_day": -0.166,
-    "impressions_per_day": -0.663,
-    "ctr_points": 5.62,
-    "position": -1.7
-   }
-  },
-  {
-   "page": "/visit/national-park",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "content"
-     ],
-     "what": "Visit length, restaurant name; link to where-to-see"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 113,
-    "impressions": 21699,
-    "ctr": 0.0052,
-    "position": 7.5,
-    "clicks_per_day": 4.0,
-    "impressions_per_day": 775.0
-   },
-   "after": {
-    "days": 11,
-    "clicks": 43,
-    "impressions": 6562,
-    "ctr": 0.0066,
-    "position": 8.7,
-    "clicks_per_day": 3.9,
-    "impressions_per_day": 596.5
-   },
-   "change": {
-    "clicks_per_day": -0.025,
-    "impressions_per_day": -0.23,
-    "ctr_points": 0.14,
-    "position": 1.2
-   }
-  },
-  {
-   "page": "/visit/activities",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "content"
-     ],
-     "what": "Visit length and restaurant name"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 10,
-    "impressions": 882,
-    "ctr": 0.0113,
-    "position": 5.2,
-    "clicks_per_day": 0.4,
-    "impressions_per_day": 31.5
-   },
-   "after": {
-    "days": 11,
-    "clicks": 5,
-    "impressions": 485,
-    "ctr": 0.0103,
-    "position": 6.1,
-    "clicks_per_day": 0.5,
-    "impressions_per_day": 44.1
-   },
-   "change": {
-    "clicks_per_day": 0.25,
-    "impressions_per_day": 0.4,
-    "ctr_points": -0.1,
-    "position": 0.9
-   }
-  },
-  {
-   "page": "/visit/itineraries",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "content"
-     ],
-     "what": "Link to the I-94 guide"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 77,
-    "impressions": 5527,
-    "ctr": 0.0139,
-    "position": 6.8,
-    "clicks_per_day": 2.8,
-    "impressions_per_day": 197.4
-   },
-   "after": {
-    "days": 11,
-    "clicks": 28,
-    "impressions": 1865,
-    "ctr": 0.015,
-    "position": 6.1,
-    "clicks_per_day": 2.5,
-    "impressions_per_day": 169.5
-   },
-   "change": {
-    "clicks_per_day": -0.107,
-    "impressions_per_day": -0.141,
-    "ctr_points": 0.11,
-    "position": -0.7
+    "clicks_per_day": -0.191,
+    "impressions_per_day": -0.67,
+    "ctr_points": 5.55,
+    "position": -1.5
    }
   },
   {
    "page": "/visit/itineraries/one-day",
    "changed": "2026-10-20",
-   "days_since": 14,
+   "days_since": 15,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -1448,25 +7325,25 @@
     "impressions_per_day": 84.6
    },
    "after": {
-    "days": 11,
-    "clicks": 25,
-    "impressions": 720,
-    "ctr": 0.0347,
+    "days": 12,
+    "clicks": 27,
+    "impressions": 772,
+    "ctr": 0.035,
     "position": 3.7,
-    "clicks_per_day": 2.3,
-    "impressions_per_day": 65.5
+    "clicks_per_day": 2.2,
+    "impressions_per_day": 64.3
    },
    "change": {
-    "clicks_per_day": -0.343,
-    "impressions_per_day": -0.226,
-    "ctr_points": -0.67,
+    "clicks_per_day": -0.371,
+    "impressions_per_day": -0.24,
+    "ctr_points": -0.64,
     "position": -0.2
    }
   },
   {
    "page": "/visit/itineraries/4-days-north-dakota",
    "changed": "2026-10-20",
-   "days_since": 14,
+   "days_since": 15,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -1488,25 +7365,25 @@
     "impressions_per_day": 51.4
    },
    "after": {
-    "days": 11,
-    "clicks": 7,
-    "impressions": 463,
-    "ctr": 0.0151,
-    "position": 7.1,
-    "clicks_per_day": 0.6,
-    "impressions_per_day": 42.1
+    "days": 12,
+    "clicks": 8,
+    "impressions": 494,
+    "ctr": 0.0162,
+    "position": 7.2,
+    "clicks_per_day": 0.7,
+    "impressions_per_day": 41.2
    },
    "change": {
-    "clicks_per_day": -0.143,
-    "impressions_per_day": -0.181,
-    "ctr_points": 0.12,
-    "position": -0.5
+    "clicks_per_day": 0.0,
+    "impressions_per_day": -0.198,
+    "ctr_points": 0.23,
+    "position": -0.4
    }
   },
   {
    "page": "/visit/itineraries/seattle-badlands",
    "changed": "2026-10-20",
-   "days_since": 14,
+   "days_since": 15,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -1528,65 +7405,25 @@
     "impressions_per_day": 12.4
    },
    "after": {
-    "days": 11,
+    "days": 12,
     "clicks": 1,
-    "impressions": 143,
-    "ctr": 0.007,
-    "position": 7.2,
+    "impressions": 153,
+    "ctr": 0.0065,
+    "position": 7.4,
     "clicks_per_day": 0.1,
-    "impressions_per_day": 13.0
+    "impressions_per_day": 12.8
    },
    "change": {
     "clicks_per_day": 0.0,
-    "impressions_per_day": 0.048,
-    "ctr_points": -0.46,
-    "position": 0.5
-   }
-  },
-  {
-   "page": "/visit/itineraries/chicago-badlands",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "content"
-     ],
-     "what": "Visit length and restaurant name"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 19,
-    "impressions": 1421,
-    "ctr": 0.0134,
-    "position": 6.6,
-    "clicks_per_day": 0.7,
-    "impressions_per_day": 50.8
-   },
-   "after": {
-    "days": 11,
-    "clicks": 10,
-    "impressions": 495,
-    "ctr": 0.0202,
-    "position": 7.4,
-    "clicks_per_day": 0.9,
-    "impressions_per_day": 45.0
-   },
-   "change": {
-    "clicks_per_day": 0.286,
-    "impressions_per_day": -0.114,
-    "ctr_points": 0.68,
-    "position": 0.8
+    "impressions_per_day": 0.032,
+    "ctr_points": -0.51,
+    "position": 0.7
    }
   },
   {
    "page": "/visit/i-94",
    "changed": "2026-10-20",
-   "days_since": 14,
+   "days_since": 15,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -1608,7 +7445,7 @@
     "impressions_per_day": 0.0
    },
    "after": {
-    "days": 11,
+    "days": 12,
     "clicks": 0,
     "impressions": 0,
     "ctr": null,
@@ -1626,7 +7463,7 @@
   {
    "page": "/tr/badlands/where-to-see",
    "changed": "2026-10-20",
-   "days_since": 14,
+   "days_since": 15,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -1648,7 +7485,7 @@
     "impressions_per_day": 0.0
    },
    "after": {
-    "days": 11,
+    "days": 12,
     "clicks": 0,
     "impressions": 0,
     "ctr": null,
@@ -1661,86 +7498,6 @@
     "impressions_per_day": null,
     "ctr_points": null,
     "position": null
-   }
-  },
-  {
-   "page": "/tr/badlands",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "content"
-     ],
-     "what": "Link to where-to-see"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 2,
-    "impressions": 410,
-    "ctr": 0.0049,
-    "position": 5.1,
-    "clicks_per_day": 0.1,
-    "impressions_per_day": 14.6
-   },
-   "after": {
-    "days": 11,
-    "clicks": 1,
-    "impressions": 85,
-    "ctr": 0.0118,
-    "position": 5.1,
-    "clicks_per_day": 0.1,
-    "impressions_per_day": 7.7
-   },
-   "change": {
-    "clicks_per_day": 0.0,
-    "impressions_per_day": -0.473,
-    "ctr_points": 0.69,
-    "position": 0.0
-   }
-  },
-  {
-   "page": "/visit/medora/history",
-   "changed": "2026-10-20",
-   "days_since": 14,
-   "held": true,
-   "held_until": "2026-11-17",
-   "changes": [
-    {
-     "date": "2026-10-20",
-     "kind": [
-      "content"
-     ],
-     "what": "North Dakota quote aligned to the 1918 Volwiler letter"
-    }
-   ],
-   "before": {
-    "days": 28,
-    "clicks": 45,
-    "impressions": 3341,
-    "ctr": 0.0135,
-    "position": 7.1,
-    "clicks_per_day": 1.6,
-    "impressions_per_day": 119.3
-   },
-   "after": {
-    "days": 11,
-    "clicks": 11,
-    "impressions": 1037,
-    "ctr": 0.0106,
-    "position": 7.0,
-    "clicks_per_day": 1.0,
-    "impressions_per_day": 94.3
-   },
-   "change": {
-    "clicks_per_day": -0.375,
-    "impressions_per_day": -0.21,
-    "ctr_points": -0.29,
-    "position": -0.1
    }
   }
  ],
