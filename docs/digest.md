@@ -1,5 +1,5 @@
 # trlibrary.com search & AI visibility digest
-Generated 2026-11-05T13:22:32+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
+Generated 2026-11-06T13:22:29+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
 
 ## How to use this
 This briefing is for doing the work, not only describing it. An assistant pointed here has four jobs, in this order:
@@ -31,7 +31,7 @@ House rules for any change:
 
 ### This week's moves
 1. **Restaurant and store hours are listed as the museum's hours** (`schema:sitewide:mixed_hours`): medium priority; affects the whole site. Start with: The museum entity carries 15 hours entries, including restaurant, store hours. Machines can't tell which hours mean the museum is open.
-2. **Add internal links where pages already mention each other** (`links:add`): medium priority; pages involved get 526,109 Google impressions (28 days). Start with: /tr/timeline; /visit/exhibits/main; /tr/family/family-tree.
+2. **Add internal links where pages already mention each other** (`links:add`): medium priority; pages involved get 531,486 Google impressions (28 days). Start with: /tr/timeline; /visit/exhibits/main; /tr/family/family-tree.
 3. **Strengthen pages ranking just off the top for searches people make** (`search:striking_distance`): medium priority; pages involved get 111,431 Google impressions (28 days). Start with: /podcast/good-citizen/senator-chris-murphy for "chris murphy" (#12.5, ); /podcast/good-citizen/bill-kristol for "bill kristol" (#11.7, ); /podcast/good-citizen/kermit-roosevelt-iii for "kermit roosevelt" (#7.4, ).
 
 ### What else we checked (and why it can wait)
@@ -41,8 +41,8 @@ House rules for any change:
 - Same topic on two pages (merge or differentiate) (`links:duplicate_topics`): needs a decision first (merge or archive)
 - Pages ranking well that people skip: rewrite title and description (`search:low_ctr`): same area as a move this week (search); next in line
 - TR history: speeches: fill Article on the busiest pages now (per page, until the template lands) (`schema:tr_speeches:per_node`): same area as a move this week (structured data); next in line
-- Same title as another page (`audit:title_duplicate`): smaller reach (14,369 Google impressions vs 111,431 for this week's moves)
-- No H1 heading (`audit:h1_missing`): smaller reach (6,197 Google impressions vs 111,431 for this week's moves)
+- Same title as another page (`audit:title_duplicate`): smaller reach (14,761 Google impressions vs 111,431 for this week's moves)
+- No H1 heading (`audit:h1_missing`): smaller reach (6,117 Google impressions vs 111,431 for this week's moves)
 
 **How to work it**
 1. Pick tasks from the top of the queue (or a page job, to do everything on one page at once). Pages marked held changed recently and are being measured: leave their titles, descriptions and copy alone (adding markup or links to them is fine).
@@ -77,8 +77,8 @@ House rules for any change:
 | 20 | Related pages that don't link to each other | internal links | TRPL | 49 | to do | links:related |
 | 21 | Title over 60 characters, not counting the site-name suffix | audit | TRPL | 90 | to do | audit:title_too_long |
 | 22 | Sitemap lists a /node/ URL instead of a readable path | audit | TRPL | 35 | to do | audit:unaliased_url |
-| 23 | Title under 15 characters, not counting the site-name suffix | audit | TRPL | 144 | to do | audit:title_too_short |
-| 24 | Same meta description as another page | audit | TRPL | 43 | to do | audit:meta_duplicate |
+| 23 | Same meta description as another page | audit | TRPL | 43 | to do | audit:meta_duplicate |
+| 24 | Title under 15 characters, not counting the site-name suffix | audit | TRPL | 144 | to do | audit:title_too_short |
 | 25 | More than one H1 | audit | TRPL | 10 | to do | audit:h1_multiple |
 | 26 | Under 150 words of body text | audit | TRPL | 239 | to do | audit:thin_content |
 | 27 | Title over 60 characters, not counting the site-name suffix (Video pages: fix once in the video template) | audit | FiveJars | 173 | to do | audit:title_too_long:template |
@@ -95,40 +95,40 @@ House rules for any change:
 **2. TR history articles: fill Article on the busiest pages now (per page, until the template lands)** (`schema:tr_articles:per_node`, 15 items)
 - How: Edit the node > 'Customize meta tags' > Schema.org Article: @type Article; headline = the page title; description = the meta description; about = Theodore Roosevelt; author and publisher = the Library; dateModified = [node:changed:html_datetime]. Don't paste raw JSON-LD into a text block (it's stripped).
 - Done when: Pages carry Article markup (schema.json 'TR history articles' shows them as done)
-  - `/tr/presidency/roosevelt-corollary`, 131,947 impr.
-  - `/tr/presidency/brownsville`, 126,189 impr.
-  - `/tr/presidency/square-deal`, 92,800 impr.
-  - `/tr/family/fdr-connection`, 87,236 impr.
-  - `/tr/presidency/trust-busting`, 76,457 impr.
-  - `/tr/presidency/panama-canal`, 62,842 impr.
-  - `/tr/post-presidency/bull-moose/platform`, 34,895 impr.
-  - `/tr/rise-to-power/spanish-american-war`, 32,930 impr.
+  - `/tr/presidency/roosevelt-corollary`, 131,626 impr.
+  - `/tr/presidency/brownsville`, 116,370 impr.
+  - `/tr/presidency/square-deal`, 95,726 impr.
+  - `/tr/family/fdr-connection`, 87,853 impr.
+  - `/tr/presidency/trust-busting`, 75,866 impr.
+  - `/tr/presidency/panama-canal`, 62,739 impr.
+  - `/tr/post-presidency/bull-moose/platform`, 35,965 impr.
+  - `/tr/rise-to-power/spanish-american-war`, 33,351 impr.
   - ...and 7 more in work_queue.json
 
 **3. Add internal links where pages already mention each other** (`links:add`, 572 items)
 - How: Open the source page's Layout. Edit the text block that contains the context sentence and turn the [[bracketed]] words into a link to the target path (relative, e.g. /tr/tr-shot). Don't write new sentences just to hold a link. Save the block, then Save layout.
 - Done when: The link appears on the source page; the target's links-in count rises next week
-  - `/tr/timeline`, 42,396 impr., [[Panama Canal]] -> /tr/presidency/panama-canal; [[Citizenship in a Republic]] -> /tr/speeches/man-in-the-arena; [[Great White Fleet]] -> /tr/presidency/great-white-fleet
-  - `/visit/exhibits/main`, 4,249 impr., [[Brownsville affair]] -> /tr/presidency/brownsville; [[Square Deal]] -> /tr/presidency/square-deal; [[Panama Canal]] -> /tr/presidency/panama-canal
-  - `/tr/family/family-tree`, 26,679 impr., [[Elliott Roosevelt]] -> /tr/family/elliott-roosevelt; [[Alice Roosevelt Longworth]] -> /tr/people/alice-longworth; [[Alice Hathaway Lee]] -> /tr/new-york-politics/alice-lee
-  - `/tr/people/henry-cabot-lodge`, 13,717 impr., [[Bully Pulpit]] -> /tr/presidency/bully-pulpit; [[William Howard Taft]] -> /tr/people/william-howard-taft; [[River of Doubt]] -> /tr/post-presidency/river-of-doubt
-  - `/podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore`, 955 impr., [[square deal]] -> /tr/presidency/square-deal; [[Man in the Arena]] -> /tr/speeches/man-in-the-arena; [[Alice Roosevelt]] -> /tr/people/alice-longworth
-  - `/tr/presidency-timeline`, 54,627 impr., [[Roosevelt Corollary]] -> /tr/presidency/roosevelt-corollary; [[Panama Canal]] -> /tr/presidency/panama-canal; [[Great White Fleet]] -> /tr/presidency/great-white-fleet
-  - `/tr/teddy-nickname`, 17,241 impr., [[Roosevelt Corollary]] -> /tr/presidency/roosevelt-corollary; [[teddy bear]] -> /tr/legacy/teddy-bear; [[Square Deal]] -> /tr/presidency/square-deal
-  - `/tr/legacy/rankings`, 9,067 impr., [[Mount Rushmore]] -> /tr/tr-mount-rushmore; [[Panama Canal]] -> /tr/presidency/panama-canal; [[bully pulpit]] -> /tr/presidency/bully-pulpit
+  - `/tr/timeline`, 42,348 impr., [[Panama Canal]] -> /tr/presidency/panama-canal; [[Citizenship in a Republic]] -> /tr/speeches/man-in-the-arena; [[Great White Fleet]] -> /tr/presidency/great-white-fleet
+  - `/visit/exhibits/main`, 4,309 impr., [[Brownsville affair]] -> /tr/presidency/brownsville; [[Square Deal]] -> /tr/presidency/square-deal; [[Panama Canal]] -> /tr/presidency/panama-canal
+  - `/tr/family/family-tree`, 26,777 impr., [[Elliott Roosevelt]] -> /tr/family/elliott-roosevelt; [[Alice Roosevelt Longworth]] -> /tr/people/alice-longworth; [[Alice Hathaway Lee]] -> /tr/new-york-politics/alice-lee
+  - `/tr/people/henry-cabot-lodge`, 13,684 impr., [[Bully Pulpit]] -> /tr/presidency/bully-pulpit; [[William Howard Taft]] -> /tr/people/william-howard-taft; [[River of Doubt]] -> /tr/post-presidency/river-of-doubt
+  - `/podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore`, 958 impr., [[square deal]] -> /tr/presidency/square-deal; [[Man in the Arena]] -> /tr/speeches/man-in-the-arena; [[Alice Roosevelt]] -> /tr/people/alice-longworth
+  - `/tr/presidency-timeline`, 54,362 impr., [[Roosevelt Corollary]] -> /tr/presidency/roosevelt-corollary; [[Panama Canal]] -> /tr/presidency/panama-canal; [[Great White Fleet]] -> /tr/presidency/great-white-fleet
+  - `/tr/teddy-nickname`, 17,118 impr., [[Roosevelt Corollary]] -> /tr/presidency/roosevelt-corollary; [[teddy bear]] -> /tr/legacy/teddy-bear; [[Square Deal]] -> /tr/presidency/square-deal
+  - `/tr/legacy/rankings`, 9,182 impr., [[Mount Rushmore]] -> /tr/tr-mount-rushmore; [[Panama Canal]] -> /tr/presidency/panama-canal; [[bully pulpit]] -> /tr/presidency/bully-pulpit
   - ...and 244 more in work_queue.json
 
 **4. TR history: people: fill Article on the busiest pages now (per page, until the template lands)** (`schema:tr_people:per_node`, 15 items)
 - How: Edit the node > 'Customize meta tags' > Schema.org Article: @type Article; headline = the page title; description = the meta description; about = Theodore Roosevelt; author and publisher = the Library; dateModified = [node:changed:html_datetime]. Don't paste raw JSON-LD into a text block (it's stripped).
 - Done when: Pages carry Article markup (schema.json 'TR history: people' shows them as done)
-  - `/tr/people/jacob-riis`, 83,791 impr.
-  - `/tr/people/alice-longworth`, 27,988 impr.
-  - `/tr/people/william-howard-taft`, 14,370 impr.
-  - `/tr/people/henry-cabot-lodge`, 13,717 impr.
-  - `/tr/people/ted-jr`, 12,308 impr.
-  - `/tr/people/john-muir`, 5,095 impr.
-  - `/tr/people/theodore-sr`, 4,991 impr.
-  - `/tr/people/archibald`, 4,762 impr.
+  - `/tr/people/jacob-riis`, 82,938 impr.
+  - `/tr/people/alice-longworth`, 28,064 impr.
+  - `/tr/people/william-howard-taft`, 15,231 impr.
+  - `/tr/people/henry-cabot-lodge`, 13,684 impr.
+  - `/tr/people/ted-jr`, 12,372 impr.
+  - `/tr/people/john-muir`, 5,082 impr.
+  - `/tr/people/theodore-sr`, 4,965 impr.
+  - `/tr/people/booker-t-washington`, 4,863 impr.
   - ...and 7 more in work_queue.json
 
 **5. Pages nothing links to** (`links:orphans`, 50 items)
@@ -182,45 +182,45 @@ House rules for any change:
 **9. TR history: speeches: fill Article on the busiest pages now (per page, until the template lands)** (`schema:tr_speeches:per_node`, 6 items)
 - How: Edit the node > 'Customize meta tags' > Schema.org Article: @type Article; headline = the page title; description = the meta description; about = Theodore Roosevelt; author and publisher = the Library; dateModified = [node:changed:html_datetime]. Don't paste raw JSON-LD into a text block (it's stripped).
 - Done when: Pages carry Article markup (schema.json 'TR history: speeches' shows them as done)
-  - `/tr/speeches/man-in-the-arena`, 31,653 impr.
-  - `/tr/speeches/strenuous-life`, 4,064 impr.
-  - `/tr/speeches/inaugural`, 2,409 impr.
-  - `/tr/speeches/new-nationalism`, 2,349 impr.
-  - `/tr/speeches/first-annual-message`, 1,199 impr.
-  - `/tr/speeches/confession-of-faith`, 1,190 impr.
+  - `/tr/speeches/man-in-the-arena`, 33,128 impr.
+  - `/tr/speeches/strenuous-life`, 3,993 impr.
+  - `/tr/speeches/inaugural`, 2,394 impr.
+  - `/tr/speeches/new-nationalism`, 2,303 impr.
+  - `/tr/speeches/confession-of-faith`, 1,253 impr.
+  - `/tr/speeches/first-annual-message`, 1,247 impr.
 
 **10. Same title as another page** (`audit:title_duplicate`, 37 pages)
 - How: Edit the node (/node/NID/edit) > 'Customize meta tags'. Basic tags: Page title '<title> | [site:name]' (page part 60 characters or fewer) and Description (120-155 characters). Set Open Graph og:title/og:description and Twitter card title/description to match. Save with 'Save' (keeps the moderation state). If the save seems to do nothing, look for a validation error further down the form.
 - Done when: No other page has the same title
-  - `/calendar/daily-activity/room-sixty-years-front-lines-history`, 3,471 impr., title "In the Room: Sixty Years on the Front Lines of History" (54 chars), same as /calendar/special-event/gallery-david-hume-kennerly, /calendar/special-event/artist-talk-room-david-hume-kennerly, /calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf
-  - `/about/trustees/kermit-roosevelt`, 3,282 impr., title "Kermit Roosevelt" (16 chars), same as /tr/people/kermit
-  - `/project/native-plant-project`, 1,583 impr., HELD (recently changed), title "Native Plant Project" (20 chars), same as /video/view/1SqdaUrbU7U
-  - `/tr/people/kermit`, 1,435 impr., HELD (recently changed), title "Kermit Roosevelt" (16 chars), same as /about/trustees/kermit-roosevelt
-  - `/events/teddycon`, 1,085 impr., HELD (recently changed), title "Theodore Roosevelt Convention (#TeddyCon)" (41 chars), same as /event/24
-  - `/visit/exhibits/kennerly`, 1,072 impr., title "In the Room: Sixty Years on the Front Lines of History" (54 chars), same as /calendar/daily-activity/room-sixty-years-front-lines-history, /calendar/special-event/gallery-david-hume-kennerly, /calendar/special-event/artist-talk-room-david-hume-kennerly
-  - `/about/trustees/douglas-brinkley`, 857 impr., title "Douglas Brinkley" (16 chars), same as /podcast/good-citizen/douglas-brinkley
-  - `/podcast/good-citizen/douglas-brinkley`, 808 impr., HELD (recently changed), title "Douglas Brinkley" (16 chars), same as /about/trustees/douglas-brinkley
+  - `/calendar/daily-activity/room-sixty-years-front-lines-history`, 3,542 impr., title "In the Room: Sixty Years on the Front Lines of History" (54 chars), same as /calendar/special-event/gallery-david-hume-kennerly, /calendar/special-event/artist-talk-room-david-hume-kennerly, /calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf
+  - `/about/trustees/kermit-roosevelt`, 3,012 impr., title "Kermit Roosevelt" (16 chars), same as /tr/people/kermit
+  - `/visit/exhibits/kennerly`, 1,691 impr., title "In the Room: Sixty Years on the Front Lines of History" (54 chars), same as /calendar/daily-activity/room-sixty-years-front-lines-history, /calendar/special-event/gallery-david-hume-kennerly, /calendar/special-event/artist-talk-room-david-hume-kennerly
+  - `/project/native-plant-project`, 1,554 impr., HELD (recently changed), title "Native Plant Project" (20 chars), same as /video/view/1SqdaUrbU7U
+  - `/tr/people/kermit`, 1,491 impr., HELD (recently changed), title "Kermit Roosevelt" (16 chars), same as /about/trustees/kermit-roosevelt
+  - `/events/teddycon`, 1,061 impr., HELD (recently changed), title "Theodore Roosevelt Convention (#TeddyCon)" (41 chars), same as /event/24
+  - `/about/trustees/douglas-brinkley`, 848 impr., title "Douglas Brinkley" (16 chars), same as /podcast/good-citizen/douglas-brinkley
+  - `/podcast/good-citizen/douglas-brinkley`, 810 impr., HELD (recently changed), title "Douglas Brinkley" (16 chars), same as /about/trustees/douglas-brinkley
   - ...and 29 more in work_queue.json
 
 **11. No H1 heading** (`audit:h1_missing`, 29 pages)
 - How: Open the page's Layout (/node/NID/layout). Make sure the top section shows the page title block (Content fields > Title), which renders as the H1; or change the first heading in the top text block to Heading 1. Save layout.
 - Done when: Exactly one H1
-  - `/visit/planner`, 2,481 impr., no H1
-  - `/tr/presidency/executive-actions/story`, 902 impr., no H1
-  - `/grand-opening/photos/july2`, 801 impr., no H1
-  - `/visit/maps/campus`, 657 impr., no H1
-  - `/grand-opening/photos/july4`, 507 impr., no H1
-  - `/tr/presidency/executive-actions/action`, 189 impr., no H1
-  - `/membership/neighbor`, 156 impr., no H1
-  - `/visit/itineraries/7-day-bismarck-rapid-city/print`, 76 impr., no H1
+  - `/visit/planner`, 2,344 impr., no H1
+  - `/tr/presidency/executive-actions/story`, 949 impr., no H1
+  - `/grand-opening/photos/july2`, 766 impr., no H1
+  - `/visit/maps/campus`, 680 impr., no H1
+  - `/grand-opening/photos/july4`, 521 impr., no H1
+  - `/tr/presidency/executive-actions/action`, 214 impr., no H1
+  - `/membership/neighbor`, 151 impr., no H1
+  - `/research/family-tree`, 80 impr., no H1
   - ...and 21 more in work_queue.json
 
 **12. Missing Open Graph tags** (`audit:og_missing`, 11 pages)
 - How: Edit the node (/node/NID/edit) > 'Customize meta tags'. Basic tags: Page title '<title> | [site:name]' (page part 60 characters or fewer) and Description (120-155 characters). Set Open Graph og:title/og:description and Twitter card title/description to match. Save with 'Save' (keeps the moderation state). If the save seems to do nothing, look for a validation error further down the form.
 - Done when: og:title and og:description are present
-  - `/join-us`, 2,394 impr.
-  - `/visit/exhibits/kennerly`, 1,072 impr.
-  - `/visit/teddy-trail`, 653 impr., HELD (recently changed)
+  - `/join-us`, 2,556 impr.
+  - `/visit/exhibits/kennerly`, 1,691 impr.
+  - `/visit/teddy-trail`, 690 impr., HELD (recently changed)
   - `/birthdaycard`, 19 impr.
   - `/project/how-the-library-works`, 6 impr.
   - `/rsvp/midwinter`
@@ -231,8 +231,8 @@ House rules for any change:
 **13. No meta description** (`audit:meta_missing`, 10 pages)
 - How: Edit the node (/node/NID/edit) > 'Customize meta tags'. Basic tags: Page title '<title> | [site:name]' (page part 60 characters or fewer) and Description (120-155 characters). Set Open Graph og:title/og:description and Twitter card title/description to match. Save with 'Save' (keeps the moderation state). If the save seems to do nothing, look for a validation error further down the form.
 - Done when: The page has a meta description of 120-155 characters
-  - `/join-us`, 2,394 impr.
-  - `/visit/exhibits/kennerly`, 1,072 impr.
+  - `/join-us`, 2,556 impr.
+  - `/visit/exhibits/kennerly`, 1,691 impr.
   - `/birthdaycard`, 19 impr.
   - `/project/how-the-library-works`, 6 impr.
   - `/rsvp/midwinter`
@@ -245,29 +245,29 @@ House rules for any change:
 - How: This sitemap URL redirects to another page. Edit the old node > XML sitemap > Inclusion: Excluded, or archive the node if it's retired (a 301 stays in place).
 - Done when: The sitemap no longer lists the redirecting URL
   - `/event/24`, 1,592 impr.
-  - `/calendar/special-event/gallery-david-hume-kennerly`, 157 impr.
-  - `/calendar/special-event/artist-talk-room-david-hume-kennerly`, 92 impr.
+  - `/calendar/special-event/gallery-david-hume-kennerly`, 142 impr.
+  - `/calendar/special-event/artist-talk-room-david-hume-kennerly`, 89 impr.
   - `/calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf`, 21 impr.
-  - `/calendar/special-event/book-signing-and-meet-greet-kennerly-balkowitsch-and-ziemendorf`, 12 impr.
+  - `/calendar/special-event/book-signing-and-meet-greet-kennerly-balkowitsch-and-ziemendorf`, 9 impr.
 
 ### Page jobs: everything to fix on one page, busiest pages first
 | Page | Impr. | Fixes | Links to add | Markup |  |
 |---|---|---|---|---|---|
-| /tr/presidency/roosevelt-corollary | 131947 | – | – | Article | held |
-| /tr/presidency/brownsville | 126189 | – | – | Article | held |
-| /podcast/good-citizen/senator-chris-murphy | 125230 | meta_duplicate | [[high school]] -> /tr/for-educators/high-school; [[in the room]] -> /visit/exhibits/kennerly | – |  |
-| /tr/tr-mount-rushmore | 122070 | – | [[Square Deal]] -> /tr/presidency/square-deal; [[Panama Canal]] -> /tr/presidency/panama-canal; [[Nobel Peace Prize]] -> /tr/presidency/nobel-peace-prize | – | held |
-| /tr/presidency/square-deal | 92800 | – | [[executive power]] -> /tr/presidency/executive-power | Article | held |
-| /tr/family/fdr-connection | 87236 | – | [[Elliott Roosevelt]] -> /tr/family/elliott-roosevelt; [[William Howard Taft]] -> /tr/people/william-howard-taft; [[executive power]] -> /tr/presidency/executive-power | Article | held |
-| /tr/people/jacob-riis | 83791 | – | – | Article | held |
-| /tr/presidency/trust-busting | 76457 | – | [[William Howard Taft]] -> /tr/people/william-howard-taft | Article | held |
-| /tr/presidency/panama-canal | 62842 | – | – | Article | held |
-| /tickets | 61154 | title_too_short | – | – |  |
-| /tr/presidency-timeline | 54627 | – | [[Roosevelt Corollary]] -> /tr/presidency/roosevelt-corollary; [[Panama Canal]] -> /tr/presidency/panama-canal; [[Great White Fleet]] -> /tr/presidency/great-white-fleet | – | held |
-| /tr/pre-presidency-political-accomplishments | 53412 | – | [[governor of New York]] -> /tr/rise-to-power/governor; [[New York State Assembly]] -> /tr/new-york-politics/assembly; [[Civil War]] -> /tr/early-life/civil-war | – | held |
-| /visit/directions | 51234 | – | [[Mount Rushmore]] -> /tr/tr-mount-rushmore; [[Plan ahead]] -> /visit/tickets/plan-ahead; [[Theodore Roosevelt National Park]] -> /visit/national-park | – | held |
-| /tr/timeline | 42396 | – | [[Panama Canal]] -> /tr/presidency/panama-canal; [[Citizenship in a Republic]] -> /tr/speeches/man-in-the-arena; [[Great White Fleet]] -> /tr/presidency/great-white-fleet | – | held |
-| /bullet-speech | 40001 | h1_multiple | [[assassination attempt]] -> /tr/post-presidency/assassination-attempt; [[frequently asked questions]] -> /visit/faq | – | held |
+| /podcast/good-citizen/senator-chris-murphy | 131910 | meta_duplicate | [[high school]] -> /tr/for-educators/high-school; [[in the room]] -> /visit/exhibits/kennerly | – |  |
+| /tr/presidency/roosevelt-corollary | 131626 | – | – | Article | held |
+| /tr/tr-mount-rushmore | 124296 | – | [[Square Deal]] -> /tr/presidency/square-deal; [[Panama Canal]] -> /tr/presidency/panama-canal; [[Nobel Peace Prize]] -> /tr/presidency/nobel-peace-prize | – | held |
+| /tr/presidency/brownsville | 116370 | – | – | Article | held |
+| /tr/presidency/square-deal | 95726 | – | [[executive power]] -> /tr/presidency/executive-power | Article | held |
+| /tr/family/fdr-connection | 87853 | – | [[Elliott Roosevelt]] -> /tr/family/elliott-roosevelt; [[William Howard Taft]] -> /tr/people/william-howard-taft; [[executive power]] -> /tr/presidency/executive-power | Article | held |
+| /tr/people/jacob-riis | 82938 | – | – | Article | held |
+| /tr/presidency/trust-busting | 75866 | – | [[William Howard Taft]] -> /tr/people/william-howard-taft | Article | held |
+| /tr/presidency/panama-canal | 62739 | – | – | Article | held |
+| /tickets | 60612 | title_too_short | – | – |  |
+| /tr/presidency-timeline | 54362 | – | [[Roosevelt Corollary]] -> /tr/presidency/roosevelt-corollary; [[Panama Canal]] -> /tr/presidency/panama-canal; [[Great White Fleet]] -> /tr/presidency/great-white-fleet | – | held |
+| /tr/pre-presidency-political-accomplishments | 53213 | – | [[governor of New York]] -> /tr/rise-to-power/governor; [[New York State Assembly]] -> /tr/new-york-politics/assembly; [[Civil War]] -> /tr/early-life/civil-war | – | held |
+| /visit/directions | 50307 | – | [[Mount Rushmore]] -> /tr/tr-mount-rushmore; [[Plan ahead]] -> /visit/tickets/plan-ahead; [[Theodore Roosevelt National Park]] -> /visit/national-park | – | held |
+| /tr/timeline | 42348 | – | [[Panama Canal]] -> /tr/presidency/panama-canal; [[Citizenship in a Republic]] -> /tr/speeches/man-in-the-arena; [[Great White Fleet]] -> /tr/presidency/great-white-fleet | – | held |
+| /bullet-speech | 40035 | h1_multiple | [[assassination attempt]] -> /tr/post-presidency/assassination-attempt; [[frequently asked questions]] -> /visit/faq | – | held |
 
 ### Waiting on FiveJars or blocked (already ticketed; check whether they've landed, don't re-ask)
 - Sitewide markup doesn't link to the Library's Wikipedia entry (`schema:sitewide:sameas`): blocked, the per-page sameAs field is capped at 255 characters; FiveJars asked to raise it. Wikidata is in place; Wikipedia and Bluesky go back in once it's raised
@@ -295,78 +295,78 @@ House rules for any change:
 |---|---|---|---|
 | audit | ok | 2026-11-02T12:32:16+00:00 | Crawled 1130 pages, health 96/100 |
 | ranks | ok | 2026-11-02T12:38:36+00:00 | 30 keywords checked |
-| opportunities | error | 2026-11-05T13:22:09+00:00 | 'est_extra_clicks' |
-| gsc | ok | 2026-11-05T13:22:09+00:00 | 23075 queries, 2030 pages (2026-10-06 to 2026-11-02); 249 changed pages tracked |
+| opportunities | error | 2026-11-06T13:22:19+00:00 | 'est_extra_clicks' |
+| gsc | ok | 2026-11-06T13:22:19+00:00 | 23042 queries, 2062 pages (2026-10-07 to 2026-11-03); 249 changed pages tracked |
 | ai_visibility | error | 2026-11-02T12:44:59+00:00 | 38 answers from ChatGPT, Gemini, Perplexity; 19 failed: Perplexity 403: {"error":{"message":"The Agent API requires paid credits. Add paid credit at https://console.perplexity.ai to upgrade your organizatio |
 | tips | ok | 2026-11-02T13:09:25+00:00 | Gemini wrote tips for 8 pages |
-| digest | ok | 2026-11-04T13:22:44+00:00 | llms.txt, digest.md and digest.json rebuilt |
-| checkout | ok | 2026-11-05T13:22:32+00:00 | Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info |
+| digest | ok | 2026-11-05T13:22:33+00:00 | llms.txt, digest.md and digest.json rebuilt |
+| checkout | ok | 2026-11-06T13:22:29+00:00 | Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info |
 | curate | ok | 2026-11-02T12:33:01+00:00 | 10 discovered keywords and 4 discovered questions tracked; 7 changes today |
 | ux | ok | 2026-11-02T12:59:15+00:00 | 79 pages; PageSpeed on 77; AI task check by gemini (gemini-3.8-flash); GA4 on; Clarity off; 2 errors, e.g. PageSpeed /visit/maps: PageSpeed 500: {   "error": {     "code": 500,     "message": "Lighthouse returned error: PAGE_HUNG. Lighthouse was unable to reliably load the URL you requeste |
 | links | ok | 2026-11-02T13:01:07+00:00 | 1164 pages crawled; 0 broken internal links (redirects proposed); 1176 suggested links; 50 orphan pages; 49 related pairs without links |
 | schema | ok | 2026-11-02T13:02:49+00:00 | 101/883 content pages have their own markup; 8 sitewide issues |
-| indexnow | skipped | 2026-11-05T13:22:32+00:00 | No IndexNow key yet: see the work queue task 'Turn on IndexNow'. |
+| indexnow | skipped | 2026-11-06T13:22:29+00:00 | No IndexNow key yet: see the work queue task 'Turn on IndexNow'. |
 
 ## Google Search (Search Console)
-2026-10-06 to 2026-11-02 vs the prior 28 days: **43,615 clicks** (prior 57,268), 2,617,553 impressions (prior 2,296,569), CTR 1.7% (prior 2.5%), average position 6.0 (prior 6.6). Branded clicks 14519, non-branded 9755, search term hidden by Google 19341.
+2026-10-07 to 2026-11-03 vs the prior 28 days: **43,293 clicks** (prior 56,401), 2,633,904 impressions (prior 2,325,647), CTR 1.6% (prior 2.4%), average position 6.0 (prior 6.5). Branded clicks 14125, non-branded 9810, search term hidden by Google 19358.
 
 ### Top non-branded searches (people who didn't search our name)
 | Search | Clicks | Impr. | Pos. |
 |---|---|---|---|
-| brownsville affair | 1 | 123501 | 5.5 |
-| chris murphy | 6 | 68831 | 12.2 |
-| square deal | 124 | 55310 | 3.5 |
-| karl rove | 25 | 30688 | 9.3 |
-| roosevelt corollary | 48 | 23314 | 4.6 |
-| jacob riis | 88 | 21034 | 10 |
-| senator chris murphy | 6 | 16702 | 12.9 |
-| bill kristol | 8 | 16268 | 11.7 |
-| theodore roosevelt | 57 | 13330 | 8.2 |
-| alice roosevelt | 49 | 11132 | 8.1 |
-| theo elections | 4 | 10058 | 6.4 |
-| roosevelt family | 23 | 9930 | 3.9 |
-| kermit roosevelt | 38 | 9415 | 7.2 |
-| alice roosevelt longworth | 13 | 8885 | 8.5 |
-| chris murphy senator | 5 | 8565 | 12.3 |
-| mount rushmore presidents | 25 | 7813 | 4.7 |
-| sen chris murphy | 5 | 7091 | 10.6 |
-| bull moose party | 48 | 7034 | 4.2 |
-| bully pulpit | 17 | 6445 | 2.9 |
-| man in the arena | 49 | 6278 | 5.6 |
-| alice hathaway lee roosevelt | 8 | 6190 | 6 |
-| the man in the arena | 69 | 6157 | 5.8 |
-| teddy roosevelt | 35 | 5784 | 6.3 |
-| henry cabot lodge | 5 | 5773 | 7 |
-| theodore roosevelt national park | 21 | 5698 | 9.4 |
+| brownsville affair | 1 | 113635 | 5.3 |
+| chris murphy | 7 | 68956 | 12.2 |
+| square deal | 127 | 57738 | 3.5 |
+| karl rove | 26 | 32816 | 9.5 |
+| roosevelt corollary | 49 | 23072 | 4.5 |
+| jacob riis | 94 | 21208 | 9.9 |
+| bill kristol | 8 | 17551 | 11.6 |
+| senator chris murphy | 6 | 17362 | 13 |
+| theodore roosevelt | 56 | 13239 | 7.9 |
+| theo elections | 4 | 12899 | 6.6 |
+| chris murphy senator | 9 | 12024 | 12.6 |
+| alice roosevelt | 50 | 11268 | 8.1 |
+| roosevelt family | 22 | 9962 | 3.9 |
+| kermit roosevelt | 35 | 9387 | 7.2 |
+| alice roosevelt longworth | 13 | 8856 | 8.5 |
+| mount rushmore presidents | 24 | 7905 | 4.7 |
+| sen chris murphy | 5 | 7775 | 10.7 |
+| bull moose party | 51 | 7486 | 4.1 |
+| bully pulpit | 20 | 7278 | 2.9 |
+| man in the arena | 52 | 6607 | 5.6 |
+| the man in the arena | 79 | 6573 | 5.6 |
+| alice hathaway lee roosevelt | 8 | 6210 | 5.9 |
+| teddy roosevelt | 38 | 5866 | 6.3 |
+| henry cabot lodge | 5 | 5763 | 7 |
+| theodore roosevelt national park | 22 | 5329 | 9.5 |
 
 ### Top pages
 | Page | Clicks | Prior | Impr. | Pos. |
 |---|---|---|---|---|
-| / | 8450 | 12898 | 88070 | 7.1 |
-| /?utm_source=gbp&utm_medium=organic | 6239 | 373 | 39658 | 3.8 |
-| /tickets | 3367 | 8072 | 61154 | 3.1 |
-| /tr/family/fdr-connection | 1704 | 757 | 87236 | 3.2 |
-| /visit | 1403 | 3266 | 61278 | 2.7 |
-| /tr/presidency/trust-busting | 1015 | 702 | 76457 | 3.4 |
-| /tr/square-deal | 889 | 1106 | 107334 | 3.9 |
-| /tr/speeches/man-in-the-arena | 719 | 270 | 31653 | 5.2 |
-| /bullet-speech | 683 | 740 | 40001 | 3.7 |
-| /tr/quotes | 608 | 720 | 26809 | 10.6 |
-| /visit/directions | 592 | 1208 | 51234 | 2.7 |
-| /tr/presidency/square-deal | 580 | 306 | 92800 | 4.4 |
-| /tr/pre-presidency-political-accomplishments | 574 | 509 | 53412 | 5.6 |
-| /visit/hours | 477 | 1235 | 46290 | 2.4 |
-| /tr/people/jacob-riis | 458 | 255 | 83790 | 6.6 |
-| /tr/tr-mount-rushmore | 447 | 891 | 122070 | 5.5 |
-| /tr/presidency/ten-facts | 435 | 157 | 15557 | 3.9 |
-| /tr/rise-to-power/san-juan-hill | 415 | 232 | 30553 | 3.7 |
-| /tr/family/family-tree | 397 | 199 | 26679 | 5.2 |
-| /tr/tr-importance | 360 | 287 | 37487 | 4.9 |
-| /tr/fake-quotes | 327 | 409 | 16160 | 6.8 |
-| /tr/presidency-timeline | 323 | 314 | 54627 | 4.6 |
-| /tr/tr-shot | 318 | 331 | 36487 | 4 |
-| /tr/presidency/panama-canal | 301 | 70 | 62842 | 5 |
-| /tr/presidency/roosevelt-corollary | 273 | 148 | 131947 | 4.8 |
+| / | 8282 | 12607 | 86093 | 7.1 |
+| /?utm_source=gbp&utm_medium=organic | 6025 | 632 | 38716 | 3.8 |
+| /tickets | 3203 | 7794 | 59957 | 3.1 |
+| /tr/family/fdr-connection | 1716 | 783 | 87853 | 3.2 |
+| /visit | 1370 | 3128 | 60272 | 2.7 |
+| /tr/presidency/trust-busting | 1032 | 731 | 75866 | 3.3 |
+| /tr/square-deal | 851 | 1108 | 104056 | 3.9 |
+| /tr/speeches/man-in-the-arena | 771 | 265 | 33128 | 5.1 |
+| /bullet-speech | 670 | 739 | 40035 | 3.7 |
+| /tr/presidency/square-deal | 641 | 325 | 95726 | 4.3 |
+| /tr/quotes | 607 | 708 | 26486 | 10.6 |
+| /visit/directions | 567 | 1170 | 50307 | 2.7 |
+| /tr/pre-presidency-political-accomplishments | 557 | 519 | 53213 | 5.5 |
+| /tr/people/jacob-riis | 461 | 268 | 82937 | 6.6 |
+| /visit/hours | 461 | 1194 | 45097 | 2.4 |
+| /tr/presidency/ten-facts | 445 | 164 | 15496 | 3.9 |
+| /tr/tr-mount-rushmore | 435 | 887 | 124296 | 5.5 |
+| /tr/rise-to-power/san-juan-hill | 425 | 226 | 30552 | 3.7 |
+| /tr/family/family-tree | 391 | 208 | 26777 | 5.2 |
+| /tr/fake-quotes | 357 | 413 | 16065 | 6.7 |
+| /tr/tr-importance | 351 | 303 | 37219 | 4.9 |
+| /tr/presidency-timeline | 325 | 310 | 54362 | 4.5 |
+| /tr/presidency/panama-canal | 313 | 76 | 62739 | 4.9 |
+| /tr/tr-shot | 313 | 333 | 36234 | 4 |
+| /tr/presidency/roosevelt-corollary | 286 | 152 | 131626 | 4.7 |
 
 ## Opportunities (ranked)
 _Estimated extra clicks use a rough industry click-through curve. Treat them as a way to rank opportunities, not a forecast._
@@ -845,20 +845,20 @@ Before = the 28 days before the change; after = the days since, up to the latest
 | /about/press/press-releases/trplf-announces-100-million-commitments-unlocks-50-million-state | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → – | 2.8% → – | 4.9 → – |
 | /tr/new-york-politics | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → – | 0.9% → – | 7.0 → – |
 | /tr/tr-importance | 2026-11-03 | Title 'What Was Theodore Roosevelt Known For?'; typo fix | 12.9 → – | 1.0% → – | 4.9 → – |
-| /visit | 2026-10-27 | Title: Plan Your Visit: Tickets, Hours and Directions; Visit length: about three and a hal | 57.3 → 33.3 | 2.5% → 1.8% | 2.7 → 3.1 |
-| /tr/presidency/panama-canal | 2026-10-27 | Title and description: Theodore Roosevelt and the Panama Canal, 1903–1914 | 8.2 → 13.3 | 0.4% → 0.5% | 5.2 → 4.6 |
-| /tr/presidency/railroad-regulation | 2026-10-27 | Title names the Hepburn Act and Elkins Act | 3.9 → 4.7 | 0.4% → 0.5% | 4.0 → 3.5 |
-| /tr/presidency/coal-strike | 2026-10-27 | Title uses 'Anthracite Coal Strike of 1902' | 7.9 → 7.2 | 0.9% → 0.9% | 4.2 → 2.9 |
-| /visit/groups | 2026-10-27 | Visit length changed from about three hours to about three and a half hours | 0.1 → 0.2 | 0.6% → 5.0% | 6.5 → 4.7 |
-| /visit/faq/tickets | 2026-10-27 | 'Buy tickets' link fixed (was /visit/tickets, a 404); 301 /visit/tickets -> /tickets | 2.0 → 1.3 | 4.3% → 4.0% | 6.3 → 4.9 |
-| /visit/faq | 2026-10-27 | Tickets link fixed (was /visit/tickets, a 404) | 2.1 → 0.7 | 0.8% → 1.6% | 4.7 → 6.8 |
+| /visit | 2026-10-27 | Title: Plan Your Visit: Tickets, Hours and Directions; Visit length: about three and a hal | 57.3 → 32.6 | 2.5% → 1.8% | 2.7 → 3.1 |
+| /tr/presidency/panama-canal | 2026-10-27 | Title and description: Theodore Roosevelt and the Panama Canal, 1903–1914 | 8.2 → 14.0 | 0.4% → 0.5% | 5.2 → 4.7 |
+| /tr/presidency/railroad-regulation | 2026-10-27 | Title names the Hepburn Act and Elkins Act | 3.9 → 5.9 | 0.4% → 0.7% | 4.0 → 3.4 |
+| /tr/presidency/coal-strike | 2026-10-27 | Title uses 'Anthracite Coal Strike of 1902' | 7.9 → 6.6 | 0.9% → 0.8% | 4.2 → 2.9 |
+| /visit/groups | 2026-10-27 | Visit length changed from about three hours to about three and a half hours | 0.1 → 0.1 | 0.6% → 4.5% | 6.5 → 5.2 |
+| /visit/faq/tickets | 2026-10-27 | 'Buy tickets' link fixed (was /visit/tickets, a 404); 301 /visit/tickets -> /tickets | 2.0 → 1.3 | 4.3% → 3.7% | 6.3 → 5.0 |
+| /visit/faq | 2026-10-27 | Tickets link fixed (was /visit/tickets, a 404) | 2.1 → 0.6 | 0.8% → 1.5% | 4.7 → 6.7 |
 | /tr/presidency/brownsville | 2026-10-20 | Title 'The Brownsville Affair of 1906: What Happened and Why'; Medal of Honor claim and da | 0.9 → 2.3 | 0.0% → 0.1% | 6.3 → 4.5 |
-| /tr/presidency/roosevelt-corollary | 2026-10-20 | Title 'Roosevelt Corollary to the Monroe Doctrine, Explained'; stray second H1 section rem | 6.6 → 13.6 | 0.2% → 0.3% | 5.4 → 4.3 |
-| /visit/hours | 2026-10-20 | Title 'Hours in Medora: Seasonal Schedule and Last Entry'; visit-length bullet | 27.0 → 14.3 | 1.2% → 1.0% | 2.7 → 2.2 |
+| /tr/presidency/roosevelt-corollary | 2026-10-20 | Title 'Roosevelt Corollary to the Monroe Doctrine, Explained'; stray second H1 section rem | 6.6 → 14.1 | 0.2% → 0.3% | 5.4 → 4.2 |
+| /visit/hours | 2026-10-20 | Title 'Hours in Medora: Seasonal Schedule and Last Entry'; visit-length bullet | 27.0 → 13.9 | 1.2% → 1.0% | 2.7 → 2.2 |
 | /tr/myths/teddy-name | 2026-10-20 | Archived; 301 to /tr/teddy-nickname | 0.2 → 0.4 | 1.2% → 0.5% | 6.2 → 5.4 |
-| / | 2026-10-20 | Description mentions 'Teddy' | 353.1 → 280.6 | 3.8% → 9.3% | 8.0 → 6.7 |
-| /visit/itineraries/one-day | 2026-10-20 | Visit length and restaurant name | 3.5 → 2.1 | 4.1% → 3.4% | 3.9 → 3.8 |
-| /visit/itineraries/4-days-north-dakota | 2026-10-20 | Visit length and restaurant name | 0.7 → 0.7 | 1.4% → 1.7% | 7.6 → 7.2 |
+| / | 2026-10-20 | Description mentions 'Teddy' | 353.1 → 274.1 | 3.8% → 9.4% | 8.0 → 6.6 |
+| /visit/itineraries/one-day | 2026-10-20 | Visit length and restaurant name | 3.5 → 2.1 | 4.1% → 3.6% | 3.9 → 3.8 |
+| /visit/itineraries/4-days-north-dakota | 2026-10-20 | Visit length and restaurant name | 0.7 → 0.6 | 1.4% → 1.6% | 7.6 → 7.2 |
 | /visit/itineraries/seattle-badlands | 2026-10-20 | Visit length and restaurant name | 0.1 → 0.1 | 1.2% → 0.6% | 6.7 → 7.3 |
 | /visit/i-94 | 2026-10-20 | New page: Best Stops on I-94 in North Dakota | 0.0 → 0.0 | – → – | – → – |
 | /tr/badlands/where-to-see | 2026-10-20 | New page: Where to See Theodore Roosevelt's North Dakota | 0.0 → 0.0 | – → – | – → – |
@@ -1134,115 +1134,110 @@ Most fixes are one change to a Drupal template per content type (ask FiveJars); 
 | Staff profiles | Person / ProfilePage | 42 | 42 | 0 | Add ProfilePage + Person JSON-LD to the staff member template (name, job title, photo). |
 
 ## Ticket checkout (GA4, rates only)
-Checkout completion – (prior –); store visitors who buy 36% (prior 42%); ticket page to store 65%. Steps the store doesn't report: view_item, add_to_cart, begin_checkout, add_payment_info.
+Checkout completion – (prior –); store visitors who buy 35% (prior 42%); ticket page to store 62%. Steps the store doesn't report: view_item, add_to_cart, begin_checkout, add_payment_info.
 
-Store frustration signals (last 3 days, Clarity): dead clicks 19.7% of sessions, rage clicks 0.2%, quick backs 43.4%, scroll depth 75.4%.
+Store frustration signals (last 3 days, Clarity): dead clicks 17.0% of sessions, rage clicks 0.2%, quick backs 39.4%, scroll depth 77.5%.
 
 | Store page | Dead % | Rage % | Quick back % | Scroll % |
 |---|---|---|---|---|
-| checkout/confirm | 4.9 | 0 | 3.3 | 99.5 |
+| checkout/confirm | 9 | 0 | 3 | 99.4 |
 | tr/for-educators/roosevelt-women | 0 | 0 | 0 | 20 |
-| orders/tickets | 0 | 0 | 16.6 | 61.9 |
+| orders/tickets | 0 | 0 | 0 | 62.3 |
 | private-events/inquiry | 0 | 0 | 0 | 100 |
-| private-events/spaces | 0 | 0 | 0 | 68 |
-| checkout/process | 12.5 | 0 | 0 | 100 |
-| tr/family/family-tree | 0 | 0 | 0 | 5 |
-| orders/calendar | 0 | 0 | 64.3 | 70.8 |
-| visit/tickets/plan-ahead | 0 | 0 | 50 | 73.5 |
+| tickets | 0 | 0 | 0 | 8 |
+| auth/members | 62.5 | 0 | 6.2 | 99.1 |
+| private-events/spaces | 0 | 0 | 0 | 78.3 |
+| tr/family/family-tree | 0 | 0 | 0 | 43 |
+| membership/join | 0 | 0 | 0 | 85.5 |
+| membership/profile | 0 | 0 | 50 | 100 |
+| orders/calendar | 0 | 0 | 68.8 | 75.8 |
+| checkout/process | 75 | 0 | 0 | 100 |
+| visit/tickets/plan-ahead | 0 | 0 | 100 | 100 |
+| membership/detail | 5.1 | 0 | 23.5 | 93.2 |
+| calendar/special-event/butchery-workshop | 0 | 0 | 0 | 79 |
+| calendar/special-event/america-beautiful-film-screening | 0 | 0 | 0 | 36.5 |
 | calendar/specialty-tour | 0 | 0 | 100 | 93 |
 | orders/forms | 0 | 0 | 0 | 100 |
-| auth/members | 33.4 | 0 | 16.6 | 100 |
-| membership/profile | 0 | 0 | 0 | 100 |
 | pay-balance/zHzouHxtKvA0DicuSJZToQP2jk26raCjMd_NHkngVmh-u5lWZ1yhNSTDRCb9rGnh | 100 | 0 | 0 | 100 |
-| calendar/special-event/america-beautiful-film-screening | 0 | 0 | 0 | 29.7 |
-| tr/speeches/man-in-the-arena | 0 | 0 | 0 | 37.7 |
+| tr/speeches/man-in-the-arena | 0 | 0 | 0 | 20 |
+| tr/rise-to-power/san-juan-hill | 0 | 0 | 0 | 4 |
 | tr/rise-to-power/ten-facts | 0 | 0 | 0 | 27 |
-| tr/people | 0 | 0 | 50 | 65.7 |
+| tr/people | 0 | 0 | 0 | 42 |
 | calendar | 0 | 0 | 0 | 96 |
 | midwinter-table | 0 | 0 | 0 | 96 |
-| video/view/k3U8V1HmKDs | 0 | 0 | 0 | 100 |
-| tickets | 18.2 | 0 | 45.5 | 44.9 |
-| tr/people/alice-lee | 0 | 0 | 100 | 78.5 |
-| tr/badlands/elkhorn-ranch | 0 | 0 | 0 | 66 |
+| tr/badlands/elkhorn-ranch | 0 | 0 | 0 | 79.3 |
 | tr/presidency/executive-actions | 0 | 0 | 100 | 89 |
-| tr/people/william-howard-taft | 0 | 0 | 0 | 81 |
-| about/careers | 0 | 0 | 0 | 65.7 |
+| about/careers | 0 | 0 | 0 | 54 |
 | tr/badlands/landscape | 0 | 0 | 100 | 70 |
 | tr | 0 | 0 | 0 | 58.5 |
 | calendar/partners | 0 | 0 | 0 | 97 |
 | tr/presidency/square-deal | 0 | 0 | 0 | 14 |
-| tr/presidency/trust-busting | 0 | 0 | 0 | 4 |
+| tr/presidency/trust-busting | 0 | 0 | 0 | 17 |
 | tr/fake-quotes | 0 | 0 | 0 | 5 |
-| project | 0 | 0 | 0 | 81 |
-| membership/detail | 7.4 | 0 | 14.3 | 98.9 |
+| project | 0 | 0 | 0 | 100 |
 | quiz | 0 | 0 | 0 | 16 |
-| contact | 0 | 0 | 0 | 77.5 |
-| visit/hours | 0 | 0 | 0 | 77 |
-| events/detail | 0 | 0 | 0 | 100 |
-| membership/renew | 0 | 0 | 16.6 | 96.8 |
+| contact | 0 | 0 | 0 | 100 |
+| visit/hours | 0 | 0 | 0 | 73 |
+| visit/exhibits | 0 | 0 | 0 | 100 |
+| membership/renew | 0 | 0 | 58.4 | 96 |
 | holiday-2026 | 0 | 0 | 0 | 78 |
+| visit/planner | 0 | 0 | 0 | 100 |
 | / | 0 | 0 | 25 | 11.2 |
-| visit | 0 | 0 | 0 | 39.8 |
+| visit/outdoors | 0 | 0 | 0 | 87 |
+| visit | 14.3 | 0 | 14.3 | 24.6 |
+| events/detail | 0 | 0 | 0 | 100 |
 | tr/10-myths-teddy-bear | 0 | 0 | 0 | 65.2 |
-| membership/join | 2.6 | 0 | 7.9 | 76.5 |
-| membership/upgrade | 0 | 0 | 100 | 81.3 |
-| search | 0 | 0 | 100 | 88 |
 | quiz/who-was-tr | 100 | 0 | 0 | 76 |
-| tr/family | 0 | 0 | 100 | 85 |
-| visit/faq | 0 | 0 | 0 | 76 |
-| tr/presidency/great-white-fleet | 0 | 0 | 0 | 21 |
-| podcast/good-citizen | 0 | 0 | 0 | 7 |
+| podcast/good-citizen | 0 | 0 | 0 | 15 |
+| visit/faq | 0 | 0 | 0 | 100 |
+| tr/presidency/great-white-fleet | 0 | 0 | 0 | 12.3 |
+| search | 0 | 0 | 0 | 100 |
 | about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026 | 0 | 0 | 0 | 56 |
 | visit/groups/field-trips | 0 | 0 | 0 | 51 |
 | tr/rise-to-power/police-commissioner | 0 | 0 | 0 | 71.5 |
-| staff-members/chris-blackwell | 0 | 0 | 0 | 32 |
-| video/view/15dkv17Wk38 | 0 | 0 | 0 | 100 |
+| quiz/badlands-wildlife-family | 0 | 0 | 0 | 85 |
 | tr/early-life | 0 | 0 | 0 | 22 |
 | tr/presidency/conservation/antiquities-act | 50 | 0 | 0 | 11.5 |
-| support | 0 | 0 | 0 | 100 |
-| tr/people/kermit | 0 | 0 | 0 | 53 |
 | video/view/Rzd-BXSGYHk | 0 | 0 | 0 | 98 |
-| tr/complex-legacy/imperialism | 100 | 0 | 0 | 100 |
 | quiz/myths-expert | 100 | 0 | 0 | 76 |
-| tr/myths | 0 | 0 | 100 | 98 |
 | teach-tr | 0 | 0 | 0 | 10.5 |
-| tr/presidency | 100 | 0 | 0 | 23 |
 | tr/complex-legacy/race | 0 | 0 | 0 | 80.3 |
-| trlibrary | 0 | 0 | 0 | 89 |
 | video/view/XWavBYKE5Ec | 0 | 0 | 0 | 23 |
-| membership | 0 | 0 | 0 | 10 |
+| newsletter | 0 | 0 | 0 | 100 |
+| quiz/conservation | 100 | 0 | 0 | 83 |
 | tr/homes-and-places/sagamore-hill. | 0 | 0 | 0 | 100 |
-| visit/lodging | 0 | 0 | 0 | 38 |
+| research | 0 | 0 | 0 | 78 |
+| membership/upgrade | 0 | 0 | 0 | 100 |
 | pay-balance/FCmNSQE26iTUN5JctAPrgNZPK5gE9HIBq-brCWdmOHfn9pmgOGuO-CMEATymlBbs | 0 | 0 | 0 | 100 |
-| video/view/k3-pV0HbIRU | 100 | 0 | 100 | 22 |
-| tr/badlands | 100 | 0 | 0 | 31 |
+| brand | 0 | 0 | 0 | 100 |
 | tr/rise-to-power | 0 | 0 | 0 | 85 |
+| tr/post-presidency/bull-moose | 50 | 0 | 0 | 92 |
 | tr/quotes | 0 | 0 | 0 | 36 |
-| tr/family/roosevelt-women | 0 | 0 | 0 | 31 |
+| tr/quotes/citizenship | 0 | 0 | 0 | 19 |
+| tr/family/fdr-connection | 0 | 0 | 0 | 4 |
 | calendar/special-event/elkhorn-evenings | 0 | 0 | 0 | 66 |
-| tr/presidency/food-and-drug | 0 | 0 | 0 | 12 |
-| bullet-speech | 0 | 0 | 0 | 52.5 |
+| tr/birthday-timeline | 0 | 0 | 0 | 96 |
+| tr/presidency/first-term | 0 | 0 | 0 | 36 |
+| bullet-speech | 0 | 0 | 0 | 82 |
+| visit/tours | 0 | 0 | 0 | 100 |
 | about/presidential-library-system | 0 | 0 | 0 | 12 |
 | user/login | 0 | 0 | 0 | 100 |
-| video/playlist/PL-sck-PjBiFfeuKMa6eUnL7DuERjHEtuz | 0 | 0 | 100 | 71 |
-| video/view/W9sq8PuGQVo | 0 | 0 | 0 | 29 |
+| video/view/W9sq8PuGQVo | 0 | 0 | 0 | 41.5 |
+| visit/itineraries/seattle-badlands | 0 | 0 | 0 | 23 |
+| project/native-plant-project | 0 | 0 | 0 | 95 |
 | tr/rise-to-power/buffalo-soldiers | 0 | 0 | 0 | 34 |
-| tr/presidency/conservation/bird-reserves | 0 | 0 | 0 | 91 |
-| visit/national-park | 0 | 0 | 0 | 40 |
+| pay-balance/42w5U23b9Cj9ffGiwG-P7EAIYuIYao8fOrk08fQstQzuofJ7uPtu810fpVYCmeu1 | 50 | 0 | 0 | 100 |
 | tr/complex-legacy/eugenics | 0 | 0 | 0 | 15 |
-| visit/exhibits/main | 0 | 0 | 0 | 2 |
-| birthdaycard | 0 | 0 | 0 | 27 |
 | tr/presidency/roosevelt-corollary | 0 | 0 | 0 | 8 |
-| visit/maps | 0 | 0 | 0 | 57 |
 | signature-experiences | 0 | 0 | 0 | 100 |
-| about/trustees/kermit-roosevelt | 0 | 0 | 0 | 98 |
-| about/trustees/hilary-hamm | 0 | 0 | 0 | 100 |
-| calendar/special-event | 0 | 0 | 0 | 64 |
+| about/trustees/hilary-hamm | 50 | 0 | 0 | 96 |
 | impact | 0 | 0 | 0 | 34 |
-| project/design | 0 | 0 | 0 | 34.8 |
-| private-events | 0 | 0 | 0 | 69 |
-| tr/people/bill-sewall | 33.3 | 0 | 0 | 63.2 |
-| staff-members | 50 | 0 | 50 | 21 |
+| calendar/special-event | 0 | 0 | 16.7 | 76.7 |
+| private-events | 0 | 0 | 0 | 45 |
+| membership | 0 | 0 | 0 | 93 |
+| visit/faq/accessibility | 0 | 0 | 100 | 84.3 |
+| staff-members/matt-briney | 0 | 0 | 0 | 100 |
+| staff-members | 0 | 0 | 50 | 18.5 |
 
 ## Tracking changes made automatically
 Rules and caps: config/tracking.yml. Keep an item permanently by copying it into config/keywords.yml or config/ai_prompts.yml; block it via tracking.yml exclude.
