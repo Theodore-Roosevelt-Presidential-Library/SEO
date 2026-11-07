@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-06T13:22:19+00:00",
+ "updated": "2026-11-07T13:22:00+00:00",
  "hold_days": 28,
- "data_through": "2026-11-03",
+ "data_through": "2026-11-04",
  "note": "Before = the 28 days before the change; after = the days since, up to the latest settled Search Console day. Compare per-day numbers; a week or two after a change is still early.",
  "held_back": [
   "/",
@@ -258,7 +258,7 @@
   {
    "page": "/tr/presidency",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -279,13 +279,26 @@
     "clicks_per_day": 0.9,
     "impressions_per_day": 143.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 3,
+    "impressions": 387,
+    "ctr": 0.0078,
+    "position": 5.4,
+    "clicks_per_day": 3.0,
+    "impressions_per_day": 387.0
+   },
+   "change": {
+    "clicks_per_day": 2.333,
+    "impressions_per_day": 1.689,
+    "ctr_points": 0.16,
+    "position": -0.9
+   }
   },
   {
    "page": "/tr/timeline",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -314,13 +327,26 @@
     "clicks_per_day": 7.8,
     "impressions_per_day": 1514.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 11,
+    "impressions": 2274,
+    "ctr": 0.0048,
+    "position": 5.3,
+    "clicks_per_day": 11.0,
+    "impressions_per_day": 2274.0
+   },
+   "change": {
+    "clicks_per_day": 0.41,
+    "impressions_per_day": 0.502,
+    "ctr_points": -0.03,
+    "position": -2.1
+   }
   },
   {
    "page": "/visit/exhibits/main",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -341,13 +367,26 @@
     "clicks_per_day": 2.8,
     "impressions_per_day": 151.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 4,
+    "impressions": 199,
+    "ctr": 0.0201,
+    "position": 6.2,
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 199.0
+   },
+   "change": {
+    "clicks_per_day": 0.429,
+    "impressions_per_day": 0.311,
+    "ctr_points": 0.17,
+    "position": -0.3
+   }
   },
   {
    "page": "/tr/teddy-nickname",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -378,13 +417,26 @@
     "clicks_per_day": 4.8,
     "impressions_per_day": 615.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 3,
+    "impressions": 716,
+    "ctr": 0.0042,
+    "position": 3.7,
+    "clicks_per_day": 3.0,
+    "impressions_per_day": 716.0
+   },
+   "change": {
+    "clicks_per_day": -0.375,
+    "impressions_per_day": 0.163,
+    "ctr_points": -0.36,
+    "position": -0.7
+   }
   },
   {
    "page": "/tr/presidency-timeline",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -413,13 +465,26 @@
     "clicks_per_day": 11.5,
     "impressions_per_day": 1951.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 19,
+    "impressions": 2780,
+    "ctr": 0.0068,
+    "position": 4.0,
+    "clicks_per_day": 19.0,
+    "impressions_per_day": 2780.0
+   },
+   "change": {
+    "clicks_per_day": 0.652,
+    "impressions_per_day": 0.425,
+    "ctr_points": 0.09,
+    "position": -0.6
+   }
   },
   {
    "page": "/tr/people/henry-cabot-lodge",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -440,13 +505,26 @@
     "clicks_per_day": 1.1,
     "impressions_per_day": 489.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 5,
+    "impressions": 611,
+    "ctr": 0.0082,
+    "position": 6.0,
+    "clicks_per_day": 5.0,
+    "impressions_per_day": 611.0
+   },
+   "change": {
+    "clicks_per_day": 3.545,
+    "impressions_per_day": 0.247,
+    "ctr_points": 0.59,
+    "position": -0.5
+   }
   },
   {
    "page": "/tr/family/family-tree",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -467,13 +545,26 @@
     "clicks_per_day": 14.2,
     "impressions_per_day": 952.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 17,
+    "impressions": 1032,
+    "ctr": 0.0165,
+    "position": 5.8,
+    "clicks_per_day": 17.0,
+    "impressions_per_day": 1032.0
+   },
+   "change": {
+    "clicks_per_day": 0.197,
+    "impressions_per_day": 0.083,
+    "ctr_points": 0.16,
+    "position": 0.6
+   }
   },
   {
    "page": "/tr/presidency/white-house-family",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -494,13 +585,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 65.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 90,
+    "ctr": 0.0,
+    "position": 7.3,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 90.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.38,
+    "ctr_points": -0.33,
+    "position": 0.7
+   }
   },
   {
    "page": "/podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -521,13 +625,26 @@
     "clicks_per_day": 0.3,
     "impressions_per_day": 34.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 38,
+    "ctr": 0.0263,
+    "position": 7.6,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 38.0
+   },
+   "change": {
+    "clicks_per_day": 2.333,
+    "impressions_per_day": 0.114,
+    "ctr_points": 1.79,
+    "position": -1.2
+   }
   },
   {
    "page": "/tr/legacy/rankings",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -548,13 +665,26 @@
     "clicks_per_day": 5.0,
     "impressions_per_day": 323.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 16,
+    "impressions": 703,
+    "ctr": 0.0228,
+    "position": 5.5,
+    "clicks_per_day": 16.0,
+    "impressions_per_day": 703.0
+   },
+   "change": {
+    "clicks_per_day": 2.2,
+    "impressions_per_day": 1.171,
+    "ctr_points": 0.74,
+    "position": -0.1
+   }
   },
   {
    "page": "/podcast/good-citizen/edward-okeefe",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -575,13 +705,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 13.7
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 10,
+    "ctr": 0.0,
+    "position": 7.7,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 10.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.27,
+    "ctr_points": -0.78,
+    "position": -0.5
+   }
   },
   {
    "page": "/podcast/good-citizen/call-adventure-charlie-melcher-ed-okeefe-and-brand-new-theodore-roosevelt",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -602,13 +745,26 @@
     "clicks_per_day": 0.3,
     "impressions_per_day": 28.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 13,
+    "ctr": 0.0,
+    "position": 11.6,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 13.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.539,
+    "ctr_points": -1.14,
+    "position": 4.2
+   }
   },
   {
    "page": "/tr/for-educators/high-school",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -629,13 +785,26 @@
     "clicks_per_day": 0.8,
     "impressions_per_day": 42.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 67,
+    "ctr": 0.0299,
+    "position": 6.6,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 67.0
+   },
+   "change": {
+    "clicks_per_day": 1.5,
+    "impressions_per_day": 0.565,
+    "ctr_points": 1.24,
+    "position": -0.4
+   }
   },
   {
    "page": "/about/press/press-releases/theodore-roosevelts-groundbreaking-firsts-and-feats-celebration",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -656,13 +825,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 9.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 19,
+    "ctr": 0.0,
+    "position": 4.1,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 19.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.979,
+    "ctr_points": -1.12,
+    "position": -0.6
+   }
   },
   {
    "page": "/tr/rise-to-power/ten-facts",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -683,13 +865,26 @@
     "clicks_per_day": 3.3,
     "impressions_per_day": 206.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 9,
+    "impressions": 307,
+    "ctr": 0.0293,
+    "position": 3.5,
+    "clicks_per_day": 9.0,
+    "impressions_per_day": 307.0
+   },
+   "change": {
+    "clicks_per_day": 1.727,
+    "impressions_per_day": 0.485,
+    "ctr_points": 1.34,
+    "position": -1.8
+   }
   },
   {
    "page": "/tr/presidency/ten-facts",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -710,13 +905,26 @@
     "clicks_per_day": 15.5,
     "impressions_per_day": 555.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 19,
+    "impressions": 811,
+    "ctr": 0.0234,
+    "position": 3.5,
+    "clicks_per_day": 19.0,
+    "impressions_per_day": 811.0
+   },
+   "change": {
+    "clicks_per_day": 0.226,
+    "impressions_per_day": 0.46,
+    "ctr_points": -0.46,
+    "position": -0.4
+   }
   },
   {
    "page": "/events/teddycon",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -737,13 +945,26 @@
     "clicks_per_day": 3.4,
     "impressions_per_day": 38.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 29,
+    "ctr": 0.0345,
+    "position": 8.7,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 29.0
+   },
+   "change": {
+    "clicks_per_day": -0.706,
+    "impressions_per_day": -0.253,
+    "ctr_points": -5.4,
+    "position": 4.9
+   }
   },
   {
    "page": "/tr/badlands-timeline",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -764,13 +985,26 @@
     "clicks_per_day": 5.7,
     "impressions_per_day": 285.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 4,
+    "impressions": 271,
+    "ctr": 0.0148,
+    "position": 4.8,
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 271.0
+   },
+   "change": {
+    "clicks_per_day": -0.298,
+    "impressions_per_day": -0.049,
+    "ctr_points": -0.52,
+    "position": -0.7
+   }
   },
   {
    "page": "/tr/family/fdr-connection",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -800,13 +1034,26 @@
     "clicks_per_day": 60.9,
     "impressions_per_day": 3115.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 78,
+    "impressions": 4403,
+    "ctr": 0.0177,
+    "position": 3.1,
+    "clicks_per_day": 78.0,
+    "impressions_per_day": 4403.0
+   },
+   "change": {
+    "clicks_per_day": 0.281,
+    "impressions_per_day": 0.413,
+    "ctr_points": -0.18,
+    "position": -0.1
+   }
   },
   {
    "page": "/research/archives",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -827,13 +1074,26 @@
     "clicks_per_day": 1.7,
     "impressions_per_day": 68.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 3,
+    "impressions": 49,
+    "ctr": 0.0612,
+    "position": 7.0,
+    "clicks_per_day": 3.0,
+    "impressions_per_day": 49.0
+   },
+   "change": {
+    "clicks_per_day": 0.765,
+    "impressions_per_day": -0.285,
+    "ctr_points": 3.67,
+    "position": -0.7
+   }
   },
   {
    "page": "/tr/speeches/new-nationalism",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -854,13 +1114,26 @@
     "clicks_per_day": 1.7,
     "impressions_per_day": 83.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 58,
+    "ctr": 0.0,
+    "position": 6.9,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 58.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.309,
+    "ctr_points": -2.04,
+    "position": 1.3
+   }
   },
   {
    "page": "/tr/presidency/elections",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -889,13 +1162,26 @@
     "clicks_per_day": 4.5,
     "impressions_per_day": 775.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 6,
+    "impressions": 1096,
+    "ctr": 0.0055,
+    "position": 6.2,
+    "clicks_per_day": 6.0,
+    "impressions_per_day": 1096.0
+   },
+   "change": {
+    "clicks_per_day": 0.333,
+    "impressions_per_day": 0.413,
+    "ctr_points": -0.03,
+    "position": 0.3
+   }
   },
   {
    "page": "/tr/legacy/the-library",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -916,13 +1202,26 @@
     "clicks_per_day": 1.2,
     "impressions_per_day": 117.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 40,
+    "ctr": 0.0,
+    "position": 4.3,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 40.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.659,
+    "ctr_points": -1.01,
+    "position": -0.7
+   }
   },
   {
    "page": "/tr/post-presidency/ten-facts",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -943,13 +1242,26 @@
     "clicks_per_day": 0.4,
     "impressions_per_day": 44.7
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 55,
+    "ctr": 0.0,
+    "position": 4.9,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 55.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.23,
+    "ctr_points": -0.96,
+    "position": -0.6
+   }
   },
   {
    "page": "/visit/medora/history",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -977,13 +1289,26 @@
     "clicks_per_day": 1.2,
     "impressions_per_day": 101.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 44,
+    "ctr": 0.0,
+    "position": 7.2,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 44.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.565,
+    "ctr_points": -1.2,
+    "position": -0.2
+   }
   },
   {
    "page": "/tr/fake-quotes",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1004,13 +1329,26 @@
     "clicks_per_day": 11.7,
     "impressions_per_day": 577.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 17,
+    "impressions": 638,
+    "ctr": 0.0266,
+    "position": 5.7,
+    "clicks_per_day": 17.0,
+    "impressions_per_day": 638.0
+   },
+   "change": {
+    "clicks_per_day": 0.453,
+    "impressions_per_day": 0.106,
+    "ctr_points": 0.64,
+    "position": -1.1
+   }
   },
   {
    "page": "/tr/kids-timeline",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1039,13 +1377,26 @@
     "clicks_per_day": 2.5,
     "impressions_per_day": 368.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 391,
+    "ctr": 0.0,
+    "position": 9.1,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 391.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.062,
+    "ctr_points": -0.69,
+    "position": -0.3
+   }
   },
   {
    "page": "/tr/tr-mount-rushmore",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1074,13 +1425,26 @@
     "clicks_per_day": 16.0,
     "impressions_per_day": 4359.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 19,
+    "impressions": 6544,
+    "ctr": 0.0029,
+    "position": 5.7,
+    "clicks_per_day": 19.0,
+    "impressions_per_day": 6544.0
+   },
+   "change": {
+    "clicks_per_day": 0.188,
+    "impressions_per_day": 0.501,
+    "ctr_points": -0.08,
+    "position": 0.2
+   }
   },
   {
    "page": "/visit/directions",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1108,13 +1472,26 @@
     "clicks_per_day": 21.1,
     "impressions_per_day": 1829.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 5,
+    "impressions": 1011,
+    "ctr": 0.0049,
+    "position": 2.9,
+    "clicks_per_day": 5.0,
+    "impressions_per_day": 1011.0
+   },
+   "change": {
+    "clicks_per_day": -0.763,
+    "impressions_per_day": -0.447,
+    "ctr_points": -0.67,
+    "position": 0.2
+   }
   },
   {
    "page": "/tr/books-and-writings/autobiography",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1135,13 +1512,26 @@
     "clicks_per_day": 1.1,
     "impressions_per_day": 86.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 64,
+    "ctr": 0.0312,
+    "position": 4.5,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 64.0
+   },
+   "change": {
+    "clicks_per_day": 0.818,
+    "impressions_per_day": -0.258,
+    "ctr_points": 1.84,
+    "position": -1.2
+   }
   },
   {
    "page": "/tr/pre-presidency-political-accomplishments",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1170,13 +1560,26 @@
     "clicks_per_day": 20.5,
     "impressions_per_day": 1907.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 26,
+    "impressions": 2937,
+    "ctr": 0.0089,
+    "position": 5.1,
+    "clicks_per_day": 26.0,
+    "impressions_per_day": 2937.0
+   },
+   "change": {
+    "clicks_per_day": 0.268,
+    "impressions_per_day": 0.54,
+    "ctr_points": -0.18,
+    "position": -0.5
+   }
   },
   {
    "page": "/tr/books-and-writings/complete-list",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1197,13 +1600,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 11.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 10,
+    "ctr": 0.0,
+    "position": 5.6,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 10.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.123,
+    "ctr_points": -1.88,
+    "position": 0.2
+   }
   },
   {
    "page": "/tr/quotes/leadership",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1224,13 +1640,26 @@
     "clicks_per_day": 3.6,
     "impressions_per_day": 122.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 4,
+    "impressions": 136,
+    "ctr": 0.0294,
+    "position": 5.4,
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 136.0
+   },
+   "change": {
+    "clicks_per_day": 0.111,
+    "impressions_per_day": 0.112,
+    "ctr_points": -0.04,
+    "position": 0.0
+   }
   },
   {
    "page": "/tr/speeches/inaugural",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1251,13 +1680,26 @@
     "clicks_per_day": 0.5,
     "impressions_per_day": 86.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 123,
+    "ctr": 0.0,
+    "position": 5.7,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 123.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.43,
+    "ctr_points": -0.54,
+    "position": 0.0
+   }
   },
   {
    "page": "/podcast/good-citizen/candice-millard",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1278,13 +1720,26 @@
     "clicks_per_day": 0.4,
     "impressions_per_day": 123.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 323,
+    "ctr": 0.0031,
+    "position": 11.0,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 323.0
+   },
+   "change": {
+    "clicks_per_day": 1.5,
+    "impressions_per_day": 1.613,
+    "ctr_points": 0.02,
+    "position": 1.7
+   }
   },
   {
    "page": "/tr/people/eleanor",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1305,13 +1760,26 @@
     "clicks_per_day": 0.4,
     "impressions_per_day": 84.7
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 197,
+    "ctr": 0.0051,
+    "position": 6.6,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 197.0
+   },
+   "change": {
+    "clicks_per_day": 1.5,
+    "impressions_per_day": 1.326,
+    "ctr_points": 0.05,
+    "position": -0.3
+   }
   },
   {
    "page": "/tr/people/bill-sewall",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1332,13 +1800,26 @@
     "clicks_per_day": 0.6,
     "impressions_per_day": 27.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 32,
+    "ctr": 0.0,
+    "position": 4.7,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 32.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.159,
+    "ctr_points": -2.2,
+    "position": -0.8
+   }
   },
   {
    "page": "/tr/post-presidency/quentin",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1359,13 +1840,26 @@
     "clicks_per_day": 1.0,
     "impressions_per_day": 259.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 235,
+    "ctr": 0.0043,
+    "position": 8.9,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 235.0
+   },
+   "change": {
+    "clicks_per_day": 0.0,
+    "impressions_per_day": -0.093,
+    "ctr_points": 0.06,
+    "position": -0.6
+   }
   },
   {
    "page": "/tr/quotes/conservation",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1386,13 +1880,26 @@
     "clicks_per_day": 3.4,
     "impressions_per_day": 173.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 7,
+    "impressions": 154,
+    "ctr": 0.0455,
+    "position": 4.5,
+    "clicks_per_day": 7.0,
+    "impressions_per_day": 154.0
+   },
+   "change": {
+    "clicks_per_day": 1.059,
+    "impressions_per_day": -0.114,
+    "ctr_points": 2.62,
+    "position": -0.8
+   }
   },
   {
    "page": "/podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1413,13 +1920,26 @@
     "clicks_per_day": 1.8,
     "impressions_per_day": 1341.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 3,
+    "impressions": 3235,
+    "ctr": 0.0009,
+    "position": 9.3,
+    "clicks_per_day": 3.0,
+    "impressions_per_day": 3235.0
+   },
+   "change": {
+    "clicks_per_day": 0.667,
+    "impressions_per_day": 1.412,
+    "ctr_points": -0.05,
+    "position": 0.1
+   }
   },
   {
    "page": "/tr/early-life/siblings",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1440,13 +1960,26 @@
     "clicks_per_day": 1.2,
     "impressions_per_day": 95.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 140,
+    "ctr": 0.0,
+    "position": 5.3,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 140.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.472,
+    "ctr_points": -1.24,
+    "position": -1.0
+   }
   },
   {
    "page": "/tr/early-life/ten-facts",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1467,13 +2000,26 @@
     "clicks_per_day": 0.4,
     "impressions_per_day": 12.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 51,
+    "ctr": 0.0196,
+    "position": 4.2,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 51.0
+   },
+   "change": {
+    "clicks_per_day": 1.5,
+    "impressions_per_day": 3.25,
+    "ctr_points": -1.6,
+    "position": -1.2
+   }
   },
   {
    "page": "/tr/people/kermit",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1494,13 +2040,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 51.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 83,
+    "ctr": 0.0,
+    "position": 8.0,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 83.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.621,
+    "ctr_points": -0.42,
+    "position": -0.6
+   }
   },
   {
    "page": "/tr/legacy",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1521,13 +2080,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 13.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 46,
+    "ctr": 0.0217,
+    "position": 2.6,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 46.0
+   },
+   "change": {
+    "clicks_per_day": 9.0,
+    "impressions_per_day": 2.485,
+    "ctr_points": 1.36,
+    "position": -6.2
+   }
   },
   {
    "page": "/tr/people/bamie",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1548,13 +2120,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 37.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 52,
+    "ctr": 0.0192,
+    "position": 8.4,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 52.0
+   },
+   "change": {
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 0.405,
+    "ctr_points": 1.44,
+    "position": 2.4
+   }
   },
   {
    "page": "/tr/early-life",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1575,13 +2160,26 @@
     "clicks_per_day": 5.2,
     "impressions_per_day": 564.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 14,
+    "impressions": 698,
+    "ctr": 0.0201,
+    "position": 4.8,
+    "clicks_per_day": 14.0,
+    "impressions_per_day": 698.0
+   },
+   "change": {
+    "clicks_per_day": 1.692,
+    "impressions_per_day": 0.236,
+    "ctr_points": 1.08,
+    "position": -1.9
+   }
   },
   {
    "page": "/podcast/good-citizen/jeffrey-rosen",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1602,13 +2200,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 55.7
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 59,
+    "ctr": 0.0,
+    "position": 8.9,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 59.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.059,
+    "ctr_points": -0.32,
+    "position": -1.3
+   }
   },
   {
    "page": "/tr/complex-legacy/imperialism",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1629,13 +2240,26 @@
     "clicks_per_day": 8.3,
     "impressions_per_day": 856.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 13,
+    "impressions": 1850,
+    "ctr": 0.007,
+    "position": 5.2,
+    "clicks_per_day": 13.0,
+    "impressions_per_day": 1850.0
+   },
+   "change": {
+    "clicks_per_day": 0.566,
+    "impressions_per_day": 1.16,
+    "ctr_points": -0.27,
+    "position": 0.0
+   }
   },
   {
    "page": "/tr/strenuous-life/hunter",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1656,13 +2280,26 @@
     "clicks_per_day": 1.2,
     "impressions_per_day": 133.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 145,
+    "ctr": 0.0069,
+    "position": 5.2,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 145.0
+   },
+   "change": {
+    "clicks_per_day": -0.167,
+    "impressions_per_day": 0.084,
+    "ctr_points": -0.22,
+    "position": -0.4
+   }
   },
   {
    "page": "/tr/tr-shot",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1691,13 +2328,26 @@
     "clicks_per_day": 11.4,
     "impressions_per_day": 1303.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 6,
+    "impressions": 1252,
+    "ctr": 0.0048,
+    "position": 4.2,
+    "clicks_per_day": 6.0,
+    "impressions_per_day": 1252.0
+   },
+   "change": {
+    "clicks_per_day": -0.474,
+    "impressions_per_day": -0.039,
+    "ctr_points": -0.39,
+    "position": 0.2
+   }
   },
   {
    "page": "/visit/itineraries/chicago-badlands",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1725,13 +2375,26 @@
     "clicks_per_day": 0.8,
     "impressions_per_day": 49.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 58,
+    "ctr": 0.0,
+    "position": 6.0,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 58.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.172,
+    "ctr_points": -1.59,
+    "position": -0.9
+   }
   },
   {
    "page": "/tr/post-presidency/death",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1752,13 +2415,26 @@
     "clicks_per_day": 2.8,
     "impressions_per_day": 567.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 4,
+    "impressions": 910,
+    "ctr": 0.0044,
+    "position": 4.6,
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 910.0
+   },
+   "change": {
+    "clicks_per_day": 0.429,
+    "impressions_per_day": 0.603,
+    "ctr_points": -0.06,
+    "position": -0.9
+   }
   },
   {
    "page": "/tr/new-york-politics/alice-lee",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1779,13 +2455,26 @@
     "clicks_per_day": 3.0,
     "impressions_per_day": 402.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 383,
+    "ctr": 0.0052,
+    "position": 5.3,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 383.0
+   },
+   "change": {
+    "clicks_per_day": -0.333,
+    "impressions_per_day": -0.048,
+    "ctr_points": -0.23,
+    "position": -0.2
+   }
   },
   {
    "page": "/tr/square-deal",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1823,13 +2512,26 @@
     "clicks_per_day": 31.8,
     "impressions_per_day": 3833.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 50,
+    "ctr": 0.0,
+    "position": 1.6,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 50.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.987,
+    "ctr_points": -0.83,
+    "position": -2.3
+   }
   },
   {
    "page": "/tr/rise-to-power/edith-roosevelt",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1850,13 +2552,26 @@
     "clicks_per_day": 1.5,
     "impressions_per_day": 365.7
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 4,
+    "impressions": 356,
+    "ctr": 0.0112,
+    "position": 7.0,
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 356.0
+   },
+   "change": {
+    "clicks_per_day": 1.667,
+    "impressions_per_day": -0.027,
+    "ctr_points": 0.71,
+    "position": 0.1
+   }
   },
   {
    "page": "/tr/presidency/conservation/midnight-forests",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1877,13 +2592,26 @@
     "clicks_per_day": 1.1,
     "impressions_per_day": 86.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 4,
+    "impressions": 112,
+    "ctr": 0.0357,
+    "position": 5.9,
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 112.0
+   },
+   "change": {
+    "clicks_per_day": 2.636,
+    "impressions_per_day": 0.298,
+    "ctr_points": 2.29,
+    "position": 0.8
+   }
   },
   {
    "page": "/tr/quotes/misquotes",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1904,13 +2632,26 @@
     "clicks_per_day": 5.5,
     "impressions_per_day": 207.7
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 6,
+    "impressions": 284,
+    "ctr": 0.0211,
+    "position": 3.8,
+    "clicks_per_day": 6.0,
+    "impressions_per_day": 284.0
+   },
+   "change": {
+    "clicks_per_day": 0.091,
+    "impressions_per_day": 0.367,
+    "ctr_points": -0.52,
+    "position": -0.2
+   }
   },
   {
    "page": "/tr/post-presidency/man-in-the-arena",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1940,13 +2681,26 @@
     "clicks_per_day": 1.6,
     "impressions_per_day": 196.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 136,
+    "ctr": 0.0147,
+    "position": 6.6,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 136.0
+   },
+   "change": {
+    "clicks_per_day": 0.25,
+    "impressions_per_day": -0.308,
+    "ctr_points": 0.63,
+    "position": -0.9
+   }
   },
   {
    "page": "/visit/activities",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -1974,13 +2728,26 @@
     "clicks_per_day": 0.5,
     "impressions_per_day": 52.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 26,
+    "ctr": 0.0,
+    "position": 9.4,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 26.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.504,
+    "ctr_points": -0.95,
+    "position": 4.1
+   }
   },
   {
    "page": "/tr/conservation/by-the-numbers",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2001,13 +2768,26 @@
     "clicks_per_day": 1.6,
     "impressions_per_day": 268.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 7,
+    "impressions": 344,
+    "ctr": 0.0203,
+    "position": 4.4,
+    "clicks_per_day": 7.0,
+    "impressions_per_day": 344.0
+   },
+   "change": {
+    "clicks_per_day": 3.375,
+    "impressions_per_day": 0.28,
+    "ctr_points": 1.43,
+    "position": -0.7
+   }
   },
   {
    "page": "/tr/presidency/conservation/gifford-pinchot",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2028,13 +2808,26 @@
     "clicks_per_day": 1.6,
     "impressions_per_day": 245.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 6,
+    "impressions": 338,
+    "ctr": 0.0178,
+    "position": 4.2,
+    "clicks_per_day": 6.0,
+    "impressions_per_day": 338.0
+   },
+   "change": {
+    "clicks_per_day": 2.75,
+    "impressions_per_day": 0.379,
+    "ctr_points": 1.14,
+    "position": -0.2
+   }
   },
   {
    "page": "/tr/early-life/family-roots",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2055,13 +2848,26 @@
     "clicks_per_day": 1.5,
     "impressions_per_day": 188.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 3,
+    "impressions": 192,
+    "ctr": 0.0156,
+    "position": 5.0,
+    "clicks_per_day": 3.0,
+    "impressions_per_day": 192.0
+   },
+   "change": {
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 0.021,
+    "ctr_points": 0.78,
+    "position": 0.2
+   }
   },
   {
    "page": "/podcast/good-citizen/live-trpl-1-doris-kearns-goodwin-finding-hope-history",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2082,13 +2888,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 9.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 16,
+    "ctr": 0.0625,
+    "position": 8.8,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 16.0
+   },
+   "change": {
+    "clicks_per_day": 9.0,
+    "impressions_per_day": 0.616,
+    "ctr_points": 5.53,
+    "position": 0.0
+   }
   },
   {
    "page": "/tr/homes-and-places/sagamore-hill",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2109,13 +2928,26 @@
     "clicks_per_day": 0.4,
     "impressions_per_day": 64.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 74,
+    "ctr": 0.027,
+    "position": 8.7,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 74.0
+   },
+   "change": {
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 0.153,
+    "ctr_points": 2.03,
+    "position": 1.7
+   }
   },
   {
    "page": "/tr/presidency/conservation/national-monuments",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2136,13 +2968,26 @@
     "clicks_per_day": 0.9,
     "impressions_per_day": 111.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 141,
+    "ctr": 0.0071,
+    "position": 4.6,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 141.0
+   },
+   "change": {
+    "clicks_per_day": 0.111,
+    "impressions_per_day": 0.269,
+    "ctr_points": -0.09,
+    "position": -0.9
+   }
   },
   {
    "page": "/tr/presidency/white-house-family/pets",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2163,13 +3008,26 @@
     "clicks_per_day": 2.2,
     "impressions_per_day": 180.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 231,
+    "ctr": 0.0087,
+    "position": 4.0,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 231.0
+   },
+   "change": {
+    "clicks_per_day": -0.091,
+    "impressions_per_day": 0.279,
+    "ctr_points": -0.36,
+    "position": -1.1
+   }
   },
   {
    "page": "/visit/teddy-trail",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2190,13 +3048,26 @@
     "clicks_per_day": 0.3,
     "impressions_per_day": 23.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 34,
+    "ctr": 0.0,
+    "position": 6.7,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 34.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.459,
+    "ctr_points": -1.23,
+    "position": 0.3
+   }
   },
   {
    "page": "/visit/exhibits",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2231,13 +3102,26 @@
     "clicks_per_day": 3.8,
     "impressions_per_day": 634.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 172,
+    "ctr": 0.0058,
+    "position": 4.6,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 172.0
+   },
+   "change": {
+    "clicks_per_day": -0.737,
+    "impressions_per_day": -0.729,
+    "ctr_points": -0.01,
+    "position": 1.1
+   }
   },
   {
    "page": "/tr/people",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2258,13 +3142,26 @@
     "clicks_per_day": 0.8,
     "impressions_per_day": 189.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 48,
+    "ctr": 0.0,
+    "position": 7.4,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 48.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.747,
+    "ctr_points": -0.41,
+    "position": 0.0
+   }
   },
   {
    "page": "/about/trustees/doris-kearns-goodwin",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2285,13 +3182,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 26.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 32,
+    "ctr": 0.0312,
+    "position": 10.4,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 32.0
+   },
+   "change": {
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 0.212,
+    "ctr_points": 2.31,
+    "position": -5.6
+   }
   },
   {
    "page": "/tr/people/william-howard-taft",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2312,13 +3222,26 @@
     "clicks_per_day": 1.8,
     "impressions_per_day": 513.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 3,
+    "impressions": 1020,
+    "ctr": 0.0029,
+    "position": 5.2,
+    "clicks_per_day": 3.0,
+    "impressions_per_day": 1020.0
+   },
+   "change": {
+    "clicks_per_day": 0.667,
+    "impressions_per_day": 0.988,
+    "ctr_points": -0.05,
+    "position": -0.5
+   }
   },
   {
    "page": "/about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2339,13 +3262,26 @@
     "clicks_per_day": 1.9,
     "impressions_per_day": 65.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 40,
+    "ctr": 0.0,
+    "position": 4.2,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 40.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.387,
+    "ctr_points": -2.9,
+    "position": -0.2
+   }
   },
   {
    "page": "/tr",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2366,13 +3302,26 @@
     "clicks_per_day": 0.3,
     "impressions_per_day": 189.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 324,
+    "ctr": 0.0031,
+    "position": 4.9,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 324.0
+   },
+   "change": {
+    "clicks_per_day": 2.333,
+    "impressions_per_day": 0.712,
+    "ctr_points": 0.16,
+    "position": -2.0
+   }
   },
   {
    "page": "/tr/post-presidency",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2393,13 +3342,26 @@
     "clicks_per_day": 1.8,
     "impressions_per_day": 69.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 145,
+    "ctr": 0.0138,
+    "position": 3.1,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 145.0
+   },
+   "change": {
+    "clicks_per_day": 0.111,
+    "impressions_per_day": 1.077,
+    "ctr_points": -1.23,
+    "position": -1.1
+   }
   },
   {
    "page": "/tr/new-york-politics/double-tragedy",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2420,13 +3382,26 @@
     "clicks_per_day": 0.5,
     "impressions_per_day": 29.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 74,
+    "ctr": 0.0,
+    "position": 3.2,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 74.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 1.543,
+    "ctr_points": -1.6,
+    "position": -1.2
+   }
   },
   {
    "page": "/tr/quotes/family",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2447,13 +3422,26 @@
     "clicks_per_day": 0.3,
     "impressions_per_day": 12.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 39,
+    "ctr": 0.0256,
+    "position": 5.2,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 39.0
+   },
+   "change": {
+    "clicks_per_day": 2.333,
+    "impressions_per_day": 2.197,
+    "ctr_points": 0.23,
+    "position": -1.0
+   }
   },
   {
    "page": "/tr/people/alice-lee",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2474,13 +3462,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 40.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 82,
+    "ctr": 0.0,
+    "position": 7.9,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 82.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 1.025,
+    "ctr_points": -0.26,
+    "position": -0.9
+   }
   },
   {
    "page": "/about/press/press-releases/harold-hamm-donates-50-million-trpl",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2501,13 +3502,26 @@
     "clicks_per_day": 1.7,
     "impressions_per_day": 16.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 9,
+    "ctr": 0.0,
+    "position": 2.6,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 9.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.438,
+    "ctr_points": -10.47,
+    "position": -0.5
+   }
   },
   {
    "page": "/tr/people/theodore-sr",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2528,13 +3542,26 @@
     "clicks_per_day": 0.4,
     "impressions_per_day": 178.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 4,
+    "impressions": 166,
+    "ctr": 0.0241,
+    "position": 5.0,
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 166.0
+   },
+   "change": {
+    "clicks_per_day": 9.0,
+    "impressions_per_day": -0.068,
+    "ctr_points": 2.21,
+    "position": -1.5
+   }
   },
   {
    "page": "/about/press/press-releases/roosevelt-family-acquires-903-acres-trpl",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2555,13 +3582,26 @@
     "clicks_per_day": 0.6,
     "impressions_per_day": 8.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 4,
+    "ctr": 0.25,
+    "position": 8.8,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 4.0
+   },
+   "change": {
+    "clicks_per_day": 0.667,
+    "impressions_per_day": -0.512,
+    "ctr_points": 18.04,
+    "position": 4.6
+   }
   },
   {
    "page": "/tr/legacy/mount-rushmore",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2582,13 +3622,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 30.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 164,
+    "ctr": 0.0122,
+    "position": 7.4,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 164.0
+   },
+   "change": {
+    "clicks_per_day": 19.0,
+    "impressions_per_day": 4.359,
+    "ctr_points": 0.99,
+    "position": 0.3
+   }
   },
   {
    "page": "/tr/conservation/quotes",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2609,13 +3662,26 @@
     "clicks_per_day": 0.5,
     "impressions_per_day": 36.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 213,
+    "ctr": 0.0,
+    "position": 5.5,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 213.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 4.9,
+    "ctr_points": -1.39,
+    "position": 0.6
+   }
   },
   {
    "page": "/visit/itineraries/north-on-29",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2636,13 +3702,26 @@
     "clicks_per_day": 0.3,
     "impressions_per_day": 37.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 24,
+    "ctr": 0.0,
+    "position": 6.8,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 24.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.365,
+    "ctr_points": -0.76,
+    "position": -0.4
+   }
   },
   {
    "page": "/tr/rise-to-power/police-commissioner",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2663,13 +3742,26 @@
     "clicks_per_day": 1.8,
     "impressions_per_day": 100.7
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 123,
+    "ctr": 0.0,
+    "position": 5.8,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 123.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.221,
+    "ctr_points": -1.74,
+    "position": 0.1
+   }
   },
   {
    "page": "/tr/legacy/words-he-coined",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2690,13 +3782,26 @@
     "clicks_per_day": 0.9,
     "impressions_per_day": 163.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 155,
+    "ctr": 0.0,
+    "position": 7.4,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 155.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.049,
+    "ctr_points": -0.57,
+    "position": 1.0
+   }
   },
   {
    "page": "/tr/myths/misquotes",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2717,13 +3822,26 @@
     "clicks_per_day": 1.1,
     "impressions_per_day": 97.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 160,
+    "ctr": 0.0063,
+    "position": 5.1,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 160.0
+   },
+   "change": {
+    "clicks_per_day": -0.091,
+    "impressions_per_day": 0.634,
+    "ctr_points": -0.5,
+    "position": -0.1
+   }
   },
   {
    "page": "/tr/quotes",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2744,13 +3862,26 @@
     "clicks_per_day": 21.7,
     "impressions_per_day": 957.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 21,
+    "impressions": 873,
+    "ctr": 0.0241,
+    "position": 4.3,
+    "clicks_per_day": 21.0,
+    "impressions_per_day": 873.0
+   },
+   "change": {
+    "clicks_per_day": -0.032,
+    "impressions_per_day": -0.088,
+    "ctr_points": 0.14,
+    "position": -6.4
+   }
   },
   {
    "page": "/tr/presidency/first-term",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2771,13 +3902,26 @@
     "clicks_per_day": 0.5,
     "impressions_per_day": 29.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 60,
+    "ctr": 0.0167,
+    "position": 4.4,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 60.0
+   },
+   "change": {
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 1.007,
+    "ctr_points": 0.0,
+    "position": -2.1
+   }
   },
   {
    "page": "/visit/itineraries/13-day-denver-wyoming",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2798,13 +3942,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 14.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 11,
+    "ctr": 0.0,
+    "position": 8.1,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 11.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.22,
+    "ctr_points": -0.76,
+    "position": -0.8
+   }
   },
   {
    "page": "/tr/family/children",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2834,13 +3991,26 @@
     "clicks_per_day": 4.2,
     "impressions_per_day": 376.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 11,
+    "impressions": 450,
+    "ctr": 0.0244,
+    "position": 3.0,
+    "clicks_per_day": 11.0,
+    "impressions_per_day": 450.0
+   },
+   "change": {
+    "clicks_per_day": 1.619,
+    "impressions_per_day": 0.196,
+    "ctr_points": 1.32,
+    "position": -1.2
+   }
   },
   {
    "page": "/visit/shopping",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2861,13 +4031,26 @@
     "clicks_per_day": 5.0,
     "impressions_per_day": 229.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 76,
+    "ctr": 0.0263,
+    "position": 8.5,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 76.0
+   },
+   "change": {
+    "clicks_per_day": -0.6,
+    "impressions_per_day": -0.668,
+    "ctr_points": 0.43,
+    "position": 3.5
+   }
   },
   {
    "page": "/tr/family",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2888,13 +4071,26 @@
     "clicks_per_day": 1.1,
     "impressions_per_day": 294.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 409,
+    "ctr": 0.0,
+    "position": 7.4,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 409.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.389,
+    "ctr_points": -0.38,
+    "position": -0.6
+   }
   },
   {
    "page": "/tr/for-educators/middle-school",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2915,13 +4111,26 @@
     "clicks_per_day": 0.6,
     "impressions_per_day": 26.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 50,
+    "ctr": 0.04,
+    "position": 5.5,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 50.0
+   },
+   "change": {
+    "clicks_per_day": 2.333,
+    "impressions_per_day": 0.901,
+    "ctr_points": 1.83,
+    "position": -1.0
+   }
   },
   {
    "page": "/visit/medora",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2942,13 +4151,26 @@
     "clicks_per_day": 1.1,
     "impressions_per_day": 159.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 115,
+    "ctr": 0.0,
+    "position": 4.3,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 115.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.28,
+    "ctr_points": -0.67,
+    "position": -0.2
+   }
   },
   {
    "page": "/tr/rise-to-power/buffalo-soldiers",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2969,13 +4191,26 @@
     "clicks_per_day": 1.6,
     "impressions_per_day": 247.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 258,
+    "ctr": 0.0078,
+    "position": 4.9,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 258.0
+   },
+   "change": {
+    "clicks_per_day": 0.25,
+    "impressions_per_day": 0.045,
+    "ctr_points": 0.13,
+    "position": -0.3
+   }
   },
   {
    "page": "/tr/early-life/harvard",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -2996,13 +4231,26 @@
     "clicks_per_day": 0.9,
     "impressions_per_day": 87.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 125,
+    "ctr": 0.016,
+    "position": 5.5,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 125.0
+   },
+   "change": {
+    "clicks_per_day": 1.222,
+    "impressions_per_day": 0.429,
+    "ctr_points": 0.62,
+    "position": 0.1
+   }
   },
   {
    "page": "/tr/elkhorn",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3023,13 +4271,26 @@
     "clicks_per_day": 1.6,
     "impressions_per_day": 198.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 163,
+    "ctr": 0.0123,
+    "position": 7.1,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 163.0
+   },
+   "change": {
+    "clicks_per_day": 0.25,
+    "impressions_per_day": -0.178,
+    "ctr_points": 0.44,
+    "position": -0.9
+   }
   },
   {
    "page": "/podcast/good-citizen/ted-leonsis",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3050,13 +4311,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 135.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 283,
+    "ctr": 0.0035,
+    "position": 9.4,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 283.0
+   },
+   "change": {
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 1.096,
+    "ctr_points": 0.19,
+    "position": -0.6
+   }
   },
   {
    "page": "/tr/presidency/conservation/national-parks",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3077,13 +4351,26 @@
     "clicks_per_day": 6.9,
     "impressions_per_day": 816.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 4,
+    "impressions": 885,
+    "ctr": 0.0045,
+    "position": 5.2,
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 885.0
+   },
+   "change": {
+    "clicks_per_day": -0.42,
+    "impressions_per_day": 0.083,
+    "ctr_points": -0.4,
+    "position": -0.8
+   }
   },
   {
    "page": "/bullet-speech",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3113,13 +4400,26 @@
     "clicks_per_day": 24.4,
     "impressions_per_day": 1428.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 25,
+    "impressions": 1899,
+    "ctr": 0.0132,
+    "position": 3.5,
+    "clicks_per_day": 25.0,
+    "impressions_per_day": 1899.0
+   },
+   "change": {
+    "clicks_per_day": 0.025,
+    "impressions_per_day": 0.329,
+    "ctr_points": -0.39,
+    "position": -0.2
+   }
   },
   {
    "page": "/tr/early-life/mother",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3140,13 +4440,26 @@
     "clicks_per_day": 0.3,
     "impressions_per_day": 93.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 72,
+    "ctr": 0.0,
+    "position": 4.4,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 72.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.227,
+    "ctr_points": -0.31,
+    "position": -0.7
+   }
   },
   {
    "page": "/tr/post-presidency/river-of-doubt",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3167,13 +4480,26 @@
     "clicks_per_day": 2.6,
     "impressions_per_day": 419.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 7,
+    "impressions": 674,
+    "ctr": 0.0104,
+    "position": 6.9,
+    "clicks_per_day": 7.0,
+    "impressions_per_day": 674.0
+   },
+   "change": {
+    "clicks_per_day": 1.692,
+    "impressions_per_day": 0.607,
+    "ctr_points": 0.42,
+    "position": -0.6
+   }
   },
   {
    "page": "/tr/post-presidency/african-safari",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3194,13 +4520,26 @@
     "clicks_per_day": 1.2,
     "impressions_per_day": 90.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 57,
+    "ctr": 0.0175,
+    "position": 7.0,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 57.0
+   },
+   "change": {
+    "clicks_per_day": -0.167,
+    "impressions_per_day": -0.371,
+    "ctr_points": 0.41,
+    "position": 1.1
+   }
   },
   {
    "page": "/tr/post-presidency/new-nationalism",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3221,13 +4560,26 @@
     "clicks_per_day": 1.8,
     "impressions_per_day": 245.7
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 423,
+    "ctr": 0.0,
+    "position": 4.0,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 423.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.722,
+    "ctr_points": -0.73,
+    "position": -0.5
+   }
   },
   {
    "page": "/tr/presidency/conservation/reclamation",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3248,13 +4600,26 @@
     "clicks_per_day": 3.3,
     "impressions_per_day": 407.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 5,
+    "impressions": 499,
+    "ctr": 0.01,
+    "position": 3.8,
+    "clicks_per_day": 5.0,
+    "impressions_per_day": 499.0
+   },
+   "change": {
+    "clicks_per_day": 0.515,
+    "impressions_per_day": 0.223,
+    "ctr_points": 0.19,
+    "position": -0.4
+   }
   },
   {
    "page": "/tr/5-big-adventures",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3275,13 +4640,26 @@
     "clicks_per_day": 2.0,
     "impressions_per_day": 204.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 329,
+    "ctr": 0.0,
+    "position": 5.7,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 329.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.608,
+    "ctr_points": -0.99,
+    "position": -0.8
+   }
   },
   {
    "page": "/tr/rise-to-power/san-juan-hill",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3310,13 +4688,26 @@
     "clicks_per_day": 14.8,
     "impressions_per_day": 1091.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 14,
+    "impressions": 1642,
+    "ctr": 0.0085,
+    "position": 3.8,
+    "clicks_per_day": 14.0,
+    "impressions_per_day": 1642.0
+   },
+   "change": {
+    "clicks_per_day": -0.054,
+    "impressions_per_day": 0.505,
+    "ctr_points": -0.51,
+    "position": 0.1
+   }
   },
   {
    "page": "/tr/presidency/conservation/bird-reserves",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3337,13 +4728,26 @@
     "clicks_per_day": 0.8,
     "impressions_per_day": 50.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 103,
+    "ctr": 0.0,
+    "position": 6.0,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 103.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 1.04,
+    "ctr_points": -1.48,
+    "position": 0.6
+   }
   },
   {
    "page": "/podcast/good-citizen/douglas-brinkley",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3364,13 +4768,26 @@
     "clicks_per_day": 0.0,
     "impressions_per_day": 28.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 40,
+    "ctr": 0.0,
+    "position": 11.2,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 40.0
+   },
+   "change": {
+    "clicks_per_day": null,
+    "impressions_per_day": 0.384,
+    "ctr_points": -0.12,
+    "position": -0.7
+   }
   },
   {
    "page": "/tr/people/corinne",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3391,13 +4808,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 42.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 61,
+    "ctr": 0.0,
+    "position": 3.4,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 61.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.425,
+    "ctr_points": -0.17,
+    "position": -0.9
+   }
   },
   {
    "page": "/podcast/good-citizen/eric-liu",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3418,13 +4848,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 21.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 32,
+    "ctr": 0.0,
+    "position": 6.1,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 32.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.488,
+    "ctr_points": -0.33,
+    "position": -1.7
+   }
   },
   {
    "page": "/tr/quotes/strenuous-life",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3445,13 +4888,26 @@
     "clicks_per_day": 1.8,
     "impressions_per_day": 141.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 4,
+    "impressions": 209,
+    "ctr": 0.0191,
+    "position": 6.2,
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 209.0
+   },
+   "change": {
+    "clicks_per_day": 1.222,
+    "impressions_per_day": 0.473,
+    "ctr_points": 0.65,
+    "position": -0.1
+   }
   },
   {
    "page": "/tr/quotes/citizenship",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3472,13 +4928,26 @@
     "clicks_per_day": 1.9,
     "impressions_per_day": 108.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 3,
+    "impressions": 127,
+    "ctr": 0.0236,
+    "position": 5.6,
+    "clicks_per_day": 3.0,
+    "impressions_per_day": 127.0
+   },
+   "change": {
+    "clicks_per_day": 0.579,
+    "impressions_per_day": 0.172,
+    "ctr_points": 0.65,
+    "position": -0.2
+   }
   },
   {
    "page": "/tr/elkhorn-timeline",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3499,13 +4968,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 11.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 14,
+    "ctr": 0.0,
+    "position": 7.4,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 14.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.273,
+    "ctr_points": -1.3,
+    "position": -0.7
+   }
   },
   {
    "page": "/tr/people/edith-roosevelt",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3526,13 +5008,26 @@
     "clicks_per_day": 0.4,
     "impressions_per_day": 58.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 59,
+    "ctr": 0.0169,
+    "position": 12.5,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 59.0
+   },
+   "change": {
+    "clicks_per_day": 1.5,
+    "impressions_per_day": 0.014,
+    "ctr_points": 1.01,
+    "position": 1.2
+   }
   },
   {
    "page": "/visit/roosevelt-in-medora",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3553,13 +5048,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 13.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 15,
+    "ctr": 0.0,
+    "position": 9.7,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 15.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.136,
+    "ctr_points": -0.81,
+    "position": 2.3
+   }
   },
   {
    "page": "/podcast/good-citizen/meg-whitman",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3580,13 +5088,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 190.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 60,
+    "ctr": 0.0,
+    "position": 10.5,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 60.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.685,
+    "ctr_points": -0.09,
+    "position": -0.9
+   }
   },
   {
    "page": "/tr/speeches/strenuous-life",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3607,13 +5128,26 @@
     "clicks_per_day": 2.7,
     "impressions_per_day": 145.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 4,
+    "impressions": 95,
+    "ctr": 0.0421,
+    "position": 3.7,
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 95.0
+   },
+   "change": {
+    "clicks_per_day": 0.481,
+    "impressions_per_day": -0.345,
+    "ctr_points": 2.34,
+    "position": -2.0
+   }
   },
   {
    "page": "/tr/people/quentin",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3634,13 +5168,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 17.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 29,
+    "ctr": 0.0,
+    "position": 11.3,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 29.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.706,
+    "ctr_points": -0.42,
+    "position": 2.8
+   }
   },
   {
    "page": "/tr/post-presidency/world-war-i",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3661,13 +5208,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 52.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 76,
+    "ctr": 0.0132,
+    "position": 4.3,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 76.0
+   },
+   "change": {
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 0.437,
+    "ctr_points": 0.85,
+    "position": -1.1
+   }
   },
   {
    "page": "/tr/rise-to-power/sagamore-hill",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3688,13 +5248,26 @@
     "clicks_per_day": 0.4,
     "impressions_per_day": 41.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 43,
+    "ctr": 0.0,
+    "position": 8.0,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 43.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.041,
+    "ctr_points": -0.87,
+    "position": 1.1
+   }
   },
   {
    "page": "/tr/new-york-politics/convention-1884",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3715,13 +5288,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 15.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 47,
+    "ctr": 0.0,
+    "position": 6.3,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 47.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 2.072,
+    "ctr_points": -0.93,
+    "position": -0.4
+   }
   },
   {
    "page": "/about/press/press-releases/sarah-and-ross-perot-jr-foundation-gifts-5-million-theodore-roosevelt",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3742,13 +5328,26 @@
     "clicks_per_day": 0.0,
     "impressions_per_day": 3.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 1,
+    "ctr": 0.0,
+    "position": 11.0,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 1.0
+   },
+   "change": {
+    "clicks_per_day": null,
+    "impressions_per_day": -0.737,
+    "ctr_points": -0.94,
+    "position": 4.6
+   }
   },
   {
    "page": "/about/press/press-releases/theodore-roosevelt-presidential-library-welcomes-doris-kearns-goodwin",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3769,13 +5368,26 @@
     "clicks_per_day": 0.0,
     "impressions_per_day": 5.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 5,
+    "ctr": 0.0,
+    "position": 3.6,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 5.0
+   },
+   "change": {
+    "clicks_per_day": null,
+    "impressions_per_day": -0.038,
+    "ctr_points": -0.68,
+    "position": -1.7
+   }
   },
   {
    "page": "/about/foundation",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3796,13 +5408,26 @@
     "clicks_per_day": 2.5,
     "impressions_per_day": 66.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 3,
+    "impressions": 59,
+    "ctr": 0.0508,
+    "position": 4.3,
+    "clicks_per_day": 3.0,
+    "impressions_per_day": 59.0
+   },
+   "change": {
+    "clicks_per_day": 0.2,
+    "impressions_per_day": -0.117,
+    "ctr_points": 1.39,
+    "position": -1.2
+   }
   },
   {
    "page": "/visit/eat",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3823,13 +5448,26 @@
     "clicks_per_day": 5.8,
     "impressions_per_day": 216.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 115,
+    "ctr": 0.0087,
+    "position": 6.8,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 115.0
+   },
+   "change": {
+    "clicks_per_day": -0.828,
+    "impressions_per_day": -0.468,
+    "ctr_points": -1.81,
+    "position": -0.4
+   }
   },
   {
    "page": "/visit/maps",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3850,13 +5488,26 @@
     "clicks_per_day": 1.7,
     "impressions_per_day": 310.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 27,
+    "ctr": 0.037,
+    "position": 3.0,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 27.0
+   },
+   "change": {
+    "clicks_per_day": -0.412,
+    "impressions_per_day": -0.913,
+    "ctr_points": 3.16,
+    "position": -0.9
+   }
   },
   {
    "page": "/tr/post-presidency/assassination-attempt",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3877,13 +5528,26 @@
     "clicks_per_day": 0.8,
     "impressions_per_day": 134.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 124,
+    "ctr": 0.0081,
+    "position": 5.7,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 124.0
+   },
+   "change": {
+    "clicks_per_day": 0.25,
+    "impressions_per_day": -0.077,
+    "ctr_points": 0.2,
+    "position": -2.3
+   }
   },
   {
    "page": "/research",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3904,13 +5568,26 @@
     "clicks_per_day": 1.1,
     "impressions_per_day": 34.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 24,
+    "ctr": 0.0,
+    "position": 4.2,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 24.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.296,
+    "ctr_points": -3.35,
+    "position": -1.3
+   }
   },
   {
    "page": "/tr/presidency/white-house-family/white-house-gang",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3931,13 +5608,26 @@
     "clicks_per_day": 0.0,
     "impressions_per_day": 1.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 0,
+    "ctr": null,
+    "position": null,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 0.0
+   },
+   "change": {
+    "clicks_per_day": null,
+    "impressions_per_day": -1.0,
+    "ctr_points": null,
+    "position": null
+   }
   },
   {
    "page": "/tr/presidency/conservation/governors-conference",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3958,13 +5648,26 @@
     "clicks_per_day": 0.3,
     "impressions_per_day": 8.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 5,
+    "ctr": 0.0,
+    "position": 4.0,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 5.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.405,
+    "ctr_points": -3.4,
+    "position": -0.8
+   }
   },
   {
    "page": "/tr/rise-to-power/jacob-riis",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -3985,13 +5688,26 @@
     "clicks_per_day": 1.7,
     "impressions_per_day": 296.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 7,
+    "impressions": 523,
+    "ctr": 0.0134,
+    "position": 4.5,
+    "clicks_per_day": 7.0,
+    "impressions_per_day": 523.0
+   },
+   "change": {
+    "clicks_per_day": 3.118,
+    "impressions_per_day": 0.762,
+    "ctr_points": 0.77,
+    "position": -0.4
+   }
   },
   {
    "page": "/tr/strenuous-life/explorer",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4012,13 +5728,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 6.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 24,
+    "ctr": 0.0,
+    "position": 4.1,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 24.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 2.692,
+    "ctr_points": -1.1,
+    "position": -0.9
+   }
   },
   {
    "page": "/tr/presidency/race",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4039,13 +5768,26 @@
     "clicks_per_day": 3.8,
     "impressions_per_day": 327.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 4,
+    "impressions": 392,
+    "ctr": 0.0102,
+    "position": 3.5,
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 392.0
+   },
+   "change": {
+    "clicks_per_day": 0.053,
+    "impressions_per_day": 0.198,
+    "ctr_points": -0.14,
+    "position": -0.9
+   }
   },
   {
    "page": "/visit/itineraries",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4073,13 +5815,26 @@
     "clicks_per_day": 2.7,
     "impressions_per_day": 172.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 4,
+    "impressions": 163,
+    "ctr": 0.0245,
+    "position": 6.2,
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 163.0
+   },
+   "change": {
+    "clicks_per_day": 0.481,
+    "impressions_per_day": -0.053,
+    "ctr_points": 0.87,
+    "position": -0.3
+   }
   },
   {
    "page": "/tr/presidency/executive-power",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4100,13 +5855,26 @@
     "clicks_per_day": 2.9,
     "impressions_per_day": 185.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 13,
+    "impressions": 699,
+    "ctr": 0.0186,
+    "position": 3.7,
+    "clicks_per_day": 13.0,
+    "impressions_per_day": 699.0
+   },
+   "change": {
+    "clicks_per_day": 3.483,
+    "impressions_per_day": 2.776,
+    "ctr_points": 0.32,
+    "position": -0.4
+   }
   },
   {
    "page": "/tr/presidency/conservation/national-forests",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4127,13 +5895,26 @@
     "clicks_per_day": 0.5,
     "impressions_per_day": 66.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 208,
+    "ctr": 0.0,
+    "position": 6.6,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 208.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 2.147,
+    "ctr_points": -0.76,
+    "position": 0.6
+   }
   },
   {
    "page": "/visit/itineraries/black-hills-loop",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4154,13 +5935,26 @@
     "clicks_per_day": 0.5,
     "impressions_per_day": 50.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 30,
+    "ctr": 0.0333,
+    "position": 6.5,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 30.0
+   },
+   "change": {
+    "clicks_per_day": 1.0,
+    "impressions_per_day": -0.406,
+    "ctr_points": 2.34,
+    "position": -1.8
+   }
   },
   {
    "page": "/visit/itineraries/7-day-billings-bismarck",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4181,13 +5975,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 53.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 43,
+    "ctr": 0.0,
+    "position": 8.0,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 43.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.189,
+    "ctr_points": -0.47,
+    "position": -0.6
+   }
   },
   {
    "page": "/tr/10-myths-teddy-bear",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4208,13 +6015,26 @@
     "clicks_per_day": 5.2,
     "impressions_per_day": 682.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 8,
+    "impressions": 551,
+    "ctr": 0.0145,
+    "position": 5.8,
+    "clicks_per_day": 8.0,
+    "impressions_per_day": 551.0
+   },
+   "change": {
+    "clicks_per_day": 0.538,
+    "impressions_per_day": -0.192,
+    "ctr_points": 0.69,
+    "position": 0.3
+   }
   },
   {
    "page": "/tr/post-presidency/bull-moose/platform",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4235,13 +6055,26 @@
     "clicks_per_day": 8.6,
     "impressions_per_day": 1246.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 14,
+    "impressions": 3151,
+    "ctr": 0.0044,
+    "position": 3.9,
+    "clicks_per_day": 14.0,
+    "impressions_per_day": 3151.0
+   },
+   "change": {
+    "clicks_per_day": 0.628,
+    "impressions_per_day": 1.528,
+    "ctr_points": -0.25,
+    "position": -1.1
+   }
   },
   {
    "page": "/tr/for-educators/elementary",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4262,13 +6095,26 @@
     "clicks_per_day": 1.2,
     "impressions_per_day": 47.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 3,
+    "impressions": 64,
+    "ctr": 0.0469,
+    "position": 6.1,
+    "clicks_per_day": 3.0,
+    "impressions_per_day": 64.0
+   },
+   "change": {
+    "clicks_per_day": 1.5,
+    "impressions_per_day": 0.35,
+    "ctr_points": 2.21,
+    "position": -0.1
+   }
   },
   {
    "page": "/tr/people/alice-longworth",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4297,13 +6143,26 @@
     "clicks_per_day": 3.7,
     "impressions_per_day": 999.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 1023,
+    "ctr": 0.002,
+    "position": 7.7,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 1023.0
+   },
+   "change": {
+    "clicks_per_day": -0.459,
+    "impressions_per_day": 0.023,
+    "ctr_points": -0.17,
+    "position": -0.3
+   }
   },
   {
    "page": "/tr/tr-save-the-bison",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4324,13 +6183,26 @@
     "clicks_per_day": 2.1,
     "impressions_per_day": 142.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 3,
+    "impressions": 195,
+    "ctr": 0.0154,
+    "position": 4.7,
+    "clicks_per_day": 3.0,
+    "impressions_per_day": 195.0
+   },
+   "change": {
+    "clicks_per_day": 0.429,
+    "impressions_per_day": 0.37,
+    "ctr_points": 0.06,
+    "position": -0.4
+   }
   },
   {
    "page": "/tr/presidency/trust-busting",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4359,13 +6231,26 @@
     "clicks_per_day": 36.2,
     "impressions_per_day": 2730.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 62,
+    "impressions": 4032,
+    "ctr": 0.0154,
+    "position": 3.1,
+    "clicks_per_day": 62.0,
+    "impressions_per_day": 4032.0
+   },
+   "change": {
+    "clicks_per_day": 0.713,
+    "impressions_per_day": 0.477,
+    "ctr_points": 0.21,
+    "position": -0.3
+   }
   },
   {
    "page": "/tr/complex-legacy",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4386,13 +6271,26 @@
     "clicks_per_day": 0.4,
     "impressions_per_day": 20.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 29,
+    "ctr": 0.0,
+    "position": 7.1,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 29.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.388,
+    "ctr_points": -1.71,
+    "position": 1.1
+   }
   },
   {
    "page": "/podcast/good-citizen/susan-berfield",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4413,13 +6311,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 21.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 14,
+    "ctr": 0.0714,
+    "position": 6.1,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 14.0
+   },
+   "change": {
+    "clicks_per_day": 9.0,
+    "impressions_per_day": -0.352,
+    "ctr_points": 6.64,
+    "position": 0.5
+   }
   },
   {
    "page": "/tr/badlands/bad-lands-cow-boy",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4440,13 +6351,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 63.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 38,
+    "ctr": 0.0,
+    "position": 6.7,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 38.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.4,
+    "ctr_points": -0.34,
+    "position": -1.9
+   }
   },
   {
    "page": "/tr/presidency/great-white-fleet",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4475,13 +6399,26 @@
     "clicks_per_day": 6.6,
     "impressions_per_day": 1005.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 19,
+    "impressions": 1366,
+    "ctr": 0.0139,
+    "position": 3.1,
+    "clicks_per_day": 19.0,
+    "impressions_per_day": 1366.0
+   },
+   "change": {
+    "clicks_per_day": 1.879,
+    "impressions_per_day": 0.359,
+    "ctr_points": 0.73,
+    "position": -1.0
+   }
   },
   {
    "page": "/tr/badlands/ten-facts",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4502,13 +6439,26 @@
     "clicks_per_day": 0.4,
     "impressions_per_day": 38.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 80,
+    "ctr": 0.0,
+    "position": 4.1,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 80.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 1.083,
+    "ctr_points": -1.12,
+    "position": -1.0
+   }
   },
   {
    "page": "/podcast/good-citizen/susannah-cahalan",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4529,13 +6479,26 @@
     "clicks_per_day": 0.3,
     "impressions_per_day": 119.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 87,
+    "ctr": 0.0,
+    "position": 10.6,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 87.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.274,
+    "ctr_points": -0.24,
+    "position": 1.4
+   }
   },
   {
    "page": "/tr/presidency/bully-pulpit",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4565,13 +6528,26 @@
     "clicks_per_day": 5.7,
     "impressions_per_day": 985.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 15,
+    "impressions": 2354,
+    "ctr": 0.0064,
+    "position": 3.4,
+    "clicks_per_day": 15.0,
+    "impressions_per_day": 2354.0
+   },
+   "change": {
+    "clicks_per_day": 1.632,
+    "impressions_per_day": 1.388,
+    "ctr_points": 0.06,
+    "position": -1.2
+   }
   },
   {
    "page": "/tr/speeches/man-in-the-arena",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4600,13 +6576,26 @@
     "clicks_per_day": 25.7,
     "impressions_per_day": 1130.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 73,
+    "impressions": 2217,
+    "ctr": 0.0329,
+    "position": 5.7,
+    "clicks_per_day": 73.0,
+    "impressions_per_day": 2217.0
+   },
+   "change": {
+    "clicks_per_day": 1.84,
+    "impressions_per_day": 0.961,
+    "ctr_points": 1.02,
+    "position": 0.5
+   }
   },
   {
    "page": "/tr/complex-legacy/eugenics",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4627,13 +6616,26 @@
     "clicks_per_day": 3.5,
     "impressions_per_day": 122.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 4,
+    "impressions": 130,
+    "ctr": 0.0308,
+    "position": 3.6,
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 130.0
+   },
+   "change": {
+    "clicks_per_day": 0.143,
+    "impressions_per_day": 0.058,
+    "ctr_points": 0.2,
+    "position": -0.6
+   }
   },
   {
    "page": "/tr/people/jacob-riis",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4662,13 +6664,26 @@
     "clicks_per_day": 16.4,
     "impressions_per_day": 2992.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 36,
+    "impressions": 3754,
+    "ctr": 0.0096,
+    "position": 6.0,
+    "clicks_per_day": 36.0,
+    "impressions_per_day": 3754.0
+   },
+   "change": {
+    "clicks_per_day": 1.195,
+    "impressions_per_day": 0.254,
+    "ctr_points": 0.41,
+    "position": -0.6
+   }
   },
   {
    "page": "/tr/badlands/maltese-cross",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4689,13 +6704,26 @@
     "clicks_per_day": 0.5,
     "impressions_per_day": 15.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 23,
+    "ctr": 0.0,
+    "position": 5.6,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 23.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.523,
+    "ctr_points": -3.07,
+    "position": -0.9
+   }
   },
   {
    "page": "/tr/people/elliott",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4716,13 +6744,26 @@
     "clicks_per_day": 0.0,
     "impressions_per_day": 7.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 32,
+    "ctr": 0.0,
+    "position": 8.6,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 32.0
+   },
+   "change": {
+    "clicks_per_day": null,
+    "impressions_per_day": 3.384,
+    "ctr_points": 0.0,
+    "position": -0.8
+   }
   },
   {
    "page": "/tr/rise-to-power/vice-presidency",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4743,13 +6784,26 @@
     "clicks_per_day": 1.9,
     "impressions_per_day": 265.7
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 564,
+    "ctr": 0.0035,
+    "position": 4.9,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 564.0
+   },
+   "change": {
+    "clicks_per_day": 0.053,
+    "impressions_per_day": 1.123,
+    "ctr_points": -0.38,
+    "position": -0.5
+   }
   },
   {
    "page": "/tr/family/elliott-roosevelt",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4770,13 +6824,26 @@
     "clicks_per_day": 1.1,
     "impressions_per_day": 195.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 245,
+    "ctr": 0.0082,
+    "position": 6.7,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 245.0
+   },
+   "change": {
+    "clicks_per_day": 0.818,
+    "impressions_per_day": 0.253,
+    "ctr_points": 0.27,
+    "position": -0.8
+   }
   },
   {
    "page": "/tr/badlands",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4804,13 +6871,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 9.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 13,
+    "ctr": 0.0,
+    "position": 10.8,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 13.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.398,
+    "ctr_points": -1.15,
+    "position": 5.5
+   }
   },
   {
    "page": "/podcast/good-citizen/carly-fiorina",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4831,13 +6911,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 37.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 44,
+    "ctr": 0.0,
+    "position": 4.1,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 44.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.18,
+    "ctr_points": -0.38,
+    "position": -4.6
+   }
   },
   {
    "page": "/tr/badlands/medora",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4858,13 +6951,26 @@
     "clicks_per_day": 0.0,
     "impressions_per_day": 9.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 37,
+    "ctr": 0.0,
+    "position": 7.2,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 37.0
+   },
+   "change": {
+    "clicks_per_day": null,
+    "impressions_per_day": 2.936,
+    "ctr_points": -0.38,
+    "position": -0.6
+   }
   },
   {
    "page": "/virtual",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4885,13 +6991,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 3.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0.0,
+    "position": 9.8,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 4.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.143,
+    "ctr_points": -5.1,
+    "position": 3.5
+   }
   },
   {
    "page": "/tr/books-and-writings/reader",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4912,13 +7031,26 @@
     "clicks_per_day": 1.2,
     "impressions_per_day": 63.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 53,
+    "ctr": 0.0,
+    "position": 4.7,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 53.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.164,
+    "ctr_points": -1.92,
+    "position": -0.5
+   }
   },
   {
    "page": "/tr/complex-legacy/race",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4939,13 +7071,26 @@
     "clicks_per_day": 0.9,
     "impressions_per_day": 90.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 4,
+    "impressions": 250,
+    "ctr": 0.016,
+    "position": 4.7,
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 250.0
+   },
+   "change": {
+    "clicks_per_day": 3.444,
+    "impressions_per_day": 1.765,
+    "ctr_points": 0.65,
+    "position": -0.2
+   }
   },
   {
    "page": "/tr/people/john-muir",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4966,13 +7111,26 @@
     "clicks_per_day": 1.0,
     "impressions_per_day": 182.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 186,
+    "ctr": 0.0,
+    "position": 6.5,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 186.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.022,
+    "ctr_points": -0.53,
+    "position": -0.7
+   }
   },
   {
    "page": "/tr/complex-legacy/equestrian-statue",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -4993,13 +7151,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 16.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 57,
+    "ctr": 0.0175,
+    "position": 5.1,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 57.0
+   },
+   "change": {
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 2.519,
+    "ctr_points": 0.21,
+    "position": -0.4
+   }
   },
   {
    "page": "/tr/people/ethel",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5020,13 +7191,26 @@
     "clicks_per_day": 0.3,
     "impressions_per_day": 92.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 79,
+    "ctr": 0.0,
+    "position": 7.9,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 79.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.144,
+    "ctr_points": -0.31,
+    "position": 0.1
+   }
   },
   {
    "page": "/tr/rise-to-power/becoming-president",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5047,13 +7231,26 @@
     "clicks_per_day": 1.4,
     "impressions_per_day": 396.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 4,
+    "impressions": 628,
+    "ctr": 0.0064,
+    "position": 4.4,
+    "clicks_per_day": 4.0,
+    "impressions_per_day": 628.0
+   },
+   "change": {
+    "clicks_per_day": 1.857,
+    "impressions_per_day": 0.583,
+    "ctr_points": 0.3,
+    "position": -0.9
+   }
   },
   {
    "page": "/tr/people/ted-jr",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5074,13 +7271,26 @@
     "clicks_per_day": 0.5,
     "impressions_per_day": 439.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 575,
+    "ctr": 0.0,
+    "position": 10.3,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 575.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.308,
+    "ctr_points": -0.12,
+    "position": 0.1
+   }
   },
   {
    "page": "/tr/people/mittie",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5101,13 +7311,26 @@
     "clicks_per_day": 0.3,
     "impressions_per_day": 57.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 74,
+    "ctr": 0.0,
+    "position": 6.0,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 74.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.294,
+    "ctr_points": -0.56,
+    "position": -1.5
+   }
   },
   {
    "page": "/podcast/good-citizen/katherine-gehl",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5128,13 +7351,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 13.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 17,
+    "ctr": 0.0,
+    "position": 8.2,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 17.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.278,
+    "ctr_points": -1.07,
+    "position": 0.0
+   }
   },
   {
    "page": "/visit/itineraries/7-day-bismarck-rapid-city",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5155,13 +7391,26 @@
     "clicks_per_day": 0.5,
     "impressions_per_day": 122.7
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 67,
+    "ctr": 0.0149,
+    "position": 8.1,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 67.0
+   },
+   "change": {
+    "clicks_per_day": 1.0,
+    "impressions_per_day": -0.454,
+    "ctr_points": 1.08,
+    "position": 0.0
+   }
   },
   {
    "page": "/tr/early-life/childhood-illness",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5182,13 +7431,26 @@
     "clicks_per_day": 2.3,
     "impressions_per_day": 126.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 197,
+    "ctr": 0.0102,
+    "position": 3.6,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 197.0
+   },
+   "change": {
+    "clicks_per_day": -0.13,
+    "impressions_per_day": 0.556,
+    "ctr_points": -0.81,
+    "position": -0.4
+   }
   },
   {
    "page": "/tr/presidency/square-deal",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5243,13 +7505,26 @@
     "clicks_per_day": 20.7,
     "impressions_per_day": 3314.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 87,
+    "impressions": 6717,
+    "ctr": 0.013,
+    "position": 2.8,
+    "clicks_per_day": 87.0,
+    "impressions_per_day": 6717.0
+   },
+   "change": {
+    "clicks_per_day": 3.203,
+    "impressions_per_day": 1.027,
+    "ctr_points": 0.67,
+    "position": -1.6
+   }
   },
   {
    "page": "/tr/presidency/conservation/john-muir",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5270,13 +7545,26 @@
     "clicks_per_day": 3.2,
     "impressions_per_day": 304.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 6,
+    "impressions": 440,
+    "ctr": 0.0136,
+    "position": 3.8,
+    "clicks_per_day": 6.0,
+    "impressions_per_day": 440.0
+   },
+   "change": {
+    "clicks_per_day": 0.875,
+    "impressions_per_day": 0.447,
+    "ctr_points": 0.29,
+    "position": -0.7
+   }
   },
   {
    "page": "/tr/myths",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5297,13 +7585,26 @@
     "clicks_per_day": 0.0,
     "impressions_per_day": 7.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 5,
+    "ctr": 0.0,
+    "position": 7.2,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 5.0
+   },
+   "change": {
+    "clicks_per_day": null,
+    "impressions_per_day": -0.296,
+    "ctr_points": -0.51,
+    "position": -0.8
+   }
   },
   {
    "page": "/tr/early-life/young-naturalist",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5324,13 +7625,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 15.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 19,
+    "ctr": 0.0,
+    "position": 5.3,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 19.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.234,
+    "ctr_points": -0.93,
+    "position": 0.4
+   }
   },
   {
    "page": "/tr/presidency/cabinet",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5351,13 +7665,26 @@
     "clicks_per_day": 1.0,
     "impressions_per_day": 95.7
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 154,
+    "ctr": 0.0,
+    "position": 5.6,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 154.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.609,
+    "ctr_points": -1.05,
+    "position": 0.6
+   }
   },
   {
    "page": "/tr/people/booker-t-washington",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5378,13 +7705,26 @@
     "clicks_per_day": 0.4,
     "impressions_per_day": 158.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 881,
+    "ctr": 0.0,
+    "position": 9.7,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 881.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 4.562,
+    "ctr_points": -0.25,
+    "position": 0.3
+   }
   },
   {
    "page": "/project/design",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5405,13 +7745,26 @@
     "clicks_per_day": 5.5,
     "impressions_per_day": 151.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 142,
+    "ctr": 0.0141,
+    "position": 5.1,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 142.0
+   },
+   "change": {
+    "clicks_per_day": -0.636,
+    "impressions_per_day": -0.061,
+    "ctr_points": -2.25,
+    "position": 0.6
+   }
   },
   {
    "page": "/tr/early-life/family-travels",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5432,13 +7785,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 15.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 11,
+    "ctr": 0.0,
+    "position": 4.9,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 11.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.281,
+    "ctr_points": -1.4,
+    "position": -0.3
+   }
   },
   {
    "page": "/podcast/good-citizen/adam-met-climate-action-musical-stardom-and-art-building-movement",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5459,13 +7825,26 @@
     "clicks_per_day": 0.0,
     "impressions_per_day": 21.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 24,
+    "ctr": 0.0,
+    "position": 13.8,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 24.0
+   },
+   "change": {
+    "clicks_per_day": null,
+    "impressions_per_day": 0.143,
+    "ctr_points": 0.0,
+    "position": 2.3
+   }
   },
   {
    "page": "/tr/conservation",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5486,13 +7865,26 @@
     "clicks_per_day": 1.1,
     "impressions_per_day": 109.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 112,
+    "ctr": 0.0089,
+    "position": 7.1,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 112.0
+   },
+   "change": {
+    "clicks_per_day": -0.091,
+    "impressions_per_day": 0.02,
+    "ctr_points": -0.15,
+    "position": -0.1
+   }
   },
   {
    "page": "/tr/speeches/confession-of-faith",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5513,13 +7905,26 @@
     "clicks_per_day": 0.5,
     "impressions_per_day": 42.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 77,
+    "ctr": 0.026,
+    "position": 7.8,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 77.0
+   },
+   "change": {
+    "clicks_per_day": 3.0,
+    "impressions_per_day": 0.812,
+    "ctr_points": 1.51,
+    "position": 0.8
+   }
   },
   {
    "page": "/podcast/good-citizen/senator-mitt-romney-formative-moments-presidential-leadership-and-question",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5540,13 +7945,26 @@
     "clicks_per_day": 0.0,
     "impressions_per_day": 34.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 103,
+    "ctr": 0.0,
+    "position": 6.9,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 103.0
+   },
+   "change": {
+    "clicks_per_day": null,
+    "impressions_per_day": 2.029,
+    "ctr_points": -0.11,
+    "position": -0.8
+   }
   },
   {
    "page": "/tr/homes-and-places",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5567,13 +7985,26 @@
     "clicks_per_day": 1.2,
     "impressions_per_day": 105.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 141,
+    "ctr": 0.0071,
+    "position": 5.7,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 141.0
+   },
+   "change": {
+    "clicks_per_day": -0.167,
+    "impressions_per_day": 0.333,
+    "ctr_points": -0.44,
+    "position": -0.2
+   }
   },
   {
    "page": "/tr/early-life/civil-war",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5594,13 +8025,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 34.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 39,
+    "ctr": 0.0,
+    "position": 5.1,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 39.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.13,
+    "ctr_points": -0.62,
+    "position": 0.0
+   }
   },
   {
    "page": "/tr/early-life/day-in-the-life",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5621,13 +8065,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 11.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 9,
+    "ctr": 0.0,
+    "position": 8.6,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 9.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.217,
+    "ctr_points": -0.62,
+    "position": 1.7
+   }
   },
   {
    "page": "/visit/national-park",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5655,13 +8112,26 @@
     "clicks_per_day": 4.4,
     "impressions_per_day": 704.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 442,
+    "ctr": 0.0045,
+    "position": 9.0,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 442.0
+   },
+   "change": {
+    "clicks_per_day": -0.545,
+    "impressions_per_day": -0.373,
+    "ctr_points": -0.17,
+    "position": 0.9
+   }
   },
   {
    "page": "/tr/people/gifford-pinchot",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5682,13 +8152,26 @@
     "clicks_per_day": 0.3,
     "impressions_per_day": 32.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 74,
+    "ctr": 0.0135,
+    "position": 6.7,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 74.0
+   },
+   "change": {
+    "clicks_per_day": 2.333,
+    "impressions_per_day": 1.249,
+    "ctr_points": 0.48,
+    "position": 0.4
+   }
   },
   {
    "page": "/tr/post-presidency/bull-moose",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5709,13 +8192,26 @@
     "clicks_per_day": 5.6,
     "impressions_per_day": 883.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 10,
+    "impressions": 2511,
+    "ctr": 0.004,
+    "position": 4.4,
+    "clicks_per_day": 10.0,
+    "impressions_per_day": 2511.0
+   },
+   "change": {
+    "clicks_per_day": 0.786,
+    "impressions_per_day": 1.844,
+    "ctr_points": -0.24,
+    "position": -0.2
+   }
   },
   {
    "page": "/visit/hiking",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5736,13 +8232,26 @@
     "clicks_per_day": 0.4,
     "impressions_per_day": 54.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 43,
+    "ctr": 0.0,
+    "position": 6.3,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 43.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.215,
+    "ctr_points": -0.72,
+    "position": -0.8
+   }
   },
   {
    "page": "/beam-signing-ceremony",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5763,13 +8272,26 @@
     "clicks_per_day": 0.0,
     "impressions_per_day": 3.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 8,
+    "ctr": 0.0,
+    "position": 5.9,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 8.0
+   },
+   "change": {
+    "clicks_per_day": null,
+    "impressions_per_day": 1.5,
+    "ctr_points": 0.0,
+    "position": -2.0
+   }
   },
   {
    "page": "/project/native-plant-project",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5790,13 +8312,26 @@
     "clicks_per_day": 0.5,
     "impressions_per_day": 56.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 21,
+    "ctr": 0.0,
+    "position": 6.7,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 21.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.628,
+    "ctr_points": -0.95,
+    "position": 2.1
+   }
   },
   {
    "page": "/tr/homes-and-places/tr-national-park",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5817,13 +8352,26 @@
     "clicks_per_day": 0.5,
     "impressions_per_day": 66.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 117,
+    "ctr": 0.0171,
+    "position": 8.5,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 117.0
+   },
+   "change": {
+    "clicks_per_day": 3.0,
+    "impressions_per_day": 0.749,
+    "ctr_points": 1.02,
+    "position": 1.4
+   }
   },
   {
    "page": "/visit/hunting-fishing",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5844,13 +8392,26 @@
     "clicks_per_day": 0.8,
     "impressions_per_day": 67.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 55,
+    "ctr": 0.0364,
+    "position": 5.6,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 55.0
+   },
+   "change": {
+    "clicks_per_day": 1.5,
+    "impressions_per_day": -0.19,
+    "ctr_points": 2.53,
+    "position": -1.7
+   }
   },
   {
    "page": "/about/mission",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5871,13 +8432,26 @@
     "clicks_per_day": 0.4,
     "impressions_per_day": 15.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 15,
+    "ctr": 0.0,
+    "position": 3.1,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 15.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.038,
+    "ctr_points": -2.28,
+    "position": -1.6
+   }
   },
   {
    "page": "/tr/rise-to-power/civil-service",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5898,13 +8472,26 @@
     "clicks_per_day": 2.1,
     "impressions_per_day": 350.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 553,
+    "ctr": 0.0018,
+    "position": 5.8,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 553.0
+   },
+   "change": {
+    "clicks_per_day": -0.524,
+    "impressions_per_day": 0.579,
+    "ctr_points": -0.42,
+    "position": 0.5
+   }
   },
   {
    "page": "/tr/badlands/elkhorn-ranch",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5925,13 +8512,26 @@
     "clicks_per_day": 0.6,
     "impressions_per_day": 77.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 73,
+    "ctr": 0.0,
+    "position": 6.2,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 73.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.063,
+    "ctr_points": -0.83,
+    "position": -1.4
+   }
   },
   {
    "page": "/visit/stargazing",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5952,13 +8552,26 @@
     "clicks_per_day": 0.4,
     "impressions_per_day": 32.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 22,
+    "ctr": 0.0,
+    "position": 4.7,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 22.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.317,
+    "ctr_points": -1.33,
+    "position": -1.5
+   }
   },
   {
    "page": "/podcast/good-citizen/dr-vivek-murthy-loneliness-staying-human-and-what-true-success-looks",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -5979,13 +8592,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 10.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 7,
+    "ctr": 0.0,
+    "position": 9.7,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 7.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.333,
+    "ctr_points": -1.02,
+    "position": -0.7
+   }
   },
   {
    "page": "/podcast/good-citizen/secretary-deb-haaland",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6006,13 +8632,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 26.7
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 9,
+    "impressions": 624,
+    "ctr": 0.0144,
+    "position": 7.3,
+    "clicks_per_day": 9.0,
+    "impressions_per_day": 624.0
+   },
+   "change": {
+    "clicks_per_day": 44.0,
+    "impressions_per_day": 22.371,
+    "ctr_points": 0.5,
+    "position": -0.2
+   }
   },
   {
    "page": "/visit/itineraries/river-road",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6033,13 +8672,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 19.7
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 17,
+    "ctr": 0.0,
+    "position": 8.4,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 17.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.137,
+    "ctr_points": -0.72,
+    "position": 1.1
+   }
   },
   {
    "page": "/tr/presidency/white-house-workers",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6060,13 +8712,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 12.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 29,
+    "ctr": 0.0,
+    "position": 7.1,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 29.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 1.339,
+    "ctr_points": -1.44,
+    "position": 0.6
+   }
   },
   {
    "page": "/podcast/good-citizen/matthew-barzun",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6087,13 +8752,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 8.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 4,
+    "ctr": 0.0,
+    "position": 9.0,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 4.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.524,
+    "ctr_points": -0.85,
+    "position": 0.5
+   }
   },
   {
    "page": "/tr/early-life/father",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6114,13 +8792,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 35.5
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 64,
+    "ctr": 0.0,
+    "position": 7.2,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 64.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.803,
+    "ctr_points": -0.5,
+    "position": 0.5
+   }
   },
   {
    "page": "/visit/camping",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6141,13 +8832,26 @@
     "clicks_per_day": 0.8,
     "impressions_per_day": 56.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 50,
+    "ctr": 0.0,
+    "position": 7.9,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 50.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.11,
+    "ctr_points": -1.4,
+    "position": 0.4
+   }
   },
   {
    "page": "/tr/presidency/conservation/antiquities-act",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6168,13 +8872,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 21.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 11,
+    "ctr": 0.0,
+    "position": 7.0,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 11.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.479,
+    "ctr_points": -0.85,
+    "position": 0.9
+   }
   },
   {
    "page": "/visit/trolley",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6195,13 +8912,26 @@
     "clicks_per_day": 0.3,
     "impressions_per_day": 19.9
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 10,
+    "ctr": 0.0,
+    "position": 7.7,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 10.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.497,
+    "ctr_points": -1.61,
+    "position": 0.8
+   }
   },
   {
    "page": "/tr/badlands/landscape",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6222,13 +8952,26 @@
     "clicks_per_day": 0.3,
     "impressions_per_day": 45.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 55,
+    "ctr": 0.0,
+    "position": 5.3,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 55.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.211,
+    "ctr_points": -0.63,
+    "position": -0.6
+   }
   },
   {
    "page": "/visit/little-missouri-river",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6249,13 +8992,26 @@
     "clicks_per_day": 0.4,
     "impressions_per_day": 34.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 32,
+    "ctr": 0.0,
+    "position": 5.0,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 32.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.062,
+    "ctr_points": -1.15,
+    "position": -2.8
+   }
   },
   {
    "page": "/podcast/good-citizen/ben-jealous",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6276,13 +9032,26 @@
     "clicks_per_day": 0.0,
     "impressions_per_day": 12.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 15,
+    "ctr": 0.0,
+    "position": 12.0,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 15.0
+   },
+   "change": {
+    "clicks_per_day": null,
+    "impressions_per_day": 0.23,
+    "ctr_points": 0.0,
+    "position": 1.8
+   }
   },
   {
    "page": "/podcast/good-citizen/dan-harris",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6303,13 +9072,26 @@
     "clicks_per_day": 0.0,
     "impressions_per_day": 15.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 12,
+    "ctr": 0.0,
+    "position": 10.5,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 12.0
+   },
+   "change": {
+    "clicks_per_day": null,
+    "impressions_per_day": -0.2,
+    "ctr_points": 0.0,
+    "position": 1.7
+   }
   },
   {
    "page": "/visit/outdoors",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6330,13 +9112,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 18.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 8,
+    "ctr": 0.0,
+    "position": 4.1,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 8.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.558,
+    "ctr_points": -1.38,
+    "position": -2.5
+   }
   },
   {
    "page": "/visit/biking",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6357,13 +9152,26 @@
     "clicks_per_day": 0.3,
     "impressions_per_day": 15.7
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 12,
+    "ctr": 0.0833,
+    "position": 7.7,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 12.0
+   },
+   "change": {
+    "clicks_per_day": 2.333,
+    "impressions_per_day": -0.236,
+    "ctr_points": 6.28,
+    "position": 0.4
+   }
   },
   {
    "page": "/visit/wildlife",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6384,13 +9192,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 35.4
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 34,
+    "ctr": 0.0,
+    "position": 7.0,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 34.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.04,
+    "ctr_points": -0.61,
+    "position": -0.8
+   }
   },
   {
    "page": "/project",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6419,13 +9240,26 @@
     "clicks_per_day": 5.0,
     "impressions_per_day": 1003.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 851,
+    "ctr": 0.0024,
+    "position": 2.7,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 851.0
+   },
+   "change": {
+    "clicks_per_day": -0.6,
+    "impressions_per_day": -0.152,
+    "ctr_points": -0.26,
+    "position": 0.3
+   }
   },
   {
    "page": "/tr/people/leonard-wood",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6446,13 +9280,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 60.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 132,
+    "ctr": 0.0,
+    "position": 6.3,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 132.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 1.196,
+    "ctr_points": -0.24,
+    "position": -2.5
+   }
   },
   {
    "page": "/podcast/good-citizen/katharine-hayhoe",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6473,13 +9320,26 @@
     "clicks_per_day": 0.0,
     "impressions_per_day": 4.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 10,
+    "ctr": 0.0,
+    "position": 8.7,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 10.0
+   },
+   "change": {
+    "clicks_per_day": null,
+    "impressions_per_day": 1.174,
+    "ctr_points": 0.0,
+    "position": 0.2
+   }
   },
   {
    "page": "/visit/itineraries/weekend-drives/fargo",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6500,13 +9360,26 @@
     "clicks_per_day": 0.6,
     "impressions_per_day": 58.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 38,
+    "ctr": 0.0263,
+    "position": 4.5,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 38.0
+   },
+   "change": {
+    "clicks_per_day": 0.667,
+    "impressions_per_day": -0.346,
+    "ctr_points": 1.58,
+    "position": -0.5
+   }
   },
   {
    "page": "/about/press/press-releases/trplf-elects-spencer-zwick-board",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6527,13 +9400,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 11.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 19,
+    "ctr": 0.0,
+    "position": 4.1,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 19.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.696,
+    "ctr_points": -1.59,
+    "position": -0.2
+   }
   },
   {
    "page": "/visit/itineraries/weekend-drives/bismarck",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6554,13 +9440,26 @@
     "clicks_per_day": 0.5,
     "impressions_per_day": 51.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 29,
+    "ctr": 0.0,
+    "position": 3.5,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 29.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.435,
+    "ctr_points": -1.04,
+    "position": -1.6
+   }
   },
   {
    "page": "/tr/presidency/second-term",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6581,13 +9480,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 14.2
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 2,
+    "impressions": 25,
+    "ctr": 0.08,
+    "position": 3.7,
+    "clicks_per_day": 2.0,
+    "impressions_per_day": 25.0
+   },
+   "change": {
+    "clicks_per_day": 9.0,
+    "impressions_per_day": 0.761,
+    "ctr_points": 6.24,
+    "position": -2.3
+   }
   },
   {
    "page": "/tr/books-and-writings",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6608,13 +9520,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 21.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 19,
+    "ctr": 0.0,
+    "position": 6.5,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 19.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.128,
+    "ctr_points": -0.82,
+    "position": -2.2
+   }
   },
   {
    "page": "/tr/badlands/frontier-life",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6635,13 +9560,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 30.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 29,
+    "ctr": 0.0,
+    "position": 5.4,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 29.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": -0.037,
+    "ctr_points": -0.83,
+    "position": -1.1
+   }
   },
   {
    "page": "/about/trustees/beth-laski",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6662,13 +9600,26 @@
     "clicks_per_day": 0.8,
     "impressions_per_day": 9.6
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 1,
+    "impressions": 6,
+    "ctr": 0.1667,
+    "position": 2.3,
+    "clicks_per_day": 1.0,
+    "impressions_per_day": 6.0
+   },
+   "change": {
+    "clicks_per_day": 0.25,
+    "impressions_per_day": -0.375,
+    "ctr_points": 8.46,
+    "position": -7.5
+   }
   },
   {
    "page": "/about/press/press-releases/theodore-roosevelt-presidential-library-launches-good-citizen-podcast",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6689,13 +9640,26 @@
     "clicks_per_day": 0.0,
     "impressions_per_day": 1.3
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 2,
+    "ctr": 0.0,
+    "position": 2.0,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 2.0
+   },
+   "change": {
+    "clicks_per_day": null,
+    "impressions_per_day": 0.538,
+    "ctr_points": 0.0,
+    "position": -3.9
+   }
   },
   {
    "page": "/about/presidential-library-system",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6716,13 +9680,26 @@
     "clicks_per_day": 0.6,
     "impressions_per_day": 26.0
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 28,
+    "ctr": 0.0,
+    "position": 6.2,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 28.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.077,
+    "ctr_points": -2.33,
+    "position": 0.0
+   }
   },
   {
    "page": "/about/press/press-releases/trplf-announces-100-million-commitments-unlocks-50-million-state",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6743,13 +9720,26 @@
     "clicks_per_day": 0.2,
     "impressions_per_day": 7.7
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 12,
+    "ctr": 0.0,
+    "position": 4.1,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 12.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.558,
+    "ctr_points": -2.78,
+    "position": -0.8
+   }
   },
   {
    "page": "/tr/new-york-politics",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6770,13 +9760,26 @@
     "clicks_per_day": 0.1,
     "impressions_per_day": 8.1
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 0,
+    "impressions": 13,
+    "ctr": 0.0,
+    "position": 7.3,
+    "clicks_per_day": 0.0,
+    "impressions_per_day": 13.0
+   },
+   "change": {
+    "clicks_per_day": -1.0,
+    "impressions_per_day": 0.605,
+    "ctr_points": -0.88,
+    "position": 0.3
+   }
   },
   {
    "page": "/tr/tr-importance",
    "changed": "2026-11-03",
-   "days_since": 3,
+   "days_since": 4,
    "held": true,
    "held_until": "2026-12-01",
    "changes": [
@@ -6799,13 +9802,26 @@
     "clicks_per_day": 12.9,
     "impressions_per_day": 1338.8
    },
-   "after": null,
-   "change": {}
+   "after": {
+    "days": 1,
+    "clicks": 15,
+    "impressions": 1919,
+    "ctr": 0.0078,
+    "position": 4.4,
+    "clicks_per_day": 15.0,
+    "impressions_per_day": 1919.0
+   },
+   "change": {
+    "clicks_per_day": 0.163,
+    "impressions_per_day": 0.433,
+    "ctr_points": -0.18,
+    "position": -0.5
+   }
   },
   {
    "page": "/visit",
    "changed": "2026-10-27",
-   "days_since": 10,
+   "days_since": 11,
    "held": true,
    "held_until": "2026-11-24",
    "changes": [
@@ -6834,25 +9850,25 @@
     "impressions_per_day": 2290.8
    },
    "after": {
-    "days": 7,
-    "clicks": 228,
-    "impressions": 12373,
-    "ctr": 0.0184,
-    "position": 3.1,
-    "clicks_per_day": 32.6,
-    "impressions_per_day": 1767.6
+    "days": 8,
+    "clicks": 249,
+    "impressions": 13711,
+    "ctr": 0.0182,
+    "position": 3.0,
+    "clicks_per_day": 31.1,
+    "impressions_per_day": 1713.9
    },
    "change": {
-    "clicks_per_day": -0.431,
-    "impressions_per_day": -0.228,
-    "ctr_points": -0.66,
-    "position": 0.4
+    "clicks_per_day": -0.457,
+    "impressions_per_day": -0.252,
+    "ctr_points": -0.68,
+    "position": 0.3
    }
   },
   {
    "page": "/tr/presidency/panama-canal",
    "changed": "2026-10-27",
-   "days_since": 10,
+   "days_since": 11,
    "held": true,
    "held_until": "2026-11-24",
    "changes": [
@@ -6875,25 +9891,25 @@
     "impressions_per_day": 1808.2
    },
    "after": {
-    "days": 7,
-    "clicks": 98,
-    "impressions": 18098,
-    "ctr": 0.0054,
+    "days": 8,
+    "clicks": 124,
+    "impressions": 21594,
+    "ctr": 0.0057,
     "position": 4.7,
-    "clicks_per_day": 14.0,
-    "impressions_per_day": 2585.4
+    "clicks_per_day": 15.5,
+    "impressions_per_day": 2699.2
    },
    "change": {
-    "clicks_per_day": 0.707,
-    "impressions_per_day": 0.43,
-    "ctr_points": 0.09,
+    "clicks_per_day": 0.89,
+    "impressions_per_day": 0.493,
+    "ctr_points": 0.12,
     "position": -0.5
    }
   },
   {
    "page": "/tr/presidency/railroad-regulation",
    "changed": "2026-10-27",
-   "days_since": 10,
+   "days_since": 11,
    "held": true,
    "held_until": "2026-11-24",
    "changes": [
@@ -6916,25 +9932,25 @@
     "impressions_per_day": 996.8
    },
    "after": {
-    "days": 7,
-    "clicks": 41,
-    "impressions": 6335,
-    "ctr": 0.0065,
+    "days": 8,
+    "clicks": 46,
+    "impressions": 7593,
+    "ctr": 0.0061,
     "position": 3.4,
-    "clicks_per_day": 5.9,
-    "impressions_per_day": 905.0
+    "clicks_per_day": 5.8,
+    "impressions_per_day": 949.1
    },
    "change": {
-    "clicks_per_day": 0.513,
-    "impressions_per_day": -0.092,
-    "ctr_points": 0.26,
+    "clicks_per_day": 0.487,
+    "impressions_per_day": -0.048,
+    "ctr_points": 0.22,
     "position": -0.6
    }
   },
   {
    "page": "/tr/presidency/coal-strike",
    "changed": "2026-10-27",
-   "days_since": 10,
+   "days_since": 11,
    "held": true,
    "held_until": "2026-11-24",
    "changes": [
@@ -6957,17 +9973,17 @@
     "impressions_per_day": 884.9
    },
    "after": {
-    "days": 7,
-    "clicks": 46,
-    "impressions": 5527,
+    "days": 8,
+    "clicks": 55,
+    "impressions": 6639,
     "ctr": 0.0083,
     "position": 2.9,
-    "clicks_per_day": 6.6,
-    "impressions_per_day": 789.6
+    "clicks_per_day": 6.9,
+    "impressions_per_day": 829.9
    },
    "change": {
-    "clicks_per_day": -0.165,
-    "impressions_per_day": -0.108,
+    "clicks_per_day": -0.127,
+    "impressions_per_day": -0.062,
     "ctr_points": -0.06,
     "position": -1.3
    }
@@ -6975,7 +9991,7 @@
   {
    "page": "/visit/groups",
    "changed": "2026-10-27",
-   "days_since": 10,
+   "days_since": 11,
    "held": true,
    "held_until": "2026-11-24",
    "changes": [
@@ -6997,10 +10013,10 @@
     "impressions_per_day": 12.2
    },
    "after": {
-    "days": 7,
+    "days": 8,
     "clicks": 1,
-    "impressions": 22,
-    "ctr": 0.0455,
+    "impressions": 25,
+    "ctr": 0.04,
     "position": 5.2,
     "clicks_per_day": 0.1,
     "impressions_per_day": 3.1
@@ -7008,14 +10024,14 @@
    "change": {
     "clicks_per_day": 0.0,
     "impressions_per_day": -0.746,
-    "ctr_points": 3.97,
+    "ctr_points": 3.42,
     "position": -1.3
    }
   },
   {
    "page": "/visit/faq/tickets",
    "changed": "2026-10-27",
-   "days_since": 10,
+   "days_since": 11,
    "held": true,
    "held_until": "2026-11-24",
    "changes": [
@@ -7038,25 +10054,25 @@
     "impressions_per_day": 47.8
    },
    "after": {
-    "days": 7,
+    "days": 8,
     "clicks": 9,
-    "impressions": 241,
-    "ctr": 0.0373,
-    "position": 5.0,
-    "clicks_per_day": 1.3,
-    "impressions_per_day": 34.4
+    "impressions": 276,
+    "ctr": 0.0326,
+    "position": 4.9,
+    "clicks_per_day": 1.1,
+    "impressions_per_day": 34.5
    },
    "change": {
-    "clicks_per_day": -0.35,
-    "impressions_per_day": -0.28,
-    "ctr_points": -0.53,
-    "position": -1.3
+    "clicks_per_day": -0.45,
+    "impressions_per_day": -0.278,
+    "ctr_points": -1.0,
+    "position": -1.4
    }
   },
   {
    "page": "/visit/faq",
    "changed": "2026-10-27",
-   "days_since": 10,
+   "days_since": 11,
    "held": true,
    "held_until": "2026-11-24",
    "changes": [
@@ -7078,25 +10094,25 @@
     "impressions_per_day": 257.0
    },
    "after": {
-    "days": 7,
-    "clicks": 4,
-    "impressions": 276,
-    "ctr": 0.0145,
+    "days": 8,
+    "clicks": 5,
+    "impressions": 297,
+    "ctr": 0.0168,
     "position": 6.7,
     "clicks_per_day": 0.6,
-    "impressions_per_day": 39.4
+    "impressions_per_day": 37.1
    },
    "change": {
     "clicks_per_day": -0.714,
-    "impressions_per_day": -0.847,
-    "ctr_points": 0.64,
+    "impressions_per_day": -0.856,
+    "ctr_points": 0.87,
     "position": 2.0
    }
   },
   {
    "page": "/tr/presidency/brownsville",
    "changed": "2026-10-20",
-   "days_since": 17,
+   "days_since": 18,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -7120,17 +10136,17 @@
     "impressions_per_day": 2240.4
    },
    "after": {
-    "days": 14,
-    "clicks": 32,
-    "impressions": 64364,
+    "days": 15,
+    "clicks": 34,
+    "impressions": 68549,
     "ctr": 0.0005,
     "position": 4.5,
     "clicks_per_day": 2.3,
-    "impressions_per_day": 4597.4
+    "impressions_per_day": 4569.9
    },
    "change": {
     "clicks_per_day": 1.556,
-    "impressions_per_day": 1.052,
+    "impressions_per_day": 1.04,
     "ctr_points": 0.01,
     "position": -1.8
    }
@@ -7138,7 +10154,7 @@
   {
    "page": "/tr/presidency/roosevelt-corollary",
    "changed": "2026-10-20",
-   "days_since": 17,
+   "days_since": 18,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -7162,25 +10178,25 @@
     "impressions_per_day": 3783.6
    },
    "after": {
-    "days": 14,
-    "clicks": 197,
-    "impressions": 74401,
-    "ctr": 0.0026,
+    "days": 15,
+    "clicks": 220,
+    "impressions": 81671,
+    "ctr": 0.0027,
     "position": 4.2,
-    "clicks_per_day": 14.1,
-    "impressions_per_day": 5314.4
+    "clicks_per_day": 14.7,
+    "impressions_per_day": 5444.7
    },
    "change": {
-    "clicks_per_day": 1.136,
-    "impressions_per_day": 0.405,
-    "ctr_points": 0.09,
+    "clicks_per_day": 1.227,
+    "impressions_per_day": 0.439,
+    "ctr_points": 0.1,
     "position": -1.2
    }
   },
   {
    "page": "/visit/hours",
    "changed": "2026-10-20",
-   "days_since": 17,
+   "days_since": 18,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -7204,25 +10220,25 @@
     "impressions_per_day": 2185.9
    },
    "after": {
-    "days": 14,
-    "clicks": 194,
-    "impressions": 18844,
-    "ctr": 0.0103,
+    "days": 15,
+    "clicks": 207,
+    "impressions": 19655,
+    "ctr": 0.0105,
     "position": 2.2,
-    "clicks_per_day": 13.9,
-    "impressions_per_day": 1346.0
+    "clicks_per_day": 13.8,
+    "impressions_per_day": 1310.3
    },
    "change": {
-    "clicks_per_day": -0.485,
-    "impressions_per_day": -0.384,
-    "ctr_points": -0.21,
+    "clicks_per_day": -0.489,
+    "impressions_per_day": -0.401,
+    "ctr_points": -0.19,
     "position": -0.5
    }
   },
   {
    "page": "/tr/myths/teddy-name",
    "changed": "2026-10-20",
-   "days_since": 17,
+   "days_since": 18,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -7245,25 +10261,25 @@
     "impressions_per_day": 20.9
    },
    "after": {
-    "days": 14,
+    "days": 15,
     "clicks": 5,
-    "impressions": 1008,
+    "impressions": 1010,
     "ctr": 0.005,
-    "position": 5.4,
-    "clicks_per_day": 0.4,
-    "impressions_per_day": 72.0
+    "position": 5.3,
+    "clicks_per_day": 0.3,
+    "impressions_per_day": 67.3
    },
    "change": {
-    "clicks_per_day": 1.0,
-    "impressions_per_day": 2.445,
+    "clicks_per_day": 0.5,
+    "impressions_per_day": 2.22,
     "ctr_points": -0.69,
-    "position": -0.8
+    "position": -0.9
    }
   },
   {
    "page": "/",
    "changed": "2026-10-20",
-   "days_since": 17,
+   "days_since": 18,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -7285,25 +10301,25 @@
     "impressions_per_day": 9259.3
    },
    "after": {
-    "days": 14,
-    "clicks": 3838,
-    "impressions": 41009,
-    "ctr": 0.0936,
+    "days": 15,
+    "clicks": 4041,
+    "impressions": 43003,
+    "ctr": 0.094,
     "position": 6.6,
-    "clicks_per_day": 274.1,
-    "impressions_per_day": 2929.2
+    "clicks_per_day": 269.4,
+    "impressions_per_day": 2866.9
    },
    "change": {
-    "clicks_per_day": -0.224,
-    "impressions_per_day": -0.684,
-    "ctr_points": 5.55,
+    "clicks_per_day": -0.237,
+    "impressions_per_day": -0.69,
+    "ctr_points": 5.59,
     "position": -1.4
    }
   },
   {
    "page": "/visit/itineraries/one-day",
    "changed": "2026-10-20",
-   "days_since": 17,
+   "days_since": 18,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -7325,25 +10341,25 @@
     "impressions_per_day": 84.6
    },
    "after": {
-    "days": 14,
-    "clicks": 30,
-    "impressions": 832,
-    "ctr": 0.0361,
-    "position": 3.8,
+    "days": 15,
+    "clicks": 32,
+    "impressions": 867,
+    "ctr": 0.0369,
+    "position": 3.9,
     "clicks_per_day": 2.1,
-    "impressions_per_day": 59.4
+    "impressions_per_day": 57.8
    },
    "change": {
     "clicks_per_day": -0.4,
-    "impressions_per_day": -0.298,
-    "ctr_points": -0.53,
-    "position": -0.1
+    "impressions_per_day": -0.317,
+    "ctr_points": -0.45,
+    "position": 0.0
    }
   },
   {
    "page": "/visit/itineraries/4-days-north-dakota",
    "changed": "2026-10-20",
-   "days_since": 17,
+   "days_since": 18,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -7365,25 +10381,25 @@
     "impressions_per_day": 51.4
    },
    "after": {
-    "days": 14,
-    "clicks": 9,
-    "impressions": 578,
-    "ctr": 0.0156,
-    "position": 7.2,
-    "clicks_per_day": 0.6,
-    "impressions_per_day": 41.3
+    "days": 15,
+    "clicks": 10,
+    "impressions": 597,
+    "ctr": 0.0168,
+    "position": 7.1,
+    "clicks_per_day": 0.7,
+    "impressions_per_day": 39.8
    },
    "change": {
-    "clicks_per_day": -0.143,
-    "impressions_per_day": -0.196,
-    "ctr_points": 0.17,
-    "position": -0.4
+    "clicks_per_day": 0.0,
+    "impressions_per_day": -0.226,
+    "ctr_points": 0.29,
+    "position": -0.5
    }
   },
   {
    "page": "/visit/itineraries/seattle-badlands",
    "changed": "2026-10-20",
-   "days_since": 17,
+   "days_since": 18,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -7405,25 +10421,25 @@
     "impressions_per_day": 12.4
    },
    "after": {
-    "days": 14,
+    "days": 15,
     "clicks": 1,
-    "impressions": 170,
-    "ctr": 0.0059,
-    "position": 7.3,
+    "impressions": 180,
+    "ctr": 0.0056,
+    "position": 8.0,
     "clicks_per_day": 0.1,
-    "impressions_per_day": 12.1
+    "impressions_per_day": 12.0
    },
    "change": {
     "clicks_per_day": 0.0,
-    "impressions_per_day": -0.024,
-    "ctr_points": -0.57,
-    "position": 0.6
+    "impressions_per_day": -0.032,
+    "ctr_points": -0.6,
+    "position": 1.3
    }
   },
   {
    "page": "/visit/i-94",
    "changed": "2026-10-20",
-   "days_since": 17,
+   "days_since": 18,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -7445,13 +10461,13 @@
     "impressions_per_day": 0.0
    },
    "after": {
-    "days": 14,
+    "days": 15,
     "clicks": 0,
-    "impressions": 0,
-    "ctr": null,
-    "position": null,
+    "impressions": 2,
+    "ctr": 0.0,
+    "position": 11.0,
     "clicks_per_day": 0.0,
-    "impressions_per_day": 0.0
+    "impressions_per_day": 0.1
    },
    "change": {
     "clicks_per_day": null,
@@ -7463,7 +10479,7 @@
   {
    "page": "/tr/badlands/where-to-see",
    "changed": "2026-10-20",
-   "days_since": 17,
+   "days_since": 18,
    "held": true,
    "held_until": "2026-11-17",
    "changes": [
@@ -7485,7 +10501,7 @@
     "impressions_per_day": 0.0
    },
    "after": {
-    "days": 14,
+    "days": 15,
     "clicks": 0,
     "impressions": 0,
     "ctr": null,
