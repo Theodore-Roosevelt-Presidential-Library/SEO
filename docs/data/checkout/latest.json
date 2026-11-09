@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T13:00:11+00:00",
+ "updated": "2026-11-09T13:24:11+00:00",
  "store": "access.trlibrary.com",
  "period": "last 28 days",
  "note": "Rates only; counts are never published. Users who triggered each step on the ticket store, from GA4.",
@@ -177,7 +177,7 @@
    "dead_clicks": 11.6,
    "excessive_scroll": 0.0,
    "rage_clicks": 0.1,
-   "quick_backs": 26.0,
+   "quick_backs": 26.1,
    "scroll_depth": 78.0
   },
   "pages": {
@@ -188,18 +188,18 @@
     "scroll_depth": 99.0,
     "excessive_scroll": 0.0
    },
-   "orders/tickets": {
-    "dead_clicks": 50.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 79.2,
-    "excessive_scroll": 0.0
-   },
    "checkout/process": {
     "dead_clicks": 90.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 87.4,
+    "excessive_scroll": 0.0
+   },
+   "orders/tickets": {
+    "dead_clicks": 50.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 79.2,
     "excessive_scroll": 0.0
    },
    "events/detail": {
@@ -322,10 +322,10 @@
     "excessive_scroll": 0.0
    },
    "tr/presidency/square-deal": {
-    "dead_clicks": 33.3,
+    "dead_clicks": 50.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 34.7,
+    "scroll_depth": 16.5,
     "excessive_scroll": 0.0
    },
    "tr/presidency/trust-busting": {
@@ -489,18 +489,18 @@
     "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
-   "visit/camping": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 43.0,
-    "excessive_scroll": 0.0
-   },
    "visit/stargazing": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 23.0,
+    "excessive_scroll": 0.0
+   },
+   "visit/camping": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 43.0,
     "excessive_scroll": 0.0
    },
    "visit/planner": {
@@ -699,18 +699,18 @@
     "scroll_depth": 76.0,
     "excessive_scroll": 0.0
    },
-   "podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore": {
-    "dead_clicks": 100.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
-    "excessive_scroll": 0.0
-   },
    "calendar/special-event": {
     "dead_clicks": 20.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 70.4,
+    "excessive_scroll": 0.0
+   },
+   "podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore": {
+    "dead_clicks": 100.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
    "project/design": {

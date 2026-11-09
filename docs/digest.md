@@ -1,5 +1,5 @@
 # trlibrary.com search & AI visibility digest
-Generated 2026-11-09T13:03:11+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
+Generated 2026-11-09T13:24:16+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
 
 ## How to use this
 This briefing is for doing the work, not only describing it. An assistant pointed here has four jobs, in this order:
@@ -286,17 +286,17 @@ House rules for any change:
 |---|---|---|---|
 | audit | ok | 2026-11-09T12:32:33+00:00 | Crawled 1135 pages, health 95/100 |
 | ranks | ok | 2026-11-09T12:38:04+00:00 | 35 keywords checked |
-| opportunities | error | 2026-11-09T12:43:57+00:00 | 'est_extra_clicks' |
-| gsc | ok | 2026-11-09T12:30:31+00:00 | 22941 queries, 2188 pages (2026-10-10 to 2026-11-06); 249 changed pages tracked |
+| opportunities | error | 2026-11-09T13:24:09+00:00 | 'est_extra_clicks' |
+| gsc | ok | 2026-11-09T13:24:09+00:00 | 22941 queries, 2188 pages (2026-10-10 to 2026-11-06); 249 changed pages tracked |
 | ai_visibility | error | 2026-11-09T12:43:57+00:00 | 42 answers from ChatGPT, Gemini, Perplexity; 21 failed: Perplexity 403: {"error":{"message":"The Agent API requires paid credits. Add paid credit at https://console.perplexity.ai to upgrade your organizatio |
 | tips | ok | 2026-11-09T13:03:11+00:00 | Gemini wrote tips for 8 pages |
-| digest | ok | 2026-11-08T13:22:01+00:00 | llms.txt, digest.md and digest.json rebuilt |
-| checkout | ok | 2026-11-09T13:00:56+00:00 | Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info |
+| digest | ok | 2026-11-09T13:03:11+00:00 | llms.txt, digest.md and digest.json rebuilt |
+| checkout | ok | 2026-11-09T13:24:16+00:00 | Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info |
 | curate | ok | 2026-11-09T12:33:22+00:00 | 15 discovered keywords and 6 discovered questions tracked; 7 changes today |
 | ux | ok | 2026-11-09T12:57:05+00:00 | 80 pages; PageSpeed on 78; AI task check by gemini (gemini-3.8-flash); GA4 on; Clarity off; 2 errors, e.g. PageSpeed /visit/maps: PageSpeed 500: {   "error": {     "code": 500,     "message": "Lighthouse returned error: PAGE_HUNG. Lighthouse was unable to reliably load the URL you requeste |
 | links | ok | 2026-11-09T12:58:43+00:00 | 1169 pages crawled; 0 broken internal links (redirects proposed); 746 suggested links; 45 orphan pages; 27 related pairs without links |
 | schema | ok | 2026-11-09T13:00:05+00:00 | 292/888 content pages have their own markup; 6 sitewide issues |
-| indexnow | skipped | 2026-11-08T13:22:01+00:00 | No IndexNow key yet: see the work queue task 'Turn on IndexNow'. |
+| indexnow | skipped | 2026-11-09T13:24:16+00:00 | No IndexNow key yet: see the work queue task 'Turn on IndexNow'. |
 
 ## Google Search (Search Console)
 2026-10-10 to 2026-11-06 vs the prior 28 days: **42,794 clicks** (prior 54,642), 2,734,314 impressions (prior 2,363,841), CTR 1.6% (prior 2.3%), average position 5.9 (prior 6.5). Branded clicks 12920, non-branded 10160, search term hidden by Google 19714.
@@ -1208,13 +1208,13 @@ Most fixes are one change to a Drupal template per content type (ask FiveJars); 
 ## Ticket checkout (GA4, rates only)
 Checkout completion – (prior –); store visitors who buy 31% (prior 42%); ticket page to store 57%. Steps the store doesn't report: view_item, add_to_cart, begin_checkout, add_payment_info.
 
-Store frustration signals (last 3 days, Clarity): dead clicks 11.6% of sessions, rage clicks 0.1%, quick backs 26.0%, scroll depth 78.0%.
+Store frustration signals (last 3 days, Clarity): dead clicks 11.6% of sessions, rage clicks 0.1%, quick backs 26.1%, scroll depth 78.0%.
 
 | Store page | Dead % | Rage % | Quick back % | Scroll % |
 |---|---|---|---|---|
 | membership/join | 0 | 0 | 0 | 99 |
-| orders/tickets | 50 | 0 | 0 | 79.2 |
 | checkout/process | 90 | 0 | 0 | 87.4 |
+| orders/tickets | 50 | 0 | 0 | 79.2 |
 | events/detail | 0 | 0 | 0 | 100 |
 | checkout/confirm | 3 | 0 | 7.6 | 98.6 |
 | tr/presidency/executive-power | 0 | 0 | 0 | 16 |
@@ -1232,7 +1232,7 @@ Store frustration signals (last 3 days, Clarity): dead clicks 11.6% of sessions,
 | tickets | 0 | 0 | 0 | 9 |
 | about/careers | 0 | 0 | 0 | 69.7 |
 | tr/timeline | 0 | 0 | 0 | 100 |
-| tr/presidency/square-deal | 33.3 | 0 | 0 | 34.7 |
+| tr/presidency/square-deal | 50 | 0 | 0 | 16.5 |
 | tr/presidency/trust-busting | 0 | 0 | 0 | 84 |
 | project | 0 | 0 | 0 | 100 |
 | visit/hours | 0 | 0 | 100 | 38 |
@@ -1256,8 +1256,8 @@ Store frustration signals (last 3 days, Clarity): dead clicks 11.6% of sessions,
 | membership/profile | 0 | 0 | 100 | 100 |
 | tr/early-life/childhood-illness | 0 | 0 | 0 | 100 |
 | rsvp/midwinter | 0 | 0 | 0 | 100 |
-| visit/camping | 0 | 0 | 0 | 43 |
 | visit/stargazing | 0 | 0 | 0 | 23 |
+| visit/camping | 0 | 0 | 0 | 43 |
 | visit/planner | 0 | 0 | 0 | 94 |
 | membership | 0 | 0 | 0 | 77 |
 | visit/lodging | 0 | 0 | 0 | 34 |
@@ -1286,8 +1286,8 @@ Store frustration signals (last 3 days, Clarity): dead clicks 11.6% of sessions,
 | visit/directions | 0 | 0 | 0 | 25.8 |
 | visit/eat | 0 | 0 | 0 | 55.5 |
 | tr/quotes/conservation | 0 | 0 | 0 | 76 |
-| podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore | 100 | 0 | 0 | 100 |
 | calendar/special-event | 20 | 0 | 0 | 70.4 |
+| podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore | 100 | 0 | 0 | 100 |
 | project/design | 0 | 0 | 0 | 99 |
 | tr/new-york-politics/assembly | 0 | 0 | 0 | 68 |
 | podcast/good-citizen/rahm-emanuel-fight-center-and-winning-lottery-life | 0 | 0 | 0 | 3 |

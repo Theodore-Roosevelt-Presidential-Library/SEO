@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T13:03:11+00:00",
+ "generated": "2026-11-09T13:24:16+00:00",
  "site": "https://www.trlibrary.com",
  "dashboard": "https://seo.labs.trlibrary.com",
  "sources": {
@@ -15,12 +15,12 @@
   },
   "opportunities": {
    "state": "error",
-   "updated": "2026-11-09T12:43:57+00:00",
+   "updated": "2026-11-09T13:24:09+00:00",
    "message": "'est_extra_clicks'"
   },
   "gsc": {
    "state": "ok",
-   "updated": "2026-11-09T12:30:31+00:00",
+   "updated": "2026-11-09T13:24:09+00:00",
    "message": "22941 queries, 2188 pages (2026-10-10 to 2026-11-06); 249 changed pages tracked"
   },
   "ai_visibility": {
@@ -35,12 +35,12 @@
   },
   "digest": {
    "state": "ok",
-   "updated": "2026-11-08T13:22:01+00:00",
+   "updated": "2026-11-09T13:03:11+00:00",
    "message": "llms.txt, digest.md and digest.json rebuilt"
   },
   "checkout": {
    "state": "ok",
-   "updated": "2026-11-09T13:00:56+00:00",
+   "updated": "2026-11-09T13:24:16+00:00",
    "message": "Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info"
   },
   "curate": {
@@ -65,7 +65,7 @@
   },
   "indexnow": {
    "state": "skipped",
-   "updated": "2026-11-08T13:22:01+00:00",
+   "updated": "2026-11-09T13:24:16+00:00",
    "message": "No IndexNow key yet: see the work queue task 'Turn on IndexNow'."
   }
  },
@@ -15265,7 +15265,7 @@
   "llms_txt_draft": "https://seo.labs.trlibrary.com/data/site-llms.txt"
  },
  "checkout": {
-  "updated": "2026-11-09T13:00:11+00:00",
+  "updated": "2026-11-09T13:24:11+00:00",
   "note": "Rates only; counts are never published. Users who triggered each step on the ticket store, from GA4.",
   "current": {
    "tracked_steps": [
@@ -15292,7 +15292,7 @@
     "dead_clicks": 11.6,
     "excessive_scroll": 0.0,
     "rage_clicks": 0.1,
-    "quick_backs": 26.0,
+    "quick_backs": 26.1,
     "scroll_depth": 78.0
    },
    "pages": {
@@ -15303,18 +15303,18 @@
      "scroll_depth": 99.0,
      "excessive_scroll": 0.0
     },
-    "orders/tickets": {
-     "dead_clicks": 50.0,
-     "rage_clicks": 0.0,
-     "quick_backs": 0.0,
-     "scroll_depth": 79.2,
-     "excessive_scroll": 0.0
-    },
     "checkout/process": {
      "dead_clicks": 90.0,
      "rage_clicks": 0.0,
      "quick_backs": 0.0,
      "scroll_depth": 87.4,
+     "excessive_scroll": 0.0
+    },
+    "orders/tickets": {
+     "dead_clicks": 50.0,
+     "rage_clicks": 0.0,
+     "quick_backs": 0.0,
+     "scroll_depth": 79.2,
      "excessive_scroll": 0.0
     },
     "events/detail": {
@@ -15437,10 +15437,10 @@
      "excessive_scroll": 0.0
     },
     "tr/presidency/square-deal": {
-     "dead_clicks": 33.3,
+     "dead_clicks": 50.0,
      "rage_clicks": 0.0,
      "quick_backs": 0.0,
-     "scroll_depth": 34.7,
+     "scroll_depth": 16.5,
      "excessive_scroll": 0.0
     },
     "tr/presidency/trust-busting": {
@@ -15604,18 +15604,18 @@
      "scroll_depth": 100.0,
      "excessive_scroll": 0.0
     },
-    "visit/camping": {
-     "dead_clicks": 0.0,
-     "rage_clicks": 0.0,
-     "quick_backs": 0.0,
-     "scroll_depth": 43.0,
-     "excessive_scroll": 0.0
-    },
     "visit/stargazing": {
      "dead_clicks": 0.0,
      "rage_clicks": 0.0,
      "quick_backs": 0.0,
      "scroll_depth": 23.0,
+     "excessive_scroll": 0.0
+    },
+    "visit/camping": {
+     "dead_clicks": 0.0,
+     "rage_clicks": 0.0,
+     "quick_backs": 0.0,
+     "scroll_depth": 43.0,
      "excessive_scroll": 0.0
     },
     "visit/planner": {
@@ -15814,18 +15814,18 @@
      "scroll_depth": 76.0,
      "excessive_scroll": 0.0
     },
-    "podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore": {
-     "dead_clicks": 100.0,
-     "rage_clicks": 0.0,
-     "quick_backs": 0.0,
-     "scroll_depth": 100.0,
-     "excessive_scroll": 0.0
-    },
     "calendar/special-event": {
      "dead_clicks": 20.0,
      "rage_clicks": 0.0,
      "quick_backs": 0.0,
      "scroll_depth": 70.4,
+     "excessive_scroll": 0.0
+    },
+    "podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore": {
+     "dead_clicks": 100.0,
+     "rage_clicks": 0.0,
+     "quick_backs": 0.0,
+     "scroll_depth": 100.0,
      "excessive_scroll": 0.0
     },
     "project/design": {
@@ -15931,7 +15931,7 @@
   "ticket_page_to_store": 0.575
  },
  "work_queue": {
-  "generated": "2026-11-09T13:03:11+00:00",
+  "generated": "2026-11-09T13:24:16+00:00",
   "summary": {
    "tasks": 47,
    "by_owner": {
