@@ -79,6 +79,46 @@
    "added": "2026-11-02",
    "reason": "position 4.4, 6818 impressions/28d; Roosevelt's historic 1912 third-party presidential campaign",
    "score": 1057
+  },
+  {
+   "keyword": "alice roosevelt",
+   "group": "Auto: Family",
+   "status": "active",
+   "added": "2026-11-09",
+   "reason": "position 8.1, 11847 impressions/28d; High-volume search on Theodore Roosevelt's eldest daughter and White House icon.",
+   "score": 1255
+  },
+  {
+   "keyword": "man in the arena",
+   "group": "Auto: Learning",
+   "status": "active",
+   "added": "2026-11-09",
+   "reason": "position 6.1, 7558 impressions/28d; Theodore Roosevelt's most famous civic passage; core entry point for civic education.",
+   "score": 1168
+  },
+  {
+   "keyword": "kermit roosevelt",
+   "group": "Auto: Family",
+   "status": "active",
+   "added": "2026-11-09",
+   "reason": "position 7.4, 9187 impressions/28d; Theodore Roosevelt's son and companion on the African and Amazon expeditions.",
+   "score": 976
+  },
+  {
+   "keyword": "who is on mount rushmore",
+   "group": "Auto: Learning",
+   "status": "active",
+   "added": "2026-11-09",
+   "reason": "position 6.7, 5233 impressions/28d; High-volume discovery query connecting Theodore Roosevelt's legacy to national landmark travel.",
+   "score": 852
+  },
+  {
+   "keyword": "quentin roosevelt",
+   "group": "Auto: Family",
+   "status": "active",
+   "added": "2026-11-09",
+   "reason": "position 11.2, 4775 impressions/28d; Theodore Roosevelt's youngest son, killed in action during World War I.",
+   "score": 781
   }
  ],
  "prompts": [
@@ -121,9 +161,78 @@
    "added": "2026-11-02",
    "reason": "from the Google search \"who is on mount rushmore\"; High-volume inquiry connecting Roosevelt to regional Northern Plains travel and heritage.",
    "auto": true
+  },
+  {
+   "id": "auto-what-years-was-theodore-roosevelt-president-and-wh",
+   "group": "History",
+   "text": "What years was Theodore Roosevelt president, and what were the dates of his administration?",
+   "source_query": "when was teddy roosevelt president",
+   "status": "active",
+   "added": "2026-11-09",
+   "reason": "from the Google search \"when was teddy roosevelt president\"; Foundational timeline query for TR's presidency.",
+   "auto": true
+  },
+  {
+   "id": "auto-which-four-presidents-are-on-mount-rushmore-and-wh",
+   "group": "History",
+   "text": "Which four presidents are on Mount Rushmore, and why was Theodore Roosevelt included among them?",
+   "source_query": "what presidents are on mount rushmore",
+   "status": "active",
+   "added": "2026-11-09",
+   "reason": "from the Google search \"what presidents are on mount rushmore\"; Connects Roosevelt to a major regional monument and invites context on his national significance.",
+   "auto": true
   }
  ],
  "log": [
+  {
+   "date": "2026-11-09",
+   "action": "added",
+   "kind": "question",
+   "item": "Which four presidents are on Mount Rushmore, and why was Theodore Roosevelt included among them?",
+   "reason": "from the Google search \"what presidents are on mount rushmore\"; Connects Roosevelt to a major regional monument and invites context on his national significance."
+  },
+  {
+   "date": "2026-11-09",
+   "action": "added",
+   "kind": "question",
+   "item": "What years was Theodore Roosevelt president, and what were the dates of his administration?",
+   "reason": "from the Google search \"when was teddy roosevelt president\"; Foundational timeline query for TR's presidency."
+  },
+  {
+   "date": "2026-11-09",
+   "action": "added",
+   "kind": "keyword",
+   "item": "quentin roosevelt",
+   "reason": "position 11.2, 4775 impressions/28d; Theodore Roosevelt's youngest son, killed in action during World War I."
+  },
+  {
+   "date": "2026-11-09",
+   "action": "added",
+   "kind": "keyword",
+   "item": "who is on mount rushmore",
+   "reason": "position 6.7, 5233 impressions/28d; High-volume discovery query connecting Theodore Roosevelt's legacy to national landmark travel."
+  },
+  {
+   "date": "2026-11-09",
+   "action": "added",
+   "kind": "keyword",
+   "item": "kermit roosevelt",
+   "reason": "position 7.4, 9187 impressions/28d; Theodore Roosevelt's son and companion on the African and Amazon expeditions."
+  },
+  {
+   "date": "2026-11-09",
+   "action": "added",
+   "kind": "keyword",
+   "item": "man in the arena",
+   "reason": "position 6.1, 7558 impressions/28d; Theodore Roosevelt's most famous civic passage; core entry point for civic education."
+  },
+  {
+   "date": "2026-11-09",
+   "action": "added",
+   "kind": "keyword",
+   "item": "alice roosevelt",
+   "reason": "position 8.1, 11847 impressions/28d; High-volume search on Theodore Roosevelt's eldest daughter and White House icon."
+  },
   {
    "date": "2026-11-02",
    "action": "added",
@@ -223,5 +332,5 @@
    "reason": "position 8.6, 2000 impressions/28d; Key regional trip-planning search directly adjacent to the Library in Medora."
   }
  ],
- "updated": "2026-11-02T12:33:01+00:00"
+ "updated": "2026-11-09T12:33:22+00:00"
 }

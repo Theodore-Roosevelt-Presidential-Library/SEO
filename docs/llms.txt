@@ -1,27 +1,40 @@
 # TRPL Search & AI Visibility
 
-> How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built 2026-11-03T13:22:34+00:00.
+> How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built 2026-11-09T13:24:16+00:00.
 
 The dashboard at https://seo.labs.trlibrary.com/ is rendered with JavaScript. AI tools should read the digest below instead.
 
 ## Start here
-- [Digest (Markdown)](https://seo.labs.trlibrary.com/digest.md): one-page ranked briefing: search totals, top opportunities, tracked keywords, AI-assistant answers, audit issues, drafted recommendations, and house rules for suggesting copy
+- [Digest (Markdown)](https://seo.labs.trlibrary.com/digest.md): one-page ranked briefing that opens with the work queue, then search totals, opportunities, tracked keywords, AI-assistant answers, audit issues, drafted recommendations and house rules
+- [Work queue (JSON)](https://seo.labs.trlibrary.com/data/work_queue.json): every audit, internal-link and structured-data fix as a task: pages (busiest first), who fixes it (TRPL in Drupal, or FiveJars), Drupal steps, done-when check; plus page jobs bundling all fixes for one page
 - [Digest (JSON)](https://seo.labs.trlibrary.com/data/digest.json): the same content as structured data
 - [Redirects to add (CSV)](https://seo.labs.trlibrary.com/data/redirects.csv): proposed 301 redirects for broken links, ready for Drupal's Redirect import
 - [Change log with before/after numbers](https://seo.labs.trlibrary.com/data/changes.json): pages changed recently, held back from recommendations
 - [Structured data opportunities](https://seo.labs.trlibrary.com/data/schema.json): schema.org gaps by content type with ready-to-paste JSON-LD
 - [Draft llms.txt for trlibrary.com](https://seo.labs.trlibrary.com/data/site-llms.txt): proposed AI-tool guide for the main site, built from its sitemap
 
+## What an assistant should do here
+Don't stop at recommendations. Work the queue: for the top TRPL tasks (audit fixes, internal links, structured data), write the exact change, get approval from the communications team, then carry it out in Drupal using the recipe (or package FiveJars tasks as a Basecamp to-do), check the live page, and log it in config/changes.yml. Title/description and content suggestions come second.
+
+Top of the queue now:
+- Restaurant and store hours are listed as the museum's hours (TRPL, 1)
+- Same topic on two pages (merge or differentiate) (TRPL, 20)
+- Add internal links where pages already mention each other (TRPL, 579)
+- Pages nothing links to (TRPL, 45)
+- Strengthen pages ranking just off the top for searches people make (TRPL, 30)
+
 ## Snapshot
-- Google: 44,209 clicks, avg position 5.8 (28 days to 2026-10-31)
-- Site audit: health 96/100, AI readiness 60/100
-- AI assistants mentioning the Library: ChatGPT 68%, Gemini 32%
-- Links: 0 broken internal addresses with 301 redirects proposed, 1176 internal links worth adding, 50 pages with no links in
-- Recently changed: 41 pages held back from recommendations (see 'Recently changed' in the digest for before/after numbers)
-- Structured data: 101/883 content pages carry schema.org markup; 8 sitewide markup issues; trlibrary.com llms.txt: no (draft available)
+- Google: 42,794 clicks, avg position 5.9 (28 days to 2026-11-06)
+- Site audit: health 95/100, AI readiness 60/100
+- AI assistants mentioning the Library: ChatGPT 38%, Gemini 24%
+- Links: 0 broken internal addresses with 301 redirects proposed, 746 internal links worth adding, 45 pages with no links in
+- Recently changed: 249 pages held back from recommendations (see 'Recently changed' in the digest for before/after numbers)
+- Structured data: 292/888 content pages carry schema.org markup; 6 sitewide markup issues; trlibrary.com llms.txt: yes
 
 ## Raw data
 - [changes.json](https://seo.labs.trlibrary.com/data/changes.json): Change log: pages changed recently (held back from recommendations) with Search Console before/after numbers
+- [indexnow.json](https://seo.labs.trlibrary.com/data/indexnow.json): IndexNow submissions: changed pages sent to Bing and other engines, by date
+- [work_queue.json](https://seo.labs.trlibrary.com/data/work_queue.json): Work queue: every audit, internal-link and structured-data fix as a task with pages, owner (TRPL or FiveJars), Drupal steps and a done-when check, plus page jobs that bundle all fixes for one page
 - [status.json](https://seo.labs.trlibrary.com/data/status.json): Which data sources are on, last run time, errors
 - [gsc/summary.json](https://seo.labs.trlibrary.com/data/gsc/summary.json): Search Console totals, last 28 days vs prior 28
 - [gsc/daily.json](https://seo.labs.trlibrary.com/data/gsc/daily.json): Clicks/impressions/CTR/position per day (~16 months)
@@ -44,7 +57,8 @@ The dashboard at https://seo.labs.trlibrary.com/ is rendered with JavaScript. AI
 - [tracking.json](https://seo.labs.trlibrary.com/data/tracking.json): Keywords and AI questions the system discovered, graduated or retired, with reasons
 
 ## House rules for suggesting changes
-- Suggestions are drafts for the communications team; nothing is published automatically.
+- Nothing on trlibrary.com changes without the communications team's approval. Once approved, make the change (if you have Drupal access) or hand it over ready to paste; never stop at a recommendation when a work-queue task can be carried out.
+- After any change, log it in config/changes.yml (date, page, kind, what) so the next run holds the page and reports before/after numbers.
 - Pages listed under 'Recently changed' were just edited: don't recommend changing them again until their hold ends; judge them by the before/after numbers.
 - Never invent historical facts, dates, names, prices or hours. Use only what the page already says, or flag it for verification.
 - Never quote or paraphrase Theodore Roosevelt. Say 'consider a verified TR quote about X' instead.
@@ -54,6 +68,8 @@ The dashboard at https://seo.labs.trlibrary.com/ is rendered with JavaScript. AI
 - Nonpartisan: no current political figures or debates.
 - Page titles: the site appends ' | Theodore Roosevelt Presidential Library' automatically; suggest only the page-specific part, 60 characters or fewer.
 - Meta descriptions: 120-155 characters with a reason to click.
+- Recommend selectively: lead with one to three moves (start from 'This week's moves'), then a short 'what else we checked' list, each with a one-line reason it can wait.
+- Size gains honestly: name how the gain happens (a new ranking, a higher position, or more clicks at the same position); a page that already ranks already gets some clicks; upside figures rank options and are never forecasts.
 - Website changes are made in Drupal Layout Builder by the TRPL team; bugs and features go to the developers (FiveJars).
 
 ## Optional

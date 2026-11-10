@@ -1,10 +1,18 @@
 # trlibrary.com search & AI visibility digest
-Generated 2026-11-03T13:22:34+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
+Generated 2026-11-09T13:24:16+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
 
 ## How to use this
-Read top to bottom: the biggest, cheapest wins come first in each section. When you suggest copy, follow these house rules:
+This briefing is for doing the work, not only describing it. An assistant pointed here has four jobs, in this order:
 
-- Suggestions are drafts for the communications team; nothing is published automatically.
+1. **Work queue** (next section): audit fixes, internal links and structured data, ranked, each with the pages, who can fix it (the TRPL team in Drupal, or FiveJars), the Drupal steps and how to check it worked. Propose the exact change for the top TRPL tasks; once approved, carry it out (or package it for FiveJars).
+2. **Drafted recommendations**: titles, descriptions and content for pages with search upside.
+3. **Opportunities**: pages to strengthen, merge or rewrite.
+4. **AI visibility and visitor experience**: what AI assistants say about the Library and where /visit pages fall short.
+
+House rules for any change:
+
+- Nothing on trlibrary.com changes without the communications team's approval. Once approved, make the change (if you have Drupal access) or hand it over ready to paste; never stop at a recommendation when a work-queue task can be carried out.
+- After any change, log it in config/changes.yml (date, page, kind, what) so the next run holds the page and reports before/after numbers.
 - Pages listed under 'Recently changed' were just edited: don't recommend changing them again until their hold ends; judge them by the before/after numbers.
 - Never invent historical facts, dates, names, prices or hours. Use only what the page already says, or flag it for verification.
 - Never quote or paraphrase Theodore Roosevelt. Say 'consider a verified TR quote about X' instead.
@@ -14,106 +22,364 @@ Read top to bottom: the biggest, cheapest wins come first in each section. When 
 - Nonpartisan: no current political figures or debates.
 - Page titles: the site appends ' | Theodore Roosevelt Presidential Library' automatically; suggest only the page-specific part, 60 characters or fewer.
 - Meta descriptions: 120-155 characters with a reason to click.
+- Recommend selectively: lead with one to three moves (start from 'This week's moves'), then a short 'what else we checked' list, each with a one-line reason it can wait.
+- Size gains honestly: name how the gain happens (a new ranking, a higher position, or more clicks at the same position); a page that already ranks already gets some clicks; upside figures rank options and are never forecasts.
 - Website changes are made in Drupal Layout Builder by the TRPL team; bugs and features go to the developers (FiveJars).
+
+## Work queue: what to fix next, who fixes it, and how
+47 tasks (2 search, 23 audit, 5 internal links, 15 structured data, 2 AI visibility); 13 with FiveJars or blocked. Ranked by severity x the Google audience of the pages involved. Full lists, every page, and step-by-step Drupal recipes: https://seo.labs.trlibrary.com/data/work_queue.json
+
+### This week's moves
+1. **Restaurant and store hours are listed as the museum's hours** (`schema:sitewide:mixed_hours`): medium priority; affects the whole site. Start with: The museum entity carries 15 hours entries, including restaurant, store hours. Machines can't tell which hours mean the museum is open.
+2. **Add internal links where pages already mention each other** (`links:add`): medium priority; pages involved get 249,601 Google impressions (28 days). Start with: /tr/timeline; /visit/exhibits/main; /podcast/good-citizen/edward-okeefe.
+3. **Strengthen pages ranking just off the top for searches people make** (`search:striking_distance`): medium priority; pages involved get 111,431 Google impressions (28 days). Start with: /podcast/good-citizen/senator-chris-murphy for "chris murphy" (#12.5, ); /podcast/good-citizen/bill-kristol for "bill kristol" (#11.7, ); /podcast/good-citizen/kermit-roosevelt-iii for "kermit roosevelt" (#7.4, ).
+
+### What else we checked (and why it can wait)
+- Same topic on two pages (merge or differentiate) (`links:duplicate_topics`): needs a decision first (merge or archive)
+- Pages nothing links to (`links:orphans`): same area as a move this week (internal links); next in line
+- Pages ranking well that people skip: rewrite title and description (`search:low_ctr`): same area as a move this week (search); next in line
+- Searches AI assistants run where trlibrary.com isn't on page one (`ai:searches_we_miss`): smaller reach (0 Google impressions vs 111,431 for this week's moves)
+- Get onto pages AI cites that leave the Library out (`ai:ask_to_be_added`): smaller reach (0 Google impressions vs 111,431 for this week's moves)
+- Same title as another page (`audit:title_duplicate`): smaller reach (12,512 Google impressions vs 111,431 for this week's moves)
+- No H1 heading (`audit:h1_missing`): smaller reach (6,291 Google impressions vs 111,431 for this week's moves)
+- Missing Open Graph tags (`audit:og_missing`): smaller reach (6,137 Google impressions vs 111,431 for this week's moves)
+
+**How to work it**
+1. Pick tasks from the top of the queue (or a page job, to do everything on one page at once). Pages marked held changed recently and are being measured: leave their titles, descriptions and copy alone (adding markup or links to them is fine).
+2. Write the exact change: new title/description, the sentence with the link, the markup fields, the redirect. Use only facts already on the page.
+3. Get approval from the communications team before changing the live site. Merges, archiving and anything sitewide always need approval.
+4. If you have Drupal admin access, make TRPL-owned changes yourself using the recipe. Content changes to a page can be saved as a draft first.
+5. For FiveJars-owned tasks, write a Basecamp to-do: what's wrong, example URLs, the ready-to-paste JSON-LD or setting, how to check.
+6. Check the live page afterwards (view source for meta tags and JSON-LD; follow redirects with curl).
+7. Log each change in config/changes.yml (date, page, kind, what) so the next run holds the page and reports before/after numbers.
+
+| # | Task | Area | Who | Pages/items | Status | Id |
+|---|---|---|---|---|---|---|
+| 1 | Restaurant and store hours are listed as the museum's hours | structured data | TRPL | 1 | to do | schema:sitewide:mixed_hours |
+| 2 | Same topic on two pages (merge or differentiate) | internal links | TRPL | 20 | needs approval | links:duplicate_topics |
+| 3 | Add internal links where pages already mention each other | internal links | TRPL | 579 | to do | links:add |
+| 4 | Pages nothing links to | internal links | TRPL | 45 | to do | links:orphans |
+| 5 | Strengthen pages ranking just off the top for searches people make | search | TRPL | 30 | to do | search:striking_distance |
+| 6 | Pages ranking well that people skip: rewrite title and description | search | TRPL | 5 | to do | search:low_ctr |
+| 7 | Searches AI assistants run where trlibrary.com isn't on page one | ai visibility | TRPL | 63 | to do | ai:searches_we_miss |
+| 8 | Get onto pages AI cites that leave the Library out | ai visibility | TRPL | 2 | to do | ai:ask_to_be_added |
+| 9 | Same title as another page | audit | TRPL | 37 | to do | audit:title_duplicate |
+| 10 | No H1 heading | audit | TRPL | 29 | to do | audit:h1_missing |
+| 11 | Missing Open Graph tags | audit | TRPL | 12 | to do | audit:og_missing |
+| 12 | No meta description | audit | TRPL | 11 | to do | audit:meta_missing |
+| 13 | Turn on IndexNow so Bing and Copilot see changes within hours | audit | FiveJars | 1 | to do | setup:indexnow |
+| 14 | Sitemap lists a URL that redirects | audit | TRPL | 5 | to do | audit:redirect_in_sitemap |
+| 15 | Same title as another page (Video pages: fix once in the video template) | audit | FiveJars | 32 | to do | audit:title_duplicate:template |
+| 16 | Links that go through a redirect | internal links | TRPL | 72 | to do | links:via_redirect |
+| 17 | No meta description (Video pages: fix once in the video template) | audit | FiveJars | 17 | to do | audit:meta_missing:template |
+| 18 | Missing Open Graph tags (Video pages: fix once in the video template) | audit | FiveJars | 17 | to do | audit:og_missing:template |
+| 19 | Heading levels skip (e.g. H2 straight to H4) | audit | TRPL | 146 | to do | audit:heading_skip |
+| 20 | Related pages that don't link to each other | internal links | TRPL | 27 | to do | links:related |
+| 21 | Title over 60 characters, not counting the site-name suffix | audit | TRPL | 92 | to do | audit:title_too_long |
+| 22 | More than 4 clicks from the homepage | audit | TRPL | 112 | to do | audit:deep_page |
+| 23 | Sitemap lists a /node/ URL instead of a readable path | audit | TRPL | 35 | to do | audit:unaliased_url |
+| 24 | Same meta description as another page | audit | TRPL | 43 | to do | audit:meta_duplicate |
+| 25 | Title under 15 characters, not counting the site-name suffix | audit | TRPL | 144 | to do | audit:title_too_short |
+| 26 | More than one H1 | audit | TRPL | 10 | to do | audit:h1_multiple |
+| 27 | Under 150 words of body text | audit | TRPL | 237 | to do | audit:thin_content |
+| 28 | Title over 60 characters, not counting the site-name suffix (Video pages: fix once in the video template) | audit | FiveJars | 173 | to do | audit:title_too_long:template |
+| 29 | Took over 3 seconds to respond | audit | FiveJars | 3 | to do | audit:slow |
+| 30 | Same meta description as another page (Video pages: fix once in the video template) | audit | FiveJars | 82 | to do | audit:meta_duplicate:template |
+
+### Task details (TRPL can do these now)
+**1. Restaurant and store hours are listed as the museum's hours** (`schema:sitewide:mixed_hours`, 1 items)
+- How: Keep only museum hours on the Library entity. Give the restaurant and the store their own entities (Restaurant, Store) with their hours, linked with containsPlace. Sitewide (Global) meta tags: change them only through Configuration > Development > Configuration synchronization > Import > Single item (Simple configuration, metatag.metatag_defaults.global), then clear all caches. Never save the Global defaults form itself: it drops fields. The Global Organization fields have no containsPlace: TRPL can trim the hours to museum hours only; the Restaurant and Store entities need FiveJars.
+- Done when: The issue no longer appears in schema.json after the next weekly run
+- Paste: `{"containsPlace": [{"@type": "Restaurant", "name": "TODO: restaurant name", "servesCuisine": "TODO: cuisine", "openingHoursSpecification": "TODO: restaurant hours"}, {"@type": "Store", "name": "TODO: store name", "openingHoursSpecification": "TODO: store hours"}]}`
+
+**2. Same topic on two pages (merge or differentiate)** (`links:duplicate_topics`, 20 items)
+- How: Two pages compete for one subject. Pick the stronger page (clicks, depth), move anything unique onto it, then archive the other and add a 301 from its alias and /node/NID. Get approval first; draft before publishing.
+- Done when: One page per topic; the other 301s to it
+  - `/tr/tr-mount-rushmore`, 135,448 impr., mount rushmore: /tr/tr-mount-rushmore vs /tr/legacy/mount-rushmore
+  - `/tr/rise-to-power/san-juan-hill`, 43,340 impr., rough riders: /tr/rise-to-power/san-juan-hill vs /tr/rise-to-power/rough-riders
+  - `/tr/people/alice-longworth`, 28,558 impr., alice roosevelt longworth: /tr/people/alice-longworth vs /tr/people/alice-longworth/complex-legacy
+  - `/tr/new-york-politics/alice-lee`, 12,401 impr., alice hathaway lee roosevelt: /tr/new-york-politics/alice-lee vs /tr/people/alice-lee
+  - `/tr/new-york-politics/alice-lee`, 12,401 impr., alice lee: /tr/new-york-politics/alice-lee vs /tr/people/alice-lee
+  - `/tr/rise-to-power/edith-roosevelt`, 11,918 impr., edith roosevelt: /tr/rise-to-power/edith-roosevelt vs /tr/people/edith-roosevelt
+  - `/tr/people/booker-t-washington`, 10,816 impr., booker t washington: /tr/people/booker-t-washington vs /tr/presidency/booker-t-washington
+  - `/tr/quotes/misquotes`, 8,895 impr., common misquotes: /tr/quotes/misquotes vs /tr/myths/misquotes
+  - ...and 12 more in work_queue.json
+
+**3. Add internal links where pages already mention each other** (`links:add`, 579 items)
+- How: Open the source page's Layout. Edit the text block that contains the context sentence and turn the [[bracketed]] words into a link to the target path (relative, e.g. /tr/tr-shot). Don't write new sentences just to hold a link. Save the block, then Save layout.
+- Done when: The link appears on the source page; the target's links-in count rises next week
+  - `/tr/timeline`, 42,688 impr., [[William Howard Taft]] -> /tr/people/william-howard-taft; [[River of Doubt]] -> /tr/post-presidency/river-of-doubt; [[Edith Roosevelt]] -> /tr/rise-to-power/edith-roosevelt
+  - `/visit/exhibits/main`, 4,577 impr., [[River of Doubt]] -> /tr/post-presidency/river-of-doubt; [[Alice Hathaway Lee]] -> /tr/new-york-politics/alice-lee; [[Edith Roosevelt]] -> /tr/rise-to-power/edith-roosevelt
+  - `/podcast/good-citizen/edward-okeefe`, 363 impr., [[high school]] -> /tr/for-educators/high-school; [[Roosevelt family]] -> /tr/family; [[executive power]] -> /tr/presidency/executive-power
+  - `/podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore`, 935 impr., [[high school]] -> /tr/for-educators/high-school; [[in the room]] -> /visit/exhibits/kennerly; [[the man in the arena]] -> /tr/post-presidency/man-in-the-arena
+  - `/tr/presidency/white-house-family`, 1,883 impr., [[Edith Roosevelt]] -> /tr/rise-to-power/edith-roosevelt; [[governor of New York]] -> /tr/rise-to-power/governor; [[Roosevelt White House]] -> /tr/homes-and-places/white-house
+  - `/tr`, 6,679 impr., [[Bully Pulpit]] -> /tr/presidency/bully-pulpit; [[high school]] -> /tr/for-educators/high-school; [[Ted Jr]] -> /tr/people/ted-jr
+  - `/tr/thanksgiving-timeline`, 135 impr., [[River of Doubt]] -> /tr/post-presidency/river-of-doubt; [[Alice Lee]] -> /tr/new-york-politics/alice-lee; [[Pine Knot]] -> /tr/homes-and-places/pine-knot
+  - `/tr/family/family-tree`, 25,077 impr., [[Kermit Roosevelt]] -> /tr/people/kermit; [[Sagamore Hill]] -> /tr/homes-and-places/sagamore-hill; [[Quentin Roosevelt]] -> /tr/people/quentin
+  - ...and 286 more in work_queue.json
+
+**4. Pages nothing links to** (`links:orphans`, 45 items)
+- How: Add 2-3 links to this page from the pages listed under 'link from' (each has the sentence and words to link).
+- Done when: At least two pages link in
+  - `/tr/pre-presidency-political-accomplishments`, 53,774 impr.
+  - `/tr/10-myths-teddy-bear`, 17,070 impr.
+  - `/tr/fake-quotes`, 15,351 impr.
+  - `/tr/5-big-adventures`, 6,211 impr.
+  - `/research/books-by-roosevelt`, 6,050 impr.
+  - `/programs`, 4,684 impr.
+  - `/tr/tr-save-the-bison`, 3,841 impr.
+  - `/join-us`, 3,140 impr., link from: /podcast/good-citizen/meg-whitman ([[join us]]); /programs ([[Join us]])
+  - ...and 37 more in work_queue.json
+
+**5. Strengthen pages ranking just off the top for searches people make** (`search:striking_distance`, 30 items)
+- How: Open the page and make it the best answer to that exact search: use the search's words in the title or a heading, answer it plainly in the first paragraph, add the specifics people want (facts already on the site), and link to it from 2-3 related pages. Don't rewrite a page that already ranks in the top 3 for its main search.
+- Done when: Average position for the search improves over the next 4 weeks (change log before/after)
+  - `/podcast/good-citizen/senator-chris-murphy`, 35,618 impr., "chris murphy" #12.5, None, upside ~3911 clicks/28d
+  - `/podcast/good-citizen/bill-kristol`, 15,174 impr., "bill kristol" #11.7, None, upside ~1662 clicks/28d
+  - `/podcast/good-citizen/kermit-roosevelt-iii`, 7,381 impr., "kermit roosevelt" #7.4, None, upside ~780 clicks/28d
+  - `/podcast/good-citizen/senator-chris-murphy`, 6,206 impr., "senator chris murphy" #12.9, None, upside ~681 clicks/28d
+  - `/video/view/Vf8ee-gccpc`, 4,654 impr., "teddy roosevelt library" #4.6, None, upside ~492 clicks/28d
+  - `/tr/people/archibald`, 3,899 impr., "archibald roosevelt" #7.6, None, upside ~428 clicks/28d
+  - `/podcast/good-citizen/matthew-continetti`, 3,805 impr., "matthew continetti" #10.3, None, upside ~417 clicks/28d
+  - `/podcast/good-citizen/senator-chris-murphy`, 2,824 impr., "sen chris murphy" #10.0, None, upside ~309 clicks/28d
+  - ...and 22 more in work_queue.json
+
+**6. Pages ranking well that people skip: rewrite title and description** (`search:low_ctr`, 5 items)
+- How: Edit the node (/node/NID/edit) > 'Customize meta tags'. Basic tags: Page title '<title> | [site:name]' (page part 60 characters or fewer) and Description (120-155 characters). Set Open Graph og:title/og:description and Twitter card title/description to match. Save with 'Save' (keeps the moderation state). If the save seems to do nothing, look for a validation error further down the form.
+- Done when: Click-through rate rises at the same position (change log before/after)
+  - `/video/view/Vf8ee-gccpc`, 19,431 impr.
+  - `/tr/rise-to-power/spanish-american-war`, 32,600 impr.
+  - `/tr/presidency/food-and-drug`, 19,765 impr.
+  - `/contact`, 6,860 impr.
+  - `/visit/lodging`, 17,880 impr.
+
+**7. Searches AI assistants run where trlibrary.com isn't on page one** (`ai:searches_we_miss`, 63 items)
+- How: These are the searches the assistants ran before answering a question where they left the Library out. Find the trlibrary.com page that should answer each one (or note that none does). Strengthen that page for the search: say it in the title or a heading and answer it in the first paragraph, with facts already on the site. If no page fits, propose one.
+- Done when: trlibrary.com ranks top 10 for the search (Search Console) and the next AI run cites it
+  - `Badlands Dinosaur Museum Dickinson North Dakota family activities`, run by ChatGPT; we rank nowhere
+  - `Badlands National Park NPS scenic drive Ben Reifel Visitor Center official site`, run by ChatGPT; we rank nowhere
+  - `Badlands National Park scenic loop Wall Drug Minuteman Missile National Historic Site official sites`, run by ChatGPT; we rank nowhere
+  - `Bismarck North Dakota Heritage Center & State Museum hours location 'Exit 159' I-94 'ND Heritage Center'`, run by ChatGPT; we rank nowhere
+  - `Bonanzaville West Fargo museum website`, run by ChatGPT; we rank nowhere
+  - `Crazy Horse Memorial visitor center hours Crazy Horse official site`, run by ChatGPT; we rank nowhere
+  - `Custer State Park Wildlife Loop Sylvan Lake Needles Highway official site`, run by ChatGPT; we rank nowhere
+  - `Deadwood South Dakota historic main street attractions Deadwood tourism official site`, run by ChatGPT; we rank nowhere
+  - ...and 32 more in work_queue.json
+
+**8. Get onto pages AI cites that leave the Library out** (`ai:ask_to_be_added`, 2 items)
+- How: Read the page. If it's a list of things to do or a travel guide that names nearby attractions, find the author or the update/contact link and ask to be added, with a two-sentence blurb (what the Library is, why it's worth the stop, about 3 1/2 hours) and a photo. Draft the note for approval; nothing goes out without it.
+- Done when: The page names the Library (next weekly run re-reads it)
+  - `https://mdhta.com`, other, cited in 2 answers; names Theodore Roosevelt National Park, Pitchfork Steak Fondue, Medora Musical, Maah Daah Hey Trail
+  - `https://www.blackhillsbadlands.com/plan/itineraries/summer-scenic-drives-northern-hills`, other, cited in 1 answers; names Mount Rushmore, Theodore Roosevelt National Park, Painted Canyon
+
+**9. Same title as another page** (`audit:title_duplicate`, 37 pages)
+- How: Edit the node (/node/NID/edit) > 'Customize meta tags'. Basic tags: Page title '<title> | [site:name]' (page part 60 characters or fewer) and Description (120-155 characters). Set Open Graph og:title/og:description and Twitter card title/description to match. Save with 'Save' (keeps the moderation state). If the save seems to do nothing, look for a validation error further down the form.
+- Done when: No other page has the same title
+  - `/about/trustees/kermit-roosevelt`, 2,341 impr., title "Kermit Roosevelt" (16 chars), same as /tr/people/kermit
+  - `/visit/exhibits/kennerly`, 2,187 impr., title "In the Room: Sixty Years on the Front Lines of History" (54 chars), same as /calendar/daily-activity/room-sixty-years-front-lines-history, /calendar/special-event/gallery-david-hume-kennerly, /calendar/special-event/artist-talk-room-david-hume-kennerly
+  - `/tr/people/kermit`, 1,723 impr., HELD (recently changed), title "Kermit Roosevelt" (16 chars), same as /about/trustees/kermit-roosevelt
+  - `/calendar/daily-activity/room-sixty-years-front-lines-history`, 1,707 impr., title "In the Room: Sixty Years on the Front Lines of History" (54 chars), same as /calendar/special-event/gallery-david-hume-kennerly, /calendar/special-event/artist-talk-room-david-hume-kennerly, /calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf
+  - `/project/native-plant-project`, 1,392 impr., HELD (recently changed), title "Native Plant Project" (20 chars), same as /video/view/1SqdaUrbU7U
+  - `/about/trustees/douglas-brinkley`, 843 impr., title "Douglas Brinkley" (16 chars), same as /podcast/good-citizen/douglas-brinkley
+  - `/events/teddycon`, 829 impr., HELD (recently changed), title "Theodore Roosevelt Convention (#TeddyCon)" (41 chars), same as /event/24
+  - `/podcast/good-citizen/douglas-brinkley`, 785 impr., HELD (recently changed), title "Douglas Brinkley" (16 chars), same as /about/trustees/douglas-brinkley
+  - ...and 29 more in work_queue.json
+
+**10. No H1 heading** (`audit:h1_missing`, 29 pages)
+- How: Open the page's Layout (/node/NID/layout). Make sure the top section shows the page title block (Content fields > Title), which renders as the H1; or change the first heading in the top text block to Heading 1. Save layout.
+- Done when: Exactly one H1
+  - `/visit/planner`, 1,929 impr., no H1
+  - `/tr/presidency/executive-actions/story`, 1,160 impr., no H1
+  - `/visit/maps/campus`, 724 impr., no H1
+  - `/tr/presidency/executive-actions/action`, 668 impr., no H1
+  - `/grand-opening/photos/july2`, 621 impr., no H1
+  - `/grand-opening/photos/july4`, 588 impr., no H1
+  - `/membership/neighbor`, 129 impr., no H1
+  - `/research/family-tree`, 125 impr., no H1
+  - ...and 21 more in work_queue.json
+
+**11. Missing Open Graph tags** (`audit:og_missing`, 12 pages)
+- How: Edit the node (/node/NID/edit) > 'Customize meta tags'. Basic tags: Page title '<title> | [site:name]' (page part 60 characters or fewer) and Description (120-155 characters). Set Open Graph og:title/og:description and Twitter card title/description to match. Save with 'Save' (keeps the moderation state). If the save seems to do nothing, look for a validation error further down the form.
+- Done when: og:title and og:description are present
+  - `/join-us`, 3,140 impr.
+  - `/visit/exhibits/kennerly`, 2,187 impr.
+  - `/visit/teddy-trail`, 775 impr., HELD (recently changed)
+  - `/birthdaycard`, 23 impr.
+  - `/project/how-the-library-works`, 12 impr.
+  - `/rsvp/midwinter`
+  - `/quiz/the-boardwalk`
+  - `/quiz/badlands-family`
+  - ...and 4 more in work_queue.json
+
+**12. No meta description** (`audit:meta_missing`, 11 pages)
+- How: Edit the node (/node/NID/edit) > 'Customize meta tags'. Basic tags: Page title '<title> | [site:name]' (page part 60 characters or fewer) and Description (120-155 characters). Set Open Graph og:title/og:description and Twitter card title/description to match. Save with 'Save' (keeps the moderation state). If the save seems to do nothing, look for a validation error further down the form.
+- Done when: The page has a meta description of 120-155 characters
+  - `/join-us`, 3,140 impr.
+  - `/visit/exhibits/kennerly`, 2,187 impr.
+  - `/birthdaycard`, 23 impr.
+  - `/project/how-the-library-works`, 12 impr.
+  - `/rsvp/midwinter`
+  - `/quiz/the-boardwalk`
+  - `/quiz/badlands-family`
+  - `/quiz/badlands-wildlife-family`
+  - ...and 3 more in work_queue.json
+
+**14. Sitemap lists a URL that redirects** (`audit:redirect_in_sitemap`, 5 pages)
+- How: This sitemap URL redirects to another page. Edit the old node > XML sitemap > Inclusion: Excluded, or archive the node if it's retired (a 301 stays in place).
+- Done when: The sitemap no longer lists the redirecting URL
+  - `/event/24`, 846 impr.
+  - `/calendar/special-event/gallery-david-hume-kennerly`, 53 impr.
+  - `/calendar/special-event/artist-talk-room-david-hume-kennerly`, 42 impr.
+  - `/calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf`, 18 impr.
+  - `/calendar/special-event/book-signing-and-meet-greet-kennerly-balkowitsch-and-ziemendorf`, 4 impr.
+
+**16. Links that go through a redirect** (`links:via_redirect`, 72 items)
+- How: Edit the link on each source page so it points straight at the final address.
+- Done when: Links point at the final address
+  - `/grand-opening/talks`, -> /
+  - `/calendar/daily-activity/david-hume-kennerly-exhibition`, -> /calendar/daily-activity/room-sixty-years-front-lines-history
+  - `/support-trpl`, -> /support
+  - `/press`, -> /about/press
+  - `/latest-news`, -> /about/press
+  - `/donate`, -> /support
+  - `/project/native-plants`, -> /project/native-plant-project
+  - `/mission`, -> /about/mission
+  - ...and 64 more in work_queue.json
+
+### Page jobs: everything to fix on one page, busiest pages first
+| Page | Impr. | Fixes | Links to add | Markup |  |
+|---|---|---|---|---|---|
+| /podcast/good-citizen/senator-chris-murphy | 145027 | heading_skip, deep_page, meta_duplicate | [[high school]] -> /tr/for-educators/high-school; [[in the room]] -> /visit/exhibits/kennerly; [[step into the arena]] -> /vote | – |  |
+| /tr/tr-mount-rushmore | 133997 | – | [[executive power]] -> /tr/presidency/executive-power | – | held |
+| / | 117596 | heading_skip | [[Elkhorn Ranch]] -> /tr/badlands/elkhorn-ranch | – | held |
+| /tr/family/fdr-connection | 90890 | – | [[Assistant Secretary of the Navy]] -> /tr/rise-to-power/assistant-navy-secretary | – | held |
+| /tickets | 59615 | title_too_short | – | – |  |
+| /visit | 56640 | – | [[Badlands landscape]] -> /tr/badlands/landscape | – | held |
+| /tr/presidency-timeline | 54415 | heading_skip | [[Nobel Peace Prize]] -> /tr/presidency/nobel-peace-prize | – | held |
+| /tr/pre-presidency-political-accomplishments | 53774 | – | [[Civil War]] -> /tr/early-life/civil-war; [[Naval War of 1812]] -> /tr/new-york-politics/naval-war-of-1812 | – | held |
+| /visit/directions | 46872 | – | [[Little Missouri River]] -> /visit/little-missouri-river | – | held |
+| /podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature | 45469 | heading_skip, deep_page | [[Civil War]] -> /tr/early-life/civil-war | – | held |
+| /tr/timeline | 42688 | heading_skip | [[William Howard Taft]] -> /tr/people/william-howard-taft; [[River of Doubt]] -> /tr/post-presidency/river-of-doubt; [[Edith Roosevelt]] -> /tr/rise-to-power/edith-roosevelt | – | held |
+| /visit/hours | 40931 | heading_skip | – | – | held |
+| /bullet-speech | 40385 | deep_page, h1_multiple | [[frequently asked questions]] -> /visit/faq | – | held |
+| /tr/tr-importance | 38043 | – | [[national forests]] -> /tr/presidency/conservation/national-forests; [[Leonard Wood]] -> /tr/people/leonard-wood; [[Theodore Roosevelt National Park]] -> /tr/homes-and-places/tr-national-park | – | held |
+| /tr/rise-to-power/spanish-american-war | 35534 | title_too_long | – | – |  |
+
+### Waiting on FiveJars or blocked (already ticketed; check whether they've landed, don't re-ask)
+- Sitewide markup doesn't link to the Library's Wikipedia entry (`schema:sitewide:sameas`): blocked, the per-page sameAs field is capped at 255 characters; FiveJars asked to raise it. Wikidata is in place; Wikipedia and Bluesky go back in once it's raised
+- No admission information in the markup (`schema:sitewide:admission`)
+- TR history section pages: add CollectionPage markup (template, all pages at once) (`schema:tr_hubs`)
+- Good Citizen episodes: add PodcastEpisode markup (template, all pages at once) (`schema:podcast_episode`)
+- Video pages: add VideoObject markup (template, all pages at once) (`schema:videos`)
+- Trip itineraries: add TouristTrip markup (template, all pages at once) (`schema:itineraries`)
+- Good Citizen podcast page: add PodcastSeries markup (template, all pages at once) (`schema:podcast_series`)
+- Video playlists: add ItemList / VideoObject markup (template, all pages at once) (`schema:video_playlists`)
+- 267 pages have dates without a colon in the time zone (`schema:sitewide:date_format`)
+- 91 articles are labelled og:type “website” (`schema:sitewide:og_type`)
+- Pages with Q&A: add FAQPage markup (template, all pages at once) (`schema:faq`)
+- Press releases: add Article / NewsArticle markup (template, all pages at once) (`schema:press`)
+- Trustee profiles: add Person / ProfilePage markup (template, all pages at once) (`schema:trustees`)
+
 
 ## Data freshness
 | Source | State | Updated | Details |
 |---|---|---|---|
-| audit | ok | 2026-11-02T12:32:16+00:00 | Crawled 1130 pages, health 96/100 |
-| ranks | ok | 2026-11-02T12:38:36+00:00 | 30 keywords checked |
-| opportunities | ok | 2026-11-03T13:21:36+00:00 | 102 striking-distance queries, 36 low-CTR pages; 31 recently changed pages held back |
-| gsc | ok | 2026-11-03T13:21:36+00:00 | 23135 queries, 1959 pages (2026-10-04 to 2026-10-31); 41 changed pages tracked |
-| ai_visibility | error | 2026-11-02T12:44:59+00:00 | 38 answers from ChatGPT, Gemini, Perplexity; 19 failed: Perplexity 403: {"error":{"message":"The Agent API requires paid credits. Add paid credit at https://console.perplexity.ai to upgrade your organizatio |
-| tips | ok | 2026-11-02T13:09:25+00:00 | Gemini wrote tips for 8 pages |
-| digest | ok | 2026-11-02T13:25:32+00:00 | llms.txt, digest.md and digest.json rebuilt |
-| checkout | ok | 2026-11-03T13:22:34+00:00 | Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info |
-| curate | ok | 2026-11-02T12:33:01+00:00 | 10 discovered keywords and 4 discovered questions tracked; 7 changes today |
-| ux | ok | 2026-11-02T12:59:15+00:00 | 79 pages; PageSpeed on 77; AI task check by gemini (gemini-3.8-flash); GA4 on; Clarity off; 2 errors, e.g. PageSpeed /visit/maps: PageSpeed 500: {   "error": {     "code": 500,     "message": "Lighthouse returned error: PAGE_HUNG. Lighthouse was unable to reliably load the URL you requeste |
-| links | ok | 2026-11-02T13:01:07+00:00 | 1164 pages crawled; 0 broken internal links (redirects proposed); 1176 suggested links; 50 orphan pages; 49 related pairs without links |
-| schema | ok | 2026-11-02T13:02:49+00:00 | 101/883 content pages have their own markup; 8 sitewide issues |
+| audit | ok | 2026-11-09T12:32:33+00:00 | Crawled 1135 pages, health 95/100 |
+| ranks | ok | 2026-11-09T12:38:04+00:00 | 35 keywords checked |
+| opportunities | error | 2026-11-09T13:24:09+00:00 | 'est_extra_clicks' |
+| gsc | ok | 2026-11-09T13:24:09+00:00 | 22941 queries, 2188 pages (2026-10-10 to 2026-11-06); 249 changed pages tracked |
+| ai_visibility | error | 2026-11-09T12:43:57+00:00 | 42 answers from ChatGPT, Gemini, Perplexity; 21 failed: Perplexity 403: {"error":{"message":"The Agent API requires paid credits. Add paid credit at https://console.perplexity.ai to upgrade your organizatio |
+| tips | ok | 2026-11-09T13:03:11+00:00 | Gemini wrote tips for 8 pages |
+| digest | ok | 2026-11-09T13:03:11+00:00 | llms.txt, digest.md and digest.json rebuilt |
+| checkout | ok | 2026-11-09T13:24:16+00:00 | Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info |
+| curate | ok | 2026-11-09T12:33:22+00:00 | 15 discovered keywords and 6 discovered questions tracked; 7 changes today |
+| ux | ok | 2026-11-09T12:57:05+00:00 | 80 pages; PageSpeed on 78; AI task check by gemini (gemini-3.8-flash); GA4 on; Clarity off; 2 errors, e.g. PageSpeed /visit/maps: PageSpeed 500: {   "error": {     "code": 500,     "message": "Lighthouse returned error: PAGE_HUNG. Lighthouse was unable to reliably load the URL you requeste |
+| links | ok | 2026-11-09T12:58:43+00:00 | 1169 pages crawled; 0 broken internal links (redirects proposed); 746 suggested links; 45 orphan pages; 27 related pairs without links |
+| schema | ok | 2026-11-09T13:00:05+00:00 | 292/888 content pages have their own markup; 6 sitewide issues |
+| indexnow | skipped | 2026-11-09T13:24:16+00:00 | No IndexNow key yet: see the work queue task 'Turn on IndexNow'. |
 
 ## Google Search (Search Console)
-2026-10-04 to 2026-10-31 vs the prior 28 days: **44,209 clicks** (prior 59,480), 2,528,746 impressions (prior 2,276,349), CTR 1.8% (prior 2.6%), average position 5.8 (prior 6.6). Branded clicks 15245, non-branded 9665, search term hidden by Google 19299.
+2026-10-10 to 2026-11-06 vs the prior 28 days: **42,794 clicks** (prior 54,642), 2,734,314 impressions (prior 2,363,841), CTR 1.6% (prior 2.3%), average position 5.9 (prior 6.5). Branded clicks 12920, non-branded 10160, search term hidden by Google 19714.
 
 ### Top non-branded searches (people who didn't search our name)
 | Search | Clicks | Impr. | Pos. |
 |---|---|---|---|
-| brownsville affair | 2 | 114833 | 5.5 |
-| square deal | 122 | 51676 | 3.5 |
-| chris murphy | 6 | 35618 | 12.5 |
-| karl rove | 23 | 30459 | 9.4 |
-| roosevelt corollary | 44 | 23398 | 4.7 |
-| jacob riis | 81 | 20915 | 10.1 |
-| bill kristol | 7 | 15174 | 11.7 |
-| theodore roosevelt | 62 | 14672 | 8.7 |
-| alice roosevelt | 48 | 10489 | 8 |
-| roosevelt family | 24 | 9970 | 3.9 |
-| kermit roosevelt | 43 | 9418 | 7.1 |
-| theo elections | 4 | 9255 | 6.4 |
-| alice roosevelt longworth | 13 | 9060 | 8.5 |
-| mount rushmore presidents | 24 | 7471 | 4.7 |
-| bull moose party | 45 | 6855 | 4.4 |
-| senator chris murphy | 2 | 6205 | 12.9 |
-| alice hathaway lee roosevelt | 6 | 6111 | 6 |
-| theodore roosevelt national park | 22 | 5947 | 9.3 |
-| henry cabot lodge | 5 | 5826 | 7 |
-| man in the arena | 47 | 5737 | 5.5 |
-| teddy roosevelt | 31 | 5601 | 6.2 |
-| the man in the arena | 50 | 5473 | 5.9 |
-| bully pulpit | 16 | 5410 | 3.1 |
-| edith roosevelt | 11 | 5319 | 6.4 |
-| great white fleet | 26 | 5189 | 5.6 |
+| brownsville affair | 1 | 117295 | 5.1 |
+| chris murphy | 8 | 71094 | 12.2 |
+| square deal | 143 | 62466 | 3.4 |
+| karl rove | 47 | 37387 | 9.2 |
+| roosevelt corollary | 54 | 22932 | 4.2 |
+| jacob riis | 118 | 21702 | 9.7 |
+| senator chris murphy | 7 | 21187 | 13 |
+| bill kristol | 8 | 19295 | 11.5 |
+| chris murphy senator | 9 | 16452 | 12.6 |
+| theodore roosevelt | 58 | 13571 | 7.4 |
+| theo elections | 4 | 13343 | 6.7 |
+| alice roosevelt | 49 | 11847 | 8.1 |
+| bully pulpit | 25 | 9609 | 2.9 |
+| kermit roosevelt | 35 | 9187 | 7.4 |
+| bull moose party | 58 | 8695 | 3.7 |
+| alice roosevelt longworth | 13 | 8694 | 8.5 |
+| mount rushmore presidents | 31 | 8561 | 4.5 |
+| sen chris murphy | 6 | 8125 | 10.7 |
+| the man in the arena | 110 | 7624 | 5.7 |
+| man in the arena | 53 | 7558 | 6.1 |
+| senator murphy | 2 | 6526 | 12.3 |
+| roosevelt family | 22 | 6366 | 3.6 |
+| alice hathaway lee roosevelt | 11 | 6172 | 5.9 |
+| teddy roosevelt | 39 | 6141 | 6.2 |
+| henry cabot lodge | 7 | 5745 | 7 |
 
 ### Top pages
 | Page | Clicks | Prior | Impr. | Pos. |
 |---|---|---|---|---|
-| / | 8695 | 13567 | 96006 | 7.1 |
-| /?utm_source=gbp&utm_medium=organic | 6324 | 0 | 39363 | 3.8 |
-| /tickets | 3646 | 8583 | 63440 | 3.1 |
-| /tr/family/fdr-connection | 1658 | 728 | 86499 | 3.2 |
-| /visit | 1474 | 3583 | 63086 | 2.7 |
-| /tr/presidency/trust-busting | 982 | 668 | 76892 | 3.4 |
-| /tr/square-deal | 931 | 1074 | 109003 | 3.8 |
-| /bullet-speech | 683 | 747 | 40109 | 3.7 |
-| /visit/directions | 628 | 1282 | 52901 | 2.7 |
-| /tr/speeches/man-in-the-arena | 628 | 271 | 29264 | 5.2 |
-| /tr/quotes | 625 | 712 | 27331 | 10.7 |
-| /tr/pre-presidency-political-accomplishments | 602 | 479 | 54035 | 5.6 |
-| /visit/hours | 507 | 1342 | 48624 | 2.5 |
-| /tr/presidency/square-deal | 506 | 270 | 88566 | 4.5 |
-| /tr/tr-mount-rushmore | 454 | 916 | 117546 | 5.5 |
-| /tr/people/jacob-riis | 454 | 231 | 84209 | 6.7 |
-| /tr/rise-to-power/san-juan-hill | 426 | 217 | 29946 | 3.7 |
-| /tr/presidency/ten-facts | 426 | 140 | 15523 | 4 |
-| /tr/family/family-tree | 398 | 185 | 26590 | 5.2 |
-| /tr/tr-importance | 364 | 274 | 38350 | 5 |
-| /tr/fake-quotes | 323 | 438 | 16609 | 6.8 |
-| /tr/tr-shot | 316 | 340 | 37098 | 4 |
-| /tr/presidency-timeline | 314 | 309 | 55204 | 4.6 |
-| /tr/presidency/panama-canal | 287 | 60 | 61075 | 5 |
-| /tr/presidency/roosevelt-corollary | 249 | 142 | 130781 | 4.9 |
+| / | 7765 | 11895 | 80847 | 7.1 |
+| /?utm_source=gbp&utm_medium=organic | 5190 | 1467 | 34139 | 3.9 |
+| /tickets | 2775 | 7284 | 55620 | 3.1 |
+| /tr/family/fdr-connection | 1781 | 850 | 90890 | 3.1 |
+| /visit | 1230 | 2809 | 56636 | 2.7 |
+| /tr/presidency/trust-busting | 1097 | 796 | 76370 | 3.3 |
+| /tr/presidency/square-deal | 925 | 378 | 108097 | 3.9 |
+| /tr/speeches/man-in-the-arena | 915 | 280 | 37628 | 5.2 |
+| /tr/square-deal | 715 | 1139 | 93548 | 4 |
+| /bullet-speech | 667 | 738 | 40385 | 3.7 |
+| /tr/quotes | 594 | 707 | 25803 | 10.3 |
+| /tr/pre-presidency-political-accomplishments | 537 | 569 | 53774 | 5.6 |
+| /tr/people/jacob-riis | 521 | 311 | 83052 | 6.5 |
+| /visit/directions | 504 | 1095 | 46872 | 2.7 |
+| /tr/presidency/ten-facts | 493 | 186 | 15946 | 3.8 |
+| /tickets?utm_source=gbp&utm_medium=organic | 467 | 9764 | 3995 | 4 |
+| /tr/tr-mount-rushmore | 460 | 813 | 133997 | 5.6 |
+| /visit/hours | 438 | 1050 | 40931 | 2.3 |
+| /tr/rise-to-power/san-juan-hill | 415 | 270 | 31502 | 3.6 |
+| /tr/family/family-tree | 397 | 246 | 25077 | 5.4 |
+| /tr/presidency/panama-canal | 367 | 98 | 66076 | 4.9 |
+| /tr/presidency/roosevelt-corollary | 362 | 149 | 139069 | 4.5 |
+| /tr/fake-quotes | 359 | 400 | 15351 | 6.6 |
+| /tr/tr-importance | 348 | 332 | 38040 | 4.9 |
+| /tr/presidency-timeline | 336 | 320 | 54415 | 4.5 |
 
 ## Opportunities (ranked)
 _Estimated extra clicks use a rough industry click-through curve. Treat them as a way to rank opportunities, not a forecast._
 
 ### Striking distance: ranking 4-20 with demand; strengthen the page for the exact search
-| Search | Page | Pos. | Impr. | Upside |
-|---|---|---|---|---|
-| chris murphy | /podcast/good-citizen/senator-chris-murphy | 12.5 | 35618 | 3911 |
-| karl rove | /podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature | 9.4 | 30455 | 3326 |
-| bill kristol | /podcast/good-citizen/bill-kristol | 11.7 | 15174 | 1662 |
-| alice roosevelt | /tr/people/alice-longworth | 8.1 | 10476 | 1104 |
-| theo elections | /tr/presidency/elections | 6.4 | 9232 | 1012 |
-| alice roosevelt longworth | /tr/people/alice-longworth | 8.4 | 9045 | 982 |
-| kermit roosevelt | /podcast/good-citizen/kermit-roosevelt-iii | 7.4 | 7381 | 780 |
-| senator chris murphy | /podcast/good-citizen/senator-chris-murphy | 12.9 | 6206 | 681 |
-| alice hathaway lee roosevelt | /tr/new-york-politics/alice-lee | 5.8 | 6071 | 662 |
-| henry cabot lodge | /tr/people/henry-cabot-lodge | 7 | 5815 | 634 |
-| edith roosevelt | /tr/rise-to-power/edith-roosevelt | 6.4 | 5281 | 570 |
-| quentin roosevelt | /tr/post-presidency/quentin | 10.9 | 4987 | 546 |
-| great white fleet | /tr/presidency/great-white-fleet | 5.6 | 5189 | 545 |
-| man in the arena | /tr/speeches/man-in-the-arena | 4.9 | 4973 | 503 |
-| teddy roosevelt library | /video/view/Vf8ee-gccpc | 4.6 | 4654 | 492 |
+| Search | Page | Pos. | Impr. | How | Upside |
+|---|---|---|---|---|---|
+| chris murphy | /podcast/good-citizen/senator-chris-murphy | 12.5 | 35618 | – | 3911 |
+| karl rove | /podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature | 9.4 | 30455 | – | 3326 |
+| bill kristol | /podcast/good-citizen/bill-kristol | 11.7 | 15174 | – | 1662 |
+| alice roosevelt | /tr/people/alice-longworth | 8.1 | 10476 | – | 1104 |
+| theo elections | /tr/presidency/elections | 6.4 | 9232 | – | 1012 |
+| alice roosevelt longworth | /tr/people/alice-longworth | 8.4 | 9045 | – | 982 |
+| kermit roosevelt | /podcast/good-citizen/kermit-roosevelt-iii | 7.4 | 7381 | – | 780 |
+| senator chris murphy | /podcast/good-citizen/senator-chris-murphy | 12.9 | 6206 | – | 681 |
+| alice hathaway lee roosevelt | /tr/new-york-politics/alice-lee | 5.8 | 6071 | – | 662 |
+| henry cabot lodge | /tr/people/henry-cabot-lodge | 7 | 5815 | – | 634 |
+| edith roosevelt | /tr/rise-to-power/edith-roosevelt | 6.4 | 5281 | – | 570 |
+| quentin roosevelt | /tr/post-presidency/quentin | 10.9 | 4987 | – | 546 |
+| great white fleet | /tr/presidency/great-white-fleet | 5.6 | 5189 | – | 545 |
+| man in the arena | /tr/speeches/man-in-the-arena | 4.9 | 4973 | – | 503 |
+| teddy roosevelt library | /video/view/Vf8ee-gccpc | 4.6 | 4654 | – | 492 |
 
 ### Ranking well but skipped: rewrite title/meta description
 | Page | Pos. | CTR | Typical | Upside |
@@ -194,106 +460,111 @@ _Estimated extra clicks use a rough industry click-through curve. Treat them as 
 ## Tracked keywords (dataforseo+gsc)
 | Keyword | Group | Volume | GSC pos. | Google rank | AI Overview | Cites us | Above us |
 |---|---|---|---|---|---|---|---|
-| theodore roosevelt presidential library | Visit | 74000 | 1.1 | 10 | True | False | google.com, google.com, google.com |
-| things to do in medora nd | Visit | 1600 | 2.7 | – | True | False | google.com, google.com, google.com |
-| medora north dakota attractions | Visit | 1600 | – | – | False | False | google.com, facebook.com, google.com |
-| things to do near theodore roosevelt national park | Visit | 50 | – | – | False | False | google.com, google.com, facebook.com |
-| museums in north dakota | Visit | 320 | 7.2 | – | False | False | google.com, tripadvisor.ca, google.com |
-| north dakota road trip | Visit | 140 | 7.8 | – | True | False | thewalkingtourists.com, google.com, google.com |
-| medora nd hotels | Visit | 8100 | 6.4 | – | True | True | expedia.com, google.com, cntraveler.com |
-| badlands north dakota | Visit | 5400 | 2 | – | True | False | google.com, google.com, google.com |
-| theodore roosevelt | History | 246000 | 9 | – | False | False | google.com, google.com, trumpwhitehouse.archives.gov |
-| theodore roosevelt north dakota | History | 320 | 6.2 | – | False | False | google.com, google.com, google.com |
-| theodore roosevelt badlands | History | 140 | 6 | – | True | True | nps.gov, nps.gov, google.com |
-| elkhorn ranch | History | 2900 | 8.9 | – | False | False | google.com, fws.gov, google.com |
-| maltese cross cabin | History | 720 | 65.5 | – | False | False | facebook.com, google.com, google.com |
-| theodore roosevelt conservation | History | 590 | 8.1 | – | True | False | trcp.org, google.com, google.com |
-| presidential libraries | Presidential libraries | 14800 | 5.3 | – | False | False | georgewbushlibrary.gov, google.com, eisenhowerlibrary.gov |
-| newest presidential library | Presidential libraries | 210 | 1.9 | 17 | True | True | google.com, google.com, facebook.com |
-| presidential library road trip | Presidential libraries | – | – | 4 | True | False | google.com, google.com, google.com |
-| theodore roosevelt quotes | Learning | 6600 | 3.1 | 3 | True | True | goodreads.com, google.com |
-| theodore roosevelt man in the arena | Learning | 2400 | 5.4 | – | True | False | google.com, google.com, google.com |
-| theodore roosevelt podcast | Learning | 10 | – | 15 | True | True | google.com, google.com, google.com |
-| teddy roosevelt national park | Auto: Visit | 8100 | 9.1 | – | False | False | google.com, google.com, google.com |
-| enchanted highway | Auto: Visit | 9900 | 8.7 | – | True | False | google.com, tripadvisor.co.nz, theflashnites.com |
-| mount rushmore presidents | Auto: Visit | 27100 | 4.7 | – | True | False | gettyimages.com, google.com, google.com |
-| teddy roosevelt | Auto: History | 165000 | 6.1 | – | False | False | google.com, google.com, theodoreroosevelt.org |
-| theodore roosevelt died | Auto: History | 5400 | 5.2 | – | True | True | google.com, en.wikipedia.org, google.com |
-| brownsville affair | Auto: History | 480 | 5.6 | – | True | False | instagram.com, google.com, pioneergirl.com |
-| roosevelt corollary | Auto: History | 33100 | 4.7 | – | True | True | gilderlehrman.org, google.com, google.com |
-| jacob riis | Auto: History | 33100 | 10.2 | – | False | False | google.com, artsandculture.google.com, nytimes.com |
+| theodore roosevelt presidential library | Visit | 74000 | 1.2 | – | False | False | google.com, google.com, google.com |
+| things to do in medora nd | Visit | 1600 | 2.2 | – | False | False | google.com, google.com, google.com |
+| medora north dakota attractions | Visit | 1600 | – | – | False | False | google.com, google.com, google.com |
+| things to do near theodore roosevelt national park | Visit | 50 | 1 | – | True | False | google.com, google.com, google.com |
+| museums in north dakota | Visit | 320 | 4.6 | – | False | False | google.com, google.com, google.com |
+| north dakota road trip | Visit | 140 | 7.9 | – | True | False | google.com, google.com, google.com |
+| medora nd hotels | Visit | 8100 | 5.4 | – | False | False | google.com, google.com, google.com |
+| badlands north dakota | Visit | 5400 | 10 | – | True | False | google.com, google.com, google.com |
+| theodore roosevelt | History | 246000 | 7.4 | – | False | False | google.com, google.com, google.com |
+| theodore roosevelt north dakota | History | 320 | 6.4 | – | False | False | google.com, google.com, google.com |
+| theodore roosevelt badlands | History | 140 | 8.9 | – | True | True | google.com, google.com, google.com |
+| elkhorn ranch | History | 2900 | 8.9 | – | True | False | google.com, google.com, google.com |
+| maltese cross cabin | History | 720 | 45 | – | True | False | google.com, google.com, google.com |
+| theodore roosevelt conservation | History | 590 | 7.2 | – | True | False | google.com, google.com, google.com |
+| presidential libraries | Presidential libraries | 14800 | 5.2 | – | False | False | google.com, google.com, google.com |
+| newest presidential library | Presidential libraries | 210 | 1.7 | – | True | False | google.com, google.com, google.com |
+| presidential library road trip | Presidential libraries | – | – | – | True | False | google.com, google.com, google.com |
+| theodore roosevelt quotes | Learning | 6600 | 3.2 | – | True | True | google.com, google.com, google.com |
+| theodore roosevelt man in the arena | Learning | 2400 | 4.8 | – | True | False | google.com, google.com, google.com |
+| theodore roosevelt podcast | Learning | 10 | – | – | True | True | google.com, google.com, google.com |
+| teddy roosevelt national park | Auto: Visit | 8100 | 9.8 | – | False | False | google.com, google.com, google.com |
+| enchanted highway | Auto: Visit | 9900 | 8.4 | – | True | False | google.com, google.com, google.com |
+| mount rushmore presidents | Auto: Visit | 27100 | 4.5 | – | True | True | google.com, google.com, google.com |
+| teddy roosevelt | Auto: History | 165000 | 6.2 | – | False | False | google.com, google.com, google.com |
+| theodore roosevelt died | Auto: History | 5400 | 4.8 | – | True | False | google.com, google.com, google.com |
+| brownsville affair | Auto: History | 480 | 5.1 | – | True | False | google.com, google.com, google.com |
+| roosevelt corollary | Auto: History | 33100 | 4.2 | – | True | True | google.com, google.com, google.com |
+| jacob riis | Auto: History | 33100 | 9.7 | – | False | False | google.com, google.com, google.com |
 | alice roosevelt longworth | Auto: Family | 27100 | 8.5 | – | False | False | google.com, google.com, google.com |
-| bull moose party | Auto: History | 9900 | 4.4 | – | True | False | google.com, google.com, google.com |
+| bull moose party | Auto: History | 9900 | 3.7 | – | True | True | google.com, google.com, google.com |
+| alice roosevelt | Auto: Family | 27100 | 8.1 | – | False | False | google.com, google.com, google.com |
+| man in the arena | Auto: Learning | 18100 | 6.1 | – | True | False | google.com, google.com, google.com |
+| kermit roosevelt | Auto: Family | 12100 | 7.4 | – | False | False | google.com, google.com, google.com |
+| who is on mount rushmore | Auto: Learning | 18100 | 6.7 | – | True | False | google.com, google.com, google.com |
+| quentin roosevelt | Auto: Family | 9900 | 11.2 | – | False | False | google.com, google.com, google.com |
 
 ## AI assistant visibility
 | Engine | Model | Mentions us | Cites trlibrary.com |
 |---|---|---|---|
-| ChatGPT | gpt-5-mini | 68.4% | 57.9% |
-| Gemini | gemini-3.8-flash | 31.6% | 21.1% |
+| ChatGPT | gpt-5-mini | 38.1% | 28.6% |
+| Gemini | gemini-3.8-flash | 23.8% | 19.0% |
 | Perplexity | fast | – | – |
 
 ### Question by question
 Some answers failed this week: perplexity: Perplexity 403: {"error":{"message":"The Agent API requires paid credits. Add paid credit at https://console.perplexity.ai to upgrade your o
 
 **I'm visiting Theodore Roosevelt National Park. What else should I see nearby?** (Trip planning)
-- ChatGPT: mentioned, #5 among attractions, cites trlibrary.com. Also named: Chateau de Mores, North Dakota Cowboy Hall of Fame, Painted Canyon, Elkhorn Ranch, Maah Daah Hey Trail, Medora Musical. Described as: "([trlibrary.com](https://www.trlibrary.com/visit/national-park/elkhorn-ranch?utm_source=openai))" Sources: medorand.org, home.nps.gov, trlibrary.com, nps.gov, medora.com, parkrec.nd.gov
-- Gemini: NOT mentioned. Also named: Theodore Roosevelt National Park, Elkhorn Ranch, North Dakota Cowboy Hall of Fame, Medora Musical, Pitchfork Steak Fondue, Maah Daah Hey Trail. Sources: none
+- ChatGPT: mentioned, #5 among attractions, cites trlibrary.com. Also named: Theodore Roosevelt National Park, Chateau de Mores, North Dakota Cowboy Hall of Fame, Medora Musical, Elkhorn Ranch, Maah Daah Hey Trail. Described as: "- Theodore Roosevelt Presidential Library (new facility near Medora with exhibits about TR and the badlands). … ([trlibrary.com](https://www.trlibrary.com/visit/activities?utm_source=openai))" Sources: medorand.org, trlibrary.com, parkplanning.nps.gov, en.wikipedia.org, ndtourism.com, visitdickinson.com
+- Gemini: NOT mentioned. Also named: Theodore Roosevelt National Park, Medora Musical, Pitchfork Steak Fondue, North Dakota Cowboy Hall of Fame, Maah Daah Hey Trail, Elkhorn Ranch. Sources: none
 
 **What are the best things to do in Medora, North Dakota?** (Trip planning)
-- ChatGPT: mentioned, #4 among attractions, cites trlibrary.com. Also named: Theodore Roosevelt National Park, Painted Canyon, Medora Musical, Pitchfork Steak Fondue, Maah Daah Hey Trail, Chateau de Mores, North Dakota Cowboy Hall of Fame. Described as: "- Theodore Roosevelt Presidential Library: a major, immersive museum just outside town (opened in 2026). … ([trlibrary.com](https://www.trlibrary.com/?utm_source=openai))" Sources: nps.gov, medora.com, trlibrary.com, history.nd.gov, medorand.org
-- Gemini: NOT mentioned. Also named: Theodore Roosevelt National Park, Maltese Cross Cabin, Medora Musical, Pitchfork Steak Fondue, North Dakota Cowboy Hall of Fame, Maah Daah Hey Trail. Sources: none
+- ChatGPT: mentioned, #5 among attractions, cites trlibrary.com. Also named: Theodore Roosevelt National Park, Painted Canyon, Medora Musical, Pitchfork Steak Fondue, Chateau de Mores, North Dakota Cowboy Hall of Fame, Maltese Cross Cabin, Maah Daah Hey Trail. Described as: "4) Visit the Theodore Roosevelt Presidential Library … ([trlibrary.com](https://www.trlibrary.com/visit/activities?utm_source=openai))" Sources: nps.gov, medora.com, trlibrary.com, history.nd.gov, home.nps.gov
+- Gemini: NOT mentioned. Also named: Theodore Roosevelt National Park, Maltese Cross Cabin, Medora Musical, Pitchfork Steak Fondue, Chateau de Mores, North Dakota Cowboy Hall of Fame, Maah Daah Hey Trail. Sources: none
 
 **Plan a 3-day road trip through western North Dakota. What are the must-see stops?** (Trip planning)
-- ChatGPT: mentioned, #5 among attractions, cites trlibrary.com. Also named: Theodore Roosevelt National Park, Painted Canyon, Maltese Cross Cabin, Medora Musical, Maah Daah Hey Trail. Described as: "- Theodore Roosevelt Presidential Library (new major attraction at Medora — opened 2026) — strongly worth a stop if you’re in Medora. … ([trlibrary.com](https://www.trlibrary.com/?utm_source=openai))" Sources: flattestroute.com, nps.gov, medora.com, peacegardenalmanac.com, home.nps.gov, rome2rio.com
-- Gemini: NOT mentioned. Also named: Theodore Roosevelt National Park, Medora Musical, Chateau de Mores, North Dakota Cowboy Hall of Fame, Pitchfork Steak Fondue, Maltese Cross Cabin, Painted Canyon. Sources: none
+- ChatGPT: NOT mentioned. Also named: Theodore Roosevelt National Park, Painted Canyon, North Dakota Cowboy Hall of Fame, Pitchfork Steak Fondue, Medora Musical, Maah Daah Hey Trail. Sources: nps.gov, discovermedora.com, mdhta.com, ndtourism.com
+- Gemini: NOT mentioned. Also named: Painted Canyon, Chateau de Mores, North Dakota Cowboy Hall of Fame, Pitchfork Steak Fondue, Medora Musical, Theodore Roosevelt National Park, Maltese Cross Cabin. Sources: none
 
 **We're driving from Mount Rushmore to Theodore Roosevelt National Park. What's worth stopping for?** (Trip planning)
-- ChatGPT: NOT mentioned. Also named: Mount Rushmore, Theodore Roosevelt National Park, Maah Daah Hey Trail. Sources: medora.com, gfp.sd.gov, en.wikipedia.org, crazyhorsememorial.org, recreation.gov, deadwood.com
-- Gemini: NOT mentioned. Also named: Mount Rushmore, Theodore Roosevelt National Park, Chateau de Mores, North Dakota Cowboy Hall of Fame, Pitchfork Steak Fondue, Medora Musical. Sources: none
+- ChatGPT: NOT mentioned. Also named: Mount Rushmore, Theodore Roosevelt National Park, Painted Canyon. Sources: gfp.sd.gov, crazyhorsememorial.org, blackhillsbadlands.com, travelsouthdakota.com, home.nps.gov, visitrapidcity.com
+- Gemini: NOT mentioned. Also named: Mount Rushmore, Theodore Roosevelt National Park, Medora Musical. Sources: none
 
 **What are the best stops along I-94 in North Dakota?** (Trip planning)
-- ChatGPT: mentioned, #4 among attractions. Also named: Theodore Roosevelt National Park, Painted Canyon, Medora Musical. Described as: "- Medora / Theodore Roosevelt National Park (South Unit) — gateway to the Painted Canyon overlooks, short rim hikes, abundant badlands scenery, the Medora Musical and the new Theodore Roosevelt Presidential Library area." Sources: nps.gov, ndtourism.com, dickinsongov.com, roadsideamerica.com, discoverjamestownnd.com, maps.roadtrippers.com
+- ChatGPT: NOT mentioned. Also named: Theodore Roosevelt National Park, Painted Canyon, Medora Musical. Sources: home.nps.gov, ndtourism.com, dickinsongov.com, atlasobscura.com, statemuseum.nd.gov, maps.roadtrippers.com
 - Gemini: NOT mentioned. Also named: Painted Canyon, Theodore Roosevelt National Park, Maltese Cross Cabin, Chateau de Mores, Medora Musical, Pitchfork Steak Fondue. Sources: none
 
 **Fun things to do with kids in the North Dakota Badlands?** (Trip planning)
-- ChatGPT: mentioned, #3 among attractions, cites trlibrary.com. Also named: Theodore Roosevelt National Park, Painted Canyon, Maah Daah Hey Trail. Described as: "([trlibrary.com](https://www.trlibrary.com/visit/activities?utm_source=openai)) … ([trlibrary.com](https://www.trlibrary.com/visit/activities?utm_source=openai))" Sources: home.nps.gov, trlibrary.com, mdhta.com, ndtourism.com, visitdickinson.com, littlewilderness.co
-- Gemini: NOT mentioned. Also named: Theodore Roosevelt National Park, Painted Canyon, Medora Musical, Pitchfork Steak Fondue, Maltese Cross Cabin, North Dakota Cowboy Hall of Fame, Chateau de Mores, Maah Daah Hey Trail. Sources: none
+- ChatGPT: NOT mentioned. Also named: Theodore Roosevelt National Park, Pitchfork Steak Fondue, Medora Musical, Maah Daah Hey Trail. Sources: nps.gov, ndtourism.com, discovermedora.com, foundation.medora.com, mdhta.com, visitdickinson.com
+- Gemini: NOT mentioned. Also named: Theodore Roosevelt National Park, Maltese Cross Cabin, Painted Canyon, Medora Musical, Pitchfork Steak Fondue, North Dakota Cowboy Hall of Fame. Sources: none
 
 **What can we do indoors in Medora if the weather is bad?** (Trip planning)
-- ChatGPT: mentioned, #3 among attractions, cites trlibrary.com. Also named: North Dakota Cowboy Hall of Fame, Chateau de Mores, Medora Musical, Pitchfork Steak Fondue. Described as: "- Theodore Roosevelt Presidential Library — a new/expanded indoor museum experience near Medora with multi‑gallery exhibits; plan on a few hours. … ([trlibrary.com](https://www.trlibrary.com/?utm_source=openai))" Sources: medora.com, history.nd.gov, trlibrary.com, discovermedora.com
-- Gemini: NOT mentioned. Also named: North Dakota Cowboy Hall of Fame, Chateau de Mores, Theodore Roosevelt National Park, Medora Musical. Sources: medora.com, carltonautstraveltips.com, medorand.org, heatherscompass.com, thewellwornshoes.com, fargomom.com
+- ChatGPT: NOT mentioned. Also named: Theodore Roosevelt National Park. Sources: none
+- Gemini: NOT mentioned. Also named: North Dakota Cowboy Hall of Fame, Chateau de Mores, Theodore Roosevelt National Park. Sources: medorand.org, medora.com, discovermedora.com, nd.gov, wanderlog.com, perceptionillusion.com
 
 **What are the best museums in North Dakota?** (Museums)
-- ChatGPT: mentioned, #1 among attractions, cites trlibrary.com. Described as: "- Theodore Roosevelt Presidential Library / Visitor complex (Medora area) — a major new TR center and exhibits about Roosevelt’s Badlands years and conservation legacy. … ([trlibrary.com](https://www.trlibrary.com/visit/activities?utm_source=openai))" Sources: statemuseum.nd.gov, plainsart.org, ndmoa.com, bonanzaville.org, dickinsongov.com, trlibrary.com
-- Gemini: NOT mentioned. Also named: North Dakota Cowboy Hall of Fame, Theodore Roosevelt National Park, Chateau de Mores. Sources: none
+- ChatGPT: NOT mentioned. Also named: North Dakota Cowboy Hall of Fame, Theodore Roosevelt National Park, Chateau de Mores. Sources: history.nd.gov, plainsart.org, ndmoa.com, bonanzaville.org, ndtourism.com, dakotaterritoryairmuseum.com
+- Gemini: NOT mentioned. Also named: North Dakota Cowboy Hall of Fame. Sources: none
 
 **What is the newest presidential library in the United States?** (Museums)
-- ChatGPT: mentioned, #1 among attractions, cites trlibrary.com. Described as: "The Theodore Roosevelt Presidential Library in Medora, North Dakota — it opened to the public on July 4, 2026. … ([trlibrary.com](https://www.trlibrary.com/about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026?utm_source=openai))" Sources: trlibrary.com
-- Gemini: mentioned, #1 among attractions. Also named: Theodore Roosevelt National Park. Described as: "* **Theodore Roosevelt Presidential Library (Medora, North Dakota)**: Opened on **July 4, 2026**, this facility is built into the North Dakota Badlands near Theodore Roosevelt National Park. … Similarly, the Theodore Roosevelt Presidential Library is independent, as Theodore Roosevelt served before the Presidential Libraries Act (his physical papers are primarily housed at the Library of Congress)." Sources: fastcompany.com, wikipedia.org, cbsnews.com, obama.org
+- ChatGPT: mentioned, #1 among attractions. Described as: "Short answer: the Theodore Roosevelt Presidential Library in Medora, North Dakota — it opened July 4, 2026." Sources: morningstar.com, cbsnews.com, smu.edu
+- Gemini: mentioned, #1 among attractions. Also named: Theodore Roosevelt National Park. Described as: "* **Theodore Roosevelt Presidential Library (Medora, North Dakota):** Opened to the public on **July 4, 2026**." Sources: youtube.com, wikipedia.org, cbsnews.com
 
 **Which presidential libraries are worth visiting?** (Museums)
 - ChatGPT: mentioned, #1 among attractions. Described as: "Roosevelt Presidential Library & Museum — Hyde Park, NY" Sources: none
-- Gemini: mentioned, #1 among attractions. Described as: "Roosevelt Presidential Library and Museum (Hyde Park, New York)" Sources: none
+- Gemini: mentioned, #1 among attractions. Described as: "Roosevelt Presidential Library and Museum** *(Hyde Park, New York)*" Sources: none
 
 **Where can I learn about Theodore Roosevelt's life in North Dakota?** (History)
-- ChatGPT: mentioned, #4 among attractions, cites trlibrary.com. Also named: Theodore Roosevelt National Park, Elkhorn Ranch, Maltese Cross Cabin. Described as: "- Theodore Roosevelt Presidential Library (Medora) — a museum in/near Medora that tells Roosevelt’s life story with exhibits focused on his Badlands years; it’s sited to pair with visits to the park and the Maltese Cross Cabin. … ([trlibrary.com](https://www.trlibrary.com/?utm_source=openai))" Sources: nps.gov, home.nps.gov, trlibrary.com, theodorerooseveltcenter.org, statemuseum.nd.gov
-- Gemini: mentioned, #4 among attractions, cites trlibrary.com. Also named: Theodore Roosevelt National Park, Maltese Cross Cabin, Elkhorn Ranch, Chateau de Mores, North Dakota Cowboy Hall of Fame. Described as: "* **The Theodore Roosevelt Presidential Library (Medora, ND)**" Sources: trlibrary.com, ndtourism.com, wikipedia.org, theodorerooseveltcenter.org, dsuheritagefoundation.org, bigsea.co
+- ChatGPT: mentioned, #4 among attractions, cites trlibrary.com. Also named: Theodore Roosevelt National Park, Elkhorn Ranch, Maltese Cross Cabin, Chateau de Mores, Medora Musical. Described as: "- Theodore Roosevelt Presidential Library (Medora) — a new, immersive museum in Medora with exhibits about Roosevelt’s Dakota years and later life. … ([trlibrary.com](https://www.trlibrary.com/?utm_source=openai))" Sources: home.nps.gov, nps.gov, theodorerooseveltcenter.org, trlibrary.com, statemuseum.nd.gov, medora.com
+- Gemini: mentioned, #4 among attractions, cites trlibrary.com. Also named: Theodore Roosevelt National Park, Maltese Cross Cabin, Elkhorn Ranch, Chateau de Mores. Described as: "* **Theodore Roosevelt Presidential Library (Medora, ND)**" Sources: trlibrary.com, prnewswire.com, discovermedora.com, nd.gov, theodorerooseveltcenter.org, ndtourism.com
 
 **What historic sites are connected to Theodore Roosevelt?** (History)
 - ChatGPT: NOT mentioned. Also named: Theodore Roosevelt National Park, Elkhorn Ranch, Maltese Cross Cabin. Sources: none
 - Gemini: NOT mentioned. Also named: Theodore Roosevelt National Park, Maltese Cross Cabin, Elkhorn Ranch, Mount Rushmore. Sources: none
 
 **Is the Theodore Roosevelt Presidential Library worth visiting?** (Brand)
-- ChatGPT: mentioned, #1 among attractions, cites trlibrary.com. Also named: Theodore Roosevelt National Park, Medora Musical. Described as: "history, the outdoors, or museum experiences that connect place and story, the Theodore Roosevelt Presidential Library in Medora, ND is worth a visit. … ([trlibrary.com](https://www.trlibrary.com/visit/exhibits/main?utm_source=openai))" Sources: prnewswire.com, trlibrary.com, snohetta.prezly.com
-- Gemini: mentioned, #1 among attractions, cites trlibrary.com. Also named: Theodore Roosevelt National Park, Medora Musical. Described as: "**Yes, the Theodore Roosevelt Presidential Library is well worth a visit**, especially if you are interested in American history, innovative architecture, or are already planning a trip to the Northern Plains." Sources: nd.gov, ndtourism.com, wikipedia.org, trlibrary.com, visitdickinson.com
+- ChatGPT: mentioned, #1 among attractions, cites trlibrary.com. Also named: Theodore Roosevelt National Park, Maltese Cross Cabin. Described as: "Short answer: Yes—most visitors and major reviewers say the Theodore Roosevelt Presidential Library (opened July 4, 2026) is worth a stop, especially if you care about Theodore Roosevelt, conservation history, striking architecture, or are already visiting Theodore Roosevelt National Park. … ([trlibrary.com](https://www.trlibrary.com/visit/faq/during-your-visit?utm_source=openai))" Sources: snohetta.com, trlibrary.com, peacegardenalmanac.com, monorepo-sample1.nyt.net
+- Gemini: mentioned, #1 among attractions, cites trlibrary.com. Also named: Theodore Roosevelt National Park, Maah Daah Hey Trail, Medora Musical. Described as: "Whether the **Theodore Roosevelt Presidential Library** is worth visiting depends largely on your travel style and interests, but for most travelers—especially history enthusiasts, architecture fans, and national park visitors—**it is well worth the trip.**" Sources: ndtourism.com, medora.com, ap.org, visitdickinson.com, cnn.com, trlibrary.com
 
 **How much time do I need at the Theodore Roosevelt Presidential Library?** (Brand)
-- ChatGPT: mentioned, #1 among attractions, cites trlibrary.com. Also named: Medora Musical. Described as: "([trlibrary.com](https://www.trlibrary.com/visit/hours?utm_source=openai)) … ([trlibrary.com](https://www.trlibrary.com/visit/faq/tickets?utm_source=openai))" Sources: trlibrary.com
-- Gemini: mentioned, #1 among attractions, cites trlibrary.com. Also named: Theodore Roosevelt National Park. Described as: "You should plan to spend about **3 to 4 hours** (roughly a half-day) at the Theodore Roosevelt Presidential Library in Medora, North Dakota." Sources: peacegardenalmanac.com, shebuystravel.com, ndtourism.com, trlibrary.com, nd.gov
+- ChatGPT: mentioned, #1 among attractions, cites trlibrary.com. Described as: "([trlibrary.com](https://www.trlibrary.com/visit/faq)) … ([trlibrary.com](https://www.trlibrary.com/visit/faq))" Sources: peacegardenalmanac.com, trlibrary.com
+- Gemini: mentioned, #1 among attractions, cites trlibrary.com. Also named: Theodore Roosevelt National Park. Described as: "You should plan to spend about **3.5 to 4 hours** at the Theodore Roosevelt Presidential Library in Medora, North Dakota." Sources: trlibrary.com, medora.com, nd.gov, cnn.com, visitdickinson.com, ndtourism.com
 
 **How much are tickets to the Theodore Roosevelt Presidential Library and when is it open?** (Brand)
 - ChatGPT: mentioned, #1 among attractions, cites trlibrary.com. Described as: "([trlibrary.com](https://www.trlibrary.com/tickets)) … ([trlibrary.com](https://www.trlibrary.com/visit/hours))" Sources: trlibrary.com
-- Gemini: mentioned, #1 among attractions, cites trlibrary.com. Described as: "The **Theodore Roosevelt Presidential Library** in Medora, North Dakota, operates with the following admission prices and hours:" Sources: ndtourism.com, trlibrary.com, peacegardenalmanac.com
+- Gemini: NOT mentioned. Sources: trlibrary.com
 
 **What were Theodore Roosevelt's major accomplishments, conservation work, and legacy?** (Auto: History)
 - ChatGPT: NOT mentioned. Sources: none
@@ -311,152 +582,439 @@ Some answers failed this week: perplexity: Perplexity 403: {"error":{"message":"
 - ChatGPT: NOT mentioned. Also named: Mount Rushmore. Sources: none
 - Gemini: NOT mentioned. Also named: Mount Rushmore. Sources: none
 
+**What years was Theodore Roosevelt president, and what were the dates of his administration?** (Auto: History)
+- ChatGPT: NOT mentioned. Sources: none
+- Gemini: NOT mentioned. Sources: none
+
+**Which four presidents are on Mount Rushmore, and why was Theodore Roosevelt included among them?** (Auto: History)
+- ChatGPT: NOT mentioned. Also named: Mount Rushmore. Sources: none
+- Gemini: NOT mentioned. Also named: Mount Rushmore. Sources: none
+
 ### Sites AI assistants cite most
-trlibrary.com (15), ndtourism.com (9), nps.gov (7), home.nps.gov (6), medora.com (6), medorand.org (4), history.nd.gov (3), peacegardenalmanac.com (3), wikipedia.org (3), parkrec.nd.gov (2), dickinsongov.com (2), visitdickinson.com (2), discovermedora.com (2), statemuseum.nd.gov (2), theodorerooseveltcenter.org (2)
+trlibrary.com (10), ndtourism.com (9), nps.gov (6), medora.com (6), discovermedora.com (5), visitdickinson.com (4), home.nps.gov (4), nd.gov (4), medorand.org (2), history.nd.gov (2), mdhta.com (2), dickinsongov.com (2), statemuseum.nd.gov (2), cbsnews.com (2), theodorerooseveltcenter.org (2)
+
+### Searches the assistants ran before answering
+Searches the assistants ran before answering. 'Google' is trlibrary.com's Search Console position for the same search (last 28 days); none means the site doesn't show for it, or too rarely to report. A search we don't rank for is a page to strengthen or write. 127 different searches: we rank top 10 for 1, lower for 1, not at all for 125.
+
+| Search the assistant ran | Engines | In answers missing us | trlibrary.com in Google |
+|---|---|---|---|
+| Badlands Dinosaur Museum Dickinson North Dakota family activities | ChatGPT | 1 | – |
+| Badlands National Park NPS scenic drive Ben Reifel Visitor Center official site | ChatGPT | 1 | – |
+| Badlands National Park scenic loop Wall Drug Minuteman Missile National Historic Site official sites | ChatGPT | 1 | – |
+| Bismarck North Dakota Heritage Center & State Museum hours location 'Exit 159' I-94 'ND Heritage Center' | ChatGPT | 1 | – |
+| Bonanzaville West Fargo museum website | ChatGPT | 1 | – |
+| Crazy Horse Memorial visitor center hours Crazy Horse official site | ChatGPT | 1 | – |
+| Custer State Park Wildlife Loop Sylvan Lake Needles Highway official site | ChatGPT | 1 | – |
+| Deadwood South Dakota historic main street attractions Deadwood tourism official site | ChatGPT | 1 | – |
+| Dickinson Museum Center 'I-94' 'Dickinson ND' attractions 'Badlands Dinosaur Museum' 'Joachim Museum' 'Prairie Outpost' | ChatGPT | 1 | – |
+| Dickinson Museum Center Dickinson ND attractions | ChatGPT | 1 | – |
+| Enchanted Highway Regent North Dakota location how to get from Medora distance | ChatGPT | 1 | – |
+| Enchanted Highway Regent North Dakota official site | ChatGPT | 1 | – |
+| Enchanted Highway distance from I-94 Regent North Dakota | ChatGPT | 1 | – |
+| Enchanted Highway official site North Dakota tourism 'Enchanted Highway' site | ChatGPT | 1 | – |
+| Fort Abraham Lincoln State Park On-A-Slant Indian Village Museum McLean County site | ChatGPT | 1 | – |
+| Fort Union Trading Post National Historic Site Williston NPS | ChatGPT | 1 | – |
+| Is Theodore Roosevelt National Park an International Dark Sky Park 'International Dark-Sky Association' Theodore Roosevelt | ChatGPT | 1 | – |
+| Jamestown World's Largest Buffalo Dakota Thunder National Buffalo Museum Frontier Village 'Jamestown ND' 'I-94' 'exit' | ChatGPT | 1 | – |
+| Knife River Indian Villages National Historic Site NPS location and attractions | ChatGPT | 1 | – |
+| Little Missouri National Grassland North Dakota BLM | ChatGPT | 1 | – |
+
+### Pages AI cites when it leaves the Library out
+Pages cited in answers that left the Library out. 'Mentions the Library' comes from reading the page once (blank = not read or couldn't be read). A list that names other attractions but not the Library is the cheapest fix: ask to be added. 29 answers left the Library out. Citations by type: other 27, reference 20, partner 13, list or guide 2, attraction 1, owned 1.
+
+| Page | Type | Answers | Mentions the Library | Attractions it helped name |
+|---|---|---|---|---|
+| https://www.ndtourism.com/regent/attractions-entertainment/family-fun/enchanted-highway | partner | 3 | – | Theodore Roosevelt National Park, Painted Canyon, Medora Musical, North Dakota Cowboy Hall of Fame |
+| https://mdhta.com | other | 2 | NO | Theodore Roosevelt National Park, Pitchfork Steak Fondue, Medora Musical, Maah Daah Hey Trail |
+| https://www.nps.gov/npgallery/GetAsset/257b1284-d776-43d5-9a8f-863023a2e520 | reference | 2 | – | Theodore Roosevelt National Park, Painted Canyon, North Dakota Cowboy Hall of Fame, Pitchfork Steak Fondue |
+| https://www.nps.gov/thro/planyourvisit/south-unit.htm | reference | 1 | NO | Theodore Roosevelt National Park, Painted Canyon, North Dakota Cowboy Hall of Fame, Pitchfork Steak Fondue |
+| https://discovermedora.com/do | other | 1 | yes | Theodore Roosevelt National Park, Painted Canyon, North Dakota Cowboy Hall of Fame, Pitchfork Steak Fondue |
+| https://www.ndtourism.com/dickinson/attractions-entertainment/educational-attractions/dickinson-museum-center | partner | 1 | – | Theodore Roosevelt National Park, Painted Canyon, North Dakota Cowboy Hall of Fame, Pitchfork Steak Fondue |
+| https://www.nps.gov/knri/planyourvisit/basicinfo.htm | reference | 1 | NO | Theodore Roosevelt National Park, Painted Canyon, North Dakota Cowboy Hall of Fame, Pitchfork Steak Fondue |
+| https://www.nps.gov/fous | reference | 1 | NO | Theodore Roosevelt National Park, Painted Canyon, North Dakota Cowboy Hall of Fame, Pitchfork Steak Fondue |
+| https://www.ndtourism.com/8-ways-be-awed-enchanted-highway | partner | 1 | – | Theodore Roosevelt National Park, Painted Canyon, North Dakota Cowboy Hall of Fame, Pitchfork Steak Fondue |
+| https://www.nps.gov/thro/planyourvisit/cottonwood-campground.htm?fullweb=1 | reference | 1 | NO | Theodore Roosevelt National Park, Painted Canyon, North Dakota Cowboy Hall of Fame, Pitchfork Steak Fondue |
+| https://www.nps.gov/thro/planyourvisit/juniper-campground.htm | reference | 1 | NO | Theodore Roosevelt National Park, Painted Canyon, North Dakota Cowboy Hall of Fame, Pitchfork Steak Fondue |
+| https://www.nps.gov/yell/planyourvisit/safety-press.htm | reference | 1 | NO | Theodore Roosevelt National Park, Painted Canyon, North Dakota Cowboy Hall of Fame, Pitchfork Steak Fondue |
+| https://gfp.sd.gov/parks/detail/custer-state-park | reference | 1 | NO | Mount Rushmore, Theodore Roosevelt National Park, Painted Canyon |
+| https://crazyhorsememorial.org/visit/plan-your-visit | attraction | 1 | – | Mount Rushmore, Theodore Roosevelt National Park, Painted Canyon |
+| https://www.blackhillsbadlands.com/plan/itineraries/summer-scenic-drives-northern-hills | other | 1 | NO | Mount Rushmore, Theodore Roosevelt National Park, Painted Canyon |
+| https://www.travelsouthdakota.com/iconic-landmarks/deadwood/things-to-do | list or guide | 1 | – | Mount Rushmore, Theodore Roosevelt National Park, Painted Canyon |
+| https://home.nps.gov/badl/planyourvisit/scenic-driving.htm | reference | 1 | – | Mount Rushmore, Theodore Roosevelt National Park, Painted Canyon |
+| https://www.visitrapidcity.com/plan-your-trip/sample-itineraries/badlands-western-plains | other | 1 | – | Mount Rushmore, Theodore Roosevelt National Park, Painted Canyon |
+| https://www.nps.gov/mimi/planyourvisit/directions.htm | reference | 1 | – | Mount Rushmore, Theodore Roosevelt National Park, Painted Canyon |
+| https://home.nps.gov/thro/planyourvisit/car.htm | reference | 1 | – | Theodore Roosevelt National Park, Painted Canyon, Medora Musical |
+
+**Ask to be added** (cited by AI, lists other things, doesn't mention the Library):
+- https://mdhta.com (other; cited in 2 answers)
+- https://www.blackhillsbadlands.com/plan/itineraries/summer-scenic-drives-northern-hills (other; cited in 1 answers)
+
+What to do by type:
+- **list or guide**: Ask to be added: find the author or an update/contact link; offer a short blurb and a photo.
+- **review or booking**: Keep the Library's listing complete and current on this site (photos, hours, description, category).
+- **forum**: Answer helpfully where the community allows it, as the Library, with a link only when it answers the question.
+- **reference**: Make sure the facts there are right; for Wikipedia, suggest edits on the talk page with sources (no self-promotion).
+- **news**: Pitch a story or update; news pages that list attractions get reused by AI answers for months.
+- **partner**: Ask the partner to name and link the Library on this page.
+- **attraction**: No action on their page. Check that our own page answers the same question as well.
+- **owned**: Our page is being read. Make sure it answers the question near the top.
+- **social**: Low priority: AI rarely relies on social pages for recommendations.
+- **other**: Read the page: if it's a list of things to do, ask to be added.
 
 ## Site audit
-Crawled 1130 of 1169 sitemap URLs. Health 96/100, AI readiness 60/100. llms.txt on trlibrary.com: no. AI crawlers blocked in robots.txt: none. 404 pages have page-specific structured data (sitewide on every page: BreadcrumbList, EntryPoint, GeoCoordinates, ImageObject, ListItem, OpeningHoursSpecification, PostalAddress, SearchAction, WebSite).
+Crawled 1135 of 1174 sitemap URLs. Health 95/100, AI readiness 60/100. llms.txt on trlibrary.com: yes. AI crawlers blocked in robots.txt: none. 405 pages have page-specific structured data (sitewide on every page: BreadcrumbList, EntryPoint, GeoCoordinates, ImageObject, ListItem, OpeningHoursSpecification, PostalAddress, SearchAction, WebSite).
 
 | Severity | Issue | Pages | Examples |
 |---|---|---|---|
 | medium | Same title as another page | 74 | /calendar/special-event/gallery-david-hume-kennerly, /calendar/special-event/artist-talk-room-david-hume-kennerly, /calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf, /calendar/special-event/book-signing-and-meet-greet-kennerly-balkowitsch-and-ziemendorf, /visit/exhibits/kennerly |
 | medium | Sitemap lists a /node/ URL instead of a readable path | 35 | /node/240, /node/241, /node/244, /node/245, /node/249 |
-| medium | Missing Open Graph tags | 32 | /calendar/special-event/gallery-david-hume-kennerly, /calendar/special-event/artist-talk-room-david-hume-kennerly, /calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf, /calendar/special-event/book-signing-and-meet-greet-kennerly-balkowitsch-and-ziemendorf, /birthdaycard |
-| medium | No meta description | 31 | /calendar/special-event/gallery-david-hume-kennerly, /calendar/special-event/artist-talk-room-david-hume-kennerly, /calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf, /calendar/special-event/book-signing-and-meet-greet-kennerly-balkowitsch-and-ziemendorf, /birthdaycard |
-| medium | No H1 heading | 29 | /birthdaycard, /project/how-the-library-works, /rsvp/midwinter, /privacy, /newsletter |
+| medium | Missing Open Graph tags | 33 | /calendar/special-event/gallery-david-hume-kennerly, /calendar/special-event/artist-talk-room-david-hume-kennerly, /calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf, /calendar/special-event/book-signing-and-meet-greet-kennerly-balkowitsch-and-ziemendorf, /birthdaycard |
+| medium | No meta description | 32 | /calendar/special-event/gallery-david-hume-kennerly, /calendar/special-event/artist-talk-room-david-hume-kennerly, /calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf, /calendar/special-event/book-signing-and-meet-greet-kennerly-balkowitsch-and-ziemendorf, /birthdaycard |
+| medium | No H1 heading | 29 | /birthdaycard, /project/how-the-library-works, /rsvp/midwinter, /about/reports/2024-annual-report, /privacy |
 | medium | Sitemap lists a URL that redirects | 5 | /calendar/special-event/gallery-david-hume-kennerly, /calendar/special-event/artist-talk-room-david-hume-kennerly, /calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf, /calendar/special-event/book-signing-and-meet-greet-kennerly-balkowitsch-and-ziemendorf, /event/24 |
-| low | Title over 60 characters, not counting the site-name suffix | 263 | /node/240, /node/241, /node/244, /node/245, /node/249 |
-| low | Under 150 words of body text | 239 | /birthdaycard, /project/how-the-library-works, /node/240, /node/241, /node/244 |
-| low | Title under 15 characters, not counting the site-name suffix | 149 | /birthdaycard, /quiz/the-boardwalk, /join-us, /video/view/Y3jQTzNVVFY, /video/view/YJ_qzszUZUA |
-| low | Same meta description as another page | 126 | /event/24, /video/view/Y3jQTzNVVFY, /video/view/YJ_qzszUZUA, /video/view/-udCxePoWgE, /video/view/1ftA6rWo1NA |
+| low | Title over 60 characters, not counting the site-name suffix | 265 | /node/240, /node/241, /node/244, /node/245, /node/249 |
+| low | Under 150 words of body text | 237 | /birthdaycard, /project/how-the-library-works, /node/240, /node/241, /node/244 |
+| low | Heading levels skip (e.g. H2 straight to H4) | 150 | /calendar/special-event/gallery-david-hume-kennerly, /calendar/special-event/artist-talk-room-david-hume-kennerly, /calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf, /calendar/special-event/book-signing-and-meet-greet-kennerly-balkowitsch-and-ziemendorf, /visit/exhibits/kennerly |
+| low | Title under 15 characters, not counting the site-name suffix | 149 | /birthdaycard, /join-us, /quiz/the-boardwalk, /visit/survey, /video/view/Y3jQTzNVVFY |
+| low | Same meta description as another page | 126 | /event/24, /video/view/Y3jQTzNVVFY, /video/view/YJ_qzszUZUA, /node/205, /podcast/good-citizen/douglas-brinkley |
+| low | More than 4 clicks from the homepage | 112 | /node/240, /node/241, /node/244, /node/245, /node/249 |
 | low | Meta description under 70 characters | 18 | /video/view/Y3jQTzNVVFY, /video/view/YJ_qzszUZUA, /video/view/Lk8bs9ilpLI, /video/view/0NiRkijqLGw, /video/view/NoLhSWhiCpA |
-| low | More than one H1 | 10 | /support/matching-gifts, /about/careers, /about/mission, /about/foundation, /impact |
-| low | Took over 3 seconds to respond | 3 | /video/view/gjy4XjgMEVU, /video/view/GHM7Y66lCBk, /video/view/CGc6w5ryVHk |
+| low | More than one H1 | 10 | /support/matching-gifts, /about/mission, /about/foundation, /impact, /project |
+| low | Took over 3 seconds to respond | 3 | /video/view/N40FrDWTYfk, /tr/books-and-writings/reader, /visit/itineraries/13-day-denver-wyoming |
 
 ## Recently changed pages (held back from recommendations for 28 days)
 Before = the 28 days before the change; after = the days since, up to the latest settled Search Console day. Compare per-day numbers; a week or two after a change is still early.
 
 | Page | Changed | What | Clicks/day before → after | CTR | Position |
 |---|---|---|---|---|---|
-| /visit | 2026-10-27 | Title: Plan Your Visit: Tickets, Hours and Directions; Visit length: about three and a hal | 57.3 → 34.8 | 2.5% → 1.7% | 2.7 → 3.2 |
-| /visit/exhibits | 2026-10-27 | Title: Exhibits: Roosevelt’s Life in Eight Chapters; Visit length and restaurant name (Sal | 4.4 → 2.0 | 0.5% → 1.3% | 3.8 → 4.7 |
-| /tr/people/jacob-riis | 2026-10-27 | Title and description aimed at 'who was Jacob Riis' | 13.9 → 20.0 | 0.5% → 0.7% | 6.9 → 6.0 |
-| /tr/presidency/panama-canal | 2026-10-27 | Title and description: Theodore Roosevelt and the Panama Canal, 1903–1914 | 8.2 → 14.0 | 0.4% → 0.5% | 5.2 → 4.5 |
-| /tr/presidency/railroad-regulation | 2026-10-27 | Title names the Hepburn Act and Elkins Act | 3.9 → 3.2 | 0.4% → 0.4% | 4.0 → 3.4 |
-| /tr/rise-to-power/san-juan-hill | 2026-10-27 | Title uses 'Battle of San Juan Hill' | 14.5 → 14.8 | 1.4% → 1.2% | 3.7 → 3.5 |
-| /tr/presidency/coal-strike | 2026-10-27 | Title uses 'Anthracite Coal Strike of 1902' | 7.9 → 6.8 | 0.9% → 0.8% | 4.2 → 3.0 |
-| /visit/groups | 2026-10-27 | Visit length changed from about three hours to about three and a half hours | 0.1 → 0.0 | 0.6% → 0.0% | 6.5 → 5.6 |
-| /visit/faq/tickets | 2026-10-27 | 'Buy tickets' link fixed (was /visit/tickets, a 404); 301 /visit/tickets -> /tickets | 2.0 → 1.2 | 4.3% → 3.8% | 6.3 → 4.8 |
-| /visit/faq | 2026-10-27 | Tickets link fixed (was /visit/tickets, a 404) | 2.1 → 0.5 | 0.8% → 1.1% | 4.7 → 6.4 |
-| /tr/presidency/square-deal | 2026-10-27 | Removed duplicate H1; Title 'The Square Deal in Depth: Roosevelt as the Nation's Referee'; | 17.9 → 23.2 | 0.6% → 0.7% | 4.6 → 4.1 |
-| /tr/square-deal | 2026-10-20 | Title 'What Was the Square Deal? Roosevelt's Three Cs'; wording fixes | 40.4 → 31.0 | 1.2% → 0.7% | 3.3 → 4.1 |
-| /tr/family/fdr-connection | 2026-10-20 | Title 'How Were Theodore and Franklin Roosevelt Related?'; 32 years fix; Eleanor sentence | 39.2 → 76.0 | 1.5% → 2.3% | 3.2 → 3.1 |
-| /tr/presidency/brownsville | 2026-10-20 | Title 'The Brownsville Affair of 1906: What Happened and Why'; Medal of Honor claim and da | 0.9 → 2.1 | 0.0% → 0.1% | 6.3 → 4.5 |
-| /tr/presidency/roosevelt-corollary | 2026-10-20 | Title 'Roosevelt Corollary to the Monroe Doctrine, Explained'; stray second H1 section rem | 6.6 → 13.1 | 0.2% → 0.2% | 5.4 → 4.3 |
-| /tr/tr-mount-rushmore | 2026-10-20 | Title 'Mount Rushmore Presidents: Why Theodore Roosevelt Is There' | 19.5 → 18.7 | 0.6% → 0.3% | 5.1 → 5.7 |
-| /visit/hours | 2026-10-20 | Title 'Hours in Medora: Seasonal Schedule and Last Entry'; visit-length bullet | 27.0 → 14.5 | 1.2% → 1.0% | 2.7 → 2.2 |
-| /visit/directions | 2026-10-20 | Title 'Directions to Medora from I-94 and Nearby Airports' | 29.0 → 20.6 | 1.3% → 1.2% | 2.7 → 2.7 |
-| /project | 2026-10-20 | Title 'Building the Library: Design, Values and Sustainability' | 5.2 → 5.3 | 0.5% → 0.5% | 2.0 → 2.8 |
-| /tr/presidency/trust-busting | 2026-10-20 | Title 'What Was Trust-Busting? Roosevelt Takes On the Monopolies' | 31.3 → 42.1 | 1.2% → 1.4% | 3.6 → 3.3 |
-| /tr/presidency-timeline | 2026-10-20 | Title 'When Was Theodore Roosevelt President? 1901–1909 Timeline' | 11.7 → 11.2 | 0.6% → 0.6% | 4.7 → 4.4 |
-| /tr/tr-shot | 2026-10-20 | Title 'Why Was Theodore Roosevelt Shot? The 1912 Milwaukee Attack' | 12.8 → 9.6 | 0.9% → 0.9% | 4.0 → 4.1 |
-| /bullet-speech | 2026-10-20 | Title 'The Bullet Speech: Roosevelt's Assassination Attempt'; link to /tr/tr-shot | 27.1 → 20.2 | 1.8% → 1.6% | 3.6 → 4.0 |
-| /tr/pre-presidency-political-accomplishments | 2026-10-20 | Title 'What Did Theodore Roosevelt Do Before He Was President?' | 24.4 → 13.6 | 1.4% → 0.6% | 5.4 → 5.8 |
-| /tr/post-presidency/man-in-the-arena | 2026-10-20 | Title 'TR's 1910 European Tour and the Man in the Arena Speech'; cross-link | 1.6 → 1.1 | 0.8% → 1.1% | 7.6 → 6.8 |
-| /tr/family/children | 2026-10-20 | Title 'Theodore Roosevelt's Children: Alice, Ted, Kermit and More'; link to kids timeline | 3.2 → 4.1 | 0.9% → 1.0% | 5.3 → 3.7 |
-| /tr/kids-timeline | 2026-10-20 | Title 'Theodore Roosevelt for Kids: A Timeline of His Life' | 3.7 → 3.0 | 0.8% → 0.8% | 8.6 → 7.5 |
-| /tr/teddy-nickname | 2026-10-20 | Merged /tr/myths/teddy-name into this page; new title and description; teddy bear sentence | 3.5 → 6.8 | 0.4% → 1.0% | 5.1 → 4.4 |
-| /tr/myths/teddy-name | 2026-10-20 | Archived; 301 to /tr/teddy-nickname | 0.2 → 0.5 | 1.2% → 0.5% | 6.2 → 5.4 |
-| / | 2026-10-20 | Description mentions 'Teddy' | 353.1 → 294.6 | 3.8% → 9.4% | 8.0 → 6.3 |
-| /visit/national-park | 2026-10-20 | Visit length, restaurant name; link to where-to-see | 4.0 → 3.9 | 0.5% → 0.7% | 7.5 → 8.7 |
-| /visit/activities | 2026-10-20 | Visit length and restaurant name | 0.4 → 0.5 | 1.1% → 1.0% | 5.2 → 6.1 |
-| /visit/itineraries | 2026-10-20 | Link to the I-94 guide | 2.8 → 2.5 | 1.4% → 1.5% | 6.8 → 6.1 |
-| /visit/itineraries/one-day | 2026-10-20 | Visit length and restaurant name | 3.5 → 2.3 | 4.1% → 3.5% | 3.9 → 3.7 |
-| /visit/itineraries/4-days-north-dakota | 2026-10-20 | Visit length and restaurant name | 0.7 → 0.6 | 1.4% → 1.5% | 7.6 → 7.1 |
-| /visit/itineraries/seattle-badlands | 2026-10-20 | Visit length and restaurant name | 0.1 → 0.1 | 1.2% → 0.7% | 6.7 → 7.2 |
-| /visit/itineraries/chicago-badlands | 2026-10-20 | Visit length and restaurant name | 0.7 → 0.9 | 1.3% → 2.0% | 6.6 → 7.4 |
-| /visit/i-94 | 2026-10-20 | New page: Best Stops on I-94 in North Dakota | 0.0 → 0.0 | – → – | – → – |
+| /tr/presidency | 2026-11-03 | Published Oct 18 draft plus 2 internal links (Taft, midnight forests) | 0.9 → 2.7 | 0.6% → 0.6% | 6.3 → 4.9 |
+| /tr/timeline | 2026-11-03 | Added 6 internal links from Links to add; Title 'Theodore Roosevelt's Life Timeline: Key D | 7.8 → 10.0 | 0.5% → 0.5% | 7.4 → 6.1 |
+| /visit/exhibits/main | 2026-11-03 | Added 6 internal links from Links to add | 2.8 → 2.3 | 1.8% → 1.2% | 6.5 → 6.0 |
+| /tr/teddy-nickname | 2026-11-03 | Added 6 internal links from Links to add; Merged /tr/myths/teddy-name into this page; new  | 4.8 → 7.0 | 0.8% → 1.0% | 4.4 → 4.2 |
+| /tr/presidency-timeline | 2026-11-03 | Added 6 internal links from Links to add; Title 'When Was Theodore Roosevelt President? 19 | 11.5 → 14.0 | 0.6% → 0.6% | 4.6 → 4.2 |
+| /tr/people/henry-cabot-lodge | 2026-11-03 | Added 6 internal links from Links to add | 1.1 → 2.7 | 0.2% → 0.5% | 6.5 → 6.4 |
+| /tr/family/family-tree | 2026-11-03 | Added 5 internal links from Links to add | 14.2 → 19.0 | 1.5% → 2.1% | 5.2 → 5.9 |
+| /tr/presidency/white-house-family | 2026-11-03 | Added 4 internal links from Links to add | 0.2 → 0.3 | 0.3% → 0.4% | 6.6 → 7.4 |
+| /podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore | 2026-11-03 | Added 5 internal links from Links to add | 0.3 → 0.3 | 0.8% → 1.1% | 8.8 → 7.9 |
+| /tr/legacy/rankings | 2026-11-03 | Added 5 internal links from Links to add | 5.0 → 13.7 | 1.5% → 2.5% | 5.6 → 5.6 |
+| /podcast/good-citizen/edward-okeefe | 2026-11-03 | Added 4 internal links from Links to add | 0.1 → 0.0 | 0.8% → 0.0% | 8.2 → 9.2 |
+| /podcast/good-citizen/call-adventure-charlie-melcher-ed-okeefe-and-brand-new-theodore-roosevelt | 2026-11-03 | Added 6 internal links from Links to add | 0.3 → 0.0 | 1.1% → 0.0% | 7.4 → 9.3 |
+| /tr/for-educators/high-school | 2026-11-03 | Added 6 internal links from Links to add | 0.8 → 0.7 | 1.8% → 1.3% | 7.0 → 6.8 |
+| /about/press/press-releases/theodore-roosevelts-groundbreaking-firsts-and-feats-celebration | 2026-11-03 | Added 6 internal links from Links to add | 0.1 → 0.3 | 1.1% → 1.9% | 4.7 → 6.3 |
+| /tr/rise-to-power/ten-facts | 2026-11-03 | Added 6 internal links from Links to add | 3.3 → 9.7 | 1.6% → 3.1% | 5.3 → 3.6 |
+| /tr/presidency/ten-facts | 2026-11-03 | Added 5 internal links from Links to add | 15.5 → 28.0 | 2.8% → 3.6% | 3.9 → 3.7 |
+| /events/teddycon | 2026-11-03 | Added 6 internal links from Links to add | 3.4 → 0.7 | 8.8% → 2.7% | 3.8 → 6.9 |
+| /tr/badlands-timeline | 2026-11-03 | Added 6 internal links from Links to add | 5.7 → 5.3 | 2.0% → 2.1% | 5.5 → 4.9 |
+| /tr/family/fdr-connection | 2026-11-03 | Added 4 internal links from Links to add; Title 'How Were Theodore and Franklin Roosevelt  | 60.9 → 64.0 | 1.9% → 1.7% | 3.2 → 2.9 |
+| /research/archives | 2026-11-03 | Added 5 internal links from Links to add | 1.7 → 2.3 | 2.5% → 3.7% | 7.7 → 8.0 |
+| /tr/speeches/new-nationalism | 2026-11-03 | Added 5 internal links from Links to add | 1.7 → 0.3 | 2.0% → 0.6% | 5.6 → 6.1 |
+| /tr/presidency/elections | 2026-11-03 | Added 4 internal links from Links to add; Title '1904 Presidential Election: Roosevelt's M | 4.5 → 8.7 | 0.6% → 1.0% | 5.9 → 5.7 |
+| /tr/legacy/the-library | 2026-11-03 | Added 5 internal links from Links to add | 1.2 → 1.0 | 1.0% → 2.4% | 5.0 → 4.2 |
+| /tr/post-presidency/ten-facts | 2026-11-03 | Added 5 internal links from Links to add | 0.4 → 0.3 | 1.0% → 0.8% | 5.5 → 5.0 |
+| /visit/medora/history | 2026-11-03 | Added 5 internal links from Links to add; North Dakota quote aligned to the 1918 Volwiler  | 1.2 → 1.7 | 1.2% → 2.9% | 7.4 → 6.7 |
+| /tr/fake-quotes | 2026-11-03 | Added 3 internal links from Links to add | 11.7 → 12.7 | 2.0% → 2.3% | 6.8 → 6.2 |
+| /tr/kids-timeline | 2026-11-03 | Added 5 internal links from Links to add; Title 'Theodore Roosevelt for Kids: A Timeline o | 2.5 → 2.0 | 0.7% → 0.6% | 9.4 → 9.0 |
+| /tr/tr-mount-rushmore | 2026-11-03 | Added 3 internal links from Links to add; Title 'Mount Rushmore Presidents: Why Theodore R | 16.0 → 19.0 | 0.4% → 0.3% | 5.5 → 5.7 |
+| /visit/directions | 2026-11-03 | Added 4 internal links from Links to add; Title 'Directions to Medora from I-94 and Nearby | 21.1 → 7.3 | 1.2% → 0.7% | 2.7 → 3.0 |
+| /tr/books-and-writings/autobiography | 2026-11-03 | Added 4 internal links from Links to add | 1.1 → 1.7 | 1.3% → 2.5% | 5.7 → 4.5 |
+| /tr/pre-presidency-political-accomplishments | 2026-11-03 | Added 4 internal links from Links to add; Title 'What Did Theodore Roosevelt Do Before He  | 20.5 → 23.3 | 1.1% → 1.0% | 5.6 → 5.5 |
+| /tr/books-and-writings/complete-list | 2026-11-03 | Added 4 internal links from Links to add | 0.2 → 0.0 | 1.9% → 0.0% | 5.4 → 4.5 |
+| /tr/quotes/leadership | 2026-11-03 | Added 5 internal links from Links to add | 3.6 → 2.7 | 3.0% → 2.1% | 5.4 → 4.9 |
+| /tr/speeches/inaugural | 2026-11-03 | Added 4 internal links from Links to add | 0.5 → 1.0 | 0.5% → 0.3% | 5.7 → 5.5 |
+| /podcast/good-citizen/candice-millard | 2026-11-03 | Added 2 internal links from Links to add | 0.4 → 0.7 | 0.3% → 0.3% | 9.3 → 11.1 |
+| /tr/people/eleanor | 2026-11-03 | Added 4 internal links from Links to add | 0.4 → 0.7 | 0.5% → 0.4% | 6.9 → 6.6 |
+| /tr/people/bill-sewall | 2026-11-03 | Added 4 internal links from Links to add | 0.6 → 0.7 | 2.2% → 2.2% | 5.5 → 4.6 |
+| /tr/post-presidency/quentin | 2026-11-03 | Added 4 internal links from Links to add | 1.0 → 1.7 | 0.4% → 0.8% | 9.5 → 8.8 |
+| /tr/quotes/conservation | 2026-11-03 | Added 2 internal links from Links to add | 3.4 → 4.0 | 1.9% → 2.6% | 5.3 → 4.7 |
+| /podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature | 2026-11-03 | Added 3 internal links from Links to add | 1.8 → 9.7 | 0.1% → 0.4% | 9.2 → 7.9 |
+| /tr/early-life/siblings | 2026-11-03 | Added 3 internal links from Links to add | 1.2 → 1.3 | 1.2% → 1.2% | 6.3 → 5.2 |
+| /tr/early-life/ten-facts | 2026-11-03 | Added 4 internal links from Links to add | 0.4 → 0.7 | 3.6% → 1.9% | 5.4 → 5.5 |
+| /tr/people/kermit | 2026-11-03 | Added 4 internal links from Links to add | 0.2 → 1.0 | 0.4% → 1.3% | 8.6 → 8.0 |
+| /tr/legacy | 2026-11-03 | Added 3 internal links from Links to add | 0.1 → 0.7 | 0.8% → 2.5% | 8.8 → 4.1 |
+| /tr/people/bamie | 2026-11-03 | Added 3 internal links from Links to add | 0.2 → 0.3 | 0.5% → 0.7% | 6.0 → 8.8 |
+| /tr/early-life | 2026-11-03 | Added 3 internal links from Links to add | 5.2 → 9.3 | 0.9% → 1.5% | 6.7 → 5.2 |
+| /podcast/good-citizen/jeffrey-rosen | 2026-11-03 | Added 3 internal links from Links to add | 0.2 → 0.0 | 0.3% → 0.0% | 10.2 → 9.5 |
+| /tr/complex-legacy/imperialism | 2026-11-03 | Added 2 internal links from Links to add | 8.3 → 18.3 | 1.0% → 1.1% | 5.2 → 4.9 |
+| /tr/strenuous-life/hunter | 2026-11-03 | Added 3 internal links from Links to add | 1.2 → 1.0 | 0.9% → 0.8% | 5.6 → 5.3 |
+| /tr/tr-shot | 2026-11-03 | Added 3 internal links from Links to add; Title 'Why Was Theodore Roosevelt Shot? The 1912 | 11.4 → 10.0 | 0.9% → 0.9% | 4.0 → 4.2 |
+| /visit/itineraries/chicago-badlands | 2026-11-03 | Added 2 internal links from Links to add; Visit length and restaurant name | 0.8 → 0.3 | 1.6% → 0.8% | 6.9 → 6.0 |
+| /tr/post-presidency/death | 2026-11-03 | Added 3 internal links from Links to add | 2.8 → 4.0 | 0.5% → 0.5% | 5.5 → 4.7 |
+| /tr/new-york-politics/alice-lee | 2026-11-03 | Added 3 internal links from Links to add | 3.0 → 3.7 | 0.8% → 0.9% | 5.5 → 5.3 |
+| /tr/square-deal | 2026-11-03 | Added 2 internal links from Links to add; Archived (node 278); 301 to /tr/presidency/squar | 31.8 → 0.0 | 0.8% → 0.0% | 3.9 → 1.8 |
+| /tr/rise-to-power/edith-roosevelt | 2026-11-03 | Added 3 internal links from Links to add | 1.5 → 2.7 | 0.4% → 0.8% | 6.9 → 7.1 |
+| /tr/presidency/conservation/midnight-forests | 2026-11-03 | Added 3 internal links from Links to add | 1.1 → 2.7 | 1.3% → 2.6% | 5.1 → 5.5 |
+| /tr/quotes/misquotes | 2026-11-03 | Added 3 internal links from Links to add | 5.5 → 7.0 | 2.6% → 2.2% | 4.0 → 4.9 |
+| /tr/post-presidency/man-in-the-arena | 2026-11-03 | Added 3 internal links from Links to add; Title 'TR's 1910 European Tour and the Man in th | 1.6 → 1.0 | 0.8% → 1.0% | 7.5 → 6.5 |
+| /visit/activities | 2026-11-03 | Added 3 internal links from Links to add; Visit length and restaurant name | 0.5 → 0.7 | 0.9% → 2.1% | 5.3 → 6.8 |
+| /tr/conservation/by-the-numbers | 2026-11-03 | Added 3 internal links from Links to add | 1.6 → 3.7 | 0.6% → 1.1% | 5.1 → 4.3 |
+| /tr/presidency/conservation/gifford-pinchot | 2026-11-03 | Added 2 internal links from Links to add | 1.6 → 3.7 | 0.6% → 1.2% | 4.4 → 4.0 |
+| /tr/early-life/family-roots | 2026-11-03 | Added 3 internal links from Links to add | 1.5 → 2.3 | 0.8% → 1.2% | 4.8 → 5.3 |
+| /podcast/good-citizen/live-trpl-1-doris-kearns-goodwin-finding-hope-history | 2026-11-03 | Added 3 internal links from Links to add | 0.1 → 0.3 | 0.7% → 2.4% | 8.8 → 8.9 |
+| /tr/homes-and-places/sagamore-hill | 2026-11-03 | Added 2 internal links from Links to add | 0.4 → 0.7 | 0.7% → 1.0% | 7.0 → 7.0 |
+| /tr/presidency/conservation/national-monuments | 2026-11-03 | Added 3 internal links from Links to add | 0.9 → 2.3 | 0.8% → 1.1% | 5.5 → 5.5 |
+| /tr/presidency/white-house-family/pets | 2026-11-03 | Added 3 internal links from Links to add | 2.2 → 2.3 | 1.2% → 1.1% | 5.1 → 4.6 |
+| /visit/teddy-trail | 2026-11-03 | Added 3 internal links from Links to add | 0.3 → 0.3 | 1.2% → 1.2% | 6.4 → 6.5 |
+| /visit/exhibits | 2026-11-03 | Added 3 internal links from Links to add; Title: Exhibits: Roosevelt’s Life in Eight Chapt | 3.8 → 0.3 | 0.6% → 0.2% | 3.5 → 5.2 |
+| /tr/people | 2026-11-03 | Added 3 internal links from Links to add | 0.8 → 0.0 | 0.4% → 0.0% | 7.4 → 6.1 |
+| /about/trustees/doris-kearns-goodwin | 2026-11-03 | Added 3 internal links from Links to add | 0.2 → 0.3 | 0.8% → 1.0% | 16.0 → 12.8 |
+| /tr/people/william-howard-taft | 2026-11-03 | Added 3 internal links from Links to add | 1.8 → 3.3 | 0.3% → 0.3% | 5.7 → 5.1 |
+| /about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026 | 2026-11-03 | Added 3 internal links from Links to add | 1.9 → 2.0 | 2.9% → 4.7% | 4.4 → 4.8 |
+| /tr | 2026-11-03 | Added 3 internal links from Links to add | 0.3 → 0.3 | 0.1% → 0.1% | 6.9 → 5.6 |
+| /tr/post-presidency | 2026-11-03 | Added 3 internal links from Links to add | 1.8 → 1.7 | 2.6% → 1.4% | 4.2 → 3.2 |
+| /tr/new-york-politics/double-tragedy | 2026-11-03 | Added 3 internal links from Links to add | 0.5 → 1.7 | 1.6% → 2.3% | 4.4 → 4.4 |
+| /tr/quotes/family | 2026-11-03 | Added 2 internal links from Links to add | 0.3 → 0.3 | 2.3% → 0.9% | 6.2 → 5.3 |
+| /tr/people/alice-lee | 2026-11-03 | Added 3 internal links from Links to add | 0.1 → 0.3 | 0.3% → 0.5% | 8.8 → 8.3 |
+| /about/press/press-releases/harold-hamm-donates-50-million-trpl | 2026-11-03 | Added 2 internal links from Links to add | 1.7 → 0.3 | 10.5% → 4.0% | 3.1 → 3.6 |
+| /tr/people/theodore-sr | 2026-11-03 | Added 2 internal links from Links to add | 0.4 → 1.7 | 0.2% → 0.9% | 6.5 → 5.7 |
+| /about/press/press-releases/roosevelt-family-acquires-903-acres-trpl | 2026-11-03 | Added 2 internal links from Links to add | 0.6 → 0.7 | 7.0% → 11.8% | 4.2 → 5.5 |
+| /tr/legacy/mount-rushmore | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 2.0 | 0.2% → 1.2% | 7.1 → 7.1 |
+| /tr/conservation/quotes | 2026-11-03 | Added 3 internal links from Links to add | 0.5 → 2.3 | 1.4% → 1.1% | 4.9 → 4.8 |
+| /visit/itineraries/north-on-29 | 2026-11-03 | Added 2 internal links from Links to add | 0.3 → 0.0 | 0.8% → 0.0% | 7.2 → 7.5 |
+| /tr/rise-to-power/police-commissioner | 2026-11-03 | Added 2 internal links from Links to add | 1.8 → 2.3 | 1.7% → 1.9% | 5.7 → 5.0 |
+| /tr/legacy/words-he-coined | 2026-11-03 | Added 2 internal links from Links to add | 0.9 → 0.3 | 0.6% → 0.2% | 6.4 → 7.0 |
+| /tr/myths/misquotes | 2026-11-03 | Added 2 internal links from Links to add | 1.1 → 1.7 | 1.1% → 1.5% | 5.2 → 5.1 |
+| /tr/quotes | 2026-11-03 | Added 2 internal links from Links to add | 21.7 → 18.7 | 2.3% → 2.2% | 10.7 → 4.2 |
+| /tr/presidency/first-term | 2026-11-03 | Added 2 internal links from Links to add | 0.5 → 0.7 | 1.7% → 1.0% | 6.5 → 4.7 |
+| /visit/itineraries/13-day-denver-wyoming | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.8% → 0.0% | 8.9 → 9.0 |
+| /tr/family/children | 2026-11-03 | Added 2 internal links from Links to add; Title 'Theodore Roosevelt's Children: Alice, Ted | 4.2 → 7.7 | 1.1% → 1.8% | 4.2 → 3.1 |
+| /visit/shopping | 2026-11-03 | Added 2 internal links from Links to add | 5.0 → 6.3 | 2.2% → 6.6% | 5.0 → 7.9 |
+| /tr/family | 2026-11-03 | Added 2 internal links from Links to add | 1.1 → 2.3 | 0.4% → 0.6% | 8.0 → 7.4 |
+| /tr/for-educators/middle-school | 2026-11-03 | Added 2 internal links from Links to add | 0.6 → 0.7 | 2.2% → 1.5% | 6.5 → 5.3 |
+| /visit/medora | 2026-11-03 | Added 1 internal link from Links to add | 1.1 → 0.0 | 0.7% → 0.0% | 4.5 → 4.7 |
+| /tr/rise-to-power/buffalo-soldiers | 2026-11-03 | Added 1 internal link from Links to add | 1.6 → 1.3 | 0.7% → 0.5% | 5.2 → 4.7 |
+| /tr/early-life/harvard | 2026-11-03 | Added 2 internal links from Links to add | 0.9 → 3.0 | 1.0% → 1.9% | 5.4 → 5.2 |
+| /tr/elkhorn | 2026-11-03 | Added 2 internal links from Links to add | 1.6 → 2.0 | 0.8% → 1.3% | 8.0 → 7.6 |
+| /podcast/good-citizen/ted-leonsis | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.7 | 0.2% → 0.4% | 10.0 → 9.3 |
+| /tr/presidency/conservation/national-parks | 2026-11-03 | Added 2 internal links from Links to add | 6.9 → 8.0 | 0.9% → 1.0% | 6.0 → 5.3 |
+| /bullet-speech | 2026-11-03 | Added 1 internal link from Links to add; Title 'The Bullet Speech: Roosevelt's Assassinati | 24.4 → 24.3 | 1.7% → 1.5% | 3.7 → 3.5 |
+| /tr/early-life/mother | 2026-11-03 | Added 2 internal links from Links to add | 0.3 → 0.0 | 0.3% → 0.0% | 5.1 → 4.6 |
+| /tr/post-presidency/river-of-doubt | 2026-11-03 | Added 2 internal links from Links to add | 2.6 → 4.0 | 0.6% → 0.6% | 7.5 → 7.5 |
+| /tr/post-presidency/african-safari | 2026-11-03 | Added 2 internal links from Links to add | 1.2 → 1.7 | 1.3% → 2.1% | 5.9 → 5.1 |
+| /tr/post-presidency/new-nationalism | 2026-11-03 | Added 2 internal links from Links to add | 1.8 → 2.0 | 0.7% → 0.6% | 4.5 → 4.1 |
+| /tr/presidency/conservation/reclamation | 2026-11-03 | Added 2 internal links from Links to add | 3.3 → 2.3 | 0.8% → 0.5% | 4.2 → 4.0 |
+| /tr/5-big-adventures | 2026-11-03 | Added 2 internal links from Links to add | 2.0 → 1.3 | 1.0% → 0.4% | 6.5 → 5.8 |
+| /tr/rise-to-power/san-juan-hill | 2026-11-03 | Added 2 internal links from Links to add; Title uses 'Battle of San Juan Hill' | 14.8 → 18.3 | 1.4% → 1.1% | 3.7 → 3.5 |
+| /tr/presidency/conservation/bird-reserves | 2026-11-03 | Added 2 internal links from Links to add | 0.8 → 0.3 | 1.5% → 0.3% | 5.4 → 5.1 |
+| /podcast/good-citizen/douglas-brinkley | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.1% → 0.0% | 11.9 → 11.7 |
+| /tr/people/corinne | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 0.3 | 0.2% → 0.6% | 4.3 → 3.3 |
+| /podcast/good-citizen/eric-liu | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 0.0 | 0.3% → 0.0% | 7.8 → 5.6 |
+| /tr/quotes/strenuous-life | 2026-11-03 | Added 1 internal link from Links to add | 1.8 → 2.3 | 1.3% → 1.0% | 6.3 → 6.3 |
+| /tr/quotes/citizenship | 2026-11-03 | Added 2 internal links from Links to add | 1.9 → 2.0 | 1.7% → 1.6% | 5.8 → 5.3 |
+| /tr/elkhorn-timeline | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 0.0 | 1.3% → 0.0% | 8.1 → 7.0 |
+| /tr/people/edith-roosevelt | 2026-11-03 | Added 2 internal links from Links to add | 0.4 → 0.3 | 0.7% → 0.7% | 11.3 → 12.8 |
+| /visit/roosevelt-in-medora | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.8% → 0.0% | 7.4 → 8.4 |
+| /podcast/good-citizen/meg-whitman | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.3 | 0.1% → 0.2% | 11.4 → 10.9 |
+| /tr/speeches/strenuous-life | 2026-11-03 | Added 1 internal link from Links to add | 2.7 → 3.0 | 1.9% → 3.0% | 5.7 → 4.9 |
+| /tr/people/quentin | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 0.3 | 0.4% → 1.2% | 8.5 → 9.0 |
+| /tr/post-presidency/world-war-i | 2026-11-03 | Added 2 internal links from Links to add | 0.2 → 0.7 | 0.5% → 0.8% | 5.4 → 4.7 |
+| /tr/rise-to-power/sagamore-hill | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 0.0 | 0.9% → 0.0% | 6.9 → 7.0 |
+| /tr/new-york-politics/convention-1884 | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 0.7 | 0.9% → 1.9% | 6.7 → 5.6 |
+| /about/press/press-releases/sarah-and-ross-perot-jr-foundation-gifts-5-million-theodore-roosevelt | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.9% → 0.0% | 6.4 → 6.8 |
+| /about/press/press-releases/theodore-roosevelt-presidential-library-welcomes-doris-kearns-goodwin | 2026-11-03 | Added 2 internal links from Links to add | 0.0 → 0.0 | 0.7% → 0.0% | 5.3 → 19.9 |
+| /about/foundation | 2026-11-03 | Added 1 internal link from Links to add | 2.5 → 3.3 | 3.7% → 5.5% | 5.5 → 5.3 |
+| /visit/eat | 2026-11-03 | Added 2 internal links from Links to add | 5.8 → 1.3 | 2.7% → 1.1% | 7.2 → 7.4 |
+| /visit/maps | 2026-11-03 | Added 1 internal link from Links to add | 1.7 → 0.3 | 0.5% → 1.1% | 3.9 → 4.0 |
+| /tr/post-presidency/assassination-attempt | 2026-11-03 | Added 2 internal links from Links to add | 0.8 → 1.3 | 0.6% → 1.1% | 8.0 → 6.0 |
+| /research | 2026-11-03 | Added 2 internal links from Links to add | 1.1 → 1.0 | 3.4% → 3.6% | 5.5 → 4.2 |
+| /tr/presidency/white-house-family/white-house-gang | 2026-11-03 | Added 2 internal links from Links to add | 0.0 → 0.0 | 1.9% → 0.0% | 6.0 → 7.0 |
+| /tr/presidency/conservation/governors-conference | 2026-11-03 | Added 2 internal links from Links to add | 0.3 → 1.0 | 3.4% → 8.6% | 4.8 → 2.8 |
+| /tr/rise-to-power/jacob-riis | 2026-11-03 | Added 1 internal link from Links to add | 1.7 → 5.3 | 0.6% → 1.1% | 4.9 → 4.3 |
+| /tr/strenuous-life/explorer | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 0.0 | 1.1% → 0.0% | 5.0 → 4.1 |
+| /tr/presidency/race | 2026-11-03 | Added 2 internal links from Links to add | 3.8 → 3.3 | 1.2% → 0.9% | 4.4 → 3.6 |
+| /visit/itineraries | 2026-11-03 | Added 1 internal link from Links to add; Link to the I-94 guide | 2.7 → 2.7 | 1.6% → 1.8% | 6.5 → 6.4 |
+| /tr/presidency/executive-power | 2026-11-03 | Added 2 internal links from Links to add | 2.9 → 12.3 | 1.5% → 1.7% | 4.1 → 3.8 |
+| /tr/presidency/conservation/national-forests | 2026-11-03 | Added 2 internal links from Links to add | 0.5 → 0.0 | 0.8% → 0.0% | 6.0 → 5.7 |
+| /visit/itineraries/black-hills-loop | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 0.7 | 1.0% → 2.5% | 8.3 → 7.5 |
+| /visit/itineraries/7-day-billings-bismarck | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.0 | 0.5% → 0.0% | 8.6 → 8.4 |
+| /tr/10-myths-teddy-bear | 2026-11-03 | Added 1 internal link from Links to add | 5.2 → 6.7 | 0.8% → 1.1% | 5.5 → 6.0 |
+| /tr/post-presidency/bull-moose/platform | 2026-11-03 | Added 1 internal link from Links to add | 8.6 → 13.3 | 0.7% → 0.5% | 5.0 → 3.8 |
+| /tr/for-educators/elementary | 2026-11-03 | Added 1 internal link from Links to add | 1.2 → 1.7 | 2.5% → 3.0% | 6.2 → 6.1 |
+| /tr/people/alice-longworth | 2026-11-03 | Added 1 internal link from Links to add; Title 'Alice Roosevelt Longworth: Theodore Roosev | 3.7 → 3.7 | 0.4% → 0.4% | 8.0 → 7.3 |
+| /tr/tr-save-the-bison | 2026-11-03 | Added 1 internal link from Links to add | 2.1 → 3.7 | 1.5% → 2.4% | 5.1 → 4.9 |
+| /tr/presidency/trust-busting | 2026-11-03 | Added 1 internal link from Links to add; Title 'What Was Trust-Busting? Roosevelt Takes On | 36.2 → 59.7 | 1.3% → 1.6% | 3.4 → 3.1 |
+| /tr/complex-legacy | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 0.0 | 1.7% → 0.0% | 6.0 → 6.1 |
+| /podcast/good-citizen/susan-berfield | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.3 | 0.5% → 2.2% | 5.6 → 5.7 |
+| /tr/badlands/bad-lands-cow-boy | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.0 | 0.3% → 0.0% | 8.6 → 7.0 |
+| /tr/presidency/great-white-fleet | 2026-11-03 | Added 1 internal link from Links to add; Title 'The Great White Fleet: Roosevelt's Global  | 6.6 → 17.0 | 0.7% → 1.3% | 4.1 → 3.2 |
+| /tr/badlands/ten-facts | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 2.3 | 1.1% → 3.3% | 5.1 → 4.7 |
+| /podcast/good-citizen/susannah-cahalan | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.7 | 0.2% → 0.6% | 9.2 → 10.0 |
+| /tr/presidency/bully-pulpit | 2026-11-03 | Added 1 internal link from Links to add; Title 'The Bully Pulpit: Meaning, Origin, and Exa | 5.7 → 13.0 | 0.6% → 0.6% | 4.6 → 3.1 |
+| /tr/speeches/man-in-the-arena | 2026-11-03 | Added 1 internal link from Links to add; Title 'Man in the Arena Speech: Citizenship in a  | 25.7 → 62.7 | 2.3% → 3.0% | 5.2 → 5.7 |
+| /tr/complex-legacy/eugenics | 2026-11-03 | Added 1 internal link from Links to add | 3.5 → 2.7 | 2.9% → 2.2% | 4.2 → 4.1 |
+| /tr/people/jacob-riis | 2026-11-03 | Added 1 internal link from Links to add; Title and description aimed at 'who was Jacob Rii | 16.4 → 39.0 | 0.5% → 1.1% | 6.6 → 5.9 |
+| /tr/badlands/maltese-cross | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 0.0 | 3.1% → 0.0% | 6.5 → 5.9 |
+| /tr/people/elliott | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 9.4 → 9.0 |
+| /tr/rise-to-power/vice-presidency | 2026-11-03 | Added 1 internal link from Links to add | 1.9 → 3.3 | 0.7% → 0.7% | 5.4 → 4.7 |
+| /tr/family/elliott-roosevelt | 2026-11-03 | Added 1 internal link from Links to add | 1.1 → 2.0 | 0.5% → 0.9% | 7.5 → 6.9 |
+| /tr/badlands | 2026-11-03 | Added 1 internal link from Links to add; Link to where-to-see | 0.1 → 0.0 | 1.1% → 0.0% | 5.3 → 7.6 |
+| /podcast/good-citizen/carly-fiorina | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.4% → 0.0% | 8.7 → 6.2 |
+| /tr/badlands/medora | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.4% → 0.0% | 7.8 → 7.6 |
+| /virtual | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.0 | 5.1% → 0.0% | 6.3 → 8.1 |
+| /tr/books-and-writings/reader | 2026-11-03 | Added 1 internal link from Links to add | 1.2 → 0.7 | 1.9% → 1.1% | 5.2 → 5.4 |
+| /tr/complex-legacy/race | 2026-11-03 | Added 1 internal link from Links to add | 0.9 → 3.7 | 0.9% → 1.5% | 4.9 → 4.6 |
+| /tr/people/john-muir | 2026-11-03 | Added 1 internal link from Links to add | 1.0 → 0.0 | 0.5% → 0.0% | 7.2 → 6.5 |
+| /tr/complex-legacy/equestrian-statue | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.3 | 1.5% → 0.5% | 5.5 → 5.4 |
+| /tr/people/ethel | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.0 | 0.3% → 0.0% | 7.8 → 8.1 |
+| /tr/rise-to-power/becoming-president | 2026-11-03 | Added 1 internal link from Links to add | 1.4 → 4.0 | 0.3% → 0.6% | 5.3 → 4.0 |
+| /tr/people/ted-jr | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 0.3 | 0.1% → 0.1% | 10.2 → 10.1 |
+| /tr/people/mittie | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 1.0 | 0.6% → 1.4% | 7.5 → 6.5 |
+| /podcast/good-citizen/katherine-gehl | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.3 | 1.1% → 2.8% | 8.2 → 8.8 |
+| /visit/itineraries/7-day-bismarck-rapid-city | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 0.3 | 0.4% → 0.5% | 8.1 → 8.3 |
+| /tr/early-life/childhood-illness | 2026-11-03 | Added 1 internal link from Links to add | 2.3 → 5.3 | 1.8% → 2.4% | 4.0 → 3.5 |
+| /tr/presidency/square-deal | 2026-11-03 | Added 1 internal link from Links to add; Truncated description fixed; Three Cs heading; Sp | 20.7 → 117.3 | 0.6% → 1.6% | 4.4 → 2.9 |
+| /tr/presidency/conservation/john-muir | 2026-11-03 | Added 1 internal link from Links to add | 3.2 → 4.7 | 1.1% → 1.1% | 4.5 → 4.1 |
+| /tr/myths | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.3 | 0.5% → 9.1% | 8.0 → 4.9 |
+| /tr/early-life/young-naturalist | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.9% → 0.0% | 4.9 → 3.7 |
+| /tr/presidency/cabinet | 2026-11-03 | Added 1 internal link from Links to add | 1.0 → 1.0 | 1.1% → 0.7% | 5.0 → 5.3 |
+| /tr/people/booker-t-washington | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 1.0 | 0.2% → 0.2% | 9.4 → 8.5 |
+| /project/design | 2026-11-03 | Added 1 internal link from Links to add | 5.5 → 3.0 | 3.7% → 2.1% | 4.5 → 5.3 |
+| /tr/early-life/family-travels | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.7 | 1.4% → 4.1% | 5.2 → 4.4 |
+| /podcast/good-citizen/adam-met-climate-action-musical-stardom-and-art-building-movement | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 11.5 → 11.1 |
+| /tr/conservation | 2026-11-03 | Added 1 internal link from Links to add | 1.1 → 2.0 | 1.0% → 1.7% | 7.2 → 7.5 |
+| /tr/speeches/confession-of-faith | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 1.7 | 1.1% → 2.4% | 7.0 → 6.9 |
+| /podcast/good-citizen/senator-mitt-romney-formative-moments-presidential-leadership-and-question | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.3 | 0.1% → 0.4% | 7.7 → 7.1 |
+| /tr/homes-and-places | 2026-11-03 | Added 1 internal link from Links to add | 1.2 → 1.3 | 1.1% → 1.1% | 5.9 → 5.1 |
+| /tr/early-life/civil-war | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.7 | 0.6% → 1.4% | 5.1 → 4.3 |
+| /tr/early-life/day-in-the-life | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.6% → 0.0% | 6.9 → 9.7 |
+| /visit/national-park | 2026-11-03 | Added 1 internal link from Links to add; Visit length, restaurant name; link to where-to-s | 4.4 → 4.0 | 0.6% → 0.8% | 8.1 → 8.4 |
+| /tr/people/gifford-pinchot | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.7 | 0.9% → 0.8% | 6.3 → 5.8 |
+| /tr/post-presidency/bull-moose | 2026-11-03 | Added 1 internal link from Links to add | 5.6 → 12.3 | 0.6% → 0.7% | 4.6 → 4.0 |
+| /visit/hiking | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 0.0 | 0.7% → 0.0% | 7.1 → 7.4 |
+| /beam-signing-ceremony | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 7.9 → 4.8 |
+| /project/native-plant-project | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 0.7 | 0.9% → 3.0% | 4.6 → 7.0 |
+| /tr/homes-and-places/tr-national-park | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 1.0 | 0.7% → 0.9% | 7.1 → 7.5 |
+| /visit/hunting-fishing | 2026-11-03 | Added 1 internal link from Links to add | 0.8 → 1.3 | 1.1% → 1.9% | 7.3 → 6.1 |
+| /about/mission | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 0.0 | 2.3% → 0.0% | 4.7 → 2.2 |
+| /tr/rise-to-power/civil-service | 2026-11-03 | Added 1 internal link from Links to add | 2.1 → 1.0 | 0.6% → 0.2% | 5.3 → 5.5 |
+| /tr/badlands/elkhorn-ranch | 2026-11-03 | Added 1 internal link from Links to add | 0.6 → 0.3 | 0.8% → 0.4% | 7.6 → 6.2 |
+| /visit/stargazing | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 0.0 | 1.3% → 0.0% | 6.2 → 5.7 |
+| /podcast/good-citizen/dr-vivek-murthy-loneliness-staying-human-and-what-true-success-looks | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.3 | 1.0% → 4.0% | 10.4 → 9.8 |
+| /podcast/good-citizen/secretary-deb-haaland | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 6.0 | 0.9% → 1.4% | 7.5 → 7.1 |
+| /visit/itineraries/river-road | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.7% → 0.0% | 7.3 → 7.7 |
+| /tr/presidency/white-house-workers | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.0 | 1.4% → 0.0% | 6.5 → 7.9 |
+| /podcast/good-citizen/matthew-barzun | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.9% → 0.0% | 8.5 → 8.7 |
+| /tr/early-life/father | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.3 | 0.5% → 0.4% | 6.7 → 6.8 |
+| /visit/camping | 2026-11-03 | Added 1 internal link from Links to add | 0.8 → 0.7 | 1.4% → 1.1% | 7.5 → 7.1 |
+| /tr/presidency/conservation/antiquities-act | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.7 | 0.9% → 1.0% | 6.1 → 5.9 |
+| /visit/trolley | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.0 | 1.6% → 0.0% | 6.9 → 7.1 |
+| /tr/badlands/landscape | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.7 | 0.6% → 0.9% | 5.9 → 5.3 |
+| /visit/little-missouri-river | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 0.0 | 1.1% → 0.0% | 7.8 → 5.9 |
+| /podcast/good-citizen/ben-jealous | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 10.2 → 12.4 |
+| /podcast/good-citizen/dan-harris | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 8.8 → 9.4 |
+| /visit/outdoors | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.0 | 1.4% → 0.0% | 6.6 → 6.1 |
+| /visit/biking | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.3 | 2.1% → 2.8% | 7.3 → 7.5 |
+| /visit/wildlife | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.0 | 0.6% → 0.0% | 7.8 → 6.9 |
+| /project | 2026-11-03 | Added 1 internal link from Links to add; Title 'Building the Library: Design, Values and S | 5.0 → 1.7 | 0.5% → 0.2% | 2.4 → 2.6 |
+| /tr/people/leonard-wood | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 1.3 | 0.2% → 0.9% | 8.8 → 6.2 |
+| /podcast/good-citizen/katharine-hayhoe | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 8.5 → 9.0 |
+| /visit/itineraries/weekend-drives/fargo | 2026-11-03 | Added 1 internal link from Links to add | 0.6 → 0.7 | 1.1% → 1.8% | 5.0 → 5.4 |
+| /about/press/press-releases/trplf-elects-spencer-zwick-board | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.0 | 1.6% → 0.0% | 4.3 → 3.5 |
+| /visit/itineraries/weekend-drives/bismarck | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 1.3 | 1.0% → 4.1% | 5.1 → 3.9 |
+| /tr/presidency/second-term | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.7 | 1.8% → 2.4% | 6.0 → 4.5 |
+| /tr/books-and-writings | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.0 | 0.8% → 0.0% | 8.7 → 7.9 |
+| /tr/badlands/frontier-life | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.7 | 0.8% → 1.9% | 6.5 → 5.4 |
+| /about/trustees/beth-laski | 2026-11-03 | Added 1 internal link from Links to add | 0.8 → 1.0 | 8.2% → 11.1% | 9.8 → 15.8 |
+| /about/press/press-releases/theodore-roosevelt-presidential-library-launches-good-citizen-podcast | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 5.9 → 3.8 |
+| /about/presidential-library-system | 2026-11-03 | Added 1 internal link from Links to add | 0.6 → 0.0 | 2.3% → 0.0% | 6.2 → 5.9 |
+| /about/press/press-releases/trplf-announces-100-million-commitments-unlocks-50-million-state | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.0 | 2.8% → 0.0% | 4.9 → 3.5 |
+| /tr/new-york-politics | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.9% → 0.0% | 7.0 → 6.8 |
+| /tr/tr-importance | 2026-11-03 | Title 'What Was Theodore Roosevelt Known For?'; typo fix | 12.9 → 15.7 | 1.0% → 0.8% | 4.9 → 4.6 |
+| /visit | 2026-10-27 | Title: Plan Your Visit: Tickets, Hours and Directions; Visit length: about three and a hal | 57.3 → 29.7 | 2.5% → 1.8% | 2.7 → 3.0 |
+| /tr/presidency/panama-canal | 2026-10-27 | Title and description: Theodore Roosevelt and the Panama Canal, 1903–1914 | 8.2 → 17.6 | 0.4% → 0.6% | 5.2 → 4.7 |
+| /tr/presidency/railroad-regulation | 2026-10-27 | Title names the Hepburn Act and Elkins Act | 3.9 → 6.5 | 0.4% → 0.7% | 4.0 → 3.4 |
+| /tr/presidency/coal-strike | 2026-10-27 | Title uses 'Anthracite Coal Strike of 1902' | 7.9 → 7.7 | 0.9% → 0.9% | 4.2 → 2.9 |
+| /visit/groups | 2026-10-27 | Visit length changed from about three hours to about three and a half hours | 0.1 → 0.1 | 0.6% → 3.0% | 6.5 → 5.6 |
+| /visit/faq/tickets | 2026-10-27 | 'Buy tickets' link fixed (was /visit/tickets, a 404); 301 /visit/tickets -> /tickets | 2.0 → 1.2 | 4.3% → 3.4% | 6.3 → 4.8 |
+| /visit/faq | 2026-10-27 | Tickets link fixed (was /visit/tickets, a 404) | 2.1 → 0.5 | 0.8% → 1.5% | 4.7 → 6.6 |
+| /tr/presidency/brownsville | 2026-10-20 | Title 'The Brownsville Affair of 1906: What Happened and Why'; Medal of Honor claim and da | 0.9 → 2.3 | 0.0% → 0.1% | 6.3 → 4.5 |
+| /tr/presidency/roosevelt-corollary | 2026-10-20 | Title 'Roosevelt Corollary to the Monroe Doctrine, Explained'; stray second H1 section rem | 6.6 → 16.8 | 0.2% → 0.3% | 5.4 → 4.1 |
+| /visit/hours | 2026-10-20 | Title 'Hours in Medora: Seasonal Schedule and Last Entry'; visit-length bullet | 27.0 → 13.4 | 1.2% → 1.1% | 2.7 → 2.2 |
+| /tr/myths/teddy-name | 2026-10-20 | Archived; 301 to /tr/teddy-nickname | 0.2 → 0.3 | 1.2% → 0.5% | 6.2 → 5.3 |
+| / | 2026-10-20 | Description mentions 'Teddy' | 353.1 → 262.8 | 3.8% → 9.5% | 8.0 → 6.4 |
+| /visit/itineraries/one-day | 2026-10-20 | Visit length and restaurant name | 3.5 → 2.0 | 4.1% → 3.6% | 3.9 → 3.8 |
+| /visit/itineraries/4-days-north-dakota | 2026-10-20 | Visit length and restaurant name | 0.7 → 0.7 | 1.4% → 1.8% | 7.6 → 7.2 |
+| /visit/itineraries/seattle-badlands | 2026-10-20 | Visit length and restaurant name | 0.1 → 0.1 | 1.2% → 0.5% | 6.7 → 8.0 |
+| /visit/i-94 | 2026-10-20 | New page: Best Stops on I-94 in North Dakota | 0.0 → 0.0 | – → 0.0% | – → 5.8 |
 | /tr/badlands/where-to-see | 2026-10-20 | New page: Where to See Theodore Roosevelt's North Dakota | 0.0 → 0.0 | – → – | – → – |
-| /tr/badlands | 2026-10-20 | Link to where-to-see | 0.1 → 0.1 | 0.5% → 1.2% | 5.1 → 5.1 |
-| /visit/medora/history | 2026-10-20 | North Dakota quote aligned to the 1918 Volwiler letter | 1.6 → 1.0 | 1.4% → 1.1% | 7.1 → 7.0 |
 
-## Drafted recommendations (Gemini (gemini-3.8-flash), 2026-11-02T13:05:54+00:00)
-_2 AI claims were dropped because the live page contradicted them._
+## Drafted recommendations (Gemini (gemini-3.8-flash), 2026-11-09T13:00:56+00:00)
+_4 AI claims were dropped because the live page contradicted them._
 
-**AI visibility:** ChatGPT reliably recommends the Library for Medora trips and museum queries, while Gemini overlooks it entirely on regional travel itineraries and both engines miss it on Roosevelt history questions.
-- Build road-trip landing pages highlighting drive times between Mount Rushmore, the Black Hills, and Medora, noting the 3 1/2 hour library visit. (medium effort; trlibrary.com/visit/road-trips): Both engines fail to connect travel between Mount Rushmore and Theodore Roosevelt National Park with a stop at the Library.
-- Coordinate with North Dakota Tourism (ndtourism.com) and Medora partner sites to add Library entries to family, indoor, and rainy-day directories. (low effort; ndtourism.com and medora.com): Gemini draws heavily from ndtourism.com and medora.com for itinerary answers, causing it to miss the Library across standard travel prompts.
-- Publish educational overview pages detailing Roosevelt's life, his conservation milestones, and his presidency. (high effort; trlibrary.com/history): AI engines currently rely on general encyclopedia pages and NPS sites for historical questions, bypassing the Library completely.
+**AI visibility:** The Library reliably surfaces on direct branded queries and general Medora recommendations on ChatGPT, but vanishes completely from regional road trips, family itineraries, indoor activities, and broader historical searches.
+- Publish an itinerary guide connecting an I-94 road trip and Black Hills drives to a 3 1/2 hour stop in Medora. (medium effort; trlibrary.com/visit/itineraries): AI engines rely heavily on state tourism guides and travel blogs for road-trip queries, where the Library is currently absent.
+- Create dedicated web copy highlighting indoor gallery experiences, climate-controlled spaces, and family-friendly exploration. (low effort; trlibrary.com/visit/families): ChatGPT and Gemini direct travelers to Chateau de Mores and the Cowboy Hall of Fame whenever rain, heat, or kids are mentioned.
+- Request partner updates on North Dakota Tourism (ndtourism.com) and Medora Chamber (medorand.org) to feature the Library in museum and indoor attraction directories. (medium effort; ndtourism.com and medorand.org partner listings): These regional travel domains are the primary sources cited by AI engines for North Dakota museum and badlands searches.
+- Add educational resource pages detailing Roosevelt's conservation policies, Badlands years, and presidency. (high effort; trlibrary.com/learn): Engines pull answers for historical prompts from educational domains, bypassing the Library entirely for TR biographical queries.
 
-**/tr/people/alice-longworth**: High search volume targets Alice as Theodore Roosevelt's daughter and queries about her life and death; clarifying her identity immediately under the title and adding structured quick facts will capture high-intent search traffic and AI summaries.
-- Title: Alice Roosevelt Longworth: TR's Outspoken Daughter
-- Meta: Explore the life of Alice Roosevelt Longworth, TR's rebellious daughter: White House antics, global diplomacy, and six decades of sharp Washington wit.
-- Verify: Verify whether the exact day and month of Alice Roosevelt Longworth's death in 1980 is available in Library records if the team wishes to display more than the year 1980.
+**/tr/rise-to-power/spanish-american-war**: Shorten the oversized title to target high-volume search queries and add a concise summary answering Roosevelt's exact wartime roles to capture high-intent informational queries and AI overviews.
+- Title: Theodore Roosevelt and the Spanish-American War
+- Meta: See how Theodore Roosevelt shaped the Spanish-American War, from readying the Navy to fighting in Cuba, launching him toward the presidency.
+- Verify: Verify that the draft summary describing Roosevelt's three wartime roles accurately reflects the historical consensus and page scope.; Verify whether 'From the Archives' was intended to embed digital assets directly or link out to the TR Center.
 
-**/tr/post-presidency/bull-moose/platform**: Searchers frequently look for basic definitions of the Bull Moose Party and its core beliefs, but the page opens without a quick, direct definition before diving into deep policy analysis.
-- Title: Bull Moose Party Platform: 1912 Progressive Beliefs
-- Meta: Explore the Bull Moose Party platform of 1912, from women's suffrage and labor laws to direct democracy. See the bold beliefs that reshaped American policy.
-- Verify: Confirm that the suggested draft definition text accurately reflects the Library's educational guidelines for describing third parties in US history.
+**/visit/lodging**: Expand the brief title and truncated meta description to target high-volume searches for Medora ND hotels, and add clear pacing details explaining how to pair an overnight stay with a 3 1/2 hour Library visit.
+- Title: Hotels & Lodging in Medora, ND
+- Meta: Find hotels, cabins, and campgrounds in Medora, ND near Theodore Roosevelt National Park. Compare places to stay and book early for summer.
+- Verify: Confirm that the Medora Stageline Trolley routes and listed hotel stops remain accurate and operating as described.
 
-**/tr/presidency/great-white-fleet**: Optimize the page for high-volume definition and purpose queries by shortening the title to under 60 characters and adding a concise definition summary block near the top.
-- Title: The Great White Fleet: Roosevelt's Global Voyage
-- Meta: Discover why Theodore Roosevelt sent sixteen white battleships on a 43,000-mile world voyage and how the daring journey reshaped American diplomacy.
-- Verify: Verify the draft statement that the fleet traveled to twenty ports across six continents (matches existing page text).; Verify whether all sixteen battleships were commissioned battleships of the Atlantic Fleet during the entire departure.; Verify dates: departure on December 16, 1907, and return on February 22, 1909 (matches existing page text).
+**/tr/presidency/food-and-drug**: The page ranks near the top of page one for high-volume definition and comparison queries, but it lacks a concise summary box distinguishing the Pure Food and Drug Act from the Meat Inspection Act to capture featured snippets and AI answers.
+- Title: Pure Food and Drug Act of 1906 & Meat Inspection
+- Meta: See how Upton Sinclair's The Jungle and Dr. Wiley's Poison Squad pushed Theodore Roosevelt to sign the Pure Food and Drug Act of 1906, creating the FDA.
+- Verify: Verify that the enactment date of June 30, 1906 applies equally to both the Meat Inspection Act and the Pure Food and Drug Act as referenced in the text.; Check that Bureau of Chemistry is accurately cited as the sole enforcement arm specified in the 1906 act.
 
-**/tr/speeches/man-in-the-arena**: Capture high-intent searches for the full speech and its meaning by adding a dedicated transcript download link and an explicit summary of the core message.
-- Title: Man in the Arena Speech: Citizenship in a Republic
-- Meta: Explore Theodore Roosevelt's famous Man in the Arena passage from his 1910 Sorbonne speech, discover its enduring meaning, and read the full address.
-- Verify: Confirm that the Theodore Roosevelt Center at Dickinson State University offers a direct link or downloadable PDF of the complete 'Citizenship in a Republic' transcript before adding direct download links.
+**/contact**: Expand the thin contact text with clear directions, location context in Medora, and practical visitor guidance so both searchers and AI engines get direct answers to address, phone, and trip inquiries.
+- Title: Contact, Address & Location in Medora
+- Meta: Find the address, phone number, and mailing details for the Theodore Roosevelt Presidential Library in Medora, North Dakota. Reach out or plan your trip.
+- Verify: Verify whether 701-892-6070 is the primary general public visitor phone line or an administrative line.; Verify the exact URL and link text for the referenced hours page.
 
-**/tr/tr-importance**: This page captures strong search volume for what Theodore Roosevelt was known for and accomplished, but it currently lacks a dedicated summary section answering those high-intent queries directly and omits any connection to visiting the Library in Medora.
-- Title: What Was Theodore Roosevelt Known For?
-- Meta: Discover what Theodore Roosevelt accomplished, from leading the Rough Riders and protecting 230 million acres of public land to reforming food safety laws.
-- Verify: Confirm whether the Library's connection to Theodore Roosevelt National Park should be specifically referenced in visitor-facing context on this page.
+**/tr/people/archibald**: Add an easy-to-scan quick facts section to capture biographical queries like Archie's nickname and year of death, while aligning subheadings to match high-volume searches for 'Archie Roosevelt.'
+- Title: Archie Roosevelt: TR's Son Wounded in Two World Wars
+- Meta: Discover Archibald 'Archie' Roosevelt: TR's third son, wounded in both world wars, and the only soldier rated fully disabled twice. Read his story.
+- Verify: Confirm middle name 'Bulloch' and whether he had four children, including Archibald Jr., with Grace.; Confirm exact month and year of Archie Roosevelt's death in 1979 if added to the text.
 
-**/tr/timeline**: High-volume searches target specific biographical questions like TR's birthplace, early life, and age upon taking office; adding a quick-facts summary at the top and section jump-links will capture these searchers and feed AI answer engines immediately.
-- Title: Theodore Roosevelt Timeline: Life and Key Milestones
-- Meta: Explore the key dates of Theodore Roosevelt’s life, from his New York childhood and Badlands ranching to the presidency. Walk through his journey here.
-- Verify: Verify that all drafted dates and family details (October 27, 1858; September 8, 1883; September 14, 1901; age 42) match the Library's preferred timeline copy.; Verify whether the timeline's final entries include his death date and location, as queries regarding his death receive heavy search traffic but were not in the provided excerpt.
+**/tr/rise-to-power/rough-riders**: Add a clear definition and summary at the top of the page answering who the Rough Riders were and what they did to capture top-ranking search snippets and AI overviews.
+- Title: The Rough Riders: Who They Were and What They Did
+- Meta: Who were the Rough Riders? Discover how 1,000 cowboys, miners, and Ivy League athletes trained in Texas and charged into history in Cuba.
+- Verify: Verify that the official designation was the 1st U.S. Volunteer Cavalry and that it was raised in 1898 for the Spanish-American War.; Verify that the regiment disembarked at Daiquiri and disbanded at Montauk Point in September 1898 as stated in the draft summary.
 
-**/tr/presidency/bully-pulpit**: This page attracts thousands of searches for basic definitions and examples of the 'bully pulpit,' but buries the definition in running text. Adding a direct, clear definition and an explicit 'examples' structure will capture high-volume definition queries and AI answer engines.
-- Title: The Bully Pulpit: Meaning, Origin, and Examples
-- Meta: What did Theodore Roosevelt mean by 'bully pulpit'? Discover the definition, why 'bully' meant 'wonderful,' and how TR used the press to shape the nation.
-- Verify: Confirm that nineteenth-century colloquial usage of 'bully' as slang for 'first-rate' or 'excellent' aligns with Library historical standards before publishing definition copy.
+**/visit/itineraries/enchanted-highway**: Turn this roadside itinerary into an essential regional road-trip connector between Bismarck, the Enchanted Highway, and Medora, highlighting how the 32-mile sculpture drive naturally pairs with a 3 1/2-hour visit to the Theodore Roosevelt Presidential Library.
+- Title: Enchanted Highway Road Trip Guide: Map & Stops
+- Meta: Plan your drive along North Dakota's Enchanted Highway to Regent. See all 7 giant scrap-metal sculptures, then head west to Medora. Get driving tips.
+- Verify: Confirm that pairing the morning Enchanted Highway drive with an afternoon 3 1/2-hour visit to the Theodore Roosevelt Presidential Library fits current public access schedules.
 
-**/tr/presidency/elections**: Shorten and front-load the page title to capture dominant 1904 presidential election search traffic, and add explicit summary panels for election candidates, vote counts, and key facts to answer AI search and direct user queries.
-- Title: 1904 Presidential Election: Roosevelt's Mandate
-- Meta: Discover how Theodore Roosevelt won the 1904 presidential election in a landslide over Alton B. Parker, and why his victory-night pledge changed history.
-- Verify: Verify whether Henry G. Davis was Alton B. Parker's official vice-presidential running mate in 1904 before adding him to candidate callout copy.
+**/about/trustees/kermit-roosevelt**: Expand Kermit Roosevelt's brief biography to explain his active role on the Board of Trustees and disambiguate him from his historical namesake relatives.
+- Title: Kermit Roosevelt, Trustee
+- Meta: Read the bio of Kermit Roosevelt, University of Pennsylvania law professor, novelist, and Theodore Roosevelt Presidential Library trustee.
+- Verify: Confirm Kermit Roosevelt's official board title and start date at the Theodore Roosevelt Presidential Library.; Confirm whether Kermit Roosevelt should be formally styled as Kermit Roosevelt III on trustee listings.
 
 ## Visitor experience (/visit pages)
-Findability 44/100, mobile speed 49/100, accessibility 94/100, average reading grade 8.2, 0 facts that disagree between pages.
+Findability 42/100, mobile speed 56/100, accessibility 96/100, average reading grade 8.3, 0 facts that disagree between pages.
 
 ### Can a first-time visitor find what they need?
 | Page | Score | Missing or buried | Biggest fix |
 |---|---|---|---|
-| /visit | 79 | directions, accessibility, food | Add clear parking instructions to the Directions section and cut the overwhelming directory of regional links at the bottom. |
-| /visit/accessibility | 35 | hours, price, buy | Add stroller policy details alongside the wheelchair guidance, as parents frequently check accessibility pages for stroller access. |
-| /visit/directions | 61 | visit_length, accessibility, food | Add the recommended 3 1/2-hour visit duration near the top driving section so travelers can properly plan driving stopovers. |
-| /visit/eat | 42 | hours, directions, visit_length, accessibility | Add a link or note clarifying Library opening hours and that a typical visit takes about 3 1/2 hours. |
-| /visit/faq | 75 |  | Answer the top core questions directly on this hub page—including opening hours, admission prices, and the recommended 3 1/2 hour visit time—so visitors do not have to click through multiple subpages. |
-| /visit/faq/tickets | 35 | hours, visit_length, accessibility | State ticket prices and admission tiers directly on this page so visitors do not have to leave the FAQ to learn costs. |
-| /visit/groups | 32 | hours, price, directions, accessibility, food | Add essential arrival logistics for tour planners, specifically daily operating hours, bus parking directions, and group drop-off instructions. |
-| /visit/hours | 68 | visit_length, accessibility | – |
-| /visit/lodging | 14 | hours, price, buy, directions, visit_length, accessibility, food | Add quick jump links at the top so mobile visitors can tap directly to hotels, cabins, or campgrounds without scrolling through an exhaustive directory. |
-| /visit/maps | 43 | visit_length, accessibility, food | Add notes on stroller and wheelchair accessibility for the boardwalk and state that exploring the campus takes about 3 1/2 hours. |
-| /visit/tickets/plan-ahead | 0 | hours, price, buy, directions, visit_length, accessibility, food | Add the interactive ticket reservation tool alongside links to essential visit details like pricing, operating hours, and directions. |
+| /visit | 82 | directions, food | Add clear parking instructions to the Directions section so drivers arriving in Medora know exactly where to park. |
+| /visit/accessibility | 29 | hours, price, buy, visit_length, food | Explicitly state whether strollers are permitted alongside wheelchairs across pathways, exhibits, and the boardwalk. |
+| /visit/directions | 68 | visit_length, accessibility | State upfront that visitors should allow about 3 1/2 hours at the Library so travelers can accurately budget their driving and arrival schedules. |
+| /visit/eat | 14 | hours, price, buy, directions, visit_length, accessibility | Add a prominent link back to main visitor planning info—including Library hours, tickets, and parking—and clarify which downtown Medora eateries close outside the summer season. |
+| /visit/faq | 75 |  | Add direct answers to top questions—like typical visit length, hours, and parking—directly on this hub page instead of sending visitors down multiple subpage links. |
+| /visit/faq/tickets | 25 | hours, price, visit_length | Add standard ticket prices and note that visits take about 3 1/2 hours so visitors can plan their budget and schedule before starting checkout. |
+| /visit/groups | 32 | hours, price, directions, accessibility, food | Add essential logistics for group coordinators, including daily operating hours, motorcoach parking, and bus drop-off instructions. |
+| /visit/hours | 68 | visit_length, accessibility | Place the 3.5-hour visit length and 90-minute last-entry cutoff at the very top so mobile visitors understand timing before sorting through seasonal tables. |
+| /visit/lodging | 25 | hours, price, directions, visit_length, accessibility, food | Advise visitors to allow at least 3 1/2 hours for the Library when choosing how many nights to book in Medora. |
+| /visit/maps | 43 | visit_length, accessibility, food | Add an immediate mobile-friendly map preview with key amenities like parking, restrooms, accessible routes, and the 3 1/2 hour recommended visit pace. |
+| /visit/tickets/plan-ahead | 0 | hours, price, buy, directions, visit_length, accessibility, food | Embed the working ticket calendar and add essential visit basics, including daily hours and the typical 3 1/2 hour visit length. |
 
 ### Slowest pages on mobile
 | Page | Speed /100 | Load (s) |
 |---|---|---|
-| /visit/itineraries/roosevelt-triangle | 16 | 60.8 |
-| /visit/planner | 24 | 8.2 |
-| /visit/itineraries/10-day-denver-salt-lake-city | 25 | 52.8 |
-| /visit/hiking | 27 | 7.1 |
-| /visit/roosevelt-in-medora | 27 | 15.9 |
-| /visit/itineraries/weekend-drives | 29 | 17 |
-| /visit/directions | 31 | 5.4 |
-| /visit/hours | 33 | 12.5 |
+| /visit/itineraries/roosevelt-triangle | 26 | 17.8 |
+| /visit/stargazing | 26 | 16.9 |
+| /visit/itineraries/dinosaurs | 28 | 7.6 |
+| /visit/itineraries/7-day-billings-bismarck | 29 | 7 |
+| /visit/itineraries/10-day-denver-salt-lake-city | 30 | 38.7 |
+| /visit/itineraries/weekend-drives | 30 | 18.2 |
+| /visit/shopping | 31 | 7 |
+| /visit/activities | 32 | 5.1 |
 
 ### Accessibility problems found
 - ARIA `tooltip` elements do not have accessible names.
@@ -464,7 +1022,6 @@ Findability 44/100, mobile speed 49/100, accessibility 94/100, average reading g
 - Elements use prohibited ARIA attributes
 - Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.
 - Heading elements are not in a sequentially-descending order
-- Image elements do not have `[alt]` attributes
 - Links do not have a discernible name
 - List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements.
 - Touch targets do not have sufficient size or spacing.
@@ -472,7 +1029,7 @@ Findability 44/100, mobile speed 49/100, accessibility 94/100, average reading g
 - `[role]`s are not contained by their required parent element
 
 ## Internal links and broken links
-0 broken internal addresses (0 links), 1176 links worth adding, 50 pages with no links in, 20 topics with two pages, 42 broken outside links (LinkChecker scan 2026-11-02 04:24 UTC).
+0 broken internal addresses (0 links), 746 links worth adding, 45 pages with no links in, 20 topics with two pages, 41 broken outside links (LinkChecker scan 2026-11-09 04:24 UTC).
 
 ### Broken links on trlibrary.com: 301 redirects to add
 Add a 301 redirect in Drupal (Configuration > Search and metadata > URL redirects) from each broken address to redirect_to; bulk import: https://seo.labs.trlibrary.com/data/redirects.csv. High confidence = safe; check medium/low first. Ticket-store paths should also be corrected on the page to the full access.trlibrary.com address.
@@ -482,75 +1039,75 @@ _None._
 ### Links to add (highest value first; the [[bracketed]] words become the link)
 | On page | Context | Link to |
 |---|---|---|
-| /visit/directions | …cts three iconic destinations of the American West: the Library in Medora, North Dakota , [[Mount Rushmore]] in South Dakota , and Yellowstone National Park in Wyoming . | /tr/tr-mount-rushmore |
-| /tr/legacy/rankings | Roosevelt’s enduring popularity is carved in granite at [[Mount Rushmore]], beside Washington, Jefferson, and Lincoln. (Dean Franklin, CC BY-SA) | /tr/tr-mount-rushmore |
-| /visit/itineraries | …r and Olympic — along with Devils Tower , the first national monument in the country, and [[Mount Rushmore]]. | /tr/tr-mount-rushmore |
-| /tr/legacy/the-library | … is being called the "Theodore Roosevelt Triangle," composed of the Presidential Library, [[Mount Rushmore]] (about four and a half hours south), and Yellowstone National Park (about seven hours wes… | /tr/tr-mount-rushmore |
-| /research/archives | …s in this collection include correspondence from Gutzon Borglum regarding the creation of [[Mount Rushmore]], letters examining national politics, and items relating to the history of the Rough Ride… | /tr/tr-mount-rushmore |
-| /visit/itineraries/7-day-billings-bismarck | …ed. The route runs through Yellowstone, over the Beartooth Highway, past Devils Tower and [[Mount Rushmore]], and into the North Dakota Badlands that made him. | /tr/tr-mount-rushmore |
-| /visit/itineraries/black-hills-loop | …feet wide. Iron Mountain Road covers seventeen miles of tunnels deliberately cut to frame [[Mount Rushmore]], with pigtail bridges spiralling down the grade. In between, Wind Cave protects both the … | /tr/tr-mount-rushmore |
-| /visit/itineraries/chicago-badlands | Swing south through the Black Hills. From Medora it is about 5 hours to [[Mount Rushmore]] , Custer State Park and Wind Cave National Park , which Roosevelt made the eighth nationa… | /tr/tr-mount-rushmore |
-| /visit/itineraries/north-on-29 | … through the Black Hills rather than back down I 29 — Devils Tower, Custer State Park and [[Mount Rushmore]] are all within reach of the drive south. Our ⁣ covers that ground in detail. | /tr/tr-mount-rushmore |
-| /podcast/good-citizen/call-adventure-charlie-melcher-ed-okeefe-and-brand-new-theodore-roosevelt | … I became intrigued is the Roosevelts aren't sitting there saying, "And now here is where [[Mount Rushmore]] II shall be held." I didn't know that could have been what the disposition was that this … | /tr/tr-mount-rushmore |
-| /tr/family/fdr-connection | Eleanor Roosevelt was born in 1884, the daughter of [[Elliott Roosevelt]], Theodore's younger brother. Elliott had been brilliant, athletic, and promising in youth… | /tr/family/elliott-roosevelt |
-| /tr/legacy/mount-rushmore | [[Mount Rushmore]], the colossal monument carved into the Black Hills of South Dakota, features four preside… | /tr/tr-mount-rushmore |
-| /visit/itineraries/13-day-denver-wyoming | Marvel at [[Mount Rushmore]] . | /tr/tr-mount-rushmore |
-| /tr/tr-mount-rushmore | …projecting power abroad. His work as a trustbuster, conservationist, and champion of the “[[Square Deal]]” represented the country’s maturity—a confident, reform-minded nation ready to lead the w… | /tr/presidency/square-deal |
-| /tr/legacy | The Library, [[Mount Rushmore]], Yellowstone | /tr/tr-mount-rushmore |
-| /tr/presidency-timeline | …at the United States would oppose any further colonization in the Western Hemisphere. The [[Roosevelt Corollary]] went a step further, stating that, if necessary, the United States would intervene to res… | /tr/presidency/roosevelt-corollary |
-| /tr/tr-mount-rushmore | …oosevelt transformed the United States into a world power. He oversaw construction of the [[Panama Canal]], which linked the Atlantic and Pacific Oceans, and negotiated peace in the Russo-Japanese… | /tr/presidency/panama-canal |
-| /tr/family/family-tree | [[Elliott Roosevelt]] (1860–1894), Theodore's younger brother, handsome and athletic but morally troubled. His … | /tr/family/elliott-roosevelt |
-| /tr/complex-legacy/imperialism | …on extended well beyond the Philippines. In 1904, he articulated what became known as the [[Roosevelt Corollary]] to the Monroe Doctrine. The original Monroe Doctrine, issued by President James Monroe in… | /tr/presidency/roosevelt-corollary |
-| /tr/early-life | …8; nearly lost to asthma; a bedroom museum builder, taxidermy student, and Nile traveler. [[Ten facts]] that map the road to Harvard and beyond. | /tr/rise-to-power/ten-facts |
-| /tr/10-myths-teddy-bear | … history blend truth, legend, and charm quite like the tale of Theodore Roosevelt and the [[teddy bear]]. On November 14, 1902, during a hunting trip in Mississippi, Roosevelt refused to shoot a… | /tr/legacy/teddy-bear |
-| /tr/teddy-nickname | …im approachable. Children who would never study the intricacies of the Square Deal or the [[Roosevelt Corollary]] still know “Teddy” as the president who saved a bear. The nickname has humanized him for … | /tr/presidency/roosevelt-corollary |
-| /tr/presidency-timeline | …great achievement of Theodore Roosevelt’s presidency was facilitating the building of the [[Panama Canal]], a 50-mile-long canal that connected the Atlantic Ocean and the Pacific Ocean. Roosevelt … | /tr/presidency/panama-canal |
-| /tr/teddy-nickname | …to make Roosevelt more popular, particularly after the creation of a now familiar toy—the [[teddy bear]]. | /tr/legacy/teddy-bear |
-| /tr/timeline | …t in office to travel to a foreign country. When he visited the construction site for the [[Panama Canal]], he rode in a large steam shovel on November 16, 1906, a moment captured by a well-known … | /tr/presidency/panama-canal |
-| /tr/presidency/ten-facts | …raordinarily popular, and it has remained a staple of American childhood ever since. The "[[teddy bear]]" is one of the most widely recognized symbols of Roosevelt's presidency, yet it emerged f… | /tr/legacy/teddy-bear |
-| /tr/teddy-nickname | …ized: it has made him approachable. Children who would never study the intricacies of the [[Square Deal]] or the Roosevelt Corollary still know “Teddy” as the president who saved a bear. The nick… | /tr/presidency/square-deal |
-| /tr/post-presidency/death | … Workers expressed sorrow for the man who had championed their interests and fought for a [[square deal]] for the ordinary citizen. Conservationists mourned the loss of the man who had preserved … | /tr/presidency/square-deal |
-| /tr/complex-legacy/imperialism | …arilla, who represented French interests and stood to profit enormously from a successful [[Panama Canal]] deal, engaged in active lobbying—and it was Bunau-Varilla, a Frenchman, who signed the Ha… | /tr/presidency/panama-canal |
-| /tr/presidency/elections | …at violated the law, embarked on an ambitious conservation program, and begun work on the [[Panama Canal]]. Roosevelt had also proved his political acumen by building a coalition that united the p… | /tr/presidency/panama-canal |
-| /tr/rise-to-power/buffalo-soldiers | The [[Brownsville incident]] became notorious. Civil rights activists and supporters of the African American community… | /tr/presidency/brownsville |
-| /tr/presidency-timeline | Theodore Roosevelt displayed America’s power to the world when he sent the [[Great White Fleet]], a force of 16 battleships, to sail around the world. The fleet’s journey lasted 14 month… | /tr/presidency/great-white-fleet |
-| /tr/timeline | …st famous speech was given at the Sorbonne in Paris, France, on April 23, 1910. Entitled “[[Citizenship in a Republic]],” it is more popularly known as the “Man in the Arena” speech from its most famous line: … | /tr/speeches/man-in-the-arena |
-| /tr/timeline | … a 14-month circumnavigation of the globe. Later known as President Theodore Roosevelt’s “[[Great White Fleet]]” due to their white paint, the ships traveled around the world until February 22, 1909—ju… | /tr/presidency/great-white-fleet |
-| /tr/myths/misquotes | …l others have been altered from their original form. This page addresses some of the most [[common misquotes]] and provides the accurate information available. | /tr/quotes/misquotes |
-| /visit/exhibits/main | …ort a federal anti-lynching law, stayed silent after the 1906 Atlanta riots, and — in the [[Brownsville affair]] — dishonorably discharged an entire regiment of Black soldiers without trial, staining hi… | /tr/presidency/brownsville |
-| /tr/strenuous-life/hunter | The [[teddy bear]] story reveals something important about Roosevelt's character. Despite his reputation as … | /tr/legacy/teddy-bear |
-| /tr/legacy/rankings | …, mediating the Russo-Japanese War (for which he won the Nobel Peace Prize), building the [[Panama Canal]], and asserting American interests globally. Whether one approves of American imperialism … | /tr/presidency/panama-canal |
-| /tr/presidency-timeline | Theodore Roosevelt ran for his second term in the [[election of 1904]] with running mate Charles W. Fairbanks of Indiana against Democrat Alton B. Parker and ru… | /tr/presidency/elections |
-| /tr/legacy/words-he-coined | Perhaps Roosevelt's most important political phrase was "the [[Square Deal]]"—his promise to American citizens that government would ensure fair dealing among all cla… | /tr/presidency/square-deal |
+| /tr/legacy/rankings | Roosevelt’s enduring popularity is carved in granite at [[Mount Rushmore]], beside Washington, Jefferson, and Lincoln. (National Park Service) | /tr/tr-mount-rushmore |
+| /podcast/good-citizen/senator-chris-murphy | …ganized the neighborhood touch football games. When there was a dress code imposed at our [[high school]], I was the kid who everybody looked to go protest at the teacher's meeting, and I loved o… | /tr/for-educators/high-school |
+| /tr/timeline | …velt had declared he would not run again, promoting the presidency of his cabinet member, [[William Howard Taft]] during the 1908 election. When Roosevelt returned home from his African safari in 1910, h… | /tr/people/william-howard-taft |
+| /tr/tr-mount-rushmore | Learn more about Theodore Roosevelt and his concept of [[executive power]] with this Inquiry Design Model (IDM) lesson plan. | /tr/presidency/executive-power |
+| /tr/timeline | …r, a Brazilian military officer suggested descending an unknown river: Rio da Dúvida, the [[River of Doubt]]. Together Roosevelt, his Brazilian counterpart expedition leader, Cândido Mariano da Silv… | /tr/post-presidency/river-of-doubt |
+| /tr/timeline | Theodore and [[Edith Roosevelt]]’s first child, Theodore Jr. “Ted,” was born at the family home at Sagamore Hill in Oyster… | /tr/rise-to-power/edith-roosevelt |
+| /tr/teddy-nickname | How much do you know about [[Theodore Roosevelt's early life]]? | /tr/early-life |
+| /podcast/good-citizen/senator-chris-murphy | …y hand and say, I'd like to be a part of this. I'd like to run for office. I'd like to be [[in the room]] making decisions. And so I didn't wait. I have never ever looked back because I still do … | /visit/exhibits/kennerly |
+| /tr/presidency-timeline | …ssia and Japan, the Russo-Japanese War ended in September 1905. Roosevelt was awarded the [[Nobel Peace Prize]] for his successful negotiations. He was not able to accept the prize in person. Instead, … | /tr/presidency/nobel-peace-prize |
+| /tr/timeline | …tille Day—July 14, 1918—near Chamery, France. For several days after Quentin’s death, the [[Roosevelt family]] only knew that he had been reported missing. After learning of his death, 59-year-old The… | /tr/family |
+| /tr/timeline | … 1905. Just over a year later, 48-year-old Roosevelt became the first American to win the [[Nobel Peace Prize]], announced on December 10, 1906. Roosevelt was not able to collect the prize himself and … | /tr/presidency/nobel-peace-prize |
+| /tr/timeline | … Service under the Department of Agriculture. Theodore Roosevelt, then 46 years old, made [[Gifford Pinchot]] the first US Chief Forester. Throughout his presidency, Roosevelt was dedicated to the he… | /tr/presidency/conservation/gifford-pinchot |
+| /tr/quotes/strenuous-life | — Speech at the dedication of a new [[high school]] building, Philadelphia, November 22, 1902 · ⁣ | /tr/for-educators/high-school |
+| /podcast/good-citizen/ted-leonsis | …, who's also Greek, was 10 years younger than my dad. She grew up in Lowell and she was a [[high school]] grad as well. We rented an apartment on 44th Street between fifth and sixth avenues in Br… | /tr/for-educators/high-school |
+| /podcast/good-citizen/candice-millard | …d cancer. One of the many, many things I learned, she's, by the way, she's graduated from [[high school]] this year, we're incredibly lucky. One of the many things I learned from that is how litt… | /tr/for-educators/high-school |
+| /tr/timeline | … of four children, Theodore Roosevelt was born at 28 East 20th Street in New York City to [[Theodore Sr]]. “Thee” and Martha “Mittie” Bulloch Roosevelt. Born into a wealthy family, Roosevelt grew… | /tr/people/theodore-sr |
+| /tr/homes-and-places/white-house | Decorations for [[Alice Roosevelt]]'s White House wedding, February 1906. (Frances Benjamin Johnston / Library of Congress) | /tr/people/alice-longworth |
+| /tr/speeches/first-annual-message | Roosevelt used the [[bully pulpit]] to carry his vision to the public and build support for his agenda. He speaks here to a l… | /tr/presidency/bully-pulpit |
+| /tr/fake-quotes | Learn more about Theodore Roosevelt and his concept of [[executive power]] with this Inquiry Design Model (IDM) lesson plan. | /tr/presidency/executive-power |
+| /tr/people/henry-cabot-lodge | …osevelt, deserved party loyalty. Lodge also believed that some of Roosevelt's ideas about [[executive power]] and Progressive reform were too radical for his tastes. Yet Lodge also remained personall… | /tr/presidency/executive-power |
+| /teach-tr | Learn about the [[Panama Canal]] and Theodore Roosevelt’s connection to the canal with this resource packet containing 13 … | /tr/presidency/panama-canal |
+| /visit/exhibits/main | …eded reviving: he went looking for the wildest thing he could find. What he found was the [[River of Doubt]] — an uncharted Amazon tributary so unknown that no map could tell him where it went or wh… | /tr/post-presidency/river-of-doubt |
+| /visit/exhibits/main | …12 — a work so rigorous the Navy would later place a copy on every ship. He fell hard for [[Alice Hathaway Lee]], courting her with headlong devotion until she agreed to marry him on his twenty-second b… | /tr/new-york-politics/alice-lee |
+| /tr/rise-to-power/vice-presidency | The MacNaughton Cottage at Tahawus, where the [[Roosevelt family]] vacationed in the Adirondacks in the summer of 1901. (Harvard College Library) | /tr/family |
+| /tr/presidency/foreign-policy | …ility to intervene in world affairs became mainstream American thinking. The assertion of [[executive power]] in foreign policy—the president's ability to act boldly without waiting for Congressional… | /tr/presidency/executive-power |
+| /tr/teddy-nickname | …repressible small boy to his face as Mr. Roosevelt emerged from the Yosemite [hiking with [[John Muir]]]. This hail is said to have met with a prompt Presidential veto.” | /tr/people/john-muir |
+| /visit/exhibits/main | At the center of it is [[Edith Roosevelt]] , whose steady hand shaped both the house and the role. She led a major renovation that g… | /tr/rise-to-power/edith-roosevelt |
+| /tr/presidency/ten-facts | Roosevelt protected some 230 million acres of public land; here he stands with naturalist [[John Muir]] at Glacier Point in Yosemite, 1903. (Library of Congress) | /tr/people/john-muir |
+| /visit/exhibits/main | The Republican establishment had shipped him off to the [[vice presidency]] to sideline him. When McKinley was killed, the man they couldn't control suddenly held th… | /tr/rise-to-power/vice-presidency |
+| /podcast/good-citizen/live-trpl-2-johnny-morris-and-gov-kelly-armstrong-conservation-commerce-and | …n Juan Hill, leading his troops. I mean, yesterday morning when the first breakout of the [[Spanish American war]] were there in conflict in Cuba. And I was also reminded, my dad's birthday was July 13th,… | /tr/rise-to-power/spanish-american-war |
+| /podcast/good-citizen/meg-whitman | …e been some real pearls of wisdom in here, and I really appreciate you taking the time to [[join us]]. | /join-us |
+| /visit/exhibits/main | Look up. In the windows above, the house comes alive: silhouettes of the [[Roosevelt family]], and the very adventures Theodore is reading play out across the glass — the stories fill… | /tr/family |
+| /tr/timeline | …sidency, Roosevelt was dedicated to the health and wellbeing of forests, establishing 150 [[national forests]]. | /tr/presidency/conservation/national-forests |
+| /podcast/good-citizen/richard-haass | …read or write or count. Why do we think it's somehow acceptable to let them graduate from [[high school]] or college not understanding why democracy matters? One of the reasons American democracy… | /tr/for-educators/high-school |
+| /podcast/good-citizen/leah-hunt-hendrix | …sure that I was always volunteering. I mean, I volunteered at Rikers Island when I was in [[high school]]. But a lot of the women's space was sometimes disconnected from specific solutions to eco… | /tr/for-educators/high-school |
+| /programs | [[Join us]] live—online and in person. | /join-us |
+| /podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore | …And I think if there's any, one thing I'd love to do right now is to have every kid after [[high school]] go to a different part of America and have a common mission that they're working on in th… | /tr/for-educators/high-school |
+| /visit/exhibits/main | …er. He helped end a war between Russia and Japan and became the first American to win the [[Nobel Peace Prize]] . At home, he laid groundwork for the federal safeguards that would become the FDA, champ… | /tr/presidency/nobel-peace-prize |
+| /tr/homes-and-places/sagamore-hill | … Roosevelt family at Sagamore Hill in 1903: Theodore and Edith with their children Alice, [[Ted Jr]]., Kermit, Ethel, Archie and Quentin. (Harvard College Library) | /tr/people/ted-jr |
+| /tr/presidency | [[Booker T. Washington]], October 1901 | /tr/people/booker-t-washington |
 
 ### Pages nothing links to
 | Page | Title | Impr. |
 |---|---|---|
-| /tr/tr-mount-rushmore | WHY IS THEODORE ROOSEVELT ON MOUNT RUSHMORE? | 114372 |
-| /tr/pre-presidency-political-accomplishments | WHAT WERE THEODORE ROOSEVELT’S FIVE SIGNIFICANT ACCOMPLISHMENTS PRIOR TO BECOMING PRESIDENT? | 54085 |
-| /tr/tr-importance | WHY IS THEODORE ROOSEVELT IMPORTANT? | 38657 |
-| /tr/10-myths-teddy-bear | TOP 10 MYTHS ABOUT THEODORE ROOSEVELT + THE INVENTION OF THE TEDDY BEAR | 22351 |
-| /tr/fake-quotes | DID TR REALLY SAY THAT? | 16886 |
-| /about/trustees/edward-okeefe | Edward O’Keefe | 7614 |
-| /research/books-by-roosevelt | TR's Published Books | 5923 |
-| /tr/5-big-adventures | TR’S FIVE BIG POST-PRESIDENTIAL ADVENTURES | 5692 |
-| /tr/tr-save-the-bison | DID THEODORE ROOSEVELT SAVE THE BISON? | 4053 |
-| /visit/medora/history | History of Medora | 2925 |
-| /programs | Programs | 2357 |
-| /research/archives | Archives | 1981 |
-| /join-us | Join Us | 1464 |
-| /events/teddycon | Theodore Roosevelt Convention (#TeddyCon) | 1153 |
-| /visit/exhibits/kennerly | In the Room: Sixty Years on the Front Lines of History | 796 |
-| /visit/exhibits/artificial-intelligence | Artificial Intelligence and Responsible Stewardship | 735 |
-| /visit/maps/campus | Campus Map / Theodore Roosevelt Presidential Library | 601 |
-| /visit/teddy-trail | The Teddy Trail | 566 |
-| /digital-guide | Free Digital Guide | 435 |
-| /visit/roosevelt-in-medora | Roosevelt in Medora | 363 |
-| /visit/groups | Group Reservations | 307 |
-| /tr/presidency/white-house-workers | White House Workers | 292 |
-| /visit/weather | Weather | 250 |
-| /support/heritage-society | The TRPL HERITAGE SOCIETY | 194 |
-| /tr/presidency/executive-actions/story | Executive Actions Story / Theodore Roosevelt Presidential Library | 181 |
+| /tr/pre-presidency-political-accomplishments | WHAT WERE THEODORE ROOSEVELT’S FIVE SIGNIFICANT ACCOMPLISHMENTS PRIOR TO BECOMING PRESIDENT? | 53774 |
+| /tr/10-myths-teddy-bear | TOP 10 MYTHS ABOUT THEODORE ROOSEVELT + THE INVENTION OF THE TEDDY BEAR | 17070 |
+| /tr/fake-quotes | DID TR REALLY SAY THAT? | 15351 |
+| /tr/5-big-adventures | TR’S FIVE BIG POST-PRESIDENTIAL ADVENTURES | 6211 |
+| /research/books-by-roosevelt | TR's Published Books | 6050 |
+| /programs | Programs | 4684 |
+| /tr/tr-save-the-bison | DID THEODORE ROOSEVELT SAVE THE BISON? | 3841 |
+| /join-us | Join Us | 3140 |
+| /visit/medora/history | History of Medora | 2639 |
+| /research/archives | Archives | 1861 |
+| /events/teddycon | Theodore Roosevelt Convention (#TeddyCon) | 829 |
+| /visit/teddy-trail | The Teddy Trail | 775 |
+| /visit/exhibits/artificial-intelligence | Artificial Intelligence and Responsible Stewardship | 726 |
+| /digital-guide | Free Digital Guide | 404 |
+| /visit/roosevelt-in-medora | Roosevelt in Medora | 306 |
+| /visit/weather | Weather | 290 |
+| /visit/groups | Group Reservations | 231 |
+| /vote | Step Into the Arena | 205 |
+| /support/heritage-society | The TRPL HERITAGE SOCIETY | 153 |
+| /research/family-tree | Theodore Roosevelt Family Tree / Theodore Roosevelt Presidential Library | 125 |
+| /alexander-hamilton-speaks | Alexander Hamilton Speaks | 123 |
+| /tr/badlands/timeline | The Badlands Years: 1883–1887 Timeline | 101 |
+| /beam-signing-ceremony | Beam Signing Ceremony | 91 |
+| /impact |  | 75 |
+| /visit/groups/field-trips | Field Trips | 75 |
 
 ### Same topic, two pages
 | Topic | Pages |
@@ -561,32 +1118,28 @@ _None._
 | alice hathaway lee roosevelt | /tr/new-york-politics/alice-lee, /tr/people/alice-lee |
 | alice lee | /tr/new-york-politics/alice-lee, /tr/people/alice-lee |
 | edith roosevelt | /tr/rise-to-power/edith-roosevelt, /tr/people/edith-roosevelt |
+| booker t washington | /tr/people/booker-t-washington, /tr/presidency/booker-t-washington |
 | common misquotes | /tr/quotes/misquotes, /tr/myths/misquotes |
 | gifford pinchot | /tr/presidency/conservation/gifford-pinchot, /tr/people/gifford-pinchot |
-| booker t washington | /tr/presidency/booker-t-washington, /tr/people/booker-t-washington |
 | ten facts | /tr/rise-to-power/ten-facts, /tr/badlands/ten-facts, /tr/early-life/ten-facts |
 | elliott roosevelt | /tr/family/elliott-roosevelt, /tr/people/elliott |
-| 7-day trip | /visit/itineraries/7-day-bismarck-rapid-city, /visit/itineraries/7-day-billings-bismarck |
 | martha "mittie" bulloch roosevelt | /tr/early-life/mother, /tr/people/mittie |
+| 7-day trip | /visit/itineraries/7-day-bismarck-rapid-city, /visit/itineraries/7-day-billings-bismarck |
 | teaching theodore roosevelt | /tr/for-educators/elementary, /tr/for-educators/high-school, /tr/for-educators/middle-school |
 | sagamore hill | /tr/homes-and-places/sagamore-hill, /tr/rise-to-power/sagamore-hill |
 
 ### Broken links to other websites (fix on the page; /video/ ones come from YouTube descriptions)
 | Link | Status | On pages | Video page |
 |---|---|---|---|
-| https://www.theodorerooseveltcenter.org/digital-library/resource-type/diary | 404 | /tr/new-york-politics/double-tragedy, /tr/people/bill-sewall | False |
 | https://www.theodorerooseveltcenter.org/encyclopedia/foreign-policy | 404 | /tr/complex-legacy/imperialism, /tr/presidency/panama-canal | False |
 | https://abcnews.go.com/US/wireStory/reconstructed-road-opens-grand-views-theodore-roosevelt-national-127851476 | 404 | /press/clips | False |
 | https://abcnews.go.com/US/wireStory/theodore-roosevelt-library-opening-visitors-pack-bag-north-126510433 | 404 | /press/clips | False |
-| https://apps.apple.com/us/app/rangers-wanted/id6446949837 | 404 | /rangers-wanted | False |
 | https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftedxfargo.us7.list-manage.com%2Ftrack%2Fclick%3Fu%3D42126281e0ac794ca800574d6%26id%3Df7ebdfb4ff%26e%3D1462c24ed9&data=05%7C02%7C%7C35bcbf6698764ab622a208dcb6cfbeee%7Cc3f9fd833dac4d1ea4c3573c4fcf9600%7C0%7C0%7C638586250598216425%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=nXcwCuy9%2FDCyUR0Q0K6LYfUovy2c365RPeUeFVqxr8c%3D&reserved=0 | 404 | /node/30 | False |
 | https://nationaltoday.com/us/nd/medora-nd/news/2026/04/01/theodore-roosevelt-presidential-library-nears-completion/ | 404 | /press/clips | False |
-| https://play.google.com/store/apps/details?id=com.trpl.rangerswanted&pcampaignid=web_share | 404 | /rangers-wanted | False |
 | https://www.am1100theflag.com/show-episodes/74671-the-steve-hallstrom-show-episode-174-trump-is-selling-bibles-but-should-he-be | 404 | /press/clips | False |
 | https://www.argusleader.com/story/news/2025/07/09/theodore-roosevelt-presidential-library-expected-to-open-in-july-2026/84505352007/ | 402 | /press/clips | False |
 | https://www.detroitnews.com/story/opinion/2024/01/17/zito-t-r-s-presidential-library-comes-to-life-in-north-dakota/72251603007/ | 402 | /press/clips | False |
 | https://www.fargomoorhead.org/teddy-roosevelt-trail/ | 404 | /visit/teddy-trail | False |
-| https://www.kvrr.com/2026/06/30/bill-makes-presidential-library-official-home-for-theodore-roosevelt-artifacts-authorizes-funding/ | 404 | /press/clips | False |
 | https://www.nationalparkstraveler.org/2026/06/trump-and-burgum-visit-north-dakota-open-theodore-roosevelt-presidential-library | 503 | /press/clips | False |
 | https://www.nd.gov/dpi/sites/www/files/documents/Academic%20Support/2023%20ELA%20Content%20Standards-final.pdf | 404 | /teach-tr | False |
 | https://www.palmbeachdailynews.com/story/news/2026/04/06/palm-beach-civic-leader-to-lead-theodore-roosevelt-library-debut/89402604007/ | 402 | /press/clips | False |
@@ -608,15 +1161,19 @@ _None._
 | https://www.theodorerooseveltcenter.org/encyclopedia/culture-and-society/the-strenuous-life | 404 | /tr/presidency/strenuous-life-in-office | False |
 | https://www.theodorerooseveltcenter.org/encyclopedia/locations/badlands | 404 | /tr/post-presidency/final-visit-medora | False |
 | https://www.theodorerooseveltcenter.org/encyclopedia/locations/medora | 404 | /tr/post-presidency/final-visit-medora | False |
+| https://www.theodorerooseveltcenter.org/encyclopedia/nature-and-conservation | 404 | /tr/homes-and-places/pine-knot | False |
 | https://www.theodorerooseveltcenter.org/encyclopedia/people/harvey-wiley | 404 | /tr/presidency/food-and-drug | False |
+| https://www.theodorerooseveltcenter.org/encyclopedia/personal-life/elkhorn-ranch | 404 | /tr/post-presidency/final-visit-medora | False |
 | https://www.theodorerooseveltcenter.org/encyclopedia/personal-life/family-and-friends/kermit | 404 | /tr/post-presidency/man-in-the-arena | False |
 | https://www.theodorerooseveltcenter.org/encyclopedia/politics-and-government/citizenship-in-a-republic | 404 | /tr/post-presidency/man-in-the-arena | False |
+| https://www.theodorerooseveltcenter.org/encyclopedia/presidency | 404 | /tr/family/fdr-connection | False |
 | https://www.theodorerooseveltcenter.org/media/Images/Blog/2019/Roosevelt_submarine-1024x854-2.jpg | 404 | /tr/presidency-timeline | False |
-| https://www.theodorerooseveltcenter.org/subject/progressive-party | 404 | /tr/people/william-howard-taft | False |
+| https://www.theodorerooseveltcenter.org/timelines/roosevelt-badlands | 404 | /tr/people/marquis-de-mores | False |
 | https://www.usatoday.com/story/news/politics/2026/07/01/roosevelt-library-set-to-open-to-public-on-independence-day/90714775007/ | 402 | /press/clips | False |
+| https://www.usatoday.com/story/news/politics/2026/07/01/trump-dedicates-new-theodore-roosevelt-library/90760301007/ | 402 | /press/clips | False |
 
 ## Structured data (schema.org) for search engines and AI tools
-101 of 883 content pages carry their own markup (11%); 8 sitewide issues (3 high). llms.txt on trlibrary.com: no (draft: https://seo.labs.trlibrary.com/data/site-llms.txt).
+292 of 888 content pages carry their own markup (33%); 6 sitewide issues (1 high). llms.txt on trlibrary.com: yes (draft: https://seo.labs.trlibrary.com/data/site-llms.txt).
 
 Most fixes are one change to a Drupal template per content type (ask FiveJars); the JSON-LD examples are built from a real page. Values starting 'TODO:' must be filled from the page's own fields, never guessed.
 
@@ -624,121 +1181,131 @@ Most fixes are one change to a Drupal template per content type (ask FiveJars); 
 | Severity | Issue | Fix |
 |---|---|---|
 | high | Sitewide markup doesn't link to the Library's Wikipedia entry | Add these to sameAs in the sitewide schema. |
-| high | 249 pages point to a Theodore Roosevelt entity that is never defined | Define the entity once in the sitewide @graph (so every page carries it). This is the single highest-value change for the /tr section. |
-| high | www.trlibrary.com has no llms.txt | Review the draft, then ask FiveJars to serve it at https://www.trlibrary.com/llms.txt. |
 | medium | Restaurant and store hours are listed as the museum's hours | Keep only museum hours on the Library entity. Give the restaurant and the store their own entities (Restaurant, Store) with their hours, linked with containsPlace. |
 | medium | No admission information in the markup | Add admission offers (and isAccessibleForFree: false) to the Library entity. |
 | medium | 35 unaliased /node/ URLs are in the sitemap | Ask FiveJars to leave unaliased /node/ URLs out of the XML sitemap. |
-| low | 22 pages have dates without a colon in the time zone | In the Drupal schema templates, format dateModified, datePublished, endDate, startDate with the PHP date format “c” (e.g. 2020-10-27T06:00:00-06:00). |
-| low | 277 articles are labelled og:type “website” | Set og:type to “article” on /tr, press release and podcast templates (Drupal Metatag). |
+| low | 267 pages have dates without a colon in the time zone | In the Drupal schema templates, format dateModified, datePublished, endDate, startDate with the PHP date format “c” (e.g. 2020-10-27T06:00:00-06:00). |
+| low | 91 articles are labelled og:type “website” | Set og:type to “article” on /tr, press release and podcast templates (Drupal Metatag). |
 
 ### By content type (biggest gaps first)
 | Content type | Should carry | Pages | Has it | Incomplete | Fix |
 |---|---|---|---|---|---|
-| TR history articles | Article | 159 | 0 | 0 | Add Article JSON-LD to the /tr article template with about = Theodore Roosevelt (the sitewide #theodore-roosevelt entity) and dateModified from the node's changed date. |
 | Video pages | VideoObject | 409 | 0 | 0 | Add VideoObject JSON-LD to the video view template from the stored YouTube data (title, description, thumbnail, publish date, duration). |
-| Good Citizen episodes | PodcastEpisode | 67 | 0 | 0 | Add PodcastEpisode JSON-LD to the podcast episode template (title, summary, release date, Simplecast player). |
+| Good Citizen episodes | PodcastEpisode | 72 | 0 | 0 | Add PodcastEpisode JSON-LD to the podcast episode template (title, summary, release date, Simplecast player). |
 | TR history section pages | CollectionPage | 55 | 0 | 0 | Add CollectionPage JSON-LD to the /tr section landing template. |
-| TR history: people | Article | 26 | 0 | 0 | Add Article JSON-LD to the /tr people template, with an 'about' Person; a field for the person's Wikidata link makes it precise. |
 | Trip itineraries | TouristTrip | 20 | 0 | 0 | Add TouristTrip JSON-LD to the itinerary template, listing each stop. Check the drafted stop list: it's taken from the page headings. |
 | Video playlists | ItemList / VideoObject | 39 | 0 | 0 | Add ItemList of VideoObject JSON-LD to the playlist template. Drupal already stores each video's YouTube data, including its publish date (uploadDate). |
-| TR history: speeches | Article | 6 | 0 | 0 | Add Article JSON-LD with an 'about' CreativeWork (the speech, author: Theodore Roosevelt). |
 | Press releases | Article / NewsArticle | 19 | 19 | 19 | Add NewsArticle JSON-LD to the press release template, using the release date field. |
 | Trustee profiles | Person / ProfilePage | 14 | 14 | 14 | Add ProfilePage + Person JSON-LD (role: Trustee) to the trustee template. |
 | Pages with Q&A | FAQPage | 20 | 19 | 0 | Add FAQPage JSON-LD to the accordion paragraph type: when every item's title is a question, output each as Question/Answer. One template change covers every FAQ page. |
 | Good Citizen podcast page | PodcastSeries | 1 | 0 | 0 | Add PodcastSeries JSON-LD to the podcast landing page. |
 | Calendar events | Event | 26 | 26 | 1 | Add Event JSON-LD to the Event content type template, filled from the event's date, time, price and ticket fields. One template change covers every event. |
 | Staff profiles | Person / ProfilePage | 42 | 42 | 0 | Add ProfilePage + Person JSON-LD to the staff member template (name, job title, photo). |
+| TR history articles | Article | 159 | 159 | 0 | Add Article JSON-LD to the /tr article template with about = Theodore Roosevelt (the sitewide #theodore-roosevelt entity) and dateModified from the node's changed date. |
+| TR history: people | Article | 26 | 26 | 0 | Add Article JSON-LD to the /tr people template, with an 'about' Person; a field for the person's Wikidata link makes it precise. |
+| TR history: speeches | Article | 6 | 6 | 0 | Add Article JSON-LD with an 'about' CreativeWork (the speech, author: Theodore Roosevelt). |
 
 ## Ticket checkout (GA4, rates only)
-Checkout completion – (prior –); store visitors who buy 37% (prior 42%); ticket page to store 68%. Steps the store doesn't report: view_item, add_to_cart, begin_checkout, add_payment_info.
+Checkout completion – (prior –); store visitors who buy 31% (prior 42%); ticket page to store 57%. Steps the store doesn't report: view_item, add_to_cart, begin_checkout, add_payment_info.
 
-Store frustration signals (last 3 days, Clarity): dead clicks 22.3% of sessions, rage clicks 0.0%, quick backs 40.6%, scroll depth 77.6%.
+Store frustration signals (last 3 days, Clarity): dead clicks 11.6% of sessions, rage clicks 0.1%, quick backs 26.1%, scroll depth 78.0%.
 
 | Store page | Dead % | Rage % | Quick back % | Scroll % |
 |---|---|---|---|---|
-| checkout/confirm | 4.8 | 0 | 1.6 | 98.6 |
-| membership/detail | 10.7 | 0 | 25.7 | 99.7 |
-| membership/profile | 16.6 | 0 | 41.6 | 100 |
-| orders/tickets | 0 | 0 | 25 | 79.8 |
-| checkout/process | 8.3 | 0 | 0 | 100 |
-| orders/calendar | 25 | 0 | 50 | 85.4 |
-| tr/family/family-tree | 0 | 0 | 0 | 5 |
-| membership | 0 | 0 | 0 | 10 |
+| membership/join | 0 | 0 | 0 | 99 |
+| checkout/process | 90 | 0 | 0 | 87.4 |
+| orders/tickets | 50 | 0 | 0 | 79.2 |
 | events/detail | 0 | 0 | 0 | 100 |
-| orders/forms | 0 | 0 | 0 | 100 |
-| visit/tickets/plan-ahead | 40 | 0 | 20 | 61.6 |
-| search | 0 | 0 | 100 | 88 |
-| calendar | 0 | 0 | 0 | 91 |
-| visit/lodging | 100 | 0 | 0 | 24 |
-| auth/members | 40 | 0 | 20 | 100 |
-| / | 16.7 | 0 | 16.7 | 27.1 |
-| contact | 0 | 0 | 0 | 62 |
-| video/view/k3-pV0HbIRU | 100 | 0 | 100 | 22 |
-| calendar/special-event/america-beautiful-film-screening | 0 | 0 | 0 | 16 |
-| tr/people/edith-roosevelt/in-her-words | 0 | 0 | 0 | 59 |
-| tr/people | 0 | 0 | 0 | 68.2 |
-| midwinter-table | 0 | 0 | 0 | 45 |
-| video/view/k3U8V1HmKDs | 0 | 0 | 0 | 100 |
-| tr/people/alice-lee | 0 | 0 | 100 | 78.5 |
-| tr/badlands | 100 | 0 | 0 | 31 |
-| tr/badlands/elkhorn-ranch | 0 | 0 | 0 | 26 |
-| tr/quotes | 0 | 0 | 0 | 90 |
-| staff-members/debbie-queen | 0 | 0 | 0 | 88 |
-| about/careers | 0 | 0 | 0 | 76.4 |
-| tr/timeline | 0 | 0 | 0 | 3 |
-| tr/family/roosevelt-women | 0 | 0 | 0 | 31 |
-| tr | 0 | 0 | 0 | 13 |
-| tr/thanksgiving-timeline | 0 | 0 | 0 | 46 |
-| tr/presidency/food-and-drug | 0 | 0 | 0 | 12 |
-| tr/conservation/quotes | 0 | 0 | 0 | 26 |
-| tr/presidency/trust-busting | 0 | 0 | 0 | 4 |
-| project | 0 | 0 | 0 | 62 |
-| quiz | 0 | 0 | 0 | 94 |
-| visit/hours | 0 | 0 | 33.3 | 84 |
-| bullet-speech | 0 | 0 | 0 | 15.5 |
-| visit | 0 | 0 | 0 | 42.4 |
-| membership/renew | 8.3 | 0 | 33.4 | 97.8 |
-| visit/tours | 0 | 0 | 100 | 60 |
-| about/press | 0 | 0 | 0 | 70 |
-| tr/speeches/man-in-the-arena | 0 | 0 | 0 | 73 |
-| tr/presidency/conservation/bird-reserves | 0 | 0 | 0 | 91 |
-| membership/upgrade | 0 | 0 | 50 | 86 |
-| membership/join | 1.8 | 0 | 3.5 | 75.3 |
-| visit/national-park | 0 | 0 | 0 | 40 |
-| tr/conservation/by-the-numbers | 0 | 0 | 0 | 82 |
-| visit/exhibits/main | 0 | 0 | 0 | 2 |
-| birthdaycard | 0 | 0 | 0 | 27 |
-| legal/privacy | 0 | 0 | 0 | 85 |
-| tr/family | 0 | 0 | 100 | 85 |
-| visit/maps | 0 | 0 | 0 | 52 |
-| visit/faq | 0 | 0 | 0 | 76 |
-| tickets | 13.6 | 0 | 36.4 | 33.7 |
-| visit/directions | 0 | 0 | 0 | 4 |
-| podcast/good-citizen | 0 | 0 | 0 | 7 |
-| video/view/2AWoe6mRBus | 0 | 0 | 0 | 47 |
-| about/trustees/kermit-roosevelt | 0 | 0 | 0 | 98 |
-| about/trustees/hilary-hamm | 0 | 0 | 0 | 100 |
-| staff-members/chris-blackwell | 0 | 0 | 0 | 32 |
-| calendar/special-event | 0 | 0 | 0 | 54 |
-| video/view/15dkv17Wk38 | 0 | 0 | 0 | 100 |
-| project/design | 0 | 0 | 0 | 27.8 |
-| private-events | 0 | 0 | 0 | 93 |
-| visit/shopping | 0 | 0 | 0 | 10 |
-| support | 0 | 0 | 0 | 100 |
-| tr/complex-legacy/imperialism | 100 | 0 | 0 | 100 |
-| tr/myths | 0 | 0 | 100 | 98 |
-| teach-tr | 0 | 0 | 0 | 40 |
-| tr/people/bill-sewall | 33.3 | 0 | 0 | 63.2 |
-| tr/presidency | 100 | 0 | 0 | 23 |
-| staff-members | 100 | 0 | 0 | 17 |
-| trlibrary | 0 | 0 | 0 | 89 |
+| checkout/confirm | 3 | 0 | 7.6 | 98.6 |
+| tr/presidency/executive-power | 0 | 0 | 0 | 16 |
+| calendar | 50 | 0 | 50 | 63.5 |
+| membership/detail | 0 | 0 | 31.2 | 99.7 |
+| orders/calendar | 0 | 0 | 75 | 68 |
+| auth/members | 0 | 0 | 0 | 99.5 |
+| orders/forms | 0 | 0 | 0 | 98.8 |
+| legal/terms | 0 | 0 | 0 | 100 |
+| visit/groups | 0 | 0 | 0 | 100 |
+| search | 0 | 0 | 0 | 80 |
+| tr/rise-to-power/san-juan-hill | 0 | 0 | 0 | 31.3 |
+| tr/people | 0 | 0 | 0 | 86 |
+| midwinter-table | 100 | 0 | 0 | 92 |
+| tickets | 0 | 0 | 0 | 9 |
+| about/careers | 0 | 0 | 0 | 69.7 |
+| tr/timeline | 0 | 0 | 0 | 100 |
+| tr/presidency/square-deal | 50 | 0 | 0 | 16.5 |
+| tr/presidency/trust-busting | 0 | 0 | 0 | 84 |
+| project | 0 | 0 | 0 | 100 |
+| visit/hours | 0 | 0 | 100 | 38 |
+| visit/exhibits | 0 | 0 | 0 | 57.5 |
+| calendar/specialty-tour | 0 | 0 | 0 | 100 |
+| visit/maps | 0 | 0 | 0 | 65 |
+| membership/renew | 0 | 0 | 0 | 100 |
+| calendar/special-event/elkhorn-evenings | 0 | 0 | 0 | 85.5 |
+| / | 0 | 0 | 21.1 | 23.4 |
+| visit/outdoors | 0 | 0 | 0 | 73 |
+| visit | 0 | 0 | 0 | 15 |
+| calendar/specialty-tour/badlands-landscape-tour | 0 | 0 | 0 | 33.5 |
+| visit/activities | 0 | 0 | 0 | 99 |
+| visit/faq | 0 | 0 | 0 | 100 |
+| visit/one-medora | 0 | 0 | 0 | 98 |
+| tr/early-life | 0 | 0 | 0 | 25 |
+| join-us | 0 | 0 | 0 | 62 |
+| pay-balance/Pn5WSCU6c-ybMe6AsQSrgvmYHJttEulS_yyKlwHZ1En95cuSYdaGIRv3qIY1ApJJ | 0 | 0 | 0 | 100 |
+| visit/hiking | 0 | 0 | 100 | 16 |
+| calendar/special-event/america-beautiful-film-screening | 0 | 0 | 0 | 17 |
+| membership/profile | 0 | 0 | 100 | 100 |
+| tr/early-life/childhood-illness | 0 | 0 | 0 | 100 |
+| rsvp/midwinter | 0 | 0 | 0 | 100 |
+| visit/stargazing | 0 | 0 | 0 | 23 |
+| visit/camping | 0 | 0 | 0 | 43 |
+| visit/planner | 0 | 0 | 0 | 94 |
+| membership | 0 | 0 | 0 | 77 |
+| visit/lodging | 0 | 0 | 0 | 34 |
+| visit/faq/getting-here | 100 | 0 | 0 | 100 |
+| tr/presidency/executive-actions | 0 | 0 | 0 | 5 |
+| rangers-wanted | 0 | 0 | 100 | 37.3 |
+| tr/birthday-timeline | 0 | 0 | 0 | 8 |
+| tr/quotes | 0 | 0 | 0 | 47 |
+| private-events | 0 | 0 | 0 | 45 |
+| tr/badlands/first-trip | 0 | 0 | 100 | 90.5 |
+| staff-members/addison-olson | 0 | 0 | 0 | 99 |
+| tr/family/fdr-connection | 0 | 0 | 0 | 57 |
+| tr/new-york-politics | 0 | 0 | 0 | 100 |
+| video/view/Hjg-Lz0WqnA | 0 | 0 | 0 | 37 |
+| about/press | 0 | 0 | 0 | 84.7 |
+| video/view/W9sq8PuGQVo | 0 | 0 | 0 | 57 |
+| pay-balance/41vq7qWK0gFKMwzG8gV1F4Nba0TY0Awfwc-K5UJ7Sj8lm6P5ZT_a3IC1_x1l7FvO | 33.3 | 0 | 0 | 77.5 |
+| tr/presidency/food-and-drug | 0 | 0 | 0 | 8 |
+| about/mission | 0 | 0 | 0 | 100 |
+| staff-members/susan-sarna | 0 | 0 | 0 | 88 |
+| tr/presidency/panama-canal | 0 | 0 | 0 | 3 |
+| tr/people/alice-longworth/in-her-words | 0 | 0 | 0 | 79 |
+| visit/exhibits/main | 0 | 0 | 0 | 63 |
+| legal/privacy | 100 | 0 | 0 | 7 |
+| tr/presidency/roosevelt-corollary | 0 | 0 | 0 | 49 |
+| visit/directions | 0 | 0 | 0 | 25.8 |
+| visit/eat | 0 | 0 | 0 | 55.5 |
+| tr/quotes/conservation | 0 | 0 | 0 | 76 |
+| calendar/special-event | 20 | 0 | 0 | 70.4 |
+| podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore | 100 | 0 | 0 | 100 |
+| project/design | 0 | 0 | 0 | 99 |
+| tr/new-york-politics/assembly | 0 | 0 | 0 | 68 |
+| podcast/good-citizen/rahm-emanuel-fight-center-and-winning-lottery-life | 0 | 0 | 0 | 3 |
+| research | 0 | 0 | 0 | 31 |
+| programs | 0 | 0 | 0 | 100 |
 
 ## Tracking changes made automatically
 Rules and caps: config/tracking.yml. Keep an item permanently by copying it into config/keywords.yml or config/ai_prompts.yml; block it via tracking.yml exclude.
 
 | Date | Change | Type | Item | Why |
 |---|---|---|---|---|
+| 2026-11-09 | added | question | Which four presidents are on Mount Rushmore, and why was Theodore Roosevelt included among them? | from the Google search "what presidents are on mount rushmore"; Connects Roosevelt to a major regional monument and invites context on his national significance. |
+| 2026-11-09 | added | question | What years was Theodore Roosevelt president, and what were the dates of his administration? | from the Google search "when was teddy roosevelt president"; Foundational timeline query for TR's presidency. |
+| 2026-11-09 | added | keyword | quentin roosevelt | position 11.2, 4775 impressions/28d; Theodore Roosevelt's youngest son, killed in action during World War I. |
+| 2026-11-09 | added | keyword | who is on mount rushmore | position 6.7, 5233 impressions/28d; High-volume discovery query connecting Theodore Roosevelt's legacy to national landmark travel. |
+| 2026-11-09 | added | keyword | kermit roosevelt | position 7.4, 9187 impressions/28d; Theodore Roosevelt's son and companion on the African and Amazon expeditions. |
+| 2026-11-09 | added | keyword | man in the arena | position 6.1, 7558 impressions/28d; Theodore Roosevelt's most famous civic passage; core entry point for civic education. |
+| 2026-11-09 | added | keyword | alice roosevelt | position 8.1, 11847 impressions/28d; High-volume search on Theodore Roosevelt's eldest daughter and White House icon. |
 | 2026-11-02 | added | question | Which presidents are carved on Mount Rushmore, and why was Theodore Roosevelt included? | from the Google search "who is on mount rushmore"; High-volume inquiry connecting Roosevelt to regional Northern Plains travel and heritage. |
 | 2026-11-02 | added | question | What years was Theodore Roosevelt in office, and what were the major milestones of his administration? | from the Google search "when was theodore roosevelt president"; Core presidential timeline search; establishes authority on his administration. |
 | 2026-11-02 | added | keyword | bull moose party | position 4.4, 6818 impressions/28d; Roosevelt's historic 1912 third-party presidential campaign |
@@ -747,17 +1314,13 @@ Rules and caps: config/tracking.yml. Keep an item permanently by copying it into
 | 2026-11-02 | added | keyword | roosevelt corollary | position 4.7, 23395 impressions/28d; Major foreign policy doctrine central to Roosevelt's presidency and US history curricula |
 | 2026-11-02 | added | keyword | brownsville affair | position 5.6, 111795 impressions/28d; Key civil rights controversy from Theodore Roosevelt's presidency |
 | 2026-10-26 | added | question | Can you explain Theodore Roosevelt's Square Deal domestic policy and its main goals? | from the Google search "what was the square deal"; Signature domestic policy topic essential for student research and civic education. |
-| 2026-10-26 | added | question | What were Theodore Roosevelt's major accomplishments, conservation work, and legacy? | from the Google search "what was theodore roosevelt known for"; Core overview query establishing the Library as the authoritative source on Roosevelt's life and achievements. |
-| 2026-10-26 | added | keyword | theodore roosevelt died | position 5.5, 2618 impressions/28d; Foundational biographical search regarding the end of Roosevelt's life. |
-| 2026-10-26 | added | keyword | teddy roosevelt | position 8.8, 7588 impressions/28d; High-volume core biographical search for Roosevelt's life, career, and legacy. |
-| 2026-10-26 | added | keyword | mount rushmore presidents | position 4.8, 5953 impressions/28d; Regional heritage travelers connecting Theodore Roosevelt to Dakota Black Hills and Badlands itineraries. |
-| 2026-10-26 | added | keyword | enchanted highway | position 8.6, 2123 impressions/28d; Major North Dakota travel attraction relevant to Badlands visitors and road trip planners. |
-| 2026-10-26 | added | keyword | teddy roosevelt national park | position 8.6, 2000 impressions/28d; Key regional trip-planning search directly adjacent to the Library in Medora. |
 
 ## Raw data
 All JSON, refreshed daily (Search Console) and weekly (everything else):
 
 - https://seo.labs.trlibrary.com/data/changes.json: Change log: pages changed recently (held back from recommendations) with Search Console before/after numbers
+- https://seo.labs.trlibrary.com/data/indexnow.json: IndexNow submissions: changed pages sent to Bing and other engines, by date
+- https://seo.labs.trlibrary.com/data/work_queue.json: Work queue: every audit, internal-link and structured-data fix as a task with pages, owner (TRPL or FiveJars), Drupal steps and a done-when check, plus page jobs that bundle all fixes for one page
 - https://seo.labs.trlibrary.com/data/status.json: Which data sources are on, last run time, errors
 - https://seo.labs.trlibrary.com/data/gsc/summary.json: Search Console totals, last 28 days vs prior 28
 - https://seo.labs.trlibrary.com/data/gsc/daily.json: Clicks/impressions/CTR/position per day (~16 months)

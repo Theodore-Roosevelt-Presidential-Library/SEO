@@ -58,5 +58,35 @@
   "date": "2026-11-03",
   "checkout_completion": null,
   "store_conversion": 0.371
+ },
+ {
+  "date": "2026-11-04",
+  "checkout_completion": null,
+  "store_conversion": 0.366
+ },
+ {
+  "date": "2026-11-05",
+  "checkout_completion": null,
+  "store_conversion": 0.358
+ },
+ {
+  "date": "2026-11-06",
+  "checkout_completion": null,
+  "store_conversion": 0.348
+ },
+ {
+  "date": "2026-11-07",
+  "checkout_completion": null,
+  "store_conversion": 0.336
+ },
+ {
+  "date": "2026-11-08",
+  "checkout_completion": null,
+  "store_conversion": 0.325
+ },
+ {
+  "date": "2026-11-09",
+  "checkout_completion": null,
+  "store_conversion": 0.31
  }
 ]
