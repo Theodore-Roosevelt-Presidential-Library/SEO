@@ -136,6 +136,23 @@ def brand_regex(terms: list[str]) -> re.Pattern:
     return re.compile(r"(?<![\w.])(" + "|".join(parts) + r")(?![\w])", re.I)
 
 
+# A brand match this close to one of these words is another Roosevelt library
+# (usually the Franklin D. Roosevelt Presidential Library in Hyde Park), not ours.
+OTHER_LIBRARY_RE = re.compile(r"Franklin|\bFDR\b|\bF\.\s?D\.|Eleanor|Hyde Park", re.I)
+
+
+def find_brand(text: str, brand_re):
+    """First brand match that isn't the FDR Library (look 60 characters back and
+    100 characters ahead for Franklin / FDR / Hyde Park)."""
+    for m in brand_re.finditer(text or ""):
+        window = text[max(0, m.start() - 60):m.end() + 100]
+        if OTHER_LIBRARY_RE.search(window) and not re.search(r"Theodore|Teddy|\bTR\b|Medora", m.group(0), re.I):
+            continue
+        return m
+    return None
+
+
+
 STOPWORDS = set("""a an and are at be by can do for from how i in is it me my near
 of on or the to what when where which who why with you your best top things
 """.split())

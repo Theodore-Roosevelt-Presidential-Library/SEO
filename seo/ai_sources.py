@@ -144,7 +144,7 @@ def _page_mentions(sess, url: str, brand_re) -> bool | None:
         r = sess.get(url, timeout=20, allow_redirects=True)
         if r.status_code != 200 or "html" not in r.headers.get("content-type", ""):
             return None
-        return bool(brand_re.search(re.sub(r"<[^>]+>", " ", r.text)))
+        return bool(C.find_brand(re.sub(r"<[^>]+>", " ", r.text), brand_re))
     except Exception:  # noqa: BLE001
         return None
 

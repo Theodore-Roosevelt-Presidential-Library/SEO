@@ -626,3 +626,41 @@ def test_honest_upside_and_indexnow_pending():
                        {"date": _dt.date(2026, 11, 2), "page": "*"}]}
     assert indexnow.pending(log, set(), _dt.date(2026, 11, 3), 3, "https://www.trlibrary.com") == ["https://www.trlibrary.com/a"]
     assert indexnow.pending(log, {"2026-11-02 https://www.trlibrary.com/a"}, _dt.date(2026, 11, 3), 3, "https://www.trlibrary.com") == []
+
+
+# ---- 2026-11-09 fixes ----
+
+def test_opportunities_page_only_in_missing_in_title():
+    """A page that appears only under missing_in_title used to crash build() with KeyError."""
+    from seo import opportunities as O
+    qp = [{"query": "hotel 1883 medora", "page": "https://www.trlibrary.com/visit/lodging",
+           "clicks": 50, "impressions": 900, "ctr": 0.2, "position": 1.5}]
+    audit = [{"url": "https://www.trlibrary.com/visit/lodging", "title": "Lodging"}]
+    out = O.build(qp, [], [], audit)
+    assert out["missing_in_title"] and out["page_scores"][0]["est_extra_clicks"] == 0
+
+
+def test_find_brand_skips_fdr_library():
+    from seo import common as C
+    br = C.brand_regex(["Theodore Roosevelt Presidential Library", "Roosevelt Presidential Library"])
+    assert C.find_brand("Roosevelt Presidential Library & Museum — Hyde Park, NY", br) is None
+    assert C.find_brand("Franklin D. Roosevelt Presidential Library and Museum", br) is None
+    assert C.find_brand("The Theodore Roosevelt Presidential Library in Medora", br)
+    assert C.find_brand("Hyde Park has FDR's; Medora has the Theodore Roosevelt Presidential Library", br)
+
+
+def test_citing_us_counts_as_mention():
+    from seo import ai_visibility as A, common as C
+    br = C.brand_regex(["Theodore Roosevelt Presidential Library"])
+    r = A.analyse("Adult tickets are sold online.", ["https://www.trlibrary.com/tickets"], br, {}, "trlibrary.com")
+    assert r["mentioned"] and not r["named"] and r["cited_us"]
+
+
+def test_serp_domain_ignores_google_goto_urls():
+    from seo import ranks as R
+    res = {"items": [
+        {"type": "organic", "rank_group": 1, "domain": "www.trlibrary.com", "url": "https://google.com/goto?url=CAES"},
+        {"type": "organic", "rank_group": 2, "domain": "en.wikipedia.org", "url": "https://google.com/goto?url=CAEX"},
+    ]}
+    out = R.parse_serp(res, "trlibrary.com")
+    assert out["rank"] == 1 and out["top"][1]["domain"] == "en.wikipedia.org"

@@ -251,6 +251,16 @@ def run() -> None:
     alias_cfg = C.load_yaml("link_aliases.yml") if (C.CONFIG_DIR / "link_aliases.yml").exists() else {}
     aliases = alias_cfg.get("aliases", {}) or {}
     never = {n.lower() for n in alias_cfg.get("never_link", []) or []}
+    ctx_rules = {k.lower(): v or {} for k, v in (alias_cfg.get("context_rules") or {}).items()}
+
+    def ctx_ok(phrase: str, source: str) -> bool:
+        r = ctx_rules.get(phrase.lower())
+        if not r:
+            return True
+        if any(source.startswith(x) for x in r.get("skip_in", []) or []):
+            return False
+        only = r.get("only_in") or []
+        return not only or any(source.startswith(x) for x in only)
 
     from .audit import sitemap_urls
     sess = C.session(cfg.get("audit", {}).get("user_agent"))
@@ -381,6 +391,8 @@ def run() -> None:
                     continue      # a "related links" list item: already a link
                 for m in rx.finditer(para):
                     if inside_longer_name(para, m.start()) or continues_into_name(para, m.end()):
+                        continue
+                    if not ctx_ok(m.group(1), p):
                         continue
                     target = resolve(m.group(1).lower(), p)
                     if target == p or target in d["links"] or target in found:

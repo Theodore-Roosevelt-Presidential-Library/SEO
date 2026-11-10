@@ -25,3 +25,18 @@ never_link:
   - Theodore Roosevelt Jr
   - Theodore Roosevelt Jr.
   - Theodore Roosevelt Sr
+  # Generic phrases that matched page titles but were wrong links in the 2026-11-03 vetting pass.
+  - high school
+  - middle school
+  - elementary school
+  - in the room
+  - during your visit
+  - frequently asked questions
+  - join us
+
+# Phrases that are fine as links in some sections but not others (2026-11-03 vetting).
+# skip_in: never suggest the phrase on pages under these path prefixes.
+# only_in: suggest it only on pages under these prefixes.
+context_rules:
+  roosevelt family: {skip_in: [/about/press, /podcast]}
+  civil war: {only_in: [/tr/early-life]}

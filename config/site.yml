@@ -17,6 +17,9 @@ brand_terms:
   - Roosevelt Presidential Library
   - TR Presidential Library
   - TR Library
+  - Teddy Roosevelt Presidential Library
+  - Teddy Roosevelt Library
+  - Theodore Roosevelt Library
   - trlibrary.com
 
 # Search queries containing any of these count as "branded" in the dashboard.
@@ -145,6 +148,12 @@ indexnow:
 # Work queue (docs/data/work_queue.json, top of digest.md): tasks an AI assistant
 # or a person can carry out. List task ids here once they're handed off, so the
 # queue shows them as waiting rather than asking again. Ids are shown in the queue.
+# Opportunities: pages left out of striking distance, low CTR and missing-in-title.
+# Good Citizen episodes rank for guests' names (senators, commentators): people
+# searching a guest's name want the guest, not the Library, so those rows are noise.
+opportunities:
+  exclude_patterns: ["^/podcast/good-citizen/", "^/video/view/"]
+
 work_queue:
   ticketed:   # sent to FiveJars (Basecamp, "SEO tool: technical fixes" doc, 2026-10-27)
     - schema:sitewide:tr_entity

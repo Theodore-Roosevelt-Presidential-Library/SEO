@@ -168,6 +168,11 @@ For each visitor task below, judge THIS page only:
 Tasks:
 {tasks}
 
+The text comes from the page's HTML before JavaScript runs. Widgets that load in the browser
+(ticket calendars, date pickers, availability checkers, maps, embedded players) can be on the
+live page even when they are absent from this text. Never say such a widget is missing, broken
+or needs embedding, and don't make one the biggest fix; judge the visitor tasks from the text you have.
+
 Also copy the exact facts the page states (verbatim, or null if not stated): opening hours, ticket prices, recommended visit length, street address, parking.
 
 Return JSON only:

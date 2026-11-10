@@ -111,10 +111,12 @@ def build(query_pages, queries, pages, audit_pages, min_impr: int = 30) -> dict:
         s = score[r["page"]]; s["sd"] += r["est_extra_clicks"]; s["reasons"].add("striking_distance")
     for r in low:
         s = score[r["page"]]; s["low"] = max(s["low"], r["est_extra_clicks"]); s["reasons"].add("low_ctr")
-    for v in score.values():
-        v["est_extra_clicks"] = max(v["sd"], v["low"])
     for r in mit:
         score[r["page"]]["reasons"].add("missing_in_title")
+    # Every page needs an estimate, including pages that only appear under
+    # missing_in_title (they have no sd/low upside of their own).
+    for v in score.values():
+        v["est_extra_clicks"] = max(v["sd"], v["low"])
     page_scores = sorted(
         ({"page": p, "est_extra_clicks": v["est_extra_clicks"], "reasons": sorted(v["reasons"])} for p, v in score.items()),
         key=lambda r: -r["est_extra_clicks"],
@@ -157,6 +159,18 @@ def hold_back(out: dict, held: set[str], log: dict | None = None) -> dict:
     return out
 
 
+def exclude(out: dict, patterns: list[str]) -> dict:
+    """Drop pages matching config `opportunities.exclude_patterns` (podcast guest-name
+    searches, video pages) from the fix-it lists. Declining and cannibalization keep them."""
+    import re
+    rx = [re.compile(p) for p in patterns or []]
+    if not rx:
+        return out
+    for key in ("striking_distance", "low_ctr", "missing_in_title", "page_scores"):
+        out[key] = [r for r in out.get(key, []) if not any(x.search(CH.path_of(r["page"])) for x in rx)]
+    return out
+
+
 def run() -> None:
     qp = C.read_json("gsc/query_pages.json")
     if not qp:
@@ -164,6 +178,7 @@ def run() -> None:
         return
     out = build(qp, C.read_json("gsc/queries.json", []), C.read_json("gsc/pages.json", []),
                 C.read_json("audit/pages.json", []))
+    out = exclude(out, (C.config().get("opportunities") or {}).get("exclude_patterns", []))
     log = CH.load()
     out = hold_back(out, CH.held_paths(log=log), log)
     out["updated"] = C.now_iso()

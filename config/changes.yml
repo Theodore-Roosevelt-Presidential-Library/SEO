@@ -315,3 +315,14 @@ changes:
   - {date: 2026-10-20, page: /tr/badlands, kind: [content], what: "Link to where-to-see"}
   - {date: 2026-10-20, page: /visit/medora/history, kind: [content], what: "North Dakota quote aligned to the 1918 Volwiler letter"}
   - {date: 2026-10-20, page: "*", kind: [schema], what: "Organization alternateName adds Teddy Roosevelt Presidential Library and Teddy Roosevelt Library"}
+  - {date: 2026-11-09, page: /tr/rise-to-power/spanish-american-war, kind: [title, meta], what: "Title 'Theodore Roosevelt and the Spanish-American War'; Navy/Rough Riders description"}
+  - {date: 2026-11-09, page: /tr/presidency/food-and-drug, kind: [title, meta], what: "Title 'Pure Food and Drug Act and Meat Inspection Act of 1906'; drops '1905 novel'"}
+  - {date: 2026-11-09, page: /tr/people/archibald, kind: [title, meta], what: "Title 'Archibald Roosevelt: TR’s Son Wounded in Two World Wars'"}
+  - {date: 2026-11-09, page: /visit/lodging, kind: [title, meta], what: "Title 'Medora Hotels, Cabins and Campgrounds'; names Hotel 1883"}
+  - {date: 2026-11-09, page: /join-us, kind: [title, meta], what: "Title 'Join Us: Become a Member, Volunteer or Work Here'; first description and OG tags"}
+  - {date: 2026-11-09, page: /visit/exhibits/kennerly, kind: [title, meta], what: "Title 'In the Room: David Hume Kennerly Photo Exhibition'; first description and OG tags"}
+  - {date: 2026-11-09, page: /about/trustees/kermit-roosevelt, kind: [title, meta], what: "Title 'Kermit Roosevelt, Library Trustee' (was duplicate of /tr/people/kermit)"}
+  - {date: 2026-11-09, page: /about/trustees/douglas-brinkley, kind: [title, meta], what: "Title 'Douglas Brinkley, Library Trustee' (was duplicate of podcast page)"}
+  - {date: 2026-11-09, page: /contact, kind: [title, meta], what: "Title 'Contact Us: Phone, Address and Message Form'; phone and address in description"}
+  - {date: 2026-11-09, page: /visit/tickets/plan-ahead, kind: [meta, content], what: "Description no longer leads with summer; removed '2026 is the Library's first year'"}
+  - {date: 2026-11-09, page: /llms.txt, kind: [content], what: "Added 'Key facts for visitors' (address, 3½ hours, year-round, tickets, indoor, not the FDR Library)"}

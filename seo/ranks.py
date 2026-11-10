@@ -38,10 +38,23 @@ def tracked_keywords() -> list[dict]:
     return out
 
 
+def _item_domain(i: dict) -> str:
+    """DataForSEO's own `domain` field first: since early Nov 2026 the organic `url`
+    sometimes comes back as an opaque google.com/goto?url=... redirect, which made
+    every result look like google.com and hid our own ranking."""
+    d = (i.get("domain") or "").lower().removeprefix("www.")
+    u = i.get("url") or ""
+    if not d or d.endswith("google.com"):
+        d2 = C.domain_of(u)
+        if d2 and not d2.endswith("google.com"):
+            d = d2
+    return d
+
+
 def parse_serp(result: dict, our_domain: str) -> dict:
     items = result.get("items") or []
     organic = [i for i in items if i.get("type") == "organic"]
-    ours = next((i for i in organic if C.domain_of(i.get("url", "")).endswith(our_domain)), None)
+    ours = next((i for i in organic if _item_domain(i).endswith(our_domain)), None)
     aio = next((i for i in items if i.get("type") == "ai_overview"), None)
     aio_refs = []
     if aio:
@@ -54,7 +67,7 @@ def parse_serp(result: dict, our_domain: str) -> dict:
         "rank": ours.get("rank_group") if ours else None,
         "url": ours.get("url") if ours else None,
         "top": [
-            {"rank": i.get("rank_group"), "domain": C.domain_of(i.get("url", "")), "url": i.get("url"), "title": i.get("title")}
+            {"rank": i.get("rank_group"), "domain": _item_domain(i), "url": i.get("url"), "title": i.get("title")}
             for i in organic[:10]
         ],
         "features": sorted({i.get("type") for i in items if i.get("type") != "organic"}),

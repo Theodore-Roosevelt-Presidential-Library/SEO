@@ -105,7 +105,7 @@ ASK = {"openai": ask_openai, "gemini": ask_gemini, "perplexity": ask_perplexity,
 # ---------- analysis ----------
 
 def analyse(text: str, citations: list[str], brand_re, peers: dict, our_domain: str) -> dict:
-    m = brand_re.search(text or "")
+    m = C.find_brand(text or "", brand_re)
     peer_hits = {}
     for name, aliases in peers.items():
         pm = C.brand_regex(aliases).search(text or "")
@@ -117,12 +117,16 @@ def analyse(text: str, citations: list[str], brand_re, peers: dict, our_domain: 
     excerpt = ""
     if m:
         sentences = re.split(r"(?<=[.!?])\s+|\n+", text)
-        hits = [s.strip() for s in sentences if brand_re.search(s)]
+        hits = [s.strip() for s in sentences if C.find_brand(s, brand_re)]
         excerpt = " … ".join(hits[:2])[:500]
     domains = [C.domain_of(u) for u in citations]
+    cited_us = any(d.endswith(our_domain) for d in domains)
     return {
-        "mentioned": bool(m),
-        "cited_us": any(d.endswith(our_domain) for d in domains),
+        # An answer that cites trlibrary.com is pointing people to the Library even
+        # when it doesn't spell out the name (common on "how much are tickets").
+        "mentioned": bool(m) or cited_us,
+        "named": bool(m),
+        "cited_us": cited_us,
         "position": position,
         "peers": sorted(peer_hits, key=peer_hits.get),
         "excerpt": excerpt,
