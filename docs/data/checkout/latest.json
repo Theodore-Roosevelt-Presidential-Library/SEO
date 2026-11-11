@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T13:24:44+00:00",
+ "updated": "2026-11-11T13:28:23+00:00",
  "store": "access.trlibrary.com",
  "period": "last 28 days",
  "note": "Rates only; counts are never published. Users who triggered each step on the ticket store, from GA4.",
@@ -22,13 +22,13 @@
    "add_payment_info"
   ],
   "of_store_visitors": {
-   "purchase": 0.3
+   "purchase": 0.286
   },
   "step_to_step": {
-   "store_visit->purchase": 0.3
+   "store_visit->purchase": 0.286
   },
   "checkout_completion": null,
-  "store_conversion": 0.3
+  "store_conversion": 0.286
  },
  "previous": {
   "tracked_steps": [
@@ -41,16 +41,35 @@
    "add_payment_info"
   ],
   "of_store_visitors": {
-   "purchase": 0.423
+   "purchase": 0.427
   },
   "step_to_step": {
-   "store_visit->purchase": 0.423
+   "store_visit->purchase": 0.427
   },
   "checkout_completion": null,
-  "store_conversion": 0.423
+  "store_conversion": 0.427
  },
  "by_device": {
   "mobile": {
+   "tracked_steps": [
+    "purchase"
+   ],
+   "missing_steps": [
+    "view_item",
+    "add_to_cart",
+    "begin_checkout",
+    "add_payment_info"
+   ],
+   "of_store_visitors": {
+    "purchase": 0.282
+   },
+   "step_to_step": {
+    "store_visit->purchase": 0.282
+   },
+   "checkout_completion": null,
+   "store_conversion": 0.282
+  },
+  "desktop": {
    "tracked_steps": [
     "purchase"
    ],
@@ -69,25 +88,6 @@
    "checkout_completion": null,
    "store_conversion": 0.298
   },
-  "desktop": {
-   "tracked_steps": [
-    "purchase"
-   ],
-   "missing_steps": [
-    "view_item",
-    "add_to_cart",
-    "begin_checkout",
-    "add_payment_info"
-   ],
-   "of_store_visitors": {
-    "purchase": 0.306
-   },
-   "step_to_step": {
-    "store_visit->purchase": 0.306
-   },
-   "checkout_completion": null,
-   "store_conversion": 0.306
-  },
   "tablet": {
    "tracked_steps": [
     "purchase"
@@ -99,21 +99,21 @@
     "add_payment_info"
    ],
    "of_store_visitors": {
-    "purchase": 0.279
+    "purchase": 0.269
    },
    "step_to_step": {
-    "store_visit->purchase": 0.279
+    "store_visit->purchase": 0.269
    },
    "checkout_completion": null,
-   "store_conversion": 0.279
+   "store_conversion": 0.269
   }
  },
- "ticket_page_to_store": 0.561,
+ "ticket_page_to_store": 0.556,
  "weekly": [
   {
    "week": "202634",
    "checkout_completion": null,
-   "store_conversion": 0.404
+   "store_conversion": 0.391
   },
   {
    "week": "202635",
@@ -173,33 +173,19 @@
   {
    "week": "202646",
    "checkout_completion": null,
-   "store_conversion": 0.145
+   "store_conversion": 0.141
   }
  ],
  "store_friction": {
   "period": "last 3 days",
   "overall": {
-   "dead_clicks": 12.8,
+   "dead_clicks": 14.0,
    "excessive_scroll": 0.0,
    "rage_clicks": 0.2,
-   "quick_backs": 29.3,
-   "scroll_depth": 77.8
+   "quick_backs": 29.6,
+   "scroll_depth": 78.5
   },
   "pages": {
-   "checkout/process": {
-    "dead_clicks": 100.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 87.5,
-    "excessive_scroll": 0.0
-   },
-   "membership/join": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 60.0,
-    "excessive_scroll": 0.0
-   },
    "orders/tickets": {
     "dead_clicks": 25.0,
     "rage_clicks": 0.0,
@@ -207,25 +193,32 @@
     "scroll_depth": 89.0,
     "excessive_scroll": 0.0
    },
+   "membership/join": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 60.5,
+    "excessive_scroll": 0.0
+   },
    "checkout/confirm": {
-    "dead_clicks": 4.8,
+    "dead_clicks": 6.1,
     "rage_clicks": 0.0,
-    "quick_backs": 7.9,
-    "scroll_depth": 98.9,
+    "quick_backs": 9.8,
+    "scroll_depth": 99.2,
     "excessive_scroll": 0.0
    },
-   "tr/presidency/executive-power": {
-    "dead_clicks": 0.0,
+   "checkout/process": {
+    "dead_clicks": 100.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 16.0,
+    "scroll_depth": 87.5,
     "excessive_scroll": 0.0
    },
-   "calendar": {
-    "dead_clicks": 0.0,
+   "private-events/spaces": {
+    "dead_clicks": 100.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 40.0,
+    "scroll_depth": 99.0,
     "excessive_scroll": 0.0
    },
    "events/detail": {
@@ -235,46 +228,39 @@
     "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
-   "membership/detail": {
-    "dead_clicks": 12.5,
-    "rage_clicks": 0.0,
-    "quick_backs": 18.8,
-    "scroll_depth": 100.0,
-    "excessive_scroll": 0.0
-   },
    "calendar/special-event/elkhorn-evenings": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 85.5,
+    "scroll_depth": 67.0,
     "excessive_scroll": 0.0
    },
    "orders/forms": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 98.8,
+    "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
    "auth/members": {
-    "dead_clicks": 0.0,
+    "dead_clicks": 50.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
-   "visit/groups": {
+   "membership/detail": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
+    "quick_backs": 16.7,
+    "scroll_depth": 95.1,
     "excessive_scroll": 0.0
    },
    "midwinter-table": {
-    "dead_clicks": 100.0,
+    "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 92.0,
+    "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
    "tickets": {
@@ -287,15 +273,22 @@
    "orders/calendar": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 75.0,
-    "scroll_depth": 68.0,
+    "quick_backs": 16.6,
+    "scroll_depth": 69.8,
     "excessive_scroll": 0.0
    },
    "about/careers": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 87.0,
+    "scroll_depth": 73.7,
+    "excessive_scroll": 0.0
+   },
+   "tr": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 9.0,
     "excessive_scroll": 0.0
    },
    "membership/profile": {
@@ -305,11 +298,18 @@
     "scroll_depth": 99.5,
     "excessive_scroll": 0.0
    },
-   "tr/presidency/trust-busting": {
-    "dead_clicks": 25.0,
+   "tr/legacy/teddy-bear": {
+    "dead_clicks": 100.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 70.7,
+    "scroll_depth": 14.0,
+    "excessive_scroll": 0.0
+   },
+   "tr/presidency/trust-busting": {
+    "dead_clicks": 20.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 58.9,
     "excessive_scroll": 0.0
    },
    "visit/hours": {
@@ -340,13 +340,6 @@
     "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
-   "visit/maps": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 54.5,
-    "excessive_scroll": 0.0
-   },
    "membership/renew": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
@@ -354,11 +347,25 @@
     "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
+   "tr/tr-shot": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 52.0,
+    "excessive_scroll": 0.0
+   },
    "staff-members/jeremy-beam": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 92.0,
+    "excessive_scroll": 0.0
+   },
+   "visit/planner": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
    "/": {
@@ -378,22 +385,15 @@
    "visit": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 42.9,
-    "scroll_depth": 34.0,
+    "quick_backs": 33.3,
+    "scroll_depth": 37.6,
     "excessive_scroll": 0.0
    },
-   "calendar/special-event": {
-    "dead_clicks": 25.0,
+   "tr/speeches/man-in-the-arena": {
+    "dead_clicks": 100.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 80.3,
-    "excessive_scroll": 0.0
-   },
-   "visit/activities": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 99.0,
+    "scroll_depth": 90.5,
     "excessive_scroll": 0.0
    },
    "visit/faq": {
@@ -401,6 +401,20 @@
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 100.0,
+    "excessive_scroll": 0.0
+   },
+   "calendar/special-event": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 78.2,
+    "excessive_scroll": 0.0
+   },
+   "visit/activities": {
+    "dead_clicks": 100.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 35.0,
     "excessive_scroll": 0.0
    },
    "search": {
@@ -421,7 +435,7 @@
     "dead_clicks": 50.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 52.6,
+    "scroll_depth": 50.2,
     "excessive_scroll": 0.0
    },
    "join-us": {
@@ -429,13 +443,6 @@
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 62.0,
-    "excessive_scroll": 0.0
-   },
-   "visit/planner": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 94.0,
     "excessive_scroll": 0.0
    },
    "support": {
@@ -456,7 +463,14 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 67.0,
+    "scroll_depth": 83.5,
+    "excessive_scroll": 0.0
+   },
+   "tr/family/children": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 81.0,
     "excessive_scroll": 0.0
    },
    "tr/myths": {
@@ -473,6 +487,20 @@
     "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
+   "calendar": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 34.5,
+    "excessive_scroll": 0.0
+   },
+   "tr/presidency": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 23.0,
+    "excessive_scroll": 0.0
+   },
    "visit/stargazing": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
@@ -487,6 +515,27 @@
     "scroll_depth": 43.0,
     "excessive_scroll": 0.0
    },
+   "staff-members/marcie-woehl": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 95.0,
+    "excessive_scroll": 0.0
+   },
+   "pay-balance/92V1G6OArFSfCjVtLeWEoDvBog3FRE9sL32OWk-cM7E9lS_goYPEJ66OsI7FilF1": {
+    "dead_clicks": 100.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 100.0,
+    "excessive_scroll": 0.0
+   },
+   "tr/myths/misquotes": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 93.0,
+    "excessive_scroll": 0.0
+   },
    "membership": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
@@ -498,7 +547,7 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 34.0,
+    "scroll_depth": 51.0,
     "excessive_scroll": 0.0
    },
    "contact": {
@@ -515,18 +564,18 @@
     "scroll_depth": 38.0,
     "excessive_scroll": 0.0
    },
+   "visit/directions/ev-charging": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 26.0,
+    "excessive_scroll": 0.0
+   },
    "about/trustees": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 100.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/birthday-timeline": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 8.0,
+    "scroll_depth": 96.0,
     "excessive_scroll": 0.0
    },
    "tr/quotes": {
@@ -544,17 +593,17 @@
     "excessive_scroll": 0.0
    },
    "staff-members/addison-olson": {
-    "dead_clicks": 50.0,
+    "dead_clicks": 100.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 99.5,
+    "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
    "tr/family/fdr-connection": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 39.3,
+    "scroll_depth": 30.5,
     "excessive_scroll": 0.0
    },
    "calendar/special-event/america-beautiful-film-screening": {
@@ -564,32 +613,11 @@
     "scroll_depth": 53.0,
     "excessive_scroll": 0.0
    },
-   "video/view/Hjg-Lz0WqnA": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 37.0,
-    "excessive_scroll": 0.0
-   },
    "tr/presidency/coal-strike": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 10.0,
-    "excessive_scroll": 0.0
-   },
-   "about/press": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 81.4,
-    "excessive_scroll": 0.0
-   },
-   "tr/speeches": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 63.5,
     "excessive_scroll": 0.0
    },
    "tr/speeches/first-annual-message": {
@@ -599,18 +627,46 @@
     "scroll_depth": 85.0,
     "excessive_scroll": 0.0
    },
+   "about/trustees/theodore-roosevelt-v": {
+    "dead_clicks": 100.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 100.0,
+    "excessive_scroll": 0.0
+   },
+   "tr/quotes/leadership": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 95.0,
+    "excessive_scroll": 0.0
+   },
+   "about/press": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 76.2,
+    "excessive_scroll": 0.0
+   },
+   "tr/speeches": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 63.5,
+    "excessive_scroll": 0.0
+   },
+   "user/login": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 100.0,
+    "excessive_scroll": 0.0
+   },
    "video/view/W9sq8PuGQVo": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 57.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/presidency/food-and-drug": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 8.0,
+    "scroll_depth": 59.0,
     "excessive_scroll": 0.0
    },
    "about/mission": {
@@ -627,6 +683,13 @@
     "scroll_depth": 60.5,
     "excessive_scroll": 0.0
    },
+   "video": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 95.0,
+    "excessive_scroll": 0.0
+   },
    "tr/people/alice-longworth/in-her-words": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
@@ -635,10 +698,10 @@
     "excessive_scroll": 0.0
    },
    "legal/privacy": {
-    "dead_clicks": 50.0,
+    "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 8.5,
+    "scroll_depth": 10.0,
     "excessive_scroll": 0.0
    },
    "project/sustainability": {
@@ -648,25 +711,18 @@
     "scroll_depth": 27.0,
     "excessive_scroll": 0.0
    },
+   "visit/medora": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 12.0,
+    "excessive_scroll": 0.0
+   },
    "tr/people/corinne": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 13.7,
-    "excessive_scroll": 0.0
-   },
-   "visit/directions": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 29.0,
-    "excessive_scroll": 0.0
-   },
-   "visit/eat": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 55.5,
     "excessive_scroll": 0.0
    },
    "tr/quotes/conservation": {
@@ -676,11 +732,11 @@
     "scroll_depth": 76.0,
     "excessive_scroll": 0.0
    },
-   "podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore": {
-    "dead_clicks": 100.0,
+   "project/design": {
+    "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 100.0,
+    "scroll_depth": 53.0,
     "excessive_scroll": 0.0
    },
    "private-events/catering": {
@@ -701,14 +757,14 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 31.0,
+    "scroll_depth": 39.0,
     "excessive_scroll": 0.0
    },
-   "programs": {
+   "tr/early-life/family-roots": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
+    "quick_backs": 100.0,
+    "scroll_depth": 56.0,
     "excessive_scroll": 0.0
    }
   }
