@@ -1,6 +1,6 @@
 # TRPL Search & AI Visibility
 
-> How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built 2026-11-11T13:28:28+00:00.
+> How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built 2026-11-12T13:25:59+00:00.
 
 The dashboard at https://seo.labs.trlibrary.com/ is rendered with JavaScript. AI tools should read the digest below instead.
 
@@ -21,10 +21,10 @@ Top of the queue now:
 - Same topic on two pages (merge or differentiate) (TRPL, 20)
 - Add internal links where pages already mention each other (TRPL, 579)
 - Pages nothing links to (TRPL, 45)
-- Pages ranking well that people skip: rewrite title and description (TRPL, 3)
+- Pages ranking well that people skip: rewrite title and description (TRPL, 4)
 
 ## Snapshot
-- Google: 41,981 clicks, avg position 5.9 (28 days to 2026-11-08)
+- Google: 42,010 clicks, avg position 5.8 (28 days to 2026-11-09)
 - Site audit: health 95/100, AI readiness 60/100
 - AI assistants mentioning the Library: ChatGPT 38%, Gemini 24%
 - Links: 0 broken internal addresses with 301 redirects proposed, 746 internal links worth adding, 45 pages with no links in

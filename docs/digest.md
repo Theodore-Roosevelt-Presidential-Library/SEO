@@ -1,5 +1,5 @@
 # trlibrary.com search & AI visibility digest
-Generated 2026-11-11T13:28:28+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
+Generated 2026-11-12T13:25:59+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
 
 ## How to use this
 This briefing is for doing the work, not only describing it. An assistant pointed here has four jobs, in this order:
@@ -30,8 +30,8 @@ House rules for any change:
 47 tasks (2 search, 23 audit, 5 internal links, 15 structured data, 2 AI visibility); 13 with FiveJars or blocked. Ranked by severity x the Google audience of the pages involved. Full lists, every page, and step-by-step Drupal recipes: https://seo.labs.trlibrary.com/data/work_queue.json
 
 ### This week's moves
-1. **Add internal links where pages already mention each other** (`links:add`): medium priority; pages involved get 250,480 Google impressions (28 days). Start with: /tr/timeline; /visit/exhibits/main; /podcast/good-citizen/edward-okeefe.
-2. **Pages ranking well that people skip: rewrite title and description** (`search:low_ctr`): medium priority; pages involved get 73,776 Google impressions (28 days). Start with: /tickets; /tr/rise-to-power/rough-riders; /tr/presidency/foreign-policy.
+1. **Add internal links where pages already mention each other** (`links:add`): medium priority; pages involved get 251,288 Google impressions (28 days). Start with: /tr/timeline; /visit/exhibits/main; /podcast/good-citizen/edward-okeefe.
+2. **Pages ranking well that people skip: rewrite title and description** (`search:low_ctr`): medium priority; pages involved get 82,617 Google impressions (28 days). Start with: /tickets; /tr/rise-to-power/rough-riders; /tr/presidency/foreign-policy.
 3. **Searches AI assistants run where trlibrary.com isn't on page one** (`ai:searches_we_miss`): medium priority; affects the whole site. Start with: "Badlands Dinosaur Museum Dickinson North Dakota family activities" (run by ChatGPT); "Badlands National Park NPS scenic drive Ben Reifel Visitor Center official site" (run by ChatGPT); "Badlands National Park scenic loop Wall Drug Minuteman Missile National Historic Site official sites" (run by ChatGPT).
 
 ### What else we checked (and why it can wait)
@@ -39,10 +39,10 @@ House rules for any change:
 - Same topic on two pages (merge or differentiate) (`links:duplicate_topics`): needs a decision first (merge or archive)
 - Pages nothing links to (`links:orphans`): same area as a move this week (internal links); next in line
 - Get onto pages AI cites that leave the Library out (`ai:ask_to_be_added`): same area as a move this week (ai visibility); next in line
-- Same title as another page (`audit:title_duplicate`): smaller reach (12,794 Google impressions vs 73,776 for this week's moves)
+- Same title as another page (`audit:title_duplicate`): smaller reach (12,977 Google impressions vs 82,617 for this week's moves)
 - Strengthen pages ranking just off the top for searches people make (`search:striking_distance`): same area as a move this week (search); next in line
-- Missing Open Graph tags (`audit:og_missing`): smaller reach (7,333 Google impressions vs 73,776 for this week's moves)
-- No meta description (`audit:meta_missing`): smaller reach (6,519 Google impressions vs 73,776 for this week's moves)
+- Missing Open Graph tags (`audit:og_missing`): smaller reach (7,874 Google impressions vs 82,617 for this week's moves)
+- No meta description (`audit:meta_missing`): smaller reach (7,042 Google impressions vs 82,617 for this week's moves)
 
 **How to work it**
 1. Pick tasks from the top of the queue (or a page job, to do everything on one page at once). Pages marked held changed recently and are being measured: leave their titles, descriptions and copy alone (adding markup or links to them is fine).
@@ -59,7 +59,7 @@ House rules for any change:
 | 2 | Same topic on two pages (merge or differentiate) | internal links | TRPL | 20 | needs approval | links:duplicate_topics |
 | 3 | Add internal links where pages already mention each other | internal links | TRPL | 579 | to do | links:add |
 | 4 | Pages nothing links to | internal links | TRPL | 45 | to do | links:orphans |
-| 5 | Pages ranking well that people skip: rewrite title and description | search | TRPL | 3 | to do | search:low_ctr |
+| 5 | Pages ranking well that people skip: rewrite title and description | search | TRPL | 4 | to do | search:low_ctr |
 | 6 | Searches AI assistants run where trlibrary.com isn't on page one | ai visibility | TRPL | 63 | to do | ai:searches_we_miss |
 | 7 | Get onto pages AI cites that leave the Library out | ai visibility | TRPL | 2 | to do | ai:ask_to_be_added |
 | 8 | Same title as another page | audit | TRPL | 37 | to do | audit:title_duplicate |
@@ -103,14 +103,14 @@ House rules for any change:
 **3. Add internal links where pages already mention each other** (`links:add`, 579 items)
 - How: Open the source page's Layout. Edit the text block that contains the context sentence and turn the [[bracketed]] words into a link to the target path (relative, e.g. /tr/tr-shot). Don't write new sentences just to hold a link. Save the block, then Save layout.
 - Done when: The link appears on the source page; the target's links-in count rises next week
-  - `/tr/timeline`, 42,648 impr., [[William Howard Taft]] -> /tr/people/william-howard-taft; [[River of Doubt]] -> /tr/post-presidency/river-of-doubt; [[Edith Roosevelt]] -> /tr/rise-to-power/edith-roosevelt
-  - `/visit/exhibits/main`, 4,770 impr., [[River of Doubt]] -> /tr/post-presidency/river-of-doubt; [[Alice Hathaway Lee]] -> /tr/new-york-politics/alice-lee; [[Edith Roosevelt]] -> /tr/rise-to-power/edith-roosevelt
-  - `/podcast/good-citizen/edward-okeefe`, 344 impr., [[high school]] -> /tr/for-educators/high-school; [[Roosevelt family]] -> /tr/family; [[executive power]] -> /tr/presidency/executive-power
-  - `/podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore`, 949 impr., [[high school]] -> /tr/for-educators/high-school; [[in the room]] -> /visit/exhibits/kennerly; [[the man in the arena]] -> /tr/post-presidency/man-in-the-arena
-  - `/tr/presidency/white-house-family`, 1,925 impr., [[Edith Roosevelt]] -> /tr/rise-to-power/edith-roosevelt; [[governor of New York]] -> /tr/rise-to-power/governor; [[Roosevelt White House]] -> /tr/homes-and-places/white-house
-  - `/tr`, 7,654 impr., [[Bully Pulpit]] -> /tr/presidency/bully-pulpit; [[high school]] -> /tr/for-educators/high-school; [[Ted Jr]] -> /tr/people/ted-jr
-  - `/tr/thanksgiving-timeline`, 173 impr., [[River of Doubt]] -> /tr/post-presidency/river-of-doubt; [[Alice Lee]] -> /tr/new-york-politics/alice-lee; [[Pine Knot]] -> /tr/homes-and-places/pine-knot
-  - `/tr/family/family-tree`, 23,831 impr., [[Kermit Roosevelt]] -> /tr/people/kermit; [[Sagamore Hill]] -> /tr/homes-and-places/sagamore-hill; [[Quentin Roosevelt]] -> /tr/people/quentin
+  - `/tr/timeline`, 42,853 impr., [[William Howard Taft]] -> /tr/people/william-howard-taft; [[River of Doubt]] -> /tr/post-presidency/river-of-doubt; [[Edith Roosevelt]] -> /tr/rise-to-power/edith-roosevelt
+  - `/visit/exhibits/main`, 4,805 impr., [[River of Doubt]] -> /tr/post-presidency/river-of-doubt; [[Alice Hathaway Lee]] -> /tr/new-york-politics/alice-lee; [[Edith Roosevelt]] -> /tr/rise-to-power/edith-roosevelt
+  - `/podcast/good-citizen/edward-okeefe`, 345 impr., [[high school]] -> /tr/for-educators/high-school; [[Roosevelt family]] -> /tr/family; [[executive power]] -> /tr/presidency/executive-power
+  - `/podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore`, 936 impr., [[high school]] -> /tr/for-educators/high-school; [[in the room]] -> /visit/exhibits/kennerly; [[the man in the arena]] -> /tr/post-presidency/man-in-the-arena
+  - `/tr/presidency/white-house-family`, 1,955 impr., [[Edith Roosevelt]] -> /tr/rise-to-power/edith-roosevelt; [[governor of New York]] -> /tr/rise-to-power/governor; [[Roosevelt White House]] -> /tr/homes-and-places/white-house
+  - `/tr`, 8,205 impr., [[Bully Pulpit]] -> /tr/presidency/bully-pulpit; [[high school]] -> /tr/for-educators/high-school; [[Ted Jr]] -> /tr/people/ted-jr
+  - `/tr/thanksgiving-timeline`, 184 impr., [[River of Doubt]] -> /tr/post-presidency/river-of-doubt; [[Alice Lee]] -> /tr/new-york-politics/alice-lee; [[Pine Knot]] -> /tr/homes-and-places/pine-knot
+  - `/tr/family/family-tree`, 23,449 impr., [[Kermit Roosevelt]] -> /tr/people/kermit; [[Sagamore Hill]] -> /tr/homes-and-places/sagamore-hill; [[Quentin Roosevelt]] -> /tr/people/quentin
   - ...and 286 more in work_queue.json
 
 **4. Pages nothing links to** (`links:orphans`, 45 items)
@@ -126,12 +126,13 @@ House rules for any change:
   - `/join-us`, 3,140 impr., link from: /podcast/good-citizen/meg-whitman ([[join us]]); /programs ([[Join us]])
   - ...and 37 more in work_queue.json
 
-**5. Pages ranking well that people skip: rewrite title and description** (`search:low_ctr`, 3 items)
+**5. Pages ranking well that people skip: rewrite title and description** (`search:low_ctr`, 4 items)
 - How: Edit the node (/node/NID/edit) > 'Customize meta tags'. Basic tags: Page title '<title> | [site:name]' (page part 60 characters or fewer) and Description (120-155 characters). Set Open Graph og:title/og:description and Twitter card title/description to match. Save with 'Save' (keeps the moderation state). If the save seems to do nothing, look for a validation error further down the form.
 - Done when: Click-through rate rises at the same position (change log before/after)
-  - `/tickets`, 53,194 impr.
-  - `/tr/rise-to-power/rough-riders`, 12,209 impr.
-  - `/tr/presidency/foreign-policy`, 8,373 impr.
+  - `/tickets`, 52,106 impr.
+  - `/tr/rise-to-power/rough-riders`, 12,982 impr.
+  - `/tr/presidency/foreign-policy`, 9,507 impr.
+  - `/tr/presidency/nobel-peace-prize`, 8,022 impr.
 
 **6. Searches AI assistants run where trlibrary.com isn't on page one** (`ai:searches_we_miss`, 63 items)
 - How: These are the searches the assistants ran before answering a question where they left the Library out. Find the trlibrary.com page that should answer each one (or note that none does). Strengthen that page for the search: say it in the title or a heading and answer it in the first paragraph, with facts already on the site. If no page fits, propose one.
@@ -155,37 +156,37 @@ House rules for any change:
 **8. Same title as another page** (`audit:title_duplicate`, 37 pages)
 - How: Edit the node (/node/NID/edit) > 'Customize meta tags'. Basic tags: Page title '<title> | [site:name]' (page part 60 characters or fewer) and Description (120-155 characters). Set Open Graph og:title/og:description and Twitter card title/description to match. Save with 'Save' (keeps the moderation state). If the save seems to do nothing, look for a validation error further down the form.
 - Done when: No other page has the same title
-  - `/visit/exhibits/kennerly`, 2,671 impr., HELD (recently changed), title "In the Room: Sixty Years on the Front Lines of History" (54 chars), same as /calendar/daily-activity/room-sixty-years-front-lines-history, /calendar/special-event/gallery-david-hume-kennerly, /calendar/special-event/artist-talk-room-david-hume-kennerly
-  - `/about/trustees/kermit-roosevelt`, 2,262 impr., HELD (recently changed), title "Kermit Roosevelt" (16 chars), same as /tr/people/kermit
-  - `/tr/people/kermit`, 1,842 impr., HELD (recently changed), title "Kermit Roosevelt" (16 chars), same as /about/trustees/kermit-roosevelt
-  - `/calendar/daily-activity/room-sixty-years-front-lines-history`, 1,758 impr., title "In the Room: Sixty Years on the Front Lines of History" (54 chars), same as /calendar/special-event/gallery-david-hume-kennerly, /calendar/special-event/artist-talk-room-david-hume-kennerly, /calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf
-  - `/project/native-plant-project`, 1,285 impr., HELD (recently changed), title "Native Plant Project" (20 chars), same as /video/view/1SqdaUrbU7U
-  - `/about/trustees/douglas-brinkley`, 850 impr., HELD (recently changed), title "Douglas Brinkley" (16 chars), same as /podcast/good-citizen/douglas-brinkley
-  - `/podcast/good-citizen/douglas-brinkley`, 762 impr., HELD (recently changed), title "Douglas Brinkley" (16 chars), same as /about/trustees/douglas-brinkley
-  - `/events/teddycon`, 675 impr., HELD (recently changed), title "Theodore Roosevelt Convention (#TeddyCon)" (41 chars), same as /event/24
+  - `/visit/exhibits/kennerly`, 2,854 impr., HELD (recently changed), title "In the Room: Sixty Years on the Front Lines of History" (54 chars), same as /calendar/daily-activity/room-sixty-years-front-lines-history, /calendar/special-event/gallery-david-hume-kennerly, /calendar/special-event/artist-talk-room-david-hume-kennerly
+  - `/about/trustees/kermit-roosevelt`, 2,273 impr., HELD (recently changed), title "Kermit Roosevelt" (16 chars), same as /tr/people/kermit
+  - `/tr/people/kermit`, 1,911 impr., HELD (recently changed), title "Kermit Roosevelt" (16 chars), same as /about/trustees/kermit-roosevelt
+  - `/calendar/daily-activity/room-sixty-years-front-lines-history`, 1,765 impr., title "In the Room: Sixty Years on the Front Lines of History" (54 chars), same as /calendar/special-event/gallery-david-hume-kennerly, /calendar/special-event/artist-talk-room-david-hume-kennerly, /calendar/special-event/artist-panel-kennerly-balkowitsch-and-ziemendorf
+  - `/project/native-plant-project`, 1,236 impr., HELD (recently changed), title "Native Plant Project" (20 chars), same as /video/view/1SqdaUrbU7U
+  - `/about/trustees/douglas-brinkley`, 834 impr., HELD (recently changed), title "Douglas Brinkley" (16 chars), same as /podcast/good-citizen/douglas-brinkley
+  - `/podcast/good-citizen/douglas-brinkley`, 754 impr., HELD (recently changed), title "Douglas Brinkley" (16 chars), same as /about/trustees/douglas-brinkley
+  - `/events/teddycon`, 642 impr., HELD (recently changed), title "Theodore Roosevelt Convention (#TeddyCon)" (41 chars), same as /event/24
   - ...and 29 more in work_queue.json
 
 **9. Strengthen pages ranking just off the top for searches people make** (`search:striking_distance`, 9 items)
 - How: Open the page and make it the best answer to that exact search: use the search's words in the title or a heading, answer it plainly in the first paragraph, add the specifics people want (facts already on the site), and link to it from 2-3 related pages. Don't rewrite a page that already ranks in the top 3 for its main search.
 - Done when: Average position for the search improves over the next 4 weeks (change log before/after)
-  - `/tickets`, 1,659 impr., "roosevelt library" #4.3, move up from #4 to about #3, upside ~158 clicks/28d
-  - `/quiz/muckrakers`, 2,436 impr., "muckrakers" #10.0, move up from #10 to about #5, upside ~142 clicks/28d
+  - `/tickets`, 1,646 impr., "roosevelt library" #4.3, move up from #4 to about #3, upside ~157 clicks/28d
+  - `/quiz/muckrakers`, 2,447 impr., "muckrakers" #10.0, move up from #10 to about #5, upside ~143 clicks/28d
   - `/calendar/specialty-tour/architecture-and-sustainability-tour`, 2,385 impr., "theodore roosevelt presidential library" #9.7, move up from #10 to about #5, upside ~142 clicks/28d
-  - `/tr/rise-to-power/rough-riders`, 800 impr., "rough riders" #6.5, move up from #6 to about #3, upside ~82 clicks/28d
-  - `/tr/rise-to-power/rough-riders`, 747 impr., "who were the rough riders" #6.4, move up from #6 to about #3, upside ~80 clicks/28d
+  - `/tr/rise-to-power/rough-riders`, 814 impr., "rough riders" #6.5, move up from #6 to about #3, upside ~84 clicks/28d
+  - `/tr/rise-to-power/rough-riders`, 750 impr., "who were the rough riders" #6.4, move up from #6 to about #3, upside ~80 clicks/28d
   - `/calendar/specialty-tour/architecture-and-sustainability-tour`, 1,125 impr., "teddy roosevelt library" #7.6, move up from #8 to about #5, upside ~65 clicks/28d
-  - `/project/living-building-challenge`, 1,089 impr., "living building challenge" #7.1, move up from #7 to about #5, upside ~61 clicks/28d
-  - `/tr/rise-to-power/rough-riders/who-were-they`, 1,001 impr., "rough riders" #10.5, move up from #10 to about #5, upside ~59 clicks/28d
+  - `/tr/rise-to-power/rough-riders/who-were-they`, 1,072 impr., "rough riders" #10.5, move up from #10 to about #5, upside ~62 clicks/28d
+  - `/project/living-building-challenge`, 1,082 impr., "living building challenge" #7.0, move up from #7 to about #5, upside ~61 clicks/28d
   - ...and 1 more in work_queue.json
 
 **10. Missing Open Graph tags** (`audit:og_missing`, 12 pages)
 - How: Edit the node (/node/NID/edit) > 'Customize meta tags'. Basic tags: Page title '<title> | [site:name]' (page part 60 characters or fewer) and Description (120-155 characters). Set Open Graph og:title/og:description and Twitter card title/description to match. Save with 'Save' (keeps the moderation state). If the save seems to do nothing, look for a validation error further down the form.
 - Done when: og:title and og:description are present
-  - `/join-us`, 3,812 impr., HELD (recently changed)
-  - `/visit/exhibits/kennerly`, 2,671 impr., HELD (recently changed)
-  - `/visit/teddy-trail`, 814 impr., HELD (recently changed)
-  - `/birthdaycard`, 24 impr.
-  - `/project/how-the-library-works`, 12 impr.
+  - `/join-us`, 4,150 impr., HELD (recently changed)
+  - `/visit/exhibits/kennerly`, 2,854 impr., HELD (recently changed)
+  - `/visit/teddy-trail`, 832 impr., HELD (recently changed)
+  - `/birthdaycard`, 25 impr.
+  - `/project/how-the-library-works`, 13 impr.
   - `/rsvp/midwinter`
   - `/quiz/the-boardwalk`
   - `/quiz/badlands-family`
@@ -194,10 +195,10 @@ House rules for any change:
 **11. No meta description** (`audit:meta_missing`, 11 pages)
 - How: Edit the node (/node/NID/edit) > 'Customize meta tags'. Basic tags: Page title '<title> | [site:name]' (page part 60 characters or fewer) and Description (120-155 characters). Set Open Graph og:title/og:description and Twitter card title/description to match. Save with 'Save' (keeps the moderation state). If the save seems to do nothing, look for a validation error further down the form.
 - Done when: The page has a meta description of 120-155 characters
-  - `/join-us`, 3,812 impr., HELD (recently changed)
-  - `/visit/exhibits/kennerly`, 2,671 impr., HELD (recently changed)
-  - `/birthdaycard`, 24 impr.
-  - `/project/how-the-library-works`, 12 impr.
+  - `/join-us`, 4,150 impr., HELD (recently changed)
+  - `/visit/exhibits/kennerly`, 2,854 impr., HELD (recently changed)
+  - `/birthdaycard`, 25 impr.
+  - `/project/how-the-library-works`, 13 impr.
   - `/rsvp/midwinter`
   - `/quiz/the-boardwalk`
   - `/quiz/badlands-family`
@@ -207,14 +208,14 @@ House rules for any change:
 **12. No H1 heading** (`audit:h1_missing`, 29 pages)
 - How: Open the page's Layout (/node/NID/layout). Make sure the top section shows the page title block (Content fields > Title), which renders as the H1; or change the first heading in the top text block to Heading 1. Save layout.
 - Done when: Exactly one H1
-  - `/visit/planner`, 1,628 impr., no H1
-  - `/tr/presidency/executive-actions/story`, 1,336 impr., no H1
-  - `/tr/presidency/executive-actions/action`, 950 impr., no H1
-  - `/visit/maps/campus`, 743 impr., no H1
-  - `/grand-opening/photos/july4`, 643 impr., no H1
-  - `/grand-opening/photos/july2`, 533 impr., no H1
-  - `/research/family-tree`, 147 impr., no H1
-  - `/membership/neighbor`, 119 impr., no H1
+  - `/tr/presidency/executive-actions/story`, 1,648 impr., no H1
+  - `/visit/planner`, 1,533 impr., no H1
+  - `/tr/presidency/executive-actions/action`, 1,301 impr., no H1
+  - `/visit/maps/campus`, 760 impr., no H1
+  - `/grand-opening/photos/july4`, 662 impr., no H1
+  - `/grand-opening/photos/july2`, 487 impr., no H1
+  - `/research/family-tree`, 155 impr., no H1
+  - `/membership/neighbor`, 117 impr., no H1
   - ...and 21 more in work_queue.json
 
 **15. Links that go through a redirect** (`links:via_redirect`, 72 items)
@@ -233,47 +234,47 @@ House rules for any change:
 **18. Heading levels skip (e.g. H2 straight to H4)** (`audit:heading_skip`, 146 pages)
 - How: Open the Layout. In the text blocks, change the heading levels so they step down one at a time (H2 under the page title, H3 under an H2). Headings used just for size should be styled text instead.
 - Done when: Heading levels step down one at a time
-  - `/podcast/good-citizen/senator-chris-murphy`, 145,805 impr.
-  - `/`, 112,829 impr.
-  - `/tr/presidency-timeline`, 54,481 impr.
-  - `/podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature`, 46,556 impr.
-  - `/tr/timeline`, 42,648 impr.
-  - `/visit/hours`, 38,500 impr.
-  - `/project`, 27,801 impr.
-  - `/podcast/good-citizen/bill-kristol`, 25,895 impr.
+  - `/podcast/good-citizen/senator-chris-murphy`, 146,075 impr.
+  - `/`, 110,702 impr.
+  - `/tr/presidency-timeline`, 54,306 impr.
+  - `/podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature`, 47,194 impr.
+  - `/tr/timeline`, 42,853 impr.
+  - `/visit/hours`, 37,341 impr.
+  - `/project`, 27,833 impr.
+  - `/podcast/good-citizen/bill-kristol`, 26,359 impr.
   - ...and 138 more in work_queue.json
 
 **19. Related pages that don't link to each other** (`links:related`, 27 items)
 - How: These two pages cover the same subject without linking to each other. Add one natural link each way, in the paragraph where the shared subject comes up.
 - Done when: Each page links to the other
-  - `/tr/family/family-tree`, 113,986 impr., <-> /tr/family/fdr-connection
-  - `/tr/presidency-timeline`, 97,129 impr., <-> /tr/timeline
-  - `/tr/complex-legacy/imperialism`, 63,209 impr., <-> /tr/rise-to-power/spanish-american-war
-  - `/tr/post-presidency/bull-moose/platform`, 40,563 impr., <-> /tr/speeches/new-nationalism
-  - `/tr/post-presidency/bull-moose/platform`, 40,036 impr., <-> /tr/speeches/confession-of-faith
-  - `/tr/complex-legacy/imperialism`, 35,577 impr., <-> /tr/presidency/foreign-policy
-  - `/tr/post-presidency/bull-moose`, 35,293 impr., <-> /tr/speeches/new-nationalism
-  - `/tr/family/children`, 34,505 impr., <-> /tr/family/family-tree
+  - `/tr/family/family-tree`, 113,663 impr., <-> /tr/family/fdr-connection
+  - `/tr/presidency-timeline`, 97,159 impr., <-> /tr/timeline
+  - `/tr/complex-legacy/imperialism`, 66,255 impr., <-> /tr/rise-to-power/spanish-american-war
+  - `/tr/post-presidency/bull-moose/platform`, 40,542 impr., <-> /tr/speeches/new-nationalism
+  - `/tr/post-presidency/bull-moose/platform`, 40,165 impr., <-> /tr/speeches/confession-of-faith
+  - `/tr/complex-legacy/imperialism`, 38,288 impr., <-> /tr/presidency/foreign-policy
+  - `/tr/post-presidency/bull-moose`, 36,728 impr., <-> /tr/speeches/new-nationalism
+  - `/tr/family/children`, 34,234 impr., <-> /tr/family/family-tree
   - ...and 19 more in work_queue.json
 
 ### Page jobs: everything to fix on one page, busiest pages first
 | Page | Impr. | Fixes | Links to add | Markup |  |
 |---|---|---|---|---|---|
-| /podcast/good-citizen/senator-chris-murphy | 145805 | heading_skip, deep_page, meta_duplicate | [[high school]] -> /tr/for-educators/high-school; [[in the room]] -> /visit/exhibits/kennerly; [[step into the arena]] -> /vote | – |  |
-| /tr/tr-mount-rushmore | 140081 | – | [[executive power]] -> /tr/presidency/executive-power | – | held |
-| / | 112829 | heading_skip | [[Elkhorn Ranch]] -> /tr/badlands/elkhorn-ranch | – | held |
-| /tr/family/fdr-connection | 90155 | – | [[Assistant Secretary of the Navy]] -> /tr/rise-to-power/assistant-navy-secretary | – | held |
-| /tickets | 59238 | title_too_short | – | – |  |
-| /visit | 54555 | – | [[Badlands landscape]] -> /tr/badlands/landscape | – | held |
-| /tr/presidency-timeline | 54481 | heading_skip | [[Nobel Peace Prize]] -> /tr/presidency/nobel-peace-prize | – | held |
-| /tr/pre-presidency-political-accomplishments | 53633 | – | [[Civil War]] -> /tr/early-life/civil-war; [[Naval War of 1812]] -> /tr/new-york-politics/naval-war-of-1812 | – | held |
-| /podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature | 46556 | heading_skip, deep_page | [[Civil War]] -> /tr/early-life/civil-war | – | held |
-| /visit/directions | 44808 | – | [[Little Missouri River]] -> /visit/little-missouri-river | – | held |
-| /tr/timeline | 42648 | heading_skip | [[William Howard Taft]] -> /tr/people/william-howard-taft; [[River of Doubt]] -> /tr/post-presidency/river-of-doubt; [[Edith Roosevelt]] -> /tr/rise-to-power/edith-roosevelt | – | held |
-| /bullet-speech | 40006 | deep_page, h1_multiple | [[frequently asked questions]] -> /visit/faq | – | held |
-| /visit/hours | 38500 | heading_skip | – | – | held |
-| /tr/tr-importance | 38452 | – | [[national forests]] -> /tr/presidency/conservation/national-forests; [[Leonard Wood]] -> /tr/people/leonard-wood; [[Theodore Roosevelt National Park]] -> /tr/homes-and-places/tr-national-park | – | held |
-| /tr/presidency/bully-pulpit | 34484 | – | [[Doris Kearns Goodwin]] -> /podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore | – | held |
+| /podcast/good-citizen/senator-chris-murphy | 146075 | heading_skip, deep_page, meta_duplicate | [[high school]] -> /tr/for-educators/high-school; [[in the room]] -> /visit/exhibits/kennerly; [[step into the arena]] -> /vote | – |  |
+| /tr/tr-mount-rushmore | 144374 | – | [[executive power]] -> /tr/presidency/executive-power | – | held |
+| / | 110702 | heading_skip | [[Elkhorn Ranch]] -> /tr/badlands/elkhorn-ranch | – | held |
+| /tr/family/fdr-connection | 90214 | – | [[Assistant Secretary of the Navy]] -> /tr/rise-to-power/assistant-navy-secretary | – | held |
+| /tickets | 59224 | title_too_short | – | – |  |
+| /tr/presidency-timeline | 54306 | heading_skip | [[Nobel Peace Prize]] -> /tr/presidency/nobel-peace-prize | – | held |
+| /tr/pre-presidency-political-accomplishments | 53709 | – | [[Civil War]] -> /tr/early-life/civil-war; [[Naval War of 1812]] -> /tr/new-york-politics/naval-war-of-1812 | – | held |
+| /visit | 53667 | – | [[Badlands landscape]] -> /tr/badlands/landscape | – | held |
+| /podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature | 47194 | heading_skip, deep_page | [[Civil War]] -> /tr/early-life/civil-war | – | held |
+| /visit/directions | 43869 | – | [[Little Missouri River]] -> /visit/little-missouri-river | – | held |
+| /tr/timeline | 42853 | heading_skip | [[William Howard Taft]] -> /tr/people/william-howard-taft; [[River of Doubt]] -> /tr/post-presidency/river-of-doubt; [[Edith Roosevelt]] -> /tr/rise-to-power/edith-roosevelt | – | held |
+| /bullet-speech | 39927 | deep_page, h1_multiple | [[frequently asked questions]] -> /visit/faq | – | held |
+| /tr/tr-importance | 38748 | – | [[national forests]] -> /tr/presidency/conservation/national-forests; [[Leonard Wood]] -> /tr/people/leonard-wood; [[Theodore Roosevelt National Park]] -> /tr/homes-and-places/tr-national-park | – | held |
+| /visit/hours | 37341 | heading_skip | – | – | held |
+| /tr/presidency/bully-pulpit | 36561 | – | [[Doris Kearns Goodwin]] -> /podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore | – | held |
 
 ### Waiting on FiveJars or blocked (already ticketed; check whether they've landed, don't re-ask)
 - Sitewide markup doesn't link to the Library's Wikipedia entry (`schema:sitewide:sameas`): blocked, the per-page sameAs field is capped at 255 characters; FiveJars asked to raise it. Wikidata is in place; Wikipedia and Bluesky go back in once it's raised
@@ -296,78 +297,78 @@ House rules for any change:
 |---|---|---|---|
 | audit | ok | 2026-11-09T12:32:33+00:00 | Crawled 1135 pages, health 95/100 |
 | ranks | ok | 2026-11-09T12:38:04+00:00 | 35 keywords checked |
-| opportunities | ok | 2026-11-11T13:28:20+00:00 | 9 striking-distance queries, 3 low-CTR pages; 144 recently changed pages held back |
-| gsc | ok | 2026-11-11T13:28:19+00:00 | 22689 queries, 2273 pages (2026-10-12 to 2026-11-08); 263 changed pages tracked |
+| opportunities | ok | 2026-11-12T13:25:30+00:00 | 9 striking-distance queries, 4 low-CTR pages; 143 recently changed pages held back |
+| gsc | ok | 2026-11-12T13:25:29+00:00 | 22624 queries, 2300 pages (2026-10-13 to 2026-11-09); 263 changed pages tracked |
 | ai_visibility | error | 2026-11-09T12:43:57+00:00 | 42 answers from ChatGPT, Gemini, Perplexity; 21 failed: Perplexity 403: {"error":{"message":"The Agent API requires paid credits. Add paid credit at https://console.perplexity.ai to upgrade your organizatio |
 | tips | ok | 2026-11-09T13:03:11+00:00 | Gemini wrote tips for 8 pages |
-| digest | ok | 2026-11-10T13:24:50+00:00 | llms.txt, digest.md and digest.json rebuilt |
-| checkout | ok | 2026-11-11T13:28:27+00:00 | Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info |
+| digest | ok | 2026-11-11T13:28:28+00:00 | llms.txt, digest.md and digest.json rebuilt |
+| checkout | ok | 2026-11-12T13:25:59+00:00 | Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info |
 | curate | ok | 2026-11-09T12:33:22+00:00 | 15 discovered keywords and 6 discovered questions tracked; 7 changes today |
 | ux | ok | 2026-11-09T12:57:05+00:00 | 80 pages; PageSpeed on 78; AI task check by gemini (gemini-3.8-flash); GA4 on; Clarity off; 2 errors, e.g. PageSpeed /visit/maps: PageSpeed 500: {   "error": {     "code": 500,     "message": "Lighthouse returned error: PAGE_HUNG. Lighthouse was unable to reliably load the URL you requeste |
 | links | ok | 2026-11-09T12:58:43+00:00 | 1169 pages crawled; 0 broken internal links (redirects proposed); 746 suggested links; 45 orphan pages; 27 related pairs without links |
 | schema | ok | 2026-11-09T13:00:05+00:00 | 292/888 content pages have their own markup; 6 sitewide issues |
-| indexnow | skipped | 2026-11-11T13:28:27+00:00 | No IndexNow key yet: see the work queue task 'Turn on IndexNow'. |
+| indexnow | skipped | 2026-11-12T13:25:59+00:00 | No IndexNow key yet: see the work queue task 'Turn on IndexNow'. |
 
 ## Google Search (Search Console)
-2026-10-12 to 2026-11-08 vs the prior 28 days: **41,981 clicks** (prior 53,145), 2,744,447 impressions (prior 2,357,899), CTR 1.5% (prior 2.2%), average position 5.9 (prior 6.5). Branded clicks 12252, non-branded 10168, search term hidden by Google 19561.
+2026-10-13 to 2026-11-09 vs the prior 28 days: **42,010 clicks** (prior 52,419), 2,780,655 impressions (prior 2,356,487), CTR 1.5% (prior 2.2%), average position 5.8 (prior 6.5). Branded clicks 11958, non-branded 10239, search term hidden by Google 19813.
 
 ### Top non-branded searches (people who didn't search our name)
 | Search | Clicks | Impr. | Pos. |
 |---|---|---|---|
-| brownsville affair | 1 | 116766 | 5 |
-| chris murphy | 7 | 69458 | 12.2 |
-| square deal | 141 | 63145 | 3.4 |
-| karl rove | 49 | 38272 | 9.1 |
-| roosevelt corollary | 54 | 23080 | 4.2 |
-| senator chris murphy | 8 | 22270 | 13 |
-| jacob riis | 121 | 21798 | 9.7 |
-| bill kristol | 8 | 19835 | 11.5 |
-| chris murphy senator | 10 | 17645 | 12.6 |
-| theodore roosevelt | 53 | 13465 | 7.5 |
+| brownsville affair | 1 | 116995 | 4.9 |
+| chris murphy | 7 | 68690 | 12.2 |
+| square deal | 146 | 63469 | 3.4 |
+| karl rove | 49 | 38809 | 9 |
+| roosevelt corollary | 55 | 23423 | 4.1 |
+| senator chris murphy | 8 | 22664 | 13 |
+| jacob riis | 130 | 22253 | 9.6 |
+| bill kristol | 8 | 20233 | 11.6 |
+| chris murphy senator | 10 | 18036 | 12.6 |
+| theodore roosevelt | 53 | 13684 | 7.4 |
 | theo elections | 4 | 13356 | 6.7 |
-| alice roosevelt | 52 | 10770 | 7.7 |
-| bully pulpit | 27 | 10257 | 3 |
-| kermit roosevelt | 35 | 9201 | 7.4 |
-| mount rushmore presidents | 32 | 9116 | 4.5 |
-| bull moose party | 63 | 8865 | 3.6 |
-| the man in the arena | 125 | 8315 | 5.8 |
-| man in the arena | 52 | 8172 | 6.4 |
-| sen chris murphy | 6 | 8088 | 10.7 |
-| alice roosevelt longworth | 11 | 7644 | 8.4 |
-| senator murphy | 2 | 6610 | 12.4 |
-| alice hathaway lee roosevelt | 12 | 6035 | 5.9 |
-| teddy roosevelt | 39 | 6019 | 6.3 |
-| henry cabot lodge | 6 | 5851 | 7.1 |
-| who is on mount rushmore | 7 | 5698 | 6.8 |
+| bully pulpit | 31 | 11262 | 3 |
+| alice roosevelt | 51 | 10518 | 7.6 |
+| mount rushmore presidents | 33 | 9481 | 4.4 |
+| kermit roosevelt | 34 | 9183 | 7.6 |
+| bull moose party | 63 | 8944 | 3.4 |
+| the man in the arena | 134 | 8704 | 5.8 |
+| man in the arena | 51 | 8449 | 6.6 |
+| sen chris murphy | 6 | 8135 | 10.7 |
+| alice roosevelt longworth | 11 | 7494 | 8.4 |
+| senator murphy | 3 | 6758 | 12.4 |
+| alice hathaway lee roosevelt | 11 | 5997 | 5.9 |
+| teddy roosevelt | 39 | 5989 | 6.4 |
+| who is on mount rushmore | 7 | 5931 | 6.9 |
+| henry cabot lodge | 6 | 5922 | 7.1 |
 
 ### Top pages
 | Page | Clicks | Prior | Impr. | Pos. |
 |---|---|---|---|---|
-| / | 7444 | 11468 | 78827 | 7.2 |
-| /?utm_source=gbp&utm_medium=organic | 4648 | 2009 | 31440 | 3.9 |
-| /tickets | 2584 | 6926 | 53194 | 3.1 |
-| /tr/family/fdr-connection | 1799 | 914 | 90155 | 3.1 |
-| /visit | 1192 | 2631 | 54551 | 2.7 |
-| /tr/presidency/trust-busting | 1112 | 796 | 76676 | 3.3 |
-| /tr/speeches/man-in-the-arena | 956 | 291 | 40102 | 5.3 |
-| /tr/presidency/square-deal | 951 | 391 | 111021 | 3.9 |
-| /tickets?utm_source=gbp&utm_medium=organic | 769 | 8589 | 6044 | 3.6 |
-| /tr/square-deal | 691 | 1135 | 90939 | 3.9 |
-| /bullet-speech | 663 | 735 | 40006 | 3.7 |
-| /tr/quotes | 594 | 704 | 25118 | 9.5 |
-| /tr/people/jacob-riis | 524 | 312 | 83453 | 6.5 |
-| /tr/pre-presidency-political-accomplishments | 523 | 575 | 53633 | 5.6 |
-| /tr/presidency/ten-facts | 502 | 186 | 16048 | 3.8 |
-| /visit/directions | 469 | 1042 | 44808 | 2.8 |
-| /tr/tr-mount-rushmore | 466 | 793 | 140081 | 5.6 |
-| /visit/hours | 412 | 967 | 38500 | 2.3 |
-| /tr/rise-to-power/san-juan-hill | 408 | 275 | 31565 | 3.6 |
-| /tr/family/family-tree | 390 | 265 | 23831 | 5.6 |
-| /tr/presidency/panama-canal | 375 | 102 | 66679 | 4.9 |
-| /tr/presidency/roosevelt-corollary | 362 | 148 | 139741 | 4.5 |
-| /tr/fake-quotes | 347 | 393 | 14937 | 6.6 |
-| /tr/tr-importance | 345 | 337 | 38449 | 4.9 |
-| /tr/presidency-timeline | 334 | 330 | 54481 | 4.5 |
+| / | 7251 | 11263 | 78037 | 7.2 |
+| /?utm_source=gbp&utm_medium=organic | 4441 | 2216 | 30137 | 3.9 |
+| /tickets | 2509 | 6739 | 52106 | 3.1 |
+| /tr/family/fdr-connection | 1796 | 951 | 90214 | 3.1 |
+| /tr/presidency/trust-busting | 1148 | 785 | 77950 | 3.3 |
+| /visit | 1144 | 2518 | 53663 | 2.7 |
+| /tr/presidency/square-deal | 1003 | 406 | 113951 | 3.9 |
+| /tr/speeches/man-in-the-arena | 985 | 297 | 41517 | 5.3 |
+| /tickets?utm_source=gbp&utm_medium=organic | 893 | 8115 | 7118 | 3.7 |
+| /bullet-speech | 677 | 725 | 39927 | 3.7 |
+| /tr/square-deal | 643 | 1132 | 87232 | 3.9 |
+| /tr/quotes | 581 | 702 | 24411 | 8.7 |
+| /tr/people/jacob-riis | 547 | 320 | 84730 | 6.4 |
+| /tr/presidency/ten-facts | 518 | 194 | 16064 | 3.8 |
+| /tr/pre-presidency-political-accomplishments | 505 | 583 | 53709 | 5.6 |
+| /tr/tr-mount-rushmore | 467 | 782 | 144374 | 5.6 |
+| /visit/directions | 454 | 1016 | 43869 | 2.8 |
+| /tr/rise-to-power/san-juan-hill | 426 | 269 | 32063 | 3.6 |
+| /visit/hours | 407 | 929 | 37341 | 2.3 |
+| /tr/presidency/panama-canal | 401 | 107 | 69951 | 4.9 |
+| /tr/family/family-tree | 387 | 281 | 23449 | 5.7 |
+| /tr/presidency/roosevelt-corollary | 376 | 146 | 143745 | 4.4 |
+| /tr/fake-quotes | 347 | 383 | 14746 | 6.5 |
+| /tr/tr-importance | 342 | 336 | 38745 | 4.9 |
+| /tr/presidency-timeline | 332 | 324 | 54306 | 4.4 |
 
 ## Opportunities (ranked)
 _Upside is sized against a realistic next step (a few places up, not #1), minus the clicks the page already gets, using a rough industry click-through curve; overlapping searches for one page aren't added twice. Use it to rank opportunities, never as a forecast, and say how the gain would happen: a new ranking, a higher position, or more clicks at the same position._
@@ -375,70 +376,68 @@ _Upside is sized against a realistic next step (a few places up, not #1), minus 
 ### Striking distance: ranking 4-20 with demand; strengthen the page for the exact search
 | Search | Page | Pos. | Impr. | How | Upside |
 |---|---|---|---|---|---|
-| roosevelt library | /tickets | 4.3 | 1659 | move up from #4 to about #3 | 158 |
-| muckrakers | /quiz/muckrakers | 10 | 2436 | move up from #10 to about #5 | 142 |
+| roosevelt library | /tickets | 4.3 | 1646 | move up from #4 to about #3 | 157 |
+| muckrakers | /quiz/muckrakers | 10 | 2447 | move up from #10 to about #5 | 143 |
 | theodore roosevelt presidential library | /calendar/specialty-tour/architecture-and-sustainability-tour?source=ev | 9.7 | 2385 | move up from #10 to about #5 | 142 |
-| rough riders | /tr/rise-to-power/rough-riders | 6.5 | 800 | move up from #6 to about #3 | 82 |
-| who were the rough riders | /tr/rise-to-power/rough-riders | 6.4 | 747 | move up from #6 to about #3 | 80 |
+| rough riders | /tr/rise-to-power/rough-riders | 6.5 | 814 | move up from #6 to about #3 | 84 |
+| who were the rough riders | /tr/rise-to-power/rough-riders | 6.4 | 750 | move up from #6 to about #3 | 80 |
 | teddy roosevelt library | /calendar/specialty-tour/architecture-and-sustainability-tour?source=ev | 7.6 | 1125 | move up from #8 to about #5 | 65 |
-| living building challenge | /project/living-building-challenge | 7.1 | 1089 | move up from #7 to about #5 | 61 |
-| rough riders | /tr/rise-to-power/rough-riders/who-were-they | 10.5 | 1001 | move up from #10 to about #5 | 59 |
-| who were the rough riders | /tr/rise-to-power/rough-riders/who-were-they | 4.8 | 584 | move up from #5 to about #3 | 59 |
+| rough riders | /tr/rise-to-power/rough-riders/who-were-they | 10.5 | 1072 | move up from #10 to about #5 | 62 |
+| living building challenge | /project/living-building-challenge | 7 | 1082 | move up from #7 to about #5 | 61 |
+| who were the rough riders | /tr/rise-to-power/rough-riders/who-were-they | 4.8 | 596 | move up from #5 to about #3 | 61 |
 
 ### Ranking well but skipped: rewrite title/meta description
 | Page | Pos. | CTR | Typical | Upside |
 |---|---|---|---|---|
-| /tickets | 3.1 | 4.9% | 11.0% | 3266 |
-| /tr/rise-to-power/rough-riders | 6.3 | 0.3% | 4.5% | 508 |
-| /tr/presidency/foreign-policy | 4.6 | 0.6% | 6.0% | 450 |
+| /tickets | 3.1 | 4.8% | 11.0% | 3220 |
+| /tr/rise-to-power/rough-riders | 6.4 | 0.3% | 4.5% | 543 |
+| /tr/presidency/foreign-policy | 4.7 | 0.6% | 6.0% | 512 |
+| /tr/presidency/nobel-peace-prize | 4.6 | 0.6% | 6.0% | 436 |
 
 ### Search words missing from the ranking page's title
 | Search | Page | Current title | Missing | Impr. |
 |---|---|---|---|---|
-| ed o'keefe | /about/trustees/edward-okeefe | Edward O’Keefe / Theodore Roosevelt Presidential Library | ed, o'keefe | 643 |
-| enchanted highway north dakota | /visit/itineraries/enchanted-highway | The Enchanted Highway: Giants on the Prairie / Theodore Roosevelt Presidential Library | north, dakota | 522 |
-| 1905 campaign slogan | /quiz/inauguration-1905 | Inauguration Day, 1905 / Theodore Roosevelt Presidential Library | campaign, slogan | 474 |
-| tr library | /tickets | Tickets / Theodore Roosevelt Presidential Library | tr | 347 |
-| roosevelt museum | /tickets | Tickets / Theodore Roosevelt Presidential Library | museum | 283 |
-| teddy roosevelt library north dakota | /tickets | Tickets / Theodore Roosevelt Presidential Library | teddy, north, dakota | 281 |
+| ed o'keefe | /about/trustees/edward-okeefe | Edward O’Keefe / Theodore Roosevelt Presidential Library | ed, o'keefe | 648 |
+| enchanted highway north dakota | /visit/itineraries/enchanted-highway | The Enchanted Highway: Giants on the Prairie / Theodore Roosevelt Presidential Library | north, dakota | 510 |
+| tr library | /tickets | Tickets / Theodore Roosevelt Presidential Library | tr | 348 |
 
 ### Losing clicks vs prior 28 days (check seasonality first)
 | Type | Search/page | Clicks | Prior | Change |
 |---|---|---|---|---|
-| page | /tickets?utm_source=gbp&utm_medium=organic | 769 | 8589 | -91.0% |
-| page | /tickets | 2584 | 6926 | -62.7% |
-| query | theodore roosevelt presidential library | 4447 | 8629 | -48.5% |
-| page | / | 7444 | 11468 | -35.1% |
-| query | teddy roosevelt presidential library | 1612 | 3319 | -51.4% |
-| page | /visit | 1192 | 2631 | -54.7% |
-| query | teddy roosevelt library | 1471 | 2825 | -47.9% |
-| query | theodore roosevelt library | 961 | 1917 | -49.9% |
-| page | /visit/directions | 469 | 1042 | -55.0% |
-| page | /visit/hours | 412 | 967 | -57.4% |
-| page | /tr/square-deal | 691 | 1135 | -39.1% |
-| page | /tr/tr-mount-rushmore | 466 | 793 | -41.2% |
-| query | roosevelt library | 197 | 485 | -59.4% |
-| query | roosevelt presidential library | 247 | 533 | -53.7% |
-| query | roosevelt library north dakota | 246 | 449 | -45.2% |
+| page | /tickets?utm_source=gbp&utm_medium=organic | 893 | 8115 | -89.0% |
+| page | /tickets | 2509 | 6739 | -62.8% |
+| query | theodore roosevelt presidential library | 4356 | 8495 | -48.7% |
+| page | / | 7251 | 11263 | -35.6% |
+| query | teddy roosevelt presidential library | 1556 | 3241 | -52.0% |
+| page | /visit | 1144 | 2518 | -54.6% |
+| query | teddy roosevelt library | 1448 | 2768 | -47.7% |
+| query | theodore roosevelt library | 929 | 1807 | -48.6% |
+| page | /visit/directions | 454 | 1016 | -55.3% |
+| page | /visit/hours | 407 | 929 | -56.2% |
+| page | /tr/square-deal | 643 | 1132 | -43.2% |
+| page | /tr/tr-mount-rushmore | 467 | 782 | -40.3% |
+| query | roosevelt presidential library | 237 | 523 | -54.7% |
+| query | roosevelt library | 192 | 464 | -58.6% |
+| query | roosevelt library north dakota | 246 | 429 | -42.7% |
 
 ### Our pages competing for the same search
 | Search | Impr. | Pages |
 |---|---|---|
-| square deal | 88658 | /tr/square-deal (pos 4.6), /tr/presidency/square-deal (pos 4.3) |
-| theodore roosevelt | 14641 | /bullet-speech (pos 3.0), / (pos 13.0), /tr/timeline (pos 5.0), /tr/family/fdr-connection (pos 3.0) |
-| roosevelt library | 5525 | /tickets (pos 4.3), / (pos 3.5), /visit (pos 3.2), /visit/directions (pos 3.6) |
-| roosevelt family | 4980 | /tr/family/family-tree (pos 3.3), /tr/family (pos 5.0) |
-| the square deal | 3442 | /tr/square-deal (pos 2.3), /tr/presidency/square-deal (pos 4.7) |
-| teddy roosevelt museum | 3078 | / (pos 1.7), /tickets (pos 2.2), /visit (pos 2.2), /visit/hours (pos 2.5) |
-| martha bulloch roosevelt | 2749 | /tr/early-life/mother (pos 3.4), /tr/people/mittie (pos 7.6) |
-| what was the square deal | 2499 | /tr/square-deal (pos 1.4), /tr/presidency/square-deal (pos 2.3) |
-| bamie roosevelt | 2010 | /tr/early-life/siblings (pos 6.9), /tr/people/bamie (pos 6.8), /tr/people (pos 14.4), /tr/new-york-politics/double-tragedy (pos 5.8) |
-| square deal definition | 2006 | /tr/square-deal (pos 2.4), /tr/presidency/square-deal (pos 1.4) |
+| square deal | 88445 | /tr/square-deal (pos 4.6), /tr/presidency/square-deal (pos 4.3) |
+| theodore roosevelt | 14774 | /tr/timeline (pos 4.6), / (pos 12.9), /bullet-speech (pos 3.0), /tr/family/fdr-connection (pos 3.0) |
+| roosevelt library | 5396 | /tickets (pos 4.3), / (pos 3.5), /visit (pos 3.2), /visit/directions (pos 3.7) |
+| the square deal | 3387 | /tr/square-deal (pos 2.4), /tr/presidency/square-deal (pos 4.5) |
+| teddy roosevelt museum | 2999 | / (pos 1.7), /tickets (pos 2.1), /visit (pos 2.2), /visit/hours (pos 2.5) |
+| martha bulloch roosevelt | 2751 | /tr/early-life/mother (pos 3.2), /tr/people/mittie (pos 7.6) |
+| what was the square deal | 2441 | /tr/square-deal (pos 1.4), /tr/presidency/square-deal (pos 2.2) |
+| square deal definition | 1955 | /tr/square-deal (pos 2.3), /tr/presidency/square-deal (pos 1.4) |
+| bamie roosevelt | 1915 | /tr/early-life/siblings (pos 7.0), /tr/people/bamie (pos 6.8), /tr/people (pos 14.7), /tr/new-york-politics/double-tragedy (pos 5.8) |
 | presidential library medora | 1904 | / (pos 1.2), /visit (pos 1.7), /tickets (pos 1.8), /visit/hours (pos 1.8) |
-| rough riders | 1801 | /tr/rise-to-power/rough-riders/who-were-they (pos 10.5), /tr/rise-to-power/rough-riders (pos 6.5) |
-| teddy roosevelt shot | 1796 | /tr/tr-shot (pos 2.6), /bullet-speech (pos 4.5) |
-| when did theodore roosevelt die | 1409 | /tr/timeline (pos 4.6), /tr/post-presidency/death (pos 7.1) |
-| theodore franklin | 1404 | /tr/family/family-tree (pos 6.6), /tr/family/fdr-connection (pos 6.2) |
+| rough riders | 1886 | /tr/rise-to-power/rough-riders/who-were-they (pos 10.5), /tr/rise-to-power/rough-riders (pos 6.5) |
+| teddy roosevelt shot | 1828 | /tr/tr-shot (pos 2.7), /bullet-speech (pos 4.4) |
+| when did theodore roosevelt die | 1433 | /tr/timeline (pos 4.6), /tr/post-presidency/death (pos 7.2) |
+| theodore franklin | 1393 | /tr/family/family-tree (pos 6.6), /tr/family/fdr-connection (pos 6.0) |
+| theodore roosevelt museum | 1350 | / (pos 1.7), /tickets (pos 2.2), /visit (pos 2.1), /?utm_source=gbp&utm_medium=organic (pos 1.6) |
 
 ## Tracked keywords (dataforseo+gsc)
 | Keyword | Group | Volume | GSC pos. | Google rank | AI Overview | Cites us | Above us |
@@ -682,256 +681,256 @@ Before = the 28 days before the change; after = the days since, up to the latest
 | /visit/tickets/plan-ahead | 2026-11-09 | Description no longer leads with summer; removed '2026 is the Library's first year' | 0.6 → – | 1.3% → – | 6.7 → – |
 | /llms.txt | 2026-11-09 | Added 'Key facts for visitors' (address, 3½ hours, year-round, tickets, indoor, not the FD | 0.0 → – | – → – | – → – |
 | /about/press/press-releases | 2026-11-03 | Press releases: og:type article, NewsArticle author/publisher/description, ISO dates with  | 0.0 → 0.0 | 0.0% → – | 11.0 → – |
-| /podcast/good-citizen | 2026-11-03 | Podcast episodes: og:type article | 1.3 → 0.4 | 1.5% → 0.5% | 7.1 → 7.8 |
-| /about/trustees | 2026-11-03 | Trustee Person markup: memberOf the Library | 1.9 → 2.0 | 9.8% → 14.7% | 9.0 → 5.9 |
-| /tr/presidency | 2026-11-03 | Published Oct 18 draft plus 2 internal links (Taft, midnight forests) | 0.9 → 2.2 | 0.6% → 0.6% | 6.3 → 5.2 |
-| /tr/timeline | 2026-11-03 | Added 6 internal links from Links to add; Title 'Theodore Roosevelt's Life Timeline: Key D | 7.8 → 7.0 | 0.5% → 0.4% | 7.4 → 6.7 |
-| /visit/exhibits/main | 2026-11-03 | Added 6 internal links from Links to add | 2.8 → 2.0 | 1.8% → 1.1% | 6.5 → 5.9 |
+| /podcast/good-citizen | 2026-11-03 | Podcast episodes: og:type article | 1.3 → 0.8 | 1.5% → 1.1% | 7.1 → 7.8 |
+| /about/trustees | 2026-11-03 | Trustee Person markup: memberOf the Library | 1.9 → 1.7 | 9.8% → 12.8% | 9.0 → 6.0 |
+| /tr/presidency | 2026-11-03 | Published Oct 18 draft plus 2 internal links (Taft, midnight forests) | 0.9 → 2.2 | 0.6% → 0.5% | 6.3 → 5.1 |
+| /tr/timeline | 2026-11-03 | Added 6 internal links from Links to add; Title 'Theodore Roosevelt's Life Timeline: Key D | 7.8 → 7.5 | 0.5% → 0.5% | 7.4 → 6.6 |
+| /visit/exhibits/main | 2026-11-03 | Added 6 internal links from Links to add | 2.8 → 1.8 | 1.8% → 1.0% | 6.5 → 5.9 |
 | /tr/teddy-nickname | 2026-11-03 | Added 6 internal links from Links to add; Merged /tr/myths/teddy-name into this page; new  | 4.8 → 5.2 | 0.8% → 0.8% | 4.4 → 4.6 |
-| /tr/presidency-timeline | 2026-11-03 | Added 6 internal links from Links to add; Title 'When Was Theodore Roosevelt President? 19 | 11.5 → 11.8 | 0.6% → 0.6% | 4.6 → 4.4 |
-| /tr/people/henry-cabot-lodge | 2026-11-03 | Added 6 internal links from Links to add | 1.1 → 1.6 | 0.2% → 0.4% | 6.5 → 6.7 |
-| /tr/family/family-tree | 2026-11-03 | Added 5 internal links from Links to add | 14.2 → 15.4 | 1.5% → 1.9% | 5.2 → 6.1 |
-| /tr/presidency/white-house-family | 2026-11-03 | Added 4 internal links from Links to add | 0.2 → 0.4 | 0.3% → 0.5% | 6.6 → 8.0 |
-| /podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore | 2026-11-03 | Added 5 internal links from Links to add | 0.3 → 0.2 | 0.8% → 0.7% | 8.8 → 9.2 |
-| /tr/legacy/rankings | 2026-11-03 | Added 5 internal links from Links to add | 5.0 → 10.8 | 1.5% → 2.4% | 5.6 → 5.9 |
-| /podcast/good-citizen/edward-okeefe | 2026-11-03 | Added 4 internal links from Links to add | 0.1 → 0.0 | 0.8% → 0.0% | 8.2 → 8.1 |
-| /podcast/good-citizen/call-adventure-charlie-melcher-ed-okeefe-and-brand-new-theodore-roosevelt | 2026-11-03 | Added 6 internal links from Links to add | 0.3 → 0.0 | 1.1% → 0.0% | 7.4 → 8.2 |
-| /tr/for-educators/high-school | 2026-11-03 | Added 6 internal links from Links to add | 0.8 → 0.6 | 1.8% → 1.6% | 7.0 → 6.9 |
-| /about/press/press-releases/theodore-roosevelts-groundbreaking-firsts-and-feats-celebration | 2026-11-03 | Added 6 internal links from Links to add | 0.1 → 0.2 | 1.1% → 1.5% | 4.7 → 6.2 |
-| /tr/rise-to-power/ten-facts | 2026-11-03 | Added 6 internal links from Links to add | 3.3 → 6.0 | 1.6% → 2.8% | 5.3 → 4.1 |
-| /tr/presidency/ten-facts | 2026-11-03 | Added 5 internal links from Links to add | 15.5 → 19.2 | 2.8% → 3.6% | 3.9 → 3.9 |
-| /events/teddycon | 2026-11-03 | Added 6 internal links from Links to add | 3.4 → 0.4 | 8.8% → 1.9% | 3.8 → 5.9 |
-| /tr/badlands-timeline | 2026-11-03 | Added 6 internal links from Links to add | 5.7 → 4.2 | 2.0% → 2.0% | 5.5 → 5.0 |
-| /tr/family/fdr-connection | 2026-11-03 | Added 4 internal links from Links to add; Title 'How Were Theodore and Franklin Roosevelt  | 60.9 → 63.8 | 1.9% → 1.9% | 3.2 → 3.0 |
-| /research/archives | 2026-11-03 | Added 5 internal links from Links to add | 1.7 → 1.8 | 2.5% → 2.7% | 7.7 → 8.0 |
-| /tr/speeches/new-nationalism | 2026-11-03 | Added 5 internal links from Links to add | 1.7 → 0.2 | 2.0% → 0.5% | 5.6 → 6.5 |
-| /tr/presidency/elections | 2026-11-03 | Added 4 internal links from Links to add; Title '1904 Presidential Election: Roosevelt's M | 4.5 → 6.2 | 0.6% → 1.0% | 5.9 → 5.7 |
-| /tr/legacy/the-library | 2026-11-03 | Added 5 internal links from Links to add | 1.2 → 0.6 | 1.0% → 1.7% | 5.0 → 4.7 |
-| /tr/post-presidency/ten-facts | 2026-11-03 | Added 5 internal links from Links to add | 0.4 → 0.4 | 1.0% → 1.3% | 5.5 → 5.0 |
-| /visit/medora/history | 2026-11-03 | Added 5 internal links from Links to add; North Dakota quote aligned to the 1918 Volwiler  | 1.2 → 1.2 | 1.2% → 2.2% | 7.4 → 7.3 |
-| /tr/fake-quotes | 2026-11-03 | Added 3 internal links from Links to add | 11.7 → 10.4 | 2.0% → 2.2% | 6.8 → 6.2 |
-| /tr/kids-timeline | 2026-11-03 | Added 5 internal links from Links to add; Title 'Theodore Roosevelt for Kids: A Timeline o | 2.5 → 1.6 | 0.7% → 0.6% | 9.4 → 9.9 |
-| /tr/tr-mount-rushmore | 2026-11-03 | Added 3 internal links from Links to add; Title 'Mount Rushmore Presidents: Why Theodore R | 16.0 → 17.6 | 0.4% → 0.3% | 5.5 → 5.8 |
-| /visit/directions | 2026-11-03 | Added 4 internal links from Links to add; Title 'Directions to Medora from I-94 and Nearby | 21.1 → 8.2 | 1.2% → 0.8% | 2.7 → 3.3 |
-| /tr/books-and-writings/autobiography | 2026-11-03 | Added 4 internal links from Links to add | 1.1 → 1.0 | 1.3% → 1.6% | 5.7 → 4.5 |
-| /tr/pre-presidency-political-accomplishments | 2026-11-03 | Added 4 internal links from Links to add; Title 'What Did Theodore Roosevelt Do Before He  | 20.5 → 15.2 | 1.1% → 0.9% | 5.6 → 5.7 |
-| /tr/books-and-writings/complete-list | 2026-11-03 | Added 4 internal links from Links to add | 0.2 → 0.0 | 1.9% → 0.0% | 5.4 → 4.8 |
-| /tr/quotes/leadership | 2026-11-03 | Added 5 internal links from Links to add | 3.6 → 2.6 | 3.0% → 2.5% | 5.4 → 5.1 |
-| /tr/speeches/inaugural | 2026-11-03 | Added 4 internal links from Links to add | 0.5 → 1.0 | 0.5% → 0.4% | 5.7 → 5.7 |
-| /podcast/good-citizen/candice-millard | 2026-11-03 | Added 2 internal links from Links to add | 0.4 → 0.6 | 0.3% → 0.4% | 9.3 → 10.8 |
-| /tr/people/eleanor | 2026-11-03 | Added 4 internal links from Links to add | 0.4 → 1.0 | 0.5% → 0.6% | 6.9 → 7.0 |
-| /tr/people/bill-sewall | 2026-11-03 | Added 4 internal links from Links to add | 0.6 → 0.6 | 2.2% → 1.9% | 5.5 → 5.3 |
-| /tr/post-presidency/quentin | 2026-11-03 | Added 4 internal links from Links to add | 1.0 → 1.0 | 0.4% → 0.6% | 9.5 → 9.2 |
-| /tr/quotes/conservation | 2026-11-03 | Added 2 internal links from Links to add | 3.4 → 2.8 | 1.9% → 2.2% | 5.3 → 5.0 |
-| /podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature | 2026-11-03 | Added 3 internal links from Links to add | 1.8 → 6.6 | 0.1% → 0.3% | 9.2 → 7.7 |
-| /tr/early-life/siblings | 2026-11-03 | Added 3 internal links from Links to add | 1.2 → 1.0 | 1.2% → 0.9% | 6.3 → 5.7 |
-| /tr/early-life/ten-facts | 2026-11-03 | Added 4 internal links from Links to add | 0.4 → 0.4 | 3.6% → 1.8% | 5.4 → 5.5 |
-| /tr/people/kermit | 2026-11-03 | Added 4 internal links from Links to add | 0.2 → 0.6 | 0.4% → 0.8% | 8.6 → 8.4 |
-| /tr/legacy | 2026-11-03 | Added 3 internal links from Links to add | 0.1 → 0.4 | 0.8% → 2.1% | 8.8 → 4.8 |
-| /tr/people/bamie | 2026-11-03 | Added 3 internal links from Links to add | 0.2 → 0.2 | 0.5% → 0.4% | 6.0 → 8.4 |
-| /tr/early-life | 2026-11-03 | Added 3 internal links from Links to add | 5.2 → 6.0 | 0.9% → 1.3% | 6.7 → 5.8 |
-| /podcast/good-citizen/jeffrey-rosen | 2026-11-03 | Added 3 internal links from Links to add | 0.2 → 0.0 | 0.3% → 0.0% | 10.2 → 9.8 |
-| /tr/complex-legacy/imperialism | 2026-11-03 | Added 2 internal links from Links to add | 8.3 → 12.6 | 1.0% → 1.1% | 5.2 → 5.0 |
-| /tr/strenuous-life/hunter | 2026-11-03 | Added 3 internal links from Links to add | 1.2 → 0.6 | 0.9% → 0.5% | 5.6 → 5.2 |
-| /tr/tr-shot | 2026-11-03 | Added 3 internal links from Links to add; Title 'Why Was Theodore Roosevelt Shot? The 1912 | 11.4 → 9.0 | 0.9% → 1.0% | 4.0 → 4.3 |
-| /visit/itineraries/chicago-badlands | 2026-11-03 | Added 2 internal links from Links to add; Visit length and restaurant name | 0.8 → 0.6 | 1.6% → 1.4% | 6.9 → 6.3 |
+| /tr/presidency-timeline | 2026-11-03 | Added 6 internal links from Links to add; Title 'When Was Theodore Roosevelt President? 19 | 11.5 → 10.7 | 0.6% → 0.5% | 4.6 → 4.4 |
+| /tr/people/henry-cabot-lodge | 2026-11-03 | Added 6 internal links from Links to add | 1.1 → 1.7 | 0.2% → 0.4% | 6.5 → 6.7 |
+| /tr/family/family-tree | 2026-11-03 | Added 5 internal links from Links to add | 14.2 → 15.7 | 1.5% → 1.9% | 5.2 → 6.1 |
+| /tr/presidency/white-house-family | 2026-11-03 | Added 4 internal links from Links to add | 0.2 → 0.5 | 0.3% → 0.6% | 6.6 → 8.1 |
+| /podcast/good-citizen/doris-kearns-goodwin-presidential-stories-trpl-and-enduring-lessons-theodore | 2026-11-03 | Added 5 internal links from Links to add | 0.3 → 0.2 | 0.8% → 0.5% | 8.8 → 9.3 |
+| /tr/legacy/rankings | 2026-11-03 | Added 5 internal links from Links to add | 5.0 → 9.8 | 1.5% → 2.2% | 5.6 → 5.9 |
+| /podcast/good-citizen/edward-okeefe | 2026-11-03 | Added 4 internal links from Links to add | 0.1 → 0.0 | 0.8% → 0.0% | 8.2 → 7.8 |
+| /podcast/good-citizen/call-adventure-charlie-melcher-ed-okeefe-and-brand-new-theodore-roosevelt | 2026-11-03 | Added 6 internal links from Links to add | 0.3 → 0.0 | 1.1% → 0.0% | 7.4 → 7.8 |
+| /tr/for-educators/high-school | 2026-11-03 | Added 6 internal links from Links to add | 0.8 → 0.7 | 1.8% → 1.6% | 7.0 → 6.7 |
+| /about/press/press-releases/theodore-roosevelts-groundbreaking-firsts-and-feats-celebration | 2026-11-03 | Added 6 internal links from Links to add | 0.1 → 0.2 | 1.1% → 1.0% | 4.7 → 6.7 |
+| /tr/rise-to-power/ten-facts | 2026-11-03 | Added 6 internal links from Links to add | 3.3 → 5.8 | 1.6% → 2.7% | 5.3 → 3.9 |
+| /tr/presidency/ten-facts | 2026-11-03 | Added 5 internal links from Links to add | 15.5 → 20.5 | 2.8% → 3.8% | 3.9 → 3.8 |
+| /events/teddycon | 2026-11-03 | Added 6 internal links from Links to add | 3.4 → 0.3 | 8.8% → 1.5% | 3.8 → 6.1 |
+| /tr/badlands-timeline | 2026-11-03 | Added 6 internal links from Links to add | 5.7 → 4.7 | 2.0% → 2.2% | 5.5 → 4.9 |
+| /tr/family/fdr-connection | 2026-11-03 | Added 4 internal links from Links to add; Title 'How Were Theodore and Franklin Roosevelt  | 60.9 → 62.7 | 1.9% → 1.8% | 3.2 → 3.0 |
+| /research/archives | 2026-11-03 | Added 5 internal links from Links to add | 1.7 → 2.2 | 2.5% → 3.0% | 7.7 → 7.7 |
+| /tr/speeches/new-nationalism | 2026-11-03 | Added 5 internal links from Links to add | 1.7 → 0.5 | 2.0% → 1.3% | 5.6 → 6.5 |
+| /tr/presidency/elections | 2026-11-03 | Added 4 internal links from Links to add; Title '1904 Presidential Election: Roosevelt's M | 4.5 → 6.7 | 0.6% → 1.1% | 5.9 → 5.7 |
+| /tr/legacy/the-library | 2026-11-03 | Added 5 internal links from Links to add | 1.2 → 0.5 | 1.0% → 1.4% | 5.0 → 5.0 |
+| /tr/post-presidency/ten-facts | 2026-11-03 | Added 5 internal links from Links to add | 0.4 → 0.3 | 1.0% → 1.0% | 5.5 → 5.4 |
+| /visit/medora/history | 2026-11-03 | Added 5 internal links from Links to add; North Dakota quote aligned to the 1918 Volwiler  | 1.2 → 1.0 | 1.2% → 1.8% | 7.4 → 7.3 |
+| /tr/fake-quotes | 2026-11-03 | Added 3 internal links from Links to add | 11.7 → 9.7 | 2.0% → 2.1% | 6.8 → 6.1 |
+| /tr/kids-timeline | 2026-11-03 | Added 5 internal links from Links to add; Title 'Theodore Roosevelt for Kids: A Timeline o | 2.5 → 1.5 | 0.7% → 0.5% | 9.4 → 9.9 |
+| /tr/tr-mount-rushmore | 2026-11-03 | Added 3 internal links from Links to add; Title 'Mount Rushmore Presidents: Why Theodore R | 16.0 → 17.0 | 0.4% → 0.3% | 5.5 → 5.7 |
+| /visit/directions | 2026-11-03 | Added 4 internal links from Links to add; Title 'Directions to Medora from I-94 and Nearby | 21.1 → 8.3 | 1.2% → 0.8% | 2.7 → 3.5 |
+| /tr/books-and-writings/autobiography | 2026-11-03 | Added 4 internal links from Links to add | 1.1 → 1.2 | 1.3% → 1.8% | 5.7 → 4.7 |
+| /tr/pre-presidency-political-accomplishments | 2026-11-03 | Added 4 internal links from Links to add; Title 'What Did Theodore Roosevelt Do Before He  | 20.5 → 15.0 | 1.1% → 0.9% | 5.6 → 5.6 |
+| /tr/books-and-writings/complete-list | 2026-11-03 | Added 4 internal links from Links to add | 0.2 → 0.0 | 1.9% → 0.0% | 5.4 → 4.9 |
+| /tr/quotes/leadership | 2026-11-03 | Added 5 internal links from Links to add | 3.6 → 3.0 | 3.0% → 3.0% | 5.4 → 5.0 |
+| /tr/speeches/inaugural | 2026-11-03 | Added 4 internal links from Links to add | 0.5 → 0.8 | 0.5% → 0.4% | 5.7 → 5.7 |
+| /podcast/good-citizen/candice-millard | 2026-11-03 | Added 2 internal links from Links to add | 0.4 → 0.7 | 0.3% → 0.4% | 9.3 → 10.8 |
+| /tr/people/eleanor | 2026-11-03 | Added 4 internal links from Links to add | 0.4 → 0.8 | 0.5% → 0.4% | 6.9 → 7.1 |
+| /tr/people/bill-sewall | 2026-11-03 | Added 4 internal links from Links to add | 0.6 → 0.7 | 2.2% → 2.1% | 5.5 → 5.5 |
+| /tr/post-presidency/quentin | 2026-11-03 | Added 4 internal links from Links to add | 1.0 → 1.2 | 0.4% → 0.7% | 9.5 → 9.1 |
+| /tr/quotes/conservation | 2026-11-03 | Added 2 internal links from Links to add | 3.4 → 3.3 | 1.9% → 2.5% | 5.3 → 4.7 |
+| /podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature | 2026-11-03 | Added 3 internal links from Links to add | 1.8 → 5.7 | 0.1% → 0.3% | 9.2 → 7.7 |
+| /tr/early-life/siblings | 2026-11-03 | Added 3 internal links from Links to add | 1.2 → 1.0 | 1.2% → 0.9% | 6.3 → 5.5 |
+| /tr/early-life/ten-facts | 2026-11-03 | Added 4 internal links from Links to add | 0.4 → 0.3 | 3.6% → 1.6% | 5.4 → 5.4 |
+| /tr/people/kermit | 2026-11-03 | Added 4 internal links from Links to add | 0.2 → 0.5 | 0.4% → 0.7% | 8.6 → 8.6 |
+| /tr/legacy | 2026-11-03 | Added 3 internal links from Links to add | 0.1 → 0.3 | 0.8% → 1.8% | 8.8 → 5.0 |
+| /tr/people/bamie | 2026-11-03 | Added 3 internal links from Links to add | 0.2 → 0.2 | 0.5% → 0.3% | 6.0 → 8.2 |
+| /tr/early-life | 2026-11-03 | Added 3 internal links from Links to add | 5.2 → 7.3 | 0.9% → 1.5% | 6.7 → 5.9 |
+| /podcast/good-citizen/jeffrey-rosen | 2026-11-03 | Added 3 internal links from Links to add | 0.2 → 0.2 | 0.3% → 0.4% | 10.2 → 10.2 |
+| /tr/complex-legacy/imperialism | 2026-11-03 | Added 2 internal links from Links to add | 8.3 → 14.3 | 1.0% → 1.1% | 5.2 → 4.9 |
+| /tr/strenuous-life/hunter | 2026-11-03 | Added 3 internal links from Links to add | 1.2 → 0.8 | 0.9% → 0.7% | 5.6 → 5.2 |
+| /tr/tr-shot | 2026-11-03 | Added 3 internal links from Links to add; Title 'Why Was Theodore Roosevelt Shot? The 1912 | 11.4 → 11.3 | 0.9% → 1.3% | 4.0 → 4.3 |
+| /visit/itineraries/chicago-badlands | 2026-11-03 | Added 2 internal links from Links to add; Visit length and restaurant name | 0.8 → 0.5 | 1.6% → 1.2% | 6.9 → 6.5 |
 | /tr/post-presidency/death | 2026-11-03 | Added 3 internal links from Links to add | 2.8 → 3.0 | 0.5% → 0.4% | 5.5 → 5.0 |
-| /tr/new-york-politics/alice-lee | 2026-11-03 | Added 3 internal links from Links to add | 3.0 → 3.8 | 0.8% → 1.0% | 5.5 → 5.4 |
-| /tr/square-deal | 2026-11-03 | Added 2 internal links from Links to add; Archived (node 278); 301 to /tr/presidency/squar | 31.8 → 0.2 | 0.8% → 1.0% | 3.9 → 1.8 |
-| /tr/rise-to-power/edith-roosevelt | 2026-11-03 | Added 3 internal links from Links to add | 1.5 → 2.0 | 0.4% → 0.6% | 6.9 → 7.7 |
-| /tr/presidency/conservation/midnight-forests | 2026-11-03 | Added 3 internal links from Links to add | 1.1 → 2.0 | 1.3% → 2.8% | 5.1 → 5.4 |
-| /tr/quotes/misquotes | 2026-11-03 | Added 3 internal links from Links to add | 5.5 → 5.2 | 2.6% → 2.0% | 4.0 → 4.7 |
-| /tr/post-presidency/man-in-the-arena | 2026-11-03 | Added 3 internal links from Links to add; Title 'TR's 1910 European Tour and the Man in th | 1.6 → 1.0 | 0.8% → 1.2% | 7.5 → 7.1 |
-| /visit/activities | 2026-11-03 | Added 3 internal links from Links to add; Visit length and restaurant name | 0.5 → 0.8 | 0.9% → 2.6% | 5.3 → 7.4 |
-| /tr/conservation/by-the-numbers | 2026-11-03 | Added 3 internal links from Links to add | 1.6 → 3.2 | 0.6% → 1.4% | 5.1 → 4.5 |
-| /tr/presidency/conservation/gifford-pinchot | 2026-11-03 | Added 2 internal links from Links to add | 1.6 → 2.6 | 0.6% → 1.2% | 4.4 → 4.1 |
-| /tr/early-life/family-roots | 2026-11-03 | Added 3 internal links from Links to add | 1.5 → 2.2 | 0.8% → 1.2% | 4.8 → 5.4 |
-| /podcast/good-citizen/live-trpl-1-doris-kearns-goodwin-finding-hope-history | 2026-11-03 | Added 3 internal links from Links to add | 0.1 → 0.2 | 0.7% → 1.7% | 8.8 → 11.3 |
-| /tr/homes-and-places/sagamore-hill | 2026-11-03 | Added 2 internal links from Links to add | 0.4 → 0.4 | 0.7% → 0.6% | 7.0 → 7.0 |
-| /tr/presidency/conservation/national-monuments | 2026-11-03 | Added 3 internal links from Links to add | 0.9 → 1.6 | 0.8% → 1.0% | 5.5 → 5.5 |
-| /tr/presidency/white-house-family/pets | 2026-11-03 | Added 3 internal links from Links to add | 2.2 → 2.8 | 1.2% → 1.6% | 5.1 → 4.6 |
-| /visit/teddy-trail | 2026-11-03 | Added 3 internal links from Links to add | 0.3 → 0.4 | 1.2% → 1.6% | 6.4 → 6.6 |
-| /visit/exhibits | 2026-11-03 | Added 3 internal links from Links to add; Title: Exhibits: Roosevelt’s Life in Eight Chapt | 3.8 → 0.2 | 0.6% → 0.1% | 3.5 → 5.4 |
-| /tr/people | 2026-11-03 | Added 3 internal links from Links to add | 0.8 → 0.2 | 0.4% → 0.4% | 7.4 → 6.7 |
-| /about/trustees/doris-kearns-goodwin | 2026-11-03 | Added 3 internal links from Links to add | 0.2 → 0.2 | 0.8% → 0.6% | 16.0 → 14.1 |
-| /tr/people/william-howard-taft | 2026-11-03 | Added 3 internal links from Links to add | 1.8 → 2.8 | 0.3% → 0.4% | 5.7 → 5.2 |
-| /about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026 | 2026-11-03 | Added 3 internal links from Links to add | 1.9 → 2.2 | 2.9% → 4.0% | 4.4 → 4.6 |
-| /tr | 2026-11-03 | Added 3 internal links from Links to add | 0.3 → 0.4 | 0.1% → 0.1% | 6.9 → 5.5 |
-| /tr/post-presidency | 2026-11-03 | Added 3 internal links from Links to add | 1.8 → 1.4 | 2.6% → 1.5% | 4.2 → 3.6 |
-| /tr/new-york-politics/double-tragedy | 2026-11-03 | Added 3 internal links from Links to add | 0.5 → 1.8 | 1.6% → 2.7% | 4.4 → 4.6 |
-| /tr/quotes/family | 2026-11-03 | Added 2 internal links from Links to add | 0.3 → 0.6 | 2.3% → 1.9% | 6.2 → 5.8 |
-| /tr/people/alice-lee | 2026-11-03 | Added 3 internal links from Links to add | 0.1 → 0.8 | 0.3% → 1.5% | 8.8 → 8.1 |
-| /about/press/press-releases/harold-hamm-donates-50-million-trpl | 2026-11-03 | Added 2 internal links from Links to add | 1.7 → 0.2 | 10.5% → 3.1% | 3.1 → 3.4 |
-| /tr/people/theodore-sr | 2026-11-03 | Added 2 internal links from Links to add | 0.4 → 1.0 | 0.2% → 0.7% | 6.5 → 5.8 |
-| /about/press/press-releases/roosevelt-family-acquires-903-acres-trpl | 2026-11-03 | Added 2 internal links from Links to add | 0.6 → 0.4 | 7.0% → 6.9% | 4.2 → 5.5 |
-| /tr/legacy/mount-rushmore | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 1.2 | 0.2% → 0.9% | 7.1 → 7.4 |
-| /tr/conservation/quotes | 2026-11-03 | Added 3 internal links from Links to add | 0.5 → 1.6 | 1.4% → 1.1% | 4.9 → 5.0 |
-| /visit/itineraries/north-on-29 | 2026-11-03 | Added 2 internal links from Links to add | 0.3 → 0.0 | 0.8% → 0.0% | 7.2 → 7.4 |
-| /tr/rise-to-power/police-commissioner | 2026-11-03 | Added 2 internal links from Links to add | 1.8 → 1.8 | 1.7% → 1.8% | 5.7 → 5.3 |
-| /tr/legacy/words-he-coined | 2026-11-03 | Added 2 internal links from Links to add | 0.9 → 0.8 | 0.6% → 0.6% | 6.4 → 7.4 |
-| /tr/myths/misquotes | 2026-11-03 | Added 2 internal links from Links to add | 1.1 → 1.4 | 1.1% → 1.4% | 5.2 → 5.4 |
-| /tr/quotes | 2026-11-03 | Added 2 internal links from Links to add | 21.7 → 16.0 | 2.3% → 2.3% | 10.7 → 4.3 |
-| /tr/presidency/first-term | 2026-11-03 | Added 2 internal links from Links to add | 0.5 → 0.4 | 1.7% → 0.8% | 6.5 → 5.3 |
-| /visit/itineraries/13-day-denver-wyoming | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.8% → 0.0% | 8.9 → 8.5 |
-| /tr/family/children | 2026-11-03 | Added 2 internal links from Links to add; Title 'Theodore Roosevelt's Children: Alice, Ted | 4.2 → 6.6 | 1.1% → 1.7% | 4.2 → 3.4 |
-| /visit/shopping | 2026-11-03 | Added 2 internal links from Links to add | 5.0 → 5.0 | 2.2% → 5.0% | 5.0 → 7.7 |
-| /tr/family | 2026-11-03 | Added 2 internal links from Links to add | 1.1 → 1.6 | 0.4% → 0.4% | 8.0 → 7.5 |
-| /tr/for-educators/middle-school | 2026-11-03 | Added 2 internal links from Links to add | 0.6 → 0.6 | 2.2% → 1.9% | 6.5 → 5.3 |
+| /tr/new-york-politics/alice-lee | 2026-11-03 | Added 3 internal links from Links to add | 3.0 → 3.5 | 0.8% → 0.9% | 5.5 → 5.4 |
+| /tr/square-deal | 2026-11-03 | Added 2 internal links from Links to add; Archived (node 278); 301 to /tr/presidency/squar | 31.8 → 0.2 | 0.8% → 0.9% | 3.9 → 1.8 |
+| /tr/rise-to-power/edith-roosevelt | 2026-11-03 | Added 3 internal links from Links to add | 1.5 → 2.0 | 0.4% → 0.6% | 6.9 → 7.9 |
+| /tr/presidency/conservation/midnight-forests | 2026-11-03 | Added 3 internal links from Links to add | 1.1 → 2.2 | 1.3% → 2.8% | 5.1 → 5.4 |
+| /tr/quotes/misquotes | 2026-11-03 | Added 3 internal links from Links to add | 5.5 → 5.5 | 2.6% → 2.1% | 4.0 → 4.6 |
+| /tr/post-presidency/man-in-the-arena | 2026-11-03 | Added 3 internal links from Links to add; Title 'TR's 1910 European Tour and the Man in th | 1.6 → 1.2 | 0.8% → 1.5% | 7.5 → 6.9 |
+| /visit/activities | 2026-11-03 | Added 3 internal links from Links to add; Visit length and restaurant name | 0.5 → 0.7 | 0.9% → 2.0% | 5.3 → 7.0 |
+| /tr/conservation/by-the-numbers | 2026-11-03 | Added 3 internal links from Links to add | 1.6 → 3.0 | 0.6% → 1.3% | 5.1 → 4.4 |
+| /tr/presidency/conservation/gifford-pinchot | 2026-11-03 | Added 2 internal links from Links to add | 1.6 → 2.7 | 0.6% → 1.1% | 4.4 → 3.9 |
+| /tr/early-life/family-roots | 2026-11-03 | Added 3 internal links from Links to add | 1.5 → 2.0 | 0.8% → 1.0% | 4.8 → 5.4 |
+| /podcast/good-citizen/live-trpl-1-doris-kearns-goodwin-finding-hope-history | 2026-11-03 | Added 3 internal links from Links to add | 0.1 → 0.2 | 0.7% → 1.5% | 8.8 → 10.8 |
+| /tr/homes-and-places/sagamore-hill | 2026-11-03 | Added 2 internal links from Links to add | 0.4 → 0.3 | 0.7% → 0.5% | 7.0 → 6.9 |
+| /tr/presidency/conservation/national-monuments | 2026-11-03 | Added 3 internal links from Links to add | 0.9 → 1.5 | 0.8% → 1.0% | 5.5 → 5.4 |
+| /tr/presidency/white-house-family/pets | 2026-11-03 | Added 3 internal links from Links to add | 2.2 → 3.2 | 1.2% → 1.8% | 5.1 → 4.5 |
+| /visit/teddy-trail | 2026-11-03 | Added 3 internal links from Links to add | 0.3 → 0.3 | 1.2% → 1.4% | 6.4 → 6.8 |
+| /visit/exhibits | 2026-11-03 | Added 3 internal links from Links to add; Title: Exhibits: Roosevelt’s Life in Eight Chapt | 3.8 → 0.3 | 0.6% → 0.2% | 3.5 → 5.6 |
+| /tr/people | 2026-11-03 | Added 3 internal links from Links to add | 0.8 → 0.3 | 0.4% → 0.7% | 7.4 → 7.0 |
+| /about/trustees/doris-kearns-goodwin | 2026-11-03 | Added 3 internal links from Links to add | 0.2 → 0.2 | 0.8% → 0.5% | 16.0 → 14.3 |
+| /tr/people/william-howard-taft | 2026-11-03 | Added 3 internal links from Links to add | 1.8 → 3.0 | 0.3% → 0.4% | 5.7 → 5.2 |
+| /about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026 | 2026-11-03 | Added 3 internal links from Links to add | 1.9 → 2.0 | 2.9% → 3.0% | 4.4 → 5.7 |
+| /tr | 2026-11-03 | Added 3 internal links from Links to add | 0.3 → 0.3 | 0.1% → 0.1% | 6.9 → 5.2 |
+| /tr/post-presidency | 2026-11-03 | Added 3 internal links from Links to add | 1.8 → 1.2 | 2.6% → 1.2% | 4.2 → 3.7 |
+| /tr/new-york-politics/double-tragedy | 2026-11-03 | Added 3 internal links from Links to add | 0.5 → 2.0 | 1.6% → 2.8% | 4.4 → 4.7 |
+| /tr/quotes/family | 2026-11-03 | Added 2 internal links from Links to add | 0.3 → 0.7 | 2.3% → 2.3% | 6.2 → 5.6 |
+| /tr/people/alice-lee | 2026-11-03 | Added 3 internal links from Links to add | 0.1 → 1.2 | 0.3% → 2.2% | 8.8 → 8.0 |
+| /about/press/press-releases/harold-hamm-donates-50-million-trpl | 2026-11-03 | Added 2 internal links from Links to add | 1.7 → 0.2 | 10.5% → 2.7% | 3.1 → 3.3 |
+| /tr/people/theodore-sr | 2026-11-03 | Added 2 internal links from Links to add | 0.4 → 1.0 | 0.2% → 0.8% | 6.5 → 5.8 |
+| /about/press/press-releases/roosevelt-family-acquires-903-acres-trpl | 2026-11-03 | Added 2 internal links from Links to add | 0.6 → 0.5 | 7.0% → 7.9% | 4.2 → 5.1 |
+| /tr/legacy/mount-rushmore | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 1.0 | 0.2% → 0.7% | 7.1 → 7.3 |
+| /tr/conservation/quotes | 2026-11-03 | Added 3 internal links from Links to add | 0.5 → 2.2 | 1.4% → 1.4% | 4.9 → 4.9 |
+| /visit/itineraries/north-on-29 | 2026-11-03 | Added 2 internal links from Links to add | 0.3 → 0.2 | 0.8% → 0.6% | 7.2 → 7.5 |
+| /tr/rise-to-power/police-commissioner | 2026-11-03 | Added 2 internal links from Links to add | 1.8 → 2.5 | 1.7% → 2.5% | 5.7 → 5.2 |
+| /tr/legacy/words-he-coined | 2026-11-03 | Added 2 internal links from Links to add | 0.9 → 1.0 | 0.6% → 0.8% | 6.4 → 7.2 |
+| /tr/myths/misquotes | 2026-11-03 | Added 2 internal links from Links to add | 1.1 → 1.3 | 1.1% → 1.3% | 5.2 → 5.8 |
+| /tr/quotes | 2026-11-03 | Added 2 internal links from Links to add | 21.7 → 15.0 | 2.3% → 2.1% | 10.7 → 4.1 |
+| /tr/presidency/first-term | 2026-11-03 | Added 2 internal links from Links to add | 0.5 → 0.3 | 1.7% → 0.6% | 6.5 → 5.6 |
+| /visit/itineraries/13-day-denver-wyoming | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.8% → 0.0% | 8.9 → 8.4 |
+| /tr/family/children | 2026-11-03 | Added 2 internal links from Links to add; Title 'Theodore Roosevelt's Children: Alice, Ted | 4.2 → 7.5 | 1.1% → 1.8% | 4.2 → 3.5 |
+| /visit/shopping | 2026-11-03 | Added 2 internal links from Links to add | 5.0 → 5.2 | 2.2% → 5.2% | 5.0 → 7.6 |
+| /tr/family | 2026-11-03 | Added 2 internal links from Links to add | 1.1 → 1.8 | 0.4% → 0.5% | 8.0 → 7.4 |
+| /tr/for-educators/middle-school | 2026-11-03 | Added 2 internal links from Links to add | 0.6 → 0.5 | 2.2% → 1.5% | 6.5 → 5.7 |
 | /visit/medora | 2026-11-03 | Added 1 internal link from Links to add | 1.1 → 0.2 | 0.7% → 0.2% | 4.5 → 4.1 |
-| /tr/rise-to-power/buffalo-soldiers | 2026-11-03 | Added 1 internal link from Links to add | 1.6 → 1.4 | 0.7% → 0.7% | 5.2 → 4.9 |
-| /tr/early-life/harvard | 2026-11-03 | Added 2 internal links from Links to add | 0.9 → 1.8 | 1.0% → 1.4% | 5.4 → 5.1 |
-| /tr/elkhorn | 2026-11-03 | Added 2 internal links from Links to add | 1.6 → 2.0 | 0.8% → 1.3% | 8.0 → 7.6 |
-| /podcast/good-citizen/ted-leonsis | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.4 | 0.2% → 0.2% | 10.0 → 8.7 |
-| /tr/presidency/conservation/national-parks | 2026-11-03 | Added 2 internal links from Links to add | 6.9 → 6.4 | 0.9% → 1.0% | 6.0 → 5.5 |
-| /bullet-speech | 2026-11-03 | Added 1 internal link from Links to add; Title 'The Bullet Speech: Roosevelt's Assassinati | 24.4 → 21.4 | 1.7% → 1.5% | 3.7 → 3.6 |
-| /tr/early-life/mother | 2026-11-03 | Added 2 internal links from Links to add | 0.3 → 0.0 | 0.3% → 0.0% | 5.1 → 4.7 |
-| /tr/post-presidency/river-of-doubt | 2026-11-03 | Added 2 internal links from Links to add | 2.6 → 5.6 | 0.6% → 0.9% | 7.5 → 7.3 |
-| /tr/post-presidency/african-safari | 2026-11-03 | Added 2 internal links from Links to add | 1.2 → 1.6 | 1.3% → 2.3% | 5.9 → 5.7 |
-| /tr/post-presidency/new-nationalism | 2026-11-03 | Added 2 internal links from Links to add | 1.8 → 1.6 | 0.7% → 0.6% | 4.5 → 4.4 |
-| /tr/presidency/conservation/reclamation | 2026-11-03 | Added 2 internal links from Links to add | 3.3 → 1.4 | 0.8% → 0.5% | 4.2 → 4.0 |
-| /tr/5-big-adventures | 2026-11-03 | Added 2 internal links from Links to add | 2.0 → 1.2 | 1.0% → 0.4% | 6.5 → 5.9 |
-| /tr/rise-to-power/san-juan-hill | 2026-11-03 | Added 2 internal links from Links to add; Title uses 'Battle of San Juan Hill' | 14.8 → 12.4 | 1.4% → 1.1% | 3.7 → 3.6 |
-| /tr/presidency/conservation/bird-reserves | 2026-11-03 | Added 2 internal links from Links to add | 0.8 → 0.4 | 1.5% → 0.5% | 5.4 → 5.1 |
-| /podcast/good-citizen/douglas-brinkley | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.1% → 0.0% | 11.9 → 13.0 |
-| /tr/people/corinne | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 0.2 | 0.2% → 0.4% | 4.3 → 3.2 |
+| /tr/rise-to-power/buffalo-soldiers | 2026-11-03 | Added 1 internal link from Links to add | 1.6 → 1.3 | 0.7% → 0.6% | 5.2 → 4.9 |
+| /tr/early-life/harvard | 2026-11-03 | Added 2 internal links from Links to add | 0.9 → 2.5 | 1.0% → 1.9% | 5.4 → 5.0 |
+| /tr/elkhorn | 2026-11-03 | Added 2 internal links from Links to add | 1.6 → 2.0 | 0.8% → 1.3% | 8.0 → 7.7 |
+| /podcast/good-citizen/ted-leonsis | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.3 | 0.2% → 0.2% | 10.0 → 8.5 |
+| /tr/presidency/conservation/national-parks | 2026-11-03 | Added 2 internal links from Links to add | 6.9 → 6.3 | 0.9% → 1.0% | 6.0 → 5.4 |
+| /bullet-speech | 2026-11-03 | Added 1 internal link from Links to add; Title 'The Bullet Speech: Roosevelt's Assassinati | 24.4 → 24.5 | 1.7% → 1.7% | 3.7 → 3.6 |
+| /tr/early-life/mother | 2026-11-03 | Added 2 internal links from Links to add | 0.3 → 0.0 | 0.3% → 0.0% | 5.1 → 4.6 |
+| /tr/post-presidency/river-of-doubt | 2026-11-03 | Added 2 internal links from Links to add | 2.6 → 5.5 | 0.6% → 1.0% | 7.5 → 7.2 |
+| /tr/post-presidency/african-safari | 2026-11-03 | Added 2 internal links from Links to add | 1.2 → 1.7 | 1.3% → 2.3% | 5.9 → 5.8 |
+| /tr/post-presidency/new-nationalism | 2026-11-03 | Added 2 internal links from Links to add | 1.8 → 1.5 | 0.7% → 0.6% | 4.5 → 4.5 |
+| /tr/presidency/conservation/reclamation | 2026-11-03 | Added 2 internal links from Links to add | 3.3 → 2.2 | 0.8% → 0.7% | 4.2 → 3.9 |
+| /tr/5-big-adventures | 2026-11-03 | Added 2 internal links from Links to add | 2.0 → 1.0 | 1.0% → 0.4% | 6.5 → 5.9 |
+| /tr/rise-to-power/san-juan-hill | 2026-11-03 | Added 2 internal links from Links to add; Title uses 'Battle of San Juan Hill' | 14.8 → 14.2 | 1.4% → 1.2% | 3.7 → 3.6 |
+| /tr/presidency/conservation/bird-reserves | 2026-11-03 | Added 2 internal links from Links to add | 0.8 → 0.3 | 1.5% → 0.4% | 5.4 → 5.0 |
+| /podcast/good-citizen/douglas-brinkley | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.2 | 0.1% → 0.5% | 11.9 → 12.8 |
+| /tr/people/corinne | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 0.7 | 0.2% → 1.3% | 4.3 → 3.1 |
 | /podcast/good-citizen/eric-liu | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 0.0 | 0.3% → 0.0% | 7.8 → 5.6 |
-| /tr/quotes/strenuous-life | 2026-11-03 | Added 1 internal link from Links to add | 1.8 → 2.4 | 1.3% → 1.3% | 6.3 → 6.5 |
-| /tr/quotes/citizenship | 2026-11-03 | Added 2 internal links from Links to add | 1.9 → 2.2 | 1.7% → 2.2% | 5.8 → 5.6 |
-| /tr/elkhorn-timeline | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 0.0 | 1.3% → 0.0% | 8.1 → 7.1 |
-| /tr/people/edith-roosevelt | 2026-11-03 | Added 2 internal links from Links to add | 0.4 → 0.2 | 0.7% → 0.5% | 11.3 → 13.6 |
-| /visit/roosevelt-in-medora | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.8% → 0.0% | 7.4 → 9.0 |
-| /podcast/good-citizen/meg-whitman | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.2 | 0.1% → 0.1% | 11.4 → 11.0 |
-| /tr/speeches/strenuous-life | 2026-11-03 | Added 1 internal link from Links to add | 2.7 → 2.2 | 1.9% → 2.5% | 5.7 → 5.3 |
-| /tr/people/quentin | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 0.2 | 0.4% → 0.8% | 8.5 → 8.8 |
-| /tr/post-presidency/world-war-i | 2026-11-03 | Added 2 internal links from Links to add | 0.2 → 0.4 | 0.5% → 0.7% | 5.4 → 5.0 |
+| /tr/quotes/strenuous-life | 2026-11-03 | Added 1 internal link from Links to add | 1.8 → 2.7 | 1.3% → 1.4% | 6.3 → 6.3 |
+| /tr/quotes/citizenship | 2026-11-03 | Added 2 internal links from Links to add | 1.9 → 2.5 | 1.7% → 2.4% | 5.8 → 5.5 |
+| /tr/elkhorn-timeline | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 0.0 | 1.3% → 0.0% | 8.1 → 7.7 |
+| /tr/people/edith-roosevelt | 2026-11-03 | Added 2 internal links from Links to add | 0.4 → 0.2 | 0.7% → 0.4% | 11.3 → 13.8 |
+| /visit/roosevelt-in-medora | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.8% → 0.0% | 7.4 → 8.8 |
+| /podcast/good-citizen/meg-whitman | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.5 | 0.1% → 0.4% | 11.4 → 11.0 |
+| /tr/speeches/strenuous-life | 2026-11-03 | Added 1 internal link from Links to add | 2.7 → 2.3 | 1.9% → 2.5% | 5.7 → 5.2 |
+| /tr/people/quentin | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 0.3 | 0.4% → 1.3% | 8.5 → 8.1 |
+| /tr/post-presidency/world-war-i | 2026-11-03 | Added 2 internal links from Links to add | 0.2 → 0.5 | 0.5% → 0.7% | 5.4 → 5.4 |
 | /tr/rise-to-power/sagamore-hill | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 0.0 | 0.9% → 0.0% | 6.9 → 7.1 |
-| /tr/new-york-politics/convention-1884 | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 0.4 | 0.9% → 1.5% | 6.7 → 5.5 |
+| /tr/new-york-politics/convention-1884 | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 0.3 | 0.9% → 1.2% | 6.7 → 5.3 |
 | /about/press/press-releases/sarah-and-ross-perot-jr-foundation-gifts-5-million-theodore-roosevelt | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.9% → 0.0% | 6.4 → 6.0 |
-| /about/press/press-releases/theodore-roosevelt-presidential-library-welcomes-doris-kearns-goodwin | 2026-11-03 | Added 2 internal links from Links to add | 0.0 → 0.0 | 0.7% → 0.0% | 5.3 → 19.2 |
-| /about/foundation | 2026-11-03 | Added 1 internal link from Links to add | 2.5 → 2.2 | 3.7% → 4.5% | 5.5 → 5.6 |
-| /visit/eat | 2026-11-03 | Added 2 internal links from Links to add | 5.8 → 2.0 | 2.7% → 1.6% | 7.2 → 7.8 |
-| /visit/maps | 2026-11-03 | Added 1 internal link from Links to add | 1.7 → 0.2 | 0.5% → 0.6% | 3.9 → 3.3 |
-| /tr/post-presidency/assassination-attempt | 2026-11-03 | Added 2 internal links from Links to add | 0.8 → 1.4 | 0.6% → 1.2% | 8.0 → 6.3 |
-| /research | 2026-11-03 | Added 2 internal links from Links to add | 1.1 → 0.8 | 3.4% → 2.8% | 5.5 → 4.7 |
-| /tr/presidency/white-house-family/white-house-gang | 2026-11-03 | Added 2 internal links from Links to add | 0.0 → 0.0 | 1.9% → 0.0% | 6.0 → 4.7 |
-| /tr/presidency/conservation/governors-conference | 2026-11-03 | Added 2 internal links from Links to add | 0.3 → 0.6 | 3.4% → 6.8% | 4.8 → 3.0 |
-| /tr/rise-to-power/jacob-riis | 2026-11-03 | Added 1 internal link from Links to add | 1.7 → 3.6 | 0.6% → 1.1% | 4.9 → 4.3 |
+| /about/press/press-releases/theodore-roosevelt-presidential-library-welcomes-doris-kearns-goodwin | 2026-11-03 | Added 2 internal links from Links to add | 0.0 → 0.0 | 0.7% → 0.0% | 5.3 → 17.6 |
+| /about/foundation | 2026-11-03 | Added 1 internal link from Links to add | 2.5 → 2.2 | 3.7% → 4.3% | 5.5 → 5.5 |
+| /visit/eat | 2026-11-03 | Added 2 internal links from Links to add | 5.8 → 2.0 | 2.7% → 1.7% | 7.2 → 7.9 |
+| /visit/maps | 2026-11-03 | Added 1 internal link from Links to add | 1.7 → 0.2 | 0.5% → 0.6% | 3.9 → 3.4 |
+| /tr/post-presidency/assassination-attempt | 2026-11-03 | Added 2 internal links from Links to add | 0.8 → 2.7 | 0.6% → 2.2% | 8.0 → 6.3 |
+| /research | 2026-11-03 | Added 2 internal links from Links to add | 1.1 → 0.8 | 3.4% → 3.0% | 5.5 → 4.9 |
+| /tr/presidency/white-house-family/white-house-gang | 2026-11-03 | Added 2 internal links from Links to add | 0.0 → 0.0 | 1.9% → 0.0% | 6.0 → 5.9 |
+| /tr/presidency/conservation/governors-conference | 2026-11-03 | Added 2 internal links from Links to add | 0.3 → 0.5 | 3.4% → 6.2% | 4.8 → 3.1 |
+| /tr/rise-to-power/jacob-riis | 2026-11-03 | Added 1 internal link from Links to add | 1.7 → 4.0 | 0.6% → 1.1% | 4.9 → 4.4 |
 | /tr/strenuous-life/explorer | 2026-11-03 | Added 2 internal links from Links to add | 0.1 → 0.0 | 1.1% → 0.0% | 5.0 → 4.6 |
-| /tr/presidency/race | 2026-11-03 | Added 2 internal links from Links to add | 3.8 → 3.0 | 1.2% → 1.1% | 4.4 → 3.7 |
-| /visit/itineraries | 2026-11-03 | Added 1 internal link from Links to add; Link to the I-94 guide | 2.7 → 2.6 | 1.6% → 1.8% | 6.5 → 6.6 |
-| /tr/presidency/executive-power | 2026-11-03 | Added 2 internal links from Links to add | 2.9 → 9.6 | 1.5% → 1.9% | 4.1 → 3.8 |
+| /tr/presidency/race | 2026-11-03 | Added 2 internal links from Links to add | 3.8 → 3.8 | 1.2% → 1.3% | 4.4 → 3.7 |
+| /visit/itineraries | 2026-11-03 | Added 1 internal link from Links to add; Link to the I-94 guide | 2.7 → 2.7 | 1.6% → 1.8% | 6.5 → 6.7 |
+| /tr/presidency/executive-power | 2026-11-03 | Added 2 internal links from Links to add | 2.9 → 10.0 | 1.5% → 1.8% | 4.1 → 3.9 |
 | /tr/presidency/conservation/national-forests | 2026-11-03 | Added 2 internal links from Links to add | 0.5 → 0.2 | 0.8% → 0.1% | 6.0 → 5.6 |
-| /visit/itineraries/black-hills-loop | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 0.4 | 1.0% → 1.5% | 8.3 → 7.7 |
+| /visit/itineraries/black-hills-loop | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 0.3 | 1.0% → 1.2% | 8.3 → 7.8 |
 | /visit/itineraries/7-day-billings-bismarck | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.0 | 0.5% → 0.0% | 8.6 → 8.4 |
-| /tr/10-myths-teddy-bear | 2026-11-03 | Added 1 internal link from Links to add | 5.2 → 5.2 | 0.8% → 1.1% | 5.5 → 6.1 |
-| /tr/post-presidency/bull-moose/platform | 2026-11-03 | Added 1 internal link from Links to add | 8.6 → 9.2 | 0.7% → 0.5% | 5.0 → 4.1 |
-| /tr/for-educators/elementary | 2026-11-03 | Added 1 internal link from Links to add | 1.2 → 1.2 | 2.5% → 3.0% | 6.2 → 6.1 |
-| /tr/people/alice-longworth | 2026-11-03 | Added 1 internal link from Links to add; Title 'Alice Roosevelt Longworth: Theodore Roosev | 3.7 → 4.8 | 0.4% → 0.5% | 8.0 → 7.3 |
-| /tr/tr-save-the-bison | 2026-11-03 | Added 1 internal link from Links to add | 2.1 → 3.8 | 1.5% → 2.8% | 5.1 → 4.8 |
-| /tr/presidency/trust-busting | 2026-11-03 | Added 1 internal link from Links to add; Title 'What Was Trust-Busting? Roosevelt Takes On | 36.2 → 42.6 | 1.3% → 1.7% | 3.4 → 3.2 |
-| /tr/complex-legacy | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 0.0 | 1.7% → 0.0% | 6.0 → 6.3 |
-| /podcast/good-citizen/susan-berfield | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.2 | 0.5% → 1.4% | 5.6 → 6.1 |
-| /tr/badlands/bad-lands-cow-boy | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.0 | 0.3% → 0.0% | 8.6 → 7.0 |
-| /tr/presidency/great-white-fleet | 2026-11-03 | Added 1 internal link from Links to add; Title 'The Great White Fleet: Roosevelt's Global  | 6.6 → 11.6 | 0.7% → 1.3% | 4.1 → 3.3 |
-| /tr/badlands/ten-facts | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 1.6 | 1.1% → 3.0% | 5.1 → 5.0 |
-| /podcast/good-citizen/susannah-cahalan | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.4 | 0.2% → 0.4% | 9.2 → 10.2 |
-| /tr/presidency/bully-pulpit | 2026-11-03 | Added 1 internal link from Links to add; Title 'The Bully Pulpit: Meaning, Origin, and Exa | 5.7 → 9.6 | 0.6% → 0.5% | 4.6 → 3.3 |
-| /tr/speeches/man-in-the-arena | 2026-11-03 | Added 1 internal link from Links to add; Title 'Man in the Arena Speech: Citizenship in a  | 25.7 → 51.2 | 2.3% → 2.6% | 5.2 → 6.1 |
-| /tr/complex-legacy/eugenics | 2026-11-03 | Added 1 internal link from Links to add | 3.5 → 3.8 | 2.9% → 3.8% | 4.2 → 4.2 |
-| /tr/people/jacob-riis | 2026-11-03 | Added 1 internal link from Links to add; Title and description aimed at 'who was Jacob Rii | 16.4 → 24.8 | 0.5% → 1.0% | 6.6 → 6.0 |
-| /tr/badlands/maltese-cross | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 0.0 | 3.1% → 0.0% | 6.5 → 7.1 |
-| /tr/people/elliott | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 9.4 → 8.9 |
-| /tr/rise-to-power/vice-presidency | 2026-11-03 | Added 1 internal link from Links to add | 1.9 → 2.8 | 0.7% → 0.8% | 5.4 → 4.9 |
-| /tr/family/elliott-roosevelt | 2026-11-03 | Added 1 internal link from Links to add | 1.1 → 2.2 | 0.5% → 1.0% | 7.5 → 7.2 |
-| /tr/badlands | 2026-11-03 | Added 1 internal link from Links to add; Link to where-to-see | 0.1 → 0.0 | 1.1% → 0.0% | 5.3 → 8.5 |
-| /podcast/good-citizen/carly-fiorina | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.4% → 0.0% | 8.7 → 7.4 |
-| /tr/badlands/medora | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.2 | 0.4% → 0.7% | 7.8 → 8.3 |
-| /virtual | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.0 | 5.1% → 0.0% | 6.3 → 7.1 |
-| /tr/books-and-writings/reader | 2026-11-03 | Added 1 internal link from Links to add | 1.2 → 0.8 | 1.9% → 1.6% | 5.2 → 5.6 |
-| /tr/complex-legacy/race | 2026-11-03 | Added 1 internal link from Links to add | 0.9 → 2.6 | 0.9% → 1.2% | 4.9 → 4.9 |
-| /tr/people/john-muir | 2026-11-03 | Added 1 internal link from Links to add | 1.0 → 0.4 | 0.5% → 0.3% | 7.2 → 6.5 |
-| /tr/complex-legacy/equestrian-statue | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.2 | 1.5% → 0.4% | 5.5 → 5.5 |
-| /tr/people/ethel | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.0 | 0.3% → 0.0% | 7.8 → 7.5 |
-| /tr/rise-to-power/becoming-president | 2026-11-03 | Added 1 internal link from Links to add | 1.4 → 2.4 | 0.3% → 0.5% | 5.3 → 4.2 |
-| /tr/people/ted-jr | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 0.4 | 0.1% → 0.1% | 10.2 → 10.2 |
-| /tr/people/mittie | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.6 | 0.6% → 0.8% | 7.5 → 6.7 |
-| /podcast/good-citizen/katherine-gehl | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.4 | 1.1% → 4.0% | 8.2 → 8.8 |
-| /visit/itineraries/7-day-bismarck-rapid-city | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 0.4 | 0.4% → 0.6% | 8.1 → 8.4 |
-| /tr/early-life/childhood-illness | 2026-11-03 | Added 1 internal link from Links to add | 2.3 → 3.8 | 1.8% → 2.3% | 4.0 → 3.6 |
-| /tr/presidency/square-deal | 2026-11-03 | Added 1 internal link from Links to add; Truncated description fixed; Three Cs heading; Sp | 20.7 → 79.6 | 0.6% → 1.5% | 4.4 → 3.0 |
-| /tr/presidency/conservation/john-muir | 2026-11-03 | Added 1 internal link from Links to add | 3.2 → 4.2 | 1.1% → 1.3% | 4.5 → 4.1 |
-| /tr/myths | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.2 | 0.5% → 7.1% | 8.0 → 4.5 |
-| /tr/early-life/young-naturalist | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.2 | 0.9% → 1.2% | 4.9 → 4.2 |
-| /tr/presidency/cabinet | 2026-11-03 | Added 1 internal link from Links to add | 1.0 → 1.2 | 1.1% → 0.9% | 5.0 → 5.4 |
-| /tr/people/booker-t-washington | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 1.4 | 0.2% → 0.3% | 9.4 → 8.3 |
-| /project/design | 2026-11-03 | Added 1 internal link from Links to add | 5.5 → 3.0 | 3.7% → 2.3% | 4.5 → 5.1 |
-| /tr/early-life/family-travels | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.6 | 1.4% → 3.9% | 5.2 → 4.3 |
-| /podcast/good-citizen/adam-met-climate-action-musical-stardom-and-art-building-movement | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 11.5 → 12.3 |
-| /tr/conservation | 2026-11-03 | Added 1 internal link from Links to add | 1.1 → 1.4 | 1.0% → 1.6% | 7.2 → 7.7 |
-| /tr/speeches/confession-of-faith | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 1.2 | 1.1% → 2.1% | 7.0 → 8.1 |
+| /tr/10-myths-teddy-bear | 2026-11-03 | Added 1 internal link from Links to add | 5.2 → 5.0 | 0.8% → 1.1% | 5.5 → 6.0 |
+| /tr/post-presidency/bull-moose/platform | 2026-11-03 | Added 1 internal link from Links to add | 8.6 → 9.5 | 0.7% → 0.5% | 5.0 → 4.1 |
+| /tr/for-educators/elementary | 2026-11-03 | Added 1 internal link from Links to add | 1.2 → 1.0 | 2.5% → 2.5% | 6.2 → 5.9 |
+| /tr/people/alice-longworth | 2026-11-03 | Added 1 internal link from Links to add; Title 'Alice Roosevelt Longworth: Theodore Roosev | 3.7 → 4.5 | 0.4% → 0.5% | 8.0 → 7.1 |
+| /tr/tr-save-the-bison | 2026-11-03 | Added 1 internal link from Links to add | 2.1 → 3.5 | 1.5% → 2.6% | 5.1 → 5.0 |
+| /tr/presidency/trust-busting | 2026-11-03 | Added 1 internal link from Links to add; Title 'What Was Trust-Busting? Roosevelt Takes On | 36.2 → 45.5 | 1.3% → 1.7% | 3.4 → 3.2 |
+| /tr/complex-legacy | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 0.0 | 1.7% → 0.0% | 6.0 → 6.2 |
+| /podcast/good-citizen/susan-berfield | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.2 | 0.5% → 1.0% | 5.6 → 5.8 |
+| /tr/badlands/bad-lands-cow-boy | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.2 | 0.3% → 0.9% | 8.6 → 7.2 |
+| /tr/presidency/great-white-fleet | 2026-11-03 | Added 1 internal link from Links to add; Title 'The Great White Fleet: Roosevelt's Global  | 6.6 → 12.7 | 0.7% → 1.3% | 4.1 → 3.3 |
+| /tr/badlands/ten-facts | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 1.5 | 1.1% → 2.9% | 5.1 → 4.9 |
+| /podcast/good-citizen/susannah-cahalan | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.5 | 0.2% → 0.4% | 9.2 → 10.2 |
+| /tr/presidency/bully-pulpit | 2026-11-03 | Added 1 internal link from Links to add; Title 'The Bully Pulpit: Meaning, Origin, and Exa | 5.7 → 10.5 | 0.6% → 0.5% | 4.6 → 3.3 |
+| /tr/speeches/man-in-the-arena | 2026-11-03 | Added 1 internal link from Links to add; Title 'Man in the Arena Speech: Citizenship in a  | 25.7 → 50.3 | 2.3% → 2.5% | 5.2 → 6.1 |
+| /tr/complex-legacy/eugenics | 2026-11-03 | Added 1 internal link from Links to add | 3.5 → 4.0 | 2.9% → 3.5% | 4.2 → 4.1 |
+| /tr/people/jacob-riis | 2026-11-03 | Added 1 internal link from Links to add; Title and description aimed at 'who was Jacob Rii | 16.4 → 26.7 | 0.5% → 1.0% | 6.6 → 6.0 |
+| /tr/badlands/maltese-cross | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 0.0 | 3.1% → 0.0% | 6.5 → 6.7 |
+| /tr/people/elliott | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 9.4 → 9.1 |
+| /tr/rise-to-power/vice-presidency | 2026-11-03 | Added 1 internal link from Links to add | 1.9 → 3.0 | 0.7% → 0.8% | 5.4 → 4.9 |
+| /tr/family/elliott-roosevelt | 2026-11-03 | Added 1 internal link from Links to add | 1.1 → 2.0 | 0.5% → 0.9% | 7.5 → 7.2 |
+| /tr/badlands | 2026-11-03 | Added 1 internal link from Links to add; Link to where-to-see | 0.1 → 0.3 | 1.1% → 2.8% | 5.3 → 7.6 |
+| /podcast/good-citizen/carly-fiorina | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.4% → 0.0% | 8.7 → 7.7 |
+| /tr/badlands/medora | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.2 | 0.4% → 0.6% | 7.8 → 8.1 |
+| /virtual | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.0 | 5.1% → 0.0% | 6.3 → 7.4 |
+| /tr/books-and-writings/reader | 2026-11-03 | Added 1 internal link from Links to add | 1.2 → 1.0 | 1.9% → 2.0% | 5.2 → 5.4 |
+| /tr/complex-legacy/race | 2026-11-03 | Added 1 internal link from Links to add | 0.9 → 2.2 | 0.9% → 1.0% | 4.9 → 4.9 |
+| /tr/people/john-muir | 2026-11-03 | Added 1 internal link from Links to add | 1.0 → 0.7 | 0.5% → 0.4% | 7.2 → 6.4 |
+| /tr/complex-legacy/equestrian-statue | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.2 | 1.5% → 0.3% | 5.5 → 5.4 |
+| /tr/people/ethel | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.2 | 0.3% → 0.2% | 7.8 → 7.4 |
+| /tr/rise-to-power/becoming-president | 2026-11-03 | Added 1 internal link from Links to add | 1.4 → 2.5 | 0.3% → 0.5% | 5.3 → 4.2 |
+| /tr/people/ted-jr | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 0.7 | 0.1% → 0.1% | 10.2 → 10.2 |
+| /tr/people/mittie | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.5 | 0.6% → 0.7% | 7.5 → 6.8 |
+| /podcast/good-citizen/katherine-gehl | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.5 | 1.1% → 4.9% | 8.2 → 8.7 |
+| /visit/itineraries/7-day-bismarck-rapid-city | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 0.3 | 0.4% → 0.5% | 8.1 → 8.5 |
+| /tr/early-life/childhood-illness | 2026-11-03 | Added 1 internal link from Links to add | 2.3 → 5.2 | 1.8% → 3.0% | 4.0 → 3.5 |
+| /tr/presidency/square-deal | 2026-11-03 | Added 1 internal link from Links to add; Truncated description fixed; Three Cs heading; Sp | 20.7 → 78.7 | 0.6% → 1.5% | 4.4 → 3.0 |
+| /tr/presidency/conservation/john-muir | 2026-11-03 | Added 1 internal link from Links to add | 3.2 → 4.3 | 1.1% → 1.3% | 4.5 → 4.0 |
+| /tr/myths | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.3 | 0.5% → 7.1% | 8.0 → 4.8 |
+| /tr/early-life/young-naturalist | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.2 | 0.9% → 1.0% | 4.9 → 4.0 |
+| /tr/presidency/cabinet | 2026-11-03 | Added 1 internal link from Links to add | 1.0 → 1.7 | 1.1% → 1.2% | 5.0 → 5.3 |
+| /tr/people/booker-t-washington | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 1.7 | 0.2% → 0.4% | 9.4 → 8.1 |
+| /project/design | 2026-11-03 | Added 1 internal link from Links to add | 5.5 → 3.2 | 3.7% → 2.5% | 4.5 → 5.2 |
+| /tr/early-life/family-travels | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.7 | 1.4% → 3.5% | 5.2 → 4.2 |
+| /podcast/good-citizen/adam-met-climate-action-musical-stardom-and-art-building-movement | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 11.5 → 12.7 |
+| /tr/conservation | 2026-11-03 | Added 1 internal link from Links to add | 1.1 → 1.3 | 1.0% → 1.5% | 7.2 → 7.5 |
+| /tr/speeches/confession-of-faith | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 1.3 | 1.1% → 2.0% | 7.0 → 7.8 |
 | /podcast/good-citizen/senator-mitt-romney-formative-moments-presidential-leadership-and-question | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.2 | 0.1% → 0.3% | 7.7 → 7.3 |
-| /tr/homes-and-places | 2026-11-03 | Added 1 internal link from Links to add | 1.2 → 1.2 | 1.1% → 1.1% | 5.9 → 5.5 |
-| /tr/early-life/civil-war | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.6 | 0.6% → 1.4% | 5.1 → 4.3 |
-| /tr/early-life/day-in-the-life | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.6% → 0.0% | 6.9 → 9.5 |
-| /visit/national-park | 2026-11-03 | Added 1 internal link from Links to add; Visit length, restaurant name; link to where-to-s | 4.4 → 3.4 | 0.6% → 0.6% | 8.1 → 8.2 |
-| /tr/people/gifford-pinchot | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.4 | 0.9% → 0.6% | 6.3 → 5.9 |
-| /tr/post-presidency/bull-moose | 2026-11-03 | Added 1 internal link from Links to add | 5.6 → 9.8 | 0.6% → 0.7% | 4.6 → 4.1 |
-| /visit/hiking | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 0.2 | 0.7% → 0.4% | 7.1 → 7.5 |
-| /beam-signing-ceremony | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 7.9 → 5.1 |
-| /project/native-plant-project | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 0.6 | 0.9% → 3.5% | 4.6 → 7.5 |
-| /tr/homes-and-places/tr-national-park | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 0.8 | 0.7% → 0.9% | 7.1 → 7.9 |
-| /visit/hunting-fishing | 2026-11-03 | Added 1 internal link from Links to add | 0.8 → 1.4 | 1.1% → 1.8% | 7.3 → 6.4 |
-| /about/mission | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 0.0 | 2.3% → 0.0% | 4.7 → 2.1 |
-| /tr/rise-to-power/civil-service | 2026-11-03 | Added 1 internal link from Links to add | 2.1 → 0.6 | 0.6% → 0.1% | 5.3 → 5.6 |
-| /tr/badlands/elkhorn-ranch | 2026-11-03 | Added 1 internal link from Links to add | 0.6 → 0.8 | 0.8% → 1.2% | 7.6 → 6.3 |
-| /visit/stargazing | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 0.0 | 1.3% → 0.0% | 6.2 → 5.5 |
-| /podcast/good-citizen/dr-vivek-murthy-loneliness-staying-human-and-what-true-success-looks | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.2 | 1.0% → 2.3% | 10.4 → 13.4 |
-| /podcast/good-citizen/secretary-deb-haaland | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 3.8 | 0.9% → 1.3% | 7.5 → 7.3 |
-| /visit/itineraries/river-road | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.7% → 0.0% | 7.3 → 7.1 |
-| /tr/presidency/white-house-workers | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.0 | 1.4% → 0.0% | 6.5 → 7.4 |
-| /podcast/good-citizen/matthew-barzun | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.9% → 0.0% | 8.5 → 9.1 |
-| /tr/early-life/father | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.4 | 0.5% → 0.4% | 6.7 → 6.8 |
-| /visit/camping | 2026-11-03 | Added 1 internal link from Links to add | 0.8 → 0.8 | 1.4% → 1.4% | 7.5 → 7.2 |
-| /tr/presidency/conservation/antiquities-act | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.4 | 0.9% → 0.7% | 6.1 → 6.4 |
-| /visit/trolley | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.0 | 1.6% → 0.0% | 6.9 → 7.6 |
-| /tr/badlands/landscape | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.4 | 0.6% → 0.7% | 5.9 → 5.5 |
-| /visit/little-missouri-river | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 0.2 | 1.1% → 0.6% | 7.8 → 7.2 |
-| /podcast/good-citizen/ben-jealous | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 10.2 → 11.9 |
-| /podcast/good-citizen/dan-harris | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 8.8 → 8.9 |
-| /visit/outdoors | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.2 | 1.4% → 1.1% | 6.6 → 6.3 |
-| /visit/biking | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.2 | 2.1% → 1.8% | 7.3 → 8.6 |
-| /visit/wildlife | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.2 | 0.6% → 0.7% | 7.8 → 6.9 |
-| /project | 2026-11-03 | Added 1 internal link from Links to add; Title 'Building the Library: Design, Values and S | 5.0 → 2.6 | 0.5% → 0.3% | 2.4 → 2.5 |
-| /tr/people/leonard-wood | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 1.0 | 0.2% → 0.7% | 8.8 → 6.2 |
-| /podcast/good-citizen/katharine-hayhoe | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 8.5 → 8.6 |
-| /visit/itineraries/weekend-drives/fargo | 2026-11-03 | Added 1 internal link from Links to add | 0.6 → 0.6 | 1.1% → 1.6% | 5.0 → 5.5 |
-| /about/press/press-releases/trplf-elects-spencer-zwick-board | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.0 | 1.6% → 0.0% | 4.3 → 3.4 |
-| /visit/itineraries/weekend-drives/bismarck | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 1.2 | 1.0% → 4.2% | 5.1 → 3.9 |
-| /tr/presidency/second-term | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.4 | 1.8% → 1.9% | 6.0 → 4.4 |
-| /tr/books-and-writings | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.0 | 0.8% → 0.0% | 8.7 → 9.3 |
-| /tr/badlands/frontier-life | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.4 | 0.8% → 1.5% | 6.5 → 6.3 |
-| /about/trustees/beth-laski | 2026-11-03 | Added 1 internal link from Links to add | 0.8 → 0.6 | 8.2% → 8.6% | 9.8 → 13.2 |
-| /about/press/press-releases/theodore-roosevelt-presidential-library-launches-good-citizen-podcast | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 5.9 → 3.7 |
+| /tr/homes-and-places | 2026-11-03 | Added 1 internal link from Links to add | 1.2 → 1.0 | 1.1% → 0.9% | 5.9 → 5.4 |
+| /tr/early-life/civil-war | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.5 | 0.6% → 1.2% | 5.1 → 4.3 |
+| /tr/early-life/day-in-the-life | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.2 | 0.6% → 1.7% | 6.9 → 8.4 |
+| /visit/national-park | 2026-11-03 | Added 1 internal link from Links to add; Visit length, restaurant name; link to where-to-s | 4.4 → 3.7 | 0.6% → 0.6% | 8.1 → 8.5 |
+| /tr/people/gifford-pinchot | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.3 | 0.9% → 0.5% | 6.3 → 5.9 |
+| /tr/post-presidency/bull-moose | 2026-11-03 | Added 1 internal link from Links to add | 5.6 → 9.3 | 0.6% → 0.7% | 4.6 → 4.1 |
+| /visit/hiking | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 0.2 | 0.7% → 0.3% | 7.1 → 7.7 |
+| /beam-signing-ceremony | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 7.9 → 5.5 |
+| /project/native-plant-project | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 0.8 | 0.9% → 4.9% | 4.6 → 7.2 |
+| /tr/homes-and-places/tr-national-park | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 1.2 | 0.7% → 1.3% | 7.1 → 7.8 |
+| /visit/hunting-fishing | 2026-11-03 | Added 1 internal link from Links to add | 0.8 → 1.3 | 1.1% → 1.6% | 7.3 → 6.4 |
+| /about/mission | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 0.0 | 2.3% → 0.0% | 4.7 → 2.7 |
+| /tr/rise-to-power/civil-service | 2026-11-03 | Added 1 internal link from Links to add | 2.1 → 1.2 | 0.6% → 0.2% | 5.3 → 5.5 |
+| /tr/badlands/elkhorn-ranch | 2026-11-03 | Added 1 internal link from Links to add | 0.6 → 0.7 | 0.8% → 0.9% | 7.6 → 6.4 |
+| /visit/stargazing | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 0.0 | 1.3% → 0.0% | 6.2 → 5.6 |
+| /podcast/good-citizen/dr-vivek-murthy-loneliness-staying-human-and-what-true-success-looks | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.3 | 1.0% → 3.6% | 10.4 → 15.3 |
+| /podcast/good-citizen/secretary-deb-haaland | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 3.7 | 0.9% → 1.4% | 7.5 → 7.3 |
+| /visit/itineraries/river-road | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.2 | 0.7% → 1.2% | 7.3 → 7.0 |
+| /tr/presidency/white-house-workers | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.2 | 1.4% → 0.4% | 6.5 → 7.3 |
+| /podcast/good-citizen/matthew-barzun | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.9% → 0.0% | 8.5 → 9.3 |
+| /tr/early-life/father | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.5 | 0.5% → 0.4% | 6.7 → 6.9 |
+| /visit/camping | 2026-11-03 | Added 1 internal link from Links to add | 0.8 → 0.7 | 1.4% → 1.1% | 7.5 → 7.1 |
+| /tr/presidency/conservation/antiquities-act | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.8 | 0.9% → 1.2% | 6.1 → 6.2 |
+| /visit/trolley | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.0 | 1.6% → 0.0% | 6.9 → 7.8 |
+| /tr/badlands/landscape | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.3 | 0.6% → 0.6% | 5.9 → 5.5 |
+| /visit/little-missouri-river | 2026-11-03 | Added 1 internal link from Links to add | 0.4 → 0.2 | 1.1% → 0.5% | 7.8 → 7.2 |
+| /podcast/good-citizen/ben-jealous | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 10.2 → 11.7 |
+| /podcast/good-citizen/dan-harris | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 8.8 → 8.8 |
+| /visit/outdoors | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.2 | 1.4% → 1.0% | 6.6 → 6.2 |
+| /visit/biking | 2026-11-03 | Added 1 internal link from Links to add | 0.3 → 0.2 | 2.1% → 1.4% | 7.3 → 8.4 |
+| /visit/wildlife | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.2 | 0.6% → 0.5% | 7.8 → 7.2 |
+| /project | 2026-11-03 | Added 1 internal link from Links to add; Title 'Building the Library: Design, Values and S | 5.0 → 2.2 | 0.5% → 0.2% | 2.4 → 2.5 |
+| /tr/people/leonard-wood | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.8 | 0.2% → 0.6% | 8.8 → 6.2 |
+| /podcast/good-citizen/katharine-hayhoe | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 8.5 → 8.3 |
+| /visit/itineraries/weekend-drives/fargo | 2026-11-03 | Added 1 internal link from Links to add | 0.6 → 0.5 | 1.1% → 1.3% | 5.0 → 5.2 |
+| /about/press/press-releases/trplf-elects-spencer-zwick-board | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.0 | 1.6% → 0.0% | 4.3 → 4.0 |
+| /visit/itineraries/weekend-drives/bismarck | 2026-11-03 | Added 1 internal link from Links to add | 0.5 → 1.0 | 1.0% → 3.4% | 5.1 → 4.0 |
+| /tr/presidency/second-term | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.3 | 1.8% → 1.6% | 6.0 → 4.5 |
+| /tr/books-and-writings | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.2 | 0.8% → 0.7% | 8.7 → 9.2 |
+| /tr/badlands/frontier-life | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.3 | 0.8% → 1.2% | 6.5 → 6.2 |
+| /about/trustees/beth-laski | 2026-11-03 | Added 1 internal link from Links to add | 0.8 → 0.5 | 8.2% → 7.0% | 9.8 → 11.5 |
+| /about/press/press-releases/theodore-roosevelt-presidential-library-launches-good-citizen-podcast | 2026-11-03 | Added 1 internal link from Links to add | 0.0 → 0.0 | 0.0% → 0.0% | 5.9 → 3.5 |
 | /about/presidential-library-system | 2026-11-03 | Added 1 internal link from Links to add | 0.6 → 0.0 | 2.3% → 0.0% | 6.2 → 6.5 |
 | /about/press/press-releases/trplf-announces-100-million-commitments-unlocks-50-million-state | 2026-11-03 | Added 1 internal link from Links to add | 0.2 → 0.0 | 2.8% → 0.0% | 4.9 → 3.8 |
-| /tr/new-york-politics | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.9% → 0.0% | 7.0 → 7.4 |
-| /tr/tr-importance | 2026-11-03 | Title 'What Was Theodore Roosevelt Known For?'; typo fix | 12.9 → 10.8 | 1.0% → 0.8% | 4.9 → 5.0 |
-| /visit | 2026-10-27 | Title: Plan Your Visit: Tickets, Hours and Directions; Visit length: about three and a hal | 57.3 → 30.2 | 2.5% → 1.9% | 2.7 → 2.9 |
-| /tr/presidency/panama-canal | 2026-10-27 | Title and description: Theodore Roosevelt and the Panama Canal, 1903–1914 | 8.2 → 15.8 | 0.4% → 0.6% | 5.2 → 4.8 |
-| /tr/presidency/railroad-regulation | 2026-10-27 | Title names the Hepburn Act and Elkins Act | 3.9 → 5.6 | 0.4% → 0.7% | 4.0 → 3.4 |
-| /tr/presidency/coal-strike | 2026-10-27 | Title uses 'Anthracite Coal Strike of 1902' | 7.9 → 6.8 | 0.9% → 0.9% | 4.2 → 2.9 |
-| /visit/groups | 2026-10-27 | Visit length changed from about three hours to about three and a half hours | 0.1 → 0.1 | 0.6% → 2.4% | 6.5 → 5.7 |
-| /visit/faq/tickets | 2026-10-27 | 'Buy tickets' link fixed (was /visit/tickets, a 404); 301 /visit/tickets -> /tickets | 2.0 → 1.2 | 4.3% → 3.3% | 6.3 → 4.8 |
-| /visit/faq | 2026-10-27 | Tickets link fixed (was /visit/tickets, a 404) | 2.1 → 0.5 | 0.8% → 1.5% | 4.7 → 6.7 |
+| /tr/new-york-politics | 2026-11-03 | Added 1 internal link from Links to add | 0.1 → 0.0 | 0.9% → 0.0% | 7.0 → 7.2 |
+| /tr/tr-importance | 2026-11-03 | Title 'What Was Theodore Roosevelt Known For?'; typo fix | 12.9 → 11.3 | 1.0% → 0.8% | 4.9 → 4.9 |
+| /visit | 2026-10-27 | Title: Plan Your Visit: Tickets, Hours and Directions; Visit length: about three and a hal | 57.3 → 29.5 | 2.5% → 1.8% | 2.7 → 2.9 |
+| /tr/presidency/panama-canal | 2026-10-27 | Title and description: Theodore Roosevelt and the Panama Canal, 1903–1914 | 8.2 → 16.9 | 0.4% → 0.6% | 5.2 → 4.7 |
+| /tr/presidency/railroad-regulation | 2026-10-27 | Title names the Hepburn Act and Elkins Act | 3.9 → 5.8 | 0.4% → 0.7% | 4.0 → 3.5 |
+| /tr/presidency/coal-strike | 2026-10-27 | Title uses 'Anthracite Coal Strike of 1902' | 7.9 → 7.5 | 0.9% → 0.9% | 4.2 → 2.9 |
+| /visit/groups | 2026-10-27 | Visit length changed from about three hours to about three and a half hours | 0.1 → 0.1 | 0.6% → 2.0% | 6.5 → 5.7 |
+| /visit/faq/tickets | 2026-10-27 | 'Buy tickets' link fixed (was /visit/tickets, a 404); 301 /visit/tickets -> /tickets | 2.0 → 1.2 | 4.3% → 3.6% | 6.3 → 4.7 |
+| /visit/faq | 2026-10-27 | Tickets link fixed (was /visit/tickets, a 404) | 2.1 → 0.6 | 0.8% → 1.8% | 4.7 → 6.9 |
 | /tr/presidency/brownsville | 2026-10-20 | Title 'The Brownsville Affair of 1906: What Happened and Why'; Medal of Honor claim and da | 0.9 → 2.2 | 0.0% → 0.1% | 6.3 → 4.4 |
-| /tr/presidency/roosevelt-corollary | 2026-10-20 | Title 'Roosevelt Corollary to the Monroe Doctrine, Explained'; stray second H1 section rem | 6.6 → 15.2 | 0.2% → 0.3% | 5.4 → 4.2 |
-| /visit/hours | 2026-10-20 | Title 'Hours in Medora: Seasonal Schedule and Last Entry'; visit-length bullet | 27.0 → 13.3 | 1.2% → 1.1% | 2.7 → 2.2 |
-| /tr/myths/teddy-name | 2026-10-20 | Archived; 301 to /tr/teddy-nickname | 0.2 → 0.3 | 1.2% → 0.5% | 6.2 → 5.3 |
-| / | 2026-10-20 | Description mentions 'Teddy' | 353.1 → 252.1 | 3.8% → 9.4% | 8.0 → 6.6 |
-| /visit/itineraries/one-day | 2026-10-20 | Visit length and restaurant name | 3.5 → 2.0 | 4.1% → 3.8% | 3.9 → 3.9 |
-| /visit/itineraries/4-days-north-dakota | 2026-10-20 | Visit length and restaurant name | 0.7 → 0.7 | 1.4% → 1.9% | 7.6 → 7.3 |
-| /visit/itineraries/seattle-badlands | 2026-10-20 | Visit length and restaurant name | 0.1 → 0.1 | 1.2% → 0.9% | 6.7 → 8.0 |
-| /visit/i-94 | 2026-10-20 | New page: Best Stops on I-94 in North Dakota | 0.0 → 0.0 | – → 0.0% | – → 5.9 |
+| /tr/presidency/roosevelt-corollary | 2026-10-20 | Title 'Roosevelt Corollary to the Monroe Doctrine, Explained'; stray second H1 section rem | 6.6 → 15.2 | 0.2% → 0.3% | 5.4 → 4.1 |
+| /visit/hours | 2026-10-20 | Title 'Hours in Medora: Seasonal Schedule and Last Entry'; visit-length bullet | 27.0 → 13.0 | 1.2% → 1.1% | 2.7 → 2.2 |
+| /tr/myths/teddy-name | 2026-10-20 | Archived; 301 to /tr/teddy-nickname | 0.2 → 0.2 | 1.2% → 0.5% | 6.2 → 5.3 |
+| / | 2026-10-20 | Description mentions 'Teddy' | 353.1 → 247.9 | 3.8% → 9.3% | 8.0 → 6.7 |
+| /visit/itineraries/one-day | 2026-10-20 | Visit length and restaurant name | 3.5 → 1.9 | 4.1% → 3.6% | 3.9 → 3.9 |
+| /visit/itineraries/4-days-north-dakota | 2026-10-20 | Visit length and restaurant name | 0.7 → 0.7 | 1.4% → 1.8% | 7.6 → 7.3 |
+| /visit/itineraries/seattle-badlands | 2026-10-20 | Visit length and restaurant name | 0.1 → 0.1 | 1.2% → 0.9% | 6.7 → 8.2 |
+| /visit/i-94 | 2026-10-20 | New page: Best Stops on I-94 in North Dakota | 0.0 → 0.0 | – → 0.0% | – → 6.0 |
 | /tr/badlands/where-to-see | 2026-10-20 | New page: Where to See Theodore Roosevelt's North Dakota | 0.0 → 0.0 | – → – | – → – |
 
 ## Drafted recommendations (Gemini (gemini-3.8-flash), 2026-11-09T13:00:56+00:00)
@@ -1203,94 +1202,97 @@ Most fixes are one change to a Drupal template per content type (ask FiveJars); 
 | TR history: speeches | Article | 6 | 6 | 0 | Add Article JSON-LD with an 'about' CreativeWork (the speech, author: Theodore Roosevelt). |
 
 ## Ticket checkout (GA4, rates only)
-Checkout completion – (prior –); store visitors who buy 29% (prior 43%); ticket page to store 56%. Steps the store doesn't report: view_item, add_to_cart, begin_checkout, add_payment_info.
+Checkout completion – (prior –); store visitors who buy 28% (prior 42%); ticket page to store 54%. Steps the store doesn't report: view_item, add_to_cart, begin_checkout, add_payment_info.
 
-Store frustration signals (last 3 days, Clarity): dead clicks 14.0% of sessions, rage clicks 0.2%, quick backs 29.6%, scroll depth 78.5%.
+Store frustration signals (last 3 days, Clarity): dead clicks 15.2% of sessions, rage clicks 0.6%, quick backs 32.6%, scroll depth 78.5%.
 
 | Store page | Dead % | Rage % | Quick back % | Scroll % |
 |---|---|---|---|---|
 | orders/tickets | 25 | 0 | 0 | 89 |
 | membership/join | 0 | 0 | 0 | 60.5 |
-| checkout/confirm | 6.1 | 0 | 9.8 | 99.2 |
-| checkout/process | 100 | 0 | 0 | 87.5 |
+| checkout/process | 50 | 0 | 0 | 100 |
 | private-events/spaces | 100 | 0 | 0 | 99 |
+| orders/calendar | 0 | 0 | 0 | 73.5 |
+| checkout/confirm | 7.6 | 0 | 8.3 | 99.1 |
 | events/detail | 0 | 0 | 0 | 100 |
-| calendar/special-event/elkhorn-evenings | 0 | 0 | 0 | 67 |
+| calendar/special-event/elkhorn-evenings | 0 | 0 | 0 | 96 |
 | orders/forms | 0 | 0 | 0 | 100 |
-| auth/members | 50 | 0 | 0 | 100 |
-| membership/detail | 0 | 0 | 16.7 | 95.1 |
+| membership/detail | 0 | 0 | 1.7 | 94.5 |
 | midwinter-table | 0 | 0 | 0 | 100 |
-| tickets | 0 | 0 | 0 | 9 |
-| orders/calendar | 0 | 0 | 16.6 | 69.8 |
-| about/careers | 0 | 0 | 0 | 73.7 |
+| visit/faq/rules-safety | 0 | 0 | 0 | 96 |
+| tr/badlands/elkhorn-ranch | 0 | 0 | 0 | 5 |
+| about/careers | 0 | 0 | 0 | 60.5 |
+| auth/members | 50 | 0 | 0 | 100 |
 | tr | 0 | 0 | 0 | 9 |
 | membership/profile | 0 | 0 | 50 | 99.5 |
 | tr/legacy/teddy-bear | 100 | 0 | 0 | 14 |
+| tr/presidency/square-deal | 0 | 0 | 0 | 25 |
 | tr/presidency/trust-busting | 20 | 0 | 0 | 58.9 |
-| visit/hours | 0 | 0 | 100 | 38 |
+| search | 0 | 0 | 0 | 100 |
 | visit/wildlife | 0 | 0 | 0 | 100 |
-| visit/exhibits | 0 | 0 | 0 | 91 |
-| calendar/specialty-tour | 0 | 0 | 0 | 100 |
-| membership/renew | 0 | 0 | 0 | 100 |
+| visit/exhibits | 0 | 0 | 50 | 56.5 |
 | tr/tr-shot | 0 | 0 | 0 | 52 |
+| membership/renew | 0 | 0 | 0 | 100 |
 | staff-members/jeremy-beam | 0 | 0 | 0 | 92 |
 | visit/planner | 0 | 0 | 0 | 100 |
 | / | 0 | 0 | 0 | 100 |
-| visit/outdoors | 0 | 0 | 0 | 73 |
-| visit | 0 | 0 | 33.3 | 37.6 |
-| tr/speeches/man-in-the-arena | 100 | 0 | 0 | 90.5 |
-| visit/faq | 0 | 0 | 0 | 100 |
-| calendar/special-event | 0 | 0 | 0 | 78.2 |
+| tr/for-educators/middle-school | 0 | 0 | 0 | 96 |
+| visit | 0 | 0 | 0 | 38.3 |
+| tr/speeches/man-in-the-arena | 33.3 | 0 | 0 | 70 |
+| visit/faq | 0 | 0 | 0 | 63 |
+| tr/rise-to-power/rough-riders | 0 | 0 | 0 | 52 |
+| visit/scenic-drives | 0 | 0 | 0 | 99 |
+| calendar/special-event | 0 | 0 | 0 | 83.4 |
 | visit/activities | 100 | 0 | 0 | 35 |
-| search | 0 | 0 | 0 | 80 |
-| visit/one-medora | 0 | 0 | 0 | 98 |
+| tickets | 0 | 0 | 0 | 7 |
 | tr/early-life | 50 | 0 | 0 | 50.2 |
-| join-us | 0 | 0 | 0 | 62 |
 | support | 0 | 0 | 0 | 32 |
-| visit/hiking | 0 | 0 | 100 | 16 |
 | visit/faq/tickets | 0 | 0 | 0 | 83.5 |
 | tr/family/children | 0 | 0 | 0 | 81 |
 | tr/myths | 0 | 0 | 0 | 80 |
-| rsvp/midwinter | 0 | 0 | 0 | 100 |
-| calendar | 0 | 0 | 0 | 34.5 |
 | tr/presidency | 0 | 0 | 0 | 23 |
-| visit/stargazing | 0 | 0 | 0 | 23 |
-| visit/camping | 0 | 0 | 0 | 43 |
+| calendar | 0 | 0 | 33.3 | 50.7 |
 | staff-members/marcie-woehl | 0 | 0 | 0 | 95 |
 | pay-balance/92V1G6OArFSfCjVtLeWEoDvBog3FRE9sL32OWk-cM7E9lS_goYPEJ66OsI7FilF1 | 100 | 0 | 0 | 100 |
+| about/foundation | 0 | 0 | 100 | 37 |
 | tr/myths/misquotes | 0 | 0 | 0 | 93 |
-| membership | 0 | 0 | 0 | 53 |
-| visit/lodging | 0 | 0 | 0 | 51 |
+| legal/terms | 0 | 0 | 0 | 100 |
+| tr/presidency/executive-actions/story | 0 | 0 | 0 | 22 |
+| membership | 0 | 0 | 0 | 76.5 |
+| podcast/good-citizen/carly-fiorina | 0 | 0 | 0 | 6 |
 | contact | 0 | 0 | 0 | 96 |
 | tr/presidency/conservation/reclamation | 0 | 0 | 0 | 38 |
 | visit/directions/ev-charging | 0 | 0 | 0 | 26 |
 | about/trustees | 0 | 0 | 0 | 96 |
-| tr/quotes | 0 | 0 | 100 | 99 |
-| tr/badlands/first-trip | 0 | 0 | 100 | 90.5 |
+| tr/rise-to-power | 0 | 0 | 0 | 50 |
+| tr/quotes | 0 | 0 | 50 | 81 |
+| tr/quotes/citizenship | 0 | 0 | 100 | 22 |
 | staff-members/addison-olson | 100 | 0 | 0 | 100 |
-| tr/family/fdr-connection | 0 | 0 | 0 | 30.5 |
-| calendar/special-event/america-beautiful-film-screening | 0 | 0 | 0 | 53 |
-| tr/presidency/coal-strike | 0 | 0 | 0 | 10 |
+| tr/family/fdr-connection | 0 | 0 | 0 | 4 |
+| calendar/special-event/america-beautiful-film-screening | 0 | 0 | 0 | 12 |
 | tr/speeches/first-annual-message | 0 | 0 | 0 | 85 |
-| about/trustees/theodore-roosevelt-v | 100 | 0 | 0 | 100 |
 | tr/quotes/leadership | 0 | 0 | 0 | 95 |
-| about/press | 0 | 0 | 0 | 76.2 |
+| about/trustees/theodore-roosevelt-v | 100 | 0 | 0 | 100 |
+| tr/presidency/coal-strike | 0 | 0 | 0 | 10 |
+| about/press | 0 | 0 | 0 | 80.3 |
 | tr/speeches | 0 | 0 | 0 | 63.5 |
 | user/login | 0 | 0 | 0 | 100 |
-| video/view/W9sq8PuGQVo | 0 | 0 | 0 | 59 |
-| about/mission | 0 | 0 | 0 | 100 |
+| video/view/W9sq8PuGQVo | 0 | 0 | 0 | 61 |
+| tr/presidency/food-and-drug | 0 | 0 | 0 | 6 |
 | tr/tr-importance | 0 | 0 | 0 | 60.5 |
+| tr/presidency/panama-canal | 0 | 0 | 0 | 25 |
 | video | 0 | 0 | 0 | 95 |
-| tr/people/alice-longworth/in-her-words | 0 | 0 | 0 | 79 |
+| pay-balance/wz7pBMk7BjmipyeTK02Dg6zliYK_wgEit5rTI6h1q3cIZmlrUoUAP7MWUIix3f5Z | 0 | 0 | 0 | 100 |
+| video/playlist/PLWdA8F0rSmNg | 0 | 0 | 0 | 100 |
 | legal/privacy | 0 | 0 | 0 | 10 |
 | project/sustainability | 0 | 0 | 0 | 27 |
 | visit/medora | 0 | 0 | 0 | 12 |
+| visit/maps | 0 | 0 | 0 | 45 |
 | tr/people/corinne | 0 | 0 | 0 | 13.7 |
-| tr/quotes/conservation | 0 | 0 | 0 | 76 |
 | project/design | 0 | 0 | 0 | 53 |
-| private-events/catering | 0 | 0 | 0 | 100 |
-| podcast/good-citizen/rahm-emanuel-fight-center-and-winning-lottery-life | 0 | 0 | 0 | 3 |
-| research | 0 | 0 | 0 | 39 |
+| private-events | 0 | 0 | 0 | 95 |
+| private-events/catering | 33.3 | 0 | 0 | 90 |
+| research | 0 | 0 | 0 | 47 |
 | tr/early-life/family-roots | 0 | 0 | 100 | 56 |
 
 ## Tracking changes made automatically
