@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T13:23:31+00:00",
+ "updated": "2026-11-16T13:15:32+00:00",
  "store": "access.trlibrary.com",
  "period": "last 28 days",
  "note": "Rates only; counts are never published. Users who triggered each step on the ticket store, from GA4.",
@@ -22,13 +22,13 @@
    "add_payment_info"
   ],
   "of_store_visitors": {
-   "purchase": 0.246
+   "purchase": 0.243
   },
   "step_to_step": {
-   "store_visit->purchase": 0.246
+   "store_visit->purchase": 0.243
   },
   "checkout_completion": null,
-  "store_conversion": 0.246
+  "store_conversion": 0.243
  },
  "previous": {
   "tracked_steps": [
@@ -41,13 +41,13 @@
    "add_payment_info"
   ],
   "of_store_visitors": {
-   "purchase": 0.426
+   "purchase": 0.423
   },
   "step_to_step": {
-   "store_visit->purchase": 0.426
+   "store_visit->purchase": 0.423
   },
   "checkout_completion": null,
-  "store_conversion": 0.426
+  "store_conversion": 0.423
  },
  "by_device": {
   "mobile": {
@@ -61,13 +61,13 @@
     "add_payment_info"
    ],
    "of_store_visitors": {
-    "purchase": 0.238
+    "purchase": 0.23
    },
    "step_to_step": {
-    "store_visit->purchase": 0.238
+    "store_visit->purchase": 0.23
    },
    "checkout_completion": null,
-   "store_conversion": 0.238
+   "store_conversion": 0.23
   },
   "desktop": {
    "tracked_steps": [
@@ -80,13 +80,13 @@
     "add_payment_info"
    ],
    "of_store_visitors": {
-    "purchase": 0.268
+    "purchase": 0.282
    },
    "step_to_step": {
-    "store_visit->purchase": 0.268
+    "store_visit->purchase": 0.282
    },
    "checkout_completion": null,
-   "store_conversion": 0.268
+   "store_conversion": 0.282
   },
   "tablet": {
    "tracked_steps": [
@@ -99,22 +99,17 @@
     "add_payment_info"
    ],
    "of_store_visitors": {
-    "purchase": 0.207
+    "purchase": 0.181
    },
    "step_to_step": {
-    "store_visit->purchase": 0.207
+    "store_visit->purchase": 0.181
    },
    "checkout_completion": null,
-   "store_conversion": 0.207
+   "store_conversion": 0.181
   }
  },
- "ticket_page_to_store": 0.523,
+ "ticket_page_to_store": 0.493,
  "weekly": [
-  {
-   "week": "202634",
-   "checkout_completion": null,
-   "store_conversion": 0.304
-  },
   {
    "week": "202635",
    "checkout_completion": null,
@@ -179,18 +174,18 @@
  "store_friction": {
   "period": "last 3 days",
   "overall": {
-   "dead_clicks": 13.2,
+   "dead_clicks": 11.9,
    "excessive_scroll": 0.0,
    "rage_clicks": 0.1,
-   "quick_backs": 28.0,
-   "scroll_depth": 78.5
+   "quick_backs": 26.5,
+   "scroll_depth": 78.6
   },
   "pages": {
-   "tr/strenuous-life/athletics": {
-    "dead_clicks": 100.0,
+   "checkout/process": {
+    "dead_clicks": 50.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 72.7,
+    "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
    "membership/upgrade": {
@@ -200,18 +195,18 @@
     "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
-   "tr/presidency/nobel-peace-prize": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 10.0,
-    "excessive_scroll": 0.0
-   },
    "membership/join": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 50.0,
-    "scroll_depth": 82.8,
+    "scroll_depth": 55.8,
+    "excessive_scroll": 0.0
+   },
+   "orders/tickets": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 67.2,
     "excessive_scroll": 0.0
    },
    "private-events/inquiry": {
@@ -221,11 +216,11 @@
     "scroll_depth": 42.0,
     "excessive_scroll": 0.0
    },
-   "orders/tickets": {
-    "dead_clicks": 0.0,
+   "checkout/confirm": {
+    "dead_clicks": 11.7,
     "rage_clicks": 0.0,
-    "quick_backs": 8.3,
-    "scroll_depth": 83.9,
+    "quick_backs": 4.3,
+    "scroll_depth": 98.9,
     "excessive_scroll": 0.0
    },
    "event/layout": {
@@ -249,39 +244,32 @@
     "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
-   "checkout/process": {
-    "dead_clicks": 50.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
-    "excessive_scroll": 0.0
-   },
-   "checkout/confirm": {
-    "dead_clicks": 5.6,
-    "rage_clicks": 0.0,
-    "quick_backs": 3.2,
-    "scroll_depth": 98.7,
-    "excessive_scroll": 0.0
-   },
    "membership/detail": {
     "dead_clicks": 3.6,
     "rage_clicks": 0.0,
-    "quick_backs": 31.4,
-    "scroll_depth": 99.2,
+    "quick_backs": 31.0,
+    "scroll_depth": 98.7,
     "excessive_scroll": 0.0
    },
    "visit/tickets/plan-ahead": {
-    "dead_clicks": 50.0,
+    "dead_clicks": 66.7,
+    "rage_clicks": 0.0,
+    "quick_backs": 33.3,
+    "scroll_depth": 73.0,
+    "excessive_scroll": 0.0
+   },
+   "calendar/special-event/america-beautiful-film-screening": {
+    "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 63.0,
+    "scroll_depth": 7.0,
     "excessive_scroll": 0.0
    },
    "calendar/specialty-tour": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 43.0,
+    "quick_backs": 100.0,
+    "scroll_depth": 85.3,
     "excessive_scroll": 0.0
    },
    "auth/members": {
@@ -309,7 +297,14 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 33.0,
+    "scroll_depth": 43.0,
+    "excessive_scroll": 0.0
+   },
+   "orders/calendar": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 100.0,
+    "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
    "midwinter-table": {
@@ -336,29 +331,15 @@
    "about/careers": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 66.0,
-    "excessive_scroll": 0.0
-   },
-   "calendar/special-event/america-beautiful-film-screening": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 15.0,
-    "excessive_scroll": 0.0
-   },
-   "orders/calendar": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
     "quick_backs": 33.3,
-    "scroll_depth": 50.5,
+    "scroll_depth": 75.0,
     "excessive_scroll": 0.0
    },
    "tr/presidency/trust-busting": {
-    "dead_clicks": 33.3,
+    "dead_clicks": 50.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 30.7,
+    "scroll_depth": 31.0,
     "excessive_scroll": 0.0
    },
    "search": {
@@ -371,8 +352,8 @@
    "project": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 100.0,
-    "scroll_depth": 98.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 46.5,
     "excessive_scroll": 0.0
    },
    "quiz": {
@@ -382,39 +363,11 @@
     "scroll_depth": 92.0,
     "excessive_scroll": 0.0
    },
-   "visit/hours": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 100.0,
-    "scroll_depth": 65.0,
-    "excessive_scroll": 0.0
-   },
    "calendar/special-event/butchery-workshop": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 33.3,
     "scroll_depth": 86.2,
-    "excessive_scroll": 0.0
-   },
-   "tr/post-presidency/quentin": {
-    "dead_clicks": 100.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 81.5,
-    "excessive_scroll": 0.0
-   },
-   "visit/exhibits": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 50.0,
-    "scroll_depth": 42.2,
-    "excessive_scroll": 0.0
-   },
-   "visit/maps": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 95.5,
     "excessive_scroll": 0.0
    },
    "tr/post-presidency/new-nationalism": {
@@ -429,6 +382,13 @@
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 74.3,
+    "excessive_scroll": 0.0
+   },
+   "contact": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
    "membership/profile": {
@@ -449,28 +409,21 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 100.0,
-    "excessive_scroll": 0.0
-   },
-   "visit/outdoors": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 50.0,
+    "scroll_depth": 11.0,
     "excessive_scroll": 0.0
    },
    "visit": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 16.7,
-    "scroll_depth": 37.3,
+    "quick_backs": 42.9,
+    "scroll_depth": 31.9,
     "excessive_scroll": 0.0
    },
    "tr/speeches/man-in-the-arena": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 39.1,
+    "scroll_depth": 39.2,
     "excessive_scroll": 0.0
    },
    "calendar/special-event/visit-santa-claus": {
@@ -478,20 +431,6 @@
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 33.0,
-    "excessive_scroll": 0.0
-   },
-   "calendar/special-event/elkhorn-evenings": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 29.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/presidency/square-deal": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 76.0,
     "excessive_scroll": 0.0
    },
    "calendar/special-event/holiday-tree-lighting": {
@@ -508,11 +447,11 @@
     "scroll_depth": 22.3,
     "excessive_scroll": 0.0
    },
-   "tr/early-life": {
+   "visit/medora/history": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 98.0,
+    "scroll_depth": 80.0,
     "excessive_scroll": 0.0
    },
    "about/trustees/douglas-brinkley": {
@@ -522,18 +461,11 @@
     "scroll_depth": 57.0,
     "excessive_scroll": 0.0
    },
-   "staff-members/alice-wynd": {
-    "dead_clicks": 0.0,
+   "video/view/-mcN1M3ZEps": {
+    "dead_clicks": 100.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 92.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/myths": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
+    "scroll_depth": 94.0,
     "excessive_scroll": 0.0
    },
    "tr/presidency": {
@@ -547,14 +479,21 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 60.3,
+    "scroll_depth": 58.8,
     "excessive_scroll": 0.0
    },
-   "pay-balance/92V1G6OArFSfCjVtLeWEoDvBog3FRE9sL32OWk-cM7E9lS_goYPEJ66OsI7FilF1": {
+   "tr/presidency/second-term": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 100.0,
+    "scroll_depth": 19.0,
+    "excessive_scroll": 0.0
+   },
+   "calendar/special-event/elkhorn-evenings": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 29.0,
     "excessive_scroll": 0.0
    },
    "membership": {
@@ -582,31 +521,17 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 20.3,
+    "scroll_depth": 5.0,
     "excessive_scroll": 0.0
    },
-   "tr/family/family-tree": {
+   "tr/quotes/misquotes": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 41.0,
+    "scroll_depth": 70.0,
     "excessive_scroll": 0.0
    },
    "video/view/dygTIx64zaE": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/rise-to-power/sagamore-hill": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 12.0,
-    "excessive_scroll": 0.0
-   },
-   "contact": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
@@ -627,18 +552,11 @@
     "scroll_depth": 1.0,
     "excessive_scroll": 0.0
    },
-   "tr/post-presidency/river-of-doubt": {
+   "video/view/gtDTwBMTn2Q": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 17.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/presidency/executive-actions/action": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 46.0,
+    "scroll_depth": 56.0,
     "excessive_scroll": 0.0
    },
    "tr/books-and-writings/reader": {
@@ -648,18 +566,11 @@
     "scroll_depth": 66.2,
     "excessive_scroll": 0.0
    },
-   "tr/presidency/coal-strike": {
-    "dead_clicks": 100.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/teddy-nickname": {
+   "visit/tours": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 13.0,
+    "quick_backs": 100.0,
+    "scroll_depth": 98.5,
     "excessive_scroll": 0.0
    },
    "about/press": {
@@ -683,18 +594,18 @@
     "scroll_depth": 92.0,
     "excessive_scroll": 0.0
    },
-   "tr/homes-and-places/sagamore-hill": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
-    "excessive_scroll": 0.0
-   },
    "tr/badlands/maltese-cross": {
     "dead_clicks": 100.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 98.0,
+    "excessive_scroll": 0.0
+   },
+   "visit/exhibits": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 96.0,
     "excessive_scroll": 0.0
    },
    "staff-members/robbie-lauf": {
@@ -709,6 +620,13 @@
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 83.0,
+    "excessive_scroll": 0.0
+   },
+   "visit/faq/food-drink": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 95.0,
     "excessive_scroll": 0.0
    },
    "visit/national-park": {
@@ -746,6 +664,20 @@
     "scroll_depth": 14.0,
     "excessive_scroll": 0.0
    },
+   "visit/maps": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 91.0,
+    "excessive_scroll": 0.0
+   },
+   "signature-experiences": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 47.0,
+    "excessive_scroll": 0.0
+   },
    "visit/groups/field-trips": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
@@ -757,21 +689,14 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 50.0,
+    "scroll_depth": 9.0,
     "excessive_scroll": 0.0
    },
-   "signature-experiences": {
+   "visit/eat": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 47.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/rise-to-power/rough-riders/who-were-they": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 88.0,
+    "scroll_depth": 13.0,
     "excessive_scroll": 0.0
    },
    "tr/presidency/ten-facts": {
@@ -791,8 +716,8 @@
    "calendar/special-event": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 14.3,
-    "scroll_depth": 89.7,
+    "quick_backs": 25.0,
+    "scroll_depth": 90.8,
     "excessive_scroll": 0.0
    },
    "private-events": {
@@ -809,11 +734,25 @@
     "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
-   "about/trustees/gretchen-stenehjem": {
+   "tr/presidency/roosevelt-corollary": {
+    "dead_clicks": 100.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 41.7,
+    "excessive_scroll": 0.0
+   },
+   "research": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 61.0,
+    "scroll_depth": 100.0,
+    "excessive_scroll": 0.0
+   },
+   "calendar/specialty-tour/theodore-roosevelt-and-american-empire-tour": {
+    "dead_clicks": 100.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 100.0,
+    "scroll_depth": 85.0,
     "excessive_scroll": 0.0
    },
    "tr/early-life/family-roots": {
@@ -821,13 +760,6 @@
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 12.0,
-    "excessive_scroll": 0.0
-   },
-   "staff-members/matt-briney": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 63.0,
     "excessive_scroll": 0.0
    },
    "tr/badlands": {

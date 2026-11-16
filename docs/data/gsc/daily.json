@@ -1,12 +1,5 @@
 [
  {
-  "date": "2025-07-20",
-  "clicks": 223,
-  "impressions": 9723,
-  "ctr": 0.0229,
-  "position": 12.8
- },
- {
   "date": "2025-07-21",
   "clicks": 261,
   "impressions": 8916,
@@ -3365,5 +3358,12 @@
   "impressions": 120613,
   "ctr": 0.0128,
   "position": 5.4
+ },
+ {
+  "date": "2026-11-13",
+  "clicks": 1425,
+  "impressions": 111938,
+  "ctr": 0.0127,
+  "position": 5.6
  }
 ]

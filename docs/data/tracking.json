@@ -119,6 +119,46 @@
    "added": "2026-11-09",
    "reason": "position 11.2, 4775 impressions/28d; Theodore Roosevelt's youngest son, killed in action during World War I.",
    "score": 781
+  },
+  {
+   "keyword": "alice hathaway lee roosevelt",
+   "group": "Auto: History",
+   "status": "active",
+   "added": "2026-11-16",
+   "reason": "position 5.9, 6064 impressions/28d; Core topic for TR's early life, family history, and his formative move to the Dakota Badlands.",
+   "score": 654
+  },
+  {
+   "keyword": "american imperialism",
+   "group": "Auto: Learning",
+   "status": "active",
+   "added": "2026-11-16",
+   "reason": "position 7.0, 3552 impressions/28d; Major curriculum topic tied directly to Theodore Roosevelt's presidency and foreign policy.",
+   "score": 367
+  },
+  {
+   "keyword": "archibald roosevelt",
+   "group": "Auto: History",
+   "status": "active",
+   "added": "2026-11-16",
+   "reason": "position 7.8, 3188 impressions/28d; Direct member of TR's immediate family; supports the Library's role as the authority on the Roosevelt family.",
+   "score": 350
+  },
+  {
+   "keyword": "booker t washington",
+   "group": "Auto: History",
+   "status": "active",
+   "added": "2026-11-16",
+   "reason": "position 12.6, 2226 impressions/28d; Key historical figure tied directly to TR's presidency and landmark 1901 White House dinner.",
+   "score": 367
+  },
+  {
+   "keyword": "bully pulpit meaning",
+   "group": "Auto: Learning",
+   "status": "active",
+   "added": "2026-11-16",
+   "reason": "position 4.4, 1506 impressions/28d; Famous concept coined by Theodore Roosevelt; valuable for civic education and presidential history.",
+   "score": 164
   }
  ],
  "prompts": [
@@ -181,9 +221,78 @@
    "added": "2026-11-09",
    "reason": "from the Google search \"what presidents are on mount rushmore\"; Connects Roosevelt to a major regional monument and invites context on his national significance.",
    "auto": true
+  },
+  {
+   "id": "auto-what-is-the-meaning-and-origin-of-the-term-bully-p",
+   "group": "History",
+   "text": "What is the meaning and origin of the term bully pulpit in American politics?",
+   "source_query": "what is the bully pulpit",
+   "status": "active",
+   "added": "2026-11-16",
+   "reason": "from the Google search \"what is the bully pulpit\"; Core civic education concept coined by Roosevelt regarding presidential communication.",
+   "auto": true
+  },
+  {
+   "id": "auto-what-was-the-roosevelt-corollary-to-the-monroe-doc",
+   "group": "History",
+   "text": "What was the Roosevelt Corollary to the Monroe Doctrine and why does it matter?",
+   "source_query": "what is the roosevelt corollary",
+   "status": "active",
+   "added": "2026-11-16",
+   "reason": "from the Google search \"what is the roosevelt corollary\"; Key presidential foreign policy doctrine essential for student and teacher research.",
+   "auto": true
   }
  ],
  "log": [
+  {
+   "date": "2026-11-16",
+   "action": "added",
+   "kind": "question",
+   "item": "What was the Roosevelt Corollary to the Monroe Doctrine and why does it matter?",
+   "reason": "from the Google search \"what is the roosevelt corollary\"; Key presidential foreign policy doctrine essential for student and teacher research."
+  },
+  {
+   "date": "2026-11-16",
+   "action": "added",
+   "kind": "question",
+   "item": "What is the meaning and origin of the term bully pulpit in American politics?",
+   "reason": "from the Google search \"what is the bully pulpit\"; Core civic education concept coined by Roosevelt regarding presidential communication."
+  },
+  {
+   "date": "2026-11-16",
+   "action": "added",
+   "kind": "keyword",
+   "item": "bully pulpit meaning",
+   "reason": "position 4.4, 1506 impressions/28d; Famous concept coined by Theodore Roosevelt; valuable for civic education and presidential history."
+  },
+  {
+   "date": "2026-11-16",
+   "action": "added",
+   "kind": "keyword",
+   "item": "booker t washington",
+   "reason": "position 12.6, 2226 impressions/28d; Key historical figure tied directly to TR's presidency and landmark 1901 White House dinner."
+  },
+  {
+   "date": "2026-11-16",
+   "action": "added",
+   "kind": "keyword",
+   "item": "archibald roosevelt",
+   "reason": "position 7.8, 3188 impressions/28d; Direct member of TR's immediate family; supports the Library's role as the authority on the Roosevelt family."
+  },
+  {
+   "date": "2026-11-16",
+   "action": "added",
+   "kind": "keyword",
+   "item": "american imperialism",
+   "reason": "position 7.0, 3552 impressions/28d; Major curriculum topic tied directly to Theodore Roosevelt's presidency and foreign policy."
+  },
+  {
+   "date": "2026-11-16",
+   "action": "added",
+   "kind": "keyword",
+   "item": "alice hathaway lee roosevelt",
+   "reason": "position 5.9, 6064 impressions/28d; Core topic for TR's early life, family history, and his formative move to the Dakota Badlands."
+  },
   {
    "date": "2026-11-09",
    "action": "added",
@@ -332,5 +441,5 @@
    "reason": "position 8.6, 2000 impressions/28d; Key regional trip-planning search directly adjacent to the Library in Medora."
   }
  ],
- "updated": "2026-11-09T12:33:22+00:00"
+ "updated": "2026-11-16T12:44:38+00:00"
 }

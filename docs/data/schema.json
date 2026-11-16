@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-09T13:00:05+00:00",
+ "generated": "2026-11-16T13:15:28+00:00",
  "summary": {
-  "pages_read": 1043,
-  "pages_with_own_markup": 370,
-  "typed_pages": 888,
-  "typed_pages_done": 292,
+  "pages_read": 1044,
+  "pages_with_own_markup": 371,
+  "typed_pages": 889,
+  "typed_pages_done": 293,
   "coverage_pct": 33,
   "faq_pages": 20,
   "faq_questions": 144,
@@ -4482,17 +4482,17 @@
    ]
   },
   {
-   "incomplete": 14,
+   "incomplete": 13,
    "property_gaps": {
-    "worksFor/memberOf": 14
+    "worksFor/memberOf": 13
    },
    "key": "trustees",
    "label": "Trustee profiles",
    "schema_type": "Person / ProfilePage",
    "why": "Tells AI tools who sits on the Board.",
    "drupal": "Add ProfilePage + Person JSON-LD (role: Trustee) to the trustee template.",
-   "pages": 14,
-   "done": 14,
+   "pages": 13,
+   "done": 13,
    "missing": 0,
    "example": null,
    "items": [
@@ -4542,7 +4542,7 @@
     },
     {
      "path": "/about/trustees/douglas-brinkley",
-     "title": "Douglas Brinkley",
+     "title": "Douglas Brinkley, Library Trustee",
      "has": [
       "Person"
      ],
@@ -4554,17 +4554,6 @@
     {
      "path": "/about/trustees/dr-chevy-humphrey",
      "title": "Dr. Chevy Humphrey",
-     "has": [
-      "Person"
-     ],
-     "done": true,
-     "missing_props": [
-      "worksFor/memberOf"
-     ]
-    },
-    {
-     "path": "/about/trustees/edward-okeefe",
-     "title": "Edward O’Keefe",
      "has": [
       "Person"
      ],
@@ -4608,7 +4597,7 @@
     },
     {
      "path": "/about/trustees/kermit-roosevelt",
-     "title": "Kermit Roosevelt",
+     "title": "Kermit Roosevelt, Library Trustee",
      "has": [
       "Person"
      ],
@@ -5150,8 +5139,8 @@
    "schema_type": "Event",
    "why": "Lets Google and AI assistants answer 'what's happening at the Library this weekend' with the date, time and ticket link.",
    "drupal": "Add Event JSON-LD to the Event content type template, filled from the event's date, time, price and ticket fields. One template change covers every event.",
-   "pages": 26,
-   "done": 26,
+   "pages": 28,
+   "done": 28,
    "missing": 0,
    "example": null,
    "items": [
@@ -5320,6 +5309,16 @@
      "done": true
     },
     {
+     "path": "/calendar/special-event/holiday-open-house",
+     "title": "Holiday Open House",
+     "has": [
+      "Event",
+      "Offer",
+      "Place"
+     ],
+     "done": true
+    },
+    {
      "path": "/calendar/special-event/maah-daah-hey-bike-race",
      "title": "Maah Daah Hey Bike Race",
      "has": [
@@ -5406,6 +5405,17 @@
     {
      "path": "/calendar/specialty-tour/member-behind-arena-tour",
      "title": "Member \"Behind the Arena\" Tour",
+     "has": [
+      "Event",
+      "Offer",
+      "Place",
+      "Schedule"
+     ],
+     "done": true
+    },
+    {
+     "path": "/calendar/specialty-tour/theodore-roosevelt-and-american-empire-tour",
+     "title": "Theodore Roosevelt and American Empire Tour",
      "has": [
       "Event",
       "Offer",
@@ -7294,7 +7304,7 @@
     },
     {
      "path": "/tr/presidency/food-and-drug",
-     "title": "Pure Food and Drug Act: Protecting the American Table",
+     "title": "Pure Food and Drug Act and Meat Inspection Act of 1906",
      "has": [
       "Article",
       "CollegeOrUniversity",
@@ -7788,7 +7798,7 @@
     },
     {
      "path": "/tr/rise-to-power/spanish-american-war",
-     "title": "Theodore Roosevelt and the Spanish-American War: America's Rise to Power",
+     "title": "Theodore Roosevelt and the Spanish-American War",
      "has": [
       "Article",
       "CollegeOrUniversity",
@@ -7907,7 +7917,7 @@
     },
     {
      "path": "/tr/people/archibald",
-     "title": "Archibald Roosevelt: Wounded Twice in War",
+     "title": "Archibald Roosevelt: TR’s Son Wounded in Two World Wars",
      "has": [
       "Article",
       "CollegeOrUniversity",

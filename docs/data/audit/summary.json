@@ -1,16 +1,16 @@
 {
- "updated": "2026-11-09T12:32:33+00:00",
+ "updated": "2026-11-16T12:44:06+00:00",
  "site": "https://www.trlibrary.com",
- "sitemap_urls": 1174,
- "crawled": 1135,
+ "sitemap_urls": 1175,
+ "crawled": 1136,
  "score": 95,
- "ai_score": 60,
+ "ai_score": 61,
  "issues": [
   {
    "code": "title_duplicate",
    "severity": "medium",
    "label": "Same title as another page",
-   "pages": 74
+   "pages": 69
   },
   {
    "code": "unaliased_url",
@@ -19,22 +19,22 @@
    "pages": 35
   },
   {
+   "code": "h1_missing",
+   "severity": "medium",
+   "label": "No H1 heading",
+   "pages": 29
+  },
+  {
    "code": "og_missing",
    "severity": "medium",
    "label": "Missing Open Graph tags",
-   "pages": 33
+   "pages": 27
   },
   {
    "code": "meta_missing",
    "severity": "medium",
    "label": "No meta description",
-   "pages": 32
-  },
-  {
-   "code": "h1_missing",
-   "severity": "medium",
-   "label": "No H1 heading",
-   "pages": 29
+   "pages": 26
   },
   {
    "code": "redirect_in_sitemap",
@@ -46,7 +46,7 @@
    "code": "title_too_long",
    "severity": "low",
    "label": "Title over 60 characters, not counting the site-name suffix",
-   "pages": 265
+   "pages": 264
   },
   {
    "code": "thin_content",
@@ -58,19 +58,19 @@
    "code": "heading_skip",
    "severity": "low",
    "label": "Heading levels skip (e.g. H2 straight to H4)",
-   "pages": 150
+   "pages": 151
   },
   {
    "code": "title_too_short",
    "severity": "low",
    "label": "Title under 15 characters, not counting the site-name suffix",
-   "pages": 149
+   "pages": 145
   },
   {
    "code": "meta_duplicate",
    "severity": "low",
    "label": "Same meta description as another page",
-   "pages": 126
+   "pages": 131
   },
   {
    "code": "deep_page",
@@ -98,48 +98,48 @@
   }
  ],
  "status_codes": {
-  "200": 1135
+  "200": 1136
  },
  "slowest": [
   {
-   "url": "https://www.trlibrary.com/visit/itineraries/13-day-denver-wyoming",
-   "seconds": 5.89
+   "url": "https://www.trlibrary.com/video/view/-hAbH24Ia_w",
+   "seconds": 4.08
   },
   {
-   "url": "https://www.trlibrary.com/video/view/N40FrDWTYfk",
+   "url": "https://www.trlibrary.com/video/view/-TNqu1aIePM",
    "seconds": 3.3
   },
   {
-   "url": "https://www.trlibrary.com/tr/books-and-writings/reader",
-   "seconds": 3.28
+   "url": "https://www.trlibrary.com/video/view/BF6ZHFqp2Qg",
+   "seconds": 3.02
   },
   {
-   "url": "https://www.trlibrary.com/tr/presidency/conservation/national-forests",
-   "seconds": 2.74
+   "url": "https://www.trlibrary.com/video/view/Bwh7AGECvWk",
+   "seconds": 2.98
   },
   {
-   "url": "https://www.trlibrary.com/video/view/YJ_qzszUZUA",
-   "seconds": 2.72
+   "url": "https://www.trlibrary.com/video/view/15dkv17Wk38",
+   "seconds": 2.95
   },
   {
-   "url": "https://www.trlibrary.com/video/view/n4HLm_dLrkU",
-   "seconds": 2.65
+   "url": "https://www.trlibrary.com/video/view/BpWhnLXmbBM",
+   "seconds": 2.8
   },
   {
-   "url": "https://www.trlibrary.com/visit/directions/ev-charging",
-   "seconds": 2.65
+   "url": "https://www.trlibrary.com/video/view/0dZOcXcYJo0",
+   "seconds": 2.66
   },
   {
-   "url": "https://www.trlibrary.com/video/view/E23B_0-zEBc",
+   "url": "https://www.trlibrary.com/video/view/Tb8My3-LeEU",
+   "seconds": 2.66
+  },
+  {
+   "url": "https://www.trlibrary.com/video/view/duICpw_mkqk",
+   "seconds": 2.6
+  },
+  {
+   "url": "https://www.trlibrary.com/video/view/2ZatbH6VDbg",
    "seconds": 2.57
-  },
-  {
-   "url": "https://www.trlibrary.com/tr/badlands/day-in-the-life",
-   "seconds": 2.56
-  },
-  {
-   "url": "https://www.trlibrary.com/tr/people/alice-longworth/in-her-words",
-   "seconds": 2.56
   }
  ],
  "robots": {
@@ -160,28 +160,28 @@
  },
  "llms_txt": true,
  "structured_data_types": {
-  "GeoCoordinates": 1135,
-  "OpeningHoursSpecification": 1135,
-  "EntryPoint": 1135,
-  "SearchAction": 1135,
-  "ImageObject": 1135,
-  "PostalAddress": 1135,
-  "WebSite": 1135,
-  "BreadcrumbList": 1134,
-  "ListItem": 1134,
-  "Place": 313,
-  "Person": 306,
+  "ImageObject": 1136,
+  "GeoCoordinates": 1136,
+  "OpeningHoursSpecification": 1136,
+  "WebSite": 1136,
+  "PostalAddress": 1136,
+  "SearchAction": 1136,
+  "EntryPoint": 1136,
+  "BreadcrumbList": 1135,
+  "ListItem": 1135,
+  "Place": 315,
+  "Person": 305,
   "CollegeOrUniversity": 250,
   "Country": 250,
   "Occupation": 250,
   "Article": 245,
-  "Event": 65,
-  "Offer": 26,
+  "Event": 67,
+  "Offer": 28,
   "NewsArticle": 19,
-  "FAQPage": 19,
   "Answer": 19,
+  "FAQPage": 19,
   "Question": 19,
-  "Schedule": 8
+  "Schedule": 9
  },
  "sitewide_structured_data": [
   "BreadcrumbList",
@@ -194,6 +194,6 @@
   "SearchAction",
   "WebSite"
  ],
- "page_specific_structured_data": 405,
+ "page_specific_structured_data": 406,
  "title_suffix": " | Theodore Roosevelt Presidential Library"
 }
