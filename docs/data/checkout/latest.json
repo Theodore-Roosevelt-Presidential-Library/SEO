@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T13:15:32+00:00",
+ "updated": "2026-11-16T13:48:36+00:00",
  "store": "access.trlibrary.com",
  "period": "last 28 days",
  "note": "Rates only; counts are never published. Users who triggered each step on the ticket store, from GA4.",
@@ -177,7 +177,7 @@
    "dead_clicks": 11.9,
    "excessive_scroll": 0.0,
    "rage_clicks": 0.1,
-   "quick_backs": 26.5,
+   "quick_backs": 26.1,
    "scroll_depth": 78.6
   },
   "pages": {
@@ -217,17 +217,10 @@
     "excessive_scroll": 0.0
    },
    "checkout/confirm": {
-    "dead_clicks": 11.7,
+    "dead_clicks": 11.5,
     "rage_clicks": 0.0,
-    "quick_backs": 4.3,
+    "quick_backs": 4.2,
     "scroll_depth": 98.9,
-    "excessive_scroll": 0.0
-   },
-   "event/layout": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 59.0,
     "excessive_scroll": 0.0
    },
    "orders/forms": {
@@ -235,6 +228,13 @@
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 100.0,
+    "excessive_scroll": 0.0
+   },
+   "event/layout": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 59.0,
     "excessive_scroll": 0.0
    },
    "events/detail": {
@@ -293,18 +293,18 @@
     "scroll_depth": 27.0,
     "excessive_scroll": 0.0
    },
-   "tr/rise-to-power/spanish-american-war": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 43.0,
-    "excessive_scroll": 0.0
-   },
    "orders/calendar": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 100.0,
     "scroll_depth": 100.0,
+    "excessive_scroll": 0.0
+   },
+   "tr/rise-to-power/spanish-american-war": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 43.0,
     "excessive_scroll": 0.0
    },
    "midwinter-table": {
@@ -678,18 +678,18 @@
     "scroll_depth": 47.0,
     "excessive_scroll": 0.0
    },
-   "visit/groups/field-trips": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 38.0,
-    "excessive_scroll": 0.0
-   },
    "visit/directions": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 9.0,
+    "excessive_scroll": 0.0
+   },
+   "visit/groups/field-trips": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 38.0,
     "excessive_scroll": 0.0
    },
    "visit/eat": {

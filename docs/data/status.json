@@ -12,12 +12,12 @@
  "opportunities": {
   "state": "ok",
   "message": "10 striking-distance queries, 5 low-CTR pages; 146 recently changed pages held back",
-  "updated": "2026-11-16T12:58:33+00:00"
+  "updated": "2026-11-16T13:48:33+00:00"
  },
  "gsc": {
   "state": "ok",
   "message": "22543 queries, 2781 pages (2026-10-17 to 2026-11-13); 263 changed pages tracked",
-  "updated": "2026-11-16T12:42:07+00:00"
+  "updated": "2026-11-16T13:48:32+00:00"
  },
  "ai_visibility": {
   "state": "error",
@@ -32,12 +32,12 @@
  "digest": {
   "state": "ok",
   "message": "llms.txt, digest.md and digest.json rebuilt",
-  "updated": "2026-11-16T13:18:28+00:00"
+  "updated": "2026-11-16T13:48:41+00:00"
  },
  "checkout": {
   "state": "ok",
   "message": "Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info",
-  "updated": "2026-11-16T13:15:58+00:00"
+  "updated": "2026-11-16T13:48:41+00:00"
  },
  "curate": {
   "state": "ok",
@@ -63,6 +63,6 @@
  "indexnow": {
   "state": "skipped",
   "message": "No IndexNow key yet: see the work queue task 'Turn on IndexNow'.",
-  "updated": "2026-11-15T13:23:35+00:00"
+  "updated": "2026-11-16T13:48:41+00:00"
  }
 }

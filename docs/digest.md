@@ -1,5 +1,5 @@
 # trlibrary.com search & AI visibility digest
-Generated 2026-11-16T13:18:28+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
+Generated 2026-11-16T13:48:41+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
 
 ## How to use this
 This briefing is for doing the work, not only describing it. An assistant pointed here has four jobs, in this order:
@@ -295,17 +295,17 @@ House rules for any change:
 |---|---|---|---|
 | audit | ok | 2026-11-16T12:44:06+00:00 | Crawled 1136 pages, health 95/100 |
 | ranks | ok | 2026-11-16T12:51:54+00:00 | 40 keywords checked |
-| opportunities | ok | 2026-11-16T12:58:33+00:00 | 10 striking-distance queries, 5 low-CTR pages; 146 recently changed pages held back |
-| gsc | ok | 2026-11-16T12:42:07+00:00 | 22543 queries, 2781 pages (2026-10-17 to 2026-11-13); 263 changed pages tracked |
+| opportunities | ok | 2026-11-16T13:48:33+00:00 | 10 striking-distance queries, 5 low-CTR pages; 146 recently changed pages held back |
+| gsc | ok | 2026-11-16T13:48:32+00:00 | 22543 queries, 2781 pages (2026-10-17 to 2026-11-13); 263 changed pages tracked |
 | ai_visibility | error | 2026-11-16T12:58:33+00:00 | 46 answers from ChatGPT, Gemini, Perplexity; 23 failed: Perplexity 403: {"error":{"message":"The Agent API requires paid credits. Sign-up credits and Perplexity Pro or Max subscriptions do not count. Add cr |
 | tips | ok | 2026-11-16T13:18:28+00:00 | Gemini wrote tips for 8 pages |
-| digest | ok | 2026-11-15T13:23:35+00:00 | llms.txt, digest.md and digest.json rebuilt |
-| checkout | ok | 2026-11-16T13:15:58+00:00 | Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info |
+| digest | ok | 2026-11-16T13:18:28+00:00 | llms.txt, digest.md and digest.json rebuilt |
+| checkout | ok | 2026-11-16T13:48:41+00:00 | Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info |
 | curate | ok | 2026-11-16T12:44:38+00:00 | 20 discovered keywords and 8 discovered questions tracked; 7 changes today |
 | ux | ok | 2026-11-16T13:12:26+00:00 | 80 pages; PageSpeed on 78; AI task check by gemini (gemini-3.8-flash); GA4 on; Clarity off; 2 errors, e.g. PageSpeed /visit/maps: PageSpeed 500: {   "error": {     "code": 500,     "message": "Lighthouse returned error: PAGE_HUNG. Lighthouse was unable to reliably load the URL you requeste |
 | links | ok | 2026-11-16T13:14:05+00:00 | 1170 pages crawled; 1 broken internal links (redirects proposed); 658 suggested links; 45 orphan pages; 27 related pairs without links |
 | schema | ok | 2026-11-16T13:15:28+00:00 | 293/889 content pages have their own markup; 6 sitewide issues |
-| indexnow | skipped | 2026-11-15T13:23:35+00:00 | No IndexNow key yet: see the work queue task 'Turn on IndexNow'. |
+| indexnow | skipped | 2026-11-16T13:48:41+00:00 | No IndexNow key yet: see the work queue task 'Turn on IndexNow'. |
 
 ## Google Search (Search Console)
 2026-10-17 to 2026-11-13 vs the prior 28 days: **41,040 clicks** (prior 50,092), 2,836,057 impressions (prior 2,355,225), CTR 1.5% (prior 2.1%), average position 5.8 (prior 6.3). Branded clicks 10678, non-branded 10402, search term hidden by Google 19960.
@@ -1220,7 +1220,7 @@ Most fixes are one change to a Drupal template per content type (ask FiveJars); 
 ## Ticket checkout (GA4, rates only)
 Checkout completion – (prior –); store visitors who buy 24% (prior 42%); ticket page to store 49%. Steps the store doesn't report: view_item, add_to_cart, begin_checkout, add_payment_info.
 
-Store frustration signals (last 3 days, Clarity): dead clicks 11.9% of sessions, rage clicks 0.1%, quick backs 26.5%, scroll depth 78.6%.
+Store frustration signals (last 3 days, Clarity): dead clicks 11.9% of sessions, rage clicks 0.1%, quick backs 26.1%, scroll depth 78.6%.
 
 | Store page | Dead % | Rage % | Quick back % | Scroll % |
 |---|---|---|---|---|
@@ -1229,9 +1229,9 @@ Store frustration signals (last 3 days, Clarity): dead clicks 11.9% of sessions,
 | membership/join | 0 | 0 | 50 | 55.8 |
 | orders/tickets | 0 | 0 | 0 | 67.2 |
 | private-events/inquiry | 100 | 0 | 0 | 42 |
-| checkout/confirm | 11.7 | 0 | 4.3 | 98.9 |
-| event/layout | 0 | 0 | 0 | 59 |
+| checkout/confirm | 11.5 | 0 | 4.2 | 98.9 |
 | orders/forms | 0 | 0 | 0 | 100 |
+| event/layout | 0 | 0 | 0 | 59 |
 | events/detail | 0 | 0 | 0 | 100 |
 | membership/detail | 3.6 | 0 | 31 | 98.7 |
 | visit/tickets/plan-ahead | 66.7 | 0 | 33.3 | 73 |
@@ -1240,8 +1240,8 @@ Store frustration signals (last 3 days, Clarity): dead clicks 11.9% of sessions,
 | auth/members | 70 | 0 | 0 | 95.8 |
 | tickets | 0 | 0 | 0 | 5 |
 | tr/rise-to-power/san-juan-hill | 0 | 0 | 0 | 27 |
-| tr/rise-to-power/spanish-american-war | 0 | 0 | 0 | 43 |
 | orders/calendar | 0 | 0 | 100 | 100 |
+| tr/rise-to-power/spanish-american-war | 0 | 0 | 0 | 43 |
 | midwinter-table | 0 | 0 | 0 | 8 |
 | calendar | 0 | 0 | 0 | 57 |
 | project/native-plant-project | 0 | 0 | 0 | 17 |
@@ -1295,8 +1295,8 @@ Store frustration signals (last 3 days, Clarity): dead clicks 11.9% of sessions,
 | teach-tr | 0 | 0 | 0 | 14 |
 | visit/maps | 0 | 0 | 0 | 91 |
 | signature-experiences | 0 | 0 | 0 | 47 |
-| visit/groups/field-trips | 0 | 0 | 0 | 38 |
 | visit/directions | 0 | 0 | 0 | 9 |
+| visit/groups/field-trips | 0 | 0 | 0 | 38 |
 | visit/eat | 0 | 0 | 0 | 13 |
 | tr/presidency/ten-facts | 0 | 0 | 0 | 9 |
 | tr/conservation | 0 | 0 | 0 | 37 |

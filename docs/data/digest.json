@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T13:18:28+00:00",
+ "generated": "2026-11-16T13:48:41+00:00",
  "site": "https://www.trlibrary.com",
  "dashboard": "https://seo.labs.trlibrary.com",
  "sources": {
@@ -15,12 +15,12 @@
   },
   "opportunities": {
    "state": "ok",
-   "updated": "2026-11-16T12:58:33+00:00",
+   "updated": "2026-11-16T13:48:33+00:00",
    "message": "10 striking-distance queries, 5 low-CTR pages; 146 recently changed pages held back"
   },
   "gsc": {
    "state": "ok",
-   "updated": "2026-11-16T12:42:07+00:00",
+   "updated": "2026-11-16T13:48:32+00:00",
    "message": "22543 queries, 2781 pages (2026-10-17 to 2026-11-13); 263 changed pages tracked"
   },
   "ai_visibility": {
@@ -35,12 +35,12 @@
   },
   "digest": {
    "state": "ok",
-   "updated": "2026-11-15T13:23:35+00:00",
+   "updated": "2026-11-16T13:18:28+00:00",
    "message": "llms.txt, digest.md and digest.json rebuilt"
   },
   "checkout": {
    "state": "ok",
-   "updated": "2026-11-16T13:15:58+00:00",
+   "updated": "2026-11-16T13:48:41+00:00",
    "message": "Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info"
   },
   "curate": {
@@ -65,7 +65,7 @@
   },
   "indexnow": {
    "state": "skipped",
-   "updated": "2026-11-15T13:23:35+00:00",
+   "updated": "2026-11-16T13:48:41+00:00",
    "message": "No IndexNow key yet: see the work queue task 'Turn on IndexNow'."
   }
  },
@@ -15517,7 +15517,7 @@
   "llms_txt_draft": "https://seo.labs.trlibrary.com/data/site-llms.txt"
  },
  "checkout": {
-  "updated": "2026-11-16T13:15:32+00:00",
+  "updated": "2026-11-16T13:48:36+00:00",
   "note": "Rates only; counts are never published. Users who triggered each step on the ticket store, from GA4.",
   "current": {
    "tracked_steps": [
@@ -15544,7 +15544,7 @@
     "dead_clicks": 11.9,
     "excessive_scroll": 0.0,
     "rage_clicks": 0.1,
-    "quick_backs": 26.5,
+    "quick_backs": 26.1,
     "scroll_depth": 78.6
    },
    "pages": {
@@ -15584,17 +15584,10 @@
      "excessive_scroll": 0.0
     },
     "checkout/confirm": {
-     "dead_clicks": 11.7,
+     "dead_clicks": 11.5,
      "rage_clicks": 0.0,
-     "quick_backs": 4.3,
+     "quick_backs": 4.2,
      "scroll_depth": 98.9,
-     "excessive_scroll": 0.0
-    },
-    "event/layout": {
-     "dead_clicks": 0.0,
-     "rage_clicks": 0.0,
-     "quick_backs": 0.0,
-     "scroll_depth": 59.0,
      "excessive_scroll": 0.0
     },
     "orders/forms": {
@@ -15602,6 +15595,13 @@
      "rage_clicks": 0.0,
      "quick_backs": 0.0,
      "scroll_depth": 100.0,
+     "excessive_scroll": 0.0
+    },
+    "event/layout": {
+     "dead_clicks": 0.0,
+     "rage_clicks": 0.0,
+     "quick_backs": 0.0,
+     "scroll_depth": 59.0,
      "excessive_scroll": 0.0
     },
     "events/detail": {
@@ -15660,18 +15660,18 @@
      "scroll_depth": 27.0,
      "excessive_scroll": 0.0
     },
-    "tr/rise-to-power/spanish-american-war": {
-     "dead_clicks": 0.0,
-     "rage_clicks": 0.0,
-     "quick_backs": 0.0,
-     "scroll_depth": 43.0,
-     "excessive_scroll": 0.0
-    },
     "orders/calendar": {
      "dead_clicks": 0.0,
      "rage_clicks": 0.0,
      "quick_backs": 100.0,
      "scroll_depth": 100.0,
+     "excessive_scroll": 0.0
+    },
+    "tr/rise-to-power/spanish-american-war": {
+     "dead_clicks": 0.0,
+     "rage_clicks": 0.0,
+     "quick_backs": 0.0,
+     "scroll_depth": 43.0,
      "excessive_scroll": 0.0
     },
     "midwinter-table": {
@@ -16045,18 +16045,18 @@
      "scroll_depth": 47.0,
      "excessive_scroll": 0.0
     },
-    "visit/groups/field-trips": {
-     "dead_clicks": 0.0,
-     "rage_clicks": 0.0,
-     "quick_backs": 0.0,
-     "scroll_depth": 38.0,
-     "excessive_scroll": 0.0
-    },
     "visit/directions": {
      "dead_clicks": 0.0,
      "rage_clicks": 0.0,
      "quick_backs": 0.0,
      "scroll_depth": 9.0,
+     "excessive_scroll": 0.0
+    },
+    "visit/groups/field-trips": {
+     "dead_clicks": 0.0,
+     "rage_clicks": 0.0,
+     "quick_backs": 0.0,
+     "scroll_depth": 38.0,
      "excessive_scroll": 0.0
     },
     "visit/eat": {
@@ -16204,7 +16204,7 @@
   "ticket_page_to_store": 0.493
  },
  "work_queue": {
-  "generated": "2026-11-16T13:18:28+00:00",
+  "generated": "2026-11-16T13:48:41+00:00",
   "summary": {
    "tasks": 48,
    "by_owner": {
