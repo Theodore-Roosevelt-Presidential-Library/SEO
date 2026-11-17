@@ -137,6 +137,10 @@ structured_data:
     tr:
       wikipedia: https://en.wikipedia.org/wiki/Theodore_Roosevelt
       wikidata: https://www.wikidata.org/wiki/Q33866
+      # Checked against the live entity (set on the "Who was TR" hub page) every week.
+      alternate_names: [Teddy Roosevelt]
+      born: "1858-10-27"
+      died: "1919-01-06"
 
 # IndexNow: tells Bing (Copilot, much of ChatGPT search) when a page changes.
 # Pages logged in config/changes.yml are submitted daily once the key file is live
@@ -156,15 +160,9 @@ opportunities:
 
 work_queue:
   ticketed:   # sent to FiveJars (Basecamp, "SEO tool: technical fixes" doc, 2026-10-27)
-    - schema:sitewide:tr_entity
-    - schema:sitewide:llms_txt
     - schema:sitewide:admission
     - schema:sitewide:date_format
     - schema:sitewide:og_type
-    - schema:tr_articles
-    - schema:tr_hubs
-    - schema:tr_people
-    - schema:tr_speeches
     - schema:videos
     - schema:video_playlists
     - schema:podcast_episode
