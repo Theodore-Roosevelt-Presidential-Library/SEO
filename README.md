@@ -80,6 +80,14 @@ Fifteen questions across four assistants is 60 calls a week. Model names live in
 ### 4. First run
 Go to **Actions → Weekly refresh → Run workflow**. It takes about five minutes. The dashboard updates once the commit lands.
 
+## Checks against what is live
+
+Once FiveJars ships a fix, the Structured Data job stops asking for it and starts checking it every week:
+
+- **Theodore Roosevelt entity** (`tr_entity_values`): the entity every /tr page repeats is compared with `structured_data.entities.tr` in `config/site.yml` (name, required alternate names, Wikipedia and Wikidata links, birth and death dates). The values are edited on the "Who was TR" hub page's meta tags.
+- **Live llms.txt** (`llms_drift`): www.trlibrary.com/llms.txt is compared with this week's draft. It lists pages in the draft that the live file lacks and live links to pages that left the sitemap. Sections added by hand in Drupal (such as "Key facts for visitors") are left alone. Edit the sections at `/admin/content/llms-txt/sections`.
+- **Article image** (`article_image`): articles whose Article markup shows the site logo although the page has its own share image.
+
 ## For AI tools (llms.txt)
 The dashboard is drawn with JavaScript, so AI assistants that fetch it see an empty page. Every run also writes plain-text versions:
 - **https://seo.labs.trlibrary.com/llms.txt**: the entry point. It says what's here, gives a snapshot, links every data file, and lists the house rules for suggesting copy.
