@@ -1,6 +1,6 @@
 # TRPL Search & AI Visibility
 
-> How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built 2026-11-16T13:48:41+00:00.
+> How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built 2026-11-17T13:28:47+00:00.
 
 The dashboard at https://seo.labs.trlibrary.com/ is rendered with JavaScript. AI tools should read the digest below instead.
 
@@ -19,16 +19,16 @@ Don't stop at recommendations. Work the queue: for the top TRPL tasks (audit fix
 Top of the queue now:
 - Restaurant and store hours are listed as the museum's hours (FiveJars, 1)
 - Broken internal addresses: add 301 redirects (TRPL, 1)
+- Pages ranking well that people skip: rewrite title and description (TRPL, 8)
 - Same topic on two pages (merge or differentiate) (TRPL, 20)
-- Pages nothing links to (TRPL, 45)
-- Add internal links where pages already mention each other (TRPL, 576)
+- Strengthen pages ranking just off the top for searches people make (TRPL, 20)
 
 ## Snapshot
-- Google: 41,040 clicks, avg position 5.8 (28 days to 2026-11-13)
+- Google: 40,899 clicks, avg position 5.7 (28 days to 2026-11-14)
 - Site audit: health 95/100, AI readiness 61/100
 - AI assistants mentioning the Library: ChatGPT 48%, Gemini 30%
 - Links: 1 broken internal addresses with 301 redirects proposed, 658 internal links worth adding, 45 pages with no links in
-- Recently changed: 263 pages held back from recommendations (see 'Recently changed' in the digest for before/after numbers)
+- Recently changed: 253 pages held back from recommendations (see 'Recently changed' in the digest for before/after numbers)
 - Structured data: 293/889 content pages carry schema.org markup; 6 sitewide markup issues; trlibrary.com llms.txt: yes
 
 ## Raw data
