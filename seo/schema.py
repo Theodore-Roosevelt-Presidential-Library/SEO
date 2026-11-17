@@ -362,7 +362,7 @@ GROUPS = [
     {"key": "tr_articles", "label": "TR history articles", "match": r"^/tr/[^/]+/.+", "expect": {"Article"},
      "build": build_article, "why": "The /tr section is the Library's richest content for AI answers. Article markup says who published it, when it was updated, and that it's about Theodore Roosevelt (linked to his Wikidata entry).",
      "drupal": "Add Article JSON-LD to the /tr article template with about = Theodore Roosevelt (the sitewide #theodore-roosevelt entity) and dateModified from the node's changed date."},
-    {"key": "tr_hubs", "label": "TR history section pages", "match": r"^/tr(/[^/]+)?$", "expect": {"CollectionPage"},
+    {"key": "tr_hubs", "label": "TR history section pages", "match": r"^/tr(/[^/]+)?$", "expect": {"CollectionPage", "Article"},
      "build": build_hub, "why": "Marks the section pages as collections about TR.",
      "drupal": "Add CollectionPage JSON-LD to the /tr section landing template."},
     {"key": "itineraries", "label": "Trip itineraries", "match": r"^/visit/itineraries/[^/]+$", "expect": {"TouristTrip"},
@@ -508,6 +508,36 @@ def sitewide_checks(home: dict, ctx: dict, today: dt.date, extras: dict) -> list
                     "detail": f"Playlist pages link to {extras['video_views_linked']} /video/view/ pages, but none are in the sitemap, "
                               "so search engines and AI crawlers may never find individual videos.",
                     "fix": "Add /video/view/ pages to the sitemap (or a video sitemap), each with VideoObject markup."})
+    tr_problems = extras.get("tr_entity_problems") or []
+    if tr_problems:
+        out.append({"id": "tr_entity_values", "severity": "medium",
+                    "title": f"The Theodore Roosevelt entity has {len(tr_problems)} value{'s' if len(tr_problems) != 1 else ''} to fix",
+                    "detail": "Every /tr page repeats this entity, so a wrong or missing value repeats on all of them. "
+                              + " · ".join(tr_problems),
+                    "fix": "Edit the meta tags of the “Who was TR” hub page (Schema.org Person). The values are set once there "
+                           "and FiveJars' code prints them on every /tr page. Check names and dates against the Historical "
+                           "Accuracy Standard before saving."})
+    llms = extras.get("llms") or {}
+    if llms.get("to_add") or llms.get("not_in_sitemap"):
+        add, gone = llms.get("to_add", []), llms.get("not_in_sitemap", [])
+        out.append({"id": "llms_drift", "severity": "medium" if gone else "low",
+                    "title": "The live llms.txt has drifted from the site: "
+                             + " and ".join(x for x in (f"{len(add)} pages to add" if add else "",
+                                                        f"{len(gone)} links to pages no longer in the sitemap" if gone else "") if x),
+                    "detail": f"www.trlibrary.com/llms.txt lists {llms.get('live_links')} pages; this week's draft from the sitemap "
+                              f"lists {llms.get('draft_links')}. Sections added by hand in Drupal are left alone.",
+                    "fix": "Edit the sections at /admin/content/llms-txt/sections: add the new pages under their heading and "
+                           "remove or repoint the links that left the sitemap. The draft has the wording for each new line.",
+                    "file": "data/site-llms.txt",
+                    "examples": gone[:8] + add[:12]})
+    generic = extras.get("generic_article_image") or []
+    if generic:
+        out.append({"id": "article_image", "severity": "low",
+                    "title": f"{len(generic)} articles use the site logo as their Article image",
+                    "detail": "The page has its own share image (og:image), but the Article markup points to the generic logo, "
+                              "so search and AI previews show the logo instead of the page's picture.",
+                    "fix": "Map the Article image to the page's share image (og:image), falling back to the logo only when a page has none.",
+                    "examples": generic[:5]})
     if extras["website_og"]:
         out.append({"id": "og_type", "severity": "low",
                     "title": f"{extras['website_og']} articles are labelled og:type “website”",
@@ -515,6 +545,59 @@ def sitewide_checks(home: dict, ctx: dict, today: dt.date, extras: dict) -> list
                     "fix": "Set og:type to “article” on /tr, press release and podcast templates (Drupal Metatag)."})
     order = {"high": 0, "medium": 1, "low": 2}
     return sorted(out, key=lambda f: order[f["severity"]])
+
+
+# ---------- checks against what is live ----------
+
+LLMS_LINK = re.compile(r"\]\((https?://[^)\s]+)\)")
+
+
+def _host(url: str) -> str:
+    return urlparse(url).netloc.lower().removeprefix("www.")
+
+
+def llms_links(text: str, site: str) -> list[str]:
+    """Paths on this site that an llms.txt links to, in order, without repeats."""
+    return list(dict.fromkeys(path_of(u) for u in LLMS_LINK.findall(text or "") if _host(u) == _host(site)))
+
+
+def llms_compare(live: str, draft: str, site: str, known_paths: set) -> dict:
+    """What the live llms.txt is missing from this week's draft, and which of its links left the sitemap."""
+    lv, dr = llms_links(live, site), llms_links(draft, site)
+    return {"live_links": len(lv), "draft_links": len(dr),
+            "sections": [ln[3:].strip() for ln in (live or "").splitlines() if ln.startswith("## ")],
+            "to_add": [p for p in dr if p not in lv],
+            "not_in_sitemap": [p for p in lv if p not in known_paths]}
+
+
+def _as_list(v) -> list:
+    return [] if v is None else (v if isinstance(v, list) else [v])
+
+
+def tr_entity_problems(node: dict, ctx: dict) -> list[str]:
+    """Values on the defined Theodore Roosevelt entity that are missing or don't match config/site.yml."""
+    out = []
+    if clean(str(node.get("name") or "")) != "Theodore Roosevelt":
+        out.append(f"name is “{node.get('name')}”, not “Theodore Roosevelt”")
+    alt = {str(a).strip().lower() for a in _as_list(node.get("alternateName"))}
+    for want in ctx.get("tr_alternate_names") or []:
+        if want.lower() not in alt:
+            out.append(f"alternateName lacks “{want}”")
+    same = " ".join(str(u) for u in _as_list(node.get("sameAs")))
+    for label, u in (("Wikipedia", ctx.get("tr_wikipedia")), ("Wikidata", ctx.get("tr_wikidata"))):
+        if u and u not in same:
+            out.append(f"sameAs lacks the {label} link")
+    for key, want in (("birthDate", ctx.get("tr_born")), ("deathDate", ctx.get("tr_died"))):
+        if want and node.get(key) != want:
+            out.append(f"{key} is “{node.get(key)}”, expected {want}")
+    award = node.get("award")
+    if isinstance(award, str) and len(re.findall(r"\b(1[89]|20)\d{2}\b", award)) > 1:
+        out.append("award holds several honors in one string; list each one separately")
+    return out
+
+
+def _image_urls(node: dict) -> list[str]:
+    return [i.get("url", "") if isinstance(i, dict) else str(i) for i in _as_list(node.get("image"))]
 
 
 # ---------- llms.txt draft ----------
@@ -560,6 +643,8 @@ def run() -> None:
            "lib_wikidata": (ent.get("library") or {}).get("wikidata"),
            "tr_wikipedia": (ent.get("tr") or {}).get("wikipedia"),
            "tr_wikidata": (ent.get("tr") or {}).get("wikidata"),
+           "tr_alternate_names": (ent.get("tr") or {}).get("alternate_names") or [],
+           "tr_born": (ent.get("tr") or {}).get("born"), "tr_died": (ent.get("tr") or {}).get("died"),
            "podcast_name": sd.get("podcast_name", "Good Citizen"),
            "podcast_url": urljoin(site, sd.get("podcast_path", "/podcast/good-citizen"))}
 
@@ -587,8 +672,12 @@ def run() -> None:
         C.set_status("schema", "error", "no pages could be read")
         raise C.JobError("no pages")
 
+    llms_live = ""
     try:
-        llms_status = sess.get(urljoin(site, "/llms.txt"), timeout=20).status_code
+        r = sess.get(urljoin(site, "/llms.txt"), timeout=20)
+        llms_status = r.status_code
+        if llms_status == 200 and "html" not in r.headers.get("content-type", ""):
+            llms_live = r.text
     except Exception:  # noqa: BLE001
         llms_status = None
 
@@ -661,7 +750,6 @@ def run() -> None:
     extras["bad_dates"] = bad_dates
     home = pages.get("/") or extract(sess.get(site, timeout=25).text, site)
     today = C.today()
-    findings = sitewide_checks(home, ctx, today, extras)
 
     summary_line = next((n.get("description") for b in home["blocks"] if isinstance(b, dict)
                          for n in b.get("@graph", [b]) if isinstance(n, dict) and "Museum" in str(n.get("@type"))), "")
@@ -669,6 +757,18 @@ def run() -> None:
         "Presidential library and museum in Medora, North Dakota, dedicated to Theodore Roosevelt."
     draft = llms_draft(cfg["site"]["name"], site, summary_line, pages)
     C.data_path("site-llms.txt").write_text(draft, encoding="utf-8")
+
+    # Checks against what FiveJars has shipped: the defined TR entity, Article images, the live llms.txt.
+    tr_node = next((n for d in pages.values() for n in d["nodes"]
+                    if n.get("@id") == ctx["tr_id"] and set(n) - {"@id", "@type", "@context"}), None)
+    extras["tr_entity_problems"] = tr_entity_problems(tr_node, ctx) if tr_node else []
+    extras["generic_article_image"] = sorted(
+        p for p, d in pages.items() if d["image"] and "/themes/" not in d["image"]
+        and any(type_set(n) & {"Article", "NewsArticle"} and any("/themes/" in u for u in _image_urls(n)) for n in d["nodes"]))
+    if llms_live:
+        known = {path_of(u) for u in urls} | set((cfg.get("links") or {}).get("extra_live_paths") or [])
+        extras["llms"] = llms_compare(llms_live, draft, site, known)
+    findings = sitewide_checks(home, ctx, today, extras)
 
     total = sum(g["pages"] for g in out_groups if g["key"] != "faq")
     done = sum(g["done"] for g in out_groups if g["key"] != "faq")
@@ -687,6 +787,7 @@ def run() -> None:
         "sitewide": findings,
         "groups": out_groups,
         "llms_txt_draft": "data/site-llms.txt",
+        "llms_txt_live": extras.get("llms"),
     }
     C.write_json("schema.json", result)
     s = result["summary"]

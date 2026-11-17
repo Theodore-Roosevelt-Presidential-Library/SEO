@@ -434,6 +434,51 @@ def test_schema_llms_draft():
     assert "/privacy" not in txt
 
 
+def test_schema_llms_compare():
+    site = "https://www.trlibrary.com/"
+    live = ("# TRPL\n\n## Key facts for visitors\n\n- Open year-round\n\n## Plan a visit\n\n"
+            "- [Visit](https://www.trlibrary.com/visit): Hours\n- [Old](https://trlibrary.com/visit/old/)\n"
+            "- [Wikipedia](https://en.wikipedia.org/wiki/X)\n")
+    draft = "## Plan a visit\n\n- [Visit](https://www.trlibrary.com/visit)\n- [Tickets](https://www.trlibrary.com/tickets): Buy\n"
+    c = schema.llms_compare(live, draft, site, {"/visit", "/tickets"})
+    assert c["live_links"] == 2 and c["draft_links"] == 2            # other sites' links don't count
+    assert c["to_add"] == ["/tickets"] and c["not_in_sitemap"] == ["/visit/old"]
+    assert c["sections"] == ["Key facts for visitors", "Plan a visit"]
+
+
+def test_schema_tr_entity_problems():
+    ctx = {"tr_wikipedia": "https://en.wikipedia.org/wiki/Theodore_Roosevelt", "tr_wikidata": "https://www.wikidata.org/wiki/Q33866",
+           "tr_alternate_names": ["Teddy Roosevelt"], "tr_born": "1858-10-27", "tr_died": "1919-01-06"}
+    good = {"name": "Theodore Roosevelt", "alternateName": ["T.R.", "teddy roosevelt"], "birthDate": "1858-10-27",
+            "deathDate": "1919-01-06", "sameAs": [ctx["tr_wikipedia"], ctx["tr_wikidata"]],
+            "award": ["Nobel Peace Prize (1906)", "Medal of Honor (2001)"]}
+    assert schema.tr_entity_problems(good, ctx) == []
+    bad = {"name": "Theodore Roosevelt", "alternateName": "T.R.", "birthDate": "1858-10-27", "sameAs": ctx["tr_wikidata"],
+           "award": "Nobel Peace Prize (1906) Medal of Honor (posthumous, 2001)"}
+    probs = " | ".join(schema.tr_entity_problems(bad, ctx))
+    assert "Teddy Roosevelt" in probs and "Wikipedia" in probs and "Wikidata" not in probs
+    assert "deathDate" in probs and "birthDate" not in probs and "award" in probs
+    assert schema.tr_entity_problems(good, {}) == []                  # nothing configured, nothing checked
+
+
+def test_schema_sitewide_live_checks():
+    import datetime as dt
+    home = {"blocks": [{"@graph": [{"@type": ["Museum"], "@id": "o", "isAccessibleForFree": False,
+                                    "sameAs": ["https://en.wikipedia.org/wiki/X", "https://www.wikidata.org/wiki/Q1"]}]}]}
+    ctx = {"site": "https://www.trlibrary.com/", "tr_id": "t", "lib_wikipedia": None, "lib_wikidata": None}
+    base = {"llms_status": 200, "node_urls": 0, "node_examples": [], "video_view_in_sitemap": 1, "video_views_linked": 1,
+            "website_og": 0, "dangling": {}, "bad_dates": []}
+    assert schema.sitewide_checks(home, ctx, dt.date(2026, 11, 17), base) == []
+    extras = {**base, "tr_entity_problems": ["alternateName lacks “Teddy Roosevelt”"], "generic_article_image": ["/tr/a", "/tr/b"],
+              "llms": {"live_links": 2, "draft_links": 3, "to_add": ["/tickets"], "not_in_sitemap": ["/visit/old"]}}
+    f = {x["id"]: x for x in schema.sitewide_checks(home, ctx, dt.date(2026, 11, 17), extras)}
+    assert set(f) == {"tr_entity_values", "llms_drift", "article_image"}
+    assert f["llms_drift"]["severity"] == "medium" and f["llms_drift"]["examples"] == ["/visit/old", "/tickets"]
+    assert "1 value to fix" in f["tr_entity_values"]["title"] and "2 articles" in f["article_image"]["title"]
+    extras["llms"]["not_in_sitemap"] = []
+    assert {x["id"]: x for x in schema.sitewide_checks(home, ctx, dt.date(2026, 11, 17), extras)}["llms_drift"]["severity"] == "low"
+
+
 # ---------- change log, AI-claim checks, redirect suggestions ----------
 import datetime as _dt  # noqa: E402
 
