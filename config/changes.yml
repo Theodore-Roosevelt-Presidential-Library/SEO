@@ -326,3 +326,10 @@ changes:
   - {date: 2026-11-09, page: /contact, kind: [title, meta], what: "Title 'Contact Us: Phone, Address and Message Form'; phone and address in description"}
   - {date: 2026-11-09, page: /visit/tickets/plan-ahead, kind: [meta, content], what: "Description no longer leads with summer; removed '2026 is the Library's first year'"}
   - {date: 2026-11-09, page: /llms.txt, kind: [content], what: "Added 'Key facts for visitors' (address, 3½ hours, year-round, tickets, indoor, not the FDR Library)"}
+  - {date: 2026-11-16, page: /tickets, kind: [title, meta], what: "Title 'Tickets and Admission: Timed Entry and Prices'; prices, 3½ hours and discounts in description"}
+  - {date: 2026-11-16, page: /tr/presidency/nobel-peace-prize, kind: [title, meta], what: "Title 'Why Theodore Roosevelt Won the Nobel Peace Prize'; Portsmouth and first American Nobel in description"}
+  - {date: 2026-11-16, page: /tr/presidency/foreign-policy, kind: [title, meta], what: "Title 'Theodore Roosevelt’s Foreign Policy: The Big Stick Era'; Panama Canal and Great White Fleet description"}
+  - {date: 2026-11-16, page: /visit/itineraries/enchanted-highway, kind: [title], what: "Title adds 'North Dakota'"}
+  - {date: 2026-11-16, page: /visit/itineraries/sturgis-medora, kind: [content], what: "Removed past rally dates ('runs 7–16 August 2026' → 'Every August')"}
+  - {date: 2026-11-16, page: /visit/itineraries/presidential-libraries, kind: [content], what: "Hoover museum: 'reopens on 6 August 2026' → 'has reopened after a $20 million renovation'"}
+  - {date: 2026-11-16, page: /visit/scenic-drives, kind: [content], what: "Loop drive: dropped 'late 2025' from reopening"}
