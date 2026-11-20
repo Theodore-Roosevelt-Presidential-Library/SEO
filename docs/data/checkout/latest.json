@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T13:23:55+00:00",
+ "updated": "2026-11-20T13:23:59+00:00",
  "store": "access.trlibrary.com",
  "period": "last 28 days",
  "note": "Rates only; counts are never published. Users who triggered each step on the ticket store, from GA4.",
@@ -22,13 +22,13 @@
    "add_payment_info"
   ],
   "of_store_visitors": {
-   "purchase": 0.214
+   "purchase": 0.202
   },
   "step_to_step": {
-   "store_visit->purchase": 0.214
+   "store_visit->purchase": 0.202
   },
   "checkout_completion": null,
-  "store_conversion": 0.214
+  "store_conversion": 0.202
  },
  "previous": {
   "tracked_steps": [
@@ -41,13 +41,13 @@
    "add_payment_info"
   ],
   "of_store_visitors": {
-   "purchase": 0.415
+   "purchase": 0.412
   },
   "step_to_step": {
-   "store_visit->purchase": 0.415
+   "store_visit->purchase": 0.412
   },
   "checkout_completion": null,
-  "store_conversion": 0.415
+  "store_conversion": 0.412
  },
  "by_device": {
   "mobile": {
@@ -61,13 +61,13 @@
     "add_payment_info"
    ],
    "of_store_visitors": {
-    "purchase": 0.2
+    "purchase": 0.187
    },
    "step_to_step": {
-    "store_visit->purchase": 0.2
+    "store_visit->purchase": 0.187
    },
    "checkout_completion": null,
-   "store_conversion": 0.2
+   "store_conversion": 0.187
   },
   "desktop": {
    "tracked_steps": [
@@ -80,13 +80,13 @@
     "add_payment_info"
    ],
    "of_store_visitors": {
-    "purchase": 0.26
+    "purchase": 0.249
    },
    "step_to_step": {
-    "store_visit->purchase": 0.26
+    "store_visit->purchase": 0.249
    },
    "checkout_completion": null,
-   "store_conversion": 0.26
+   "store_conversion": 0.249
   },
   "tablet": {
    "tracked_steps": [
@@ -99,21 +99,21 @@
     "add_payment_info"
    ],
    "of_store_visitors": {
-    "purchase": 0.143
+    "purchase": 0.139
    },
    "step_to_step": {
-    "store_visit->purchase": 0.143
+    "store_visit->purchase": 0.139
    },
    "checkout_completion": null,
-   "store_conversion": 0.143
+   "store_conversion": 0.139
   }
  },
- "ticket_page_to_store": 0.459,
+ "ticket_page_to_store": 0.451,
  "weekly": [
   {
    "week": "202635",
    "checkout_completion": null,
-   "store_conversion": 0.386
+   "store_conversion": 0.372
   },
   {
    "week": "202636",
@@ -173,17 +173,17 @@
   {
    "week": "202647",
    "checkout_completion": null,
-   "store_conversion": 0.131
+   "store_conversion": 0.134
   }
  ],
  "store_friction": {
   "period": "last 3 days",
   "overall": {
-   "dead_clicks": 11.8,
-   "excessive_scroll": 0.0,
-   "rage_clicks": 0.2,
-   "quick_backs": 14.4,
-   "scroll_depth": 64.2
+   "dead_clicks": 9.8,
+   "excessive_scroll": 0.1,
+   "rage_clicks": 0.1,
+   "quick_backs": 9.3,
+   "scroll_depth": 54.1
   },
   "pages": {
    "calendar/special-event/america-beautiful-film-screening": {
@@ -197,21 +197,21 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 8.0,
+    "scroll_depth": 9.0,
     "excessive_scroll": 0.0
    },
    "membership/join": {
-    "dead_clicks": 50.0,
+    "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 88.5,
+    "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
    "orders/tickets": {
-    "dead_clicks": 50.0,
+    "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 99.0,
+    "quick_backs": 50.0,
+    "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
    "private-events/inquiry": {
@@ -225,42 +225,35 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 32.0,
-    "excessive_scroll": 0.0
-   },
-   "orders/forms": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
+    "scroll_depth": 10.0,
     "excessive_scroll": 0.0
    },
    "tr/family/family-tree": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 58.6,
+    "scroll_depth": 66.6,
     "excessive_scroll": 0.0
    },
    "visit/directions": {
-    "dead_clicks": 12.5,
+    "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 22.7,
+    "quick_backs": 100.0,
+    "scroll_depth": 64.0,
     "excessive_scroll": 0.0
    },
    "rsvp/holidayopenhouse": {
-    "dead_clicks": 100.0,
+    "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 100.0,
-    "scroll_depth": 97.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
    "project/living-building-challenge": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 100.0,
+    "scroll_depth": 78.0,
     "excessive_scroll": 0.0
    },
    "support/donor-advised-fund": {
@@ -271,10 +264,17 @@
     "excessive_scroll": 0.0
    },
    "/": {
-    "dead_clicks": 33.3,
+    "dead_clicks": 50.0,
     "rage_clicks": 0.0,
-    "quick_backs": 33.3,
-    "scroll_depth": 37.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 16.0,
+    "excessive_scroll": 0.0
+   },
+   "calendar/special-event/elkhorn-evenings": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 87.0,
     "excessive_scroll": 0.0
    },
    "midwinter-table": {
@@ -288,42 +288,28 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 37.0,
+    "scroll_depth": 36.0,
     "excessive_scroll": 0.0
    },
    "auth/members": {
-    "dead_clicks": 0.0,
+    "dead_clicks": 7.7,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 100.0,
+    "scroll_depth": 99.1,
     "excessive_scroll": 0.0
    },
    "membership/profile": {
     "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
-    "excessive_scroll": 0.0
-   },
-   "calendar/special-event/elkhorn-evenings": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 28.0,
-    "excessive_scroll": 0.0
-   },
-   "checkout/process": {
-    "dead_clicks": 75.0,
     "rage_clicks": 0.0,
     "quick_backs": 50.0,
     "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
    "visit/groups": {
-    "dead_clicks": 50.0,
+    "dead_clicks": 25.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 33.0,
+    "scroll_depth": 62.8,
     "excessive_scroll": 0.0
    },
    "about/press/press-releases/theodore-roosevelts-groundbreaking-firsts-and-feats-celebration": {
@@ -344,28 +330,49 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 97.0,
+    "scroll_depth": 32.0,
     "excessive_scroll": 0.0
    },
    "video/view/1nogFWdneOw": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 40.0,
-    "scroll_depth": 75.7,
+    "quick_backs": 50.0,
+    "scroll_depth": 78.9,
     "excessive_scroll": 0.0
    },
    "tr/rise-to-power/spanish-american-war": {
-    "dead_clicks": 25.0,
+    "dead_clicks": 20.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 42.8,
+    "scroll_depth": 39.9,
+    "excessive_scroll": 0.0
+   },
+   "calendar": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 69.0,
+    "excessive_scroll": 0.0
+   },
+   "tr/people": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 62.0,
     "excessive_scroll": 0.0
    },
    "tr/quotes": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 92.0,
+    "scroll_depth": 48.0,
+    "excessive_scroll": 0.0
+   },
+   "bullet-speech": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 41.8,
     "excessive_scroll": 0.0
    },
    "visit/itineraries/black-hills-loop": {
@@ -379,28 +386,28 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 62.2,
-    "excessive_scroll": 0.0
-   },
-   "checkout/confirm": {
-    "dead_clicks": 8.1,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 98.4,
+    "scroll_depth": 7.0,
     "excessive_scroll": 0.0
    },
    "tr/pre-presidency-political-accomplishments": {
-    "dead_clicks": 66.7,
+    "dead_clicks": 25.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 65.7,
+    "scroll_depth": 55.1,
+    "excessive_scroll": 0.0
+   },
+   "checkout/confirm": {
+    "dead_clicks": 15.4,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 98.1,
     "excessive_scroll": 0.0
    },
    "tr/people/william-howard-taft": {
-    "dead_clicks": 20.0,
+    "dead_clicks": 28.6,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 53.0,
+    "scroll_depth": 49.2,
     "excessive_scroll": 0.0
    },
    "video/view/cztQVr_fAz4": {
@@ -410,11 +417,25 @@
     "scroll_depth": 30.0,
     "excessive_scroll": 0.0
    },
+   "search": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 100.0,
+    "scroll_depth": 100.0,
+    "excessive_scroll": 0.0
+   },
    "tr/presidency/conservation/gifford-pinchot": {
-    "dead_clicks": 50.0,
+    "dead_clicks": 33.3,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 45.0,
+    "scroll_depth": 63.0,
+    "excessive_scroll": 0.0
+   },
+   "checkout/process": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
    "staff-members/rachel-moats": {
@@ -424,18 +445,25 @@
     "scroll_depth": 67.0,
     "excessive_scroll": 0.0
    },
-   "tr": {
-    "dead_clicks": 50.0,
+   "visit/maps": {
+    "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 50.0,
-    "scroll_depth": 65.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 30.0,
+    "excessive_scroll": 0.0
+   },
+   "tr": {
+    "dead_clicks": 100.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 100.0,
+    "scroll_depth": 38.0,
     "excessive_scroll": 0.0
    },
    "visit/lodging/availability": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 31.0,
+    "scroll_depth": 27.0,
     "excessive_scroll": 0.0
    },
    "tr/badlands/cowboy-songs/lomax": {
@@ -446,17 +474,17 @@
     "excessive_scroll": 0.0
    },
    "tr/presidency/square-deal": {
-    "dead_clicks": 23.5,
+    "dead_clicks": 17.6,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 36.6,
+    "scroll_depth": 34.3,
     "excessive_scroll": 0.0
    },
    "tr/presidency/trust-busting": {
-    "dead_clicks": 10.5,
+    "dead_clicks": 9.1,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 39.1,
+    "scroll_depth": 40.9,
     "excessive_scroll": 0.0
    },
    "tr/presidency/white-house-workers": {
@@ -467,24 +495,24 @@
     "excessive_scroll": 0.0
    },
    "tr/fake-quotes": {
-    "dead_clicks": 11.1,
+    "dead_clicks": 7.7,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 30.8,
+    "scroll_depth": 28.9,
     "excessive_scroll": 0.0
    },
    "podcast/good-citizen/karl-rove-historic-redemption-hard-work-politics-and-essential-nature": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 2.0,
+    "scroll_depth": 8.0,
     "excessive_scroll": 0.0
    },
    "project": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 16.7,
-    "scroll_depth": 85.1,
+    "quick_backs": 33.3,
+    "scroll_depth": 87.0,
     "excessive_scroll": 0.0
    },
    "volunteer": {
@@ -494,18 +522,46 @@
     "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
-   "visit/hours": {
+   "visit/itineraries": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 25.0,
-    "scroll_depth": 75.5,
+    "quick_backs": 0.0,
+    "scroll_depth": 65.0,
     "excessive_scroll": 0.0
    },
-   "visit": {
+   "visit/hours": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 34.0,
+    "excessive_scroll": 0.0
+   },
+   "visit": {
+    "dead_clicks": 7.4,
+    "rage_clicks": 0.0,
+    "quick_backs": 7.4,
+    "scroll_depth": 33.9,
+    "excessive_scroll": 0.0
+   },
+   "holidaytrees": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 51.5,
+    "excessive_scroll": 0.0
+   },
+   "orders/calendar": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 100.0,
+    "excessive_scroll": 0.0
+   },
+   "tr/post-presidency/new-nationalism": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 18.0,
     "excessive_scroll": 0.0
    },
    "video/view/sVxuv_VO03Y": {
@@ -513,13 +569,6 @@
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 54.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/post-presidency/new-nationalism": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 25.0,
     "excessive_scroll": 0.0
    },
    "tr/rise-to-power/vice-presidency": {
@@ -536,11 +585,18 @@
     "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
-   "tr/tr-mount-rushmore": {
+   "tr/legacy/mount-rushmore": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 24.7,
+    "scroll_depth": 16.0,
+    "excessive_scroll": 0.0
+   },
+   "tr/tr-mount-rushmore": {
+    "dead_clicks": 14.3,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 36.1,
     "excessive_scroll": 0.0
    },
    "tr/people/leonard-wood": {
@@ -550,18 +606,25 @@
     "scroll_depth": 23.5,
     "excessive_scroll": 0.0
    },
+   "orders/forms": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 100.0,
+    "excessive_scroll": 0.0
+   },
+   "podcast/good-citizen/richard-haass": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 5.0,
+    "excessive_scroll": 0.0
+   },
    "tr/people/john-muir": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 22.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/badlands/cowboy-songs/the-songs": {
-    "dead_clicks": 100.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 100.0,
-    "scroll_depth": 98.0,
     "excessive_scroll": 0.0
    },
    "video/playlist/PL-sck-PjBiFelZ6jvE62RfVlRvbicBsoS": {
@@ -571,39 +634,46 @@
     "scroll_depth": 87.0,
     "excessive_scroll": 0.0
    },
-   "events/detail": {
-    "dead_clicks": 0.0,
+   "tr/badlands/cowboy-songs/the-songs": {
+    "dead_clicks": 100.0,
     "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
+    "quick_backs": 100.0,
+    "scroll_depth": 98.0,
     "excessive_scroll": 0.0
    },
    "holiday-2026": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 57.8,
+    "scroll_depth": 65.9,
     "excessive_scroll": 0.0
    },
    "visit/planner": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 100.0,
+    "scroll_depth": 9.0,
     "excessive_scroll": 0.0
    },
    "tr/for-educators/middle-school": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 100.0,
-    "scroll_depth": 40.0,
+    "quick_backs": 33.3,
+    "scroll_depth": 52.4,
     "excessive_scroll": 0.0
    },
    "tr/speeches/man-in-the-arena": {
-    "dead_clicks": 17.6,
+    "dead_clicks": 19.2,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 52.2,
+    "scroll_depth": 52.8,
+    "excessive_scroll": 0.0
+   },
+   "video/view/FH2iglgaMZE": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 57.0,
     "excessive_scroll": 0.0
    },
    "tr/elkhorn": {
@@ -613,18 +683,32 @@
     "scroll_depth": 86.0,
     "excessive_scroll": 0.0
    },
+   "tr/badlands/where-to-see": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 23.0,
+    "excessive_scroll": 0.0
+   },
+   "tr/family/fdr-connection": {
+    "dead_clicks": 5.6,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 29.2,
+    "excessive_scroll": 0.0
+   },
    "tr/rise-to-power/jacob-riis": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 18.0,
+    "scroll_depth": 30.5,
     "excessive_scroll": 0.0
    },
-   "tr/presidency": {
-    "dead_clicks": 0.0,
+   "tr/early-life/mother": {
+    "dead_clicks": 100.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 21.0,
+    "scroll_depth": 88.0,
     "excessive_scroll": 0.0
    },
    "video/view/sUIbk8egtC0": {
@@ -635,10 +719,10 @@
     "excessive_scroll": 0.0
    },
    "visit/faq": {
-    "dead_clicks": 33.3,
+    "dead_clicks": 25.0,
     "rage_clicks": 0.0,
-    "quick_backs": 33.3,
-    "scroll_depth": 68.2,
+    "quick_backs": 25.0,
+    "scroll_depth": 66.6,
     "excessive_scroll": 0.0
    },
    "tr/presidency/foreign-policy": {
@@ -652,13 +736,13 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 51.0,
+    "scroll_depth": 31.0,
     "excessive_scroll": 0.0
    },
-   "about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026": {
+   "about/press/press-releases/confluence-named-landscape-architect-record": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 100.0,
+    "quick_backs": 0.0,
     "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
@@ -676,25 +760,39 @@
     "scroll_depth": 42.0,
     "excessive_scroll": 0.0
    },
+   "visit/one-medora": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 98.0,
+    "excessive_scroll": 0.0
+   },
+   "tr/presidency-timeline": {
+    "dead_clicks": 22.2,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 38.2,
+    "excessive_scroll": 0.0
+   },
    "tr/early-life": {
-    "dead_clicks": 0.0,
+    "dead_clicks": 12.5,
     "rage_clicks": 0.0,
-    "quick_backs": 100.0,
-    "scroll_depth": 32.5,
+    "quick_backs": 25.0,
+    "scroll_depth": 66.6,
     "excessive_scroll": 0.0
    },
-   "orders/calendar": {
+   "video/view/eb2v8aZvyfQ": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 100.0,
+    "scroll_depth": 37.0,
     "excessive_scroll": 0.0
    },
-   "holidaytrees": {
+   "support": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 52.4,
+    "scroll_depth": 24.0,
     "excessive_scroll": 0.0
    },
    "tr/presidency/booker-t-washington": {
@@ -708,7 +806,14 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 80.0,
+    "scroll_depth": 86.7,
+    "excessive_scroll": 0.0
+   },
+   "tr/family/children": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 55.0,
     "excessive_scroll": 0.0
    },
    "birthdaycard": {
@@ -718,13 +823,6 @@
     "scroll_depth": 53.0,
     "excessive_scroll": 0.0
    },
-   "tr/complex-legacy/imperialism": {
-    "dead_clicks": 20.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 27.8,
-    "excessive_scroll": 0.0
-   },
    "tr/people/ted-jr": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
@@ -732,11 +830,18 @@
     "scroll_depth": 15.0,
     "excessive_scroll": 0.0
    },
+   "tr/complex-legacy/imperialism": {
+    "dead_clicks": 14.3,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 23.5,
+    "excessive_scroll": 0.0
+   },
    "video/view/GpKHsBZXubE": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 57.0,
+    "quick_backs": 20.0,
+    "scroll_depth": 65.5,
     "excessive_scroll": 0.0
    },
    "video/view/-mcN1M3ZEps": {
@@ -744,20 +849,6 @@
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 54.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/legacy/mount-rushmore": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 19.0,
-    "excessive_scroll": 0.0
-   },
-   "calendar": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 45.0,
     "excessive_scroll": 0.0
    },
    "teach-tr": {
@@ -768,10 +859,10 @@
     "excessive_scroll": 0.0
    },
    "tr/presidency/railroad-regulation": {
-    "dead_clicks": 0.0,
+    "dead_clicks": 20.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 9.0,
+    "scroll_depth": 32.0,
     "excessive_scroll": 0.0
    },
    "tr/people/eleanor": {
@@ -795,11 +886,25 @@
     "scroll_depth": 51.0,
     "excessive_scroll": 0.0
    },
-   "membership/detail": {
-    "dead_clicks": 22.6,
+   "tr/presidency": {
+    "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 14.3,
-    "scroll_depth": 93.7,
+    "scroll_depth": 26.6,
+    "excessive_scroll": 0.0
+   },
+   "membership/detail": {
+    "dead_clicks": 6.7,
+    "rage_clicks": 0.0,
+    "quick_backs": 30.0,
+    "scroll_depth": 98.9,
+    "excessive_scroll": 0.0
+   },
+   "tr/presidency/strenuous-life-in-office": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 12.0,
     "excessive_scroll": 0.0
    },
    "tr/kids-timeline": {
@@ -813,7 +918,7 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 9.0,
+    "scroll_depth": 39.0,
     "excessive_scroll": 0.0
    },
    "staff-members/cj-von-buchwald-wright": {
@@ -827,7 +932,7 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 73.0,
+    "scroll_depth": 80.5,
     "excessive_scroll": 0.0
    },
    "tr/new-york-politics/convention-1884": {
@@ -840,8 +945,8 @@
    "tr/badlands/medora": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
+    "quick_backs": 50.0,
+    "scroll_depth": 45.7,
     "excessive_scroll": 0.0
    },
    "tr/complex-legacy/equestrian-statue": {
@@ -869,21 +974,21 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 68.7,
+    "scroll_depth": 92.0,
     "excessive_scroll": 0.0
    },
    "tr/post-presidency/death": {
-    "dead_clicks": 50.0,
+    "dead_clicks": 33.3,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 76.5,
+    "scroll_depth": 86.5,
     "excessive_scroll": 0.0
    },
    "about/trustees/vaughn-williams": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 57.0,
+    "scroll_depth": 72.0,
     "excessive_scroll": 0.0
    },
    "podcast/good-citizen/live-trpl-3-arthur-brooks-and-robbie-lauf-strenuous-life-and-search-happiness": {
@@ -897,14 +1002,14 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 44.5,
+    "scroll_depth": 44.9,
     "excessive_scroll": 0.0
    },
    "tr/presidency/conservation": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 79.0,
+    "scroll_depth": 64.7,
     "excessive_scroll": 0.0
    },
    "visit/maps/campus": {
@@ -921,6 +1026,13 @@
     "scroll_depth": 94.0,
     "excessive_scroll": 0.0
    },
+   "events/detail": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 100.0,
+    "excessive_scroll": 0.0
+   },
    "press/clips": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
@@ -928,46 +1040,53 @@
     "scroll_depth": 6.0,
     "excessive_scroll": 0.0
    },
+   "tr/rise-to-power/sagamore-hill": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 84.0,
+    "excessive_scroll": 0.0
+   },
    "tr/post-presidency": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 100.0,
+    "scroll_depth": 96.7,
     "excessive_scroll": 0.0
    },
    "contact": {
+    "dead_clicks": 12.5,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 86.0,
+    "excessive_scroll": 0.0
+   },
+   "calendar/special-event/visit-santa-claus": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 87.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/presidency-timeline": {
-    "dead_clicks": 20.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 38.0,
+    "scroll_depth": 31.0,
     "excessive_scroll": 0.0
    },
    "tr/badlands": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 12.3,
+    "scroll_depth": 33.0,
     "excessive_scroll": 0.0
    },
    "tr/presidency/elections": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 13.3,
+    "scroll_depth": 11.7,
     "excessive_scroll": 0.0
    },
    "tr/post-presidency/bull-moose": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 76.8,
+    "scroll_depth": 62.6,
     "excessive_scroll": 0.0
    },
    "about/trustees/dick-boyce": {
@@ -981,7 +1100,7 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 15.2,
+    "scroll_depth": 28.8,
     "excessive_scroll": 0.0
    },
    "tr/10-myths-teddy-bear": {
@@ -1005,32 +1124,11 @@
     "scroll_depth": 94.0,
     "excessive_scroll": 0.0
    },
-   "tr/family/fdr-connection": {
-    "dead_clicks": 10.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 28.6,
-    "excessive_scroll": 0.0
-   },
-   "membership/renew/detail": {
+   "tr/speeches/first-annual-message": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 100.0,
-    "excessive_scroll": 0.0
-   },
-   "calendar/special-event/visit-santa-claus": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 49.0,
-    "excessive_scroll": 0.0
-   },
-   "bullet-speech": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 28.0,
+    "scroll_depth": 18.0,
     "excessive_scroll": 0.0
    },
    "staff-members/clancy-griggs": {
@@ -1044,14 +1142,7 @@
     "dead_clicks": 14.3,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 75.9,
-    "excessive_scroll": 0.0
-   },
-   "tr/speeches": {
-    "dead_clicks": 50.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 53.7,
+    "scroll_depth": 57.4,
     "excessive_scroll": 0.0
    },
    "about/press": {
@@ -1059,6 +1150,13 @@
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 98.0,
+    "excessive_scroll": 0.0
+   },
+   "tr/speeches": {
+    "dead_clicks": 25.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 64.6,
     "excessive_scroll": 0.0
    },
    "visit/eat": {
@@ -1072,7 +1170,7 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 49.0,
+    "scroll_depth": 59.2,
     "excessive_scroll": 0.0
    },
    "tr/speeches/inaugural": {
@@ -1089,6 +1187,13 @@
     "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
+   "quiz/badlands-wildlife-family": {
+    "dead_clicks": 100.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 99.0,
+    "excessive_scroll": 0.0
+   },
    "tr/badlands/boat-thieves": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
@@ -1099,22 +1204,22 @@
    "about/trustees": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 50.0,
-    "scroll_depth": 97.7,
+    "quick_backs": 18.2,
+    "scroll_depth": 58.0,
     "excessive_scroll": 0.0
    },
    "rsvp/midwinter": {
-    "dead_clicks": 0.0,
+    "dead_clicks": 50.0,
     "rage_clicks": 0.0,
-    "quick_backs": 100.0,
-    "scroll_depth": 93.6,
+    "quick_backs": 50.0,
+    "scroll_depth": 94.5,
     "excessive_scroll": 0.0
    },
    "tr/rise-to-power/buffalo-soldiers": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 46.5,
+    "scroll_depth": 38.8,
     "excessive_scroll": 0.0
    },
    "about/mission": {
@@ -1132,31 +1237,45 @@
     "excessive_scroll": 0.0
    },
    "tr/quotes/leadership": {
-    "dead_clicks": 0.0,
+    "dead_clicks": 100.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 95.0,
+    "scroll_depth": 10.0,
     "excessive_scroll": 0.0
    },
    "tr/presidency/panama-canal": {
-    "dead_clicks": 26.3,
+    "dead_clicks": 21.7,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 29.0,
-    "excessive_scroll": 0.0
+    "scroll_depth": 31.5,
+    "excessive_scroll": 4.3
    },
    "membership/renew": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 100.0,
-    "scroll_depth": 84.0,
+    "scroll_depth": 98.0,
+    "excessive_scroll": 0.0
+   },
+   "private-events/spaces": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 100.0,
+    "excessive_scroll": 0.0
+   },
+   "visit/activities": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 100.0,
+    "scroll_depth": 15.0,
     "excessive_scroll": 0.0
    },
    "tr/presidency/roosevelt-corollary": {
-    "dead_clicks": 100.0,
+    "dead_clicks": 33.3,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 23.0,
+    "scroll_depth": 29.0,
     "excessive_scroll": 0.0
    },
    "calendar/daily-activity/free-final-hour": {
@@ -1170,14 +1289,7 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 48.5,
-    "excessive_scroll": 0.0
-   },
-   "about/trustees/hilary-hamm": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
+    "scroll_depth": 35.0,
     "excessive_scroll": 0.0
    },
    "tr/presidency/bully-pulpit](https://www.trlibrary.com/tr/presidency/bully-pulpit": {
@@ -1188,10 +1300,10 @@
     "excessive_scroll": 0.0
    },
    "tr/presidency/ten-facts": {
-    "dead_clicks": 23.1,
+    "dead_clicks": 26.3,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 59.3,
+    "scroll_depth": 55.5,
     "excessive_scroll": 0.0
    },
    "staff-members/kristie-skunberg": {
@@ -1205,7 +1317,7 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 33.0,
+    "scroll_depth": 59.5,
     "excessive_scroll": 0.0
    },
    "tr/people/quentin": {
@@ -1240,14 +1352,14 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 85.0,
+    "scroll_depth": 82.5,
     "excessive_scroll": 0.0
    },
    "research": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 50.0,
-    "scroll_depth": 33.2,
+    "quick_backs": 66.7,
+    "scroll_depth": 55.5,
     "excessive_scroll": 0.0
    },
    "about/trustees/john-palfrey": {
@@ -1257,25 +1369,32 @@
     "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
+   "video/view/wAknvXeHzSc": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 46.0,
+    "excessive_scroll": 0.0
+   },
    "membership/neighbor": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 55.0,
+    "scroll_depth": 53.4,
     "excessive_scroll": 0.0
    },
    "tr/presidency/brownsville": {
-    "dead_clicks": 50.0,
+    "dead_clicks": 25.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 14.0,
+    "scroll_depth": 15.3,
     "excessive_scroll": 0.0
    },
-   "tr/early-life/family-roots": {
-    "dead_clicks": 0.0,
+   "private-events/catering": {
+    "dead_clicks": 100.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 7.0,
+    "scroll_depth": 99.0,
     "excessive_scroll": 0.0
    },
    "staff-members/matt-briney": {
@@ -1285,18 +1404,18 @@
     "scroll_depth": 67.0,
     "excessive_scroll": 0.0
    },
-   "search": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
-    "excessive_scroll": 0.0
-   },
    "staff-members": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 100.0,
     "scroll_depth": 56.0,
+    "excessive_scroll": 0.0
+   },
+   "staff-members/jolene-procive": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 67.0,
     "excessive_scroll": 0.0
    },
    "tr/books-and-writings/complete-list": {
@@ -1309,36 +1428,22 @@
    "programs": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 76.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/strenuous-life/athletics": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 36.0,
-    "excessive_scroll": 0.0
-   },
-   "about": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 100.0,
-    "scroll_depth": 99.0,
+    "quick_backs": 33.3,
+    "scroll_depth": 74.2,
     "excessive_scroll": 0.0
    },
    "tr/presidency/executive-power": {
     "dead_clicks": 33.3,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 42.2,
+    "scroll_depth": 33.8,
     "excessive_scroll": 0.0
    },
    "quiz": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 90.0,
+    "scroll_depth": 53.5,
     "excessive_scroll": 0.0
    },
    "tr/badlands/cowboy-songs/night-guard": {
@@ -1356,38 +1461,52 @@
     "excessive_scroll": 0.0
    },
    "visit/tickets/plan-ahead": {
-    "dead_clicks": 33.3,
+    "dead_clicks": 20.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 72.0,
+    "scroll_depth": 50.8,
+    "excessive_scroll": 0.0
+   },
+   "video/view/fPZD2xLBXZs": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 50.0,
+    "scroll_depth": 36.7,
     "excessive_scroll": 0.0
    },
    "tr/rise-to-power/san-juan-hill": {
-    "dead_clicks": 12.5,
+    "dead_clicks": 7.7,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 26.2,
+    "scroll_depth": 23.1,
     "excessive_scroll": 0.0
    },
    "tr/rise-to-power/ten-facts": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 27.3,
+    "scroll_depth": 34.2,
     "excessive_scroll": 0.0
    },
    "about/careers": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 53.3,
+    "scroll_depth": 53.6,
     "excessive_scroll": 0.0
    },
    "tr/timeline": {
     "dead_clicks": 100.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 33.5,
+    "scroll_depth": 30.5,
+    "excessive_scroll": 0.0
+   },
+   "tr/speeches/new-nationalism": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 27.0,
     "excessive_scroll": 0.0
    },
    "digital-guide": {
@@ -1397,11 +1516,39 @@
     "scroll_depth": 53.0,
     "excessive_scroll": 0.0
    },
+   "tr/holidays": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 77.0,
+    "excessive_scroll": 0.0
+   },
+   "tr/legacy/teddy-bear": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 31.5,
+    "excessive_scroll": 0.0
+   },
+   "tr/thanksgiving-timeline": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 51.0,
+    "excessive_scroll": 0.0
+   },
    "tr/conservation/quotes": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 19.5,
+    "excessive_scroll": 0.0
+   },
+   "tr/legacy": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 67.0,
     "excessive_scroll": 0.0
    },
    "staff-members/candace-stock": {
@@ -1411,18 +1558,18 @@
     "scroll_depth": 76.0,
     "excessive_scroll": 0.0
    },
-   "calendar/special-event/butchery-workshop": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 77.5,
-    "excessive_scroll": 0.0
-   },
    "tr/post-presidency/quentin": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 93.0,
+    "excessive_scroll": 0.0
+   },
+   "calendar/special-event/butchery-workshop": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 86.0,
     "excessive_scroll": 0.0
    },
    "tr/people/elliott": {
@@ -1433,24 +1580,24 @@
     "excessive_scroll": 0.0
    },
    "visit/exhibits": {
-    "dead_clicks": 0.0,
+    "dead_clicks": 20.0,
     "rage_clicks": 0.0,
-    "quick_backs": 60.0,
-    "scroll_depth": 76.1,
+    "quick_backs": 40.0,
+    "scroll_depth": 80.1,
     "excessive_scroll": 0.0
    },
    "tr/rise-to-power/becoming-president": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 23.0,
+    "scroll_depth": 24.0,
     "excessive_scroll": 0.0
    },
    "tr/tr-shot": {
-    "dead_clicks": 50.0,
+    "dead_clicks": 40.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 49.0,
+    "scroll_depth": 42.0,
     "excessive_scroll": 0.0
    },
    "tr/family/elliott-roosevelt": {
@@ -1464,7 +1611,7 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 14.0,
+    "scroll_depth": 41.5,
     "excessive_scroll": 0.0
    },
    "holiday": {
@@ -1479,13 +1626,6 @@
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 31.0,
-    "excessive_scroll": 0.0
-   },
-   "visit/outdoors": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 26.0,
     "excessive_scroll": 0.0
    },
    "tr/homes-and-places/white-house": {
@@ -1506,14 +1646,7 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 52.0,
-    "excessive_scroll": 0.0
-   },
-   "calendar/specialty-tour/badlands-landscape-tour": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 71.0,
+    "scroll_depth": 43.8,
     "excessive_scroll": 0.0
    },
    "video/view/bNpkcnRSmmQ": {
@@ -1524,10 +1657,10 @@
     "excessive_scroll": 0.0
    },
    "tr/rise-to-power/rough-riders": {
-    "dead_clicks": 0.0,
+    "dead_clicks": 25.0,
     "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 3.0,
+    "quick_backs": 25.0,
+    "scroll_depth": 24.0,
     "excessive_scroll": 0.0
    },
    "visit/scenic-drives": {
@@ -1548,7 +1681,27 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 33.5,
+    "scroll_depth": 22.2,
+    "excessive_scroll": 0.0
+   },
+   "tr/strenuous-life/hunter": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 12.5,
+    "excessive_scroll": 0.0
+   },
+   "tr/family": {
+    "dead_clicks": 33.3,
+    "rage_clicks": 0.0,
+    "quick_backs": 33.3,
+    "scroll_depth": 53.0,
+    "excessive_scroll": 0.0
+   },
+   "podcast/good-citizen/call-adventure-charlie-melcher-ed-okeefe-and-brand-new-theodore-roosevelt": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
     "excessive_scroll": 0.0
    },
    "podcast/good-citizen/dana-milbank-retreat-restore-rehumanize": {
@@ -1556,6 +1709,13 @@
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
     "scroll_depth": 4.0,
+    "excessive_scroll": 0.0
+   },
+   "video/view/o7X2oPGLGq8": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 48.0,
     "excessive_scroll": 0.0
    },
    "tr/people/booker-t-washington": {
@@ -1579,6 +1739,13 @@
     "scroll_depth": 73.0,
     "excessive_scroll": 0.0
    },
+   "staff-members/amy-mccann": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 66.0,
+    "excessive_scroll": 0.0
+   },
    "tickets/terms": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
@@ -1593,11 +1760,18 @@
     "scroll_depth": 63.0,
     "excessive_scroll": 0.0
    },
+   "video/view/15dkv17Wk38": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 18.0,
+    "excessive_scroll": 0.0
+   },
    "join-us": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 79.0,
+    "scroll_depth": 61.0,
     "excessive_scroll": 0.0
    },
    "tr/presidency/conservation/antiquities-act": {
@@ -1621,11 +1795,11 @@
     "scroll_depth": 6.0,
     "excessive_scroll": 0.0
    },
-   "visit/hiking": {
+   "staff-members/alice-wynd": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 100.0,
-    "scroll_depth": 23.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 67.0,
     "excessive_scroll": 0.0
    },
    "user/login": {
@@ -1646,7 +1820,14 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 43.0,
+    "scroll_depth": 27.0,
+    "excessive_scroll": 0.0
+   },
+   "quiz/immigration-era": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 47.0,
     "excessive_scroll": 0.0
    },
    "tr/presidency/executive-actions/story": {
@@ -1657,10 +1838,17 @@
     "excessive_scroll": 0.0
    },
    "tr/early-life/childhood-illness": {
+    "dead_clicks": 50.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 69.5,
+    "excessive_scroll": 0.0
+   },
+   "tr/complex-legacy/race": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 100.0,
+    "scroll_depth": 63.0,
     "excessive_scroll": 0.0
    },
    "tr/rise-to-power/civil-service": {
@@ -1688,7 +1876,28 @@
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 13.0,
+    "scroll_depth": 9.0,
+    "excessive_scroll": 0.0
+   },
+   "tr/badlands/winter-of-1887": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 55.0,
+    "excessive_scroll": 0.0
+   },
+   "tr/legacy/rankings": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 52.5,
+    "excessive_scroll": 0.0
+   },
+   "tr/for-educators/high-school": {
+    "dead_clicks": 100.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
    "visit/lodging": {
@@ -1699,10 +1908,10 @@
     "excessive_scroll": 0.0
    },
    "tr/quotes/misquotes": {
-    "dead_clicks": 0.0,
+    "dead_clicks": 12.5,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 54.0,
+    "scroll_depth": 32.4,
     "excessive_scroll": 0.0
    },
    "pay-balance/NEDynJIIK7UsATfB3htJ3tlADCKnSUGuvtualvlsVfTcEV0CMziLd0hWoPY-yW7G": {
@@ -1719,53 +1928,88 @@
     "scroll_depth": 100.0,
     "excessive_scroll": 0.0
    },
+   "tr/family/roosevelt-women": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 32.0,
+    "excessive_scroll": 0.0
+   },
    "tr/presidency/conservation/reclamation": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 11.0,
+    "scroll_depth": 42.8,
+    "excessive_scroll": 0.0
+   },
+   "podcast/good-citizen/kermit-roosevelt-iii": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 15.0,
+    "excessive_scroll": 0.0
+   },
+   "video/playlist/PLSaoXk08gMqQ": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 99.0,
     "excessive_scroll": 0.0
    },
    "brand": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 95.3,
+    "scroll_depth": 93.0,
     "excessive_scroll": 0.0
    },
    "tr/rise-to-power": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 21.0,
+    "scroll_depth": 21.5,
     "excessive_scroll": 0.0
    },
    "tr/for-educators": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
-    "quick_backs": 100.0,
-    "scroll_depth": 65.0,
+    "quick_backs": 50.0,
+    "scroll_depth": 55.0,
     "excessive_scroll": 0.0
    },
    "visit/itineraries/conservation": {
-    "dead_clicks": 0.0,
+    "dead_clicks": 50.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 100.0,
+    "scroll_depth": 85.5,
     "excessive_scroll": 0.0
    },
    "tr/post-presidency/river-of-doubt": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 4.0,
+    "scroll_depth": 3.0,
+    "excessive_scroll": 0.0
+   },
+   "tr/complex-legacy": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 100.0,
+    "scroll_depth": 25.0,
+    "excessive_scroll": 0.0
+   },
+   "visit/exhibits/kennerly": {
+    "dead_clicks": 0.0,
+    "rage_clicks": 0.0,
+    "quick_backs": 0.0,
+    "scroll_depth": 31.0,
     "excessive_scroll": 0.0
    },
    "tr/speeches/strenuous-life": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 56.5,
+    "scroll_depth": 68.0,
     "excessive_scroll": 0.0
    },
    "tr/new-york-politics": {
@@ -1775,193 +2019,11 @@
     "scroll_depth": 70.5,
     "excessive_scroll": 0.0
    },
-   "tr/books-and-writings/reader": {
+   "tr/presidency/conservation/midnight-forests": {
     "dead_clicks": 0.0,
     "rage_clicks": 0.0,
     "quick_backs": 0.0,
-    "scroll_depth": 74.3,
-    "excessive_scroll": 0.0
-   },
-   "staff-members/tony-erickson": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 69.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/presidency/coal-strike": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 36.5,
-    "excessive_scroll": 0.0
-   },
-   "about/trustees/theodore-roosevelt-v": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 74.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/speeches/first-annual-message": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 8.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/presidency/food-and-drug": {
-    "dead_clicks": 7.1,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 28.1,
-    "excessive_scroll": 0.0
-   },
-   "tr/post-presidency/assassination-attempt": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 87.0,
-    "excessive_scroll": 0.0
-   },
-   "staff-members/robbie-lauf": {
-    "dead_clicks": 100.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 92.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/tr-importance": {
-    "dead_clicks": 16.7,
-    "rage_clicks": 8.3,
-    "quick_backs": 0.0,
-    "scroll_depth": 61.8,
-    "excessive_scroll": 0.0
-   },
-   "tr/quotes/family": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 42.3,
-    "excessive_scroll": 0.0
-   },
-   "video": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 50.0,
-    "scroll_depth": 95.5,
-    "excessive_scroll": 0.0
-   },
-   "tr/complex-legacy/eugenics": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 8.5,
-    "excessive_scroll": 0.0
-   },
-   "about/trustees/beth-myers": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 69.0,
-    "excessive_scroll": 0.0
-   },
-   "visit/itineraries/weekend-drives/minneapolis": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
-    "excessive_scroll": 0.0
-   },
-   "visit/exhibits/main": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 12.2,
-    "excessive_scroll": 0.0
-   },
-   "tr/presidency/japan": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 20.0,
-    "excessive_scroll": 0.0
-   },
-   "legal/privacy": {
-    "dead_clicks": 100.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/presidency/conservation/national-parks": {
-    "dead_clicks": 12.5,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 54.0,
-    "excessive_scroll": 0.0
-   },
-   "quiz/the-collection": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 73.0,
-    "excessive_scroll": 0.0
-   },
-   "visit/maps": {
-    "dead_clicks": 40.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 20.0,
-    "scroll_depth": 64.4,
-    "excessive_scroll": 0.0
-   },
-   "tr/homes-and-places": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 15.0,
-    "excessive_scroll": 0.0
-   },
-   "signature-experiences": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
-    "excessive_scroll": 0.0
-   },
-   "tr/complex-legacy/native-americans": {
-    "dead_clicks": 33.3,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 47.8,
-    "excessive_scroll": 0.0
-   },
-   "tr/quotes/conservation": {
-    "dead_clicks": 33.3,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 63.7,
-    "excessive_scroll": 0.0
-   },
-   "tfa/Skm6qR0uqxVrkrT8_WvAIbQUzDVXxaCGUBfpMr1KQ4k": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
-    "excessive_scroll": 0.0
-   },
-   "project/design": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 100.0,
-    "excessive_scroll": 0.0
-   },
-   "about/trustees/eileen-scheel": {
-    "dead_clicks": 0.0,
-    "rage_clicks": 0.0,
-    "quick_backs": 0.0,
-    "scroll_depth": 67.0,
+    "scroll_depth": 77.0,
     "excessive_scroll": 0.0
    }
   }
