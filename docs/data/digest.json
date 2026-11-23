@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T13:12:39+00:00",
+ "generated": "2026-11-23T13:25:18+00:00",
  "site": "https://www.trlibrary.com",
  "dashboard": "https://seo.labs.trlibrary.com",
  "sources": {
@@ -15,12 +15,12 @@
   },
   "opportunities": {
    "state": "ok",
-   "updated": "2026-11-23T12:52:20+00:00",
+   "updated": "2026-11-23T13:25:08+00:00",
    "message": "18 striking-distance queries, 5 low-CTR pages; 142 recently changed pages held back"
   },
   "gsc": {
    "state": "ok",
-   "updated": "2026-11-23T12:33:08+00:00",
+   "updated": "2026-11-23T13:25:07+00:00",
    "message": "22494 queries, 2964 pages (2026-10-24 to 2026-11-20); 270 changed pages tracked"
   },
   "ai_visibility": {
@@ -35,12 +35,12 @@
   },
   "digest": {
    "state": "ok",
-   "updated": "2026-11-22T13:22:52+00:00",
+   "updated": "2026-11-23T13:12:39+00:00",
    "message": "llms.txt, digest.md and digest.json rebuilt"
   },
   "checkout": {
    "state": "ok",
-   "updated": "2026-11-23T13:09:24+00:00",
+   "updated": "2026-11-23T13:25:18+00:00",
    "message": "Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info"
   },
   "curate": {
@@ -65,7 +65,7 @@
   },
   "indexnow": {
    "state": "skipped",
-   "updated": "2026-11-22T13:22:52+00:00",
+   "updated": "2026-11-23T13:25:18+00:00",
    "message": "No IndexNow key yet: see the work queue task 'Turn on IndexNow'."
   }
  },
@@ -15995,7 +15995,7 @@
   "llms_txt_draft": "https://seo.labs.trlibrary.com/data/site-llms.txt"
  },
  "checkout": {
-  "updated": "2026-11-23T13:09:07+00:00",
+  "updated": "2026-11-23T13:25:10+00:00",
   "note": "Rates only; counts are never published. Users who triggered each step on the ticket store, from GA4.",
   "current": {
    "tracked_steps": [
@@ -16023,7 +16023,7 @@
     "excessive_scroll": 0.0,
     "rage_clicks": 0.3,
     "quick_backs": 7.1,
-    "scroll_depth": 46.3
+    "scroll_depth": 46.4
    },
    "pages": {
     "calendar/special-event/america-beautiful-film-screening": {
@@ -16044,7 +16044,7 @@
      "dead_clicks": 0.0,
      "rage_clicks": 0.0,
      "quick_backs": 0.0,
-     "scroll_depth": 12.0,
+     "scroll_depth": 9.0,
      "excessive_scroll": 0.0
     },
     "orders/tickets": {
@@ -16055,7 +16055,7 @@
      "excessive_scroll": 0.0
     },
     "holidaytrees": {
-     "dead_clicks": 0.0,
+     "dead_clicks": 100.0,
      "rage_clicks": 0.0,
      "quick_backs": 0.0,
      "scroll_depth": 91.0,
@@ -16072,7 +16072,7 @@
      "dead_clicks": 0.0,
      "rage_clicks": 0.0,
      "quick_backs": 0.0,
-     "scroll_depth": 6.0,
+     "scroll_depth": 21.0,
      "excessive_scroll": 0.0
     },
     "search": {
@@ -16226,7 +16226,7 @@
      "dead_clicks": 0.0,
      "rage_clicks": 0.0,
      "quick_backs": 0.0,
-     "scroll_depth": 65.0,
+     "scroll_depth": 27.5,
      "excessive_scroll": 0.0
     },
     "tr/people": {
@@ -16261,7 +16261,7 @@
      "dead_clicks": 0.0,
      "rage_clicks": 0.0,
      "quick_backs": 0.0,
-     "scroll_depth": 32.0,
+     "scroll_depth": 39.0,
      "excessive_scroll": 0.0
     },
     "visit/national-park": {
@@ -16440,10 +16440,10 @@
      "excessive_scroll": 0.0
     },
     "tr/speeches/man-in-the-arena": {
-     "dead_clicks": 27.8,
+     "dead_clicks": 26.3,
      "rage_clicks": 0.0,
      "quick_backs": 0.0,
-     "scroll_depth": 41.3,
+     "scroll_depth": 41.6,
      "excessive_scroll": 0.0
     },
     "calendar/daily-activity/family-crafting-time": {
@@ -16488,18 +16488,18 @@
      "scroll_depth": 44.0,
      "excessive_scroll": 0.0
     },
-    "tr/presidency/great-white-fleet": {
-     "dead_clicks": 50.0,
-     "rage_clicks": 0.0,
-     "quick_backs": 0.0,
-     "scroll_depth": 57.3,
-     "excessive_scroll": 0.0
-    },
     "tr/presidency/foreign-policy": {
      "dead_clicks": 0.0,
      "rage_clicks": 0.0,
      "quick_backs": 0.0,
      "scroll_depth": 92.0,
+     "excessive_scroll": 0.0
+    },
+    "tr/presidency/great-white-fleet": {
+     "dead_clicks": 50.0,
+     "rage_clicks": 0.0,
+     "quick_backs": 0.0,
+     "scroll_depth": 57.3,
      "excessive_scroll": 0.0
     },
     "about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026": {
@@ -16535,6 +16535,13 @@
      "rage_clicks": 0.0,
      "quick_backs": 0.0,
      "scroll_depth": 11.0,
+     "excessive_scroll": 0.0
+    },
+    "visit/faq/tickets": {
+     "dead_clicks": 0.0,
+     "rage_clicks": 0.0,
+     "quick_backs": 0.0,
+     "scroll_depth": 100.0,
      "excessive_scroll": 0.0
     },
     "tr/family/children": {
@@ -16604,7 +16611,7 @@
      "dead_clicks": 0.0,
      "rage_clicks": 0.0,
      "quick_backs": 0.0,
-     "scroll_depth": 51.5,
+     "scroll_depth": 57.8,
      "excessive_scroll": 0.0
     },
     "membership/detail": {
@@ -16691,18 +16698,18 @@
      "scroll_depth": 46.5,
      "excessive_scroll": 0.0
     },
-    "tr/birthday-timeline": {
-     "dead_clicks": 0.0,
-     "rage_clicks": 0.0,
-     "quick_backs": 0.0,
-     "scroll_depth": 31.0,
-     "excessive_scroll": 0.0
-    },
     "tr/rise-to-power/edith-roosevelt": {
      "dead_clicks": 50.0,
      "rage_clicks": 0.0,
      "quick_backs": 0.0,
      "scroll_depth": 91.0,
+     "excessive_scroll": 0.0
+    },
+    "tr/birthday-timeline": {
+     "dead_clicks": 0.0,
+     "rage_clicks": 0.0,
+     "quick_backs": 0.0,
+     "scroll_depth": 31.0,
      "excessive_scroll": 0.0
     },
     "tr/post-presidency": {
@@ -16745,13 +16752,6 @@
      "rage_clicks": 0.0,
      "quick_backs": 0.0,
      "scroll_depth": 46.7,
-     "excessive_scroll": 0.0
-    },
-    "visit/faq/tickets": {
-     "dead_clicks": 0.0,
-     "rage_clicks": 0.0,
-     "quick_backs": 0.0,
-     "scroll_depth": 100.0,
      "excessive_scroll": 0.0
     },
     "tr/quotes/citizenship": {
@@ -16908,18 +16908,18 @@
      "scroll_depth": 64.0,
      "excessive_scroll": 0.0
     },
-    "staff-members/susan-sarna": {
-     "dead_clicks": 0.0,
-     "rage_clicks": 0.0,
-     "quick_backs": 0.0,
-     "scroll_depth": 32.0,
-     "excessive_scroll": 0.0
-    },
     "visit/medora-traditions": {
      "dead_clicks": 0.0,
      "rage_clicks": 0.0,
      "quick_backs": 0.0,
      "scroll_depth": 100.0,
+     "excessive_scroll": 0.0
+    },
+    "staff-members/susan-sarna": {
+     "dead_clicks": 0.0,
+     "rage_clicks": 0.0,
+     "quick_backs": 0.0,
+     "scroll_depth": 32.0,
      "excessive_scroll": 0.0
     },
     "tr/presidency/panama-canal": {
@@ -17375,7 +17375,7 @@
   "ticket_page_to_store": 0.431
  },
  "work_queue": {
-  "generated": "2026-11-23T13:12:39+00:00",
+  "generated": "2026-11-23T13:25:18+00:00",
   "summary": {
    "tasks": 51,
    "by_owner": {

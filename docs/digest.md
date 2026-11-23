@@ -1,5 +1,5 @@
 # trlibrary.com search & AI visibility digest
-Generated 2026-11-23T13:12:39+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
+Generated 2026-11-23T13:25:18+00:00 from https://seo.labs.trlibrary.com. Full data: see 'Raw data' at the end.
 
 ## How to use this
 This briefing is for doing the work, not only describing it. An assistant pointed here has four jobs, in this order:
@@ -278,17 +278,17 @@ House rules for any change:
 |---|---|---|---|
 | audit | ok | 2026-11-23T12:38:39+00:00 | Crawled 1149 pages, health 95/100 |
 | ranks | ok | 2026-11-23T12:44:16+00:00 | 45 keywords checked |
-| opportunities | ok | 2026-11-23T12:52:20+00:00 | 18 striking-distance queries, 5 low-CTR pages; 142 recently changed pages held back |
-| gsc | ok | 2026-11-23T12:33:08+00:00 | 22494 queries, 2964 pages (2026-10-24 to 2026-11-20); 270 changed pages tracked |
+| opportunities | ok | 2026-11-23T13:25:08+00:00 | 18 striking-distance queries, 5 low-CTR pages; 142 recently changed pages held back |
+| gsc | ok | 2026-11-23T13:25:07+00:00 | 22494 queries, 2964 pages (2026-10-24 to 2026-11-20); 270 changed pages tracked |
 | ai_visibility | error | 2026-11-23T12:52:20+00:00 | 46 answers from ChatGPT, Gemini, Perplexity; 23 failed: Perplexity 403: {"error":{"message":"The Agent API requires paid credits. Sign-up credits and Perplexity Pro or Max subscriptions do not count. Add cr |
 | tips | ok | 2026-11-23T13:12:39+00:00 | Gemini wrote tips for 8 pages |
-| digest | ok | 2026-11-22T13:22:52+00:00 | llms.txt, digest.md and digest.json rebuilt |
-| checkout | ok | 2026-11-23T13:09:24+00:00 | Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info |
+| digest | ok | 2026-11-23T13:12:39+00:00 | llms.txt, digest.md and digest.json rebuilt |
+| checkout | ok | 2026-11-23T13:25:18+00:00 | Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info |
 | curate | ok | 2026-11-23T12:38:58+00:00 | 25 discovered keywords and 8 discovered questions tracked; 5 changes today |
 | ux | ok | 2026-11-23T13:06:11+00:00 | 82 pages; PageSpeed on 80; AI task check by gemini (gemini-3.8-flash); GA4 on; Clarity off; 2 errors, e.g. PageSpeed /visit/maps: PageSpeed 500: {   "error": {     "code": 500,     "message": "Lighthouse returned error: PAGE_HUNG. Lighthouse was unable to reliably load the URL you requeste |
 | links | ok | 2026-11-23T13:07:42+00:00 | 1184 pages crawled; 8 broken internal links (redirects proposed); 682 suggested links; 42 orphan pages; 27 related pairs without links |
 | schema | ok | 2026-11-23T13:09:00+00:00 | 352/900 content pages have their own markup; 9 sitewide issues |
-| indexnow | skipped | 2026-11-22T13:22:52+00:00 | No IndexNow key yet: see the work queue task 'Turn on IndexNow'. |
+| indexnow | skipped | 2026-11-23T13:25:18+00:00 | No IndexNow key yet: see the work queue task 'Turn on IndexNow'. |
 
 ## Google Search (Search Console)
 2026-10-24 to 2026-11-20 vs the prior 28 days: **40,684 clicks** (prior 45,822), 2,936,788 impressions (prior 2,415,331), CTR 1.4% (prior 1.9%), average position 5.7 (prior 6.1). Branded clicks 8938, non-branded 10918, search term hidden by Google 20828.
@@ -1218,17 +1218,17 @@ Most fixes are one change to a Drupal template per content type (ask FiveJars); 
 ## Ticket checkout (GA4, rates only)
 Checkout completion – (prior –); store visitors who buy 18% (prior 41%); ticket page to store 43%. Steps the store doesn't report: view_item, add_to_cart, begin_checkout, add_payment_info.
 
-Store frustration signals (last 3 days, Clarity): dead clicks 6.5% of sessions, rage clicks 0.3%, quick backs 7.1%, scroll depth 46.3%.
+Store frustration signals (last 3 days, Clarity): dead clicks 6.5% of sessions, rage clicks 0.3%, quick backs 7.1%, scroll depth 46.4%.
 
 | Store page | Dead % | Rage % | Quick back % | Scroll % |
 |---|---|---|---|---|
 | calendar/special-event/america-beautiful-film-screening | 0 | 0 | 0 | 12 |
 | checkout/process | 0 | 0 | 0 | 83 |
-| holiday-2026 | 0 | 0 | 0 | 12 |
+| holiday-2026 | 0 | 0 | 0 | 9 |
 | orders/tickets | 0 | 0 | 0 | 98.8 |
-| holidaytrees | 0 | 0 | 0 | 91 |
+| holidaytrees | 100 | 0 | 0 | 91 |
 | checkout/confirm | 0 | 0 | 22.2 | 97.4 |
-| tickets | 0 | 0 | 0 | 6 |
+| tickets | 0 | 0 | 0 | 21 |
 | search | 0 | 0 | 0 | 60 |
 | tr/family/family-tree | 0 | 0 | 0 | 57.5 |
 | midwinter-table | 0 | 0 | 0 | 23 |
@@ -1250,12 +1250,12 @@ Store frustration signals (last 3 days, Clarity): dead clicks 6.5% of sessions, 
 | tr/rise-to-power/spanish-american-war | 50 | 0 | 0 | 30 |
 | visit/medora | 0 | 0 | 0 | 67 |
 | video/view/FH2iglgaMZE | 0 | 0 | 0 | 88 |
-| membership/join | 0 | 0 | 0 | 65 |
+| membership/join | 0 | 0 | 0 | 27.5 |
 | tr/people | 0 | 0 | 0 | 12 |
 | calendar/specialty-tour | 0 | 0 | 0 | 82 |
 | quiz/pets | 0 | 0 | 0 | 100 |
 | visit/itineraries/black-hills-loop | 0 | 0 | 0 | 58.5 |
-| video/view/gPqE13bB8YI | 0 | 0 | 0 | 32 |
+| video/view/gPqE13bB8YI | 0 | 0 | 0 | 39 |
 | visit/national-park | 0 | 0 | 100 | 97 |
 | tr/pre-presidency-political-accomplishments | 50 | 0 | 0 | 19.3 |
 | tr/people/william-howard-taft | 20 | 0 | 0 | 50.6 |
@@ -1281,20 +1281,21 @@ Store frustration signals (last 3 days, Clarity): dead clicks 6.5% of sessions, 
 | video/playlist/PL-sck-PjBiFfu9EhF15jUS48bssBq1RQK | 0 | 0 | 0 | 88 |
 | staff-members/jeremy-beam | 0 | 0 | 0 | 92 |
 | visit/planner | 0 | 0 | 0 | 9 |
-| tr/speeches/man-in-the-arena | 27.8 | 0 | 0 | 41.3 |
+| tr/speeches/man-in-the-arena | 26.3 | 0 | 0 | 41.6 |
 | calendar/daily-activity/family-crafting-time | 0 | 0 | 0 | 34 |
 | video/view/Vp3hmGIYdzk | 0 | 0 | 100 | 54 |
 | about/press/press-releases/harold-hamm-donates-50-million-trpl | 0 | 0 | 0 | 98 |
 | visit/accessibility | 0 | 0 | 0 | 42 |
 | tr/rise-to-power/jacob-riis | 0 | 0 | 0 | 43 |
 | visit/faq | 0 | 0 | 0 | 44 |
-| tr/presidency/great-white-fleet | 50 | 0 | 0 | 57.3 |
 | tr/presidency/foreign-policy | 0 | 0 | 0 | 92 |
+| tr/presidency/great-white-fleet | 50 | 0 | 0 | 57.3 |
 | about/press/press-releases/theodore-roosevelt-presidential-library-opening-celebrations-july-4-2026 | 0 | 0 | 0 | 66 |
 | visit/groups/field-trips | 0 | 0 | 100 | 68 |
 | video/playlist/PLSaoXk08gMqQ | 0 | 0 | 0 | 86 |
 | tr/early-life | 0 | 0 | 0 | 41.4 |
 | tr/presidency/booker-t-washington | 0 | 0 | 0 | 11 |
+| visit/faq/tickets | 0 | 0 | 0 | 100 |
 | tr/family/children | 20 | 0 | 0 | 61.2 |
 | tr/complex-legacy/imperialism | 0 | 0 | 0 | 58.8 |
 | video/view/GpKHsBZXubE | 0 | 0 | 14.3 | 59.1 |
@@ -1304,7 +1305,7 @@ Store frustration signals (last 3 days, Clarity): dead clicks 6.5% of sessions, 
 | teach-tr | 0 | 0 | 100 | 10 |
 | tr/presidency/railroad-regulation | 0 | 0 | 0 | 53.5 |
 | video/view/lPnE-bKve_U | 0 | 0 | 100 | 23 |
-| tr/presidency | 0 | 0 | 0 | 51.5 |
+| tr/presidency | 0 | 0 | 0 | 57.8 |
 | membership/detail | 0 | 0 | 0 | 100 |
 | tr/homes-and-places/tr-national-park | 0 | 0 | 0 | 10 |
 | staff-members/cj-von-buchwald-wright | 0 | 0 | 0 | 65 |
@@ -1317,15 +1318,14 @@ Store frustration signals (last 3 days, Clarity): dead clicks 6.5% of sessions, 
 | tr/post-presidency/death | 0 | 0 | 0 | 84.3 |
 | orders/calendar | 20 | 0 | 70 | 93 |
 | tr/presidency/conservation | 0 | 0 | 0 | 46.5 |
-| tr/birthday-timeline | 0 | 0 | 0 | 31 |
 | tr/rise-to-power/edith-roosevelt | 50 | 0 | 0 | 91 |
+| tr/birthday-timeline | 0 | 0 | 0 | 31 |
 | tr/post-presidency | 0 | 0 | 0 | 56 |
 | visit/directions | 0 | 0 | 0 | 15.4 |
 | tr/presidency-timeline | 0 | 0 | 0 | 13 |
 | tr/badlands | 0 | 0 | 0 | 24 |
 | tr/presidency/elections | 0 | 0 | 0 | 15 |
 | tr/post-presidency/bull-moose | 33.3 | 0 | 0 | 46.7 |
-| visit/faq/tickets | 0 | 0 | 0 | 100 |
 | tr/quotes/citizenship | 0 | 0 | 0 | 14.1 |
 | staff-members/addison-olson | 0 | 0 | 0 | 74 |
 | tr/early-life/family-travels | 0 | 0 | 0 | 5 |
@@ -1348,8 +1348,8 @@ Store frustration signals (last 3 days, Clarity): dead clicks 6.5% of sessions, 
 | about/trustees | 0 | 0 | 0 | 95 |
 | tr/rise-to-power/buffalo-soldiers | 20 | 0 | 20 | 62.7 |
 | about/mission | 0 | 0 | 0 | 64 |
-| staff-members/susan-sarna | 0 | 0 | 0 | 32 |
 | visit/medora-traditions | 0 | 0 | 0 | 100 |
+| staff-members/susan-sarna | 0 | 0 | 0 | 32 |
 | tr/presidency/panama-canal | 25 | 0 | 0 | 19.2 |
 | podcast/good-citizen/leah-hunt-hendrix | 0 | 0 | 0 | 8 |
 | membership/renew | 0 | 0 | 25 | 95.6 |
