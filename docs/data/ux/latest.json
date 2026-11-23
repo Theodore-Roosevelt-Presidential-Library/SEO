@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T13:12:26+00:00",
+ "updated": "2026-11-23T13:06:11+00:00",
  "section": "/visit",
  "tasks": {
   "hours": "When is the Library open?",
@@ -18,10 +18,10 @@
   "ai_task_check": true
  },
  "summary": {
-  "pages": 80,
-  "pagespeed_checked": 78,
-  "performance": 53,
-  "accessibility": 96,
+  "pages": 82,
+  "pagespeed_checked": 80,
+  "performance": 52,
+  "accessibility": 97,
   "findability": 47,
   "reading_ease": 60,
   "grade_level": 8.3,
@@ -43,37 +43,37 @@
     "top": 1
    },
    "buy": {
-    "linked": 5,
-    "missing": 2,
-    "top": 4
+    "linked": 4,
+    "not_relevant": 1,
+    "top": 5,
+    "missing": 1
    },
    "directions": {
-    "top": 2,
+    "top": 1,
     "buried": 2,
-    "missing": 3,
-    "linked": 3,
-    "not_relevant": 1
+    "missing": 4,
+    "linked": 4
    },
    "visit_length": {
-    "missing": 6,
-    "not_relevant": 1,
+    "missing": 5,
+    "not_relevant": 2,
     "top": 2,
     "buried": 1,
     "linked": 1
    },
    "accessibility": {
-    "buried": 1,
-    "not_relevant": 2,
+    "buried": 3,
+    "not_relevant": 1,
     "missing": 5,
-    "linked": 2,
-    "top": 1
+    "top": 1,
+    "linked": 1
    },
    "food": {
     "buried": 3,
     "top": 2,
-    "missing": 4,
-    "linked": 1,
-    "not_relevant": 1
+    "missing": 3,
+    "not_relevant": 2,
+    "linked": 1
    }
   }
  },
@@ -92,12 +92,12 @@
     "label": "fairly hard"
    },
    "pagespeed": {
-    "performance": 53,
+    "performance": 85,
     "accessibility": 80,
     "best_practices": 100,
-    "lcp_s": 3.4,
-    "cls": 0.029,
-    "tbt_ms": 1646,
+    "lcp_s": 2.7,
+    "cls": 0.044,
+    "tbt_ms": 197,
     "a11y_failures": [
      "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
      "`[role]`s are not contained by their required parent element",
@@ -108,8 +108,8 @@
     ],
     "field": {
      "overall": "FAST",
-     "lcp_ms": 866,
-     "inp_ms": 90,
+     "lcp_ms": 838,
+     "inp_ms": 87,
      "cls": 0.01
     },
     "origin_field": "FAST"
@@ -118,50 +118,50 @@
     "tasks": {
      "hours": {
       "status": "top",
-      "note": "Full seasonal hours are listed near the top under Hours & Admission."
+      "note": "Seasonal schedules and holiday closures appear directly under the Hours & Admission section near the top."
      },
      "price": {
       "status": "top",
-      "note": "Ticket prices for adults, youth, and children appear right after hours."
+      "note": "Ticket costs for adults, youth, children, and discounts are clearly listed right after hours."
      },
      "buy": {
       "status": "top",
-      "note": "Buy Tickets links appear high on the page."
+      "note": "Prominent 'Buy Tickets' and 'Get Tickets' buttons link to ticketing near the top of the page."
      },
      "directions": {
       "status": "buried",
-      "note": "Directions and airport info are present mid-page, but parking is not mentioned."
+      "note": "Driving directions and address are halfway down; parking information is completely absent."
      },
      "visit_length": {
       "status": "top",
-      "note": "Recommends about three and a half hours for exhibitions, plus extra time for the boardwalk."
+      "note": "Recommends about three and a half hours for the exhibition, plus extra time for the boardwalk."
      },
      "accessibility": {
-      "status": "linked",
-      "note": "Mentions commitment to accessibility far down, linking to /visit/accessibility without specifics on wheelchairs or strollers."
+      "status": "buried",
+      "note": "General commitment statement and link to accessibility details appear far down near the bottom."
      },
      "food": {
       "status": "buried",
-      "note": "Details about Salt+Scoria restaurant appear midway down under Dining at the Library."
+      "note": "Salt+Scoria dining details appear past halfway down under the 'Dining at the Library' section."
      }
     },
     "facts": {
-     "hours": "Spring (March 2 - May 31): Tuesday - Friday 10am - 4pm, Saturday - Sunday 10am - 5pm; Summer (June 1 - September 13): Daily 9am - 6pm; Fall (September 14 - November 30): Tuesday - Friday 9am - 4pm, Saturday - Sunday 9am - 6pm (Closed November 26); Winter (December 1 - March 1): Wednesday - Sunday 9am - 4pm (Closed December 25, January 1)",
+     "hours": "March 2 - May 31: Tuesday - Friday 10am - 4pm, Saturday - Sunday 10am - 5pm; June 1 - September 13: Daily 9am - 6pm; September 14 - November 30: Tuesday - Friday 9am - 4pm, Saturday - Sunday 9am - 6pm (Closed November 26); December 1 - March 1: Wednesday - Sunday 9am - 4pm (Closed December 25, January 1)",
      "prices": "Adults (13+): $26; Youth (3–12): $16; Children (Under 3): Free; Discounts are available for seniors, active duty and military veterans, college students, and groups of 15+.",
      "visit_length": "Plan about three and a half hours to explore the exhibition. If you’d like to walk the one-mile boardwalk, allow extra time.",
      "address": "3410 Chateau Road, Medora, North Dakota",
      "parking": null
     },
-    "biggest_fix": "Add clear parking instructions alongside the driving directions, and move essential practical details like dining and accessibility higher on the page.",
+    "biggest_fix": "Add clear parking instructions alongside the driving directions so arriving visitors know where to leave their vehicles.",
     "dropped_claims": [],
-    "findability": 82,
+    "findability": 79,
     "checked_by": "gemini (gemini-3.8-flash)"
    },
    "ga4": {
-    "views": 4766,
-    "engagement_rate": 0.84,
-    "bounce_rate": 0.16,
-    "avg_engagement_s": 61
+    "views": 3857,
+    "engagement_rate": 0.838,
+    "bounce_rate": 0.162,
+    "avg_engagement_s": 58
    }
   },
   {
@@ -180,9 +180,9 @@
     "performance": 66,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 10.7,
-    "cls": 0.068,
-    "tbt_ms": 294,
+    "lcp_s": 10.8,
+    "cls": 0.067,
+    "tbt_ms": 274,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
@@ -191,31 +191,31 @@
     "tasks": {
      "hours": {
       "status": "missing",
-      "note": "Operating hours are not mentioned or linked on this page."
+      "note": "Operating hours are not listed or linked."
      },
      "price": {
       "status": "missing",
-      "note": "Ticket admission costs are not listed or linked."
+      "note": "Ticket prices are not mentioned or linked."
      },
      "buy": {
       "status": "missing",
-      "note": "No link or button to reserve or purchase tickets."
+      "note": "No link or guidance on purchasing tickets."
      },
      "directions": {
-      "status": "top",
-      "note": "Accessible parking details appear near the top, along with a link to directions."
+      "status": "linked",
+      "note": "A Get Directions link is provided in the Arrival and Parking section near the top."
      },
      "visit_length": {
       "status": "missing",
-      "note": "No visit duration guidance is provided."
+      "note": "No mention of visit duration to help guests pace their energy or mobility needs."
      },
      "accessibility": {
       "status": "top",
-      "note": "Details on parking, pathways, entryways, wheelchairs, restrooms, and sensory considerations are clear and prominent."
+      "note": "Detailed information on parking, wheelchair loan, path surfaces, doors, and sensory features appears immediately."
      },
      "food": {
-      "status": "missing",
-      "note": "Dining, cafe, or water availability is not mentioned."
+      "status": "not_relevant",
+      "note": "Dining information is not typically expected on an accessibility guide."
      }
     },
     "facts": {
@@ -225,16 +225,16 @@
      "address": null,
      "parking": "There are 8 ADA accessible parking spaces available within 400 feet of the entrance. Parking surfaces are concrete and the mobility access area aisles are wooden cobbles. The pathways are aggregate paving (not loose surface)."
     },
-    "biggest_fix": "Add the recommended 3 1/2 hour visit length so guests with mobility, stamina, or sensory considerations can effectively plan their day.",
+    "biggest_fix": "Note the recommended 3 1/2 hour visit length so guests with mobility or sensory needs can plan their stamina and schedule accordingly.",
     "dropped_claims": [],
     "findability": 29,
     "checked_by": "gemini (gemini-3.8-flash)"
    },
    "ga4": {
-    "views": 32,
-    "engagement_rate": 0.8,
-    "bounce_rate": 0.2,
-    "avg_engagement_s": 45
+    "views": 21,
+    "engagement_rate": 0.714,
+    "bounce_rate": 0.286,
+    "avg_engagement_s": 40
    }
   },
   {
@@ -242,7 +242,7 @@
    "url": "https://www.trlibrary.com/visit/activities",
    "status": 200,
    "readability": {
-    "words": 2107,
+    "words": 2158,
     "reading_ease": 66.3,
     "grade_level": 6.8,
     "long_paragraphs": 1,
@@ -250,12 +250,12 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 61,
+    "performance": 35,
     "accessibility": 87,
     "best_practices": 96,
-    "lcp_s": 2.1,
-    "cls": 0.067,
-    "tbt_ms": 2240,
+    "lcp_s": 4.7,
+    "cls": 0.012,
+    "tbt_ms": 3625,
     "a11y_failures": [
      "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
      "`[role]`s are not contained by their required parent element",
@@ -265,10 +265,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 196,
-    "engagement_rate": 0.893,
-    "bounce_rate": 0.107,
-    "avg_engagement_s": 94
+    "views": 169,
+    "engagement_rate": 0.897,
+    "bounce_rate": 0.103,
+    "avg_engagement_s": 85
    }
   },
   {
@@ -276,20 +276,20 @@
    "url": "https://www.trlibrary.com/visit/biking",
    "status": 200,
    "readability": {
-    "words": 997,
-    "reading_ease": 52.7,
+    "words": 1008,
+    "reading_ease": 52.8,
     "grade_level": 9.2,
     "long_paragraphs": 0,
     "words_before_ticket_link": null,
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 61,
+    "performance": 60,
     "accessibility": 81,
     "best_practices": 96,
     "lcp_s": 2.1,
     "cls": 0.057,
-    "tbt_ms": 2197,
+    "tbt_ms": 2401,
     "a11y_failures": [
      "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
      "`[role]`s are not contained by their required parent element",
@@ -301,10 +301,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 59,
-    "engagement_rate": 0.787,
-    "bounce_rate": 0.213,
-    "avg_engagement_s": 78
+    "views": 53,
+    "engagement_rate": 0.824,
+    "bounce_rate": 0.176,
+    "avg_engagement_s": 86
    }
   },
   {
@@ -320,12 +320,12 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 38,
+    "performance": 63,
     "accessibility": 99,
     "best_practices": 100,
-    "lcp_s": 13.0,
-    "cls": 0,
-    "tbt_ms": 982,
+    "lcp_s": 12.5,
+    "cls": 0.012,
+    "tbt_ms": 351,
     "a11y_failures": [
      "Heading elements are not in a sequentially-descending order"
     ],
@@ -333,10 +333,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 68,
-    "engagement_rate": 0.825,
-    "bounce_rate": 0.175,
-    "avg_engagement_s": 42
+    "views": 70,
+    "engagement_rate": 0.758,
+    "bounce_rate": 0.242,
+    "avg_engagement_s": 37
    }
   },
   {
@@ -352,54 +352,49 @@
     "label": "fairly hard"
    },
    "pagespeed": {
-    "performance": 29,
+    "performance": 35,
     "accessibility": 87,
     "best_practices": 96,
-    "lcp_s": 6.2,
+    "lcp_s": 4.7,
     "cls": 0.012,
-    "tbt_ms": 4345,
+    "tbt_ms": 4415,
     "a11y_failures": [
      "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
      "`[role]`s are not contained by their required parent element",
      "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements."
     ],
-    "field": {
-     "overall": "FAST",
-     "lcp_ms": 942,
-     "inp_ms": null,
-     "cls": 0.07
-    },
+    "field": null,
     "origin_field": "FAST"
    },
    "task_check": {
     "tasks": {
      "hours": {
       "status": "linked",
-      "note": "Linked in the top and bottom navigation bars."
+      "note": "Linked in the top and bottom navigation bars under Hours."
      },
      "price": {
       "status": "linked",
-      "note": "Linked under Tickets in the navigation bars."
+      "note": "Linked in the navigation menu under Tickets."
      },
      "buy": {
       "status": "linked",
-      "note": "Linked to Tickets in navigation; group reservation email listed under group travel."
+      "note": "Linked via Tickets in the site navigation."
      },
      "directions": {
       "status": "top",
-      "note": "Full address, highway exits, airport drives, and campus parking appear prominently near the top."
+      "note": "Street address, I-94 exit details, and regional driving routes appear right at the top."
      },
      "visit_length": {
       "status": "missing",
-      "note": "Trip planner is mentioned, but the typical 3 1/2-hour visit duration is not stated."
+      "note": "The recommended 3 1/2 hour visit length is not mentioned on the page."
      },
      "accessibility": {
       "status": "buried",
-      "note": "Detailed section on wheelchair access and mobility aids is near the bottom of the page."
+      "note": "Detailed accessibility information appears near the bottom of this long page."
      },
      "food": {
       "status": "buried",
-      "note": "A restaurant is briefly noted in the intro paragraph pointing to the campus map."
+      "note": "An on-site restaurant is mentioned in passing in the third paragraph, without details."
      }
     },
     "facts": {
@@ -409,16 +404,16 @@
      "address": "3410 Chateau Rd, Medora, ND 58645",
      "parking": "Free general parking is available on the Library campus, a short walk from the main entrance. Lots accommodate standard vehicles, accessible parking, and drop-off areas for those with mobility needs. Designated oversized vehicle parking areas are provided for RVs, buses, and motorcoaches."
     },
-    "biggest_fix": "State in the drive-time and road-trip planner sections that visitors should budget about 3 1/2 hours for the Library itself so drivers can plan their stops accurately.",
+    "biggest_fix": "State early in the driving directions that a visit takes about 3 1/2 hours so road-trippers can budget enough time.",
     "dropped_claims": [],
     "findability": 61,
     "checked_by": "gemini (gemini-3.8-flash)"
    },
    "ga4": {
-    "views": 1522,
-    "engagement_rate": 0.755,
-    "bounce_rate": 0.245,
-    "avg_engagement_s": 63
+    "views": 1175,
+    "engagement_rate": 0.768,
+    "bounce_rate": 0.232,
+    "avg_engagement_s": 67
    }
   },
   {
@@ -434,12 +429,12 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 42,
+    "performance": 48,
     "accessibility": 99,
     "best_practices": 100,
-    "lcp_s": 10.0,
-    "cls": 0.151,
-    "tbt_ms": 971,
+    "lcp_s": 11.7,
+    "cls": 0,
+    "tbt_ms": 488,
     "a11y_failures": [
      "Heading elements are not in a sequentially-descending order"
     ],
@@ -447,10 +442,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 23,
-    "engagement_rate": 0.696,
-    "bounce_rate": 0.304,
-    "avg_engagement_s": 54
+    "views": 19,
+    "engagement_rate": 0.667,
+    "bounce_rate": 0.333,
+    "avg_engagement_s": 46
    }
   },
   {
@@ -466,12 +461,12 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 63,
+    "performance": 60,
     "accessibility": 88,
     "best_practices": 96,
     "lcp_s": 2.1,
     "cls": 0.056,
-    "tbt_ms": 1385,
+    "tbt_ms": 2375,
     "a11y_failures": [
      "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
      "`[role]`s are not contained by their required parent element",
@@ -484,31 +479,31 @@
     "tasks": {
      "hours": {
       "status": "missing",
-      "note": "Lists Salt+Scoria restaurant hours by season, but does not state hours for the Library itself."
+      "note": "Lists Salt+Scoria restaurant hours, but Library building and gallery hours are not stated."
      },
      "price": {
       "status": "missing",
-      "note": "Notes no admission ticket is required to dine, but provides no ticket prices for the Library."
+      "note": "States no admission ticket is required to dine, but Library ticket prices are absent."
      },
      "buy": {
-      "status": "missing",
-      "note": "No link or mention of where to purchase Library admission tickets."
+      "status": "not_relevant",
+      "note": "A dining guide is not where visitors expect ticket purchasing."
      },
      "directions": {
       "status": "missing",
-      "note": "Mentions the free Medora Stageline Trolley connection downtown, but gives no directions or parking information."
+      "note": "Mentions the downtown trolley, but provides no driving directions or parking lot details."
      },
      "visit_length": {
-      "status": "missing",
-      "note": "No mention of recommended visit length for dining or the Library."
+      "status": "not_relevant",
+      "note": "Trip duration guidance is not expected on a dining directory."
      },
      "accessibility": {
       "status": "missing",
-      "note": "No details on wheelchair, stroller, or physical accessibility for the restaurant or dining areas."
+      "note": "No information about wheelchair or stroller accessibility for the restaurant, breezeway, or garden."
      },
      "food": {
       "status": "top",
-      "note": "Detailed seasonal hours, menu highlights, and grab-and-go options for Salt+Scoria appear right near the top."
+      "note": "Features the on-site restaurant Salt+Scoria, grab-and-go choices, and downtown Medora eateries right away."
      }
     },
     "facts": {
@@ -516,18 +511,18 @@
      "prices": null,
      "visit_length": null,
      "address": null,
-     "parking": null
+     "parking": "no need to move your car to go to dinner"
     },
-    "biggest_fix": "Add quick-jump navigation or category filters near the top of the downtown dining list so mobile visitors can quickly find meals without scrolling past twelve separate venues.",
+    "biggest_fix": "Add quick-jump filter links (such as breakfast, quick bites, family meals, and sweets) above the long list of town restaurants so phone users do not have to scroll endlessly.",
     "dropped_claims": [],
-    "findability": 14,
+    "findability": 20,
     "checked_by": "gemini (gemini-3.8-flash)"
    },
    "ga4": {
-    "views": 687,
-    "engagement_rate": 0.849,
-    "bounce_rate": 0.151,
-    "avg_engagement_s": 68
+    "views": 470,
+    "engagement_rate": 0.871,
+    "bounce_rate": 0.129,
+    "avg_engagement_s": 75
    }
   },
   {
@@ -543,12 +538,12 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 50,
+    "performance": 46,
     "accessibility": 87,
     "best_practices": 100,
-    "lcp_s": 13.7,
+    "lcp_s": 12.0,
     "cls": 0,
-    "tbt_ms": 578,
+    "tbt_ms": 877,
     "a11y_failures": [
      "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
      "Background and foreground colors do not have a sufficient contrast ratio.",
@@ -559,10 +554,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 642,
-    "engagement_rate": 0.901,
-    "bounce_rate": 0.099,
-    "avg_engagement_s": 47
+    "views": 493,
+    "engagement_rate": 0.919,
+    "bounce_rate": 0.081,
+    "avg_engagement_s": 50
    }
   },
   {
@@ -578,21 +573,21 @@
     "label": "hard"
    },
    "pagespeed": {
-    "performance": 45,
+    "performance": 69,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 12.4,
-    "cls": 0,
-    "tbt_ms": 965,
+    "lcp_s": 5.1,
+    "cls": 0.144,
+    "tbt_ms": 212,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 65,
-    "engagement_rate": 0.529,
-    "bounce_rate": 0.471,
-    "avg_engagement_s": 25
+    "views": 40,
+    "engagement_rate": 0.447,
+    "bounce_rate": 0.553,
+    "avg_engagement_s": 24
    }
   },
   {
@@ -608,21 +603,21 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 77,
+    "performance": 45,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 2.4,
-    "cls": 0.162,
-    "tbt_ms": 352,
+    "lcp_s": 5.3,
+    "cls": 0,
+    "tbt_ms": 910,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 77,
-    "engagement_rate": 0.679,
-    "bounce_rate": 0.321,
-    "avg_engagement_s": 57
+    "views": 52,
+    "engagement_rate": 0.604,
+    "bounce_rate": 0.396,
+    "avg_engagement_s": 47
    }
   },
   {
@@ -638,12 +633,12 @@
     "label": "fairly hard"
    },
    "pagespeed": {
-    "performance": 84,
+    "performance": 70,
     "accessibility": 99,
     "best_practices": 58,
     "lcp_s": 2.6,
     "cls": 0.094,
-    "tbt_ms": 178,
+    "tbt_ms": 651,
     "a11y_failures": [
      "Heading elements are not in a sequentially-descending order"
     ],
@@ -651,10 +646,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 363,
-    "engagement_rate": 0.681,
-    "bounce_rate": 0.319,
-    "avg_engagement_s": 60
+    "views": 384,
+    "engagement_rate": 0.695,
+    "bounce_rate": 0.305,
+    "avg_engagement_s": 54
    }
   },
   {
@@ -670,21 +665,21 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 41,
+    "performance": 54,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 13.6,
-    "cls": 0,
-    "tbt_ms": 813,
+    "lcp_s": 10.3,
+    "cls": 0.155,
+    "tbt_ms": 432,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 323,
-    "engagement_rate": 0.736,
-    "bounce_rate": 0.264,
-    "avg_engagement_s": 111
+    "views": 247,
+    "engagement_rate": 0.734,
+    "bounce_rate": 0.266,
+    "avg_engagement_s": 103
    }
   },
   {
@@ -700,55 +695,50 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 65,
+    "performance": 53,
     "accessibility": 87,
     "best_practices": 100,
-    "lcp_s": 2.1,
-    "cls": 0.012,
-    "tbt_ms": 1654,
+    "lcp_s": 4.9,
+    "cls": 0,
+    "tbt_ms": 534,
     "a11y_failures": [
      "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
      "`[role]`s are not contained by their required parent element",
      "Heading elements are not in a sequentially-descending order",
      "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements."
     ],
-    "field": {
-     "overall": "FAST",
-     "lcp_ms": 528,
-     "inp_ms": 54,
-     "cls": 0.0
-    },
+    "field": null,
     "origin_field": "FAST"
    },
    "task_check": {
     "tasks": {
      "hours": {
       "status": "linked",
-      "note": "Linked in the top navigation and intro copy to the hours page."
+      "note": "Linked in the top navigation, intro paragraph, and footer links."
      },
      "price": {
       "status": "linked",
-      "note": "Linked through hours & admission, tickets, and the Tickets & Entry category."
+      "note": "Linked via intro text and the Tickets & Entry topic card."
      },
      "buy": {
       "status": "linked",
-      "note": "Linked directly in top navigation and introductory body text."
+      "note": "Linked directly in navigation and introductory body copy to /tickets."
      },
      "directions": {
       "status": "linked",
-      "note": "Linked in intro text, navigation, and the Getting Here & Parking section."
+      "note": "Linked in navigation, intro text, and Getting Here & Parking card."
      },
      "visit_length": {
       "status": "linked",
-      "note": "Teased under the During Your Visit topic card linking to its subpage."
+      "note": "Mentioned as a subtopic and linked under During Your Visit."
      },
      "accessibility": {
       "status": "linked",
-      "note": "Linked under the Accessibility FAQ category card covering wheelchairs and sensory needs."
+      "note": "Linked directly under the dedicated Accessibility topic card."
      },
      "food": {
       "status": "linked",
-      "note": "Linked via the Food & Drink topic card highlighting the café and picnic areas."
+      "note": "Linked directly under the Food & Drink topic card mentioning café and water."
      }
     },
     "facts": {
@@ -758,16 +748,16 @@
      "address": null,
      "parking": null
     },
-    "biggest_fix": "Add direct, expandable answers or quick-reference callouts for top visitor questions like hours, location, and the 3 1/2 hour visit length so mobile readers do not have to click through multiple subpages.",
+    "biggest_fix": "Add direct answers to the top three visitor questions—hours, admission, and recommended visit length—right on this page so readers do not have to click through multiple subpages.",
     "dropped_claims": [],
     "findability": 75,
     "checked_by": "gemini (gemini-3.8-flash)"
    },
    "ga4": {
-    "views": 1482,
-    "engagement_rate": 0.929,
-    "bounce_rate": 0.071,
-    "avg_engagement_s": 30
+    "views": 1042,
+    "engagement_rate": 0.933,
+    "bounce_rate": 0.067,
+    "avg_engagement_s": 31
    }
   },
   {
@@ -783,21 +773,21 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 42,
+    "performance": 38,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 10.3,
-    "cls": 0.476,
-    "tbt_ms": 412,
+    "lcp_s": 10.4,
+    "cls": 0.464,
+    "tbt_ms": 514,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 56,
-    "engagement_rate": 0.926,
-    "bounce_rate": 0.074,
-    "avg_engagement_s": 73
+    "views": 35,
+    "engagement_rate": 1.0,
+    "bounce_rate": 0.0,
+    "avg_engagement_s": 49
    }
   },
   {
@@ -813,21 +803,21 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 43,
+    "performance": 42,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 10.0,
-    "cls": 0.649,
-    "tbt_ms": 327,
+    "lcp_s": 11.1,
+    "cls": 0.636,
+    "tbt_ms": 293,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 362,
-    "engagement_rate": 0.889,
-    "bounce_rate": 0.111,
-    "avg_engagement_s": 89
+    "views": 237,
+    "engagement_rate": 0.841,
+    "bounce_rate": 0.159,
+    "avg_engagement_s": 93
    }
   },
   {
@@ -843,21 +833,21 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 39,
+    "performance": 49,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 10.1,
+    "lcp_s": 10.7,
     "cls": 0.257,
-    "tbt_ms": 792,
+    "tbt_ms": 367,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 129,
-    "engagement_rate": 0.919,
-    "bounce_rate": 0.081,
-    "avg_engagement_s": 30
+    "views": 90,
+    "engagement_rate": 0.941,
+    "bounce_rate": 0.059,
+    "avg_engagement_s": 34
    }
   },
   {
@@ -873,20 +863,20 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 49,
+    "performance": 39,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 12.3,
+    "lcp_s": 11.9,
     "cls": 0,
-    "tbt_ms": 451,
+    "tbt_ms": 997,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 178,
-    "engagement_rate": 0.933,
-    "bounce_rate": 0.067,
+    "views": 138,
+    "engagement_rate": 0.922,
+    "bounce_rate": 0.078,
     "avg_engagement_s": 52
    }
   },
@@ -906,18 +896,18 @@
     "performance": 43,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 11.2,
+    "lcp_s": 10.4,
     "cls": 0.452,
-    "tbt_ms": 332,
+    "tbt_ms": 336,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 86,
-    "engagement_rate": 0.953,
-    "bounce_rate": 0.047,
-    "avg_engagement_s": 28
+    "views": 59,
+    "engagement_rate": 0.983,
+    "bounce_rate": 0.017,
+    "avg_engagement_s": 30
    }
   },
   {
@@ -933,21 +923,21 @@
     "label": "fairly hard"
    },
    "pagespeed": {
-    "performance": 44,
+    "performance": 45,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 10.7,
-    "cls": 0.467,
-    "tbt_ms": 382,
+    "lcp_s": 11.3,
+    "cls": 0,
+    "tbt_ms": 1090,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 127,
-    "engagement_rate": 0.881,
-    "bounce_rate": 0.119,
-    "avg_engagement_s": 54
+    "views": 76,
+    "engagement_rate": 0.893,
+    "bounce_rate": 0.107,
+    "avg_engagement_s": 49
    }
   },
   {
@@ -963,12 +953,12 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 36,
+    "performance": 48,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 11.9,
+    "lcp_s": 5.3,
     "cls": 0,
-    "tbt_ms": 1222,
+    "tbt_ms": 709,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
@@ -977,31 +967,31 @@
     "tasks": {
      "hours": {
       "status": "missing",
-      "note": "Opening and closing hours are not stated or linked on this page."
+      "note": "Operating hours are not stated or linked anywhere on this page."
      },
      "price": {
       "status": "linked",
-      "note": "Prices are not listed in the FAQ, but the 'Buy tickets' link leads to the ticketing page."
+      "note": "Prices are not listed, but the 'Buy tickets ›' link directs to the ticketing system."
      },
      "buy": {
       "status": "top",
-      "note": "Answered at the very top of the page with a direct link to buy tickets."
+      "note": "Clearly explained in the first question, noting online purchasing and walk-up Welcome Desk options."
      },
      "directions": {
-      "status": "not_relevant",
-      "note": "Not expected on a page dedicated specifically to ticketing and entry questions."
+      "status": "missing",
+      "note": "No driving directions, address, or parking information is mentioned or linked."
      },
      "visit_length": {
       "status": "missing",
-      "note": "Not mentioned, though helpful context for visitors planning around timed entry slots."
+      "note": "Explains timed entry windows, but does not state how long a visit takes."
      },
      "accessibility": {
-      "status": "not_relevant",
-      "note": "Not expected on a page focused on ticket policies and purchasing."
+      "status": "missing",
+      "note": "No mention of accessibility, companion tickets, or stroller policies on this FAQ."
      },
      "food": {
       "status": "not_relevant",
-      "note": "Dining information is not expected on a ticketing FAQ page."
+      "note": "Food and drink questions are not expected on a ticket-specific FAQ."
      }
     },
     "facts": {
@@ -1011,16 +1001,48 @@
      "address": null,
      "parking": null
     },
-    "biggest_fix": "Add ticket prices directly to the page so visitors can see admission costs before clicking into the checkout system.",
+    "biggest_fix": "Add a question stating ticket prices and categories so visitors know admission costs without having to begin the checkout process.",
     "dropped_claims": [],
-    "findability": 44,
+    "findability": 29,
     "checked_by": "gemini (gemini-3.8-flash)"
    },
    "ga4": {
-    "views": 400,
-    "engagement_rate": 0.95,
-    "bounce_rate": 0.05,
-    "avg_engagement_s": 58
+    "views": 241,
+    "engagement_rate": 0.931,
+    "bounce_rate": 0.069,
+    "avg_engagement_s": 63
+   }
+  },
+  {
+   "path": "/visit/gateway-trails",
+   "url": "https://www.trlibrary.com/visit/gateway-trails",
+   "status": 200,
+   "readability": {
+    "words": 1085,
+    "reading_ease": 68.5,
+    "grade_level": 6.7,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": 1103,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 69,
+    "accessibility": 99,
+    "best_practices": 100,
+    "lcp_s": 2.4,
+    "cls": 0,
+    "tbt_ms": 812,
+    "a11y_failures": [
+     "Heading elements are not in a sequentially-descending order"
+    ],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 46,
+    "engagement_rate": 0.48,
+    "bounce_rate": 0.52,
+    "avg_engagement_s": 22
    }
   },
   {
@@ -1036,21 +1058,21 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 44,
+    "performance": 47,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 2.0,
-    "cls": 0.525,
-    "tbt_ms": 1205,
+    "lcp_s": 4.1,
+    "cls": 0,
+    "tbt_ms": 1095,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
     "views": 4,
-    "engagement_rate": 0.333,
-    "bounce_rate": 0.667,
-    "avg_engagement_s": 16
+    "engagement_rate": 0.5,
+    "bounce_rate": 0.5,
+    "avg_engagement_s": 22
    }
   },
   {
@@ -1066,12 +1088,12 @@
     "label": "hard"
    },
    "pagespeed": {
-    "performance": 68,
+    "performance": 48,
     "accessibility": 87,
     "best_practices": 100,
-    "lcp_s": 2.6,
+    "lcp_s": 5.1,
     "cls": 0,
-    "tbt_ms": 873,
+    "tbt_ms": 778,
     "a11y_failures": [
      "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
      "Background and foreground colors do not have a sufficient contrast ratio.",
@@ -1085,31 +1107,31 @@
     "tasks": {
      "hours": {
       "status": "missing",
-      "note": "No daily operating hours or seasonal schedules are listed."
+      "note": "Operating hours and seasonal schedules are neither listed nor linked."
      },
      "price": {
       "status": "missing",
-      "note": "Mentions a 10% group discount, but no baseline ticket prices are shown."
+      "note": "Notes a 10% discount for 15 or more guests, but lists no actual ticket prices."
      },
      "buy": {
       "status": "top",
-      "note": "Clear links to request group reservations via form are visible near the top."
+      "note": "Clear links to the group tour request form appear right below booking criteria."
      },
      "directions": {
       "status": "missing",
-      "note": "No driving directions, street address, or bus drop-off and parking details are provided."
+      "note": "No address, bus drop-off directions, or parking information is provided."
      },
      "visit_length": {
       "status": "top",
-      "note": "States right in the second paragraph to allow about three and a half hours."
+      "note": "The second paragraph clearly states to allow about three and a half hours."
      },
      "accessibility": {
       "status": "missing",
-      "note": "No information about wheelchair access, strollers, or special accommodations."
+      "note": "Wheelchair, stroller, and mobility accommodations are not mentioned."
      },
      "food": {
       "status": "missing",
-      "note": "No mention of on-site dining, box lunches, or group meal options."
+      "note": "No information on group dining, cafe amenities, or box lunches is provided."
      }
     },
     "facts": {
@@ -1119,16 +1141,16 @@
      "address": null,
      "parking": null
     },
-    "biggest_fix": "Add base ticket prices and bus drop-off or parking details so group organizers can build an accurate budget and itinerary.",
+    "biggest_fix": "Add baseline ticket prices and motorcoach parking details so group leaders can budget and plan their arrival before submitting a reservation form.",
     "dropped_claims": [],
     "findability": 29,
     "checked_by": "gemini (gemini-3.8-flash)"
    },
    "ga4": {
-    "views": 74,
-    "engagement_rate": 0.862,
-    "bounce_rate": 0.138,
-    "avg_engagement_s": 98
+    "views": 64,
+    "engagement_rate": 0.803,
+    "bounce_rate": 0.197,
+    "avg_engagement_s": 68
    }
   },
   {
@@ -1144,12 +1166,12 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 37,
+    "performance": 57,
     "accessibility": 94,
-    "best_practices": 58,
-    "lcp_s": 5.7,
-    "cls": 0,
-    "tbt_ms": 1635,
+    "best_practices": 54,
+    "lcp_s": 3.3,
+    "cls": 0.012,
+    "tbt_ms": 1072,
     "a11y_failures": [
      "Background and foreground colors do not have a sufficient contrast ratio.",
      "`<frame>` or `<iframe>` elements do not have a title"
@@ -1158,10 +1180,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 74,
-    "engagement_rate": 0.767,
-    "bounce_rate": 0.233,
-    "avg_engagement_s": 63
+    "views": 59,
+    "engagement_rate": 0.726,
+    "bounce_rate": 0.274,
+    "avg_engagement_s": 42
    }
   },
   {
@@ -1169,20 +1191,20 @@
    "url": "https://www.trlibrary.com/visit/hiking",
    "status": 200,
    "readability": {
-    "words": 1273,
-    "reading_ease": 69.6,
+    "words": 1313,
+    "reading_ease": 69.5,
     "grade_level": 6.3,
     "long_paragraphs": 1,
     "words_before_ticket_link": null,
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 59,
+    "performance": 58,
     "accessibility": 81,
     "best_practices": 96,
     "lcp_s": 2.1,
     "cls": 0.055,
-    "tbt_ms": 2588,
+    "tbt_ms": 3708,
     "a11y_failures": [
      "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
      "`[role]`s are not contained by their required parent element",
@@ -1194,10 +1216,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 101,
-    "engagement_rate": 0.874,
-    "bounce_rate": 0.126,
-    "avg_engagement_s": 103
+    "views": 82,
+    "engagement_rate": 0.857,
+    "bounce_rate": 0.143,
+    "avg_engagement_s": 90
    }
   },
   {
@@ -1213,74 +1235,69 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 32,
+    "performance": 48,
     "accessibility": 86,
     "best_practices": 100,
-    "lcp_s": 10.1,
-    "cls": 0.489,
-    "tbt_ms": 771,
+    "lcp_s": 11.5,
+    "cls": 0.311,
+    "tbt_ms": 350,
     "a11y_failures": [
      "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
      "`[role]`s are not contained by their required parent element",
      "Heading elements are not in a sequentially-descending order",
      "List items (`<li>`) are not contained within `<ul>`, `<ol>` or `<menu>` parent elements."
     ],
-    "field": {
-     "overall": "FAST",
-     "lcp_ms": null,
-     "inp_ms": null,
-     "cls": 0.0
-    },
+    "field": null,
     "origin_field": "FAST"
    },
    "task_check": {
     "tasks": {
      "hours": {
       "status": "top",
-      "note": "Seasonal museum, retail, and restaurant hours appear right below the introductory text."
+      "note": "Seasonal hours for the museum, store, and restaurant are displayed prominently near the top."
      },
      "price": {
       "status": "linked",
-      "note": "Regular admission pricing is not listed, but Tickets links point to /tickets."
+      "note": "General ticket prices are not listed; visitors must follow the 'Tickets' navigation link."
      },
      "buy": {
-      "status": "linked",
-      "note": "Links to Tickets and Reserve Tickets lead directly to /tickets."
+      "status": "top",
+      "note": "Navigation links to 'Tickets' appear at the top, and a 'Reserve Tickets' button is below."
      },
      "directions": {
       "status": "linked",
-      "note": "No route or parking information is on the page, but Directions links to /visit/directions."
+      "note": "Directions and parking are not detailed on this page, but 'Directions' is linked in navigation."
      },
      "visit_length": {
       "status": "buried",
-      "note": "The three-and-a-half-hour recommendation is placed far down under Additional Details."
+      "note": "Recommended visit time of three and a half hours is placed down under 'Additional Details'."
      },
      "accessibility": {
       "status": "missing",
-      "note": "Boardwalk hours are noted, but wheelchair and stroller accessibility are unmentioned and unlinked."
+      "note": "No information on strollers, wheelchairs, or physical accessibility is provided or directly linked."
      },
      "food": {
       "status": "top",
-      "note": "Salt + Scoria Restaurant hours and Café Lite details are shown in the seasonal schedules."
+      "note": "Salt + Scoria Restaurant and Café Lite hours and offerings are detailed in each seasonal section."
      }
     },
     "facts": {
-     "hours": "March 2 - May 31: Tuesday - Friday 10am - 4pm, Saturday - Sunday 10am - 5pm; June 1 - September 13: Daily 9am - 6pm; September 14 - November 30: Tuesday - Friday 9am - 4pm, Saturday - Sunday 9am - 6pm (Closed November 26); December 1 - March 1: Wednesday - Sunday 9am - 4pm (Closed December 25, January 1)",
+     "hours": "March 2 - May 31: Tuesday - Friday 10am - 4pm, Saturday - Sunday 10am - 5pm; June 1 - September 13: Daily 9am - 6pm; September 14 - November 30: Tuesday - Friday 9am - 4pm, Saturday - Sunday 9am - 6pm; December 1 - March 1: Wednesday - Sunday 9am - 4pm",
      "prices": null,
      "visit_length": "Allow about three and a half hours to explore the exhibition.",
      "address": null,
      "parking": null
     },
-    "biggest_fix": "Move the three-and-a-half-hour visit recommendation and the 90-minute last-entry cutoff up to the top of the page so guests know when to arrive before scrolling seasonal tables.",
+    "biggest_fix": "Move the three-and-a-half-hour recommended visit length and the 90-minute last entry rule to the top of the page so guests can plan when to arrive before closing.",
     "dropped_claims": [],
-    "findability": 68,
+    "findability": 71,
     "checked_by": "gemini (gemini-3.8-flash)"
    },
    "ga4": {
-    "views": 1265,
-    "engagement_rate": 0.771,
-    "bounce_rate": 0.229,
-    "avg_engagement_s": 55
+    "views": 989,
+    "engagement_rate": 0.77,
+    "bounce_rate": 0.23,
+    "avg_engagement_s": 51
    }
   },
   {
@@ -1296,12 +1313,12 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 60,
+    "performance": 40,
     "accessibility": 99,
     "best_practices": 100,
-    "lcp_s": 11.6,
-    "cls": 0.055,
-    "tbt_ms": 448,
+    "lcp_s": 10.4,
+    "cls": 0,
+    "tbt_ms": 1464,
     "a11y_failures": [
      "Heading elements are not in a sequentially-descending order"
     ],
@@ -1309,10 +1326,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 68,
-    "engagement_rate": 0.692,
-    "bounce_rate": 0.308,
-    "avg_engagement_s": 74
+    "views": 74,
+    "engagement_rate": 0.608,
+    "bounce_rate": 0.392,
+    "avg_engagement_s": 66
    }
   },
   {
@@ -1328,12 +1345,12 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 62,
+    "performance": 37,
     "accessibility": 99,
     "best_practices": 96,
-    "lcp_s": 2.1,
-    "cls": 0.055,
-    "tbt_ms": 2075,
+    "lcp_s": 4.6,
+    "cls": 0.012,
+    "tbt_ms": 3070,
     "a11y_failures": [
      "Heading elements are not in a sequentially-descending order"
     ],
@@ -1341,10 +1358,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 22,
-    "engagement_rate": 0.867,
-    "bounce_rate": 0.133,
-    "avg_engagement_s": 148
+    "views": 13,
+    "engagement_rate": 0.714,
+    "bounce_rate": 0.286,
+    "avg_engagement_s": 86
    }
   },
   {
@@ -1360,12 +1377,12 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 71,
+    "performance": 86,
     "accessibility": 87,
     "best_practices": 100,
     "lcp_s": 2.0,
-    "cls": 0.055,
-    "tbt_ms": 1120,
+    "cls": 0.067,
+    "tbt_ms": 338,
     "a11y_failures": [
      "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
      "Background and foreground colors do not have a sufficient contrast ratio.",
@@ -1376,10 +1393,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 157,
-    "engagement_rate": 0.776,
-    "bounce_rate": 0.224,
-    "avg_engagement_s": 63
+    "views": 122,
+    "engagement_rate": 0.75,
+    "bounce_rate": 0.25,
+    "avg_engagement_s": 68
    }
   },
   {
@@ -1395,12 +1412,12 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 28,
+    "performance": 24,
     "accessibility": 97,
     "best_practices": 100,
-    "lcp_s": 11.0,
+    "lcp_s": 39.2,
     "cls": 0.198,
-    "tbt_ms": 1444,
+    "tbt_ms": 1097,
     "a11y_failures": [
      "Links do not have a discernible name"
     ],
@@ -1408,10 +1425,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 14,
-    "engagement_rate": 0.75,
-    "bounce_rate": 0.25,
-    "avg_engagement_s": 25
+    "views": 13,
+    "engagement_rate": 0.857,
+    "bounce_rate": 0.143,
+    "avg_engagement_s": 28
    }
   },
   {
@@ -1427,21 +1444,21 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 28,
+    "performance": 38,
     "accessibility": 100,
     "best_practices": 96,
-    "lcp_s": 7.0,
-    "cls": 0,
-    "tbt_ms": 4190,
+    "lcp_s": 4.6,
+    "cls": 0.012,
+    "tbt_ms": 2380,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 11,
-    "engagement_rate": 0.6,
-    "bounce_rate": 0.4,
-    "avg_engagement_s": 45
+    "views": 32,
+    "engagement_rate": 0.806,
+    "bounce_rate": 0.194,
+    "avg_engagement_s": 17
    }
   },
   {
@@ -1457,21 +1474,21 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 58,
+    "performance": 38,
     "accessibility": 100,
     "best_practices": 96,
-    "lcp_s": 2.1,
-    "cls": 0.118,
-    "tbt_ms": 2201,
+    "lcp_s": 4.5,
+    "cls": 0.012,
+    "tbt_ms": 2848,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 35,
-    "engagement_rate": 0.824,
-    "bounce_rate": 0.176,
-    "avg_engagement_s": 97
+    "views": 50,
+    "engagement_rate": 0.846,
+    "bounce_rate": 0.154,
+    "avg_engagement_s": 53
    }
   },
   {
@@ -1487,21 +1504,21 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 50,
+    "performance": 64,
     "accessibility": 100,
     "best_practices": 96,
-    "lcp_s": 2.7,
+    "lcp_s": 2.1,
     "cls": 0.144,
-    "tbt_ms": 2359,
+    "tbt_ms": 963,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 18,
-    "engagement_rate": 0.682,
-    "bounce_rate": 0.318,
-    "avg_engagement_s": 47
+    "views": 16,
+    "engagement_rate": 0.7,
+    "bounce_rate": 0.3,
+    "avg_engagement_s": 61
    }
   },
   {
@@ -1517,21 +1534,21 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 57,
+    "performance": 37,
     "accessibility": 100,
     "best_practices": 96,
-    "lcp_s": 2.1,
-    "cls": 0.131,
-    "tbt_ms": 2066,
+    "lcp_s": 4.6,
+    "cls": 0.012,
+    "tbt_ms": 2714,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 16,
-    "engagement_rate": 0.812,
-    "bounce_rate": 0.188,
-    "avg_engagement_s": 112
+    "views": 23,
+    "engagement_rate": 0.87,
+    "bounce_rate": 0.13,
+    "avg_engagement_s": 31
    }
   },
   {
@@ -1551,17 +1568,17 @@
     "accessibility": 100,
     "best_practices": 96,
     "lcp_s": 2.1,
-    "cls": 0.144,
-    "tbt_ms": 1662,
+    "cls": 0.132,
+    "tbt_ms": 2123,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 22,
-    "engagement_rate": 0.773,
-    "bounce_rate": 0.227,
-    "avg_engagement_s": 86
+    "views": 15,
+    "engagement_rate": 0.933,
+    "bounce_rate": 0.067,
+    "avg_engagement_s": 128
    }
   },
   {
@@ -1577,21 +1594,21 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 59,
+    "performance": 39,
     "accessibility": 100,
     "best_practices": 96,
-    "lcp_s": 2.1,
-    "cls": 0.144,
-    "tbt_ms": 1454,
+    "lcp_s": 4.5,
+    "cls": 0.012,
+    "tbt_ms": 2457,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 20,
-    "engagement_rate": 0.579,
-    "bounce_rate": 0.421,
-    "avg_engagement_s": 39
+    "views": 16,
+    "engagement_rate": 0.533,
+    "bounce_rate": 0.467,
+    "avg_engagement_s": 42
    }
   },
   {
@@ -1607,21 +1624,21 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 35,
+    "performance": 53,
     "accessibility": 100,
     "best_practices": 96,
-    "lcp_s": 4.7,
-    "cls": 0,
-    "tbt_ms": 4863,
+    "lcp_s": 2.1,
+    "cls": 0.145,
+    "tbt_ms": 3626,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 20,
-    "engagement_rate": 0.739,
-    "bounce_rate": 0.261,
-    "avg_engagement_s": 106
+    "views": 26,
+    "engagement_rate": 0.853,
+    "bounce_rate": 0.147,
+    "avg_engagement_s": 63
    }
   },
   {
@@ -1637,21 +1654,21 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 34,
+    "performance": 58,
     "accessibility": 100,
     "best_practices": 96,
-    "lcp_s": 5.4,
-    "cls": 0.158,
-    "tbt_ms": 3626,
+    "lcp_s": 2.1,
+    "cls": 0.145,
+    "tbt_ms": 2020,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 28,
-    "engagement_rate": 0.548,
-    "bounce_rate": 0.452,
-    "avg_engagement_s": 38
+    "views": 27,
+    "engagement_rate": 0.567,
+    "bounce_rate": 0.433,
+    "avg_engagement_s": 37
    }
   },
   {
@@ -1667,21 +1684,21 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 35,
+    "performance": 38,
     "accessibility": 100,
     "best_practices": 96,
-    "lcp_s": 4.7,
-    "cls": 0,
-    "tbt_ms": 4559,
+    "lcp_s": 4.6,
+    "cls": 0.012,
+    "tbt_ms": 2529,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 14,
-    "engagement_rate": 0.429,
-    "bounce_rate": 0.571,
-    "avg_engagement_s": 82
+    "views": 26,
+    "engagement_rate": 0.679,
+    "bounce_rate": 0.321,
+    "avg_engagement_s": 1
    }
   },
   {
@@ -1697,21 +1714,21 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 55,
+    "performance": 31,
     "accessibility": 100,
     "best_practices": 96,
-    "lcp_s": 2.1,
-    "cls": 0.145,
-    "tbt_ms": 2335,
+    "lcp_s": 7.0,
+    "cls": 0,
+    "tbt_ms": 1813,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 35,
-    "engagement_rate": 0.484,
-    "bounce_rate": 0.516,
-    "avg_engagement_s": 37
+    "views": 30,
+    "engagement_rate": 0.444,
+    "bounce_rate": 0.556,
+    "avg_engagement_s": 35
    }
   },
   {
@@ -1727,21 +1744,21 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 56,
+    "performance": 58,
     "accessibility": 100,
     "best_practices": 96,
     "lcp_s": 2.1,
     "cls": 0.131,
-    "tbt_ms": 2430,
+    "tbt_ms": 1607,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 8,
-    "engagement_rate": 0.5,
-    "bounce_rate": 0.5,
-    "avg_engagement_s": 24
+    "views": 26,
+    "engagement_rate": 0.679,
+    "bounce_rate": 0.321,
+    "avg_engagement_s": 3
    }
   },
   {
@@ -1757,21 +1774,21 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 22,
+    "performance": 40,
     "accessibility": 100,
     "best_practices": 96,
-    "lcp_s": 5.4,
-    "cls": 0.257,
-    "tbt_ms": 2294,
+    "lcp_s": 2.1,
+    "cls": 0.423,
+    "tbt_ms": 2979,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 111,
-    "engagement_rate": 0.712,
-    "bounce_rate": 0.288,
-    "avg_engagement_s": 95
+    "views": 89,
+    "engagement_rate": 0.656,
+    "bounce_rate": 0.344,
+    "avg_engagement_s": 45
    }
   },
   {
@@ -1779,29 +1796,29 @@
    "url": "https://www.trlibrary.com/visit/itineraries/presidential-libraries",
    "status": 200,
    "readability": {
-    "words": 776,
-    "reading_ease": 57.1,
-    "grade_level": 8.6,
+    "words": 763,
+    "reading_ease": 57.7,
+    "grade_level": 8.4,
     "long_paragraphs": 1,
     "words_before_ticket_link": null,
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 56,
+    "performance": 57,
     "accessibility": 100,
     "best_practices": 96,
     "lcp_s": 2.1,
     "cls": 0.13,
-    "tbt_ms": 2158,
+    "tbt_ms": 1626,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 30,
-    "engagement_rate": 0.833,
-    "bounce_rate": 0.167,
-    "avg_engagement_s": 78
+    "views": 44,
+    "engagement_rate": 0.844,
+    "bounce_rate": 0.156,
+    "avg_engagement_s": 46
    }
   },
   {
@@ -1817,21 +1834,21 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 57,
+    "performance": 55,
     "accessibility": 100,
     "best_practices": 96,
     "lcp_s": 2.1,
     "cls": 0.131,
-    "tbt_ms": 1925,
+    "tbt_ms": 2044,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 3,
-    "engagement_rate": 0.75,
-    "bounce_rate": 0.25,
-    "avg_engagement_s": 30
+    "views": 0,
+    "engagement_rate": 0.0,
+    "bounce_rate": 0.0,
+    "avg_engagement_s": 45
    }
   },
   {
@@ -1847,12 +1864,12 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 27,
+    "performance": 17,
     "accessibility": 97,
-    "best_practices": 100,
-    "lcp_s": 17.2,
-    "cls": 0.012,
-    "tbt_ms": 3632,
+    "best_practices": 96,
+    "lcp_s": 16.3,
+    "cls": 0.198,
+    "tbt_ms": 4710,
     "a11y_failures": [
      "Links do not have a discernible name"
     ],
@@ -1860,10 +1877,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 8,
-    "engagement_rate": 0.714,
-    "bounce_rate": 0.286,
-    "avg_engagement_s": 10
+    "views": 19,
+    "engagement_rate": 0.833,
+    "bounce_rate": 0.167,
+    "avg_engagement_s": 4
    }
   },
   {
@@ -1879,21 +1896,21 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 53,
+    "performance": 36,
     "accessibility": 100,
     "best_practices": 96,
-    "lcp_s": 2.1,
-    "cls": 0.144,
-    "tbt_ms": 3143,
+    "lcp_s": 4.7,
+    "cls": 0,
+    "tbt_ms": 3357,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 14,
-    "engagement_rate": 0.571,
-    "bounce_rate": 0.429,
-    "avg_engagement_s": 193
+    "views": 9,
+    "engagement_rate": 0.667,
+    "bounce_rate": 0.333,
+    "avg_engagement_s": 244
    }
   },
   {
@@ -1901,28 +1918,28 @@
    "url": "https://www.trlibrary.com/visit/itineraries/sturgis-medora",
    "status": 200,
    "readability": {
-    "words": 772,
-    "reading_ease": 67.9,
+    "words": 767,
+    "reading_ease": 67.5,
     "grade_level": 7.3,
     "long_paragraphs": 0,
     "words_before_ticket_link": null,
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 55,
+    "performance": 56,
     "accessibility": 100,
     "best_practices": 96,
     "lcp_s": 2.1,
     "cls": 0.131,
-    "tbt_ms": 2350,
+    "tbt_ms": 3119,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 50,
-    "engagement_rate": 0.438,
-    "bounce_rate": 0.562,
+    "views": 60,
+    "engagement_rate": 0.456,
+    "bounce_rate": 0.544,
     "avg_engagement_s": 5
    }
   },
@@ -1939,12 +1956,12 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 55,
+    "performance": 31,
     "accessibility": 97,
     "best_practices": 96,
-    "lcp_s": 2.1,
-    "cls": 0.144,
-    "tbt_ms": 2070,
+    "lcp_s": 5.8,
+    "cls": 0.012,
+    "tbt_ms": 2595,
     "a11y_failures": [
      "`<frame>` or `<iframe>` elements do not have a title"
     ],
@@ -1952,10 +1969,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 12,
-    "engagement_rate": 0.9,
-    "bounce_rate": 0.1,
-    "avg_engagement_s": 101
+    "views": 9,
+    "engagement_rate": 0.875,
+    "bounce_rate": 0.125,
+    "avg_engagement_s": 103
    }
   },
   {
@@ -1974,18 +1991,18 @@
     "performance": 31,
     "accessibility": 100,
     "best_practices": 96,
-    "lcp_s": 17.8,
-    "cls": 0,
-    "tbt_ms": 1422,
+    "lcp_s": 17.1,
+    "cls": 0.15,
+    "tbt_ms": 2244,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 14,
-    "engagement_rate": 0.583,
-    "bounce_rate": 0.417,
-    "avg_engagement_s": 25
+    "views": 36,
+    "engagement_rate": 0.676,
+    "bounce_rate": 0.324,
+    "avg_engagement_s": 26
    }
   },
   {
@@ -2001,21 +2018,21 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 58,
+    "performance": 63,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 5.7,
+    "lcp_s": 4.8,
     "cls": 0,
-    "tbt_ms": 252,
+    "tbt_ms": 246,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 23,
-    "engagement_rate": 0.652,
-    "bounce_rate": 0.348,
-    "avg_engagement_s": 67
+    "views": 17,
+    "engagement_rate": 0.684,
+    "bounce_rate": 0.316,
+    "avg_engagement_s": 51
    }
   },
   {
@@ -2031,21 +2048,21 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 82,
+    "performance": 79,
     "accessibility": 100,
     "best_practices": 100,
     "lcp_s": 2.0,
-    "cls": 0.139,
-    "tbt_ms": 306,
+    "cls": 0.152,
+    "tbt_ms": 391,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 12,
-    "engagement_rate": 0.562,
-    "bounce_rate": 0.438,
-    "avg_engagement_s": 50
+    "views": 10,
+    "engagement_rate": 0.667,
+    "bounce_rate": 0.333,
+    "avg_engagement_s": 37
    }
   },
   {
@@ -2061,21 +2078,21 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 60,
+    "performance": 50,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 11.5,
-    "cls": 0.152,
-    "tbt_ms": 295,
+    "lcp_s": 4.9,
+    "cls": 0,
+    "tbt_ms": 758,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 13,
-    "engagement_rate": 0.692,
-    "bounce_rate": 0.308,
-    "avg_engagement_s": 68
+    "views": 10,
+    "engagement_rate": 0.7,
+    "bounce_rate": 0.3,
+    "avg_engagement_s": 88
    }
   },
   {
@@ -2091,12 +2108,12 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 46,
+    "performance": 50,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 5.2,
+    "lcp_s": 4.8,
     "cls": 0,
-    "tbt_ms": 862,
+    "tbt_ms": 725,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
@@ -2121,21 +2138,21 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 66,
+    "performance": 51,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 5.6,
+    "lcp_s": 9.2,
     "cls": 0.073,
-    "tbt_ms": 377,
+    "tbt_ms": 783,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 18,
-    "engagement_rate": 0.625,
-    "bounce_rate": 0.375,
-    "avg_engagement_s": 94
+    "views": 16,
+    "engagement_rate": 0.467,
+    "bounce_rate": 0.533,
+    "avg_engagement_s": 31
    }
   },
   {
@@ -2151,12 +2168,12 @@
     "label": "fairly hard"
    },
    "pagespeed": {
-    "performance": 31,
+    "performance": 28,
     "accessibility": 87,
     "best_practices": 96,
-    "lcp_s": 5.5,
+    "lcp_s": 6.1,
     "cls": 0.012,
-    "tbt_ms": 10125,
+    "tbt_ms": 9304,
     "a11y_failures": [
      "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
      "`[role]`s are not contained by their required parent element",
@@ -2169,31 +2186,31 @@
     "tasks": {
      "hours": {
       "status": "not_relevant",
-      "note": "A visitor researching places to stay would not expect Library opening hours here."
+      "note": "Lodging directory; visitors would not expect Library operating hours on this page."
      },
      "price": {
       "status": "not_relevant",
-      "note": "A visitor comparing Medora hotels and campgrounds would not expect Library admission prices here."
+      "note": "Not expected on a lodging page, though package admission is briefly referenced."
      },
      "buy": {
       "status": "linked",
-      "note": "Links to the One Medora package bundling lodging, an evening show, and Library admission."
+      "note": "Links to the One Medora package bundling admission with lodging, but no standalone ticket link."
      },
      "directions": {
       "status": "buried",
-      "note": "Hotel tips note the free Medora Stageline Trolley rides up to the Library from local stays."
+      "note": "Medora Stageline Trolley stops and drive times from Dickinson appear mid-page in hotel sections."
      },
      "visit_length": {
       "status": "not_relevant",
-      "note": "A visitor looking for accommodations would not expect Library visit duration on this page."
+      "note": "Not expected on an accommodations guide."
      },
      "accessibility": {
       "status": "not_relevant",
-      "note": "Campground vault toilets note accessibility, but Library accessibility is not expected on a lodging page."
+      "note": "Library accessibility is not covered; only one campground notes an accessible toilet."
      },
      "food": {
       "status": "buried",
-      "note": "Mentions Salt+Scoria at the Library under 'Where to Eat' near the bottom, linking to /visit/eat."
+      "note": "Salt+Scoria at the Library is noted in the trip-planning section near the bottom."
      }
     },
     "facts": {
@@ -2201,18 +2218,18 @@
      "prices": null,
      "visit_length": null,
      "address": null,
-     "parking": "leave the car at your hotel and ride up to the Library"
+     "parking": null
     },
-    "biggest_fix": "Add quick-jump anchor links at the top for Hotels, Cabins, Campgrounds, and Dickinson so mobile visitors can jump straight to their preferred stay without endless scrolling.",
+    "biggest_fix": "Add a quick-reference distance or transit note beside each lodging option showing exactly how to reach the Library from that property.",
     "dropped_claims": [],
     "findability": 58,
     "checked_by": "gemini (gemini-3.8-flash)"
    },
    "ga4": {
-    "views": 914,
-    "engagement_rate": 0.85,
-    "bounce_rate": 0.15,
-    "avg_engagement_s": 66
+    "views": 752,
+    "engagement_rate": 0.847,
+    "bounce_rate": 0.153,
+    "avg_engagement_s": 70
    }
   },
   {
@@ -2228,12 +2245,12 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 93,
+    "performance": 75,
     "accessibility": 99,
     "best_practices": 100,
-    "lcp_s": 1.7,
-    "cls": 0.012,
-    "tbt_ms": 168,
+    "lcp_s": 2.0,
+    "cls": 0,
+    "tbt_ms": 668,
     "a11y_failures": [
      "Heading elements are not in a sequentially-descending order"
     ],
@@ -2241,10 +2258,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 661,
-    "engagement_rate": 0.828,
-    "bounce_rate": 0.172,
-    "avg_engagement_s": 95
+    "views": 519,
+    "engagement_rate": 0.809,
+    "bounce_rate": 0.191,
+    "avg_engagement_s": 91
    }
   },
   {
@@ -2263,31 +2280,31 @@
     "tasks": {
      "hours": {
       "status": "linked",
-      "note": "Hours link in navigation leads to /visit/hours."
+      "note": "Not listed on page; links to /visit/hours in navigation."
      },
      "price": {
       "status": "linked",
-      "note": "Tickets link in navigation leads to /tickets."
+      "note": "Prices not stated on page; links to /tickets in navigation."
      },
      "buy": {
       "status": "linked",
-      "note": "Tickets link in navigation leads to /tickets."
+      "note": "Tickets link appears in the top navigation bar."
      },
      "directions": {
       "status": "linked",
-      "note": "Directions link in navigation leads to /visit/directions."
+      "note": "No driving or parking details given; links to /visit/directions."
      },
      "visit_length": {
       "status": "missing",
-      "note": "No visit duration is stated or directly linked on the page."
+      "note": "Does not mention the recommended 3 1/2 hour visit length."
      },
      "accessibility": {
-      "status": "missing",
-      "note": "Elevators are mentioned in map tips, but wheelchair and stroller access details are not provided."
+      "status": "buried",
+      "note": "Mentions map layer for elevators, but lacks specific details on wheelchair or stroller access."
      },
      "food": {
       "status": "missing",
-      "note": "No mention of dining, coffee, or snacks, and no dining link is present."
+      "note": "No mention of on-site dining, cafe, or coffee options."
      }
     },
     "facts": {
@@ -2297,16 +2314,16 @@
      "address": null,
      "parking": null
     },
-    "biggest_fix": "Add a quick-reference campus key beside the map that notes parking locations, accessible paths, and the recommended 3 1/2 hour visit time.",
+    "biggest_fix": "Add clear orientation copy noting that a typical visit takes about 3 1/2 hours, along with explicit details on wheelchair accessibility and parking locations.",
     "dropped_claims": [],
-    "findability": 43,
+    "findability": 50,
     "checked_by": "gemini (gemini-3.8-flash)"
    },
    "ga4": {
-    "views": 669,
-    "engagement_rate": 0.884,
-    "bounce_rate": 0.116,
-    "avg_engagement_s": 22
+    "views": 549,
+    "engagement_rate": 0.873,
+    "bounce_rate": 0.127,
+    "avg_engagement_s": 20
    }
   },
   {
@@ -2322,10 +2339,10 @@
     "label": "–"
    },
    "ga4": {
-    "views": 11,
-    "engagement_rate": 0.538,
-    "bounce_rate": 0.462,
-    "avg_engagement_s": 11
+    "views": 14,
+    "engagement_rate": 0.588,
+    "bounce_rate": 0.412,
+    "avg_engagement_s": 13
    }
   },
   {
@@ -2333,29 +2350,59 @@
    "url": "https://www.trlibrary.com/visit/medora",
    "status": 200,
    "readability": {
-    "words": 890,
-    "reading_ease": 33.4,
-    "grade_level": 14.1,
+    "words": 944,
+    "reading_ease": 34.3,
+    "grade_level": 13.9,
     "long_paragraphs": 0,
     "words_before_ticket_link": null,
     "label": "hard"
    },
    "pagespeed": {
-    "performance": 51,
+    "performance": 41,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 13.2,
-    "cls": 0,
-    "tbt_ms": 326,
+    "lcp_s": 11.8,
+    "cls": 0.012,
+    "tbt_ms": 1250,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 108,
-    "engagement_rate": 0.741,
-    "bounce_rate": 0.259,
-    "avg_engagement_s": 34
+    "views": 140,
+    "engagement_rate": 0.678,
+    "bounce_rate": 0.322,
+    "avg_engagement_s": 33
+   }
+  },
+  {
+   "path": "/visit/medora-traditions",
+   "url": "https://www.trlibrary.com/visit/medora-traditions",
+   "status": 200,
+   "readability": {
+    "words": 625,
+    "reading_ease": 68.3,
+    "grade_level": 6.8,
+    "long_paragraphs": 0,
+    "words_before_ticket_link": 807,
+    "label": "easy"
+   },
+   "pagespeed": {
+    "performance": 53,
+    "accessibility": 100,
+    "best_practices": 100,
+    "lcp_s": 5.1,
+    "cls": 0,
+    "tbt_ms": 530,
+    "a11y_failures": [],
+    "field": null,
+    "origin_field": "FAST"
+   },
+   "ga4": {
+    "views": 11,
+    "engagement_rate": 1.0,
+    "bounce_rate": 0.0,
+    "avg_engagement_s": 33
    }
   },
   {
@@ -2363,29 +2410,29 @@
    "url": "https://www.trlibrary.com/visit/medora/history",
    "status": 200,
    "readability": {
-    "words": 2331,
-    "reading_ease": 45.2,
-    "grade_level": 12.2,
+    "words": 2420,
+    "reading_ease": 46.5,
+    "grade_level": 11.9,
     "long_paragraphs": 8,
     "words_before_ticket_link": null,
-    "label": "hard"
+    "label": "fairly hard"
    },
    "pagespeed": {
-    "performance": 42,
+    "performance": 81,
     "accessibility": 100,
     "best_practices": 96,
-    "lcp_s": 5.2,
-    "cls": 0,
-    "tbt_ms": 1179,
+    "lcp_s": 2.3,
+    "cls": 0.177,
+    "tbt_ms": 200,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 39,
-    "engagement_rate": 0.63,
-    "bounce_rate": 0.37,
-    "avg_engagement_s": 124
+    "views": 24,
+    "engagement_rate": 0.515,
+    "bounce_rate": 0.485,
+    "avg_engagement_s": 90
    }
   },
   {
@@ -2401,21 +2448,21 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 27,
+    "performance": 35,
     "accessibility": 100,
     "best_practices": 96,
-    "lcp_s": 13.8,
-    "cls": 0.012,
-    "tbt_ms": 3488,
+    "lcp_s": 14.6,
+    "cls": 0.045,
+    "tbt_ms": 1967,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 392,
-    "engagement_rate": 0.799,
-    "bounce_rate": 0.201,
-    "avg_engagement_s": 72
+    "views": 290,
+    "engagement_rate": 0.771,
+    "bounce_rate": 0.229,
+    "avg_engagement_s": 69
    }
   },
   {
@@ -2431,21 +2478,21 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 43,
+    "performance": 64,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 5.1,
-    "cls": 0,
-    "tbt_ms": 1031,
+    "lcp_s": 2.0,
+    "cls": 0.195,
+    "tbt_ms": 947,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 31,
-    "engagement_rate": 0.903,
-    "bounce_rate": 0.097,
-    "avg_engagement_s": 48
+    "views": 10,
+    "engagement_rate": 0.818,
+    "bounce_rate": 0.182,
+    "avg_engagement_s": 33
    }
   },
   {
@@ -2464,9 +2511,9 @@
     "performance": 37,
     "accessibility": 99,
     "best_practices": 96,
-    "lcp_s": 4.5,
+    "lcp_s": 4.6,
     "cls": 0.012,
-    "tbt_ms": 3212,
+    "tbt_ms": 3305,
     "a11y_failures": [
      "Heading elements are not in a sequentially-descending order"
     ],
@@ -2474,10 +2521,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 50,
-    "engagement_rate": 0.479,
-    "bounce_rate": 0.521,
-    "avg_engagement_s": 48
+    "views": 36,
+    "engagement_rate": 0.429,
+    "bounce_rate": 0.571,
+    "avg_engagement_s": 53
    }
   },
   {
@@ -2493,21 +2540,21 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 59,
+    "performance": 65,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 5.8,
+    "lcp_s": 4.2,
     "cls": 0.176,
-    "tbt_ms": 303,
+    "tbt_ms": 395,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 62,
-    "engagement_rate": 0.46,
-    "bounce_rate": 0.54,
-    "avg_engagement_s": 41
+    "views": 47,
+    "engagement_rate": 0.383,
+    "bounce_rate": 0.617,
+    "avg_engagement_s": 20
    }
   },
   {
@@ -2523,21 +2570,21 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 80,
+    "performance": 63,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 2.0,
-    "cls": 0.162,
-    "tbt_ms": 315,
+    "lcp_s": 4.9,
+    "cls": 0,
+    "tbt_ms": 212,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 88,
-    "engagement_rate": 0.875,
-    "bounce_rate": 0.125,
-    "avg_engagement_s": 101
+    "views": 72,
+    "engagement_rate": 0.848,
+    "bounce_rate": 0.152,
+    "avg_engagement_s": 88
    }
   },
   {
@@ -2553,21 +2600,21 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 51,
+    "performance": 59,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 13.2,
-    "cls": 0,
-    "tbt_ms": 378,
+    "lcp_s": 12.4,
+    "cls": 0.06,
+    "tbt_ms": 184,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 110,
-    "engagement_rate": 0.962,
-    "bounce_rate": 0.038,
-    "avg_engagement_s": 82
+    "views": 168,
+    "engagement_rate": 0.886,
+    "bounce_rate": 0.114,
+    "avg_engagement_s": 54
    }
   },
   {
@@ -2575,20 +2622,20 @@
    "url": "https://www.trlibrary.com/visit/outdoors",
    "status": 200,
    "readability": {
-    "words": 825,
-    "reading_ease": 49.3,
+    "words": 863,
+    "reading_ease": 49.7,
     "grade_level": 9.9,
     "long_paragraphs": 1,
     "words_before_ticket_link": null,
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 73,
+    "performance": 71,
     "accessibility": 82,
     "best_practices": 100,
     "lcp_s": 2.1,
-    "cls": 0.055,
-    "tbt_ms": 894,
+    "cls": 0.067,
+    "tbt_ms": 1087,
     "a11y_failures": [
      "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
      "`[role]`s are not contained by their required parent element",
@@ -2600,10 +2647,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 169,
-    "engagement_rate": 0.885,
-    "bounce_rate": 0.115,
-    "avg_engagement_s": 44
+    "views": 152,
+    "engagement_rate": 0.878,
+    "bounce_rate": 0.122,
+    "avg_engagement_s": 43
    }
   },
   {
@@ -2619,12 +2666,12 @@
     "label": "–"
    },
    "pagespeed": {
-    "performance": 68,
+    "performance": 47,
     "accessibility": 99,
     "best_practices": 100,
-    "lcp_s": 9.6,
-    "cls": 0.062,
-    "tbt_ms": 222,
+    "lcp_s": 11.4,
+    "cls": 0,
+    "tbt_ms": 874,
     "a11y_failures": [
      "Heading elements are not in a sequentially-descending order"
     ],
@@ -2632,10 +2679,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 331,
-    "engagement_rate": 0.881,
-    "bounce_rate": 0.119,
-    "avg_engagement_s": 83
+    "views": 283,
+    "engagement_rate": 0.889,
+    "bounce_rate": 0.111,
+    "avg_engagement_s": 86
    }
   },
   {
@@ -2654,18 +2701,18 @@
     "performance": 27,
     "accessibility": 100,
     "best_practices": 96,
-    "lcp_s": 13.3,
+    "lcp_s": 14.0,
     "cls": 0.012,
-    "tbt_ms": 5075,
+    "tbt_ms": 7685,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 21,
-    "engagement_rate": 0.619,
-    "bounce_rate": 0.381,
-    "avg_engagement_s": 57
+    "views": 11,
+    "engagement_rate": 0.909,
+    "bounce_rate": 0.091,
+    "avg_engagement_s": 121
    }
   },
   {
@@ -2673,20 +2720,20 @@
    "url": "https://www.trlibrary.com/visit/scenic-drives",
    "status": 200,
    "readability": {
-    "words": 564,
-    "reading_ease": 72.4,
+    "words": 562,
+    "reading_ease": 72.3,
     "grade_level": 6.1,
     "long_paragraphs": 1,
     "words_before_ticket_link": null,
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 71,
+    "performance": 89,
     "accessibility": 87,
     "best_practices": 100,
     "lcp_s": 2.0,
     "cls": 0.073,
-    "tbt_ms": 1048,
+    "tbt_ms": 272,
     "a11y_failures": [
      "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
      "`[role]`s are not contained by their required parent element",
@@ -2696,10 +2743,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 154,
-    "engagement_rate": 0.789,
-    "bounce_rate": 0.211,
-    "avg_engagement_s": 76
+    "views": 115,
+    "engagement_rate": 0.739,
+    "bounce_rate": 0.261,
+    "avg_engagement_s": 62
    }
   },
   {
@@ -2715,12 +2762,12 @@
     "label": "plain"
    },
    "pagespeed": {
-    "performance": 38,
+    "performance": 61,
     "accessibility": 88,
     "best_practices": 96,
-    "lcp_s": 4.6,
-    "cls": 0.012,
-    "tbt_ms": 2560,
+    "lcp_s": 2.1,
+    "cls": 0.057,
+    "tbt_ms": 2087,
     "a11y_failures": [
      "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
      "`[role]`s are not contained by their required parent element",
@@ -2730,10 +2777,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 233,
-    "engagement_rate": 0.928,
-    "bounce_rate": 0.072,
-    "avg_engagement_s": 33
+    "views": 240,
+    "engagement_rate": 0.909,
+    "bounce_rate": 0.091,
+    "avg_engagement_s": 32
    }
   },
   {
@@ -2749,12 +2796,12 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 29,
+    "performance": 30,
     "accessibility": 88,
     "best_practices": 96,
-    "lcp_s": 13.3,
-    "cls": 0.175,
-    "tbt_ms": 3292,
+    "lcp_s": 13.0,
+    "cls": 0.163,
+    "tbt_ms": 2095,
     "a11y_failures": [
      "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
      "`[role]`s are not contained by their required parent element",
@@ -2764,10 +2811,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 169,
-    "engagement_rate": 0.848,
-    "bounce_rate": 0.152,
-    "avg_engagement_s": 48
+    "views": 164,
+    "engagement_rate": 0.863,
+    "bounce_rate": 0.137,
+    "avg_engagement_s": 46
    }
   },
   {
@@ -2783,12 +2830,12 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 54,
+    "performance": 49,
     "accessibility": 92,
     "best_practices": 100,
-    "lcp_s": 12.7,
-    "cls": 0,
-    "tbt_ms": 570,
+    "lcp_s": 8.6,
+    "cls": 0.145,
+    "tbt_ms": 695,
     "a11y_failures": [
      "Elements use prohibited ARIA attributes",
      "ARIA `tooltip` elements do not have accessible names.",
@@ -2798,10 +2845,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 27,
-    "engagement_rate": 0.8,
-    "bounce_rate": 0.2,
-    "avg_engagement_s": 68
+    "views": 81,
+    "engagement_rate": 0.753,
+    "bounce_rate": 0.247,
+    "avg_engagement_s": 50
    }
   },
   {
@@ -2817,12 +2864,12 @@
     "label": "hard"
    },
    "pagespeed": {
-    "performance": 87,
+    "performance": 53,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 2.0,
-    "cls": 0.063,
-    "tbt_ms": 385,
+    "lcp_s": 5.1,
+    "cls": 0,
+    "tbt_ms": 521,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
@@ -2847,12 +2894,12 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 89,
+    "performance": 49,
     "accessibility": 99,
     "best_practices": 100,
-    "lcp_s": 2.0,
-    "cls": 0.073,
-    "tbt_ms": 318,
+    "lcp_s": 5.0,
+    "cls": 0,
+    "tbt_ms": 746,
     "a11y_failures": [
      "Heading elements are not in a sequentially-descending order"
     ],
@@ -2860,10 +2907,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 26,
-    "engagement_rate": 0.552,
-    "bounce_rate": 0.448,
-    "avg_engagement_s": 88
+    "views": 23,
+    "engagement_rate": 0.577,
+    "bounce_rate": 0.423,
+    "avg_engagement_s": 71
    }
   },
   {
@@ -2879,12 +2926,12 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 64,
+    "performance": 70,
     "accessibility": 99,
     "best_practices": 100,
     "lcp_s": 2.0,
     "cls": 0.243,
-    "tbt_ms": 721,
+    "tbt_ms": 558,
     "a11y_failures": [
      "Heading elements are not in a sequentially-descending order"
     ],
@@ -2895,31 +2942,31 @@
     "tasks": {
      "hours": {
       "status": "missing",
-      "note": "No operating hours or daily opening times are listed or linked."
+      "note": "Opening and closing hours are not listed on the page."
      },
      "price": {
       "status": "missing",
-      "note": "Ticket prices, admission fees, and discount tiers are not mentioned."
+      "note": "Ticket prices and admission tiers are not mentioned."
      },
      "buy": {
       "status": "top",
-      "note": "Directs visitors to book online and choose entry times using the on-page calendar."
+      "note": "Text explains booking online in advance and directs visitors to select dates below."
      },
      "directions": {
       "status": "missing",
-      "note": "Mentions Medora generally but provides no address, route guidance, or parking details."
+      "note": "Mentions getting to Medora, but gives no directions, address, or parking information."
      },
      "visit_length": {
       "status": "missing",
-      "note": "Does not mention how long visitors should plan to spend at the Library."
+      "note": "Does not state the recommended 3 1/2 hour visit length."
      },
      "accessibility": {
       "status": "missing",
-      "note": "No information provided regarding wheelchair access, strollers, or ADA accommodations."
+      "note": "No information provided regarding wheelchair or stroller accessibility."
      },
      "food": {
       "status": "missing",
-      "note": "Contains no details on dining options, coffee, or outside food policies."
+      "note": "No information about on-site dining, cafes, or refreshments."
      }
     },
     "facts": {
@@ -2929,16 +2976,16 @@
      "address": null,
      "parking": null
     },
-    "biggest_fix": "Add essential visit basics—including operating hours, ticket prices, and the recommended 3 1/2-hour visit length—directly above the reservation tool.",
+    "biggest_fix": "Add essential planning details alongside the booking calendar, including ticket prices, daily operating hours, and the recommended 3 1/2 hour visit time.",
     "dropped_claims": [],
     "findability": 14,
     "checked_by": "gemini (gemini-3.8-flash)"
    },
    "ga4": {
-    "views": 679,
-    "engagement_rate": 0.89,
-    "bounce_rate": 0.11,
-    "avg_engagement_s": 68
+    "views": 641,
+    "engagement_rate": 0.888,
+    "bounce_rate": 0.112,
+    "avg_engagement_s": 66
    }
   },
   {
@@ -2954,21 +3001,21 @@
     "label": "fairly hard"
    },
    "pagespeed": {
-    "performance": 89,
+    "performance": 52,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 2.0,
-    "cls": 0.074,
-    "tbt_ms": 304,
+    "lcp_s": 5.1,
+    "cls": 0,
+    "tbt_ms": 588,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 319,
-    "engagement_rate": 0.908,
-    "bounce_rate": 0.092,
-    "avg_engagement_s": 48
+    "views": 280,
+    "engagement_rate": 0.896,
+    "bounce_rate": 0.104,
+    "avg_engagement_s": 53
    }
   },
   {
@@ -2984,21 +3031,21 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 87,
+    "performance": 81,
     "accessibility": 100,
     "best_practices": 100,
     "lcp_s": 2.0,
-    "cls": 0.08,
-    "tbt_ms": 370,
+    "cls": 0.061,
+    "tbt_ms": 549,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 32,
-    "engagement_rate": 0.852,
-    "bounce_rate": 0.148,
-    "avg_engagement_s": 44
+    "views": 24,
+    "engagement_rate": 0.826,
+    "bounce_rate": 0.174,
+    "avg_engagement_s": 51
    }
   },
   {
@@ -3014,21 +3061,21 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 76,
+    "performance": 62,
     "accessibility": 100,
     "best_practices": 100,
-    "lcp_s": 2.4,
-    "cls": 0.238,
-    "tbt_ms": 372,
+    "lcp_s": 5.2,
+    "cls": 0.237,
+    "tbt_ms": 234,
     "a11y_failures": [],
     "field": null,
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 73,
-    "engagement_rate": 0.662,
-    "bounce_rate": 0.338,
-    "avg_engagement_s": 42
+    "views": 42,
+    "engagement_rate": 0.744,
+    "bounce_rate": 0.256,
+    "avg_engagement_s": 46
    }
   },
   {
@@ -3044,12 +3091,12 @@
     "label": "easy"
    },
    "pagespeed": {
-    "performance": 64,
+    "performance": 44,
     "accessibility": 88,
     "best_practices": 100,
-    "lcp_s": 18.4,
-    "cls": 0.067,
-    "tbt_ms": 238,
+    "lcp_s": 13.3,
+    "cls": 0,
+    "tbt_ms": 609,
     "a11y_failures": [
      "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
      "`[role]`s are not contained by their required parent element",
@@ -3059,10 +3106,10 @@
     "origin_field": "FAST"
    },
    "ga4": {
-    "views": 54,
-    "engagement_rate": 0.796,
-    "bounce_rate": 0.204,
-    "avg_engagement_s": 82
+    "views": 69,
+    "engagement_rate": 0.797,
+    "bounce_rate": 0.203,
+    "avg_engagement_s": 77
    }
   }
  ],

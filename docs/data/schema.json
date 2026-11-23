@@ -1,14 +1,14 @@
 {
- "generated": "2026-11-16T13:15:28+00:00",
+ "generated": "2026-11-23T13:09:00+00:00",
  "summary": {
-  "pages_read": 1044,
-  "pages_with_own_markup": 371,
-  "typed_pages": 889,
-  "typed_pages_done": 293,
-  "coverage_pct": 33,
-  "faq_pages": 20,
-  "faq_questions": 144,
-  "sitewide_issues": 6,
+  "pages_read": 1058,
+  "pages_with_own_markup": 377,
+  "typed_pages": 900,
+  "typed_pages_done": 352,
+  "coverage_pct": 39,
+  "faq_pages": 21,
+  "faq_questions": 149,
+  "sitewide_issues": 9,
   "high": 1,
   "llms_txt": true
  },
@@ -85,11 +85,54 @@
    ]
   },
   {
+   "id": "tr_entity_values",
+   "severity": "medium",
+   "title": "The Theodore Roosevelt entity has 2 values to fix",
+   "detail": "Every /tr page repeats this entity, so a wrong or missing value repeats on all of them. alternateName lacks “Teddy Roosevelt” · award holds several honors in one string; list each one separately",
+   "fix": "Edit the meta tags of the “Who was TR” hub page (Schema.org Person). The values are set once there and FiveJars' code prints them on every /tr page. Check names and dates against the Historical Accuracy Standard before saving."
+  },
+  {
    "id": "date_format",
    "severity": "low",
-   "title": "267 pages have dates without a colon in the time zone",
+   "title": "273 pages have dates without a colon in the time zone",
    "detail": "For example datePublished “2020-10-27T06:00:00-0600” on /about/press/press-releases/trplf-announces-100-million-commitments-unlocks-50-million-state. Strict ISO 8601 wants “-06:00”, and some validators reject the short form.",
    "fix": "In the Drupal schema templates, format dateModified, datePublished, endDate, startDate with the PHP date format “c” (e.g. 2020-10-27T06:00:00-06:00)."
+  },
+  {
+   "id": "llms_drift",
+   "severity": "low",
+   "title": "The live llms.txt has drifted from the site: 19 pages to add",
+   "detail": "www.trlibrary.com/llms.txt lists 200 pages; this week's draft from the sitemap lists 216. Sections added by hand in Drupal are left alone.",
+   "fix": "Edit the sections at /admin/content/llms-txt/sections: add the new pages under their heading and remove or repoint the links that left the sitemap. The draft has the wording for each new line.",
+   "file": "data/site-llms.txt",
+   "examples": [
+    "/visit/gateway-trails",
+    "/visit/medora-traditions",
+    "/visit/survey",
+    "/calendar/special-event/911-whca-remembers-historic-tragedies-and-near-tragedies",
+    "/calendar/special-event/american-conservation-coalition-2026-public-programs",
+    "/calendar/special-event/artist-demonstration-shane-balkowitsch",
+    "/calendar/special-event/artist-talk-chad-ziemendorf",
+    "/calendar/special-event/bill-bleyer-presents-sagamore-hill-theodore-roosevelts-summer-white-house",
+    "/calendar/special-event/book-signing-and-meet-greet",
+    "/calendar/special-event/downward-bull-moose-yoga-tr",
+    "/calendar/special-event/governor-kelly-armstrong-and-karl-rove-conversation",
+    "/calendar/special-event/hamilton-speaks"
+   ]
+  },
+  {
+   "id": "article_image",
+   "severity": "low",
+   "title": "251 articles use the site logo as their Article image",
+   "detail": "The page has its own share image (og:image), but the Article markup points to the generic logo, so search and AI previews show the logo instead of the page's picture.",
+   "fix": "Map the Article image to the page's share image (og:image), falling back to the logo only when a page has none.",
+   "examples": [
+    "/tr/10-myths-teddy-bear",
+    "/tr/5-big-adventures",
+    "/tr/arbor-day",
+    "/tr/arbor-day-timeline",
+    "/tr/badlands"
+   ]
   },
   {
    "id": "og_type",
@@ -108,9 +151,9 @@
    "schema_type": "VideoObject",
    "why": "Video markup lets search and AI tools show and cite the Library's videos, with title, length and date.",
    "drupal": "Add VideoObject JSON-LD to the video view template from the stored YouTube data (title, description, thumbnail, publish date, duration).",
-   "pages": 409,
+   "pages": 414,
    "done": 0,
-   "missing": 409,
+   "missing": 414,
    "example": {
     "path": "/video/view/-QfzHHXPYqM",
     "jsonld": {
@@ -216,6 +259,12 @@
     {
      "path": "/video/view/1lvMPK_4MAg",
      "title": "Panel 1: Nature’s Sanctuaries Protection of Public Lands",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/1nogFWdneOw",
+     "title": "The Holiday Trees at the Library: The Material Inspiration",
      "has": [],
      "done": false
     },
@@ -688,6 +737,12 @@
      "done": false
     },
     {
+     "path": "/video/view/FH2iglgaMZE",
+     "title": "The Holiday Trees at the Library: The Installation",
+     "has": [],
+     "done": false
+    },
+    {
      "path": "/video/view/FLrGvb6xMR8",
      "title": "Theodore Roosevelt on Love, Ladies, and Conservation | The MeatEater Podcast Ep. 841",
      "has": [],
@@ -732,6 +787,12 @@
     {
      "path": "/video/view/GHM7Y66lCBk",
      "title": "Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/GpKHsBZXubE",
+     "title": "The Holiday Trees at the Library: The Idea",
      "has": [],
      "done": false
     },
@@ -1792,6 +1853,12 @@
      "done": false
     },
     {
+     "path": "/video/view/fPZD2xLBXZs",
+     "title": "The Holiday Trees at the Library: The People",
+     "has": [],
+     "done": false
+    },
+    {
      "path": "/video/view/fXsW00JN9Ho",
      "title": "Theodore Roosevelt Library Opening Trip",
      "has": [],
@@ -1818,6 +1885,12 @@
     {
      "path": "/video/view/gFlYlWqzRNo",
      "title": "Theodore Roosevelt Presidential Library opens 107 years after his death",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/view/gPqE13bB8YI",
+     "title": "The Holiday Trees at the Library: Spirit of the Land",
      "has": [],
      "done": false
     },
@@ -3059,752 +3132,6 @@
   {
    "incomplete": 0,
    "property_gaps": {},
-   "key": "tr_hubs",
-   "label": "TR history section pages",
-   "schema_type": "CollectionPage",
-   "why": "Marks the section pages as collections about TR.",
-   "drupal": "Add CollectionPage JSON-LD to the /tr section landing template.",
-   "pages": 55,
-   "done": 0,
-   "missing": 55,
-   "example": {
-    "path": "/tr",
-    "jsonld": {
-     "@context": "https://schema.org",
-     "@type": "CollectionPage",
-     "@id": "https://www.trlibrary.com/tr#main",
-     "name": "Theodore Roosevelt",
-     "url": "https://www.trlibrary.com/tr",
-     "description": "Follow Theodore Roosevelt's whole life — naturalist, rancher, reformer, and president — told chapter by chapter, from a frail boy to a national force.",
-     "image": "https://www.trlibrary.com/sites/default/files/2026-07/el-hub_birthplace_sq.jpg",
-     "about": {
-      "@id": "https://www.trlibrary.com/tr/#person"
-     },
-     "isPartOf": {
-      "@id": "https://www.trlibrary.com/#website"
-     }
-    }
-   },
-   "items": [
-    {
-     "path": "/tr",
-     "title": "Theodore Roosevelt",
-     "has": [
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/10-myths-teddy-bear",
-     "title": "Top 10 Myths about Theodore Roosevelt + the Invention of the Teddy Bear",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/5-big-adventures",
-     "title": "TR’s Five Big Post-Presidential Adventures",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/arbor-day",
-     "title": "Arbor Day with Theodore Roosevelt",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/arbor-day-timeline",
-     "title": "Timeline of T.R.’s Arbor Days",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/badlands",
-     "title": "Theodore Roosevelt in the Badlands",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/badlands-timeline",
-     "title": "Timeline of TR in the Badlands",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/birthday",
-     "title": "Theodore Roosevelt's Birthday: October 27",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/birthday-timeline",
-     "title": "Timeline of T.R.'s Birthdays",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/books-and-writings",
-     "title": "Theodore Roosevelt's Books & Writings",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/christmas",
-     "title": "Christmas with Theodore Roosevelt",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/christmas-timeline",
-     "title": "Timeline of T.R.'s Christmases",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/complex-legacy",
-     "title": "Roosevelt's Complex Legacy",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/conservation",
-     "title": "Roosevelt and the Conservation Story",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/early-life",
-     "title": "Theodore Roosevelt's Early Life",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/elkhorn",
-     "title": "Elkhorn",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/elkhorn-timeline",
-     "title": "Elkhorn Timeline",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/fake-quotes",
-     "title": "Did TR Really Say That?",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/family",
-     "title": "The Roosevelt Family",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/for-educators",
-     "title": "Theodore Roosevelt for Educators",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/fourth-of-july",
-     "title": "The Fourth of July with Theodore Roosevelt",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/fourth-of-july-timeline",
-     "title": "Timeline of T.R.’s Fourths of July",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/holidays",
-     "title": "Theodore Roosevelt's Holidays",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/homes-and-places",
-     "title": "Roosevelt's Homes & Places",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/kids-timeline",
-     "title": "Theodore Roosevelt for Kids: A Timeline of His Life",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/labor-day",
-     "title": "Labor Day with Theodore Roosevelt",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/labor-day-timeline",
-     "title": "Timeline of T.R.’s Labor Days",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/legacy",
-     "title": "Theodore Roosevelt's Legacy",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/memorial-day",
-     "title": "Memorial Day with Theodore Roosevelt",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/memorial-day-timeline",
-     "title": "Timeline of T.R.’s Memorial Days",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/myths",
-     "title": "Theodore Roosevelt Myths & Misconceptions",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/new-years-day",
-     "title": "New Year’s Day with Theodore Roosevelt",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/new-years-day-timeline",
-     "title": "Timeline of T.R.’s New Year’s Days",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/new-york-politics",
-     "title": "Theodore Roosevelt in New York Politics",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/people",
-     "title": "The People in Roosevelt's Life",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/post-presidency",
-     "title": "Theodore Roosevelt's Post-Presidency",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/pre-presidency-political-accomplishments",
-     "title": "What Did Theodore Roosevelt Do Before He Was President?",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/presidency",
-     "title": "Theodore Roosevelt's Presidency",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/presidency-timeline",
-     "title": "When Was Theodore Roosevelt President? 1901–1909 Timeline",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/quotes",
-     "title": "Theodore Roosevelt Quotes",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/rise-to-power",
-     "title": "Theodore Roosevelt's Rise to Power",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/speeches",
-     "title": "Theodore Roosevelt's Great Speeches",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/strenuous-life",
-     "title": "Theodore Roosevelt's Strenuous Life",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/teddy-nickname",
-     "title": "Why “Teddy” Roosevelt? What TR Thought of His Nickname",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/thanksgiving",
-     "title": "Thanksgiving with Theodore Roosevelt",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/thanksgiving-timeline",
-     "title": "Timeline of T.R.'s Thanksgivings",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/timeline",
-     "title": "Theodore Roosevelt's Life Timeline: Key Dates, 1858–1919",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/tr-importance",
-     "title": "What Was Theodore Roosevelt Known For?",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/tr-mount-rushmore",
-     "title": "Why is Theodore Roosevelt on Mount Rushmore?",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/tr-save-the-bison",
-     "title": "Did Theodore Roosevelt Save the Bison?",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/tr-shot",
-     "title": "Why Was Theodore Roosevelt Shot? The 1912 Milwaukee Attack",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/valentines-day",
-     "title": "Valentine’s Day in Theodore Roosevelt’s Life",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/valentines-day-timeline",
-     "title": "Timeline of T.R.’s Valentine’s Days",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/veterans-day",
-     "title": "Theodore Roosevelt and Veterans Day",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    },
-    {
-     "path": "/tr/veterans-day-timeline",
-     "title": "Timeline: The Roosevelts in Uniform",
-     "has": [
-      "Article",
-      "CollegeOrUniversity",
-      "Country",
-      "Occupation",
-      "Person",
-      "Place"
-     ],
-     "done": false
-    }
-   ]
-  },
-  {
-   "incomplete": 0,
-   "property_gaps": {},
    "key": "itineraries",
    "label": "Trip itineraries",
    "schema_type": "TouristTrip",
@@ -3891,7 +3218,7 @@
     },
     {
      "path": "/visit/itineraries/enchanted-highway",
-     "title": "The Enchanted Highway: Giants on the Prairie",
+     "title": "The Enchanted Highway, North Dakota: Giants on the Prairie",
      "has": [],
      "done": false
     },
@@ -3959,9 +3286,9 @@
    "schema_type": "ItemList / VideoObject",
    "why": "Each playlist page can list its videos so search and AI tools see them as videos, not just links.",
    "drupal": "Add ItemList of VideoObject JSON-LD to the playlist template. Drupal already stores each video's YouTube data, including its publish date (uploadDate).",
-   "pages": 39,
+   "pages": 40,
    "done": 0,
-   "missing": 39,
+   "missing": 40,
    "example": {
     "path": "/video/playlist/PL-sck-PjBiFcBeOS7Qx2nb2RReo4HqYD8",
     "jsonld": {
@@ -4181,6 +3508,12 @@
     },
     {
      "path": "/video/playlist/PLRzfYdGoa3xg",
+     "title": "Video Portal | Theodore Roosevelt Presidential Library",
+     "has": [],
+     "done": false
+    },
+    {
+     "path": "/video/playlist/PLSaoXk08gMqQ",
      "title": "Video Portal | Theodore Roosevelt Presidential Library",
      "has": [],
      "done": false
@@ -4482,17 +3815,17 @@
    ]
   },
   {
-   "incomplete": 13,
+   "incomplete": 12,
    "property_gaps": {
-    "worksFor/memberOf": 13
+    "worksFor/memberOf": 12
    },
    "key": "trustees",
    "label": "Trustee profiles",
    "schema_type": "Person / ProfilePage",
    "why": "Tells AI tools who sits on the Board.",
    "drupal": "Add ProfilePage + Person JSON-LD (role: Trustee) to the trustee template.",
-   "pages": 13,
-   "done": 13,
+   "pages": 12,
+   "done": 12,
    "missing": 0,
    "example": null,
    "items": [
@@ -4574,17 +3907,6 @@
      ]
     },
     {
-     "path": "/about/trustees/hilary-hamm",
-     "title": "Hilary Hamm",
-     "has": [
-      "Person"
-     ],
-     "done": true,
-     "missing_props": [
-      "worksFor/memberOf"
-     ]
-    },
-    {
      "path": "/about/trustees/john-palfrey",
      "title": "John Palfrey",
      "has": [
@@ -4649,8 +3971,8 @@
    "schema_type": "FAQPage",
    "why": "Questions and answers are exactly what AI tools quote. FAQ markup hands them the question and the Library's own answer, word for word.",
    "drupal": "Add FAQPage JSON-LD to the accordion paragraph type: when every item's title is a question, output each as Question/Answer. One template change covers every FAQ page.",
-   "pages": 20,
-   "done": 19,
+   "pages": 21,
+   "done": 20,
    "missing": 1,
    "example": {
     "path": "/benefactor-society-qas",
@@ -5005,6 +4327,17 @@
      "questions": 10
     },
     {
+     "path": "/visit/gateway-trails",
+     "title": "Badlands Gateway Trails",
+     "has": [
+      "Answer",
+      "FAQPage",
+      "Question"
+     ],
+     "done": true,
+     "questions": 5
+    },
+    {
      "path": "/visit/hunting-fishing",
      "title": "Hunting and Fishing Near Medora, North Dakota",
      "has": [
@@ -5126,6 +4459,752 @@
      "title": "Good Citizen Podcast",
      "has": [],
      "done": false
+    }
+   ]
+  },
+  {
+   "incomplete": 0,
+   "property_gaps": {},
+   "key": "tr_hubs",
+   "label": "TR history section pages",
+   "schema_type": "Article / CollectionPage",
+   "why": "Marks the section pages as collections about TR.",
+   "drupal": "Add CollectionPage JSON-LD to the /tr section landing template.",
+   "pages": 55,
+   "done": 54,
+   "missing": 1,
+   "example": {
+    "path": "/tr",
+    "jsonld": {
+     "@context": "https://schema.org",
+     "@type": "CollectionPage",
+     "@id": "https://www.trlibrary.com/tr#main",
+     "name": "Theodore Roosevelt",
+     "url": "https://www.trlibrary.com/tr",
+     "description": "Follow Theodore Roosevelt's whole life — naturalist, rancher, reformer, and president — told chapter by chapter, from a frail boy to a national force.",
+     "image": "https://www.trlibrary.com/sites/default/files/2026-07/el-hub_birthplace_sq.jpg",
+     "about": {
+      "@id": "https://www.trlibrary.com/tr/#person"
+     },
+     "isPartOf": {
+      "@id": "https://www.trlibrary.com/#website"
+     }
+    }
+   },
+   "items": [
+    {
+     "path": "/tr",
+     "title": "Theodore Roosevelt",
+     "has": [
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": false
+    },
+    {
+     "path": "/tr/10-myths-teddy-bear",
+     "title": "Top 10 Myths about Theodore Roosevelt + the Invention of the Teddy Bear",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/5-big-adventures",
+     "title": "TR’s Five Big Post-Presidential Adventures",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/arbor-day",
+     "title": "Arbor Day with Theodore Roosevelt",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/arbor-day-timeline",
+     "title": "Timeline of T.R.’s Arbor Days",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/badlands",
+     "title": "Theodore Roosevelt in the Badlands",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/badlands-timeline",
+     "title": "Timeline of TR in the Badlands",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/birthday",
+     "title": "Theodore Roosevelt's Birthday: October 27",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/birthday-timeline",
+     "title": "Timeline of T.R.'s Birthdays",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/books-and-writings",
+     "title": "Theodore Roosevelt's Books & Writings",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/christmas",
+     "title": "Christmas with Theodore Roosevelt",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/christmas-timeline",
+     "title": "Timeline of T.R.'s Christmases",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/complex-legacy",
+     "title": "Roosevelt's Complex Legacy",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/conservation",
+     "title": "Roosevelt and the Conservation Story",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/early-life",
+     "title": "Theodore Roosevelt's Early Life",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/elkhorn",
+     "title": "Elkhorn",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/elkhorn-timeline",
+     "title": "Elkhorn Timeline",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/fake-quotes",
+     "title": "Did TR Really Say That?",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/family",
+     "title": "The Roosevelt Family",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/for-educators",
+     "title": "Theodore Roosevelt for Educators",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/fourth-of-july",
+     "title": "The Fourth of July with Theodore Roosevelt",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/fourth-of-july-timeline",
+     "title": "Timeline of T.R.’s Fourths of July",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/holidays",
+     "title": "Theodore Roosevelt's Holidays",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/homes-and-places",
+     "title": "Roosevelt's Homes & Places",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/kids-timeline",
+     "title": "Theodore Roosevelt for Kids: A Timeline of His Life",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/labor-day",
+     "title": "Labor Day with Theodore Roosevelt",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/labor-day-timeline",
+     "title": "Timeline of T.R.’s Labor Days",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/legacy",
+     "title": "Theodore Roosevelt's Legacy",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/memorial-day",
+     "title": "Memorial Day with Theodore Roosevelt",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/memorial-day-timeline",
+     "title": "Timeline of T.R.’s Memorial Days",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/myths",
+     "title": "Theodore Roosevelt Myths & Misconceptions",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/new-years-day",
+     "title": "New Year’s Day with Theodore Roosevelt",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/new-years-day-timeline",
+     "title": "Timeline of T.R.’s New Year’s Days",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/new-york-politics",
+     "title": "Theodore Roosevelt in New York Politics",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/people",
+     "title": "The People in Roosevelt's Life",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/post-presidency",
+     "title": "Theodore Roosevelt's Post-Presidency",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/pre-presidency-political-accomplishments",
+     "title": "What Did Theodore Roosevelt Do Before He Was President?",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/presidency",
+     "title": "Theodore Roosevelt's Presidency",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/presidency-timeline",
+     "title": "When Was Theodore Roosevelt President? 1901–1909 Timeline",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/quotes",
+     "title": "Theodore Roosevelt Quotes",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/rise-to-power",
+     "title": "Theodore Roosevelt's Rise to Power",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/speeches",
+     "title": "Theodore Roosevelt's Great Speeches",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/strenuous-life",
+     "title": "Theodore Roosevelt's Strenuous Life",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/teddy-nickname",
+     "title": "Why “Teddy” Roosevelt? What TR Thought of His Nickname",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/thanksgiving",
+     "title": "Thanksgiving with Theodore Roosevelt",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/thanksgiving-timeline",
+     "title": "Timeline of T.R.'s Thanksgivings",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/timeline",
+     "title": "Theodore Roosevelt's Life Timeline: Key Dates, 1858–1919",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/tr-importance",
+     "title": "What Was Theodore Roosevelt Known For?",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/tr-mount-rushmore",
+     "title": "Why is Theodore Roosevelt on Mount Rushmore?",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/tr-save-the-bison",
+     "title": "Did Theodore Roosevelt Save the Bison?",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/tr-shot",
+     "title": "Why Was Theodore Roosevelt Shot? The 1912 Milwaukee Attack",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/valentines-day",
+     "title": "Valentine’s Day in Theodore Roosevelt’s Life",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/valentines-day-timeline",
+     "title": "Timeline of T.R.’s Valentine’s Days",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/veterans-day",
+     "title": "Theodore Roosevelt and Veterans Day",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/veterans-day-timeline",
+     "title": "Timeline: The Roosevelts in Uniform",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
     }
    ]
   },
@@ -5796,8 +5875,8 @@
    "schema_type": "Article",
    "why": "The /tr section is the Library's richest content for AI answers. Article markup says who published it, when it was updated, and that it's about Theodore Roosevelt (linked to his Wikidata entry).",
    "drupal": "Add Article JSON-LD to the /tr article template with about = Theodore Roosevelt (the sitewide #theodore-roosevelt entity) and dateModified from the node's changed date.",
-   "pages": 159,
-   "done": 159,
+   "pages": 164,
+   "done": 164,
    "missing": 0,
    "example": null,
    "items": [
@@ -5872,6 +5951,71 @@
     {
      "path": "/tr/badlands/boat-thieves",
      "title": "The Adventure of the Three Boat Thieves: Justice on the Little Missouri",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/badlands/cowboy-songs",
+     "title": "Songs of the Cow Country: Theodore Roosevelt and Cowboy Ballads",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/badlands/cowboy-songs/gathering",
+     "title": "Dakota Cowboy Poetry Gathering in Medora, North Dakota",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/badlands/cowboy-songs/lomax",
+     "title": "Theodore Roosevelt and John Lomax: The Letter Behind Cowboy Songs",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/badlands/cowboy-songs/night-guard",
+     "title": "Singing to the Herd: T.R. on Night Guard in the Badlands",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
+     "path": "/tr/badlands/cowboy-songs/the-songs",
+     "title": "Cowboy Songs from the Book Dedicated to Theodore Roosevelt",
      "has": [
       "Article",
       "CollegeOrUniversity",
@@ -7317,7 +7461,7 @@
     },
     {
      "path": "/tr/presidency/foreign-policy",
-     "title": "Roosevelt's Foreign Policy: America Takes Its Place Among Nations",
+     "title": "Theodore Roosevelt’s Foreign Policy: The Big Stick Era",
      "has": [
       "Article",
       "CollegeOrUniversity",
@@ -7369,7 +7513,7 @@
     },
     {
      "path": "/tr/presidency/nobel-peace-prize",
-     "title": "The Nobel Peace Prize: When the Warrior Became a Peacemaker",
+     "title": "Why Theodore Roosevelt Won the Nobel Peace Prize",
      "has": [
       "Article",
       "CollegeOrUniversity",
@@ -7884,8 +8028,8 @@
    "schema_type": "Article",
    "why": "Marks each page as an article about a specific person in TR's life, linked to their Wikipedia/Wikidata entry.",
    "drupal": "Add Article JSON-LD to the /tr people template, with an 'about' Person; a field for the person's Wikidata link makes it precise.",
-   "pages": 26,
-   "done": 26,
+   "pages": 27,
+   "done": 27,
    "missing": 0,
    "example": null,
    "items": [
@@ -8150,6 +8294,19 @@
      "done": true
     },
     {
+     "path": "/tr/people/medora-de-mores",
+     "title": "Medora de Morès: The Marquise Who Gave the Town Its Name",
+     "has": [
+      "Article",
+      "CollegeOrUniversity",
+      "Country",
+      "Occupation",
+      "Person",
+      "Place"
+     ],
+     "done": true
+    },
+    {
      "path": "/tr/people/mittie",
      "title": "Martha \"Mittie\" Bulloch Roosevelt",
      "has": [
@@ -8323,5 +8480,41 @@
    ]
   }
  ],
- "llms_txt_draft": "data/site-llms.txt"
+ "llms_txt_draft": "data/site-llms.txt",
+ "llms_txt_live": {
+  "live_links": 200,
+  "draft_links": 216,
+  "sections": [
+   "Key facts for visitors",
+   "Plan a visit",
+   "Theodore Roosevelt: life and legacy",
+   "Good Citizen podcast",
+   "Calendar",
+   "Press",
+   "About the Library",
+   "Optional"
+  ],
+  "to_add": [
+   "/visit/gateway-trails",
+   "/visit/medora-traditions",
+   "/visit/survey",
+   "/calendar/special-event/911-whca-remembers-historic-tragedies-and-near-tragedies",
+   "/calendar/special-event/american-conservation-coalition-2026-public-programs",
+   "/calendar/special-event/artist-demonstration-shane-balkowitsch",
+   "/calendar/special-event/artist-talk-chad-ziemendorf",
+   "/calendar/special-event/bill-bleyer-presents-sagamore-hill-theodore-roosevelts-summer-white-house",
+   "/calendar/special-event/book-signing-and-meet-greet",
+   "/calendar/special-event/downward-bull-moose-yoga-tr",
+   "/calendar/special-event/governor-kelly-armstrong-and-karl-rove-conversation",
+   "/calendar/special-event/hamilton-speaks",
+   "/calendar/special-event/maah-daah-hey-bike-race",
+   "/calendar/special-event/maah-daah-hey-trail-run",
+   "/calendar/special-event/precedent-power-teaching-executive-authority-through-george-washington-and",
+   "/calendar/special-event/virtual-learning-session-reconstruction-and-second-founding",
+   "/calendar/special-event/white-house-communications-agency-alumni-wives-tales-and-war-stories",
+   "/calendar/specialty-tour/badlands-landscape-tour",
+   "/calendar/specialty-tour/member-behind-arena-tour"
+  ],
+  "not_in_sitemap": []
+ }
 }

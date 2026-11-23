@@ -159,6 +159,46 @@
    "added": "2026-11-16",
    "reason": "position 4.4, 1506 impressions/28d; Famous concept coined by Theodore Roosevelt; valuable for civic education and presidential history.",
    "score": 164
+  },
+  {
+   "keyword": "mt rushmore presidents",
+   "group": "Auto: History",
+   "status": "active",
+   "added": "2026-11-23",
+   "reason": "position 4.2, 4069 impressions/28d; Connects Roosevelt to fellow presidents carved on Mount Rushmore, directly relevant to regional visitors and historical context.",
+   "score": 648
+  },
+  {
+   "keyword": "roosevelt river",
+   "group": "Auto: History",
+   "status": "active",
+   "added": "2026-11-23",
+   "reason": "position 9.0, 4526 impressions/28d; Captures interest in Roosevelt's scientific and exploratory expedition through the Amazon basin.",
+   "score": 745
+  },
+  {
+   "keyword": "henry cabot lodge",
+   "group": "Auto: History",
+   "status": "active",
+   "added": "2026-11-23",
+   "reason": "position 7.5, 5934 impressions/28d; Key political ally, lifelong friend, and confidant central to Roosevelt's career and correspondence.",
+   "score": 649
+  },
+  {
+   "keyword": "rough riders",
+   "group": "Auto: History",
+   "status": "active",
+   "added": "2026-11-23",
+   "reason": "position 9.5, 3493 impressions/28d; Core topic in Roosevelt's military service and national rise to fame.",
+   "score": 566
+  },
+  {
+   "keyword": "edith roosevelt",
+   "group": "Auto: History",
+   "status": "active",
+   "added": "2026-11-23",
+   "reason": "position 9.1, 4761 impressions/28d; Essential to Roosevelt family history and her tenure as First Lady.",
+   "score": 513
   }
  ],
  "prompts": [
@@ -244,6 +284,41 @@
   }
  ],
  "log": [
+  {
+   "date": "2026-11-23",
+   "action": "added",
+   "kind": "keyword",
+   "item": "edith roosevelt",
+   "reason": "position 9.1, 4761 impressions/28d; Essential to Roosevelt family history and her tenure as First Lady."
+  },
+  {
+   "date": "2026-11-23",
+   "action": "added",
+   "kind": "keyword",
+   "item": "rough riders",
+   "reason": "position 9.5, 3493 impressions/28d; Core topic in Roosevelt's military service and national rise to fame."
+  },
+  {
+   "date": "2026-11-23",
+   "action": "added",
+   "kind": "keyword",
+   "item": "henry cabot lodge",
+   "reason": "position 7.5, 5934 impressions/28d; Key political ally, lifelong friend, and confidant central to Roosevelt's career and correspondence."
+  },
+  {
+   "date": "2026-11-23",
+   "action": "added",
+   "kind": "keyword",
+   "item": "roosevelt river",
+   "reason": "position 9.0, 4526 impressions/28d; Captures interest in Roosevelt's scientific and exploratory expedition through the Amazon basin."
+  },
+  {
+   "date": "2026-11-23",
+   "action": "added",
+   "kind": "keyword",
+   "item": "mt rushmore presidents",
+   "reason": "position 4.2, 4069 impressions/28d; Connects Roosevelt to fellow presidents carved on Mount Rushmore, directly relevant to regional visitors and historical context."
+  },
   {
    "date": "2026-11-16",
    "action": "added",
@@ -441,5 +516,5 @@
    "reason": "position 8.6, 2000 impressions/28d; Key regional trip-planning search directly adjacent to the Library in Medora."
   }
  ],
- "updated": "2026-11-16T12:44:38+00:00"
+ "updated": "2026-11-23T12:38:58+00:00"
 }

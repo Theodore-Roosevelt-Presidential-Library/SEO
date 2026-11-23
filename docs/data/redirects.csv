@@ -1,2 +1,9 @@
 source,destination,language,status_code,confidence
+orders/613/tickets,https://access.trlibrary.com/orders/613/tickets,und,301,high
+orders/613/calendar,https://access.trlibrary.com/orders/613/calendar,und,301,high
+events/613/detail/6a04cbc9b396e88c8b5609dd,https://access.trlibrary.com/events/613/detail/6a04cbc9b396e88c8b5609dd,und,301,high
 about/trustees/edward-okeefe,internal:/podcast/good-citizen/edward-okeefe,und,301,high
+auth/613/members,https://access.trlibrary.com/auth/613/members,und,301,high
+events/613/detail/6a4a8cb76c7bf23066004d67,https://access.trlibrary.com/events/613/detail/6a4a8cb76c7bf23066004d67,und,301,high
+place/land/badlands,internal:/quiz/badlands,und,301,medium
+membership/613/join,internal:/membership,und,301,low

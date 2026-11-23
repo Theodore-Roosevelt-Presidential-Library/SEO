@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-16T12:44:06+00:00",
+ "updated": "2026-11-23T12:38:38+00:00",
  "site": "https://www.trlibrary.com",
- "sitemap_urls": 1175,
- "crawled": 1136,
+ "sitemap_urls": 1189,
+ "crawled": 1149,
  "score": 95,
  "ai_score": 61,
  "issues": [
@@ -46,37 +46,43 @@
    "code": "title_too_long",
    "severity": "low",
    "label": "Title over 60 characters, not counting the site-name suffix",
-   "pages": 264
+   "pages": 263
   },
   {
    "code": "thin_content",
    "severity": "low",
    "label": "Under 150 words of body text",
-   "pages": 237
+   "pages": 238
   },
   {
    "code": "heading_skip",
    "severity": "low",
    "label": "Heading levels skip (e.g. H2 straight to H4)",
-   "pages": 151
+   "pages": 153
   },
   {
    "code": "title_too_short",
    "severity": "low",
    "label": "Title under 15 characters, not counting the site-name suffix",
-   "pages": 145
+   "pages": 144
+  },
+  {
+   "code": "slow",
+   "severity": "low",
+   "label": "Took over 3 seconds to respond",
+   "pages": 137
+  },
+  {
+   "code": "deep_page",
+   "severity": "low",
+   "label": "More than 4 clicks from the homepage",
+   "pages": 135
   },
   {
    "code": "meta_duplicate",
    "severity": "low",
    "label": "Same meta description as another page",
    "pages": 131
-  },
-  {
-   "code": "deep_page",
-   "severity": "low",
-   "label": "More than 4 clicks from the homepage",
-   "pages": 112
   },
   {
    "code": "meta_too_short",
@@ -89,57 +95,51 @@
    "severity": "low",
    "label": "More than one H1",
    "pages": 10
-  },
-  {
-   "code": "slow",
-   "severity": "low",
-   "label": "Took over 3 seconds to respond",
-   "pages": 3
   }
  ],
  "status_codes": {
-  "200": 1136
+  "200": 1149
  },
  "slowest": [
   {
-   "url": "https://www.trlibrary.com/video/view/-hAbH24Ia_w",
-   "seconds": 4.08
+   "url": "https://www.trlibrary.com/visit/activities",
+   "seconds": 13.63
   },
   {
-   "url": "https://www.trlibrary.com/video/view/-TNqu1aIePM",
-   "seconds": 3.3
+   "url": "https://www.trlibrary.com/beam-signing-ceremony",
+   "seconds": 13.28
   },
   {
-   "url": "https://www.trlibrary.com/video/view/BF6ZHFqp2Qg",
-   "seconds": 3.02
+   "url": "https://www.trlibrary.com/tr/timeline",
+   "seconds": 12.69
   },
   {
-   "url": "https://www.trlibrary.com/video/view/Bwh7AGECvWk",
-   "seconds": 2.98
+   "url": "https://www.trlibrary.com/tr/presidency-timeline",
+   "seconds": 9.63
   },
   {
-   "url": "https://www.trlibrary.com/video/view/15dkv17Wk38",
-   "seconds": 2.95
+   "url": "https://www.trlibrary.com/visit/national-park/elkhorn-ranch",
+   "seconds": 9.4
   },
   {
-   "url": "https://www.trlibrary.com/video/view/BpWhnLXmbBM",
-   "seconds": 2.8
+   "url": "https://www.trlibrary.com/support/benefactor-societies",
+   "seconds": 9.16
   },
   {
-   "url": "https://www.trlibrary.com/video/view/0dZOcXcYJo0",
-   "seconds": 2.66
+   "url": "https://www.trlibrary.com/visit/hunting-fishing",
+   "seconds": 8.58
   },
   {
-   "url": "https://www.trlibrary.com/video/view/Tb8My3-LeEU",
-   "seconds": 2.66
+   "url": "https://www.trlibrary.com/visit/exhibits/main",
+   "seconds": 8.48
   },
   {
-   "url": "https://www.trlibrary.com/video/view/duICpw_mkqk",
-   "seconds": 2.6
+   "url": "https://www.trlibrary.com/visit/wildlife",
+   "seconds": 8.4
   },
   {
-   "url": "https://www.trlibrary.com/video/view/2ZatbH6VDbg",
-   "seconds": 2.57
+   "url": "https://www.trlibrary.com/visit/medora",
+   "seconds": 8.23
   }
  ],
  "robots": {
@@ -160,27 +160,27 @@
  },
  "llms_txt": true,
  "structured_data_types": {
-  "ImageObject": 1136,
-  "GeoCoordinates": 1136,
-  "OpeningHoursSpecification": 1136,
-  "WebSite": 1136,
-  "PostalAddress": 1136,
-  "SearchAction": 1136,
-  "EntryPoint": 1136,
-  "BreadcrumbList": 1135,
-  "ListItem": 1135,
-  "Place": 315,
-  "Person": 305,
-  "CollegeOrUniversity": 250,
-  "Country": 250,
-  "Occupation": 250,
-  "Article": 245,
+  "PostalAddress": 1149,
+  "WebSite": 1149,
+  "ImageObject": 1149,
+  "EntryPoint": 1149,
+  "GeoCoordinates": 1149,
+  "OpeningHoursSpecification": 1149,
+  "SearchAction": 1149,
+  "BreadcrumbList": 1148,
+  "ListItem": 1148,
+  "Place": 321,
+  "Person": 310,
+  "Country": 256,
+  "Occupation": 256,
+  "CollegeOrUniversity": 256,
+  "Article": 251,
   "Event": 67,
   "Offer": 28,
+  "Answer": 20,
+  "Question": 20,
+  "FAQPage": 20,
   "NewsArticle": 19,
-  "Answer": 19,
-  "FAQPage": 19,
-  "Question": 19,
   "Schedule": 9
  },
  "sitewide_structured_data": [
@@ -194,6 +194,6 @@
   "SearchAction",
   "WebSite"
  ],
- "page_specific_structured_data": 406,
+ "page_specific_structured_data": 412,
  "title_suffix": " | Theodore Roosevelt Presidential Library"
 }

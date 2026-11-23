@@ -1,64 +1,64 @@
 {
  "audit": {
   "state": "ok",
-  "message": "Crawled 1136 pages, health 95/100",
-  "updated": "2026-11-16T12:44:06+00:00"
+  "message": "Crawled 1149 pages, health 95/100",
+  "updated": "2026-11-23T12:38:39+00:00"
  },
  "ranks": {
   "state": "ok",
-  "message": "40 keywords checked",
-  "updated": "2026-11-16T12:51:54+00:00"
+  "message": "45 keywords checked",
+  "updated": "2026-11-23T12:44:16+00:00"
  },
  "opportunities": {
   "state": "ok",
-  "message": "18 striking-distance queries, 5 low-CTR pages; 144 recently changed pages held back",
-  "updated": "2026-11-22T13:22:37+00:00"
+  "message": "18 striking-distance queries, 5 low-CTR pages; 142 recently changed pages held back",
+  "updated": "2026-11-23T12:52:20+00:00"
  },
  "gsc": {
   "state": "ok",
-  "message": "22442 queries, 2969 pages (2026-10-23 to 2026-11-19); 270 changed pages tracked",
-  "updated": "2026-11-22T13:22:37+00:00"
+  "message": "22494 queries, 2964 pages (2026-10-24 to 2026-11-20); 270 changed pages tracked",
+  "updated": "2026-11-23T12:33:08+00:00"
  },
  "ai_visibility": {
   "state": "error",
   "message": "46 answers from ChatGPT, Gemini, Perplexity; 23 failed: Perplexity 403: {\"error\":{\"message\":\"The Agent API requires paid credits. Sign-up credits and Perplexity Pro or Max subscriptions do not count. Add cr",
-  "updated": "2026-11-16T12:58:33+00:00"
+  "updated": "2026-11-23T12:52:20+00:00"
  },
  "tips": {
   "state": "ok",
   "message": "Gemini wrote tips for 8 pages",
-  "updated": "2026-11-16T13:18:28+00:00"
+  "updated": "2026-11-23T13:12:39+00:00"
  },
  "digest": {
   "state": "ok",
   "message": "llms.txt, digest.md and digest.json rebuilt",
-  "updated": "2026-11-22T13:22:52+00:00"
+  "updated": "2026-11-23T13:12:39+00:00"
  },
  "checkout": {
   "state": "ok",
   "message": "Checkout completion n/a; steps not tracked: view_item, add_to_cart, begin_checkout, add_payment_info",
-  "updated": "2026-11-22T13:22:52+00:00"
+  "updated": "2026-11-23T13:09:24+00:00"
  },
  "curate": {
   "state": "ok",
-  "message": "20 discovered keywords and 8 discovered questions tracked; 7 changes today",
-  "updated": "2026-11-16T12:44:38+00:00"
+  "message": "25 discovered keywords and 8 discovered questions tracked; 5 changes today",
+  "updated": "2026-11-23T12:38:58+00:00"
  },
  "ux": {
   "state": "ok",
-  "message": "80 pages; PageSpeed on 78; AI task check by gemini (gemini-3.8-flash); GA4 on; Clarity off; 2 errors, e.g. PageSpeed /visit/maps: PageSpeed 500: {\n  \"error\": {\n    \"code\": 500,\n    \"message\": \"Lighthouse returned error: PAGE_HUNG. Lighthouse was unable to reliably load the URL you requeste",
-  "updated": "2026-11-16T13:12:26+00:00"
+  "message": "82 pages; PageSpeed on 80; AI task check by gemini (gemini-3.8-flash); GA4 on; Clarity off; 2 errors, e.g. PageSpeed /visit/maps: PageSpeed 500: {\n  \"error\": {\n    \"code\": 500,\n    \"message\": \"Lighthouse returned error: PAGE_HUNG. Lighthouse was unable to reliably load the URL you requeste",
+  "updated": "2026-11-23T13:06:11+00:00"
  },
  "links": {
   "state": "ok",
-  "message": "1170 pages crawled; 1 broken internal links (redirects proposed); 658 suggested links; 45 orphan pages; 27 related pairs without links",
-  "updated": "2026-11-16T13:14:05+00:00"
+  "message": "1184 pages crawled; 8 broken internal links (redirects proposed); 682 suggested links; 42 orphan pages; 27 related pairs without links",
+  "updated": "2026-11-23T13:07:42+00:00"
  },
  "schema": {
   "state": "ok",
-  "message": "293/889 content pages have their own markup; 6 sitewide issues",
-  "updated": "2026-11-16T13:15:28+00:00",
-  "pages": 1044
+  "message": "352/900 content pages have their own markup; 9 sitewide issues",
+  "updated": "2026-11-23T13:09:00+00:00",
+  "pages": 1058
  },
  "indexnow": {
   "state": "skipped",

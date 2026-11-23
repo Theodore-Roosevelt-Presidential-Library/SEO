@@ -1,188 +1,136 @@
 {
- "updated": "2026-11-16T13:15:58+00:00",
+ "updated": "2026-11-23T13:09:24+00:00",
  "pages": [
   {
-   "page": "https://www.trlibrary.com/tickets",
+   "page": "https://www.trlibrary.com/tr/presidency/brownsville",
    "written_by": "Gemini (gemini-3.8-flash)",
-   "summary": "The tickets page covers pricing and tours but misses crucial planning details like the 3 1/2-hour visit duration, leaving visitors and search engines unclear on how to schedule timed-entry slots.",
+   "summary": "With over 110,000 search impressions and almost no clicks for 'brownsville affair', the page needs an urgent metadata rewrite and a concise 'at a glance' summary answering what happened, why Roosevelt acted, and how the soldiers were exonerated.",
    "title": {
-    "suggested": "Tickets & Admission: Timed Entry, Passes & Tours",
-    "why": "The current title ('Tickets') triggers an audit warning for being under 15 characters; adding 'Admission', 'Timed Entry', and 'Tours' captures high-volume ticket search variants while staying under 60 characters."
+    "suggested": "Brownsville Affair: Roosevelt and the 25th Infantry",
+    "why": "Puts the primary search term first, pairs Roosevelt directly with the event, and stays within the 60-character limit before the site suffix."
    },
    "meta_description": {
-    "suggested": "Book timed-entry tickets to the Theodore Roosevelt Presidential Library in Medora. Check admission prices, reserve specialty tours, and plan your visit.",
-    "why": "Fits the 120–155 character requirement (152 characters), includes target keywords, and gives prospective visitors a clear reason to click."
+    "suggested": "Explore the 1906 Brownsville Affair, when Roosevelt discharged 167 Black soldiers without trial, and see how the injustice was overturned 66 years later.",
+    "why": "Fits the 120-155 character range (150 characters) and gives searchers a strong reason to click by framing both the 1906 discharge and the 1972 vindication."
    },
    "content_additions": [
     {
-     "for_query": "presidential library medora",
-     "suggestion": "Add visit duration guidance directly beneath the pricing table to help travelers pacing their day in Medora and Theodore Roosevelt National Park.",
-     "draft": "Plan on about 3 1/2 hours to take in the galleries, walk the boardwalk, and explore at an easy pace. Timed entry ensures unhurried galleries, so reserve early to match your travel schedule."
+     "for_query": "brownsville affair",
+     "suggestion": "Add a quick-facts overview box right under the main title to capture searchers and AI overview snippets looking for a fast definition.",
+     "draft": "Quick Facts: The Brownsville Affair\n- What happened: On August 13–14, 1906, shots in Brownsville, Texas killed a bartender and wounded a police officer. Townspeople blamed soldiers from the all-Black 25th Infantry Regiment stationed at Fort Brown.\n- Roosevelt's action: In November 1906, President Roosevelt discharged 167 soldiers without honor, individual hearings, or court-martial.\n- The outcome: In 1972, the U.S. Army overturned the ruling and granted honorable discharges. In 1973, Dorsie Willis, the only surviving member, received a compensation payment."
     },
+    {
+     "for_query": "brownsville incident",
+     "suggestion": "Weave common historical alternate names ('Brownsville incident', 'Brownsville raid', 'Brownsville affray') into the opening section to help searchers find the event under varied terms.",
+     "draft": "Sometimes referred to as the Brownsville incident, raid, or affray, the episode began on the night of August 13–14, 1906, when gunfire broke out near Fort Brown."
+    }
+   ],
+   "ai_readiness": [
+    {
+     "suggestion": "Add an FAQ section using clear question headings such as 'What was the Brownsville Affair?', 'Why did Theodore Roosevelt discharge the 25th Infantry?', and 'When were the Brownsville soldiers exonerated?'.",
+     "why": "AI search engines prioritize pages with clean question-and-answer pairs for direct conversational citations."
+    }
+   ],
+   "technical": [
+    {
+     "suggestion": "Review and prune irrelevant schema types like 'CollegeOrUniversity' from this page and implement 'FAQPage' schema.",
+     "why": "Schema markup on this URL includes unexpected types like CollegeOrUniversity, while structured Q&A schema is missing."
+    }
+   ],
+   "needs_verification": [
+    "Verify that the term 'Brownsville raid' and 'Brownsville affray' are acceptable naming variants aligned with Library interpretive guidelines.",
+    "Confirm the exact dates (August 13–14, 1906), soldier count (167), and the 1972/1973 exoneration and compensation details before publishing newly formatted summaries."
+   ],
+   "checks": [
+    "Suggestion contains a year: check it against the page and the no-years rule"
+   ],
+   "dropped_claims": []
+  },
+  {
+   "page": "https://www.trlibrary.com/tr/presidency/roosevelt-corollary",
+   "written_by": "Gemini (gemini-3.8-flash)",
+   "summary": "This page earns over 22,000 impressions a month for 'roosevelt corollary' and related definition queries, but suffers a very low click-through rate because it buries a plain, direct definition beneath background history.",
+   "title": {
+    "suggested": "Roosevelt Corollary: Definition, Summary & History",
+    "why": "Front-loads the primary target phrase and targets high-volume search intents ('definition', 'summary') within 50 characters."
+   },
+   "meta_description": {
+    "suggested": "What was the Roosevelt Corollary? Get a clear definition, see how it altered the Monroe Doctrine, and learn why it sparked decades of debate.",
+    "why": "Fits in 141 characters, addresses the top search questions directly, and gives students and general readers a clear reason to click."
+   },
+   "content_additions": [
+    {
+     "for_query": "roosevelt corollary definition",
+     "suggestion": "Add a prominent 'Quick Definition' callout box right under the page title before diving into the 1823 background.",
+     "draft": "Quick Definition: Announced in an Annual Message to Congress in December 1904, the Roosevelt Corollary expanded the Monroe Doctrine. Where the original doctrine warned European powers to keep out of the Western Hemisphere, Roosevelt asserted that the United States would act as an 'international police power'—stepping in directly if Latin American nations faced chronic instability or unpaid foreign debts."
+    },
+    {
+     "for_query": "monroe doctrine vs roosevelt corollary",
+     "suggestion": "Add a side-by-side comparison box or subheading that explicitly contrasts the two policies, directly satisfying comparison queries.",
+     "draft": "Monroe Doctrine vs. Roosevelt Corollary:\n- Monroe Doctrine (1823): A defensive warning telling European empires to keep their hands off the Western Hemisphere.\n- Roosevelt Corollary (1904): An active policy claiming the United States had the authority to step into Latin American affairs to police debts and maintain order before European nations intervened."
+    }
+   ],
+   "ai_readiness": [
+    {
+     "suggestion": "Add FAQ schema markup or clear question-and-answer subheadings for 'What was the goal of the Roosevelt Corollary?' and 'How did the Roosevelt Corollary change U.S. foreign policy?'",
+     "why": "Search engines and AI overview engines frequently extract concise, direct answers to satisfy common student study prompts."
+    }
+   ],
+   "technical": [
+    {
+     "suggestion": "Review and clean up the page's structured data types; remove mismatched types such as 'CollegeOrUniversity' and ensure Article, BreadcrumbList, and FAQPage schemas are properly structured.",
+     "why": "The current page lists 15 mixed schema types, some of which do not fit a presidency history article and can dilute search engine confidence."
+    }
+   ],
+   "needs_verification": [
+    "Verify whether the drafted summary accurately reflects the Library's educational guidelines on describing the 1904 Annual Message and the Monroe Doctrine."
+   ],
+   "checks": [],
+   "dropped_claims": []
+  },
+  {
+   "page": "https://www.trlibrary.com/visit/hours",
+   "written_by": "Gemini (gemini-3.8-flash)",
+   "summary": "Fix broken heading hierarchy across seasonal schedules and make indoor/bad-weather operating details clearer so AI search engines can easily parse daily opening times and seasonal closures.",
+   "title": {
+    "suggested": "Hours and Seasonal Schedule in Medora",
+    "why": "Puts the primary search term first, keeps character count to 37 characters, and avoids redundancy with the automatic site suffix."
+   },
+   "meta_description": {
+    "suggested": "Find seasonal museum, restaurant, and shop hours in Medora, North Dakota. Plan about 3 1/2 hours for your visit, with last entry 90 minutes before close.",
+    "why": "At 152 characters, it fits search engine limits, specifies the location, sets clear visit expectations, and gives a direct reason to click."
+   },
+   "content_additions": [
     {
      "for_query": "What can we do indoors in Medora if the weather is bad?",
-     "suggestion": "Clarify within the general admission section that tickets cover full access to all indoor galleries, theater spaces, and exhibits, making it a reliable stop in any weather.",
-     "draft": "Admission provides all-day access to every indoor gallery and exhibit hall, offering a steady, climate-controlled destination just off the badlands trails."
+     "suggestion": "Add a note under Additional Details clarifying that the indoor exhibitions and dining offer shelter during harsh Badlands weather, while reminding visitors to check the schedule for weather-related adjustments.",
+     "draft": "Badlands weather can shift fast. The indoor exhibition galleries, retail store, and Salt + Scoria Restaurant offer a comfortable visit out of the wind, rain, or winter cold. Plan about three and a half hours inside. Check this page for any schedule adjustments during severe storms."
+    },
+    {
+     "for_query": "April 22, 2027 - Free Admission Day",
+     "suggestion": "Remove the specific year '2027' from the Earth Day heading under Ticket Availability to conform to house rules against stale visitor copy.",
+     "draft": "Earth Day Free Admission Day\nEnjoy free admission to the Theodore Roosevelt Presidential Library on Earth Day, April 22. Explore the galleries, learn about conservation, and celebrate the natural world. Reserve advance tickets online to secure your entry time."
     }
    ],
    "ai_readiness": [
     {
-     "suggestion": "Include explicit Q&A copy addressing common ticket questions (e.g., 'How long does a visit take?', 'Do children need a ticket?', 'What is included with admission?').",
-     "why": "AI search assistants frequently synthesize ticket and visit-length details directly from structured on-page FAQ patterns."
+     "suggestion": "Add an explicit quick-reference summary block at the top of the page with year-round operating rules: open year-round, typical visit time of about 3 1/2 hours, and last entry cutoff 90 minutes before closing.",
+     "why": "AI assistants answering visitor questions pull bite-sized operational facts faster when they are grouped together rather than dispersed across multiple tabs or accordions."
     },
     {
-     "suggestion": "Remove first-person phrasing ('We have a whole set of planning tools...') under 'Planning a Visit in the Future?' in favor of direct, objective statements.",
-     "why": "Third-person, park ranger tone is cleaner for LLMs to extract as factual planning guidance without needing to rephrase institutional self-references."
+     "suggestion": "Ensure the OpeningHoursSpecification structured data explicitly separates Museum, Retail Store, and Salt + Scoria Restaurant hours across all four seasonal date ranges.",
+     "why": "Search engines currently see varying schedules in raw text; distinct schema objects prevent AI models from confusing restaurant meal windows with museum gallery opening hours."
     }
    ],
    "technical": [
     {
-     "suggestion": "Add schema.org Offer and PriceSpecification structured data linked to the admission tiers ($26 Adult, $16 Youth, $0 Child).",
-     "why": "The page currently has GeoCoordinates and OpeningHoursSpecification but lacks Offer markup, which prevents Google from rendering rich snippet pricing directly in search results."
+     "suggestion": "Correct heading hierarchy throughout the page by nesting H2 tags for seasons (Spring, Summer, Fall, Winter) and major sections (Additional Details, Ticket Availability), and H3 tags for venues (Museum, Retail Store, Salt + Scoria Restaurant).",
+     "why": "Resolves the flagged audit issue where heading tags skipped levels or used flat H1 tags across sub-sections, improving accessibility and crawler indexing."
     }
    ],
    "needs_verification": [
-    "Confirm that admission allows same-day re-entry if visitors leave to hike or dine before returning to indoor galleries."
-   ],
-   "checks": [],
-   "dropped_claims": []
-  },
-  {
-   "page": "https://www.trlibrary.com/tr/presidency/nobel-peace-prize",
-   "written_by": "Gemini (gemini-3.8-flash)",
-   "summary": "Directly answer the high-volume query 'why did Theodore Roosevelt win the Nobel Peace Prize' near the top of the page and clarify his historic status as the first American Nobel laureate.",
-   "title": {
-    "suggested": "Theodore Roosevelt's Nobel Peace Prize",
-    "why": "Front-loads the primary search terms, replaces a poetic subtitle with high-intent keywords, and stays under 60 characters."
-   },
-   "meta_description": {
-    "suggested": "Why did Theodore Roosevelt win the Nobel Peace Prize? Discover how his mediation ended the Russo-Japanese War and made him the first American laureate.",
-    "why": "Directly matches high-intent search queries, mentions the Russo-Japanese War, and offers a clear reason to click at 153 characters."
-   },
-   "content_additions": [
-    {
-     "for_query": "why did theodore roosevelt win the nobel peace prize",
-     "suggestion": "Add a clear summary callout near the top of the page under the introduction that answers the exact question directly for searchers and featured snippets.",
-     "draft": "Why did Theodore Roosevelt win the Nobel Peace Prize? In December 1906, the Norwegian Nobel Committee honored Roosevelt for brokering the end of the Russo-Japanese War. Through careful negotiations in Portsmouth, New Hampshire, he brought Russian and Japanese envoys to agree on the Treaty of Portsmouth, making him the first American to win a Nobel Prize."
-    },
-    {
-     "for_query": "did teddy roosevelt win the nobel peace prize",
-     "suggestion": "Ensure the first section or introduction explicitly mentions 'Teddy Roosevelt' alongside 'Theodore Roosevelt' and clearly affirms the win.",
-     "draft": "Theodore Roosevelt was the first American citizen to receive any Nobel Prize. Often remembered as a military leader and Rough Rider, Teddy Roosevelt showed the world that American strength could also be used to build peace."
-    }
-   ],
-   "ai_readiness": [
-    {
-     "suggestion": "Add an explicit FAQ-style question heading or distinct summary block answering 'Why did Theodore Roosevelt win the Nobel Peace Prize?'",
-     "why": "AI engines extracting concise answers to the common query need a standalone paragraph that ties Roosevelt, the Russo-Japanese War, the Treaty of Portsmouth, and the award together."
-    }
-   ],
-   "technical": [
-    {
-     "suggestion": "Ensure schema includes an FAQPage or has the main Article schema explicitly list the Nobel Peace Prize award as an honor within the Person entity.",
-     "why": "Supplying structured facts about the award helps search engines match queries asking whether and why Roosevelt won the Nobel Peace Prize."
-    }
-   ],
-   "needs_verification": [
-    "Confirm whether 'Teddy' is acceptable to use sparingly in informational copy to capture user search variants according to communications team guidelines."
-   ],
-   "checks": [],
-   "dropped_claims": []
-  },
-  {
-   "page": "https://www.trlibrary.com/tr/presidency/foreign-policy",
-   "written_by": "Gemini (gemini-3.8-flash)",
-   "summary": "Tighten the over-length title and truncated meta description to target high-intent search queries, and add structured answer summaries for common questions about Roosevelt's actions in Latin America and Asia.",
-   "title": {
-    "suggested": "Theodore Roosevelt Foreign Policy: The Big Stick Era",
-    "why": "At 52 characters, it front-loads the primary search term 'Theodore Roosevelt Foreign Policy' while staying well under the 60-character cutoff before the site suffix."
-   },
-   "meta_description": {
-    "suggested": "See how Theodore Roosevelt built a global power through Big Stick diplomacy, naval might, and peacemaking. Explore key events and his lasting world impact.",
-    "why": "Replaces the current broken description that cuts off mid-sentence, fits the 120-155 character requirement at 154 characters, and provides a clear call to action."
-   },
-   "content_additions": [
-    {
-     "for_query": "what are two ways roosevelt used u.s. power in other countries?",
-     "suggestion": "Add a clear summary box or key takeaways section near the top highlighting the primary methods Roosevelt used to project American power abroad, serving students and search answer boxes.",
-     "draft": "Roosevelt exerted American power abroad through both military presence and diplomatic mediation. In Latin America, naval forces supported Panamanian independence in 1903 to secure the Canal Zone, and the Roosevelt Corollary justified interventions in nations such as the Dominican Republic. In Asia, Roosevelt combined naval deterrence with diplomacy, brokering the 1905 Treaty of Portsmouth to end the war between Russia and Japan."
-    },
-    {
-     "for_query": "describe theodore roosevelt's foreign policy goals and actions in asia",
-     "suggestion": "Add a dedicated sub-heading or anchor summary detailing his actions in Asia to capture targeted queries on the Russo-Japanese War, the Philippines, and Pacific naval strategy.",
-     "draft": "Roosevelt focused on maintaining a balance of power in Asia. By mediating the 1905 Treaty of Portsmouth between Russia and Japan, the United States helped halt Russian expansion while checking Japanese dominance. American naval bases in the Philippines and the global voyage of the Great White Fleet reinforced that presence across the Pacific."
-    }
-   ],
-   "ai_readiness": [
-    {
-     "suggestion": "Format key foreign policy actions into distinct, question-led subheadings such as 'How did Roosevelt use diplomacy?' and 'Where did the United States intervene?'",
-     "why": "AI engines and conversational search tools rely on direct question-and-answer pairings to extract concise summaries for historical queries."
-    },
-    {
-     "suggestion": "Remove the unrelated 'Man in the Arena' quotation under the Roosevelt Corollary section.",
-     "why": "The quote interrupts the historical discussion of Latin American intervention and confuses machine readers seeking context-specific analysis of the Monroe Doctrine and Corollary."
-    }
-   ],
-   "technical": [
-    {
-     "suggestion": "Trim the page title from 65 characters to under 60 characters so search engines do not truncate it before the brand suffix.",
-     "why": "The existing page title exceeds the recommended 60-character desktop and mobile display limits.",
-     "confirmed": "a paragraph ends without punctuation: “…is marred by dust and sweat and blood.\" — Theodore Roosevelt”"
-    },
-    {
-     "suggestion": "Clean up page-level schema to focus on Article, BreadcrumbList, and Person while removing unrelated types like CollegeOrUniversity or OpeningHoursSpecification.",
-     "why": "Extraneous organizational and local business schema types on a historical narrative page dilute structured data clarity for search crawlers."
-    }
-   ],
-   "needs_verification": [
-    "Verify whether the Dominican Republic intervention is explicitly referenced elsewhere on trlibrary.com before including it in the summary draft.",
-    "Confirm that the 'Man in the Arena' quote under the Roosevelt Corollary heading was placed by editorial error and can be relocated."
-   ],
-   "checks": [],
-   "dropped_claims": []
-  },
-  {
-   "page": "https://www.trlibrary.com/tr/rise-to-power/rough-riders",
-   "written_by": "Gemini (gemini-3.8-flash)",
-   "summary": "The page ranks on page one for major definitional searches like 'who were the rough riders' and 'what did the rough riders do' but lacks a crisp summary definition at the very top, while accidentally repeating two entire sections on training and the voyage to Cuba.",
-   "title": {
-    "suggested": "Who Were the Rough Riders? TR's 1st Volunteer Cavalry",
-    "why": "Targets high-volume queries like 'rough riders' and 'who were the rough riders' with the most important keywords front-loaded under 60 characters."
-   },
-   "meta_description": {
-    "suggested": "Who were the Rough Riders? Discover how Theodore Roosevelt led cowboys and Ivy Leaguers from training in Texas to the charge up Kettle Hill in Cuba.",
-    "why": "Meets the 120-155 character requirement (140 characters), targets high-volume queries directly, and provides a clear incentive to click."
-   },
-   "content_additions": [
-    {
-     "for_query": "who were the rough riders",
-     "suggestion": "Add a standalone summary box or opening definition before the first heading answering who the regiment was, who led them, and what made them unique.",
-     "draft": "The Rough Riders was the popular name given to the 1st U.S. Volunteer Cavalry, organized in 1898 during the Spanish-American War by Theodore Roosevelt and Colonel Leonard Wood. The regiment brought together southwestern cowboys, Ivy League athletes, Native Americans, miners, and lawmen to fight in Cuba, earning fame during the charge up Kettle Hill."
-    },
-    {
-     "for_query": "what did the rough riders do",
-     "suggestion": "Add a bulleted key-facts section answering what the unit accomplished during the war to capture quick-answer search snippets.",
-     "draft": "What the Rough Riders accomplished: Formed in Texas at Camp Wood, shipped to Cuba from Tampa, fought on foot through dense brush at Las Guasimas, took Kettle Hill alongside the regular 10th Cavalry, and helped force the surrender of Santiago before disbanding at Montauk Point."
-    }
-   ],
-   "ai_readiness": [
-    {
-     "suggestion": "Add a concise FAQ section with exact H2 headings for 'Who were the Rough Riders?' and 'What did the Rough Riders do?'",
-     "why": "Search engines and AI assistants frequently draw from clear question-and-answer headings when answering definitional historical prompts."
-    }
-   ],
-   "technical": [
-    {
-     "suggestion": "Remove duplicate sections 'Training and Organization' and 'The Voyage and Arrival in Cuba'.",
-     "why": "The page repeats training and embarkation details almost verbatim in two back-to-back sections, bloating the page and confusing search crawlers."
-    },
-    {
-     "suggestion": "Add FAQPage structured data if an FAQ block is implemented.",
-     "why": "Helps search engines parse the specific historical questions and eligible answers for rich snippet display."
-    }
-   ],
-   "needs_verification": [
-    "Verify that all names, dates, and troop designations in the added summary (1st U.S. Volunteer Cavalry, 1898, Spanish-American War, Camp Wood, Las Guasimas, Kettle Hill, 10th Cavalry, Santiago, Montauk Point) match approved historical records."
+    "Verify whether Earth Day free admission applies every year or was intended specifically for a single anniversary event.",
+    "Verify whether the outdoor boardwalk has posted sunrise-to-sunset hours or remains accessible 24 hours daily."
    ],
    "checks": [],
    "dropped_claims": []
@@ -190,46 +138,101 @@
   {
    "page": "https://www.trlibrary.com/programs",
    "written_by": "Gemini (gemini-3.8-flash)",
-   "summary": "Expand the thin, under-150-word text with clear descriptions of in-person Medora events and digital resources, helping travelers planning Badlands visits and educators find useful programming.",
+   "summary": "Expand the thin, under-150-word body copy with specific descriptions of available media and educational offerings, and introduce clear heading hierarchy so search engines and AI assistants recognize the Library's active public programming.",
    "title": {
-    "suggested": "Programs, Events & Educational Resources",
-    "why": "Expands the current 8-character title past the 15-character minimum while front-loading primary offerings for visitors and teachers."
+    "suggested": "Programs, Podcasts & Events",
+    "why": "Replaces the generic single-word title with specific keywords that capture both digital offerings and in-person events while staying well under 60 characters."
    },
    "meta_description": {
-    "suggested": "Explore educational programs, podcasts, films, and live events in Medora and online. Find classroom tools, upcoming talks, and Badlands gatherings.",
-    "why": "Keeps length to 148 characters, highlights both digital and in-person offerings, and gives visitors clear reasons to click."
+    "suggested": "Listen to the Good Citizen Podcast, explore classroom lessons, and find live events in Medora and online at the Theodore Roosevelt Presidential Library.",
+    "why": "Fits the 120-155 character requirement at 153 characters, eliminates vague phrasing, and provides a clear reason to click."
    },
    "content_additions": [
     {
      "for_query": "What can we do indoors in Medora if the weather is bad?",
-     "suggestion": "Add brief explanatory copy under the media and education sections detailing what families and visitors can explore on site and online.",
-     "draft": "Look through interactive learning materials, family-friendly quizzes, and media presentations. Whether planning an indoor stop during bad weather or prepping before heading into the Badlands, these materials offer plenty to do."
+     "suggestion": "Add brief explanatory text to the Events & Gatherings section outlining what visitors can expect when attending in-person talks and programs in Medora.",
+     "draft": "Step inside for live talks, book discussions, and community presentations in Medora. Check the schedule to catch guest speakers, historical discussions, and special indoor events when planning a Badlands stop."
     },
     {
-     "for_query": "I'm visiting Theodore Roosevelt National Park. What else should I see nearby?",
-     "suggestion": "Add a note in the Events & Gatherings section explaining how events fit into a visit schedule.",
-     "draft": "Pair a stop at Theodore Roosevelt National Park with an afternoon gathering or evening talk. A typical visit to the Library takes about 3 1/2 hours, making it easy to build a full day around scheduled programs in Medora."
+     "for_query": "Fun things to do with kids in the North Dakota Badlands?",
+     "suggestion": "Flesh out the Educational Resources and Quizzes sections to describe hands-on materials suitable for families traveling with children or teachers preparing a trip.",
+     "draft": "Planning a family trip or a classroom unit? Download interactive materials, lesson plans, and trivia quizzes to get young historians thinking about conservation and civic life before or after exploring western North Dakota."
     }
    ],
    "ai_readiness": [
     {
-     "suggestion": "Add concise category summaries differentiating digital programs (Good Citizen Podcast, videos, quizzes) from on-site Medora events.",
-     "why": "AI assistants answering trip-planning and educational queries need direct, scannable statements indicating what can be experienced on-site in Medora versus online from anywhere."
+     "suggestion": "Add concrete detail describing the regular focus areas of the Good Citizen Podcast and video archives.",
+     "why": "Generative AI engines crawl program hubs to answer queries about citizenship discussions, conservation history, and Badlands educational resources. Clear descriptive paragraphs provide extractable answers."
+    },
+    {
+     "suggestion": "Include an FAQ block addressing whether programs are free or ticketed, whether advance registration is needed, and how remote audiences can tune in.",
+     "why": "AI travel planners frequently search for booking requirements, remote access details, and event accessibility."
     }
    ],
    "technical": [
     {
-     "suggestion": "Fix heading hierarchy by nesting H2 section headings ('Learning & Media', 'Events & Gatherings') and using H3 tags for specific sub-items like 'Good Citizen Podcast' and 'Event Calendar'.",
-     "why": "Resolves the flagged audit issue where heading levels skip, improving accessibility and crawler comprehension."
+     "suggestion": "Establish a consistent heading hierarchy: make 'Programs' an H1, convert primary program categories and 'Events & Gatherings' to H2 tags, and make individual program titles (Podcast, Videos, Quizzes) H3 tags.",
+     "why": "Resolves the flagged heading skip issue and helps web crawlers correctly parse the page structure."
     },
     {
-     "suggestion": "Implement PodcastSeries structured data for the Good Citizen Podcast and Event / EventSeries schema for the calendar.",
-     "why": "Allows search engines to display rich snippets for podcasts and upcoming Medora events directly in search results."
+     "suggestion": "Implement Event schema markup on the linked Event Calendar and Virtual Events pages.",
+     "why": "Enables search engines to feature specific upcoming Library gatherings directly in rich search results."
     }
    ],
    "needs_verification": [
-    "Confirm whether educational materials and quizzes are available on site in Medora or solely online.",
-    "Check whether live talks and screenings run year-round or operate on a seasonal schedule."
+    "Confirm whether live talks and indoor community presentations in Medora require tickets or advance registration.",
+    "Verify whether classroom materials and quizzes are available for free download by families and teachers."
+   ],
+   "checks": [],
+   "dropped_claims": []
+  },
+  {
+   "page": "https://www.trlibrary.com/tr/rise-to-power/rough-riders",
+   "written_by": "Gemini (gemini-3.8-flash)",
+   "summary": "Add a crisp, direct definition of the Rough Riders at the top of the page to capture high-volume informational queries like 'who were the rough riders' and feed AI summary answer boxes.",
+   "title": {
+    "suggested": "Rough Riders: Theodore Roosevelt's 1st Volunteer Cavalry",
+    "why": "Puts high-intent search terms ('Rough Riders', 'Theodore Roosevelt', '1st Volunteer Cavalry') at the front while keeping within the 60-character ceiling."
+   },
+   "meta_description": {
+    "suggested": "Meet the Rough Riders: over 1,000 cowboys, athletes, and scouts led by Theodore Roosevelt in Cuba. Explore the battles that made the regiment legendary.",
+    "why": "Hits 149 characters, names the key figures and setting, and gives readers a vivid, active reason to click."
+   },
+   "content_additions": [
+    {
+     "for_query": "who were the rough riders",
+     "suggestion": "Place a prominent quick-summary callout right beneath the main title that defines the unit in two plain sentences before diving into the detailed history.",
+     "draft": "### Who Were the Rough Riders?\nThe Rough Riders were the 1st U.S. Volunteer Cavalry, an extraordinary regiment of more than 1,000 men organized to fight in Cuba during the Spanish-American War. Commanded by Colonel Leonard Wood and Theodore Roosevelt, the unit brought together Southwestern cowboys, Ivy League athletes, Native American scouts, lawmen, and miners into a single force."
+    },
+    {
+     "for_query": "why were the rough riders important",
+     "suggestion": "Add a dedicated subhead and brief section near the conclusion addressing the historical significance of the regiment, which is a common search question.",
+     "draft": "### Why Were the Rough Riders Important?\nThe regiment proved that volunteers from completely different walks of life could pull together into an effective fighting force. Their charges at Las Guasimas and Kettle Hill helped break Spanish defensive lines around Santiago. Back home, accounts of their battlefield courage captured public attention and turned Theodore Roosevelt into a celebrated national figure, lifting him to the governorship of New York within months."
+    }
+   ],
+   "ai_readiness": [
+    {
+     "suggestion": "Structure the opening and key battle sections using clear Q&A subheadings (such as 'Who Were the Rough Riders?' and 'What Happened at Kettle Hill?').",
+     "why": "Large language models and search engines rely on direct question-and-answer headings to source featured snippets and voice answers."
+    },
+    {
+     "suggestion": "Add FAQPage structured data covering basic questions like unit composition, training at Camp Wood, and the charge up Kettle Hill.",
+     "why": "Helps search engines parse the core historical details cleanly rather than getting lost in long narrative blocks."
+    }
+   ],
+   "technical": [
+    {
+     "suggestion": "Diagnose and reduce initial server response time (TTFB), which currently exceeds 3 seconds.",
+     "why": "Slow server response delays page rendering, hurts search rankings, and causes mobile visitors on cellular connections to bounce."
+    },
+    {
+     "suggestion": "Audit and streamline the 14 structured data types currently declared on the page.",
+     "why": "A cluttered schema array risks conflicting entities and slows page parsing; focus on Article, BreadcrumbList, and Person."
+    }
+   ],
+   "needs_verification": [
+    "Verify that the draft summary accurately states the regiment numbered more than 1,000 men and was commanded by Leonard Wood and Theodore Roosevelt.",
+    "Verify that the draft claims regarding Las Guasimas, Kettle Hill, Santiago, and Roosevelt's rise to the New York governorship match the Library's preferred historical framing."
    ],
    "checks": [],
    "dropped_claims": []
@@ -237,36 +240,81 @@
   {
    "page": "https://www.trlibrary.com/tr/presidency/conservation",
    "written_by": "Gemini (gemini-3.8-flash)",
-   "summary": "Capitalize on the page's top search query ('what did roosevelt do which had never been done before in conservation') by grouping his historic conservation firsts into an explicit, scannable section.",
+   "summary": "The page ranks on page one for queries asking what Roosevelt did that had never been done before in conservation, but it buries his unprecedented firsts across separate cards instead of answering the question directly.",
    "title": {
-    "suggested": "Theodore Roosevelt Conservation: Parks, Forests, Legacy",
-    "why": "Front-loads 'Theodore Roosevelt Conservation' to match primary search terms and fits within 60 characters without the site suffix."
+    "suggested": "Theodore Roosevelt Conservation: Parks, Forests & Wildlife",
+    "why": "Puts high-intent search terms front and center within 58 characters, improving visibility for searches around Roosevelt's conservation efforts."
    },
    "meta_description": {
-    "suggested": "Explore how Theodore Roosevelt protected roughly 230 million acres, founded the Forest Service, and created the first bird reserves. See the full record.",
-    "why": "Stays within the 120-155 character limit, highlights concrete numbers from the text, and provides a clear reason to click."
+    "suggested": "Discover how Theodore Roosevelt protected 230 million acres of public land, doubled the national parks, and created the first federal bird reserves.",
+    "why": "At 149 characters, this fits search engine snippet limits, highlights his landmark achievements, and gives readers a clear reason to click."
    },
    "content_additions": [
     {
-     "for_query": "what did roosevelt do which had never been done before in conservation",
-     "suggestion": "Add a dedicated subhead or callout box near the top titled 'Roosevelt's Conservation Firsts' that synthesizes the unprecedented actions already detailed across the page.",
-     "draft": "### What Roosevelt Did First\nRoosevelt took conservation into uncharted territory. He created the country’s first federal bird reserve at Pelican Island in 1903, proclaimed its first national monument at Devils Tower in 1906 under the new Antiquities Act, and summoned every state governor to the White House in May 1908 for the first national gathering focused on natural resources."
+     "for_query": "what did roosevelt do which had never been done before in conservation?",
+     "suggestion": "Add a short summary section beneath the main header that gathers Roosevelt's historic firsts in one easy-to-read spot.",
+     "draft": "What Roosevelt Did That Had Never Been Done Before\nBefore Roosevelt, no president had ever created a federal bird reservation, proclaimed a national monument, or summoned every state governor to the White House to focus on natural resources. In total, he placed roughly 230 million acres under public protection — doubling the national park system and establishing the U.S. Forest Service."
     }
    ],
    "ai_readiness": [
     {
-     "suggestion": "Structure the 'Key Facts' section into a clear definition list or Q&A format using FAQ schema markup.",
-     "why": "AI answer engines frequently pull from concise, factual Q&A pairings for questions like 'How much land did Roosevelt protect?' and 'What was the first national monument proclaimed by Roosevelt?'"
+     "suggestion": "Format the Key Facts section as a clear question-and-answer list or definition list answering specific questions, such as how many acres were protected and which bird reserve was first.",
+     "why": "AI engines and voice search extract answers most reliably when facts are paired directly with the natural questions searchers ask."
     }
    ],
    "technical": [
     {
-     "suggestion": "Review and clean up the schema markup list, specifically removing the 'CollegeOrUniversity' type if it was applied erroneously.",
-     "why": "The page contains structured data for 'CollegeOrUniversity', which conflicts with an interpretive historical page and dilutes entity clarity for search crawlers."
+     "suggestion": "Remove unnecessary schema types like CollegeOrUniversity and Occupation from this page's structured data, keeping focused types like Article, Place, and ItemList.",
+     "why": "Extraneous schema types create noise and can confuse crawlers trying to determine the primary entity and topic of the page."
     }
    ],
    "needs_verification": [
-    "Confirm whether Pelican Island is formally recognized as the country's first federal bird reservation or if existing text ('beginning with Pelican Island (1903)') should remain the exact phrasing."
+    "That Pelican Island was the nation's first federal bird reserve.",
+    "That Devils Tower was the first national monument.",
+    "That the 1908 Governors' Conference was the first time all governors were gathered at the White House for natural resources.",
+    "That roughly 230 million acres is the total public land protected under Roosevelt."
+   ],
+   "checks": [],
+   "dropped_claims": []
+  },
+  {
+   "page": "https://www.trlibrary.com/tr/strenuous-life/athletics",
+   "written_by": "Gemini (gemini-3.8-flash)",
+   "summary": "This page already ranks well for Roosevelt's fitness and boxing queries, but it can capture significantly more search traffic by organizing his specific workout habits and athletic feats into clear, scannable sections that directly answer search queries.",
+   "title": {
+    "suggested": "Theodore Roosevelt: Boxing, Fitness, and Sports",
+    "why": "Front-loads the highest-volume search topics—boxing, fitness, and sports—within 48 characters, avoiding the brand suffix that is appended automatically."
+   },
+   "meta_description": {
+    "suggested": "Explore Theodore Roosevelt’s daily workout habits, White House boxing bouts, and jiu-jitsu training. See how he built his iron constitution.",
+    "why": "At 143 characters, it incorporates target terms (workout, boxing, jiu-jitsu) and gives searchers a strong reason to click."
+   },
+   "content_additions": [
+    {
+     "for_query": "theodore roosevelt workout",
+     "suggestion": "Add a dedicated subsection under 'Asthma to Iron Constitution' outlining Roosevelt's daily exercise habits, highlighting the specific disciplines he practiced to build and maintain his strength.",
+     "draft": "### What Was Theodore Roosevelt's Workout Routine?\nRoosevelt treated physical conditioning as a daily obligation. His regular routine brought together several demanding disciplines:\n- Heavy bag work and sparring in the boxing ring\n- Calisthenics, running, and weightlifting\n- Point-to-point cross-country hikes, scrambling over rocks and through streams\n- Daily horseback riding on rugged trails\n- Open-water swimming and rowing in all seasons\n- Jiu-jitsu and wrestling sessions to sharpen balance and leverage"
+    },
+    {
+     "for_query": "theodore roosevelt boxing",
+     "suggestion": "Add a quick-reference callout in the boxing section highlighting key facts about his boxing career, including his training at Harvard, White House sparring, and the bout that impaired his vision.",
+     "draft": "### Fast Facts: Roosevelt in the Ring\n- Started boxing as a teenager under former prize-fighter John Long after an encounter on a stagecoach ride to Moosehead Lake.\n- Continued competitive sparring as an undergraduate at Harvard.\n- Kept up regular sparring sessions with military aides inside the White House during his presidency.\n- Stepped away from the ring after a punch from a young artillery captain injured his left eye and left the vision permanently dimmed."
+    }
+   ],
+   "ai_readiness": [
+    {
+     "suggestion": "Add an introductory quick-answer callout listing the full roster of sports Theodore Roosevelt practiced (boxing, tennis, horseback riding, jiu-jitsu, rowing, swimming, hiking).",
+     "why": "AI answer engines look for concise lists when responding to queries like 'what sports did Theodore Roosevelt play?' or 'did he play sports'."
+    }
+   ],
+   "technical": [
+    {
+     "suggestion": "Add FAQPage structured data to mark up common queries such as 'Did Theodore Roosevelt box in the White House?' and 'What sports did Theodore Roosevelt practice?'.",
+     "why": "Structured FAQ schema helps the page win rich snippets on high-volume queries like 'theodore roosevelt boxing' and 'boxer president'."
+    }
+   ],
+   "needs_verification": [
+    "Verify whether any specific calisthenics or weightlifting exercises are documented beyond the general 'gym work, running, boxing, lifting' mentioned in the current text before publishing expanded workout details."
    ],
    "checks": [],
    "dropped_claims": []
@@ -274,167 +322,120 @@
   {
    "page": "https://www.trlibrary.com/tr/presidency/booker-t-washington",
    "written_by": "Gemini (gemini-3.8-flash)",
-   "summary": "Shorten the title to eliminate SERP truncation and add concise summary callouts answering why the 1901 dinner occurred to win featured snippets and AI answers for high-volume historical queries.",
+   "summary": "Shorten the oversized title to align with high-volume search queries around the White House dinner, and add a concise summary answering why the dinner was significant to capture high-impression student and research queries.",
    "title": {
-    "suggested": "Booker T. Washington's White House Dinner",
-    "why": "Cuts the title to 41 characters (well under the 60-character limit), prioritizes the highest-volume search keywords first, and removes academic subtitle jargon."
+    "suggested": "Booker T. Washington's White House Dinner with Roosevelt",
+    "why": "At 56 characters, this fits within the 60-character cutoff and front-loads the key terms visitors and researchers search most: Booker T. Washington, Roosevelt, and the White House dinner."
    },
    "meta_description": {
-    "suggested": "Discover why Theodore Roosevelt invited Booker T. Washington to the White House in October 1901, the fierce backlash that followed, and what it meant.",
-    "why": "Stays within the 120-155 character range (151 characters), establishes key historical figures immediately, and gives readers a clear incentive to click."
+    "suggested": "In 1901, Theodore Roosevelt invited Booker T. Washington to dinner. Learn how one White House meal sparked public fury and tested executive power.",
+    "why": "At 146 characters, this fits the 120-155 character window, preserves the historical hook, and provides a clear reason to click."
    },
    "content_additions": [
     {
      "for_query": "booker t washington significance",
-     "suggestion": "Add a highlighted summary box right after the opening section that outlines the three main points of historical significance for quick reference by students and AI overview engines.",
-     "draft": "Key Significance of the 1901 Dinner:\n• First presidential dinner invitation: Booker T. Washington was the first African American invited to dine with a sitting U.S. president at the White House.\n• Practical consultation: Theodore Roosevelt sought Washington's counsel on Southern federal appointments and politics.\n• Political fallout: A severe public backlash led Roosevelt to avoid inviting Black leaders to dine publicly again during his presidency."
+     "suggestion": "Add a highlighted key takeaways box or dedicated subhead near the top explaining the immediate and lasting significance of the dinner to capture top-ranking curriculum and student searches.",
+     "draft": "Why This Dinner Mattered: On October 16, 1901, Booker T. Washington became the first African American guest invited to dine at the White House by a sitting president. While Roosevelt sought political counsel on Southern appointments, the invitation broke a deep-seated social barrier, triggered fierce political backlash, and exposed the boundaries Roosevelt was willing to defend."
     },
     {
      "for_query": "as a symbolic gesture, roosevelt invited him to dine at the white house.",
-     "suggestion": "Add a clear subheading or FAQ-style callout in 'Why the Invitation: Political Consultation and Patronage' clarifying whether the invitation was purely symbolic or driven by governance.",
-     "draft": "Was the dinner merely symbolic? While the dinner carried profound social symbolism as an acknowledgment of social equality, Roosevelt's primary aim was practical: consulting the nation's leading Black educator on federal appointments across the South."
+     "suggestion": "Clarify early in the article that while the public viewed the invitation as a symbolic gesture, Roosevelt's primary motive was practical political consultation regarding federal appointments in the South.",
+     "draft": "A Consultation, Not Just a Gesture: While history remembers the meal as a symbolic milestone, Roosevelt viewed it as practical business. Facing complex Southern politics, he needed counsel from the nation's most prominent Black leader on federal appointments and Republican strategy in the South."
     }
    ],
    "ai_readiness": [
     {
-     "suggestion": "Structure the core historical questions ('Why did Roosevelt invite Booker T. Washington?' and 'What was the backlash?') into explicit H2 or H3 question headers followed by direct 2-3 sentence answers.",
-     "why": "AI assistants and search generative engines scrape question-and-answer pairs directly when answering user queries about Roosevelt's civil rights record."
+     "suggestion": "Add FAQ schema or structured heading questions such as 'Why did Roosevelt invite Booker T. Washington?' and 'What was the backlash to the dinner?'.",
+     "why": "AI answer engines look for direct question-and-answer pairings when summarizing historic events for users."
+    },
+    {
+     "suggestion": "Consider adding a verified TR quote about inviting Booker T. Washington or defending executive discretion in his private letters.",
+     "why": "Authoritative primary source quotes increase citation likelihood in conversational search engines when users ask about Roosevelt's reaction to the controversy."
     }
    ],
    "technical": [
     {
-     "suggestion": "Audit and streamline the 15 schema types currently firing on this URL, consolidating them into a clean Article entity with an about property referencing Booker T. Washington and Theodore Roosevelt.",
-     "why": "Unnecessary types like CollegeOrUniversity and Occupation dilute entity clarity for web crawlers when attached directly to an article page."
+     "suggestion": "Audit and streamline the 15 schema types currently applied to this page.",
+     "why": "Entity-level schema types like CollegeOrUniversity, Country, OpeningHoursSpecification, and Occupation appear to be leaking into this historical article page from the sitewide template. Pruning to Article, BreadcrumbList, and Person (Roosevelt and Washington) clarifies page topic signals for search crawlers."
     }
    ],
    "needs_verification": [
-    "Confirm whether any planned future physical exhibits at the Medora Library address the 1901 dinner before linking this article to on-site visitor experiences."
+    "Confirm that the draft wording regarding the dinner date (October 16, 1901) and Booker T. Washington being the first African American invited to dine at the White House matches the Library's historical interpretation standards.",
+    "Verify that William Crum and Minnie Cox references in the body text are sufficiently contextualized if expanded into standalone callouts."
    ],
    "checks": [
     "Suggestion contains a year: check it against the page and the no-years rule"
    ],
-   "summary_note": "The summary's claim isn't borne out by the live page (every paragraph on the page ends with a complete sentence).",
-   "dropped_claims": [
-    {
-     "where": "summary",
-     "claim": "Shorten the title to eliminate SERP truncation and add concise summary callouts answering why the 1901 dinner occurred to win featured snippets and AI answers for high-volume historical queries.",
-     "reason": "every paragraph on the page ends with a complete sentence"
-    }
-   ]
-  },
-  {
-   "page": "https://www.trlibrary.com/tr/strenuous-life/athletics",
-   "written_by": "Gemini (gemini-3.8-flash)",
-   "summary": "Optimize title and metadata around high-volume queries like 'theodore roosevelt boxing' and fitness, and address popular search topics such as wrestling and his Harvard athletics directly in subheadings.",
-   "title": {
-    "suggested": "Theodore Roosevelt Boxing, Fitness & Athletics",
-    "why": "Front-loads the highest-impression search queries ('theodore roosevelt boxing' and fitness) within the 60-character limit, replacing the generic 'TR the Athlete'."
-   },
-   "meta_description": {
-    "suggested": "From childhood asthma to White House boxing and jiu-jitsu, discover how Theodore Roosevelt built his iron constitution through relentless physical training.",
-    "why": "Runs 149 characters, targets high-impression queries (boxing, asthma, training), and provides an engaging reason to read."
-   },
-   "content_additions": [
-    {
-     "for_query": "did teddy roosevelt wrestle",
-     "suggestion": "Expand the section '# The Wrestling and Jiu-Jitsu Years' to explicitly confirm whether TR practiced wrestling alongside jiu-jitsu, as the current heading mentions wrestling but the body only discusses jiu-jitsu.",
-     "draft": "Roosevelt took to the mat for both wrestling and jiu-jitsu. He relished rough-and-tumble grappling as a test of raw leverage, balance, and grit, applying the same fierce focus to sparring on the mat that he brought to boxing in the ring."
-    },
-    {
-     "for_query": "harvard college theodore roosevelt muscles",
-     "suggestion": "Clarify his collegiate sports background under '# Asthma to Iron Constitution: A Triumph of Will', where college is mentioned only in an image caption.",
-     "draft": "During his college years at Harvard, Roosevelt threw himself into competitive boxing and gym workouts, determined to build real muscle and stamina to outpace the sickliness of his boyhood."
-    }
-   ],
-   "ai_readiness": [
-    {
-     "suggestion": "Add a short FAQ accordion answering high-frequency user questions: 'Did Theodore Roosevelt box in the White House?' and 'Did Teddy Roosevelt do jiu-jitsu?'",
-     "why": "AI engines and featured snippets pull concise, question-led answers for queries like 'boxer president' and 'did teddy roosevelt do jiu jitsu'."
-    }
-   ],
-   "technical": [
-    {
-     "suggestion": "Trim excessive schema markup types if they are redundant or irrelevant to this standalone biographical article (e.g., OpeningHoursSpecification, PostalAddress, GeoCoordinates, CollegeOrUniversity).",
-     "why": "Retaining only Article, Person, and BreadcrumbList keeps structured data clean and prevents confusing search engine parsers on purely informational pages."
-    }
-   ],
-   "needs_verification": [
-    "Verify the historical details and frequency of Roosevelt's wrestling practice during and before his presidency to ensure accurate framing in the wrestling text addition.",
-    "Verify Roosevelt's specific sports and gym routine while a student at Harvard College."
-   ],
-   "checks": [],
    "dropped_claims": []
   }
  ],
  "ai_brief": {
-  "headline": "ChatGPT consistently points travelers to the Library for Medora trips, while Gemini largely skips it outside direct name searches.",
-  "how_described": "Engines highlight the Library as the newest presidential library and an indoor Badlands stop focused on Roosevelt's conservation work, but ChatGPT understates visit time as two to four hours and Gemini states it houses physical personal papers.",
+  "headline": "The Library reliably wins direct searches and driving routes on ChatGPT, but drops off the map for rainy-day visits, museum lists, and most Gemini travel prompts.",
+  "how_described": "Search engines describe the Library as a badlands stop on a butte 1 to 1.5 miles west of Medora's South Unit entrance, recommending 3.5 to 4 hours. However, ChatGPT cites a press release URL to declare the Library opened on July 4, 2026.",
   "gaps": [
    {
-    "theme": "Interstate travel and western highway itineraries",
-    "who_shows_up_instead": "Theodore Roosevelt National Park, Painted Canyon, Medora Musical, Chateau de Mores",
+    "theme": "Rainy day and indoor activities around Medora",
+    "who_shows_up_instead": "North Dakota Cowboy Hall of Fame, Chateau de Mores, Maltese Cross Cabin",
     "prompt_ids": [
-     "i94-stops",
-     "nd-road-trip",
-     "rushmore-to-trnp"
-    ]
-   },
-   {
-    "theme": "North Dakota museum roundups and bad-weather options",
-    "who_shows_up_instead": "North Dakota Cowboy Hall of Fame, Chateau de Mores, Plains Art Museum, Bonanzaville",
-    "prompt_ids": [
-     "nd-museums",
      "rainy-day-medora"
     ]
    },
    {
-    "theme": "Presidential library surveys and Roosevelt history questions",
+    "theme": "Statewide museum roundups and presidential site recommendations",
+    "who_shows_up_instead": "North Dakota Cowboy Hall of Fame, Chateau de Mores, Bonanzaville",
+    "prompt_ids": [
+     "nd-museums",
+     "presidential-libraries-visit"
+    ]
+   },
+   {
+    "theme": "General historic sites connected to Theodore Roosevelt",
     "who_shows_up_instead": "Theodore Roosevelt National Park, Maltese Cross Cabin, Elkhorn Ranch, Mount Rushmore",
     "prompt_ids": [
-     "tr-learn-where",
-     "tr-sites",
-     "presidential-libraries-visit",
-     "auto-what-were-theodore-roosevelt-s-major-accomplishmen"
+     "tr-sites"
+    ]
+   },
+   {
+    "theme": "Broad Medora destination overviews on Gemini",
+    "who_shows_up_instead": "Theodore Roosevelt National Park, Medora Musical, Pitchfork Steak Fondue, Chateau de Mores",
+    "prompt_ids": [
+     "medora-things-to-do",
+     "trnp-what-to-see",
+     "nd-road-trip"
     ]
    }
   ],
   "actions": [
    {
-    "action": "Add an I-94 corridor guide showing driving times from Bismarck and Glendive, Medora access, and how to fit a 3 1/2 hour stop into a cross-state drive.",
-    "why": "Both engines completely overlook the Library on I-94 queries, relying on Painted Canyon and state tourism listings instead.",
+    "action": "Add an indoor guide covering shelter from bad weather, gallery routes, and quiet spaces for a full 3 1/2 hour stay.",
+    "why": "Neither engine mentions the Library when travelers ask for indoor or bad-weather plans in Medora.",
     "effort": "medium",
-    "where": "trlibrary.com/visit/itineraries/i-94-road-trip"
+    "where": "trlibrary.com/visit"
    },
    {
-    "action": "Clarify time recommendations on the visitor FAQ page to state clearly that a full visit takes about 3 1/2 hours.",
-    "why": "ChatGPT currently cites 2 to 4 hours on indoor activity answers, which shortchanges the trail walks and exhibit galleries.",
+    "action": "Coordinate with regional partners to update attraction listings and travel roundups.",
+    "why": "Gemini relies heavily on medora.com, medorand.org, and ndtourism.com, but frequently misses the Library on general Medora inquiries.",
     "effort": "low",
-    "where": "trlibrary.com/visit/faq/during-your-visit"
+    "where": "medora.com and ndtourism.com listings"
    },
    {
-    "action": "Request updated attraction profiles on North Dakota Tourism and local partner portals to categorize the site as a premier state museum and indoor destination.",
-    "why": "Gemini pulls museum and rainy day results heavily from ndtourism.com, medora.com, and medorand.org rather than the main site.",
+    "action": "Publish a trail-to-exhibit page connecting the grounds to Maltese Cross Cabin and Elkhorn Ranch.",
+    "why": "Prompts about historic Roosevelt landmarks bypass the Library entirely in favor of National Park Service cabins.",
     "effort": "medium",
-    "where": "ndtourism.com and discovermedora.com partner listings"
+    "where": "trlibrary.com/visit"
    }
   ],
   "inaccuracies": [
    {
     "engine": "ChatGPT",
-    "claim": "Suggests a visit takes 2 to 4 hours.",
-    "correction_source": "trlibrary.com/visit/faq/during-your-visit"
-   },
-   {
-    "engine": "Gemini",
-    "claim": "States the Library was established to house Roosevelt's physical personal papers.",
-    "correction_source": "trlibrary.com/about"
+    "claim": "Stated that the Library opened on July 4, 2026.",
+    "correction_source": "trlibrary.com/about/press/press-releases"
    }
   ],
   "written_by": "Gemini (gemini-3.8-flash)"
  },
  "errors": [],
  "held_back": [
-  "/",
   "/about/foundation",
   "/about/mission",
   "/about/presidential-library-system",
@@ -488,6 +489,7 @@
   "/project/native-plant-project",
   "/research",
   "/research/archives",
+  "/tickets",
   "/tr",
   "/tr/10-myths-teddy-bear",
   "/tr/5-big-adventures",
@@ -500,7 +502,6 @@
   "/tr/badlands/maltese-cross",
   "/tr/badlands/medora",
   "/tr/badlands/ten-facts",
-  "/tr/badlands/where-to-see",
   "/tr/books-and-writings",
   "/tr/books-and-writings/autobiography",
   "/tr/books-and-writings/complete-list",
@@ -547,7 +548,6 @@
   "/tr/legacy/words-he-coined",
   "/tr/myths",
   "/tr/myths/misquotes",
-  "/tr/myths/teddy-name",
   "/tr/new-york-politics",
   "/tr/new-york-politics/alice-lee",
   "/tr/new-york-politics/convention-1884",
@@ -590,7 +590,6 @@
   "/tr/pre-presidency-political-accomplishments",
   "/tr/presidency",
   "/tr/presidency-timeline",
-  "/tr/presidency/brownsville",
   "/tr/presidency/bully-pulpit",
   "/tr/presidency/cabinet",
   "/tr/presidency/coal-strike",
@@ -608,11 +607,12 @@
   "/tr/presidency/executive-power",
   "/tr/presidency/first-term",
   "/tr/presidency/food-and-drug",
+  "/tr/presidency/foreign-policy",
   "/tr/presidency/great-white-fleet",
+  "/tr/presidency/nobel-peace-prize",
   "/tr/presidency/panama-canal",
   "/tr/presidency/race",
   "/tr/presidency/railroad-regulation",
-  "/tr/presidency/roosevelt-corollary",
   "/tr/presidency/second-term",
   "/tr/presidency/square-deal",
   "/tr/presidency/ten-facts",
@@ -667,20 +667,18 @@
   "/visit/faq/tickets",
   "/visit/groups",
   "/visit/hiking",
-  "/visit/hours",
   "/visit/hunting-fishing",
-  "/visit/i-94",
   "/visit/itineraries",
   "/visit/itineraries/13-day-denver-wyoming",
-  "/visit/itineraries/4-days-north-dakota",
   "/visit/itineraries/7-day-billings-bismarck",
   "/visit/itineraries/7-day-bismarck-rapid-city",
   "/visit/itineraries/black-hills-loop",
   "/visit/itineraries/chicago-badlands",
+  "/visit/itineraries/enchanted-highway",
   "/visit/itineraries/north-on-29",
-  "/visit/itineraries/one-day",
+  "/visit/itineraries/presidential-libraries",
   "/visit/itineraries/river-road",
-  "/visit/itineraries/seattle-badlands",
+  "/visit/itineraries/sturgis-medora",
   "/visit/itineraries/weekend-drives/bismarck",
   "/visit/itineraries/weekend-drives/fargo",
   "/visit/little-missouri-river",
@@ -691,6 +689,7 @@
   "/visit/national-park",
   "/visit/outdoors",
   "/visit/roosevelt-in-medora",
+  "/visit/scenic-drives",
   "/visit/shopping",
   "/visit/stargazing",
   "/visit/teddy-trail",
@@ -702,5 +701,5 @@
  "provider_label": "Gemini",
  "model": "gemini-3.8-flash",
  "fallbacks": [],
- "claims_dropped": 1
+ "claims_dropped": 0
 }

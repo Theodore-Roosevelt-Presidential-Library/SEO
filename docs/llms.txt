@@ -1,6 +1,6 @@
 # TRPL Search & AI Visibility
 
-> How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built 2026-11-22T13:22:52+00:00.
+> How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built 2026-11-23T13:12:39+00:00.
 
 The dashboard at https://seo.labs.trlibrary.com/ is rendered with JavaScript. AI tools should read the digest below instead.
 
@@ -17,19 +17,19 @@ The dashboard at https://seo.labs.trlibrary.com/ is rendered with JavaScript. AI
 Don't stop at recommendations. Work the queue: for the top TRPL tasks (audit fixes, internal links, structured data), write the exact change, get approval from the communications team, then carry it out in Drupal using the recipe (or package FiveJars tasks as a Basecamp to-do), check the live page, and log it in config/changes.yml. Title/description and content suggestions come second.
 
 Top of the queue now:
+- Broken internal addresses: add 301 redirects (TRPL, 8)
 - Restaurant and store hours are listed as the museum's hours (FiveJars, 1)
-- TR history section pages: add CollectionPage markup (template, all pages at once) (FiveJars, 55)
-- Broken internal addresses: add 301 redirects (TRPL, 1)
+- The Theodore Roosevelt entity has 2 values to fix (TRPL, 1)
 - Same topic on two pages (merge or differentiate) (TRPL, 20)
 - Pages ranking well that people skip: rewrite title and description (TRPL, 5)
 
 ## Snapshot
-- Google: 40,979 clicks, avg position 5.7 (28 days to 2026-11-19)
+- Google: 40,684 clicks, avg position 5.7 (28 days to 2026-11-20)
 - Site audit: health 95/100, AI readiness 61/100
-- AI assistants mentioning the Library: ChatGPT 48%, Gemini 30%
-- Links: 1 broken internal addresses with 301 redirects proposed, 658 internal links worth adding, 45 pages with no links in
+- AI assistants mentioning the Library: ChatGPT 44%, Gemini 26%
+- Links: 8 broken internal addresses with 301 redirects proposed, 682 internal links worth adding, 42 pages with no links in
 - Recently changed: 260 pages held back from recommendations (see 'Recently changed' in the digest for before/after numbers)
-- Structured data: 293/889 content pages carry schema.org markup; 6 sitewide markup issues; trlibrary.com llms.txt: yes
+- Structured data: 352/900 content pages carry schema.org markup; 9 sitewide markup issues; trlibrary.com llms.txt: yes
 
 ## Raw data
 - [changes.json](https://seo.labs.trlibrary.com/data/changes.json): Change log: pages changed recently (held back from recommendations) with Search Console before/after numbers
