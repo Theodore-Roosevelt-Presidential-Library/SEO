@@ -1,6 +1,6 @@
 # TRPL Search & AI Visibility
 
-> How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built 2026-11-23T13:25:18+00:00.
+> How www.trlibrary.com (Theodore Roosevelt Presidential Library, Medora, North Dakota) performs in Google Search and in AI assistants, with ranked opportunities and drafted fixes. Refreshed daily (Search Console) and weekly (site audit, rankings, AI answers, recommendations). Last built 2026-11-24T13:23:37+00:00.
 
 The dashboard at https://seo.labs.trlibrary.com/ is rendered with JavaScript. AI tools should read the digest below instead.
 
@@ -20,15 +20,15 @@ Top of the queue now:
 - Broken internal addresses: add 301 redirects (TRPL, 8)
 - Restaurant and store hours are listed as the museum's hours (FiveJars, 1)
 - The Theodore Roosevelt entity has 2 values to fix (TRPL, 1)
+- Pages ranking well that people skip: rewrite title and description (TRPL, 9)
 - Same topic on two pages (merge or differentiate) (TRPL, 20)
-- Pages ranking well that people skip: rewrite title and description (TRPL, 5)
 
 ## Snapshot
-- Google: 40,684 clicks, avg position 5.7 (28 days to 2026-11-20)
+- Google: 40,418 clicks, avg position 5.7 (28 days to 2026-11-21)
 - Site audit: health 95/100, AI readiness 61/100
 - AI assistants mentioning the Library: ChatGPT 44%, Gemini 26%
 - Links: 8 broken internal addresses with 301 redirects proposed, 682 internal links worth adding, 42 pages with no links in
-- Recently changed: 260 pages held back from recommendations (see 'Recently changed' in the digest for before/after numbers)
+- Recently changed: 253 pages held back from recommendations (see 'Recently changed' in the digest for before/after numbers)
 - Structured data: 352/900 content pages carry schema.org markup; 9 sitewide markup issues; trlibrary.com llms.txt: yes
 
 ## Raw data
