@@ -1,30 +1,30 @@
 {
  "property": "sc-domain:trlibrary.com",
- "updated": "2026-11-27T13:21:40+00:00",
+ "updated": "2026-11-28T13:21:23+00:00",
  "period": {
-  "start": "2026-10-28",
-  "end": "2026-11-24"
+  "start": "2026-10-29",
+  "end": "2026-11-25"
  },
  "previous": {
-  "start": "2026-09-30",
-  "end": "2026-10-27"
+  "start": "2026-10-01",
+  "end": "2026-10-28"
  },
  "current_totals": {
-  "clicks": 38277,
-  "impressions": 2894451,
-  "ctr": 0.0132,
-  "position": 5.7
+  "clicks": 37432,
+  "impressions": 2863477,
+  "ctr": 0.0131,
+  "position": 5.8
  },
  "previous_totals": {
-  "clicks": 45199,
-  "impressions": 2437773,
-  "ctr": 0.0185,
+  "clicks": 45108,
+  "impressions": 2458401,
+  "ctr": 0.0183,
   "position": 5.9
  },
- "branded_clicks": 7844,
- "nonbranded_clicks": 10528,
- "unattributed_clicks": 19905,
- "query_count": 23127,
+ "branded_clicks": 7582,
+ "nonbranded_clicks": 10364,
+ "unattributed_clicks": 19486,
+ "query_count": 23359,
  "query_list_capped": false,
- "page_count": 2805
+ "page_count": 2780
 }

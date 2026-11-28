@@ -173,5 +173,10 @@
   "date": "2026-11-27",
   "checkout_completion": null,
   "store_conversion": 0.15
+ },
+ {
+  "date": "2026-11-28",
+  "checkout_completion": null,
+  "store_conversion": 0.148
  }
 ]
